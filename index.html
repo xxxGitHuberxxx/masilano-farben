@@ -19,6 +19,7 @@
     <div class="wordmark">Masilano</div>
     <h1>Malen nach Zahlen</h1>
     <p class="sub">20 Meisterwerke, Feld für Feld. Wische zur Seite für mehr Bilder.</p>
+    <button id="storyEntry" class="sentry" aria-label="Geschichten: Vincent van Gogh"></button>
   </header>
   <div id="pager" class="pager"></div>
   <div id="dots" class="dots"></div>
@@ -37,6 +38,50 @@
   <div id="stage"><canvas id="cv"></canvas><canvas id="fx"></canvas><div id="toast"></div></div>
   <div class="palwrap"><div id="palette"></div></div>
 </section>
+
+<section id="chapters" class="screen">
+  <div class="topbar">
+    <button id="chBack" class="iconbtn" aria-label="Zurück zur Galerie">‹</button>
+    <div class="ttl"><div class="chT">Geschichten</div></div>
+    <div class="iconspace"></div>
+  </div>
+  <div class="chscroll">
+    <header id="chHead" class="chhead"></header>
+    <div id="chList" class="chlist"></div>
+    <div id="chEpi" class="chepi hidden"></div>
+  </div>
+  <div id="ctoast" class="ctoast"></div>
+</section>
+
+<div id="chapter" class="sheet hidden">
+  <div class="card">
+    <div id="cNum" class="done"></div>
+    <h2 id="cTitle"></h2>
+    <div id="cMeta" class="meta"></div>
+    <div id="cText" class="ctext"></div>
+    <div id="cWork" class="cwork"></div>
+    <div class="btns">
+      <button id="cBack" class="btn ghost">Zurück</button>
+      <button id="cGo" class="btn">Bild malen</button>
+    </div>
+  </div>
+</div>
+
+<div id="chDone" class="sheet hidden">
+  <div class="card">
+    <div id="dNum" class="done"></div>
+    <h2 id="dTitle"></h2>
+    <div id="dMeta" class="meta"></div>
+    <div class="lbl">Wusstest du?</div><p id="dFact"></p>
+    <div id="dEpiWrap" class="hidden"><div class="lbl">Wie es weitergeht</div><p id="dEpi"></p></div>
+    <div id="dMuseum" class="museum"></div>
+    <div class="btns">
+      <button id="dList" class="btn ghost">Übersicht</button>
+      <button id="dNext" class="btn">Weiter</button>
+    </div>
+    <button id="dLook" class="linkbtn small">Bild nochmals ansehen</button>
+  </div>
+</div>
 
 <div id="story" class="sheet hidden">
   <div class="card">
@@ -64,6 +109,7 @@
   </div>
 </div>
 <script src="paintings.js"></script>
+<script src="story.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

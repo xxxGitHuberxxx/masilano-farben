@@ -3,6 +3,10 @@
 const $ = s => document.querySelector(s);
 const KEY = id => 'masilano.color.v1.' + id;
 const P = window.PAINTINGS;
+const STORIES = window.STORIES || [];
+const ALL = P.concat((window.STORY_WORKS || []).filter(w => !P.some(p => p.id === w.id)));
+const byId = id => ALL.find(p => p.id === id);
+const SKEY = id => 'masilano.story.v1.' + id;
 const cache = {};
 
 // ---------- storage ----------
@@ -52,7 +56,7 @@ function markDots(){
 }
 $('#pager').addEventListener('scroll', () => requestAnimationFrame(markDots), { passive: true });
 $('#srcBtn').onclick = () => {
-  $('#srcList').innerHTML = P.map(p => `<li><b>${p.title}</b> (${p.artist}): ${p.source}. Museum: ${p.museum}.</li>`).join('');
+  $('#srcList').innerHTML = ALL.map(p => `<li><b>${p.title}</b> (${p.artist}): ${p.source}. Museum: ${p.museum}.</li>`).join('');
   $('#sources').classList.remove('hidden');
 };
 $('#srcClose').onclick = () => $('#sources').classList.add('hidden');
@@ -360,6 +364,7 @@ function finish(){
   }, 350);
 }
 function showStory(){
+  if (storyCtx && S && storyCtx.pid === S.p.id) { showChapterDone(); return; }
   const p = S.p;
   $('#sTitle').textContent = p.title; $('#sMeta').textContent = `${p.artist} · ${p.year}`;
   $('#sStory').textContent = p.story; $('#sTech').textContent = p.technique;
@@ -384,10 +389,112 @@ cv.addEventListener('click', () => { if (S && S.done && !anim && !(S.doneAt && p
 
 // ---------- navigation ----------
 function showScreen(id){ document.querySelectorAll('.screen').forEach(s => s.classList.toggle('active', s.id === id)); }
-function goGallery(){ if (swReload) { location.reload(); return; } S = null; showScreen('gallery'); renderGallery(); }
+function goGallery(){
+  if (swReload) { location.reload(); return; }
+  S = null; hideSheets();
+  if (storyCtx) { showChapters(storyCtx.story); return; }
+  showScreen('gallery'); renderGallery(); renderStoryEntry();
+}
+function hideSheets(){ ['#story', '#chapter', '#chDone'].forEach(q => $(q).classList.add('hidden')); }
 $('#backBtn').onclick = goGallery;
 let galT = 0;
 window.addEventListener('resize', () => { if (S) resize(); else { clearTimeout(galT); galT = setTimeout(renderGallery, 120); } });
+
+// ---------- story mode (Geschichten) ----------
+let storyCtx = null; // { story, idx, pid } while playing a chapter
+function isDone(id){ const s = loadSave(id); return !!(s && s.total && s.filled.length >= s.total); }
+function pctOf(id){ const s = loadSave(id); return s && s.total ? Math.floor(100 * s.filled.length / s.total) : 0; }
+function storyState(st){ try { return JSON.parse(localStorage.getItem(SKEY(st.id))) || { seen: [] }; } catch(e){ return { seen: [] }; } }
+function storySave(st, o){ try { localStorage.setItem(SKEY(st.id), JSON.stringify(o)); } catch(e){} }
+function chUnlocked(st, i){ return i === 0 || isDone(st.chapters[i - 1].pid); }
+function chDoneCount(st){ return st.chapters.filter(c => isDone(c.pid)).length; }
+function renderStoryEntry(){
+  const st = STORIES[0], b = $('#storyEntry');
+  if (!st) { b.style.display = 'none'; return; }
+  const n = chDoneCount(st), N = st.chapters.length;
+  b.innerHTML = `<div class="cv" style="background-image:url(data/${st.cover}-thumb.jpg)"></div>
+    <div class="tx"><div class="k">Neu · Geschichten</div><div class="n">${st.name}</div>
+    <div class="s">${st.subtitle} · ${n ? `${n} von ${N} gemalt` : 'Jetzt starten'}</div></div><div class="go">›</div>`;
+  b.onclick = () => { storyCtx = { story: st }; showChapters(st); };
+}
+let ctoastT = 0;
+function ctoast(msg){ const t = $('#ctoast'); t.textContent = msg; t.classList.add('show'); clearTimeout(ctoastT); ctoastT = setTimeout(() => t.classList.remove('show'), 1800); }
+function showChapters(st){
+  S = null; showScreen('chapters');
+  const N = st.chapters.length, n = chDoneCount(st), seen = storyState(st).seen;
+  $('#chHead').innerHTML = `<div class="cv" style="background-image:url(data/${st.cover}-orig.jpg)"></div>
+    <div><h1>${st.name}</h1><div class="life">${st.life} · ${st.subtitle}</div>
+    <p class="intro">${st.intro}</p>
+    <div class="prog">${n} von ${N} Kapiteln gemalt<div class="bar"><div style="width:${100 * n / N}%"></div></div></div></div>`;
+  const list = $('#chList'); list.innerHTML = '';
+  let nextMarked = false;
+  st.chapters.forEach((ch, i) => {
+    const p = byId(ch.pid), open = chUnlocked(st, i), done = isDone(ch.pid), pct = pctOf(ch.pid);
+    const b = document.createElement('button');
+    let cls = 'chi', badge;
+    if (!open) { cls += ' locked'; badge = ''; }
+    else if (done) badge = '<span class="st fin">✓ Fertig</span>';
+    else { cls += ' todo'; badge = pct > 0 ? `<span class="st">${Math.max(1, pct)} %</span>` : (seen.includes(i) ? '<span class="st">Bereit</span>' : '<span class="st new">Neu</span>'); }
+    if (open && !done && !nextMarked) { cls += ' next'; nextMarked = true; }
+    b.className = cls; b.dataset.i = i;
+    b.innerHTML = `<div class="th" style="background-image:url(data/${ch.pid}-${done ? 'orig.jpg' : 'thumb.jpg'})"></div>
+      <div class="tx"><div class="no">Kapitel ${i + 1} · ${ch.place}, ${ch.when}</div><div class="t">${ch.title}</div>
+      <div class="w">${open ? `${p.title} (${p.year})` : '🔒 Wird freigeschaltet, wenn Kapitel ' + i + ' fertig ist'}</div></div>${badge}`;
+    b.onclick = () => open ? showChapter(st, i) : ctoast(`Male zuerst Kapitel ${i} fertig, dann geht es hier weiter.`);
+    list.appendChild(b);
+  });
+  const epi = $('#chEpi');
+  if (n === N) { epi.innerHTML = `<div class="lbl">Wie es weitergeht</div><p>${st.epilogue}</p>`; epi.classList.remove('hidden'); }
+  else epi.classList.add('hidden');
+  renderStoryEntry();
+}
+function showChapter(st, i){
+  const ch = st.chapters[i], p = byId(ch.pid), done = isDone(ch.pid), pct = pctOf(ch.pid);
+  storyCtx = { story: st, idx: i, pid: ch.pid };
+  const o = storyState(st); if (!o.seen.includes(i)) { o.seen.push(i); storySave(st, o); }
+  $('#cNum').textContent = `Kapitel ${i + 1} von ${st.chapters.length}`;
+  $('#cTitle').textContent = ch.title;
+  $('#cMeta').textContent = `${ch.place} · ${ch.when}`;
+  $('#cText').innerHTML = ch.text.map(t => `<p>${t}</p>`).join('');
+  $('#cWork').className = 'cwork' + (done ? ' fin' : '');
+  $('#cWork').innerHTML = `<div class="th" style="background-image:url(data/${ch.pid}-${done ? 'orig.jpg' : 'thumb.jpg'})"></div>
+    <div>${done ? 'Schon gemalt' : 'Du malst'}: <b>${p.title}</b><br>${p.artist}, ${p.year}</div>`;
+  $('#cGo').textContent = done ? 'Bild ansehen' : (pct > 0 ? 'Weiter malen' : 'Bild malen');
+  $('#chapter .card').scrollTop = 0;
+  $('#chapter').classList.remove('hidden');
+}
+$('#cBack').onclick = () => { $('#chapter').classList.add('hidden'); if (storyCtx) showChapters(storyCtx.story); };
+$('#cGo').onclick = async () => {
+  $('#chapter').classList.add('hidden');
+  const c = storyCtx, p = byId(c.pid);
+  await openPainting(p);
+  if (S && S.done && storyCtx === c) setTimeout(() => { if (S && S.p === p) showChapterDone(); }, 900);
+};
+function showChapterDone(){
+  const c = storyCtx, st = c.story, i = c.idx, ch = st.chapters[i], p = byId(ch.pid), N = st.chapters.length, last = i === N - 1;
+  $('#dNum').textContent = `Kapitel ${i + 1} geschafft! 🎉`;
+  $('#dTitle').textContent = p.title;
+  $('#dMeta').textContent = `${p.artist} · ${p.year}`;
+  $('#dFact').textContent = ch.fact;
+  $('#dMuseum').textContent = '🏛 Heute: ' + p.museum;
+  $('#dEpi').textContent = st.epilogue;
+  $('#dEpiWrap').classList.toggle('hidden', !last);
+  $('#dNext').textContent = last ? 'Geschichte abschliessen' : `Weiter: Kapitel ${i + 2}`;
+  $('#chDone .card').scrollTop = 0;
+  $('#chDone').classList.remove('hidden');
+}
+$('#dNext').onclick = () => {
+  const c = storyCtx, st = c.story, i = c.idx;
+  $('#chDone').classList.add('hidden');
+  if (swReload) { location.reload(); return; }
+  S = null;
+  if (i < st.chapters.length - 1) { showChapters(st); showChapter(st, i + 1); }
+  else showChapters(st);
+};
+$('#dList').onclick = () => { $('#chDone').classList.add('hidden'); goGallery(); };
+$('#dLook').onclick = () => { $('#chDone').classList.add('hidden'); toast('Tippe auf 💡, um das Kapitel wieder zu sehen'); };
+$('#chBack').onclick = () => { storyCtx = null; hideSheets(); if (swReload) { location.reload(); return; } showScreen('gallery'); renderGallery(); renderStoryEntry(); };
+
 // ---------- PWA: service worker ----------
 let swReload = false;
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
@@ -398,5 +505,5 @@ if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.
     if (S) swReload = true; else location.reload();
   });
 }
-renderGallery();
+renderGallery(); renderStoryEntry();
 })();
