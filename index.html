@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#f6f3ee">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Masilano · Malen nach Zahlen</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+</head>
+<body>
+<section id="gallery" class="screen active">
+  <header class="ghead">
+    <div class="wordmark">Masilano</div>
+    <h1>Malen nach Zahlen</h1>
+    <p class="sub">Berühmte Meisterwerke, Feld für Feld. Tippe auf ein Bild, um zu starten.</p>
+  </header>
+  <div id="cards" class="cards"></div>
+  <footer class="gfoot">
+    <button id="srcBtn" class="linkbtn">Bildquellen &amp; Hinweise</button>
+    <div class="ver">Testversion</div>
+  </footer>
+</section>
+
+<section id="paint" class="screen">
+  <div class="topbar">
+    <button id="backBtn" class="iconbtn" aria-label="Zurück">‹</button>
+    <div class="ttl"><div id="pTitle"></div><div class="pbar"><div id="pFill"></div></div></div>
+    <button id="hintBtn" class="iconbtn hint" aria-label="Tipp">💡</button>
+  </div>
+  <div id="stage"><canvas id="cv"></canvas><canvas id="fx"></canvas><div id="toast"></div></div>
+  <div class="palwrap"><div id="palette"></div></div>
+</section>
+
+<div id="story" class="sheet hidden">
+  <div class="card">
+    <div class="done">Geschafft! 🎉</div>
+    <h2 id="sTitle"></h2>
+    <div id="sMeta" class="meta"></div>
+    <p id="sStory"></p>
+    <div class="lbl">Technik</div><p id="sTech"></p>
+    <div class="lbl">Wusstest du?</div><ul id="sFacts"></ul>
+    <div id="sMuseum" class="museum"></div>
+    <div class="btns">
+      <button id="sCompare" class="btn ghost">Original ansehen</button>
+      <button id="sGallery" class="btn">Zur Galerie</button>
+    </div>
+    <button id="sReset" class="linkbtn small">Nochmals von vorne malen</button>
+  </div>
+</div>
+
+<div id="sources" class="sheet hidden">
+  <div class="card">
+    <h2>Bildquellen</h2>
+    <ul id="srcList" class="srclist"></ul>
+    <p class="small">Alle Bilder stammen von Wikimedia Commons und sind gemeinfrei. Sie wurden für das Spiel automatisch in Farbfelder umgewandelt. Dein Fortschritt wird nur auf diesem Gerät gespeichert.</p>
+    <div class="btns"><button class="btn" id="srcClose">Schliessen</button></div>
+  </div>
+</div>
+<script src="paintings.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
