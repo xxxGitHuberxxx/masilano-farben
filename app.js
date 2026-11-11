@@ -10,21 +10,47 @@ function loadSave(id){ try{ return JSON.parse(localStorage.getItem(KEY(id))) || 
 function writeSave(id, obj){ try{ localStorage.setItem(KEY(id), JSON.stringify(obj)); }catch(e){} }
 
 // ---------- gallery ----------
+let galPage = +(sessionStorage.getItem('masilano.galPage') || 0);
 function renderGallery(){
-  const wrap = $('#cards'); wrap.innerHTML = '';
-  P.forEach(p => {
-    const s = loadSave(p.id);
-    const pct = s ? Math.round(100 * (s.filled.length / s.total)) : 0;
-    const done = s && s.filled.length >= s.total;
-    const b = document.createElement('button'); b.className = 'pc';
-    b.innerHTML = `<div class="im ${done ? '' : 'todo'}" style="background-image:url(data/${p.id}-${done ? 'orig.jpg' : 'thumb.png'})">
-      ${pct ? `<span class="badge">${done ? '✓ Fertig' : pct + ' %'}</span>` : ''}</div>
-      <div class="tx"><div class="t">${p.title}</div><div class="a">${p.artist}, ${p.year}</div>
-      <div class="bar"><div style="width:${pct}%"></div></div></div>`;
-    b.onclick = () => openPainting(p);
-    wrap.appendChild(b);
-  });
+  const pager = $('#pager'), dots = $('#dots');
+  const W = pager.clientWidth - 32, H = pager.clientHeight - 6, gap = 14;
+  const cols = Math.max(2, Math.min(6, Math.round(W / 230)));
+  const cw2 = (W - (cols - 1) * gap) / cols;
+  const minH = Math.max(196, cw2 * 0.8 + 80);
+  const rows = Math.max(1, Math.floor((H + gap) / (minH + gap)));
+  const per = cols * rows, nPages = Math.ceil(P.length / per);
+  const cardH = Math.min((H - (rows - 1) * gap) / rows, cw2 * 1.3 + 80);
+  pager.innerHTML = ''; dots.innerHTML = '';
+  for (let pg = 0; pg < nPages; pg++) {
+    const page = document.createElement('div'); page.className = 'page';
+    page.style.gridTemplateColumns = `repeat(${cols}, 1fr)`; page.style.gridAutoRows = cardH + 'px';
+    P.slice(pg * per, pg * per + per).forEach(p => {
+      const s = loadSave(p.id);
+      const pct = s ? Math.floor(100 * (s.filled.length / s.total)) : 0;
+      const done = s && s.filled.length >= s.total;
+      const b = document.createElement('button'); b.className = 'pc';
+      b.innerHTML = `<div class="im ${done ? '' : 'todo'}" style="background-image:url(data/${p.id}-${done ? 'orig.jpg' : 'thumb.jpg'})">
+        ${done ? '<span class="badge fin">✓ Fertig</span>' : (s && s.filled.length ? `<span class="badge">${Math.max(1, pct)} %</span>` : '')}</div>
+        <div class="tx"><div class="t">${p.title}</div><div class="a">${p.artist}, ${p.year}</div>
+        <div class="bar"><div style="width:${done ? 100 : pct}%"></div></div></div>`;
+      b.onclick = () => openPainting(p);
+      page.appendChild(b);
+    });
+    pager.appendChild(page);
+    const d = document.createElement('button'); d.setAttribute('aria-label', 'Seite ' + (pg + 1));
+    d.onclick = () => pager.scrollTo({ left: pg * pager.clientWidth, behavior: 'smooth' });
+    dots.appendChild(d);
+  }
+  galPage = Math.min(galPage, nPages - 1);
+  pager.scrollLeft = galPage * pager.clientWidth;
+  markDots();
 }
+function markDots(){
+  const pager = $('#pager'), n = Math.round(pager.scrollLeft / Math.max(1, pager.clientWidth));
+  [...$('#dots').children].forEach((d, i) => d.classList.toggle('on', i === n));
+  if (n !== galPage) { galPage = n; try { sessionStorage.setItem('masilano.galPage', n); } catch(e){} }
+}
+$('#pager').addEventListener('scroll', () => requestAnimationFrame(markDots), { passive: true });
 $('#srcBtn').onclick = () => {
   $('#srcList').innerHTML = P.map(p => `<li><b>${p.title}</b> (${p.artist}): ${p.source}. Museum: ${p.museum}.</li>`).join('');
   $('#sources').classList.remove('hidden');
@@ -338,7 +364,7 @@ function showStory(){
   $('#sTitle').textContent = p.title; $('#sMeta').textContent = `${p.artist} · ${p.year}`;
   $('#sStory').textContent = p.story; $('#sTech').textContent = p.technique;
   $('#sFacts').innerHTML = p.facts.map(f => `<li>${f}</li>`).join('');
-  $('#sMuseum').textContent = '🏛 Zu sehen im: ' + p.museum;
+  $('#sMuseum').textContent = '🏛 Museum: ' + p.museum;
   $('#story').classList.remove('hidden');
 }
 let showingOrig = true;
@@ -358,9 +384,19 @@ cv.addEventListener('click', () => { if (S && S.done && !anim && !(S.doneAt && p
 
 // ---------- navigation ----------
 function showScreen(id){ document.querySelectorAll('.screen').forEach(s => s.classList.toggle('active', s.id === id)); }
-function goGallery(){ S = null; showScreen('gallery'); renderGallery(); }
+function goGallery(){ if (swReload) { location.reload(); return; } S = null; showScreen('gallery'); renderGallery(); }
 $('#backBtn').onclick = goGallery;
-window.addEventListener('resize', () => { if (S) resize(); });
+let galT = 0;
+window.addEventListener('resize', () => { if (S) resize(); else { clearTimeout(galT); galT = setTimeout(renderGallery, 120); } });
+// ---------- PWA: service worker ----------
+let swReload = false;
+if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
+  const hadCtrl = !!navigator.serviceWorker.controller;
+  navigator.serviceWorker.register('./sw.js', { scope: './' }).catch(e => console.warn('SW', e));
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (!hadCtrl) return;           // first install: nothing to reload
+    if (S) swReload = true; else location.reload();
+  });
+}
 renderGallery();
-
 })();

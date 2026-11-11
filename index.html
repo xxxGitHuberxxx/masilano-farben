@@ -8,15 +8,20 @@
 <title>Masilano · Malen nach Zahlen</title>
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Masilano">
 </head>
 <body>
 <section id="gallery" class="screen active">
   <header class="ghead">
     <div class="wordmark">Masilano</div>
     <h1>Malen nach Zahlen</h1>
-    <p class="sub">Berühmte Meisterwerke, Feld für Feld. Tippe auf ein Bild, um zu starten.</p>
+    <p class="sub">20 Meisterwerke, Feld für Feld. Wische zur Seite für mehr Bilder.</p>
   </header>
-  <div id="cards" class="cards"></div>
+  <div id="pager" class="pager"></div>
+  <div id="dots" class="dots"></div>
   <footer class="gfoot">
     <button id="srcBtn" class="linkbtn">Bildquellen &amp; Hinweise</button>
     <div class="ver">Testversion</div>
