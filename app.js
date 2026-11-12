@@ -409,13 +409,23 @@ function storySave(st, o){ try { localStorage.setItem(SKEY(st.id), JSON.stringif
 function chUnlocked(st, i){ return i === 0 || isDone(st.chapters[i - 1].pid); }
 function chDoneCount(st){ return st.chapters.filter(c => isDone(c.pid)).length; }
 function renderStoryEntry(){
-  const st = STORIES[0], b = $('#storyEntry');
-  if (!st) { b.style.display = 'none'; return; }
-  const n = chDoneCount(st), N = st.chapters.length;
-  b.innerHTML = `<div class="cv" style="background-image:url(data/${st.cover}-thumb.jpg)"></div>
-    <div class="tx"><div class="k">Neu · Geschichten</div><div class="n">${st.name}</div>
-    <div class="s">${st.subtitle} · ${n ? `${n} von ${N} gemalt` : 'Jetzt starten'}</div></div><div class="go">›</div>`;
-  b.onclick = () => { storyCtx = { story: st }; showChapters(st); };
+  const box = $('#storyEntries');
+  if (!STORIES.length) { box.style.display = 'none'; return; }
+  box.style.display = '';
+  box.innerHTML = '';
+  STORIES.forEach(st => {
+    const n = chDoneCount(st), N = st.chapters.length;
+    const b = document.createElement('button');
+    b.className = 'sentry' + (st.fresh ? ' neu' : '');
+    b.setAttribute('data-story', st.id);
+    b.setAttribute('aria-label', 'Geschichten: ' + st.name);
+    const kicker = st.fresh ? 'Neu · Geschichten' : 'Geschichten';
+    b.innerHTML = `<div class="cv" style="background-image:url(data/${st.cover}-thumb.jpg)"></div>
+      <div class="tx"><div class="k">${kicker}</div><div class="n">${st.name}</div>
+      <div class="s">${st.subtitle} · ${n ? `${n} von ${N} gemalt` : 'Jetzt starten'}</div></div><div class="go">›</div>`;
+    b.onclick = () => { storyCtx = { story: st }; showChapters(st); };
+    box.appendChild(b);
+  });
 }
 let ctoastT = 0;
 function ctoast(msg){ const t = $('#ctoast'); t.textContent = msg; t.classList.add('show'); clearTimeout(ctoastT); ctoastT = setTimeout(() => t.classList.remove('show'), 1800); }

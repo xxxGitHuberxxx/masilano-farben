@@ -68,15 +68,17 @@ h1{font-family:Georgia,"Times New Roman",serif;font-weight:normal;font-size:30px
 .srclist li{font-size:13px;margin-bottom:6px}
 
 /* ---------- story mode ---------- */
-.sentry{flex:none;width:100%;margin:0 0 12px;display:flex;align-items:center;gap:12px;min-height:76px;padding:8px 14px 8px 8px;border:0;border-radius:16px;text-align:left;
+.sentries{display:flex;flex-direction:column;gap:10px;margin:0 0 12px}
+.sentry{flex:none;width:100%;margin:0;display:flex;align-items:center;gap:12px;min-height:76px;padding:8px 14px 8px 8px;border:0;border-radius:16px;text-align:left;
   background:linear-gradient(100deg,#1f2d52 0%,#2c4a7c 60%,#c79a4e 140%);color:#fff;box-shadow:0 3px 12px rgba(30,40,80,.22)}
+.sentry.neu{background:linear-gradient(100deg,#16324d 0%,#2a5f78 55%,#c79a4e 140%)}
 .sentry .cv{width:60px;height:60px;border-radius:12px;flex:none;background:#333 center/cover no-repeat;box-shadow:0 0 0 2px rgba(255,255,255,.35)}
 .sentry .k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
 .sentry .n{font-family:Georgia,serif;font-size:19px;line-height:1.2;margin-top:2px}
 .sentry .s{font-size:13px;opacity:.85;margin-top:2px}
 .sentry .tx{flex:1;min-width:0}
 .sentry .go{flex:none;font-size:28px;opacity:.9}
-@media (max-height:560px){.sentry{min-height:56px;padding:5px 12px 5px 6px;margin-bottom:6px}.sentry .cv{width:44px;height:44px}.sentry .n{font-size:16px}.sentry .s{display:none}}
+@media (max-height:560px){.sentries{gap:6px;margin-bottom:6px}.sentry{min-height:56px;padding:5px 12px 5px 6px}.sentry .cv{width:44px;height:44px}.sentry .n{font-size:16px}.sentry .s{display:none}}
 .chT{font-size:15px;font-weight:600}
 .iconspace{width:44px;flex:none}
 .chscroll{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:0 16px calc(env(safe-area-inset-bottom) + 24px)}
@@ -121,5 +123,5 @@ h1{font-family:Georgia,"Times New Roman",serif;font-weight:normal;font-size:30px
   .ghead{display:grid;grid-template-columns:1fr minmax(340px,440px);column-gap:24px;align-items:end;margin-bottom:12px}
   .ghead .wordmark,.ghead h1,.ghead .sub{grid-column:1}
   .ghead .sub{margin-bottom:0}
-  .sentry{grid-column:2;grid-row:1 / span 3;margin:0;align-self:center}
+  .sentries{grid-column:2;grid-row:1 / span 3;margin:0;align-self:center}
 }
