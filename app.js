@@ -23,12 +23,44 @@ function levelOf(p){
 function levelLabel(lv){ return lv === 'leicht' ? 'Leicht' : lv === 'mittel' ? 'Mittel' : 'Schwer'; }
 let galSort = 'gallery';
 try { const s = localStorage.getItem(SORT_KEY); if (s === 'easy' || s === 'gallery') galSort = s; } catch(e){}
+function fold(s){
+  return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+}
+function matchesQuery(p, q, extra){
+  if (!q) return true;
+  const hay = fold([p.title, p.artist, p.year, p.museum, extra].filter(Boolean).join(' '));
+  return q.split(/\s+/).every(tok => tok && hay.includes(tok));
+}
+let galQuery = '';
 function galleryList(){
-  const arr = P.slice();
+  const q = fold(galQuery);
+  const arr = P.filter(p => matchesQuery(p, q));
   if (galSort === 'easy') {
     arr.sort((a,b) => (LEVEL_RANK[levelOf(a)] - LEVEL_RANK[levelOf(b)]) || ((a.regions || 999) - (b.regions || 999)) || a.title.localeCompare(b.title, 'de-CH'));
   }
   return arr;
+}
+function storySearchHits(){
+  const q = fold(galQuery);
+  if (!q) return [];
+  const galIds = new Set(P.map(p => p.id));
+  const hits = [];
+  for (const st of STORIES) {
+    for (const ch of st.chapters) {
+      if (galIds.has(ch.pid)) continue;
+      const p = byId(ch.pid);
+      if (p && matchesQuery(p, q, st.name + ' ' + ch.title)) hits.push({ p, st, ch });
+    }
+  }
+  return hits;
+}
+function openStoryHit(st, p){
+  storyCtx = { story: st };
+  showChapters(st);
+  const i = st.chapters.findIndex(c => c.pid === p.id);
+  if (i < 0) return;
+  if (chUnlocked(st, i)) showChapter(st, i);
+  else ctoast('Dieses Bild gehört zur Geschichte von ' + st.name + '. Es wird Kapitel für Kapitel freigeschaltet.');
 }
 function renderSortBar(){
   const bar = $('#sortBar'); if (!bar) return;
@@ -46,6 +78,27 @@ if (sortBarEl) sortBarEl.addEventListener('click', e => {
   galPage = 0; try { sessionStorage.setItem('masilano.galPage', '0'); } catch(e){}
   renderGallery();
 });
+function syncSearchClear(){
+  const c = $('#galSearchClear'); if (c) c.classList.toggle('hidden', !String(galQuery).trim());
+}
+const searchEl = $('#galSearch');
+if (searchEl) {
+  searchEl.addEventListener('input', () => {
+    galQuery = searchEl.value;
+    syncSearchClear();
+    galPage = 0; try { sessionStorage.setItem('masilano.galPage', '0'); } catch(e){}
+    renderGallery();
+  });
+  searchEl.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); searchEl.blur(); } });
+}
+const searchClear = $('#galSearchClear');
+if (searchClear) searchClear.addEventListener('click', () => {
+  galQuery = '';
+  if (searchEl) { searchEl.value = ''; searchEl.focus(); }
+  syncSearchClear();
+  galPage = 0; try { sessionStorage.setItem('masilano.galPage', '0'); } catch(e){}
+  renderGallery();
+});
 let galPage = +(sessionStorage.getItem('masilano.galPage') || 0);
 // Geometry is measured only after the header (sort + story banners) is in the layout.
 // It is reused across sort toggles so the grid cannot jump when only the order changes.
@@ -53,7 +106,10 @@ let galGrid = null, galFitting = false;
 function renderGallery(){
   const pager = $('#pager'), dots = $('#dots');
   const list = galleryList();
+  const storyHits = storySearchHits();
+  const items = list.map(p => ({ kind:'gal', p })).concat(storyHits.map(h => ({ kind:'story', p:h.p, st:h.st })));
   renderSortBar();
+  syncSearchClear();
   const gap = 14;
   const boxW = pager.clientWidth, boxH = pager.clientHeight;
   const W = Math.max(0, boxW - 32), H = Math.max(0, boxH - 8);
@@ -73,23 +129,45 @@ function renderGallery(){
     }
     galGrid = { sizeKey, cols, rows, cardH };
   }
-  const per = cols * rows, nPages = Math.ceil(list.length / Math.max(1, per));
+  const per = cols * rows, nPages = Math.ceil(items.length / Math.max(1, per));
   pager.innerHTML = ''; dots.innerHTML = '';
+  if (!items.length) {
+    const empty = document.createElement('div'); empty.className = 'empty';
+    empty.innerHTML = '<div class="e1">Keine Treffer</div><div class="e2">Versuch einen anderen Bildtitel, Malernamen, ein Jahr oder ein Museum.</div>';
+    pager.appendChild(empty);
+    const ph = document.createElement('button');
+    ph.disabled = true; ph.setAttribute('aria-hidden', 'true'); ph.tabIndex = -1;
+    ph.style.visibility = 'hidden';
+    dots.appendChild(ph);
+    return;
+  }
   for (let pg = 0; pg < nPages; pg++) {
     const page = document.createElement('div'); page.className = 'page';
     page.style.gridTemplateColumns = `repeat(${cols}, 1fr)`; page.style.gridAutoRows = cardH + 'px';
-    list.slice(pg * per, pg * per + per).forEach(p => {
+    items.slice(pg * per, pg * per + per).forEach(item => {
+      const p = item.p;
       const s = loadSave(p.id);
       const pct = s ? Math.floor(100 * (s.filled.length / s.total)) : 0;
       const done = s && s.filled.length >= s.total;
-      const lv = levelOf(p);
-      const tags = `<div class="tags"><span class="lv ${lv}">${levelLabel(lv)}</span>${p.fresh ? '<span class="lv neu">Neu</span>' : ''}</div>`;
-      const b = document.createElement('button'); b.className = 'pc';
-      b.innerHTML = `<div class="im ${done ? '' : 'todo'}" style="background-image:url(data/${p.id}-${done ? 'orig.jpg' : 'thumb.jpg'})">
-        ${tags}${done ? '<span class="badge fin">✓ Fertig</span>' : (s && s.filled.length ? `<span class="badge">${Math.max(1, pct)} %</span>` : '')}</div>
-        <div class="tx"><div class="t">${p.title}</div><div class="a">${p.artist}, ${p.year}</div>
-        <div class="bar"><div style="width:${done ? 100 : pct}%"></div></div></div>`;
-      b.onclick = () => openPainting(p);
+      const b = document.createElement('button');
+      if (item.kind === 'story') {
+        b.className = 'pc storyc';
+        const doneTag = done ? '<span class="badge fin">✓ Fertig</span>' : '';
+        b.innerHTML = `<div class="im ${done ? '' : 'todo'}" style="background-image:url(data/${p.id}-${done ? 'orig.jpg' : 'thumb.jpg'})">
+          <div class="tags"><span class="lv story">Geschichte</span></div>${doneTag}</div>
+          <div class="tx"><div class="t">${p.title}</div><div class="a">${p.artist}, ${p.year}</div>
+          <div class="hint">In der Geschichte von ${item.st.name}</div></div>`;
+        b.onclick = () => openStoryHit(item.st, p);
+      } else {
+        const lv = levelOf(p);
+        const tags = `<div class="tags"><span class="lv ${lv}">${levelLabel(lv)}</span>${p.fresh ? '<span class="lv neu">Neu</span>' : ''}</div>`;
+        b.className = 'pc';
+        b.innerHTML = `<div class="im ${done ? '' : 'todo'}" style="background-image:url(data/${p.id}-${done ? 'orig.jpg' : 'thumb.jpg'})">
+          ${tags}${done ? '<span class="badge fin">✓ Fertig</span>' : (s && s.filled.length ? `<span class="badge">${Math.max(1, pct)} %</span>` : '')}</div>
+          <div class="tx"><div class="t">${p.title}</div><div class="a">${p.artist}, ${p.year}</div>
+          <div class="bar"><div style="width:${done ? 100 : pct}%"></div></div></div>`;
+        b.onclick = () => openPainting(p);
+      }
       page.appendChild(b);
     });
     pager.appendChild(page);

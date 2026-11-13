@@ -23,13 +23,18 @@
       <button type="button" data-sort="gallery">Galerie</button>
       <button type="button" data-sort="easy">Leicht zuerst</button>
     </div>
+    <div class="search" role="search">
+      <svg class="sico" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input id="galSearch" type="text" enterkeyhint="search" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Bild oder Maler suchen" aria-label="Bild oder Maler suchen">
+      <button type="button" id="galSearchClear" class="sclear hidden" aria-label="Suche löschen">×</button>
+    </div>
     <div id="storyEntries" class="sentries"></div>
   </header>
   <div id="pager" class="pager"></div>
   <div id="dots" class="dots"></div>
   <footer class="gfoot">
     <button id="srcBtn" class="linkbtn">Bildquellen &amp; Hinweise</button>
-    <div class="ver">Testversion 5.1</div>
+    <div class="ver">Testversion 5.2</div>
   </footer>
 </section>
 
