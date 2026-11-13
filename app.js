@@ -47,17 +47,33 @@ if (sortBarEl) sortBarEl.addEventListener('click', e => {
   renderGallery();
 });
 let galPage = +(sessionStorage.getItem('masilano.galPage') || 0);
+// Geometry is measured only after the header (sort + story banners) is in the layout.
+// It is reused across sort toggles so the grid cannot jump when only the order changes.
+let galGrid = null, galFitting = false;
 function renderGallery(){
   const pager = $('#pager'), dots = $('#dots');
   const list = galleryList();
   renderSortBar();
-  const W = pager.clientWidth - 32, H = pager.clientHeight - 6, gap = 14;
+  const gap = 14;
+  const boxW = pager.clientWidth, boxH = pager.clientHeight;
+  const W = Math.max(0, boxW - 32), H = Math.max(0, boxH - 8);
   const cols = Math.max(2, Math.min(6, Math.round(W / 230)));
-  const cw2 = (W - (cols - 1) * gap) / cols;
-  const minH = Math.max(176, cw2 * 0.68 + 72);
-  const rows = Math.max(1, Math.floor((H + gap) / (minH + gap)));
-  const per = cols * rows, nPages = Math.ceil(list.length / per);
-  const cardH = Math.min((H - (rows - 1) * gap) / rows, cw2 * 1.3 + 80);
+  const cw2 = cols ? (W - (cols - 1) * gap) / cols : W;
+  const minH = Math.max(188, cw2 * 0.75 + 76);
+  const sizeKey = cols + ':' + Math.round(boxW) + 'x' + Math.round(boxH);
+  let rows, cardH;
+  if (galGrid && galGrid.sizeKey === sizeKey) {
+    rows = galGrid.rows; cardH = galGrid.cardH;
+  } else {
+    rows = Math.max(1, Math.floor((H + gap) / (minH + gap)));
+    cardH = Math.min((H - (rows - 1) * gap) / rows, cw2 * 1.3 + 80);
+    while (rows > 1 && rows * cardH + (rows - 1) * gap > H) {
+      rows--;
+      cardH = Math.min((H - (rows - 1) * gap) / rows, cw2 * 1.3 + 80);
+    }
+    galGrid = { sizeKey, cols, rows, cardH };
+  }
+  const per = cols * rows, nPages = Math.ceil(list.length / Math.max(1, per));
   pager.innerHTML = ''; dots.innerHTML = '';
   for (let pg = 0; pg < nPages; pg++) {
     const page = document.createElement('div'); page.className = 'page';
@@ -84,6 +100,17 @@ function renderGallery(){
   galPage = Math.min(galPage, nPages - 1);
   pager.scrollLeft = galPage * pager.clientWidth;
   markDots();
+  if (!galFitting && galGrid && galGrid.rows > 1) {
+    const pb = pager.getBoundingClientRect();
+    const overflow = [...pager.querySelectorAll('.page:first-child .pc')].some(c => c.getBoundingClientRect().bottom > pb.bottom + 1.5);
+    if (overflow) {
+      galGrid.rows -= 1;
+      galGrid.cardH = Math.min((H - (galGrid.rows - 1) * gap) / galGrid.rows, cw2 * 1.3 + 80);
+      galFitting = true;
+      renderGallery();
+      galFitting = false;
+    }
+  }
 }
 function markDots(){
   const pager = $('#pager'), n = Math.round(pager.scrollLeft / Math.max(1, pager.clientWidth));
@@ -429,12 +456,14 @@ function goGallery(){
   if (swReload) { location.reload(); return; }
   S = null; hideSheets();
   if (storyCtx) { showChapters(storyCtx.story); return; }
-  showScreen('gallery'); renderGallery(); renderStoryEntry();
+  showScreen('gallery'); renderStoryEntry(); renderGallery();
 }
 function hideSheets(){ ['#story', '#chapter', '#chDone'].forEach(q => $(q).classList.add('hidden')); }
 $('#backBtn').onclick = goGallery;
 let galT = 0;
-window.addEventListener('resize', () => { if (S) resize(); else { clearTimeout(galT); galT = setTimeout(renderGallery, 120); } });
+function onViewport(){ if (S) resize(); else { clearTimeout(galT); galT = setTimeout(renderGallery, 120); } }
+window.addEventListener('resize', onViewport);
+if (window.visualViewport) visualViewport.addEventListener('resize', onViewport);
 
 // ---------- story mode (Geschichten) ----------
 let storyCtx = null; // { story, idx, pid } while playing a chapter
@@ -539,7 +568,7 @@ $('#dNext').onclick = () => {
 };
 $('#dList').onclick = () => { $('#chDone').classList.add('hidden'); goGallery(); };
 $('#dLook').onclick = () => { $('#chDone').classList.add('hidden'); toast('Tippe auf 💡, um das Kapitel wieder zu sehen'); };
-$('#chBack').onclick = () => { storyCtx = null; hideSheets(); if (swReload) { location.reload(); return; } showScreen('gallery'); renderGallery(); renderStoryEntry(); };
+$('#chBack').onclick = () => { storyCtx = null; hideSheets(); if (swReload) { location.reload(); return; } showScreen('gallery'); renderStoryEntry(); renderGallery(); };
 
 // ---------- PWA: service worker ----------
 let swReload = false;
@@ -551,5 +580,5 @@ if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.
     if (S) swReload = true; else location.reload();
   });
 }
-renderGallery(); renderStoryEntry();
+renderStoryEntry(); renderGallery();
 })();
