@@ -14,27 +14,63 @@ function loadSave(id){ try{ return JSON.parse(localStorage.getItem(KEY(id))) || 
 function writeSave(id, obj){ try{ localStorage.setItem(KEY(id), JSON.stringify(obj)); }catch(e){} }
 
 // ---------- gallery ----------
+const SORT_KEY = 'masilano.galSort.v5';
+const LEVEL_RANK = {leicht:0, mittel:1, schwer:2};
+function levelOf(p){
+  const r = p.regions || 999;
+  return r < 220 ? 'leicht' : r < 400 ? 'mittel' : 'schwer';
+}
+function levelLabel(lv){ return lv === 'leicht' ? 'Leicht' : lv === 'mittel' ? 'Mittel' : 'Schwer'; }
+let galSort = 'gallery';
+try { const s = localStorage.getItem(SORT_KEY); if (s === 'easy' || s === 'gallery') galSort = s; } catch(e){}
+function galleryList(){
+  const arr = P.slice();
+  if (galSort === 'easy') {
+    arr.sort((a,b) => (LEVEL_RANK[levelOf(a)] - LEVEL_RANK[levelOf(b)]) || ((a.regions || 999) - (b.regions || 999)) || a.title.localeCompare(b.title, 'de-CH'));
+  }
+  return arr;
+}
+function renderSortBar(){
+  const bar = $('#sortBar'); if (!bar) return;
+  [...bar.querySelectorAll('button')].forEach(b => {
+    const on = b.dataset.sort === galSort;
+    b.classList.toggle('on', on);
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+  });
+}
+const sortBarEl = $('#sortBar');
+if (sortBarEl) sortBarEl.addEventListener('click', e => {
+  const b = e.target.closest('button[data-sort]'); if (!b) return;
+  galSort = b.dataset.sort;
+  try { localStorage.setItem(SORT_KEY, galSort); } catch(e){}
+  galPage = 0; try { sessionStorage.setItem('masilano.galPage', '0'); } catch(e){}
+  renderGallery();
+});
 let galPage = +(sessionStorage.getItem('masilano.galPage') || 0);
 function renderGallery(){
   const pager = $('#pager'), dots = $('#dots');
+  const list = galleryList();
+  renderSortBar();
   const W = pager.clientWidth - 32, H = pager.clientHeight - 6, gap = 14;
   const cols = Math.max(2, Math.min(6, Math.round(W / 230)));
   const cw2 = (W - (cols - 1) * gap) / cols;
-  const minH = Math.max(196, cw2 * 0.8 + 80);
+  const minH = Math.max(176, cw2 * 0.68 + 72);
   const rows = Math.max(1, Math.floor((H + gap) / (minH + gap)));
-  const per = cols * rows, nPages = Math.ceil(P.length / per);
+  const per = cols * rows, nPages = Math.ceil(list.length / per);
   const cardH = Math.min((H - (rows - 1) * gap) / rows, cw2 * 1.3 + 80);
   pager.innerHTML = ''; dots.innerHTML = '';
   for (let pg = 0; pg < nPages; pg++) {
     const page = document.createElement('div'); page.className = 'page';
     page.style.gridTemplateColumns = `repeat(${cols}, 1fr)`; page.style.gridAutoRows = cardH + 'px';
-    P.slice(pg * per, pg * per + per).forEach(p => {
+    list.slice(pg * per, pg * per + per).forEach(p => {
       const s = loadSave(p.id);
       const pct = s ? Math.floor(100 * (s.filled.length / s.total)) : 0;
       const done = s && s.filled.length >= s.total;
+      const lv = levelOf(p);
+      const tags = `<div class="tags"><span class="lv ${lv}">${levelLabel(lv)}</span>${p.fresh ? '<span class="lv neu">Neu</span>' : ''}</div>`;
       const b = document.createElement('button'); b.className = 'pc';
       b.innerHTML = `<div class="im ${done ? '' : 'todo'}" style="background-image:url(data/${p.id}-${done ? 'orig.jpg' : 'thumb.jpg'})">
-        ${done ? '<span class="badge fin">✓ Fertig</span>' : (s && s.filled.length ? `<span class="badge">${Math.max(1, pct)} %</span>` : '')}</div>
+        ${tags}${done ? '<span class="badge fin">✓ Fertig</span>' : (s && s.filled.length ? `<span class="badge">${Math.max(1, pct)} %</span>` : '')}</div>
         <div class="tx"><div class="t">${p.title}</div><div class="a">${p.artist}, ${p.year}</div>
         <div class="bar"><div style="width:${done ? 100 : pct}%"></div></div></div>`;
       b.onclick = () => openPainting(p);
