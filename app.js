@@ -4,9 +4,13 @@ const $ = s => document.querySelector(s);
 const KEY = id => 'masilano.color.v1.' + id;
 const P = window.PAINTINGS;
 const STORIES = window.STORIES || [];
-const ALL = P.concat((window.STORY_WORKS || []).filter(w => !P.some(p => p.id === w.id)));
+const PATHS = window.PATHS || [];
+const knownIds = new Set(P.map(p => p.id).concat((window.STORY_WORKS || []).map(w => w.id)));
+const ALL = P.concat((window.STORY_WORKS || []).filter(w => !P.some(p => p.id === w.id)))
+  .concat((window.PATH_WORKS || []).filter(w => !knownIds.has(w.id)));
 const byId = id => ALL.find(p => p.id === id);
 const SKEY = id => 'masilano.story.v1.' + id;
+const PKEY = id => 'masilano.path.v1.' + id;
 const cache = {};
 
 // ---------- storage ----------
@@ -53,6 +57,26 @@ function storySearchHits(){
     }
   }
   return hits;
+}
+function pathSearchHits(){
+  const q = fold(galQuery);
+  if (!q) return [];
+  const galIds = new Set(P.map(p => p.id));
+  const hits = [];
+  for (const path of PATHS) {
+    for (const step of pathSteps(path)) {
+      if (galIds.has(step.pid)) continue;
+      const p = byId(step.pid);
+      if (p && matchesQuery(p, q, path.title + ' ' + path.name + ' ' + step.st.place + ' ' + step.st.when)) hits.push({ p, path, step });
+    }
+  }
+  return hits;
+}
+function openPathHit(path, p){
+  pathCtx = { path };
+  showPath(path);
+  const step = pathSteps(path).find(s => s.pid === p.id);
+  if (step) showPathWork(path, step);
 }
 function openStoryHit(st, p){
   storyCtx = { story: st };
@@ -117,6 +141,14 @@ function paintGalCard(item){
       <div class="tx"><div class="t">${p.title}</div><div class="a">${p.artist}, ${p.year}</div>
       <div class="hint">In der Geschichte von ${item.st.name}</div></div>`;
     b.onclick = () => openStoryHit(item.st, p);
+  } else if (item.kind === 'path') {
+    b.className = 'pc storyc';
+    const doneTag = done ? '<span class="badge fin">✓ Fertig</span>' : '';
+    b.innerHTML = `<div class="im ${done ? '' : 'todo'}" style="background-image:url(data/${p.id}-${done ? 'orig.jpg' : 'thumb.jpg'})">
+      <div class="tags"><span class="lv path">Lebensweg</span></div>${doneTag}</div>
+      <div class="tx"><div class="t">${p.title}</div><div class="a">${p.artist}, ${p.year}</div>
+      <div class="hint">Im Lebensweg von ${item.path.name}</div></div>`;
+    b.onclick = () => openPathHit(item.path, p);
   } else {
     const lv = levelOf(p);
     const tags = `<div class="tags"><span class="lv ${lv}">${levelLabel(lv)}</span>${p.fresh ? '<span class="lv neu">Neu</span>' : ''}</div>`;
@@ -143,7 +175,8 @@ function renderGallery(){
   const pager = $('#pager'), dots = $('#dots');
   const list = galleryList();
   const storyHits = storySearchHits();
-  const items = list.map(p => ({ kind:'gal', p })).concat(storyHits.map(h => ({ kind:'story', p:h.p, st:h.st })));
+  const pathHits = pathSearchHits();
+  const items = list.map(p => ({ kind:'gal', p })).concat(storyHits.map(h => ({ kind:'story', p:h.p, st:h.st }))).concat(pathHits.map(h => ({ kind:'path', p:h.p, path:h.path, step:h.step })));
   renderSortBar();
   syncSearchClear();
   const gap = 14;
@@ -518,6 +551,7 @@ function finish(){
   }, 350);
 }
 function showStory(){
+  if (pathCtx && S && pathCtx.pid === S.p.id) { showPathDone(); return; }
   if (storyCtx && S && storyCtx.pid === S.p.id) { showChapterDone(); return; }
   const p = S.p;
   $('#sTitle').textContent = p.title; $('#sMeta').textContent = `${p.artist} · ${p.year}`;
@@ -546,6 +580,7 @@ function showScreen(id){ document.querySelectorAll('.screen').forEach(s => s.cla
 function goGallery(){
   if (swReload) { location.reload(); return; }
   S = null; hideSheets();
+  if (pathCtx) { showPath(pathCtx.path); return; }
   if (storyCtx) { showChapters(storyCtx.story); return; }
   showScreen('gallery'); renderStoryEntry(); renderGallery();
 }
@@ -566,9 +601,21 @@ function chUnlocked(st, i){ return i === 0 || isDone(st.chapters[i - 1].pid); }
 function chDoneCount(st){ return st.chapters.filter(c => isDone(c.pid)).length; }
 function renderStoryEntry(){
   const box = $('#storyEntries');
-  if (!STORIES.length) { box.style.display = 'none'; return; }
+  if (!STORIES.length && !PATHS.length) { box.style.display = 'none'; return; }
   box.style.display = '';
   box.innerHTML = '';
+  PATHS.forEach(path => {
+    const steps = pathSteps(path), n = steps.filter(s => isDone(s.pid)).length, N = steps.length;
+    const b = document.createElement('button');
+    b.className = 'sentry path neu';
+    b.setAttribute('data-path', path.id);
+    b.setAttribute('aria-label', 'Lebensweg: ' + path.title);
+    b.innerHTML = `<div class="cv" style="background-image:url(data/${path.cover}-thumb.jpg)"></div>
+      <div class="tx"><div class="k">Neu · Lebensweg</div><div class="n">${path.title}</div>
+      <div class="s">${path.part} · ${n ? `${n} von ${N} gemalt` : 'Jetzt starten'}</div></div><div class="go">›</div>`;
+    b.onclick = () => { pathCtx = { path }; storyCtx = null; showPath(path); };
+    box.appendChild(b);
+  });
   STORIES.forEach(st => {
     const n = chDoneCount(st), N = st.chapters.length;
     const b = document.createElement('button');
@@ -616,12 +663,13 @@ function showChapters(st){
 }
 function showChapter(st, i){
   const ch = st.chapters[i], p = byId(ch.pid), done = isDone(ch.pid), pct = pctOf(ch.pid);
-  storyCtx = { story: st, idx: i, pid: ch.pid };
+  storyCtx = { story: st, idx: i, pid: ch.pid }; pathCtx = null;
   const o = storyState(st); if (!o.seen.includes(i)) { o.seen.push(i); storySave(st, o); }
   $('#cNum').textContent = `Kapitel ${i + 1} von ${st.chapters.length}`;
   $('#cTitle').textContent = ch.title;
   $('#cMeta').textContent = `${ch.place} · ${ch.when}`;
   $('#cText').innerHTML = ch.text.map(t => `<p>${t}</p>`).join('');
+  const qEl = $('#cQuote'); if (qEl) qEl.classList.add('hidden');
   $('#cWork').className = 'cwork' + (done ? ' fin' : '');
   $('#cWork').innerHTML = `<div class="th" style="background-image:url(data/${ch.pid}-${done ? 'orig.jpg' : 'thumb.jpg'})"></div>
     <div>${done ? 'Schon gemalt' : 'Du malst'}: <b>${p.title}</b><br>${p.artist}, ${p.year}</div>`;
@@ -629,12 +677,13 @@ function showChapter(st, i){
   $('#chapter .card').scrollTop = 0;
   $('#chapter').classList.remove('hidden');
 }
-$('#cBack').onclick = () => { $('#chapter').classList.add('hidden'); if (storyCtx) showChapters(storyCtx.story); };
+$('#cBack').onclick = () => { $('#chapter').classList.add('hidden'); if (pathCtx) showPath(pathCtx.path); else if (storyCtx) showChapters(storyCtx.story); };
 $('#cGo').onclick = async () => {
   $('#chapter').classList.add('hidden');
-  const c = storyCtx, p = byId(c.pid);
+  const c = pathCtx || storyCtx, p = byId(c.pid);
   await openPainting(p);
-  if (S && S.done && storyCtx === c) setTimeout(() => { if (S && S.p === p) showChapterDone(); }, 900);
+  if (S && S.done && pathCtx === c) setTimeout(() => { if (S && S.p === p) showPathDone(); }, 900);
+  else if (S && S.done && storyCtx === c) setTimeout(() => { if (S && S.p === p) showChapterDone(); }, 900);
 };
 function showChapterDone(){
   const c = storyCtx, st = c.story, i = c.idx, ch = st.chapters[i], p = byId(ch.pid), N = st.chapters.length, last = i === N - 1;
@@ -650,6 +699,15 @@ function showChapterDone(){
   $('#chDone').classList.remove('hidden');
 }
 $('#dNext').onclick = () => {
+  if (pathCtx && pathCtx.step) {
+    const path = pathCtx.path, steps = pathSteps(path), i = pathCtx.step.idx;
+    $('#chDone').classList.add('hidden');
+    if (swReload) { location.reload(); return; }
+    S = null;
+    if (i < steps.length - 1) { showPath(path); showPathWork(path, steps[i + 1]); }
+    else showPath(path);
+    return;
+  }
   const c = storyCtx, st = c.story, i = c.idx;
   $('#chDone').classList.add('hidden');
   if (swReload) { location.reload(); return; }
@@ -658,10 +716,151 @@ $('#dNext').onclick = () => {
   else showChapters(st);
 };
 $('#dList').onclick = () => { $('#chDone').classList.add('hidden'); goGallery(); };
-$('#dLook').onclick = () => { $('#chDone').classList.add('hidden'); toast('Tippe auf 💡, um das Kapitel wieder zu sehen'); };
+$('#dLook').onclick = () => { $('#chDone').classList.add('hidden'); toast('Tippe auf 💡, um den Text wieder zu sehen'); };
 $('#chBack').onclick = () => { storyCtx = null; hideSheets(); if (swReload) { location.reload(); return; } showScreen('gallery'); renderStoryEntry(); renderGallery(); };
 
+// ---------- path mode (Lebensweg) ----------
+let pathCtx = null; // { path, step, pid } while playing a path work
+function pathSteps(path){
+  const out = [];
+  path.stations.forEach((st, si) => st.works.forEach((w, wi) => out.push({ st, si, w, wi, pid: w.pid, idx: out.length })));
+  return out;
+}
+function pathState(path){ try { return JSON.parse(localStorage.getItem(PKEY(path.id))) || { seen: [] }; } catch(e){ return { seen: [] }; } }
+function pathSave(path, o){ try { localStorage.setItem(PKEY(path.id), JSON.stringify(o)); } catch(e){} }
+function pathDoneCount(path){ return pathSteps(path).filter(s => isDone(s.pid)).length; }
+function pathWorkUnlocked(path, idx){ return idx === 0 || isDone(pathSteps(path)[idx - 1].pid); }
+function stationDone(st){ return st.works.every(w => isDone(w.pid)); }
+function showPath(path){
+  S = null; showScreen('path');
+  const steps = pathSteps(path), n = pathDoneCount(path), N = steps.length;
+  $('#pathHead').innerHTML = `<div class="cv" style="background-image:url(data/${path.cover}-orig.jpg)"></div>
+    <div><h1>${path.title}</h1><div class="life">${path.name} · ${path.life} · ${path.part}</div>
+    <p class="intro">${path.intro}</p>
+    <div class="prog">${n} von ${N} Bildern gemalt<div class="bar"><div style="width:${100 * n / Math.max(1,N)}%"></div></div></div></div>`;
+  renderPathMap(path);
+  const list = $('#pathList'); list.innerHTML = '';
+  const note = document.createElement('p');
+  note.className = 'pnote';
+  note.textContent = 'Die erste Station ist der freie Start. In der Testversion kannst du alle Bilder schon malen; später schaltet jedes fertige Bild das nächste frei.';
+  list.appendChild(note);
+  path.stations.forEach((st, si) => {
+    const box = document.createElement('section');
+    box.className = 'pstat'; box.id = 'pstat-' + st.id;
+    const intro = st.intro.map(p => `<p>${p}</p>`).join('');
+    box.innerHTML = `<h2>${si + 1}. ${st.place}</h2><div class="when">${st.when}</div><div class="intro">${intro}</div><div class="works"></div>`;
+    const works = box.querySelector('.works');
+    let nextMarked = false;
+    st.works.forEach((w, wi) => {
+      const step = steps.find(s => s.si === si && s.wi === wi);
+      const p = byId(w.pid), done = isDone(w.pid), pct = pctOf(w.pid);
+      const conceptual = pathWorkUnlocked(path, step.idx);
+      const b = document.createElement('button');
+      let cls = 'chi', badge;
+      if (done) badge = '<span class="st fin">✓ Fertig</span>';
+      else {
+        cls += ' todo';
+        badge = pct > 0 ? `<span class="st">${Math.max(1, pct)} %</span>` : (pathState(path).seen.includes(w.pid) ? '<span class="st">Bereit</span>' : '<span class="st new">Neu</span>');
+      }
+      if (!conceptual) cls += ' softlock';
+      if (!done && conceptual && !nextMarked) { cls += ' next'; nextMarked = true; }
+      if (!done && !conceptual && !nextMarked) { cls += ' next'; nextMarked = true; }
+      const free = (si === 0 && wi === 0) ? 'Frei zum Start · ' : '';
+      b.className = cls;
+      b.innerHTML = `<div class="th" style="background-image:url(data/${w.pid}-${done ? 'orig.jpg' : 'thumb.jpg'})"></div>
+        <div class="tx"><div class="no">${free}${st.place}, ${st.when}</div><div class="t">${p.title}</div>
+        <div class="w">${p.artist}, ${p.year}</div></div>${badge}`;
+      b.onclick = () => showPathWork(path, step);
+      works.appendChild(b);
+    });
+    list.appendChild(box);
+  });
+  const epi = $('#pathEpi');
+  if (n === N) { epi.innerHTML = `<div class="lbl">Wie es weitergeht</div><p>${path.epilogue}</p>`; epi.classList.remove('hidden'); }
+  else epi.classList.add('hidden');
+  renderStoryEntry();
+}
+function renderPathMap(path){
+  const wrap = $('#pathMap');
+  const groups = [];
+  path.stations.forEach((st, i) => {
+    const g = groups.find(x => Math.hypot(x.x - st.map.x, x.y - st.map.y) < 12);
+    if (g) g.si.push(i); else groups.push({ x: st.map.x, y: st.map.y, si: [i], label: st.place.split('·')[0].trim() });
+  });
+  const doneSt = path.stations.map(stationDone);
+  const lines = [];
+  for (let i = 1; i < groups.length; i++) {
+    const a = groups[i - 1], b = groups[i];
+    lines.push(`<line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}"/>`);
+  }
+  const dots = groups.map((g, gi) => {
+    const allDone = g.si.every(i => doneSt[i]);
+    const open = g.si.some(i => i === 0 || doneSt[i] || (i > 0 && doneSt[i - 1]));
+    const cls = allDone ? 'done' : (open ? 'open' : 'soon');
+    const num = g.si.map(i => i + 1).join('·');
+    return `<g class="mdot ${cls}" data-si="${g.si[0]}">
+      <circle cx="${g.x}" cy="${g.y}" r="7"/>
+      <text x="${g.x}" y="${g.y + 3}">${num}</text>
+      <text class="mlab" x="${g.x}" y="${g.y + 20}">${g.label}</text></g>`;
+  }).join('');
+  const items = path.stations.map((st, i) => {
+    const cls = doneSt[i] ? 'done' : (i === 0 || doneSt[i - 1] ? 'open' : '');
+    return `<li class="${cls}" data-si="${i}"><span class="n">${i + 1}</span>${st.place} · ${st.when}</li>`;
+  }).join('');
+  wrap.innerHTML = `<svg viewBox="0 0 200 110" class="pmap" role="img" aria-label="Karte der Stationen von Van Goghs Lebensweg">
+    <rect class="sea" x="0" y="0" width="200" height="110"/>
+    <path class="land" d="M28,58 C38,32 72,22 98,28 C128,16 168,22 182,42 C190,58 176,74 154,82 C128,96 96,98 70,90 C46,96 26,80 28,58 Z"/>
+    ${lines.join('')}
+    ${dots}
+  </svg><ol class="ptime">${items}</ol>`;
+  wrap.querySelectorAll('.mdot, .ptime li').forEach(el => {
+    el.addEventListener('click', () => {
+      const t = document.getElementById('pstat-' + path.stations[+el.getAttribute('data-si')].id);
+      if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+}
+function showPathWork(path, step){
+  const w = step.w, p = byId(step.pid), done = isDone(step.pid), pct = pctOf(step.pid);
+  const steps = pathSteps(path);
+  pathCtx = { path, step, pid: step.pid };
+  storyCtx = null;
+  const o = pathState(path); if (!o.seen.includes(step.pid)) { o.seen.push(step.pid); pathSave(path, o); }
+  $('#cNum').textContent = `${step.st.place} · Bild ${step.idx + 1} von ${steps.length}`;
+  $('#cTitle').textContent = p.title;
+  $('#cMeta').textContent = `${p.artist} · ${p.year} · ${step.st.place}, ${step.st.when}`;
+  $('#cText').innerHTML = w.text.map(tx => `<p>${tx}</p>`).join('');
+  const q = $('#cQuote');
+  if (w.quote) {
+    $('#cQuoteT').textContent = '«' + w.quote.text + '»';
+    $('#cQuoteC').textContent = w.quote.cite;
+    q.classList.remove('hidden');
+  } else q.classList.add('hidden');
+  $('#cWork').className = 'cwork' + (done ? ' fin' : '');
+  $('#cWork').innerHTML = `<div class="th" style="background-image:url(data/${step.pid}-${done ? 'orig.jpg' : 'thumb.jpg'})"></div>
+    <div>${done ? 'Schon gemalt' : 'Du malst'}: <b>${p.title}</b><br>${p.artist}, ${p.year}</div>`;
+  $('#cGo').textContent = done ? 'Bild ansehen' : (pct > 0 ? 'Weiter malen' : 'Bild malen');
+  $('#chapter .card').scrollTop = 0;
+  $('#chapter').classList.remove('hidden');
+}
+function showPathDone(){
+  const c = pathCtx, path = c.path, step = c.step, p = byId(step.pid);
+  const steps = pathSteps(path), last = step.idx === steps.length - 1;
+  $('#dNum').textContent = `Bild ${step.idx + 1} geschafft! 🎉`;
+  $('#dTitle').textContent = p.title;
+  $('#dMeta').textContent = `${p.artist} · ${p.year}`;
+  $('#dFact').textContent = step.w.fact;
+  $('#dMuseum').textContent = '🏛 Heute: ' + p.museum;
+  $('#dEpi').textContent = path.epilogue;
+  $('#dEpiWrap').classList.toggle('hidden', !last);
+  $('#dNext').textContent = last ? 'Lebensweg ansehen' : `Weiter: ${byId(steps[step.idx + 1].pid).title}`;
+  $('#chDone .card').scrollTop = 0;
+  $('#chDone').classList.remove('hidden');
+}
+$('#pathBack').onclick = () => { pathCtx = null; hideSheets(); if (swReload) { location.reload(); return; } showScreen('gallery'); renderStoryEntry(); renderGallery(); };
+
 // ---------- PWA: service worker ----------
+
 let swReload = false;
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
   const hadCtrl = !!navigator.serviceWorker.controller;

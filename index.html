@@ -18,7 +18,7 @@
   <header class="ghead">
     <div class="wordmark">Masilano</div>
     <h1>Malen nach Zahlen</h1>
-    <p class="sub">80 Meisterwerke, Feld für Feld. Wische zur Seite für mehr Bilder.</p>
+    <p class="sub">80 Meisterwerke, Feld für Feld – und Van Goghs Lebensweg.</p>
     <div id="sortBar" class="sortbar" role="group" aria-label="Reihenfolge der Bilder">
       <button type="button" data-sort="gallery">Galerie</button>
       <button type="button" data-sort="easy">Leicht zuerst</button>
@@ -34,7 +34,7 @@
   <div id="dots" class="dots"></div>
   <footer class="gfoot">
     <button id="srcBtn" class="linkbtn">Bildquellen &amp; Hinweise</button>
-    <div class="ver">Testversion 6</div>
+    <div class="ver">Testversion 6.1</div>
   </footer>
 </section>
 
@@ -48,6 +48,20 @@
   <div class="palwrap"><div id="palette"></div></div>
 </section>
 
+<section id="path" class="screen">
+  <div class="topbar">
+    <button id="pathBack" class="iconbtn" aria-label="Zurück zur Galerie">‹</button>
+    <div class="ttl"><div class="chT">Lebensweg</div></div>
+    <div class="iconspace"></div>
+  </div>
+  <div class="chscroll">
+    <header id="pathHead" class="chhead"></header>
+    <div id="pathMap" class="pmapwrap"></div>
+    <div id="pathList" class="pathlist"></div>
+    <div id="pathEpi" class="chepi hidden"></div>
+  </div>
+</section>
+
 <section id="chapters" class="screen">
   <div class="topbar">
     <button id="chBack" class="iconbtn" aria-label="Zurück zur Galerie">‹</button>
@@ -59,7 +73,6 @@
     <div id="chList" class="chlist"></div>
     <div id="chEpi" class="chepi hidden"></div>
   </div>
-  <div id="ctoast" class="ctoast"></div>
 </section>
 
 <div id="chapter" class="sheet hidden">
@@ -68,6 +81,7 @@
     <h2 id="cTitle"></h2>
     <div id="cMeta" class="meta"></div>
     <div id="cText" class="ctext"></div>
+    <blockquote id="cQuote" class="cquote hidden"><p id="cQuoteT"></p><cite id="cQuoteC"></cite></blockquote>
     <div id="cWork" class="cwork"></div>
     <div class="btns">
       <button id="cBack" class="btn ghost">Zurück</button>
@@ -113,12 +127,14 @@
   <div class="card">
     <h2>Bildquellen</h2>
     <ul id="srcList" class="srclist"></ul>
-    <p class="small">Alle Bilder stammen von Wikimedia Commons und sind gemeinfrei. Sie wurden für das Spiel automatisch in Farbfelder umgewandelt. Dein Fortschritt wird nur auf diesem Gerät gespeichert.</p>
+    <p class="small">Alle Bilder stammen von Wikimedia Commons und sind gemeinfrei. Sie wurden für das Spiel automatisch in Farbfelder umgewandelt. Die Zitate aus Van Goghs Briefen hat Masilano selbst aus dem niederländischen oder französischen Original übersetzt (Nummer und Datum nach der Briefausgabe von 2009). Dein Fortschritt wird nur auf diesem Gerät gespeichert.</p>
     <div class="btns"><button class="btn" id="srcClose">Schliessen</button></div>
   </div>
 </div>
+<div id="ctoast" class="ctoast"></div>
 <script src="paintings.js"></script>
 <script src="story.js"></script>
+<script src="path-vangogh.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
