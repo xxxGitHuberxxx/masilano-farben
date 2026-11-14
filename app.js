@@ -797,7 +797,7 @@ function renderPathMap(path){
     const allDone = g.si.every(i => doneSt[i]);
     const open = g.si.some(i => i === 0 || doneSt[i] || (i > 0 && doneSt[i - 1]));
     const cls = allDone ? 'done' : (open ? 'open' : 'soon');
-    const num = g.si.map(i => i + 1).join('·');
+    const num = g.si.length > 2 ? (g.si[0] + 1) + '–' + (g.si[g.si.length - 1] + 1) : g.si.map(i => i + 1).join('·');
     return `<g class="mdot ${cls}" data-si="${g.si[0]}">
       <circle cx="${g.x}" cy="${g.y}" r="7"/>
       <text x="${g.x}" y="${g.y + 3}">${num}</text>
@@ -807,9 +807,10 @@ function renderPathMap(path){
     const cls = doneSt[i] ? 'done' : (i === 0 || doneSt[i - 1] ? 'open' : '');
     return `<li class="${cls}" data-si="${i}"><span class="n">${i + 1}</span>${st.place} · ${st.when}</li>`;
   }).join('');
-  wrap.innerHTML = `<svg viewBox="0 0 200 110" class="pmap" role="img" aria-label="Karte der Stationen von Van Goghs Lebensweg">
-    <rect class="sea" x="0" y="0" width="200" height="110"/>
+  wrap.innerHTML = `<svg viewBox="0 0 200 160" class="pmap" role="img" aria-label="Karte der Stationen von Van Goghs Lebensweg">
+    <rect class="sea" x="0" y="0" width="200" height="160"/>
     <path class="land" d="M28,58 C38,32 72,22 98,28 C128,16 168,22 182,42 C190,58 176,74 154,82 C128,96 96,98 70,90 C46,96 26,80 28,58 Z"/>
+    <path class="land" d="M18,108 C8,118 10,138 22,150 C36,162 62,160 72,148 C78,136 64,122 50,114 C36,106 26,104 18,108 Z"/>
     ${lines.join('')}
     ${dots}
   </svg><ol class="ptime">${items}</ol>`;
