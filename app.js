@@ -102,7 +102,43 @@ if (searchClear) searchClear.addEventListener('click', () => {
 let galPage = +(sessionStorage.getItem('masilano.galPage') || 0);
 // Geometry is measured only after the header (sort + story banners) is in the layout.
 // It is reused across sort toggles so the grid cannot jump when only the order changes.
-let galGrid = null, galFitting = false;
+let galGrid = null, galFitting = false, galItems = [], galPer = 0;
+function paintGalCard(item){
+  const p = item.p;
+  const s = loadSave(p.id);
+  const pct = s ? Math.floor(100 * (s.filled.length / s.total)) : 0;
+  const done = s && s.filled.length >= s.total;
+  const b = document.createElement('button');
+  if (item.kind === 'story') {
+    b.className = 'pc storyc';
+    const doneTag = done ? '<span class="badge fin">✓ Fertig</span>' : '';
+    b.innerHTML = `<div class="im ${done ? '' : 'todo'}" style="background-image:url(data/${p.id}-${done ? 'orig.jpg' : 'thumb.jpg'})">
+      <div class="tags"><span class="lv story">Geschichte</span></div>${doneTag}</div>
+      <div class="tx"><div class="t">${p.title}</div><div class="a">${p.artist}, ${p.year}</div>
+      <div class="hint">In der Geschichte von ${item.st.name}</div></div>`;
+    b.onclick = () => openStoryHit(item.st, p);
+  } else {
+    const lv = levelOf(p);
+    const tags = `<div class="tags"><span class="lv ${lv}">${levelLabel(lv)}</span>${p.fresh ? '<span class="lv neu">Neu</span>' : ''}</div>`;
+    b.className = 'pc';
+    b.innerHTML = `<div class="im ${done ? '' : 'todo'}" style="background-image:url(data/${p.id}-${done ? 'orig.jpg' : 'thumb.jpg'})">
+      ${tags}${done ? '<span class="badge fin">✓ Fertig</span>' : (s && s.filled.length ? `<span class="badge">${Math.max(1, pct)} %</span>` : '')}</div>
+      <div class="tx"><div class="t">${p.title}</div><div class="a">${p.artist}, ${p.year}</div>
+      <div class="bar"><div style="width:${done ? 100 : pct}%"></div></div></div>`;
+    b.onclick = () => openPainting(p);
+  }
+  return b;
+}
+function fillGalPage(page, pg){
+  if (!page || page.dataset.filled) return;
+  page.dataset.filled = '1';
+  galItems.slice(pg * galPer, pg * galPer + galPer).forEach(item => page.appendChild(paintGalCard(item)));
+}
+function hydrateGal(center){
+  const pages = [...document.querySelectorAll('#pager .page')];
+  const a = Math.max(0, (center || 0) - 1), b = Math.min(pages.length - 1, (center || 0) + 1);
+  for (let i = a; i <= b; i++) fillGalPage(pages[i], i);
+}
 function renderGallery(){
   const pager = $('#pager'), dots = $('#dots');
   const list = galleryList();
@@ -141,46 +177,22 @@ function renderGallery(){
     dots.appendChild(ph);
     return;
   }
+  galItems = items; galPer = per;
   for (let pg = 0; pg < nPages; pg++) {
     const page = document.createElement('div'); page.className = 'page';
     page.style.gridTemplateColumns = `repeat(${cols}, 1fr)`; page.style.gridAutoRows = cardH + 'px';
-    items.slice(pg * per, pg * per + per).forEach(item => {
-      const p = item.p;
-      const s = loadSave(p.id);
-      const pct = s ? Math.floor(100 * (s.filled.length / s.total)) : 0;
-      const done = s && s.filled.length >= s.total;
-      const b = document.createElement('button');
-      if (item.kind === 'story') {
-        b.className = 'pc storyc';
-        const doneTag = done ? '<span class="badge fin">✓ Fertig</span>' : '';
-        b.innerHTML = `<div class="im ${done ? '' : 'todo'}" style="background-image:url(data/${p.id}-${done ? 'orig.jpg' : 'thumb.jpg'})">
-          <div class="tags"><span class="lv story">Geschichte</span></div>${doneTag}</div>
-          <div class="tx"><div class="t">${p.title}</div><div class="a">${p.artist}, ${p.year}</div>
-          <div class="hint">In der Geschichte von ${item.st.name}</div></div>`;
-        b.onclick = () => openStoryHit(item.st, p);
-      } else {
-        const lv = levelOf(p);
-        const tags = `<div class="tags"><span class="lv ${lv}">${levelLabel(lv)}</span>${p.fresh ? '<span class="lv neu">Neu</span>' : ''}</div>`;
-        b.className = 'pc';
-        b.innerHTML = `<div class="im ${done ? '' : 'todo'}" style="background-image:url(data/${p.id}-${done ? 'orig.jpg' : 'thumb.jpg'})">
-          ${tags}${done ? '<span class="badge fin">✓ Fertig</span>' : (s && s.filled.length ? `<span class="badge">${Math.max(1, pct)} %</span>` : '')}</div>
-          <div class="tx"><div class="t">${p.title}</div><div class="a">${p.artist}, ${p.year}</div>
-          <div class="bar"><div style="width:${done ? 100 : pct}%"></div></div></div>`;
-        b.onclick = () => openPainting(p);
-      }
-      page.appendChild(b);
-    });
     pager.appendChild(page);
     const d = document.createElement('button'); d.setAttribute('aria-label', 'Seite ' + (pg + 1));
-    d.onclick = () => pager.scrollTo({ left: pg * pager.clientWidth, behavior: 'smooth' });
+    d.onclick = () => { hydrateGal(pg); pager.scrollTo({ left: pg * pager.clientWidth, behavior: 'smooth' }); };
     dots.appendChild(d);
   }
   galPage = Math.min(galPage, nPages - 1);
+  hydrateGal(galPage);
   pager.scrollLeft = galPage * pager.clientWidth;
   markDots();
   if (!galFitting && galGrid && galGrid.rows > 1) {
     const pb = pager.getBoundingClientRect();
-    const overflow = [...pager.querySelectorAll('.page:first-child .pc')].some(c => c.getBoundingClientRect().bottom > pb.bottom + 1.5);
+    const overflow = [...pager.querySelectorAll('.page[data-filled] .pc')].some(c => c.getBoundingClientRect().bottom > pb.bottom + 1.5);
     if (overflow) {
       galGrid.rows -= 1;
       galGrid.cardH = Math.min((H - (galGrid.rows - 1) * gap) / galGrid.rows, cw2 * 1.3 + 80);
@@ -194,6 +206,7 @@ function markDots(){
   const pager = $('#pager'), n = Math.round(pager.scrollLeft / Math.max(1, pager.clientWidth));
   [...$('#dots').children].forEach((d, i) => d.classList.toggle('on', i === n));
   if (n !== galPage) { galPage = n; try { sessionStorage.setItem('masilano.galPage', n); } catch(e){} }
+  hydrateGal(n);
 }
 $('#pager').addEventListener('scroll', () => requestAnimationFrame(markDots), { passive: true });
 $('#srcBtn').onclick = () => {
