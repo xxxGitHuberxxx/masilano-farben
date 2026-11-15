@@ -26,6 +26,26 @@ function writeSave(id, obj){ try{ localStorage.setItem(KEY(id), JSON.stringify(o
 
 // ---------- gallery ----------
 const SORT_KEY = 'masilano.galSort.v5';
+const LAST_KEY = 'masilano.last.v1';
+const ONBOARD_KEY = 'masilano.onboard.v1';
+const INSTALL_KEY = 'masilano.installHint.v1';
+function reduceMotion(){ return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); }
+function isStandalone(){
+  return (window.matchMedia && (window.matchMedia('(display-mode: standalone)').matches || window.matchMedia('(display-mode: fullscreen)').matches))
+    || window.navigator.standalone === true;
+}
+function smoothScroll(el, opts){
+  const o = Object.assign({}, opts || {});
+  if (reduceMotion()) o.behavior = 'auto';
+  el.scrollTo(o);
+}
+function smoothIntoView(el, opts){
+  if (!el) return;
+  const o = Object.assign({ inline: 'center', block: 'nearest' }, opts || {});
+  if (reduceMotion()) o.behavior = 'auto';
+  else if (!o.behavior) o.behavior = 'smooth';
+  el.scrollIntoView(o);
+}
 const LEVEL_RANK = {leicht:0, mittel:1, schwer:2};
 function levelOf(p){
   const r = p.regions || 999;
@@ -195,6 +215,7 @@ function hydrateGal(center){
   for (let i = a; i <= b; i++) fillGalPage(pages[i], i);
 }
 function renderGallery(){
+  renderContinue();
   const pager = $('#pager'), dots = $('#dots');
   const list = galleryList();
   const storyHits = storySearchHits();
@@ -239,7 +260,7 @@ function renderGallery(){
     page.style.gridTemplateColumns = `repeat(${cols}, 1fr)`; page.style.gridAutoRows = cardH + 'px';
     pager.appendChild(page);
     const d = document.createElement('button'); d.setAttribute('aria-label', t('pageN', { n: pg + 1 }));
-    d.onclick = () => { hydrateGal(pg); pager.scrollTo({ left: pg * pager.clientWidth, behavior: 'smooth' }); };
+    d.onclick = () => { hydrateGal(pg); smoothScroll(pager, { left: pg * pager.clientWidth, behavior: 'smooth' }); };
     dots.appendChild(d);
   }
   galPage = Math.min(galPage, nPages - 1);
@@ -329,7 +350,8 @@ async function openPainting(p){
   origImg = null; reveal = 0;
   loadImg(`data/${p.id}-orig.jpg`).then(i => { if (S && S.p === p) origImg = i; });
   buildPalette(); resize(); fitView(); rebuild(); updateProgress();
-  if (S.nFilled >= pz.R) { S.done = true; reveal = 1; draw(); }
+  if (S.nFilled >= pz.R) { S.done = true; reveal = 1; draw(); clearLastIf(p.id); }
+  else rememberLast(p);
 }
 
 function rebuild(){
@@ -346,7 +368,8 @@ function rebuild(){
 function buildPalette(){
   const pal = $('#palette'); pal.innerHTML = '';
   S.pz.meta.palette.forEach((c, i) => {
-    const b = document.createElement('button'); b.className = 'chip'; b.dataset.i = i;
+    const b = document.createElement('button'); b.className = 'chip'; b.dataset.i = i; b.type = 'button';
+    b.setAttribute('aria-label', t('colorAria', { n: i + 1 }));
     b.innerHTML = `<div class="in" style="background:rgb(${c});color:${lum(c) > 150 ? '#2b2722' : '#fff'}"></div>`;
     b.onclick = () => selectColor(i, true);
     pal.appendChild(b);
@@ -360,6 +383,8 @@ function updatePalette(){
   for (const b of chips) {
     const i = +b.dataset.i, left = S.colLeft[i], tot = S.pz.colCount[i];
     b.classList.toggle('sel', i === S.sel); b.classList.toggle('done', left === 0);
+    b.setAttribute('aria-pressed', i === S.sel ? 'true' : 'false');
+    b.setAttribute('aria-label', left === 0 ? t('colorAriaDone', { n: i + 1 }) : t('colorAria', { n: i + 1 }));
     b.firstChild.textContent = left === 0 ? '✓' : (i + 1);
     const frac = 1 - left / tot;
     b.style.background = `conic-gradient(#c79a4e ${frac * 360}deg, #e6dfd5 0)`;
@@ -368,8 +393,8 @@ function updatePalette(){
 function selectColor(i, scroll){
   if (!S || S.done) return;
   S.sel = i; updatePalette(); rebuild();
-  if (scroll) { const b = $('#palette').children[i]; b && b.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' }); }
-  if (S.colLeft[i] === 0) toast('Diese Farbe ist schon fertig');
+  if (scroll) { const b = $('#palette').children[i]; b && smoothIntoView(b); }
+  if (S.colLeft[i] === 0) toast(t('colorAlready'));
 }
 function updateProgress(){ $('#pFill').style.width = (100 * S.nFilled / S.pz.R) + '%'; }
 
@@ -379,19 +404,20 @@ function persist(){
   saveT = setTimeout(() => {
     const arr = []; S.filled.forEach((v, i) => v && arr.push(i));
     writeSave(S.p.id, { total: S.pz.R, filled: arr });
+    if (S.nFilled >= S.pz.R) clearLastIf(S.p.id); else rememberLast(S.p);
   }, 250);
 }
 
 function fillRegion(r, sx, sy){
   S.filled[r] = 1; S.nFilled++; S.colLeft[S.pz.rc[r]]--;
   ripples.push({ x: sx, y: sy, t: performance.now(), c: S.pz.meta.palette[S.pz.rc[r]] });
-  if (navigator.vibrate) try { navigator.vibrate(8); } catch(e){}
+  if (navigator.vibrate && !reduceMotion()) try { navigator.vibrate(8); } catch(e){}
   persist(); updateProgress();
   if (S.colLeft[S.sel] === 0) {
-    toast('Farbe ' + (S.sel + 1) + ' fertig ✓');
-    let n = -1; const L = S.colLeft.length;
-    for (let k = 1; k <= L; k++) { const j = (S.sel + k) % L; if (S.colLeft[j] > 0) { n = j; break; } }
-    if (n >= 0) { S.sel = n; setTimeout(() => { const b = $('#palette').children[n]; b && b.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' }); }, 50); }
+    toast(t('colorFinished', { n: S.sel + 1 }));
+    let n = -1; const Lft = S.colLeft.length;
+    for (let k = 1; k <= Lft; k++) { const j = (S.sel + k) % Lft; if (S.colLeft[j] > 0) { n = j; break; } }
+    if (n >= 0) { S.sel = n; setTimeout(() => { const b = $('#palette').children[n]; b && smoothIntoView(b); }, 50); }
   }
   updatePalette(); rebuild(); kick();
   if (S.nFilled >= S.pz.R) finish();
@@ -471,7 +497,7 @@ function tick(){
   if (alive) requestAnimationFrame(tick); else { rafOn = false; fxx.clearRect(0, 0, cw, ch); }
 }
 let anim = null;
-function animateView(to, dur, done){ anim = { from: { ...view }, to, t: performance.now(), dur, done }; kick(); }
+function animateView(to, dur, done){ if (reduceMotion()) { Object.assign(view, to); draw(); if (done) done(); return; } anim = { from: { ...view }, to, t: performance.now(), dur, done }; kick(); }
 function stepAnim(now){
   const k = Math.max(0, Math.min(1, (now - anim.t) / anim.dur)), e = k < .5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2;
   for (const key of ['s', 'tx', 'ty']) view[key] = anim.from[key] + (anim.to[key] - anim.from[key]) * e;
@@ -563,6 +589,8 @@ function toast(msg){ const t = $('#toast'); t.textContent = msg; t.classList.add
 // ---------- completion ----------
 function finish(){
   S.done = true; S.doneAt = performance.now(); rebuild();
+  clearLastIf(S.p.id);
+  if (reduceMotion()) { reveal = 1; draw(); setTimeout(showStory, 200); return; }
   const s = fitS, to = { s, tx: (cw - S.pz.w * s) / 2, ty: (ch - S.pz.h * s) / 2 };
   setTimeout(() => {
     animateView(to, 700, () => {
@@ -594,6 +622,8 @@ $('#sReset').onclick = () => {
   if (!confirm(t('resetConfirm'))) return;
   localStorage.removeItem(KEY(S.p.id)); $('#story').classList.add('hidden'); const p = S.p; openPainting(p);
 };
+if ($('#sShare')) $('#sShare').onclick = () => { const p = currentSharePainting(); if (p) sharePainting(p); };
+if ($('#dShare')) $('#dShare').onclick = () => { const p = currentSharePainting(); if (p) sharePainting(p); };
 // when finished, the hint button reopens the story, tapping the canvas toggles original / own version
 const origHint = $('#hintBtn').onclick;
 $('#hintBtn').onclick = () => { if (S && S.done) { showStory(); return; } origHint(); };
@@ -608,7 +638,7 @@ function goGallery(){
   if (storyCtx) { showChapters(storyCtx.story); return; }
   showScreen('gallery'); renderStoryEntry(); renderGallery();
 }
-function hideSheets(){ ['#story', '#chapter', '#chDone', '#pathFin'].forEach(q => $(q).classList.add('hidden')); }
+function hideSheets(){ ['#story', '#chapter', '#chDone', '#pathFin', '#installHow'].forEach(q => $(q) && $(q).classList.add('hidden')); }
 $('#backBtn').onclick = goGallery;
 let galT = 0;
 function onViewport(){ if (S) resize(); else { clearTimeout(galT); galT = setTimeout(renderGallery, 120); } }
@@ -855,7 +885,7 @@ function renderPathMap(path){
   wrap.querySelectorAll('.mdot, .ptime li').forEach(el => {
     el.addEventListener('click', () => {
       const t = document.getElementById('pstat-' + path.stations[+el.getAttribute('data-si')].id);
-      if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (t) smoothIntoView(t, { behavior: 'smooth', block: 'start' });
     });
   });
 }
@@ -923,6 +953,348 @@ if ($('#pfGal')) $('#pfGal').onclick = () => {
   pathCtx = null; goGallery();
 };
 
+
+// ---------- last picture / continue ----------
+function hasAnyProgress(){
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (!k) continue;
+      if (k.indexOf('masilano.color.v1.') === 0) {
+        const s = JSON.parse(localStorage.getItem(k) || 'null');
+        if (s && s.filled && s.filled.length) return true;
+      }
+      if (k.indexOf('masilano.story.v1.') === 0 || k.indexOf('masilano.path.v1.') === 0) {
+        const s = JSON.parse(localStorage.getItem(k) || 'null');
+        if (s && s.seen && s.seen.length) return true;
+      }
+    }
+  } catch (e) {}
+  return false;
+}
+function rememberLast(p){
+  if (!p || isDone(p.id)) { if (p) clearLastIf(p.id); return; }
+  const o = { id: p.id, at: Date.now(), from: 'gallery' };
+  if (pathCtx && pathCtx.path) { o.from = 'path'; o.pathId = pathCtx.path.id; }
+  else if (storyCtx && storyCtx.story) { o.from = 'story'; o.storyId = storyCtx.story.id; }
+  try { localStorage.setItem(LAST_KEY, JSON.stringify(o)); } catch (e) {}
+}
+function clearLastIf(id){
+  try {
+    const o = JSON.parse(localStorage.getItem(LAST_KEY) || 'null');
+    if (o && o.id === id) localStorage.removeItem(LAST_KEY);
+  } catch (e) {}
+}
+function findLastWork(){
+  try {
+    const o = JSON.parse(localStorage.getItem(LAST_KEY) || 'null');
+    if (o && o.id) {
+      const p = byId(o.id);
+      if (p && !isDone(p.id) && pctOf(p.id) > 0) return { p, meta: o };
+    }
+  } catch (e) {}
+  let best = null, bestPct = 0;
+  for (const p of ALL) {
+    if (isDone(p.id)) continue;
+    const pct = pctOf(p.id);
+    if (pct > bestPct) { bestPct = pct; best = p; }
+  }
+  return best ? { p: best, meta: { from: 'gallery' } } : null;
+}
+function renderContinue(){
+  const wrap = $('#continueWrap');
+  if (!wrap) return;
+  const searching = !!(typeof galQuery === 'string' && galQuery.trim());
+  const last = searching ? null : findLastWork();
+  const had = !!wrap.querySelector('#continueCard');
+  if (!last) {
+    if (had) { wrap.innerHTML = ''; galGrid = null; }
+    else wrap.innerHTML = '';
+    return;
+  }
+  const p = last.p, pct = Math.max(1, pctOf(p.id));
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.id = 'continueCard';
+  b.className = 'contcard';
+  b.setAttribute('aria-label', t('continueAria', { title: L(p, 'title') }));
+  b.innerHTML = `<div class="cv" style="background-image:url(data/${p.id}-thumb.jpg)"></div>
+    <div class="tx"><div class="k">${t('continueKicker')}</div><div class="n">${L(p,'title')}</div>
+    <div class="s">${L(p,'artist')} · ${pct} %</div>
+    <div class="bar"><div style="width:${pct}%"></div></div></div><div class="go">›</div>`;
+  b.onclick = () => resumeLast();
+  wrap.innerHTML = '';
+  wrap.appendChild(b);
+  if (!had) galGrid = null;
+}
+async function resumeLast(){
+  const last = findLastWork();
+  if (!last) return;
+  const p = last.p, m = last.meta || {};
+  pathCtx = null; storyCtx = null;
+  if (m.from === 'path') {
+    const path = PATHS.find(x => x.id === (m.pathId || 'vangogh')) || PATHS[0];
+    if (path) {
+      const step = pathSteps(path).find(s => s.pid === p.id);
+      if (step) pathCtx = { path, step, pid: p.id };
+    }
+  } else if (m.from === 'story') {
+    const st = STORIES.find(x => x.id === m.storyId);
+    if (st) {
+      const idx = st.chapters.findIndex(c => c.pid === p.id);
+      if (idx >= 0) storyCtx = { story: st, idx, pid: p.id };
+    }
+  }
+  hideSheets();
+  await openPainting(p);
+}
+
+// ---------- first-run onboarding ----------
+let obPage = 0;
+const OB_N = 3;
+function onboardIsDone(){
+  try { return localStorage.getItem(ONBOARD_KEY) === 'done'; } catch (e) { return false; }
+}
+function markOnboardDone(){ try { localStorage.setItem(ONBOARD_KEY, 'done'); } catch (e) {} }
+function renderOnboard(){
+  const n = obPage + 1;
+  $('#obStep').textContent = t('obStep', { n, N: OB_N });
+  $('#obTitle').textContent = t('ob' + n + 'Title');
+  $('#obBody').textContent = t('ob' + n + 'Body');
+  $('#obNext').textContent = n === OB_N ? t('obStart') : t('obNext');
+}
+function showOnboard(){
+  obPage = 0;
+  renderOnboard();
+  const el = $('#onboard');
+  el.hidden = false;
+  el.classList.remove('hidden');
+  document.body.classList.add('onboarding');
+  const gal = $('#gallery'); if (gal) gal.setAttribute('aria-hidden', 'true');
+}
+function hideOnboard(){
+  const el = $('#onboard');
+  el.hidden = true;
+  el.classList.add('hidden');
+  document.body.classList.remove('onboarding');
+  const gal = $('#gallery'); if (gal) gal.removeAttribute('aria-hidden');
+}
+function completeOnboard(){
+  markOnboardDone();
+  hideOnboard();
+  galGrid = null;
+  maybeShowInstallHint();
+  renderStoryEntry();
+  renderGallery();
+}
+function maybeStartOnboard(){
+  if (onboardIsDone()) return false;
+  if (hasAnyProgress()) { markOnboardDone(); return false; }
+  showOnboard();
+  return true;
+}
+if ($('#obSkip')) $('#obSkip').onclick = () => completeOnboard();
+if ($('#obNext')) $('#obNext').onclick = () => {
+  if (obPage < OB_N - 1) { obPage++; renderOnboard(); }
+  else completeOnboard();
+};
+
+// ---------- install-to-home hint ----------
+let deferredInstall = null;
+window.addEventListener('beforeinstallprompt', ev => {
+  ev.preventDefault();
+  deferredInstall = ev;
+  maybeShowInstallHint();
+});
+window.addEventListener('appinstalled', () => {
+  deferredInstall = null;
+  hideInstallHint(true);
+});
+function installIsDismissed(){
+  try { return localStorage.getItem(INSTALL_KEY) === 'dismissed'; } catch (e) { return false; }
+}
+function maybeShowInstallHint(){
+  const el = $('#installHint');
+  if (!el) return;
+  const onboarding = $('#onboard') && !$('#onboard').classList.contains('hidden');
+  const show = onboardIsDone() && !onboarding && !isStandalone() && !installIsDismissed();
+  if (!show) {
+    const had = !el.classList.contains('hidden');
+    el.classList.add('hidden'); el.hidden = true;
+    if (had) galGrid = null;
+    return;
+  }
+  const had = !el.classList.contains('hidden') && !el.hidden;
+  el.innerHTML = `<div class="ih-tx"><div class="ih-t">${t('installTitle')}</div><div class="ih-s">${t('installBody')}</div></div>
+    <button type="button" class="ih-add" id="ihAdd">${t('installAdd')}</button>
+    <button type="button" class="ih-x" id="ihDismiss" aria-label="${t('installDismiss')}">×</button>`;
+  el.classList.remove('hidden'); el.hidden = false;
+  el.setAttribute('role', 'region');
+  el.setAttribute('aria-label', t('installTitle'));
+  $('#ihAdd').onclick = onInstallAdd;
+  $('#ihDismiss').onclick = () => hideInstallHint(true);
+  if (!had) galGrid = null;
+}
+function hideInstallHint(persist){
+  const el = $('#installHint');
+  if (el) { el.classList.add('hidden'); el.hidden = true; }
+  if (persist) try { localStorage.setItem(INSTALL_KEY, 'dismissed'); } catch (e) {}
+  galGrid = null;
+  if ($('#gallery') && $('#gallery').classList.contains('active')) renderGallery();
+}
+function isIOSDevice(){
+  const ua = navigator.userAgent || '';
+  return /iphone|ipad|ipod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+}
+async function onInstallAdd(){
+  if (deferredInstall) {
+    try {
+      deferredInstall.prompt();
+      const res = await deferredInstall.userChoice;
+      deferredInstall = null;
+      if (res && res.outcome === 'accepted') { hideInstallHint(true); return; }
+    } catch (e) {}
+  }
+  $('#ihBody').textContent = isIOSDevice() ? t('installHowIOS') : t('installHowGeneric');
+  $('#installHow').classList.remove('hidden');
+}
+if ($('#ihGotIt')) $('#ihGotIt').onclick = () => { $('#installHow').classList.add('hidden'); hideInstallHint(true); };
+
+// ---------- share finished painting ----------
+function currentSharePainting(){
+  if (S && S.p) return S.p;
+  if (pathCtx && pathCtx.pid) return byId(pathCtx.pid);
+  if (storyCtx && storyCtx.pid) return byId(storyCtx.pid);
+  return null;
+}
+function wrapText(ctx, text, maxW){
+  const words = String(text || '').split(/\s+/);
+  const lines = [];
+  let line = '';
+  for (const w of words) {
+    const next = line ? line + ' ' + w : w;
+    if (ctx.measureText(next).width <= maxW) line = next;
+    else { if (line) lines.push(line); line = w; }
+  }
+  if (line) lines.push(line);
+  return lines.length ? lines : [''];
+}
+function drawSpaced(ctx, text, cx, y, tracking){
+  const chars = String(text).split('');
+  const widths = chars.map(ch => ctx.measureText(ch).width);
+  let total = widths.reduce((a, b) => a + b, 0) + tracking * Math.max(0, chars.length - 1);
+  let x = cx - total / 2;
+  ctx.textAlign = 'left';
+  chars.forEach((ch, i) => { ctx.fillText(ch, x, y); x += widths[i] + tracking; });
+}
+function roundRectPath(ctx, x, y, w, h, r){
+  const rr = Math.min(r, w / 2, h / 2);
+  ctx.beginPath();
+  ctx.moveTo(x + rr, y);
+  ctx.arcTo(x + w, y, x + w, y + h, rr);
+  ctx.arcTo(x + w, y + h, x, y + h, rr);
+  ctx.arcTo(x, y + h, x, y, rr);
+  ctx.arcTo(x, y, x + w, y, rr);
+  ctx.closePath();
+}
+async function renderShareCard(p){
+  const img = await loadImg('data/' + p.id + '-orig.jpg');
+  const W = 1080, pad = 80, maxImgW = W - pad * 2, maxImgH = 900;
+  let iw = maxImgW, ih = Math.round(img.height * (iw / img.width));
+  if (ih > maxImgH) { ih = maxImgH; iw = Math.round(img.width * (ih / img.height)); }
+  const title = L(p, 'title') || p.title;
+  const artist = (L(p, 'artist') || p.artist) + (p.year ? '  ·  ' + p.year : '');
+  const credit = t('shareCredit');
+  const c = document.createElement('canvas');
+  const ctx = c.getContext('2d');
+  ctx.font = '600 52px Georgia, "Times New Roman", serif';
+  const tLines = wrapText(ctx, title, maxImgW);
+  ctx.font = '28px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+  const aLines = wrapText(ctx, artist, maxImgW);
+  const topY = 96;
+  const imgY = topY + 28;
+  const textY = imgY + ih + 44;
+  const H = textY + tLines.length * 62 + aLines.length * 38 + 28 + 22 + 80;
+  c.width = W; c.height = H;
+  ctx.fillStyle = '#f6f3ee';
+  ctx.fillRect(0, 0, W, H);
+  ctx.fillStyle = '#6a635c';
+  ctx.font = '700 18px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+  drawSpaced(ctx, 'MASILANO', W / 2, topY, 10);
+  const ix = Math.round((W - iw) / 2);
+  ctx.save();
+  ctx.shadowColor = 'rgba(60,40,20,0.18)';
+  ctx.shadowBlur = 28;
+  ctx.shadowOffsetY = 8;
+  roundRectPath(ctx, ix, imgY, iw, ih, 18);
+  ctx.fillStyle = '#eee';
+  ctx.fill();
+  ctx.restore();
+  ctx.save();
+  roundRectPath(ctx, ix, imgY, iw, ih, 18);
+  ctx.clip();
+  ctx.drawImage(img, ix, imgY, iw, ih);
+  ctx.restore();
+  let y = textY;
+  ctx.fillStyle = '#2b2722';
+  ctx.font = '600 52px Georgia, "Times New Roman", serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'alphabetic';
+  tLines.forEach(line => { ctx.fillText(line, W / 2, y); y += 62; });
+  ctx.fillStyle = '#5f564c';
+  ctx.font = '28px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+  aLines.forEach(line => { ctx.fillText(line, W / 2, y); y += 38; });
+  y += 16;
+  ctx.strokeStyle = '#c79a4e';
+  ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.moveTo(W / 2 - 48, y); ctx.lineTo(W / 2 + 48, y); ctx.stroke();
+  y += 36;
+  ctx.fillStyle = '#6a4a22';
+  ctx.font = '600 22px Georgia, "Times New Roman", serif';
+  ctx.fillText(credit, W / 2, y);
+  return new Promise((resolve, reject) => c.toBlob(b => b ? resolve(b) : reject(new Error('blob')), 'image/png'));
+}
+function downloadBlob(blob, name){
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = name;
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 2000);
+}
+async function sharePainting(p){
+  if (!p) return null;
+  try {
+    const blob = await renderShareCard(p);
+    const name = 'masilano-' + p.id + '.png';
+    const file = new File([blob], name, { type: 'image/png' });
+    const title = L(p, 'title') || p.title;
+    const text = t('shareText', { title, artist: L(p, 'artist') || p.artist });
+    try {
+      if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
+        await navigator.share({ title, text, files: [file] });
+        return blob;
+      }
+      if (navigator.share) {
+        downloadBlob(blob, name);
+        await navigator.share({ title, text });
+        return blob;
+      }
+    } catch (e) {
+      if (e && e.name === 'AbortError') return blob;
+      downloadBlob(blob, name);
+      toast(t('shareFailed'));
+      return blob;
+    }
+    downloadBlob(blob, name);
+    toast(t('shareSaved'));
+    return blob;
+  } catch (e) {
+    toast(t('shareFailed'));
+    return null;
+  }
+}
+
 // ---------- PWA: service worker ----------
 
 let swReload = false;
@@ -944,15 +1316,18 @@ function refreshLang(){
   if (onPath && pathCtx && pathCtx.path) showPath(pathCtx.path);
   else if (onPath && window.PATHS && window.PATHS[0]) showPath(window.PATHS[0]);
   else if (onCh && storyCtx && storyCtx.story) showChapters(storyCtx.story);
+  if (!$('#onboard').classList.contains('hidden')) renderOnboard();
+  maybeShowInstallHint();
   renderStoryEntry();
   renderGallery();
 }
 window.__i18nOnChange = refreshLang;
-const langSwitch = $('#langSwitch');
-if (langSwitch) langSwitch.addEventListener('click', e => {
-  const b = e.target.closest('button[data-lang]'); if (!b) return;
+document.addEventListener('click', e => {
+  const b = e.target.closest('#langSwitch button[data-lang], #obLang button[data-lang]');
+  if (!b) return;
   I.setLang(b.getAttribute('data-lang'));
 });
 I.applyStatic();
-renderStoryEntry(); renderGallery();
+maybeStartOnboard();
+renderStoryEntry(); renderGallery(); maybeShowInstallHint();
 })();

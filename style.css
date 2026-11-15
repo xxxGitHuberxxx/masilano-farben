@@ -202,3 +202,85 @@ h1{font-family:Georgia,"Times New Roman",serif;font-weight:normal;font-size:30px
 .langswitch{display:flex;gap:4px;flex-shrink:0}
 .langbtn{appearance:none;border:0;background:#efe8dc;color:#5c5348;border-radius:999px;padding:8px 12px;font:600 13px/1.1 system-ui,sans-serif;min-height:44px;min-width:44px;cursor:pointer}
 .langbtn.on{background:#3f3a34;color:#f6f3ee}
+
+/* v6.6: contrast, tap targets, focus, reduced motion */
+.sub,.empty .e2{color:#5c5348}
+.pc .a,.meta,.museum,.small,.chi .w,.pstat .when,.life,.chhead .life,.chhead .prog,.pnote,.cquote cite{color:#5f564c}
+.wordmark{color:#6a635c}
+#galSearch::placeholder{color:#6a635c}
+.gfoot,.lbl,.chi .no,.pfin-k,.pfin .lbl{color:#6a635c}
+.linkbtn{color:#5c4a32;min-height:44px;padding:10px 12px}
+.linkbtn.small{min-height:44px}
+.sentry .s,.sentry .k{opacity:.95}
+
+:focus{outline:none}
+:focus-visible{outline:2.5px solid #2b2722;outline-offset:2px}
+.btn:focus-visible{outline-color:#c79a4e}
+.langbtn.on:focus-visible,.sortbar button.on:focus-visible,.sentry:focus-visible{outline-color:#c79a4e}
+
+.dots{height:44px;gap:0;overflow-x:auto;justify-content:safe center;scrollbar-width:none}
+.dots::-webkit-scrollbar{display:none}
+.dots button{flex:none;flex-shrink:0;min-width:44px;width:44px;height:44px;border-radius:0;background:transparent;display:flex;align-items:center;justify-content:center;position:relative;padding:0}
+.dots button::before{content:"";width:9px;height:9px;border-radius:50%;background:#b7aea3;flex:none}
+.dots button.on{min-width:44px;width:44px;border-radius:0;background:transparent}
+.dots button.on::before{width:22px;height:9px;border-radius:5px;background:#2b2722}
+.ptime li{min-height:44px;padding:8px 6px}
+.chip{width:52px;height:52px}
+
+/* continue card */
+#continueWrap{margin:0 0 8px}
+.contcard{display:flex;align-items:center;gap:12px;width:100%;margin:0;min-height:76px;padding:8px 14px 8px 8px;border:0;border-radius:16px;text-align:left;background:#fff;box-shadow:0 2px 10px rgba(60,40,20,.08);color:#2b2722}
+.contcard.hidden{display:none}
+.contcard .cv{width:60px;height:60px;border-radius:12px;flex:none;background:#eee center/cover no-repeat}
+.contcard .tx{flex:1;min-width:0}
+.contcard .k{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#6a4a22;font-weight:700}
+.contcard .n{font-family:Georgia,serif;font-size:18px;line-height:1.25;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.contcard .s{font-size:13px;color:#5f564c;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.contcard .bar{height:5px;background:#eee6dc;border-radius:3px;margin-top:6px;overflow:hidden;max-width:240px}
+.contcard .bar div{height:100%;background:#c79a4e}
+.contcard .go{flex:none;font-size:28px;color:#6a4a22}
+
+/* install hint */
+.installhint{flex:none;display:flex;align-items:center;gap:8px;margin:6px 16px 4px;padding:8px 8px 8px 14px;background:#fff;border-radius:16px;box-shadow:0 2px 10px rgba(60,40,20,.08);color:#2b2722}
+.installhint.hidden{display:none}
+.installhint .ih-tx{flex:1;min-width:0}
+.installhint .ih-t{font-weight:700;font-size:14px;line-height:1.25}
+.installhint .ih-s{font-size:13px;color:#5f564c;margin-top:2px}
+.installhint .ih-add{flex:none;border:0;border-radius:14px;padding:10px 14px;min-height:44px;background:#2b2722;color:#fff;font-weight:600;font-size:14px}
+.installhint .ih-x{flex:none;width:44px;height:44px;border:0;border-radius:22px;background:transparent;color:#5c5348;font-size:26px;line-height:1}
+
+/* share */
+.btn.sharebtn{background:#c79a4e;color:#fff}
+.btn.sharebtn:focus-visible{outline-color:#2b2722}
+
+/* onboarding */
+.onboard{position:fixed;inset:0;z-index:30;background:#f6f3ee;display:flex;align-items:center;justify-content:center;padding:calc(env(safe-area-inset-top) + 24px) 24px calc(env(safe-area-inset-bottom) + 24px)}
+.onboard.hidden{display:none}
+.obcard{width:100%;max-width:440px}
+.obtop{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:28px}
+.obstep{font-size:14px;font-weight:600;color:#6a635c;letter-spacing:.04em}
+.onboard h1{font-family:Georgia,"Times New Roman",serif;font-weight:normal;font-size:36px;line-height:1.2;margin:0 0 16px;color:#2b2722}
+.onboard p{font-size:20px;line-height:1.45;color:#3f3a34;margin:0 0 36px}
+.obtns{margin-top:0}
+
+@media (max-height:560px){
+  #continueWrap{margin-bottom:6px}
+  .contcard{min-height:56px;padding:5px 12px 5px 6px}
+  .contcard .cv{width:44px;height:44px}
+  .contcard .n{font-size:16px}
+  .contcard .s,.contcard .bar{display:none}
+  .onboard h1{font-size:28px}
+  .onboard p{font-size:17px;margin-bottom:20px}
+  .installhint .ih-s{display:none}
+}
+@media (min-width:900px) and (orientation:landscape){
+  .ghead #continueWrap{grid-column:1}
+}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
+  #toast,#ctoast{transition:none}
+  .sheet .card{transition:none}
+  .chip{transition:none}
+  #pFill{transition:none}
+}

@@ -2,7 +2,7 @@
 <html lang="de-CH">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#f6f3ee">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>Masilano · Malen nach Zahlen</title>
@@ -34,13 +34,15 @@
       <input id="galSearch" type="text" enterkeyhint="search" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" data-i18n-placeholder="searchPh" data-i18n-aria="searchPh" placeholder="Bild oder Maler suchen" aria-label="Bild oder Maler suchen">
       <button type="button" id="galSearchClear" class="sclear hidden" data-i18n-aria="searchClear" aria-label="Suche löschen">×</button>
     </div>
+    <div id="continueWrap"></div>
     <div id="storyEntries" class="sentries"></div>
   </header>
   <div id="pager" class="pager"></div>
   <div id="dots" class="dots"></div>
+  <div id="installHint" class="installhint hidden" hidden></div>
   <footer class="gfoot">
     <button id="srcBtn" class="linkbtn" data-i18n-html="sourcesBtn">Bildquellen &amp; Hinweise</button>
-    <div class="ver" data-i18n="version">Testversion 6.5</div>
+    <div class="ver" data-i18n="version">Testversion 6.6</div>
   </footer>
 </section>
 
@@ -105,10 +107,13 @@
     <div id="dEpiWrap" class="hidden"><div class="lbl" data-i18n="whatNext">Wie es weitergeht</div><p id="dEpi"></p></div>
     <div id="dMuseum" class="museum"></div>
     <div class="btns">
-      <button id="dList" class="btn ghost" data-i18n="overview">Übersicht</button>
+      <button id="dShare" class="btn sharebtn" data-i18n="share">Bild teilen</button>
       <button id="dNext" class="btn" data-i18n="next">Weiter</button>
     </div>
-    <button id="dLook" class="linkbtn small" data-i18n="lookAgain">Bild nochmals ansehen</button>
+    <div class="btns">
+      <button id="dList" class="btn ghost" data-i18n="overview">Übersicht</button>
+      <button id="dLook" class="btn ghost" data-i18n="lookAgain">Bild nochmals ansehen</button>
+    </div>
   </div>
 </div>
 
@@ -135,9 +140,10 @@
     <div class="lbl" data-i18n="didYouKnow">Wusstest du?</div><ul id="sFacts"></ul>
     <div id="sMuseum" class="museum"></div>
     <div class="btns">
-      <button id="sCompare" class="btn ghost" data-i18n="viewOriginal">Original ansehen</button>
+      <button id="sShare" class="btn sharebtn" data-i18n="share">Bild teilen</button>
       <button id="sGallery" class="btn" data-i18n="toGallery">Zur Galerie</button>
     </div>
+    <button id="sCompare" class="linkbtn small" data-i18n="viewOriginal">Original ansehen</button>
     <button id="sReset" class="linkbtn small" data-i18n="resetPaint">Nochmals von vorne malen</button>
   </div>
 </div>
@@ -151,6 +157,33 @@
   </div>
 </div>
 <div id="ctoast" class="ctoast"></div>
+
+<div id="onboard" class="onboard hidden" hidden role="dialog" aria-modal="true" aria-labelledby="obTitle">
+  <div class="obcard">
+    <div class="obtop">
+      <div id="obLang" class="langswitch" role="group" data-i18n-aria="langAria" aria-label="Sprache">
+        <button type="button" class="langbtn" data-lang="de">Deutsch</button>
+        <button type="button" class="langbtn" data-lang="en">English</button>
+      </div>
+      <div id="obStep" class="obstep"></div>
+    </div>
+    <h1 id="obTitle"></h1>
+    <p id="obBody"></p>
+    <div class="btns obtns">
+      <button type="button" id="obSkip" class="btn ghost" data-i18n="obSkip">Überspringen</button>
+      <button type="button" id="obNext" class="btn" data-i18n="obNext">Weiter</button>
+    </div>
+  </div>
+</div>
+
+<div id="installHow" class="sheet hidden">
+  <div class="card">
+    <h2 id="ihTitle" data-i18n="installHowTitle">So fügst du Masilano hinzu</h2>
+    <p id="ihBody"></p>
+    <div class="btns"><button type="button" class="btn" id="ihGotIt" data-i18n="installGotIt">Verstanden</button></div>
+  </div>
+</div>
+
 <script src="paintings.js"></script>
 <script src="story.js"></script>
 <script src="path-vangogh.js"></script>
