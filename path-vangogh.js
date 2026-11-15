@@ -1,4 +1,4 @@
-// Van Goghs Lebensweg, Teil 1–3 (1880–1889). Texts: de-CH, no sharp s.
+// Van Goghs Lebensweg, Teil 1–4 (1880–1890). Texts: de-CH, no sharp s.
 // Letter quotes: self-translated from the original Dutch/French of the 2009 edition
 // (official letter numbers and dates). Originals are public domain; modern translations were not copied.
 window.PATH_WORKS = [
@@ -445,6 +445,160 @@ window.PATH_WORKS = [
  { id:'doctorrey', title:'Bildnis des Doktor Félix Rey', artist:'Vincent van Gogh', year:'1889',
    museum:'Puschkin-Museum, Moskau',
    source:'Wikimedia Commons: «Vincent van Gogh - Portrait of Doctor Félix Rey (F500).jpg», gemeinfrei (Public Domain)' },
+ // --- Teil 4 (Saint-Rémy und Auvers, 1889–1890) ---
+ { id:'lilacs', title:'Flieder', artist:'Vincent van Gogh', year:'1889',
+   museum:'Eremitage, Sankt Petersburg',
+   source:'Wikimedia Commons: «Vincent Willem van Gogh 044.jpg», gemeinfrei (Public Domain)' },
+ { id:'ivyunder', title:'Efeu im Unterholz', artist:'Vincent van Gogh', year:'1889',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Van Gogh - Unterholz mit Efeu1.jpeg», gemeinfrei (Public Domain)' },
+ { id:'asylumgarden', title:'Garten der Anstalt Saint-Paul', artist:'Vincent van Gogh', year:'1889',
+   museum:'Kröller-Müller Museum, Otterlo',
+   source:'Wikimedia Commons: «The garden at the asylum at Saint-Rémy - Vincent Van Gogh.jpg», gemeinfrei (Public Domain)' },
+ { id:'moth', title:'Grosses Nachtpfauenauge', artist:'Vincent van Gogh', year:'1889',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Grote nachtpauwoog - s0189V1962 - Van Gogh Museum.jpg», gemeinfrei (Public Domain)' },
+ { id:'cypresses', title:'Zypressen', artist:'Vincent van Gogh', year:'1889',
+   museum:'Metropolitan Museum of Art, New York',
+   source:'Wikimedia Commons: «Cypresses MET DP130999.jpg», gemeinfrei (CC0)' },
+ { id:'greenwheat', title:'Grünes Weizenfeld mit Zypresse', artist:'Vincent van Gogh', year:'1889',
+   museum:'Nationalgalerie Prag',
+   source:'Wikimedia Commons: «Vincent van Gogh - Green Field - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'greenzurich', title:'Grünes Weizenfeld', artist:'Vincent van Gogh', year:'1889',
+   museum:'Kunsthaus Zürich',
+   source:'Wikimedia Commons: «Van Gogh - Grünes Weizenfeld.jpeg», gemeinfrei (Public Domain)' },
+ { id:'wheatcyp', title:'Weizenfeld mit Zypressen', artist:'Vincent van Gogh', year:'1889',
+   museum:'Metropolitan Museum of Art, New York',
+   source:'Wikimedia Commons: «Vincent van Gogh - Wheat Field with Cypresses - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'wheatreaper', title:'Weizenfeld mit Schnitter und Sonne', artist:'Vincent van Gogh', year:'1889',
+   museum:'Kröller-Müller Museum, Otterlo',
+   source:'Wikimedia Commons: «Van Gogh - Weizenfeld mit Schnitter und Sonne.jpeg», gemeinfrei (Public Domain)' },
+ { id:'mountains', title:'Gebirgslandschaft hinter der Anstalt', artist:'Vincent van Gogh', year:'1889',
+   museum:'Ny Carlsberg Glyptotek, Kopenhagen',
+   source:'Wikimedia Commons: «Vincent van Gogh - Landscape from Saint-Rémy - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'olivealpilles', title:'Olivenbäume mit den Alpilles', artist:'Vincent van Gogh', year:'1889',
+   museum:'Museum of Modern Art, New York',
+   source:'Wikimedia Commons: «Vincent van Gogh - The Olive Trees - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'olivekm', title:'Olivenhain', artist:'Vincent van Gogh', year:'1889',
+   museum:'Kröller-Müller Museum, Otterlo',
+   source:'Wikimedia Commons: «Van Gogh - Olivenhain1.jpeg», gemeinfrei (Public Domain)' },
+ { id:'olivekc', title:'Olivenhain mit blauem Himmel', artist:'Vincent van Gogh', year:'1889',
+   museum:'Nelson-Atkins Museum of Art, Kansas City',
+   source:'Wikimedia Commons: «Vincent van Gogh - Olive Orchard - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'olivesun', title:'Olivenbäume mit gelbem Himmel und Sonne', artist:'Vincent van Gogh', year:'1889',
+   museum:'Minneapolis Institute of Art',
+   source:'Wikimedia Commons: «Vincent van Gogh Olive Trees MIA 517.jpg», gemeinfrei (Public Domain)' },
+ { id:'olivepick', title:'Olivenpflückerinnen', artist:'Vincent van Gogh', year:'1889',
+   museum:'Metropolitan Museum of Art, New York',
+   source:'Wikimedia Commons: «The Olive Orchard.JPG», gemeinfrei (Public Domain)' },
+ { id:'moonrise', title:'Abendlandschaft bei Mondaufgang', artist:'Vincent van Gogh', year:'1889',
+   museum:'Kröller-Müller Museum, Otterlo',
+   source:'Wikimedia Commons: «Van Gogh - Abendlandschaft bei Mondaufgang.jpeg», gemeinfrei (Public Domain)' },
+ { id:'reapersun', title:'Weizenfeld mit Schnitter im Morgenlicht', artist:'Vincent van Gogh', year:'1889',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Korenveld met maaier - s0049V1962 - Van Gogh Museum.jpg», gemeinfrei (Public Domain)' },
+ { id:'enclosed', title:'Umfriedetes Feld mit Pflüger', artist:'Vincent van Gogh', year:'1889',
+   museum:'Museum of Fine Arts, Boston',
+   source:'Wikimedia Commons: «Vincent van Gogh - Enclosed Field with Ploughman - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'mulberry', title:'Der Maulbeerbaum', artist:'Vincent van Gogh', year:'1889',
+   museum:'Norton Simon Museum, Pasadena',
+   source:'Wikimedia Commons: «Van Gogh - Maulbeerbaum.jpeg», gemeinfrei (Public Domain)' },
+ { id:'planetees', title:'Die grossen Platanen', artist:'Vincent van Gogh', year:'1889',
+   museum:'Cleveland Museum of Art',
+   source:'Wikimedia Commons: «The Large Plane Trees (Road Menders at Saint-Rémy), by Vincent van Gogh, Cleveland Museum of Art, 1947.209.jpg», gemeinfrei (Public Domain)' },
+ { id:'pieta', title:'Pietà, nach Delacroix', artist:'Vincent van Gogh', year:'1889',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Vincent Willem van Gogh 083.jpg», gemeinfrei (Public Domain)' },
+ { id:'samaritan', title:'Der barmherzige Samariter, nach Delacroix', artist:'Vincent van Gogh', year:'1890',
+   museum:'Kröller-Müller Museum, Otterlo',
+   source:'Wikimedia Commons: «Van Gogh - Der barmherzige Samariter.jpeg», gemeinfrei (Public Domain)' },
+ { id:'noonrest', title:'Die Siesta, nach Millet', artist:'Vincent van Gogh', year:'1890',
+   museum:'Musée d\'Orsay, Paris',
+   source:'Wikimedia Commons: «Vincent van Gogh - The siesta (after Millet) - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'firststeps', title:'Erste Schritte, nach Millet', artist:'Vincent van Gogh', year:'1890',
+   museum:'Metropolitan Museum of Art, New York',
+   source:'Wikimedia Commons: «Vincent van Gogh - First Steps, after Millet.jpg», gemeinfrei (Public Domain)' },
+ { id:'sowermillet', title:'Der Sämann, nach Millet', artist:'Vincent van Gogh', year:'1889',
+   museum:'Kröller-Müller Museum, Otterlo',
+   source:'Wikimedia Commons: «Van Gogh - Der Sämann (nach Millet).jpeg», gemeinfrei (Public Domain)' },
+ { id:'lazarus', title:'Die Auferweckung des Lazarus, nach Rembrandt', artist:'Vincent van Gogh', year:'1890',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «De opwekking van Lazarus (naar Rembrandt) - s0169V1962 - Van Gogh Museum.jpg», gemeinfrei (Public Domain)' },
+ { id:'selfremy', title:'Selbstbildnis', artist:'Vincent van Gogh', year:'1889',
+   museum:'Musée d\'Orsay, Paris',
+   source:'Wikimedia Commons: «Vincent van Gogh - Self-Portrait - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'trabuc', title:'Der Aufseher Trabuc', artist:'Vincent van Gogh', year:'1889',
+   museum:'Kunstmuseum Solothurn',
+   source:'Wikimedia Commons: «Vincent Willem van Gogh 093.jpg», gemeinfrei (Public Domain)' },
+ { id:'fallleaves', title:'Spaziergang, fallendes Laub', artist:'Vincent van Gogh', year:'1889',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Vincent van Gogh - The garden of Saint Paul\'s Hospital (`The fall of the leaves\') - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'gardenoct', title:'Garten der Anstalt im Herbst', artist:'Vincent van Gogh', year:'1889',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «De tuin van de inrichting - s0196V1962 - Van Gogh Museum.jpg», gemeinfrei (Public Domain)' },
+ { id:'irises90', title:'Schwertlilien vor gelbem Grund', artist:'Vincent van Gogh', year:'1890',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Irissen - s0050V1962 - Van Gogh Museum.jpg», gemeinfrei (Public Domain)' },
+ { id:'rosesnga', title:'Rosa Rosen', artist:'Vincent van Gogh', year:'1890',
+   museum:'National Gallery of Art, Washington',
+   source:'Wikimedia Commons: «Vincent van Gogh - Roses - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'butterflies', title:'Mohn und Schmetterlinge', artist:'Vincent van Gogh', year:'1890',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Vlinders en klaprozen - s0188V1962 - Van Gogh Museum.jpg», gemeinfrei (Public Domain)' },
+ { id:'roadstar', title:'Weg mit Zypresse und Stern', artist:'Vincent van Gogh', year:'1890',
+   museum:'Kröller-Müller Museum, Otterlo',
+   source:'Wikimedia Commons: «Vincent van Gogh - Road with Cypress and Star - c. 12-15 May 1890.jpg», gemeinfrei (Public Domain)' },
+ { id:'gachetgarden', title:'Garten des Doktor Gachet', artist:'Vincent van Gogh', year:'1890',
+   museum:'Musée d\'Orsay, Paris',
+   source:'Wikimedia Commons: «Doctor Gachet\'s Garden in Auvers.jpg», gemeinfrei (Public Domain)' },
+ { id:'drgachet', title:'Bildnis des Doktor Gachet', artist:'Vincent van Gogh', year:'1890',
+   museum:'Musée d\'Orsay, Paris',
+   source:'Wikimedia Commons: «Vincent van Gogh - Dr Paul Gachet - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'churchauvers', title:'Die Kirche von Auvers', artist:'Vincent van Gogh', year:'1890',
+   museum:'Musée d\'Orsay, Paris',
+   source:'Wikimedia Commons: «Vincent van Gogh - The Church in Auvers-sur-Oise, View from the Chevet - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'marguerite', title:'Marguerite Gachet am Klavier', artist:'Vincent van Gogh', year:'1890',
+   museum:'Kunstmuseum Basel',
+   source:'Wikimedia Commons: «Van Gogh - Marguerite Gachet am Klavier.jpeg», gemeinfrei (Public Domain)' },
+ { id:'chaponval', title:'Strohdachhäuser in Chaponval', artist:'Vincent van Gogh', year:'1890',
+   museum:'Kunsthaus Zürich',
+   source:'Wikimedia Commons: «Vincent van Gogh - Rietgedekte zandstenen huisjes in Chaponval (1890).jpg», gemeinfrei (Public Domain)' },
+ { id:'chestnut90', title:'Blühende Kastanie', artist:'Vincent van Gogh', year:'1890',
+   museum:'Kröller-Müller Museum, Otterlo',
+   source:'Wikimedia Commons: «Van Gogh - Blühende Kastanienbäume1.jpeg», gemeinfrei (Public Domain)' },
+ { id:'cordeville', title:'Strohdachhäuser in Cordeville', artist:'Vincent van Gogh', year:'1890',
+   museum:'Musée d\'Orsay, Paris',
+   source:'Wikimedia Commons: «Vincent van Gogh - Thatched Cottages at Cordeville - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'daubigny', title:'Der Garten von Daubigny', artist:'Vincent van Gogh', year:'1890',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «De tuin van Daubigny - s0104V1962 - Van Gogh Museum.jpg», gemeinfrei (Public Domain)' },
+ { id:'wheatcloud', title:'Weizenfeld unter Gewitterhimmel', artist:'Vincent van Gogh', year:'1890',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Vincent van Gogh - Wheatfield under thunderclouds - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'rainauvers', title:'Landschaft bei Auvers im Regen', artist:'Vincent van Gogh', year:'1890',
+   museum:'National Museum Cardiff',
+   source:'Wikimedia Commons: «Van Gogh - Landschaft bei Auvers im Regen.jpeg», gemeinfrei (Public Domain)' },
+ { id:'chateauauvers', title:'Landschaft mit Schloss bei Abenddämmerung', artist:'Vincent van Gogh', year:'1890',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Landschap bij avondschemering - s0107V1962 - Van Gogh Museum.jpg», gemeinfrei (Public Domain)' },
+ { id:'townhall', title:'Das Rathaus in Auvers am 14. Juli', artist:'Vincent van Gogh', year:'1890',
+   museum:'Privatbesitz',
+   source:'Wikimedia Commons: «Van Gogh - Das Rathaus in Auvers am 14. Juli 1890.jpeg», gemeinfrei (Public Domain)' },
+ { id:'poppyauvers', title:'Mohnfeld', artist:'Vincent van Gogh', year:'1890',
+   museum:'Kunstmuseum Den Haag',
+   source:'Wikimedia Commons: «Vincent van Gogh - Poppy field - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'treeroots', title:'Baumwurzeln', artist:'Vincent van Gogh', year:'1890',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Boomwortels - s0195V1962 - Van Gogh Museum.jpg», gemeinfrei (Public Domain)' },
+ { id:'sheaves90', title:'Weizengarben', artist:'Vincent van Gogh', year:'1890',
+   museum:'Dallas Museum of Art',
+   source:'Wikimedia Commons: «Vincent van Gogh - Sheaves of Wheat, 1890.jpg», gemeinfrei (Public Domain)' },
+ { id:'wheatcorn', title:'Weizenfeld mit Kornblumen', artist:'Vincent van Gogh', year:'1890',
+   museum:'Sammlung E.G. Bührle, Zürich',
+   source:'Wikimedia Commons: «Vincent Van Gogh - Wheatfield With Cornflowers - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'farmsauvers', title:'Höfe bei Auvers', artist:'Vincent van Gogh', year:'1890',
+   museum:'Tate, London',
+   source:'Wikimedia Commons: «Vincent van Gogh - Farms near Auvers (1890).jpg», gemeinfrei (Public Domain)' },
 ];
 
 window.PATHS = [
@@ -453,11 +607,16 @@ window.PATHS = [
   name: 'Vincent van Gogh',
   title: 'Van Goghs Lebensweg',
   life: '1853–1890',
-  part: 'Teil 1–3 · 1880–1889',
-  subtitle: 'Von den Bergleuten bis nach Arles',
-  cover: 'yellowhouse',
-  intro: 'Reise mit Vincent van Gogh durch die Jahre, in denen er Maler wird: vom armen Zeichner im belgischen Kohlerevier über die Kartoffelesser, die Akademie in Antwerpen und die hellen Jahre bei Theo in Paris bis in den Süden, nach Arles. Kurze Stationen, Bilder zum Ausmalen und Stimmen aus seinen Briefen an Theo, an die Schwester Willemien und an Freunde. Teil 1 bis 3 umfassen 1880 bis 1889 – 152 Werke, in der Testversion offen zum Spielen.',
-  epilogue: 'Im Mai 1889 verlässt Vincent Arles und geht in die Anstalt Saint-Paul-de-Mausole in Saint-Rémy-de-Provence. Es folgen die Monate in Saint-Rémy und das letzte Atelier in Auvers-sur-Oise – Teil 4 des Lebenswegs kommt in einer nächsten Version. Theos Frau Jo van Gogh-Bonger bewahrt später die Bilder und die Briefe – ohne sie wüssten wir von diesem Weg viel weniger.',
+  part: 'Teil 1–4 · 1880–1890',
+  subtitle: 'Von den Bergleuten bis nach Auvers',
+  cover: 'almond',
+  intro: 'Reise mit Vincent van Gogh durch die Jahre, in denen er Maler wird: vom armen Zeichner im belgischen Kohlerevier über die Kartoffelesser, die Akademie in Antwerpen und die hellen Jahre bei Theo in Paris bis in den Süden – nach Arles, in die Anstalt von Saint-Rémy und ins letzte Atelier in Auvers-sur-Oise. Kurze Stationen, Bilder zum Ausmalen und Stimmen aus seinen Briefen an Theo, an die Schwester Willemien und an Freunde. Der Lebensweg umfasst 1880 bis 1890 – 207 Werke, in der Testversion offen zum Spielen.',
+  ending: [
+    'Am 27. Juli 1890 wird Vincent in Auvers schwer verletzt. Er stirbt zwei Tage später, am 29. Juli, im Gasthaus Ravoux. Theo ist bei ihm.',
+    'Theo stirbt am 25. Januar 1891, ein halbes Jahr nach seinem Bruder. Beide liegen heute in Auvers, nebeneinander.',
+    'Theos Frau Jo van Gogh-Bonger bewahrt die Bilder und die Briefe. Sie gibt die Briefe heraus und macht Vincents Werk bekannt – ohne sie wüssten wir von diesem Weg viel weniger.'
+  ],
+  epilogue: 'Am 27. Juli 1890 wird Vincent in Auvers schwer verletzt. Er stirbt zwei Tage später, am 29. Juli, im Gasthaus Ravoux. Theo ist bei ihm. Theo stirbt am 25. Januar 1891. Jo van Gogh-Bonger gibt später die Briefe heraus und macht Vincents Werk bekannt.',
   stations: [
    {
     id: 'borinage', place: 'Borinage und Brüssel', when: '1880–1881',
@@ -1616,6 +1775,471 @@ window.PATHS = [
           'Roulin ist inzwischen versetzt, das Bild entsteht nach früheren Studien und aus der Erinnerung. Die Freundschaft bleibt im Werk sichtbar, auch wenn der Alltag sich ändert.'
         ],
         fact: 'Das Bild gehört dem Kröller-Müller Museum und entsteht im April 1889.' }
+    ]
+   },
+{
+    id: 'stremy-garden', place: 'Saint-Rémy · Anstaltsgarten', when: 'Mai–Juli 1889',
+    map: { x:84, y:186 },
+    intro: [
+      'Am 8. Mai 1889 kommt Vincent in die Anstalt Saint-Paul-de-Mausole in Saint-Rémy-de-Provence. Zuerst bleibt er im ummauerten Garten und malt, was er dort vorfindet: Schwertlilien, Flieder, den Weg entlang der gelben Hauswand, später das dichte Efeu unter den Bäumen.',
+      'Er schreibt Theo, der verwilderte Garten mit den hohen Pinien habe ihm zum Arbeiten gereicht, und er sei noch nicht hinausgetreten. Im Garten zeichnet er auch einen grossen, seltenen Nachtfalter.',
+      'Die Anstalt liegt am Rand des Dorfes, vor den Hügeln der Alpilles. Wenn die Kraft reicht, wird er später auch draussen malen dürfen.'
+    ],
+    works: [
+      { pid:'irises',
+        text: [
+          'Dicht gestaffelte Schwertlilien in Blau und Violett, zwischen Grün und ein paar gebrochenen Stängeln. Vincent malt sie im Mai, kurz nach der Ankunft, noch im Garten der Anstalt.',
+          'Im Sommer schickt er Theo unter anderem diese Iris – als Studie nach der Natur, bevor die grossen Landschaften folgen.'
+        ],
+        quote: { text:'Hier die Themen dieser sieben Studien. Die Iris – Blick auf das Sanatorium in Saint-Rémy, beide auf Leinwänden der Grösse 30.', cite:'Brief 789, Saint-Rémy-de-Provence, 14. oder 15. Juli 1889, an Theo' },
+        fact: 'Das Bild gehört heute dem J. Paul Getty Museum in Los Angeles und entsteht im Mai 1889.' },
+      { pid:'lilacs',
+        text: [
+          'Ein Fliederbusch füllt fast die ganze Fläche: Violett, Grün und gebrochenes Weiss vor einem kühlen Grund. Vincent findet den Strauch im Garten, in dem er die ersten Wochen bleibt.',
+          'Die Nähe ist typisch für diese frühen Bilder aus Saint-Rémy: nicht die weite Landschaft, sondern ein Stück Garten, dicht und fast ohne Horizont.'
+        ],
+        fact: 'Das Bild gehört der Eremitage in Sankt Petersburg und entsteht im Mai 1889.' },
+      { pid:'asylumgarden',
+        text: [
+          'Zwei Wege führen an der gelben Hauswand entlang in den Garten. Büsche blühen, das Gras steht hoch, der Himmel ist blau. Vincent bleibt zuerst innerhalb der Mauern und malt, was er jeden Tag sieht.',
+          'Er schreibt, das Leben spiele sich vor allem im Garten ab – und das sei nicht so traurig, wie man denken könnte.'
+        ],
+        quote: { text:'Seit ich hier bin, hat mir der öde Garten, bepflanzt mit hohen Pinien, unter denen hoch und schlecht gepflegt ein Gras wächst, vermischt mit allerlei Unkraut, zum Arbeiten gereicht, und ich bin noch nicht hinausgegangen.', cite:'Brief 776, Saint-Rémy-de-Provence, um den 23. Mai 1889, an Theo' },
+        fact: 'Das Bild gehört dem Kröller-Müller Museum in Otterlo und entsteht im Mai 1889.' },
+      { pid:'ivyunder',
+        text: [
+          'Stämme und ein dichter Teppich aus Efeu: Grün auf Grün, mit gelben Lichtern auf dem Boden. Vincent sucht im Garten der Anstalt immer wieder dieses Unterholz.',
+          'Schon in den ersten Tagen beschreibt er Theo Baumstämme, die mit Efeu bewachsen sind. Diese Studie entsteht im Sommer, noch immer im selben Garten.'
+        ],
+        quote: { text:'Dicke Baumstämme, mit Efeu bedeckt, der Boden ebenfalls mit Efeu und Immergrün, eine steinerne Bank und ein Strauch verblichener Rosen im kühlen Schatten. Es ist grün, violett und rosa.', cite:'Brief 776, Saint-Rémy-de-Provence, um den 23. Mai 1889, an Theo' },
+        fact: 'Das Bild gehört dem Van Gogh Museum in Amsterdam und entsteht im Juli 1889.' },
+      { pid:'moth',
+        text: [
+          'Ein grosser Nachtfalter sitzt auf einem grünen Grund, die Flügel geöffnet, in Oliv, Grau und einem Hauch Rot. Vincent hat das Tier im Garten gefunden und zuerst gezeichnet, dann gemalt.',
+          'Er schreibt Theo von einem sehr grossen, seltenen Falter von vornehmer Färbung. Das gemalte Tier ist ein Grosses Nachtpfauenauge.'
+        ],
+        fact: 'Das Bild gehört dem Van Gogh Museum in Amsterdam und entsteht im Mai 1889. Vincent erwähnt den Falter in Brief 776 an Theo, um den 23. Mai 1889.' }
+    ]
+   },
+   {
+    id: 'stremy-cypress', place: 'Saint-Rémy · Zypressen und Sternennacht', when: 'Juni 1889',
+    map: { x:84, y:186 },
+    intro: [
+      'Sobald Vincent ins offene Land darf, malt er die Weizenfelder vor den Alpilles und die Zypressen, die ihn nicht mehr loslassen. Er möchte aus ihnen etwas machen wie aus den Sonnenblumen: eine Form, die man so noch nicht gesehen hat.',
+      'Im Juni entsteht die Sternennacht. Schon zuvor hat er von seinem Fenster aus das Land lange vor Sonnenaufgang gesehen, mit einem sehr grossen Morgenstern. Nun wird daraus ein Bild der bewegten Nacht.',
+      'Neben den dunklen Bäumen stehen ganz helle Felder – eines, schreibt er, sei vielleicht die hellste Leinwand, die er je gemacht habe.'
+    ],
+    works: [
+      { pid:'starry',
+        text: [
+          'Ein Dorf unter einem wirbelnden Himmel, der Mond und die Sterne gross wie Laternen, eine dunkle Zypresse vorn wie eine Flamme. Vincent malt die Nacht nicht als ruhiges Abbild, sondern als Bewegung.',
+          'Im Juni schreibt er Theo, er habe eine neue Studie des Sternenhimmels – zusammen mit einer Landschaft aus Olivenbäumen.'
+        ],
+        quote: { text:'Nun habe ich eine Landschaft mit Olivenbäumen und auch eine neue Studie des Sternenhimmels.', cite:'Brief 782, Saint-Rémy-de-Provence, um den 18. Juni 1889, an Theo' },
+        fact: 'Das Bild gehört dem Museum of Modern Art in New York und entsteht im Juni 1889.' },
+      { pid:'cypresses',
+        text: [
+          'Zwei hohe Zypressen füllen die Höhe der Leinwand, dunkelgrün und flammenartig, davor niedriges Gestrüpp, dahinter Hügel und ein heller Himmel. Vincent ringt um dieses schwierige Flaschengrün.',
+          'Die Bäume beschäftigen ihn den ganzen Sommer. In den Linien, schreibt er, seien sie schön wie ein ägyptischer Obelisk.'
+        ],
+        quote: { text:'Die Zypressen lassen mich nicht los, ich möchte etwas aus ihnen machen wie die Sonnenblumenbilder, weil es mich wundert, dass man sie noch nicht so gemacht hat, wie ich sie sehe. In den Linien und Verhältnissen sind sie schön wie ein ägyptischer Obelisk.', cite:'Brief 783, Saint-Rémy-de-Provence, 25. Juni 1889, an Theo' },
+        fact: 'Das Bild gehört dem Metropolitan Museum of Art in New York und entsteht im Juni 1889.' },
+      { pid:'greenwheat',
+        text: [
+          'Ein noch grünes Weizenfeld unter einem bewegten Himmel, am Rand eine dunkle Zypresse, hinten die Hügel. Die Farbe ist kühl und frisch, der Sommer steht noch am Anfang.',
+          'Vincent sucht in diesen Wochen immer wieder dasselbe Motiv: Feld, Baum und Bergkette, nah beieinander.'
+        ],
+        fact: 'Das Bild gehört der Nationalgalerie in Prag und entsteht im Juni 1889.' },
+      { pid:'greenzurich',
+        text: [
+          'Weite, grüne Schwünge unter einem hellen Himmel, ohne Haus und fast ohne Baum. Das Feld selbst wird zur Figur: Wellen aus Gelbgrün und Blau.',
+          'Das Bild hängt heute in Zürich, ein Stück Saint-Rémy in der Schweiz.'
+        ],
+        fact: 'Das Bild gehört dem Kunsthaus Zürich und entsteht im Juni 1889.' },
+      { pid:'wheatcyp',
+        text: [
+          'Goldenes Weizenfeld, zwei Zypressen, rechts olivgrüne Büsche, hinten violette Hügel und ein Himmel voll weisser Wirbel. Das ist das typische Sommerbild aus Saint-Rémy: Feld, Baum und Berg zusammen.',
+          'Anfang Juli schreibt er Theo von einer Leinwand mit Zypressen, Weizenähren, Mohn und blauem Himmel, die wie ein bunt karierter schottischer Stoff sei.'
+        ],
+        quote: { text:'Ich habe eine Leinwand mit Zypressen, ein paar Weizenähren, Mohnblumen, einem blauen Himmel, die wie ein bunt karierter schottischer Stoff ist.', cite:'Brief 784, Saint-Rémy-de-Provence, 2. Juli 1889, an Theo' },
+        fact: 'Das Bild gehört dem Metropolitan Museum of Art in New York und entsteht im Juni 1889.' },
+      { pid:'wheatreaper',
+        text: [
+          'Ein gelbes Feld in der prallen Sonne, ein einzelner Schnitter darin, der Himmel fast weiss vor Hitze. Vincent nennt solche Bilder die äusserste Wärme.',
+          'Der Schnitter wird für ihn eine Figur der Arbeit im Feld – klein gegen die Fläche, aber der einzige Mensch in der Landschaft.'
+        ],
+        quote: { text:'Ich habe ein sehr gelbes und sehr helles Weizenfeld, vielleicht die hellste Leinwand, die ich gemacht habe.', cite:'Brief 783, Saint-Rémy-de-Provence, 25. Juni 1889, an Theo' },
+        fact: 'Das Bild gehört dem Kröller-Müller Museum in Otterlo und entsteht im Juni 1889.' },
+      { pid:'mountains',
+        text: [
+          'Hinter der Anstalt steigen die Alpilles auf, blau und violett, mit wenigen Häusern und Olivenbäumen am Fuss. Der Blick geht vom ummauerten Gelände ins offene Land.',
+          'Vincent schreibt, die Landschaft von Saint-Rémy sei sehr schön, und nach und nach werde er dort Etappen machen.'
+        ],
+        fact: 'Das Bild gehört der Ny Carlsberg Glyptotek in Kopenhagen und entsteht im Juni 1889.' }
+    ]
+   },
+   {
+    id: 'stremy-olives', place: 'Saint-Rémy · Olivenbäume', when: 'Juni–Dez. 1889',
+    map: { x:84, y:186 },
+    intro: [
+      'Die Olivenhaine vor den Hügeln werden ein eigenes Thema. Vincent kämpft um das Silber der Blätter – bald bläulicher, bald grünlicher, bronzen, weisslich – auf gelbem, rosa oder violettem Boden.',
+      'Er schreibt dem Freund Emile Bernard, die Olivenbäume hier wären etwas für ihn: Silber auf orangefarbenem oder violettem Boden unter dem grossen blauen Himmel. Das sei noch kaum gemacht worden.',
+      'Im Dezember malt er auch die Ernte: Frauen, die die Früchte pflücken, unter den grell belichteten Kronen.'
+    ],
+    works: [
+      { pid:'olivealpilles',
+        text: [
+          'Olivenbäume vor den welligen Alpilles, der Boden in Rosa und Ocker, der Himmel in Wirbeln. Vincent sucht hier nicht die genaue botanische Form, sondern den Rhythmus der Bäume im Wind.',
+          'Im Juni erwähnt er Theo gegenüber eine neue Olivenlandschaft – zusammen mit der Studie des Sternenhimmels.'
+        ],
+        quote: { text:'Nun habe ich eine Landschaft mit Olivenbäumen und auch eine neue Studie des Sternenhimmels.', cite:'Brief 782, Saint-Rémy-de-Provence, um den 18. Juni 1889, an Theo' },
+        fact: 'Das Bild gehört dem Museum of Modern Art in New York und entsteht im Juni 1889.' },
+      { pid:'olivekm',
+        text: [
+          'Ein dichter Hain, das Laub silbriggrün, der Boden warm. Die Bäume stehen nah beieinander, fast ohne Horizont, als wäre man mitten in der Pflanzung.',
+          'Vincent sagt, die Olivenbäume seien sehr eigen, und er kämpfe darum, das zu treffen.'
+        ],
+        fact: 'Das Bild gehört dem Kröller-Müller Museum in Otterlo und entsteht im Juni 1889.' },
+      { pid:'olivekc',
+        text: [
+          'Blassere, offene Oliven unter einem klaren blauen Himmel. Die Stämme werfen violette Schatten auf den hellen Boden – genau den Kontrast, den Vincent an die Schwester beschreibt.',
+          'Er vergleicht das graue Grün der Bäume mit dem der Weiden und die Schatten mit Violett auf sonnigem Sand.'
+        ],
+        quote: { text:'Ich habe gerade eine Landschaft beendet, die einen Olivenhain darstellt, mit einem grauen Grün ungefähr wie das der Weiden, ihre violetten Schlagschatten auf dem sonnigen Sand.', cite:'Brief 780, Saint-Rémy-de-Provence, 16. Juni 1889, an Willemien (Wil)' },
+        fact: 'Das Bild gehört dem Nelson-Atkins Museum of Art in Kansas City und entsteht im Juni 1889.' },
+      { pid:'olivesun',
+        text: [
+          'Eine grosse gelbe Sonne steht über den Oliven, der Himmel fast orange, der Boden in gebrochenem Ocker. Hier ist das Silber der Blätter in ein warmes Licht getaucht.',
+          'Vincent schreibt, es ziehe ihn, mitten in Gold oder Silber zu arbeiten – aber es sei sehr schwierig, sehr schwierig.'
+        ],
+        quote: { text:'Die Olivenbäume dagegen sind sehr eigen, und ich kämpfe darum, das zu treffen. Es ist Silber, bald bläulicher, bald grünlicher, bronzen, weisslich auf gelbem, rosa, violettem oder orangefarbenem Boden bis hin zu stumpfem rotem Ocker. Aber sehr schwierig, sehr schwierig.', cite:'Brief 806, Saint-Rémy-de-Provence, 28. September 1889, an Theo' },
+        fact: 'Das Bild gehört dem Minneapolis Institute of Art und entsteht im November 1889.' },
+      { pid:'olivepick',
+        text: [
+          'Drei Frauen pflücken Oliven unter den Bäumen, die Kronen wie gelbe und grüne Wolken. Vincent nimmt die Figur wieder auf, die ihm in der Anstalt oft fehlt.',
+          'An Bernard schreibt er, das Silber auf orangefarbenem oder violettem Boden unter dem grossen blauen Himmel sei noch kaum gemacht worden – im Gegensatz zu Apfelbäumen oder Weiden.'
+        ],
+        quote: { text:'Die Olivenbäume hier, mein Lieber, das wäre etwas für euch. [...] Es ist Silber auf orangefarbenem oder violettem Boden unter dem grossen blauen Himmel.', cite:'Brief 809, Saint-Rémy, um den 8. Oktober 1889, an Emile Bernard' },
+        fact: 'Das Bild gehört dem Metropolitan Museum of Art in New York und entsteht im Dezember 1889.' }
+    ]
+   },
+   {
+    id: 'stremy-fields', place: 'Saint-Rémy · Felder und Berge', when: 'Juli–Nov. 1889',
+    map: { x:84, y:186 },
+    intro: [
+      'Den Sommer und Herbst über bleibt die Landschaft das grosse Thema: Mondaufgang über Garben, der Schnitter im Morgenlicht, ein umfriedetes Feld mit Pflüger, der leuchtend gelbe Maulbeerbaum, Platanen und Strassenarbeiter vor dem Dorf.',
+      'Vincent schickt Theo Serien von Weizenfeldern, Zypressen und Oliven. Dazwischen entstehen ruhigere, fast stille Bilder – und solche, in denen die Hitze oder der Herbst die Farbe bestimmt.'
+    ],
+    works: [
+      { pid:'moonrise',
+        text: [
+          'Über einem Feld mit Garben steigt der Mond auf, gross und blass, der Himmel noch hell vom Abend. Hinten liegen die Hügel in einem kühlen Blau.',
+          'Vincent nennt das Motiv später in einer Liste an Theo: «lever de lune», Mondaufgang – neben Mohn, Nachtwirkung und dem Schnitter.'
+        ],
+        fact: 'Das Bild gehört dem Kröller-Müller Museum in Otterlo und entsteht im Juli 1889.' },
+      { pid:'reapersun',
+        text: [
+          'Der Schnitter steht wieder im Weizen, diesmal im Morgenlicht: die Sonne sitzt tief, das Feld ist goldgelb, der Himmel klar. Die Figur bleibt klein gegen die Fläche.',
+          'Vincent malt das Motiv mehrfach, in verschiedenen Lichtlagen – von der prallen Mittagshitze bis zu diesem hellen Anfang des Tages.'
+        ],
+        fact: 'Das Bild gehört dem Van Gogh Museum in Amsterdam und entsteht im September 1889.' },
+      { pid:'enclosed',
+        text: [
+          'Ein umfriedetes Feld, ein Pflüger, hinten eine Mühle vor den Hügeln. Der Boden ist aufgebrochen, die Furchen führen in die Tiefe.',
+          'Nach den offenen Weizenflächen sucht Vincent hier die geschlossene Form des Feldes – Arbeit und Grenze in einem Bild.'
+        ],
+        fact: 'Das Bild gehört dem Museum of Fine Arts in Boston und entsteht im Oktober 1889.' },
+      { pid:'mulberry',
+        text: [
+          'Ein einzelner Maulbeerbaum in grellgelbem Herbstlaub steht vor einem hellen Himmel, der Stamm dreht sich wie eine Flamme. Das Bild ist fast ein Porträt des Baumes.',
+          'Im Oktober färbt sich der Garten und das Land um die Anstalt. Vincent hält diese kurze, starke Farbe fest, bevor die Blätter fallen.'
+        ],
+        fact: 'Das Bild gehört dem Norton Simon Museum in Pasadena und entsteht im Oktober 1889.' },
+      { pid:'planetees',
+        text: [
+          'Grosse Platanen stehen über einer Strasse, auf der Männer den Belag ausbessern. Die Stämme sind dick, das Laub gelb und grün, der Boden violett und ocker.',
+          'Vincent malt die Arbeit vor dem Dorf: nicht das Feld, sondern den alltäglichen Weg, unter Bäumen, die das ganze Bild tragen.'
+        ],
+        fact: 'Das Bild gehört dem Cleveland Museum of Art und entsteht im November 1889.' }
+    ]
+   }
+   ,
+   {
+    id: 'stremy-copies', place: 'Saint-Rémy · Nach Millet, Delacroix und Rembrandt', when: 'Sept. 1889–Mai 1890',
+    map: { x:84, y:186 },
+    intro: [
+      'Im Herbst hat Vincent oft keine Modelle. Er nimmt Drucke nach Delacroix und Millet und malt sie in Farbe nach: nicht als blosse Wiederholung, sondern als Übung, die Figur nicht zu verlieren.',
+      'Er schreibt Theo, es interessiere ihn enorm, Kopien zu machen. Er lege das Schwarz-Weiss der Vorlage vor sich und improvisiere die Farbe darüber – eine Erinnerung an ihre Bilder, in seinem eigenen Ton.',
+      'So entstehen die Pietà und der barmherzige Samariter nach Delacroix, die Siesta, die Ersten Schritte und der Sämann nach Millet, und die Auferweckung des Lazarus nach Rembrandt.'
+    ],
+    works: [
+      { pid:'pieta',
+        text: [
+          'Maria in Blau hält den toten Christus, vor einer Grotte, unter einem bewegten Himmel nach dem Gewitter. Vincent malt die Szene nach einer Lithografie von Delacroix, die bei ihm beschädigt worden war.',
+          'Er beschreibt der Schwester genau die Anlage: den erschöpften Körper, die Frau dahinter, die Kleider im Wind.'
+        ],
+        quote: { text:'Der Delacroix ist eine Pietà, das heisst ein toter Christus mit der Mater dolorosa. Am Eingang einer Grotte liegt der erschöpfte Körper schräg, die Hände vorn auf der linken Seite, und die Frau steht dahinter. Es ist ein Abend nach dem Gewitter.', cite:'Brief 804, Saint-Rémy-de-Provence, 19. September 1889, an Willemien (Wil)' },
+        fact: 'Das Bild gehört dem Van Gogh Museum in Amsterdam und entsteht im September 1889.' },
+      { pid:'samaritan',
+        text: [
+          'Ein Mann auf einem Pferd, ein Verletzter wird auf das Tier gehoben, die Farben heftig und klar. Vincent kündigt Theo an, er werde auch den barmherzigen Samariter von Delacroix kopieren.',
+          'Wie bei der Pietà geht es ihm nicht um eine getreue Kopie der Vorlage, sondern um eine farbige Auslegung einer Szene, die er schätzt.'
+        ],
+        quote: { text:'Ich werde auch den barmherzigen Samariter von Delacroix kopieren.', cite:'Brief 805, Saint-Rémy-de-Provence, um den 20. September 1889, an Theo' },
+        fact: 'Das Bild gehört dem Kröller-Müller Museum in Otterlo und entsteht im Mai 1890.' },
+      { pid:'noonrest',
+        text: [
+          'Zwei Schnitter schlafen im Schatten eines Heuhaufens, die Sichel liegt im Vordergrund, das Licht ist schwer und gelb. Vincent malt die Ruhe nach der Arbeit nach einer Vorlage von Millet.',
+          'Millets Landarbeiten begleiten ihn seit den Anfängen. Hier übersetzt er die Mittagsruhe in die Farben des Südens.'
+        ],
+        quote: { text:'Ich kann dir versichern, dass es mich enorm interessiert, Kopien zu machen, und dass ich, da ich im Moment keine Modelle habe, die Figur trotzdem nicht aus den Augen verliere.', cite:'Brief 805, Saint-Rémy-de-Provence, um den 20. September 1889, an Theo' },
+        fact: 'Das Bild gehört dem Musée d\'Orsay in Paris und entsteht im Januar 1890.' },
+      { pid:'firststeps',
+        text: [
+          'Ein Kind tut die ersten Schritte zwischen zwei Eltern, vor einem Gartenbeet und einem einfachen Haus. Wieder ist Millet die Vorlage, Vincent setzt die Szene in ein helles, warmes Licht.',
+          'Die Figur, die ihm in der Anstalt oft fehlt, findet er so in den Bildern der älteren Meister wieder.'
+        ],
+        fact: 'Das Bild gehört dem Metropolitan Museum of Art in New York und entsteht im Januar 1890.' },
+      { pid:'sowermillet',
+        text: [
+          'Der Sämann schreitet über das Feld, der Arm ausholend, hinter ihm die Sonne. Vincent hat das Motiv seit Jahren bei sich – hier noch einmal nach Millet, in kräftigem Gelb und Violett.',
+          'Er schreibt, er lege das Schwarz-Weiss von Delacroix oder Millet vor sich und improvisiere die Farbe darüber.'
+        ],
+        quote: { text:'Ich lege das Schwarz-Weiss von Delacroix oder Millet oder nach ihnen als Motiv vor mich. Und dann improvisiere ich die Farbe darüber, natürlich nicht ganz als ich selbst, sondern indem ich Erinnerungen an ihre Bilder suche.', cite:'Brief 805, Saint-Rémy-de-Provence, um den 20. September 1889, an Theo' },
+        fact: 'Das Bild gehört dem Kröller-Müller Museum in Otterlo und entsteht im Oktober oder November 1889.' },
+      { pid:'lazarus',
+        text: [
+          'Lazarus richtet sich aus dem Grab auf, in einem steilen Felsen, zwei Frauen zu den Seiten. Die Vorlage ist eine Radierung von Rembrandt, die Farben sind Vincents eigene: Gelb, Blau, ein grelles Weiss.',
+          'Rembrandt bleibt für ihn ein Massstab der Malerei, die mehr will als Augentäuschung. Diese Kopie entsteht im Frühling 1890, kurz bevor er Saint-Rémy verlässt.'
+        ],
+        fact: 'Das Bild gehört dem Van Gogh Museum in Amsterdam und entsteht im Mai 1890.' }
+    ]
+   },
+   {
+    id: 'stremy-people', place: 'Saint-Rémy · In der Anstalt', when: 'Sept.–Okt. 1889',
+    map: { x:84, y:186 },
+    intro: [
+      'Zwischen den Landschaften malt Vincent auch Menschen: sich selbst, vor einem wirbelnden Grund, und Charles-Elzéard Trabuc, den Aufseher der Anstalt. Das Porträt hängt heute in Solothurn.',
+      'Im Herbst wird der Garten wieder zum Motiv. Das Laub fällt, zwei Gestalten gehen unter den Bäumen, der Park liegt in Rot und Grün.',
+      'Die Arbeit in der Anstalt bleibt sein Halt. Er schreibt, die Krankheit hindere ihn nicht daran, den Beruf des Malers auszuüben, als wäre nichts.'
+    ],
+    works: [
+      { pid:'selfremy',
+        text: [
+          'Vincent im hellen Rock, der Blick fest, hinter ihm ein wirbelnder, grünblauer Grund – verwandt mit dem Himmel der Sternennacht. Das Bild entsteht im September, nach einer schweren Phase.',
+          'Er schickt Theo ein Selbstbildnis aus dieser Zeit. Es ist eines der klarsten Bildnisse, die er in Saint-Rémy malt.'
+        ],
+        fact: 'Das Bild gehört dem Musée d\'Orsay in Paris und entsteht im September 1889.' },
+      { pid:'trabuc',
+        text: [
+          'Der Aufseher Charles-Elzéard Trabuc, kahl, mit grauen Bartkanten, in einem blauen Kittel vor einem hellen Grund. Vincent malt den Mann, der im Alltag der Anstalt zu ihm gehört.',
+          'Das Bildnis hängt heute im Kunstmuseum Solothurn – ein Stück Saint-Rémy in der Schweiz.'
+        ],
+        fact: 'Das Bild gehört dem Kunstmuseum Solothurn und entsteht im September 1889.' },
+      { pid:'fallleaves',
+        text: [
+          'Ein Weg im Park, das Laub fällt in Rot und Orange, zwei kleine Gestalten gehen unter den Bäumen. Der Garten, den Vincent im Frühling voller Blüten malte, zeigt sich jetzt im Herbst.',
+          'Die Anstalt bleibt sein erstes Motiv, auch wenn er längst draussen arbeiten darf: der vertraute Park, diesmal in der fallenden Jahreszeit.'
+        ],
+        fact: 'Das Bild gehört dem Van Gogh Museum in Amsterdam und entsteht im Oktober 1889.' },
+      { pid:'gardenoct',
+        text: [
+          'Bäume und Bänke im Garten der Anstalt, das Licht schon niedrig, die Kronen dunkel gegen einen hellen Grund. Weniger der Weg als der Raum zwischen den Stämmen bestimmt das Bild.',
+          'Vincent kehrt immer wieder an dieselben Stellen im Park zurück und malt sie zu verschiedenen Stunden und Jahreszeiten.'
+        ],
+        fact: 'Das Bild gehört dem Van Gogh Museum in Amsterdam und entsteht im Oktober 1889.' }
+    ]
+   },
+   {
+    id: 'stremy-spring', place: 'Saint-Rémy · Mandelblüte und Frühling', when: 'Feb.–Mai 1890',
+    map: { x:84, y:186 },
+    intro: [
+      'Am 31. Januar 1890 kommt Theos Sohn zur Welt, Vincent Willem, nach dem Onkel benannt. Vincent beginnt für das Kind ein Bild: Mandelzweige auf himmelblauem Grund.',
+      'Im Frühling folgen Iris vor gelbem Grund, rosa Rosen, Mohn mit Schmetterlingen und der Weg mit Zypresse und Stern. Eine Krankheit unterbricht die Arbeit an den Blütenbäumen.',
+      'Im Mai verlässt Vincent die Anstalt. Er fährt über Paris, sieht Theo, Jo und das Kind, und reist weiter nach Auvers-sur-Oise.'
+    ],
+    works: [
+      { pid:'almond',
+        text: [
+          'Blühende Mandelzweige vor einem klaren, hellblauen Himmel: kein Boden, kein Horizont, nur Zweige und Blüten. Vincent malt das Bild für den neugeborenen Sohn seines Bruders.',
+          'An die Schwester schreibt er, er habe für das Kind eine grosse himmelblaue Leinwand begonnen, auf der sich blühende Zweige abheben. Später hängt das Bild bei Theo und Jo über dem Klavier.'
+        ],
+        quote: { text:'Aber schliesslich ist das Kind da – und wie ich es seiner Grossmutter schreibe, habe ich dieser Tage für ihn zu malen begonnen: eine grosse himmelblaue Leinwand, auf der sich blühende Zweige abheben.', cite:'Brief 856, Saint-Rémy-de-Provence, 19. Februar 1890, an Willemien (Wil)' },
+        fact: 'Das Bild gehört dem Van Gogh Museum in Amsterdam. Vincent Willem, der Sohn von Theo und Jo, kommt am 31. Januar 1890 zur Welt.' },
+      { pid:'irises90',
+        text: [
+          'Schwertlilien in einem Krug, diesmal vor einem kräftigen gelben Grund. Ein Jahr nach den Iris im Garten malt Vincent die Blumen als Stillleben, klar und fest umrissen.',
+          'Die gelbe Fläche hält die violetten Blüten wie ein Rahmen. Es ist eines der letzten Bilder aus Saint-Rémy.'
+        ],
+        fact: 'Das Bild gehört dem Van Gogh Museum in Amsterdam und entsteht im Mai 1890.' },
+      { pid:'rosesnga',
+        text: [
+          'Rosa Rosen in einem Gefäss, das Grün der Blätter fast so gewichtig wie die Blüten, der Grund hell. Vincent malt die Rosen im Frühling, in derselben Zeit wie die späten Iris.',
+          'Stillleben von Blumen begleiten ihn seit Paris. Hier sind sie weich, voll und ohne Strenge – ein Gegenstück zu den dunklen Zypressen des Sommers zuvor.'
+        ],
+        fact: 'Das Bild gehört der National Gallery of Art in Washington und entsteht im Mai 1890.' },
+      { pid:'butterflies',
+        text: [
+          'Mohn und anderes Grün, darüber helle Schmetterlinge. Das Format ist hoch, die Pflanzen stehen dicht, als sähe man einen kleinen Ausschnitt aus einer Wiese.',
+          'Zwischen den letzten Tagen in der Anstalt sucht Vincent noch einmal das nahe, lebendige Stück Natur, das ihn im Garten von Anfang an gehalten hat.'
+        ],
+        fact: 'Das Bild gehört dem Van Gogh Museum in Amsterdam und entsteht im April oder Mai 1890.' },
+      { pid:'roadstar',
+        text: [
+          'Ein Weg führt zwischen Zypressen in die Tiefe, über dem Horizont ein Halbmond und ein heller Stern, zwei kleine Gestalten gehen voraus. Tag und Nacht scheinen in einem Bild zusammenzukommen.',
+          'Kurz vor der Abreise erwähnt Vincent Theo gegenüber «eine Zypresse mit einem Stern» – eines der Bilder, die er aus Saint-Rémy mitnimmt.'
+        ],
+        fact: 'Das Bild gehört dem Kröller-Müller Museum in Otterlo und entsteht im Mai 1890. Vincent erwähnt «eine Zypresse mit einem Stern» in Brief 891, Auvers-sur-Oise, 24. Juni 1890, an Theo.' }
+    ]
+   }
+   ,
+   {
+    id: 'auvers-gachet', place: 'Auvers · Bei Doktor Gachet', when: 'Mai–Juni 1890',
+    map: { x:34, y:118 },
+    intro: [
+      'Am 20. Mai 1890 trifft Vincent in Auvers-sur-Oise ein, nördlich von Paris. Er wohnt im Gasthaus Ravoux an der Place de la Mairie. Doktor Paul Gachet, selbst in seinen freien Stunden Maler, soll auf ihn achten.',
+      'Vincent findet Auvers sehr schön, vor allem die alten Strohdächer, die selten werden. Gachet erscheint ihm exzentrisch und doch wie ein neuer Bruder – so sehr ähnelten sie sich, schreibt er, körperlich und auch seelisch.',
+      'Er malt Gachets Garten und sein Bildnis, die Kirche, Marguerite am Klavier und die Strohdächer des Dorfes. Das Bildnis der Marguerite hängt heute in Basel, eines der Strohdachhäuser in Zürich.'
+    ],
+    works: [
+      { pid:'gachetgarden',
+        text: [
+          'Ein steiler Garten mit blauen Tannen, roten Dächern und einem Weg, der nach oben führt. Vincent malt den Garten des Arztes, bei dem er bald ein- und ausgeht.',
+          'Er schreibt Theo und Jo, er könne bei Gachet jedes Mal, wenn er hinausgeht, ein Bild malen, und der Doktor lade ihn zum Essen ein.'
+        ],
+        fact: 'Das Bild gehört dem Musée d\'Orsay in Paris und entsteht im Mai 1890.' },
+      { pid:'drgachet',
+        text: [
+          'Doktor Gachet sitzt am Tisch, den Kopf in die Hand gestützt, in blauem Rock, mit weisser Mütze, eine Fingerhutblume daneben. Vincent malt das Bildnis, das Gachet sich in derselben Art wünscht wie Vincents eigenes Porträt.',
+          'An die Schwester beschreibt er das Gesicht wie einen überhitzten, von der Sonne gebräunten Ziegel, das Haar rot, den Rock ultramarinblau vor blauen Hügeln.'
+        ],
+        quote: { text:'Dann habe ich im Doktor Gachet einen fertigen Freund gefunden und etwas wie einen neuen Bruder – so sehr ähneln wir uns körperlich und auch seelisch.', cite:'Brief 879, Auvers-sur-Oise, 5. Juni 1890, an Willemien (Wil)' },
+        fact: 'Das Bild gehört dem Musée d\'Orsay in Paris und entsteht im Juni 1890. Es ist die Fassung, die Gachet behielt – nicht das später gestohlene zweite Bildnis.' },
+      { pid:'churchauvers',
+        text: [
+          'Die Kirche von Auvers steht schräg und dunkelviolett gegen einen tiefen Kobalthimmel, der Vordergrund in sonnigem Grün und Rosa. Vincent beschreibt das Bild der Schwester fast so, wie wir es heute sehen.',
+          'Der Bau wirkt nicht fest und still, sondern bewegt, als wäre der Boden unter den Strebepfeilern weich.'
+        ],
+        quote: { text:'Dazu habe ich ein grösseres Bild der Dorfkirche – ein Effekt, bei dem der Bau violett gegen einen tiefen, einfachen Himmel aus reinem Kobaltblau erscheint, die Glasfenster wirken wie ultramarinblaue Flecken, das Dach ist violett und teils orange. Im Vordergrund ein wenig blühendes Grün und sonniger rosa Sand.', cite:'Brief 879, Auvers-sur-Oise, 5. Juni 1890, an Willemien (Wil)' },
+        fact: 'Das Bild gehört dem Musée d\'Orsay in Paris und entsteht im Juni 1890.' },
+      { pid:'marguerite',
+        text: [
+          'Marguerite Gachet, die Tochter des Arztes, sitzt im weissen Kleid am Klavier, die Wand hinter ihr grün. Vincent malt das hochformatige Bildnis mit sichtbarer Freude und nennt es schwierig.',
+          'Er schreibt Theo genau die Farben: das Kleid rosa, die Wand grün mit einem orangen Punkt, der Teppich rot mit einem grünen Punkt, das Klavier dunkelviolett. Heute hängt das Bild in Basel.'
+        ],
+        quote: { text:'Gestern und vorgestern habe ich das Bildnis der Fräulein Gachet gemalt, das du hoffentlich bald sehen wirst. Das Kleid ist rosa, die Wand im Grund grün mit einem orangen Punkt, der Teppich rot mit einem grünen Punkt, das Klavier dunkelviolett.', cite:'Brief 893, Auvers-sur-Oise, 28. Juni 1890, an Theo' },
+        fact: 'Das Bild gehört dem Kunstmuseum Basel und entsteht im Juni 1890. Marguerite Gachet ist damals neunzehn Jahre alt.' },
+      { pid:'chaponval',
+        text: [
+          'Strohdachhäuser aus Sandstein in Chaponval, einem Weiler bei Auvers, unter einem bewegten Himmel. Vincent hatte gleich nach der Ankunft die alten Chaumes gelobt, die selten werden.',
+          'Das Bild hängt heute im Kunsthaus Zürich – neben dem grünen Weizenfeld aus Saint-Rémy ein zweites Stück dieses Weges in der Schweiz.'
+        ],
+        quote: { text:'Auvers ist sehr schön – unter anderem viele alte Strohdächer, die selten werden.', cite:'Brief 873, Auvers-sur-Oise, 20. Mai 1890, an Theo und Jo' },
+        fact: 'Das Bild gehört dem Kunsthaus Zürich und entsteht im Juli 1890.' },
+      { pid:'chestnut90',
+        text: [
+          'Eine Kastanie in voller Blüte steht vor Häusern und einem hellen Weg. Vincent trifft in Auvers noch einmal den Frühling, den er in Saint-Rémy bei den Mandeln begonnen hat.',
+          'Die weissen Kerzen des Baumes hellen die ganze Mitte auf. Es ist eines der ersten Bilder nach der Ankunft.'
+        ],
+        fact: 'Das Bild gehört dem Kröller-Müller Museum in Otterlo und entsteht im Mai 1890.' },
+      { pid:'cordeville',
+        text: [
+          'Strohdachhäuser in Cordeville, tief in Grün und Violett, der Weg vorn hell. Vincent malt die alten Dächer, von denen er hofft, dass ernsthafte Bilder davon die Kosten des Aufenthalts einbringen könnten.',
+          'Kurz nach der Ankunft schreibt er von einer Studie alter Strohdächer, vorn ein blühendes Feld und Weizen, hinten ein Hügel.'
+        ],
+        quote: { text:'Jetzt habe ich eine Studie von alten Strohdächern, im Vordergrund ein blühendes Erbsenfeld und Weizen, als Grund ein Hügel.', cite:'Brief 874, Auvers-sur-Oise, um den 21. Mai 1890, an Theo und Jo' },
+        fact: 'Das Bild gehört dem Musée d\'Orsay in Paris und entsteht im Juni 1890.' }
+    ]
+   },
+   {
+    id: 'auvers-fields', place: 'Auvers · Gärten und Gewitterhimmel', when: 'Juni–Juli 1890',
+    map: { x:34, y:118 },
+    intro: [
+      'Im Juni und Juli malt Vincent breite, oft sehr lange Leinwände: Daubignys Garten, Weizen unter schwerem Himmel, Regen über den Feldern, das Schloss in der Dämmerung, das Rathaus am 14. Juli und ein Mohnfeld.',
+      'Den Garten des älteren Malers Charles-François Daubigny hatte er im Sinn, seit er in Auvers war. Die weiten Weizenflächen unter bewegten Himmeln gehören zu den letzten grossen Motiven.',
+      'An Theo und Jo schreibt er, er habe sich nicht zurückgehalten, Traurigkeit und äusserste Einsamkeit auszudrücken.'
+    ],
+    works: [
+      { pid:'daubigny',
+        text: [
+          'Ein Garten mit Rosenbeet, grünem Rasen, einer Bank und dem hellen Haus im Grund: Daubignys Garten, ein Motiv, das Vincent von Anfang an vorhatte.',
+          'Ende Juli nennt er es eine seiner am meisten gewollten Leinwände und schickt Theo eine Skizze mit der genauen Lage der Beete, der Hecke und des Haselstrauchs.'
+        ],
+        quote: { text:'Jetzt ist die dritte Leinwand der Garten von Daubigny, ein Bild, das ich im Sinn hatte, seit ich hier bin.', cite:'Brief 898, Auvers-sur-Oise, um den 10. Juli 1890, an Theo und Jo' },
+        fact: 'Das Bild gehört dem Van Gogh Museum in Amsterdam und entsteht im Juni und Juli 1890.' },
+      { pid:'wheatcloud',
+        text: [
+          'Ein weites Weizenfeld unter einem tiefen, wolkenreichen Himmel, ohne Häuser und fast ohne Bäume. Die Fläche ist in die Breite gezogen, der Horizont liegt tief.',
+          'Vincent schreibt von unermesslichen Weizenflächen unter bewegten Himmeln. Dieses Bild gehört zu jener späten Reihe.'
+        ],
+        quote: { text:'Es sind unermessliche Weizenflächen unter bewegten Himmeln, und ich habe mich nicht zurückgehalten, Traurigkeit, äusserste Einsamkeit auszudrücken.', cite:'Brief 898, Auvers-sur-Oise, um den 10. Juli 1890, an Theo und Jo' },
+        fact: 'Das Bild gehört dem Van Gogh Museum in Amsterdam und entsteht im Juli 1890.' },
+      { pid:'rainauvers',
+        text: [
+          'Schräge Striche fallen über Felder und einen Weg, als wäre der Regen in die Farbe gekratzt. Vincent malt das nasse Wetter, das er schon in Saint-Rémy gereizt hatte.',
+          'In einem der letzten Briefe erwähnt er Skizzen von zwei Leinwänden mit unermesslichen Weizenflächen nach dem Regen.'
+        ],
+        fact: 'Das Bild gehört dem National Museum Cardiff und entsteht im Juli 1890. Vincent erwähnt Weizenflächen nach dem Regen in Brief 902, Auvers-sur-Oise, 23. Juli 1890, an Theo.' },
+      { pid:'chateauauvers',
+        text: [
+          'Zwei dunkle Bäume vor einem gelb werdenden Abendhimmel, hinten das Schloss von Auvers in violettem Grün. Vincent beschreibt Theo genau diesen Abend: Birnbäume, Weizen, das Schloss in der Tiefe.',
+          'Das Format ist wieder sehr breit, wie bei den späten Feldern: ein Streifen Erde, ein Streifen Himmel.'
+        ],
+        fact: 'Das Bild gehört dem Van Gogh Museum in Amsterdam und entsteht im Juni 1890. Vincent beschreibt den Abend mit dem Schloss in Brief 891, Auvers-sur-Oise, 24. Juni 1890, an Theo.' },
+      { pid:'townhall',
+        text: [
+          'Das Rathaus von Auvers am 14. Juli, festlich geschmückt, der Platz davor hell und fast leer. Vincent wohnt unmittelbar gegenüber, im Gasthaus Ravoux.',
+          'Der Nationalfeiertag gibt dem kleinen Bau Fahnen und Girlanden. Es ist ein Ortsbild, nah und alltäglich, ohne die Weite der Felder.'
+        ],
+        fact: 'Das Bild befindet sich in Privatbesitz und entsteht am 14. Juli 1890. Vincent wohnt seit Mai im Gasthaus Ravoux an der Place de la Mairie.' },
+      { pid:'poppyauvers',
+        text: [
+          'Ein Feld voll roter Mohnblumen unter einem bewegten Himmel, der Vordergrund dicht und leuchtend. Vincent findet in Auvers auch diese kurze, starke Blüte des Frühsommers.',
+          'Das Bild hängt heute im Kunstmuseum Den Haag – ein weiteres Stück des letzten Sommers in einem öffentlichen Museum.'
+        ],
+        fact: 'Das Bild gehört dem Kunstmuseum Den Haag und entsteht im Juni 1890.' }
+    ]
+   },
+   {
+    id: 'auvers-end', place: 'Auvers · Letzte Bilder', when: 'Juli 1890',
+    map: { x:34, y:118 },
+    intro: [
+      'In den letzten Wochen entstehen noch Garben auf dem Feld, ein Weizenfeld mit Kornblumen, Höfe am Hang, das Weizenfeld mit Krähen und die Baumwurzeln am Wegrand.',
+      'Die Bilder bleiben Landschaften der Umgebung: das Dorf, das Feld, der Boden unter den Bäumen. Vincent arbeitet weiter, so lange er kann.',
+      'Damit endet die Reihe der Bilder dieses Weges. Was danach geschieht, steht im Schluss – kurz und in den bekannten Tatsachen.'
+    ],
+    works: [
+      { pid:'crows',
+        text: [
+          'Ein Weizenfeld unter einem dunklen Himmel, Wege, die sich teilen, schwarze Vögel über den Ähren. Das Bild gehört zu den späten, breiten Feldlandschaften aus Auvers.',
+          'Vincent hat in diesen Wochen von unermesslichen Weizenflächen unter bewegten Himmeln geschrieben. Die Krähen sind Teil dieser letzten Felder, nicht eine erfundene Deutung.'
+        ],
+        quote: { text:'Es sind unermessliche Weizenflächen unter bewegten Himmeln, und ich habe mich nicht zurückgehalten, Traurigkeit, äusserste Einsamkeit auszudrücken.', cite:'Brief 898, Auvers-sur-Oise, um den 10. Juli 1890, an Theo und Jo' },
+        fact: 'Das Bild gehört dem Van Gogh Museum in Amsterdam und entsteht im Juli 1890.' },
+      { pid:'treeroots',
+        text: [
+          'Wurzeln und Stämme am Wegrand, in Blau, Orange und Grün, fast ohne Horizont. Das Bild sieht aus wie ein Stück Boden, nah und verworren, und gehört zu den letzten Arbeiten.',
+          'Vincent bleibt bis zuletzt bei dem, was er vor sich hat: nicht eine erfundene Szene, sondern ein Stück Natur am Rand des Dorfes.'
+        ],
+        fact: 'Das Bild gehört dem Van Gogh Museum in Amsterdam und entsteht im Juli 1890.' },
+      { pid:'sheaves90',
+        text: [
+          'Weizengarben stehen in Reihen auf dem Stoppelfeld, dick und golden, unter einem hellen Himmel. Die Ernte ist eingebracht, die Formen sind ruhig und fest.',
+          'Neben den weiten, unruhigen Feldflächen malt Vincent auch dieses geordnete Nachbild der Arbeit.'
+        ],
+        fact: 'Das Bild gehört dem Dallas Museum of Art und entsteht im Juli 1890.' },
+      { pid:'wheatcorn',
+        text: [
+          'Ein Weizenfeld, durchsetzt mit Kornblumen, unter einem bewegten Himmel. Das Bild hängt heute in der Sammlung E.G. Bührle in Zürich.',
+          'Wie die anderen späten Felder ist es in die Breite gezogen: unten die Ähren, oben die Wolken, dazwischen kaum ein Dorf.'
+        ],
+        fact: 'Das Bild gehört der Sammlung E.G. Bührle in Zürich und entsteht im Juli 1890.' },
+      { pid:'farmsauvers',
+        text: [
+          'Höfe und Strohdächer am Hang, in einem sehr breiten Format, unter einem hellen Himmel. Vincent bleibt bei den alten Chaumes, die ihm gleich in der ersten Woche aufgefallen waren.',
+          'Es ist ein Blick über das Dorf hinweg, ruhiger als die Felder unter schwerem Himmel, und eines der letzten Ortsbilder.'
+        ],
+        fact: 'Das Bild gehört der Tate in London und entsteht im Juli 1890.' }
     ]
    }
   ]

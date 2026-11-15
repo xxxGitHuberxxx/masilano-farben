@@ -182,3 +182,16 @@ h1{font-family:Georgia,"Times New Roman",serif;font-weight:normal;font-size:30px
 .pnote{max-width:900px;margin:0 auto 12px;font-size:13px;color:#857a6e;line-height:1.45}
 #path .chhead{flex-wrap:wrap}
 #path .chhead .intro{flex-basis:100%}
+
+/* v6.4 path completion */
+.pfin-card{text-align:left}
+.pfin-k{color:#c79a4e;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 8px}
+.pfin-card h2{margin:0 0 8px;font-size:26px;line-height:1.2}
+.pfin-n{color:#6f665c;margin:0 0 16px;font-size:15px}
+.pfin-body p{margin:0 0 12px;line-height:1.5;color:#3f3a34}
+.pfin-body p:last-child{margin-bottom:0}
+.pfin{background:#fff;border-radius:18px;padding:18px 18px 16px;box-shadow:0 2px 10px rgba(60,40,20,.08);margin:8px auto 22px;max-width:900px}
+.pfin .lbl{color:#c79a4e;font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 8px}
+.pfin p{margin:0 0 10px;line-height:1.5}
+.pfin p:last-child{margin-bottom:0}
+.pnote.done{color:#6a4a22}

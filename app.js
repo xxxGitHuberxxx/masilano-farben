@@ -584,7 +584,7 @@ function goGallery(){
   if (storyCtx) { showChapters(storyCtx.story); return; }
   showScreen('gallery'); renderStoryEntry(); renderGallery();
 }
-function hideSheets(){ ['#story', '#chapter', '#chDone'].forEach(q => $(q).classList.add('hidden')); }
+function hideSheets(){ ['#story', '#chapter', '#chDone', '#pathFin'].forEach(q => $(q).classList.add('hidden')); }
 $('#backBtn').onclick = goGallery;
 let galT = 0;
 function onViewport(){ if (S) resize(); else { clearTimeout(galT); galT = setTimeout(renderGallery, 120); } }
@@ -741,8 +741,10 @@ function showPath(path){
   renderPathMap(path);
   const list = $('#pathList'); list.innerHTML = '';
   const note = document.createElement('p');
-  note.className = 'pnote';
-  note.textContent = 'Die erste Station ist der freie Start. In der Testversion kannst du alle Bilder schon malen; später schaltet jedes fertige Bild das nächste frei.';
+  note.className = 'pnote' + (n === N ? ' done' : '');
+  note.textContent = n === N
+    ? 'Du hast alle Bilder dieses Weges gemalt. Unten findest du den Schluss.'
+    : 'Die erste Station ist der freie Start. In der Testversion kannst du alle Bilder schon malen; später schaltet jedes fertige Bild das nächste frei.';
   list.appendChild(note);
   path.stations.forEach((st, si) => {
     const box = document.createElement('section');
@@ -776,8 +778,15 @@ function showPath(path){
     list.appendChild(box);
   });
   const epi = $('#pathEpi');
-  if (n === N) { epi.innerHTML = `<div class="lbl">Wie es weitergeht</div><p>${path.epilogue}</p>`; epi.classList.remove('hidden'); }
-  else epi.classList.add('hidden');
+  if (n === N) {
+    const paras = (path.ending || [path.epilogue]).map(p => `<p>${p}</p>`).join('');
+    epi.className = 'pfin';
+    epi.innerHTML = `<div class="lbl">Zum Schluss</div>${paras}`;
+    epi.classList.remove('hidden');
+  } else {
+    epi.className = '';
+    epi.classList.add('hidden');
+  }
   renderStoryEntry();
 }
 function renderPathMap(path){
@@ -848,18 +857,39 @@ function showPathWork(path, step){
 function showPathDone(){
   const c = pathCtx, path = c.path, step = c.step, p = byId(step.pid);
   const steps = pathSteps(path), last = step.idx === steps.length - 1;
+  if (last) { showPathFin(path); return; }
   $('#dNum').textContent = `Bild ${step.idx + 1} geschafft! 🎉`;
   $('#dTitle').textContent = p.title;
   $('#dMeta').textContent = `${p.artist} · ${p.year}`;
   $('#dFact').textContent = step.w.fact;
   $('#dMuseum').textContent = '🏛 Heute: ' + p.museum;
-  $('#dEpi').textContent = path.epilogue;
-  $('#dEpiWrap').classList.toggle('hidden', !last);
-  $('#dNext').textContent = last ? 'Lebensweg ansehen' : `Weiter: ${byId(steps[step.idx + 1].pid).title}`;
+  $('#dEpiWrap').classList.add('hidden');
+  $('#dNext').textContent = `Weiter: ${byId(steps[step.idx + 1].pid).title}`;
   $('#chDone .card').scrollTop = 0;
   $('#chDone').classList.remove('hidden');
 }
+function showPathFin(path){
+  const N = pathSteps(path).length;
+  $('#pfCount').textContent = `Du hast alle ${N} Bilder gemalt.`;
+  $('#pfBody').innerHTML = (path.ending || [path.epilogue]).map(p => `<p>${p}</p>`).join('');
+  hideSheets();
+  $('#pathFin .card').scrollTop = 0;
+  $('#pathFin').classList.remove('hidden');
+}
 $('#pathBack').onclick = () => { pathCtx = null; hideSheets(); if (swReload) { location.reload(); return; } showScreen('gallery'); renderStoryEntry(); renderGallery(); };
+
+
+if ($('#pfPath')) $('#pfPath').onclick = () => {
+  const path = (pathCtx && pathCtx.path) || (window.PATHS && window.PATHS[0]);
+  $('#pathFin').classList.add('hidden');
+  if (swReload) { location.reload(); return; }
+  S = null; pathCtx = pathCtx || { path, step: null, pid: null };
+  showPath(path);
+};
+if ($('#pfGal')) $('#pfGal').onclick = () => {
+  $('#pathFin').classList.add('hidden');
+  pathCtx = null; goGallery();
+};
 
 // ---------- PWA: service worker ----------
 
