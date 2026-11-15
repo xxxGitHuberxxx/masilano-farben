@@ -144,7 +144,7 @@ h1{font-family:Georgia,"Times New Roman",serif;font-weight:normal;font-size:30px
 @media (min-width:700px) and (min-height:600px){#chapter,#chDone{align-items:center}#chapter .card,#chDone .card{border-radius:22px;max-height:84vh}#chapter.hidden .card,#chDone.hidden .card{transform:translateY(40px)}}
 @media (min-width:900px) and (orientation:landscape){
   .ghead{display:grid;grid-template-columns:1fr minmax(340px,440px);column-gap:24px;align-items:end;margin-bottom:12px}
-  .ghead .wordmark,.ghead h1,.ghead .sub,.ghead .sortbar,.ghead .search{grid-column:1}
+  .ghead .headrow,.ghead h1,.ghead .sub,.ghead .sortbar,.ghead .search{grid-column:1}
   .ghead .sub{margin-bottom:0}
   .ghead .sortbar{margin-bottom:6px}
   .ghead .search{margin-bottom:0}
@@ -195,3 +195,10 @@ h1{font-family:Georgia,"Times New Roman",serif;font-weight:normal;font-size:30px
 .pfin p{margin:0 0 10px;line-height:1.5}
 .pfin p:last-child{margin-bottom:0}
 .pnote.done{color:#6a4a22}
+
+/* v6.5 language switch */
+.headrow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 2px}
+.headrow .wordmark{margin:0}
+.langswitch{display:flex;gap:4px;flex-shrink:0}
+.langbtn{appearance:none;border:0;background:#efe8dc;color:#5c5348;border-radius:999px;padding:8px 12px;font:600 13px/1.1 system-ui,sans-serif;min-height:44px;min-width:44px;cursor:pointer}
+.langbtn.on{background:#3f3a34;color:#f6f3ee}

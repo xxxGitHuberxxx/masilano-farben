@@ -16,33 +16,39 @@
 <body>
 <section id="gallery" class="screen active">
   <header class="ghead">
-    <div class="wordmark">Masilano</div>
-    <h1>Malen nach Zahlen</h1>
-    <p class="sub">80 Meisterwerke, Feld für Feld – und Van Goghs Lebensweg.</p>
-    <div id="sortBar" class="sortbar" role="group" aria-label="Reihenfolge der Bilder">
-      <button type="button" data-sort="gallery">Galerie</button>
-      <button type="button" data-sort="easy">Leicht zuerst</button>
+    <div class="headrow">
+      <div class="wordmark">Masilano</div>
+      <div id="langSwitch" class="langswitch" role="group" data-i18n-aria="langAria" aria-label="Sprache">
+        <button type="button" class="langbtn" data-lang="de" aria-pressed="true">Deutsch</button>
+        <button type="button" class="langbtn" data-lang="en" aria-pressed="false">English</button>
+      </div>
+    </div>
+    <h1 data-i18n="appTitle">Malen nach Zahlen</h1>
+    <p class="sub" data-i18n="appSubtitle">80 Meisterwerke, Feld für Feld – und Van Goghs Lebensweg.</p>
+    <div id="sortBar" class="sortbar" role="group" data-i18n-aria="sortAria" aria-label="Reihenfolge der Bilder">
+      <button type="button" data-sort="gallery" data-i18n="sortGallery">Galerie</button>
+      <button type="button" data-sort="easy" data-i18n="sortEasy">Leicht zuerst</button>
     </div>
     <div class="search" role="search">
       <svg class="sico" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-      <input id="galSearch" type="text" enterkeyhint="search" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Bild oder Maler suchen" aria-label="Bild oder Maler suchen">
-      <button type="button" id="galSearchClear" class="sclear hidden" aria-label="Suche löschen">×</button>
+      <input id="galSearch" type="text" enterkeyhint="search" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" data-i18n-placeholder="searchPh" data-i18n-aria="searchPh" placeholder="Bild oder Maler suchen" aria-label="Bild oder Maler suchen">
+      <button type="button" id="galSearchClear" class="sclear hidden" data-i18n-aria="searchClear" aria-label="Suche löschen">×</button>
     </div>
     <div id="storyEntries" class="sentries"></div>
   </header>
   <div id="pager" class="pager"></div>
   <div id="dots" class="dots"></div>
   <footer class="gfoot">
-    <button id="srcBtn" class="linkbtn">Bildquellen &amp; Hinweise</button>
-    <div class="ver">Testversion 6.4</div>
+    <button id="srcBtn" class="linkbtn" data-i18n-html="sourcesBtn">Bildquellen &amp; Hinweise</button>
+    <div class="ver" data-i18n="version">Testversion 6.5</div>
   </footer>
 </section>
 
 <section id="paint" class="screen">
   <div class="topbar">
-    <button id="backBtn" class="iconbtn" aria-label="Zurück">‹</button>
+    <button id="backBtn" class="iconbtn" data-i18n-aria="back" aria-label="Zurück">‹</button>
     <div class="ttl"><div id="pTitle"></div><div class="pbar"><div id="pFill"></div></div></div>
-    <button id="hintBtn" class="iconbtn hint" aria-label="Tipp">💡</button>
+    <button id="hintBtn" class="iconbtn hint" data-i18n-aria="hint" aria-label="Tipp">💡</button>
   </div>
   <div id="stage"><canvas id="cv"></canvas><canvas id="fx"></canvas><div id="toast"></div></div>
   <div class="palwrap"><div id="palette"></div></div>
@@ -50,8 +56,8 @@
 
 <section id="path" class="screen">
   <div class="topbar">
-    <button id="pathBack" class="iconbtn" aria-label="Zurück zur Galerie">‹</button>
-    <div class="ttl"><div class="chT">Lebensweg</div></div>
+    <button id="pathBack" class="iconbtn" data-i18n-aria="backGallery" aria-label="Zurück zur Galerie">‹</button>
+    <div class="ttl"><div class="chT" data-i18n="pathMode">Lebensweg</div></div>
     <div class="iconspace"></div>
   </div>
   <div class="chscroll">
@@ -64,8 +70,8 @@
 
 <section id="chapters" class="screen">
   <div class="topbar">
-    <button id="chBack" class="iconbtn" aria-label="Zurück zur Galerie">‹</button>
-    <div class="ttl"><div class="chT">Geschichten</div></div>
+    <button id="chBack" class="iconbtn" data-i18n-aria="backGallery" aria-label="Zurück zur Galerie">‹</button>
+    <div class="ttl"><div class="chT" data-i18n="storyMode">Geschichten</div></div>
     <div class="iconspace"></div>
   </div>
   <div class="chscroll">
@@ -84,8 +90,8 @@
     <blockquote id="cQuote" class="cquote hidden"><p id="cQuoteT"></p><cite id="cQuoteC"></cite></blockquote>
     <div id="cWork" class="cwork"></div>
     <div class="btns">
-      <button id="cBack" class="btn ghost">Zurück</button>
-      <button id="cGo" class="btn">Bild malen</button>
+      <button id="cBack" class="btn ghost" data-i18n="back">Zurück</button>
+      <button id="cGo" class="btn" data-i18n="paint">Bild malen</button>
     </div>
   </div>
 </div>
@@ -95,60 +101,61 @@
     <div id="dNum" class="done"></div>
     <h2 id="dTitle"></h2>
     <div id="dMeta" class="meta"></div>
-    <div class="lbl">Wusstest du?</div><p id="dFact"></p>
-    <div id="dEpiWrap" class="hidden"><div class="lbl">Wie es weitergeht</div><p id="dEpi"></p></div>
+    <div class="lbl" data-i18n="didYouKnow">Wusstest du?</div><p id="dFact"></p>
+    <div id="dEpiWrap" class="hidden"><div class="lbl" data-i18n="whatNext">Wie es weitergeht</div><p id="dEpi"></p></div>
     <div id="dMuseum" class="museum"></div>
     <div class="btns">
-      <button id="dList" class="btn ghost">Übersicht</button>
-      <button id="dNext" class="btn">Weiter</button>
+      <button id="dList" class="btn ghost" data-i18n="overview">Übersicht</button>
+      <button id="dNext" class="btn" data-i18n="next">Weiter</button>
     </div>
-    <button id="dLook" class="linkbtn small">Bild nochmals ansehen</button>
+    <button id="dLook" class="linkbtn small" data-i18n="lookAgain">Bild nochmals ansehen</button>
   </div>
 </div>
 
-
 <div id="pathFin" class="sheet hidden">
   <div class="card pfin-card">
-    <div class="pfin-k">Geschafft</div>
+    <div class="pfin-k" data-i18n="finKicker">Geschafft</div>
     <h2 id="pfTitle">Van Goghs Lebensweg</h2>
     <p class="pfin-n" id="pfCount"></p>
     <div class="pfin-body" id="pfBody"></div>
     <div class="btns">
-      <button id="pfPath" class="btn">Zum Lebensweg</button>
-      <button id="pfGal" class="btn ghost">Zur Galerie</button>
+      <button id="pfPath" class="btn" data-i18n="finPath">Zum Lebensweg</button>
+      <button id="pfGal" class="btn ghost" data-i18n="finGal">Zur Galerie</button>
     </div>
   </div>
 </div>
 
 <div id="story" class="sheet hidden">
   <div class="card">
-    <div class="done">Geschafft! 🎉</div>
+    <div class="done" data-i18n="storyDone">Geschafft! 🎉</div>
     <h2 id="sTitle"></h2>
     <div id="sMeta" class="meta"></div>
     <p id="sStory"></p>
-    <div class="lbl">Technik</div><p id="sTech"></p>
-    <div class="lbl">Wusstest du?</div><ul id="sFacts"></ul>
+    <div class="lbl" data-i18n="technique">Technik</div><p id="sTech"></p>
+    <div class="lbl" data-i18n="didYouKnow">Wusstest du?</div><ul id="sFacts"></ul>
     <div id="sMuseum" class="museum"></div>
     <div class="btns">
-      <button id="sCompare" class="btn ghost">Original ansehen</button>
-      <button id="sGallery" class="btn">Zur Galerie</button>
+      <button id="sCompare" class="btn ghost" data-i18n="viewOriginal">Original ansehen</button>
+      <button id="sGallery" class="btn" data-i18n="toGallery">Zur Galerie</button>
     </div>
-    <button id="sReset" class="linkbtn small">Nochmals von vorne malen</button>
+    <button id="sReset" class="linkbtn small" data-i18n="resetPaint">Nochmals von vorne malen</button>
   </div>
 </div>
 
 <div id="sources" class="sheet hidden">
   <div class="card">
-    <h2>Bildquellen</h2>
+    <h2 data-i18n="sourcesTitle">Bildquellen</h2>
     <ul id="srcList" class="srclist"></ul>
-    <p class="small">Alle Bilder stammen von Wikimedia Commons und sind gemeinfrei. Sie wurden für das Spiel automatisch in Farbfelder umgewandelt. Die Zitate aus Van Goghs Briefen hat Masilano selbst aus dem niederländischen oder französischen Original übersetzt (Nummer und Datum nach der Briefausgabe von 2009). Dein Fortschritt wird nur auf diesem Gerät gespeichert.</p>
-    <div class="btns"><button class="btn" id="srcClose">Schliessen</button></div>
+    <p class="small" data-i18n="sourcesBody">Alle Bilder stammen von Wikimedia Commons und sind gemeinfrei. Sie wurden für das Spiel automatisch in Farbfelder umgewandelt. Die Zitate aus Van Goghs Briefen hat Masilano selbst aus dem niederländischen oder französischen Original übersetzt (Nummer und Datum nach der Briefausgabe von 2009). Dein Fortschritt wird nur auf diesem Gerät gespeichert.</p>
+    <div class="btns"><button class="btn" id="srcClose" data-i18n="close">Schliessen</button></div>
   </div>
 </div>
 <div id="ctoast" class="ctoast"></div>
 <script src="paintings.js"></script>
 <script src="story.js"></script>
 <script src="path-vangogh.js"></script>
+<script src="en-content.js"></script>
+<script src="i18n.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

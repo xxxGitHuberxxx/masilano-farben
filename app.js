@@ -9,6 +9,13 @@ const knownIds = new Set(P.map(p => p.id).concat((window.STORY_WORKS || []).map(
 const ALL = P.concat((window.STORY_WORKS || []).filter(w => !P.some(p => p.id === w.id)))
   .concat((window.PATH_WORKS || []).filter(w => !knownIds.has(w.id)));
 const byId = id => ALL.find(p => p.id === id);
+const I = window.I18N;
+const t = (k, v) => I.t(k, v);
+const L = (obj, field) => I.loc(obj, field);
+function paintBtn(done, pct){ return done ? t('paintView') : (pct > 0 ? t('paintContinue') : t('paint')); }
+function youArePainting(done, title, artist, year){
+  return `<div>${done ? t('already') : t('youPaint')}: <b>${title}</b><br>${artist}, ${year}</div>`;
+}
 const SKEY = id => 'masilano.story.v1.' + id;
 const PKEY = id => 'masilano.path.v1.' + id;
 const cache = {};
@@ -24,15 +31,29 @@ function levelOf(p){
   const r = p.regions || 999;
   return r < 220 ? 'leicht' : r < 400 ? 'mittel' : 'schwer';
 }
-function levelLabel(lv){ return lv === 'leicht' ? 'Leicht' : lv === 'mittel' ? 'Mittel' : 'Schwer'; }
+function levelLabel(lv){ return lv === 'leicht' ? t('easy') : lv === 'mittel' ? t('medium') : t('hard'); }
 let galSort = 'gallery';
 try { const s = localStorage.getItem(SORT_KEY); if (s === 'easy' || s === 'gallery') galSort = s; } catch(e){}
 function fold(s){
   return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 }
+function enField(obj, field){
+  if (!obj) return '';
+  const EN = window.EN || {};
+  if (obj.id && EN.works && EN.works[obj.id] && EN.works[obj.id][field] != null) return EN.works[obj.id][field];
+  if (field === 'museum' && EN.museums && obj.museum && EN.museums[obj.museum]) return EN.museums[obj.museum];
+  if (field === 'artist' && EN.artists && obj.artist && EN.artists[obj.artist]) return EN.artists[obj.artist];
+  if (obj.id && EN.paths && EN.paths[obj.id] && EN.paths[obj.id][field] != null) return EN.paths[obj.id][field];
+  if (obj.id && EN.stories && EN.stories[obj.id] && EN.stories[obj.id][field] != null) return EN.stories[obj.id][field];
+  return '';
+}
 function matchesQuery(p, q, extra){
   if (!q) return true;
-  const hay = fold([p.title, p.artist, p.year, p.museum, extra].filter(Boolean).join(' '));
+  const hay = fold([
+    p.title, L(p,'title'), enField(p,'title'),
+    p.artist, L(p,'artist'), enField(p,'artist'), p.year,
+    p.museum, L(p,'museum'), enField(p,'museum'), extra
+  ].filter(Boolean).join(' '));
   return q.split(/\s+/).every(tok => tok && hay.includes(tok));
 }
 let galQuery = '';
@@ -40,7 +61,7 @@ function galleryList(){
   const q = fold(galQuery);
   const arr = P.filter(p => matchesQuery(p, q));
   if (galSort === 'easy') {
-    arr.sort((a,b) => (LEVEL_RANK[levelOf(a)] - LEVEL_RANK[levelOf(b)]) || ((a.regions || 999) - (b.regions || 999)) || a.title.localeCompare(b.title, 'de-CH'));
+    arr.sort((a,b) => (LEVEL_RANK[levelOf(a)] - LEVEL_RANK[levelOf(b)]) || ((a.regions || 999) - (b.regions || 999)) || L(a,'title').localeCompare(L(b,'title'), I.lang === 'de' ? 'de-CH' : 'en'));
   }
   return arr;
 }
@@ -53,7 +74,8 @@ function storySearchHits(){
     for (const ch of st.chapters) {
       if (galIds.has(ch.pid)) continue;
       const p = byId(ch.pid);
-      if (p && matchesQuery(p, q, st.name + ' ' + ch.title)) hits.push({ p, st, ch });
+      const chL = I.locChapter(st, ch);
+      if (p && matchesQuery(p, q, st.name + ' ' + ch.title + ' ' + chL.title + ' ' + ch.place + ' ' + chL.place)) hits.push({ p, st, ch });
     }
   }
   return hits;
@@ -67,7 +89,8 @@ function pathSearchHits(){
     for (const step of pathSteps(path)) {
       if (galIds.has(step.pid)) continue;
       const p = byId(step.pid);
-      if (p && matchesQuery(p, q, path.title + ' ' + path.name + ' ' + step.st.place + ' ' + step.st.when)) hits.push({ p, path, step });
+      const stL = I.locStation(step.st);
+      if (p && matchesQuery(p, q, path.title + ' ' + L(path,'title') + ' ' + path.name + ' ' + step.st.place + ' ' + stL.place + ' ' + step.st.when + ' ' + stL.when)) hits.push({ p, path, step });
     }
   }
   return hits;
@@ -84,7 +107,7 @@ function openStoryHit(st, p){
   const i = st.chapters.findIndex(c => c.pid === p.id);
   if (i < 0) return;
   if (chUnlocked(st, i)) showChapter(st, i);
-  else ctoast('Dieses Bild gehört zur Geschichte von ' + st.name + '. Es wird Kapitel für Kapitel freigeschaltet.');
+  else ctoast(t('lockedStory', { name: st.name }));
 }
 function renderSortBar(){
   const bar = $('#sortBar'); if (!bar) return;
@@ -135,27 +158,27 @@ function paintGalCard(item){
   const b = document.createElement('button');
   if (item.kind === 'story') {
     b.className = 'pc storyc';
-    const doneTag = done ? '<span class="badge fin">✓ Fertig</span>' : '';
+    const doneTag = done ? '<span class="badge fin">✓ ' + t('done') + '</span>' : '';
     b.innerHTML = `<div class="im ${done ? '' : 'todo'}" style="background-image:url(data/${p.id}-${done ? 'orig.jpg' : 'thumb.jpg'})">
-      <div class="tags"><span class="lv story">Geschichte</span></div>${doneTag}</div>
-      <div class="tx"><div class="t">${p.title}</div><div class="a">${p.artist}, ${p.year}</div>
-      <div class="hint">In der Geschichte von ${item.st.name}</div></div>`;
+      <div class="tags"><span class="lv story">${t('storyTag')}</span></div>${doneTag}</div>
+      <div class="tx"><div class="t">${L(p,'title')}</div><div class="a">${L(p,'artist')}, ${p.year}</div>
+      <div class="hint">${t('inStory', { name: item.st.name })}</div></div>`;
     b.onclick = () => openStoryHit(item.st, p);
   } else if (item.kind === 'path') {
     b.className = 'pc storyc';
-    const doneTag = done ? '<span class="badge fin">✓ Fertig</span>' : '';
+    const doneTag = done ? '<span class="badge fin">✓ ' + t('done') + '</span>' : '';
     b.innerHTML = `<div class="im ${done ? '' : 'todo'}" style="background-image:url(data/${p.id}-${done ? 'orig.jpg' : 'thumb.jpg'})">
-      <div class="tags"><span class="lv path">Lebensweg</span></div>${doneTag}</div>
-      <div class="tx"><div class="t">${p.title}</div><div class="a">${p.artist}, ${p.year}</div>
-      <div class="hint">Im Lebensweg von ${item.path.name}</div></div>`;
+      <div class="tags"><span class="lv path">${t('pathTag')}</span></div>${doneTag}</div>
+      <div class="tx"><div class="t">${L(p,'title')}</div><div class="a">${L(p,'artist')}, ${p.year}</div>
+      <div class="hint">${t('inPath', { name: item.path.name })}</div></div>`;
     b.onclick = () => openPathHit(item.path, p);
   } else {
     const lv = levelOf(p);
-    const tags = `<div class="tags"><span class="lv ${lv}">${levelLabel(lv)}</span>${p.fresh ? '<span class="lv neu">Neu</span>' : ''}</div>`;
+    const tags = `<div class="tags"><span class="lv ${lv}">${levelLabel(lv)}</span>${p.fresh ? '<span class="lv neu">' + t('neu') + '</span>' : ''}</div>`;
     b.className = 'pc';
     b.innerHTML = `<div class="im ${done ? '' : 'todo'}" style="background-image:url(data/${p.id}-${done ? 'orig.jpg' : 'thumb.jpg'})">
-      ${tags}${done ? '<span class="badge fin">✓ Fertig</span>' : (s && s.filled.length ? `<span class="badge">${Math.max(1, pct)} %</span>` : '')}</div>
-      <div class="tx"><div class="t">${p.title}</div><div class="a">${p.artist}, ${p.year}</div>
+      ${tags}${done ? '<span class="badge fin">✓ ' + t('done') + '</span>' : (s && s.filled.length ? `<span class="badge">${Math.max(1, pct)} %</span>` : '')}</div>
+      <div class="tx"><div class="t">${L(p,'title')}</div><div class="a">${L(p,'artist')}, ${p.year}</div>
       <div class="bar"><div style="width:${done ? 100 : pct}%"></div></div></div>`;
     b.onclick = () => openPainting(p);
   }
@@ -202,7 +225,7 @@ function renderGallery(){
   pager.innerHTML = ''; dots.innerHTML = '';
   if (!items.length) {
     const empty = document.createElement('div'); empty.className = 'empty';
-    empty.innerHTML = '<div class="e1">Keine Treffer</div><div class="e2">Versuch einen anderen Bildtitel, Malernamen, ein Jahr oder ein Museum.</div>';
+    empty.innerHTML = `<div class="e1">${t('noHits')}</div><div class="e2">${t('noHitsHint')}</div>`;
     pager.appendChild(empty);
     const ph = document.createElement('button');
     ph.disabled = true; ph.setAttribute('aria-hidden', 'true'); ph.tabIndex = -1;
@@ -215,7 +238,7 @@ function renderGallery(){
     const page = document.createElement('div'); page.className = 'page';
     page.style.gridTemplateColumns = `repeat(${cols}, 1fr)`; page.style.gridAutoRows = cardH + 'px';
     pager.appendChild(page);
-    const d = document.createElement('button'); d.setAttribute('aria-label', 'Seite ' + (pg + 1));
+    const d = document.createElement('button'); d.setAttribute('aria-label', t('pageN', { n: pg + 1 }));
     d.onclick = () => { hydrateGal(pg); pager.scrollTo({ left: pg * pager.clientWidth, behavior: 'smooth' }); };
     dots.appendChild(d);
   }
@@ -243,7 +266,7 @@ function markDots(){
 }
 $('#pager').addEventListener('scroll', () => requestAnimationFrame(markDots), { passive: true });
 $('#srcBtn').onclick = () => {
-  $('#srcList').innerHTML = ALL.map(p => `<li><b>${p.title}</b> (${p.artist}): ${p.source}. Museum: ${p.museum}.</li>`).join('');
+  $('#srcList').innerHTML = ALL.map(p => `<li><b>${L(p,'title')}</b> (${L(p,'artist')}): ${I.sourceLine(p.source) || ''}. ${t('museumWord')}: ${L(p,'museum')}.</li>`).join('');
   $('#sources').classList.remove('hidden');
 };
 $('#srcClose').onclick = () => $('#sources').classList.add('hidden');
@@ -290,7 +313,7 @@ function u32(r, g, b){ return (255 << 24 | b << 16 | g << 8 | r) >>> 0; }
 function lum(c){ return 0.299 * c[0] + 0.587 * c[1] + 0.114 * c[2]; }
 
 async function openPainting(p){
-  showScreen('paint'); $('#pTitle').textContent = p.title;
+  showScreen('paint'); $('#pTitle').textContent = L(p,'title');
   ctx.clearRect(0, 0, cv.width, cv.height);
   const pz = await loadPuzzle(p);
   const save = loadSave(p.id);
@@ -518,7 +541,7 @@ function handleTap(sx, sy){
     }
   }
   if (hit >= 0) fillRegion(hit, sx, sy);
-  else if (other >= 0) toast('Hier gehört Farbe ' + (pz.rc[other] + 1) + ' hin');
+  else if (other >= 0) toast(t('colorHere', { n: pz.rc[other] + 1 }));
 }
 
 // hint: fly to an open field of the selected colour
@@ -528,7 +551,7 @@ $('#hintBtn').onclick = () => {
   const cx = (cw / 2 - view.tx) / view.s, cy = (ch / 2 - view.ty) / view.s;
   for (let r = 0; r < regs.length; r++) if (!S.filled[r] && regs[r][0] === S.sel) {
     const d = (regs[r][1] - cx) ** 2 + (regs[r][2] - cy) ** 2; if (d < bd) { bd = d; best = r; } }
-  if (best < 0) { toast('Wähle eine Farbe, die noch offen ist'); return; }
+  if (best < 0) { toast(t('pickOpen')); return; }
   const g = regs[best];
   const ts = Math.min(maxS(), Math.max(view.s, 16 / g[3], fitS));
   animateView({ s: ts, tx: cw / 2 - g[1] * ts, ty: ch / 2 - g[2] * ts }, 450, () => { clampView(); draw(); hintRing = { x: g[1], y: g[2], r: g[3], t: performance.now() }; kick(); });
@@ -554,26 +577,27 @@ function showStory(){
   if (pathCtx && S && pathCtx.pid === S.p.id) { showPathDone(); return; }
   if (storyCtx && S && storyCtx.pid === S.p.id) { showChapterDone(); return; }
   const p = S.p;
-  $('#sTitle').textContent = p.title; $('#sMeta').textContent = `${p.artist} · ${p.year}`;
-  $('#sStory').textContent = p.story; $('#sTech').textContent = p.technique;
-  $('#sFacts').innerHTML = p.facts.map(f => `<li>${f}</li>`).join('');
-  $('#sMuseum').textContent = '🏛 Museum: ' + p.museum;
+  $('#sTitle').textContent = L(p,'title'); $('#sMeta').textContent = `${L(p,'artist')} · ${p.year}`;
+  $('#sStory').textContent = L(p,'story'); $('#sTech').textContent = L(p,'technique');
+  const facts = L(p,'facts') || p.facts || [];
+  $('#sFacts').innerHTML = facts.map(f => `<li>${f}</li>`).join('');
+  $('#sMuseum').textContent = t('museum', { m: L(p,'museum') });
   $('#story').classList.remove('hidden');
 }
 let showingOrig = true;
 $('#sCompare').onclick = () => {
   $('#story').classList.add('hidden');
-  toast('Tippe auf «Tipp», um die Geschichte wieder zu sehen');
+  toast(t('hintToast'));
 };
 $('#sGallery').onclick = () => { $('#story').classList.add('hidden'); goGallery(); };
 $('#sReset').onclick = () => {
-  if (!confirm('Fortschritt für dieses Bild löschen und neu beginnen?')) return;
+  if (!confirm(t('resetConfirm'))) return;
   localStorage.removeItem(KEY(S.p.id)); $('#story').classList.add('hidden'); const p = S.p; openPainting(p);
 };
 // when finished, the hint button reopens the story, tapping the canvas toggles original / own version
 const origHint = $('#hintBtn').onclick;
 $('#hintBtn').onclick = () => { if (S && S.done) { showStory(); return; } origHint(); };
-cv.addEventListener('click', () => { if (S && S.done && !anim && !(S.doneAt && performance.now() - S.doneAt < 4000)) { reveal = reveal > 0.5 ? 0 : 1; draw(); toast(reveal ? 'Original' : 'Deine Version'); } });
+cv.addEventListener('click', () => { if (S && S.done && !anim && !(S.doneAt && performance.now() - S.doneAt < 4000)) { reveal = reveal > 0.5 ? 0 : 1; draw(); toast(reveal ? t('original') : t('yours')); } });
 
 // ---------- navigation ----------
 function showScreen(id){ document.querySelectorAll('.screen').forEach(s => s.classList.toggle('active', s.id === id)); }
@@ -609,10 +633,10 @@ function renderStoryEntry(){
     const b = document.createElement('button');
     b.className = 'sentry path neu';
     b.setAttribute('data-path', path.id);
-    b.setAttribute('aria-label', 'Lebensweg: ' + path.title);
+    b.setAttribute('aria-label', t('pathAria', { title: L(path,'title') }));
     b.innerHTML = `<div class="cv" style="background-image:url(data/${path.cover}-thumb.jpg)"></div>
-      <div class="tx"><div class="k">Neu · Lebensweg</div><div class="n">${path.title}</div>
-      <div class="s">${path.part} · ${n ? `${n} von ${N} gemalt` : 'Jetzt starten'}</div></div><div class="go">›</div>`;
+      <div class="tx"><div class="k">${t('pathKicker')}</div><div class="n">${L(path,'title')}</div>
+      <div class="s">${L(path,'part')} · ${n ? t('paintedOf', { n, N }) : t('startNow')}</div></div><div class="go">›</div>`;
     b.onclick = () => { pathCtx = { path }; storyCtx = null; showPath(path); };
     box.appendChild(b);
   });
@@ -621,11 +645,11 @@ function renderStoryEntry(){
     const b = document.createElement('button');
     b.className = 'sentry' + (st.fresh ? ' neu' : '');
     b.setAttribute('data-story', st.id);
-    b.setAttribute('aria-label', 'Geschichten: ' + st.name);
-    const kicker = st.fresh ? 'Neu · Geschichten' : 'Geschichten';
-    b.innerHTML = `<div class="cv" style="background-image:url(data/${st.cover}-thumb.jpg)"></div>
+    b.setAttribute('aria-label', t('storyAria', { name: st.name }));
+    const kicker = st.fresh ? t('storyKickerNew') : t('storyKicker');
+    b.innerHTML = `<div class="cv" style="background-image:url(data/${st.cover}-orig.jpg)"></div>
       <div class="tx"><div class="k">${kicker}</div><div class="n">${st.name}</div>
-      <div class="s">${st.subtitle} · ${n ? `${n} von ${N} gemalt` : 'Jetzt starten'}</div></div><div class="go">›</div>`;
+      <div class="s">${L(st,'subtitle')} · ${n ? t('paintedOf', { n, N }) : t('startNow')}</div></div><div class="go">›</div>`;
     b.onclick = () => { storyCtx = { story: st }; showChapters(st); };
     box.appendChild(b);
   });
@@ -636,9 +660,9 @@ function showChapters(st){
   S = null; showScreen('chapters');
   const N = st.chapters.length, n = chDoneCount(st), seen = storyState(st).seen;
   $('#chHead').innerHTML = `<div class="cv" style="background-image:url(data/${st.cover}-orig.jpg)"></div>
-    <div><h1>${st.name}</h1><div class="life">${st.life} · ${st.subtitle}</div>
-    <p class="intro">${st.intro}</p>
-    <div class="prog">${n} von ${N} Kapiteln gemalt<div class="bar"><div style="width:${100 * n / N}%"></div></div></div></div>`;
+    <div><h1>${st.name}</h1><div class="life">${st.life} · ${L(st,'subtitle')}</div>
+    <p class="intro">${L(st,'intro')}</p>
+    <div class="prog">${t('chaptersPainted', { n, N })}<div class="bar"><div style="width:${100 * n / N}%"></div></div></div></div>`;
   const list = $('#chList'); list.innerHTML = '';
   let nextMarked = false;
   st.chapters.forEach((ch, i) => {
@@ -646,18 +670,19 @@ function showChapters(st){
     const b = document.createElement('button');
     let cls = 'chi', badge;
     if (!open) { cls += ' locked'; badge = ''; }
-    else if (done) badge = '<span class="st fin">✓ Fertig</span>';
-    else { cls += ' todo'; badge = pct > 0 ? `<span class="st">${Math.max(1, pct)} %</span>` : (seen.includes(i) ? '<span class="st">Bereit</span>' : '<span class="st new">Neu</span>'); }
+    else if (done) badge = '<span class="st fin">✓ ' + t('done') + '</span>';
+    else { cls += ' todo'; badge = pct > 0 ? `<span class="st">${Math.max(1, pct)} %</span>` : (seen.includes(i) ? '<span class="st">' + t('ready') + '</span>' : '<span class="st new">' + t('neu') + '</span>'); }
     if (open && !done && !nextMarked) { cls += ' next'; nextMarked = true; }
     b.className = cls; b.dataset.i = i;
+    const chL = I.locChapter(st, ch);
     b.innerHTML = `<div class="th" style="background-image:url(data/${ch.pid}-${done ? 'orig.jpg' : 'thumb.jpg'})"></div>
-      <div class="tx"><div class="no">Kapitel ${i + 1} · ${ch.place}, ${ch.when}</div><div class="t">${ch.title}</div>
-      <div class="w">${open ? `${p.title} (${p.year})` : '🔒 Wird freigeschaltet, wenn Kapitel ' + i + ' fertig ist'}</div></div>${badge}`;
-    b.onclick = () => open ? showChapter(st, i) : ctoast(`Male zuerst Kapitel ${i} fertig, dann geht es hier weiter.`);
+      <div class="tx"><div class="no">${t('chapterLine', { n: i + 1, place: chL.place, when: chL.when })}</div><div class="t">${chL.title}</div>
+      <div class="w">${open ? `${L(p,'title')} (${p.year})` : t('lockedUntil', { n: i })}</div></div>${badge}`;
+    b.onclick = () => open ? showChapter(st, i) : ctoast(t('paintFirst', { n: i }));
     list.appendChild(b);
   });
   const epi = $('#chEpi');
-  if (n === N) { epi.innerHTML = `<div class="lbl">Wie es weitergeht</div><p>${st.epilogue}</p>`; epi.classList.remove('hidden'); }
+  if (n === N) { epi.innerHTML = `<div class="lbl">${t('whatNext')}</div><p>${L(st,'epilogue')}</p>`; epi.classList.remove('hidden'); }
   else epi.classList.add('hidden');
   renderStoryEntry();
 }
@@ -665,15 +690,16 @@ function showChapter(st, i){
   const ch = st.chapters[i], p = byId(ch.pid), done = isDone(ch.pid), pct = pctOf(ch.pid);
   storyCtx = { story: st, idx: i, pid: ch.pid }; pathCtx = null;
   const o = storyState(st); if (!o.seen.includes(i)) { o.seen.push(i); storySave(st, o); }
-  $('#cNum').textContent = `Kapitel ${i + 1} von ${st.chapters.length}`;
-  $('#cTitle').textContent = ch.title;
-  $('#cMeta').textContent = `${ch.place} · ${ch.when}`;
-  $('#cText').innerHTML = ch.text.map(t => `<p>${t}</p>`).join('');
+  const chL = I.locChapter(st, ch);
+  $('#cNum').textContent = t('chapterOf', { n: i + 1, N: st.chapters.length });
+  $('#cTitle').textContent = chL.title;
+  $('#cMeta').textContent = `${chL.place} · ${chL.when}`;
+  $('#cText').innerHTML = chL.text.map(tx => `<p>${tx}</p>`).join('');
   const qEl = $('#cQuote'); if (qEl) qEl.classList.add('hidden');
   $('#cWork').className = 'cwork' + (done ? ' fin' : '');
   $('#cWork').innerHTML = `<div class="th" style="background-image:url(data/${ch.pid}-${done ? 'orig.jpg' : 'thumb.jpg'})"></div>
-    <div>${done ? 'Schon gemalt' : 'Du malst'}: <b>${p.title}</b><br>${p.artist}, ${p.year}</div>`;
-  $('#cGo').textContent = done ? 'Bild ansehen' : (pct > 0 ? 'Weiter malen' : 'Bild malen');
+    ${youArePainting(done, L(p,'title'), L(p,'artist'), p.year)}`;
+  $('#cGo').textContent = paintBtn(done, pct);
   $('#chapter .card').scrollTop = 0;
   $('#chapter').classList.remove('hidden');
 }
@@ -687,14 +713,15 @@ $('#cGo').onclick = async () => {
 };
 function showChapterDone(){
   const c = storyCtx, st = c.story, i = c.idx, ch = st.chapters[i], p = byId(ch.pid), N = st.chapters.length, last = i === N - 1;
-  $('#dNum').textContent = `Kapitel ${i + 1} geschafft! 🎉`;
-  $('#dTitle').textContent = p.title;
-  $('#dMeta').textContent = `${p.artist} · ${p.year}`;
-  $('#dFact').textContent = ch.fact;
-  $('#dMuseum').textContent = '🏛 Heute: ' + p.museum;
-  $('#dEpi').textContent = st.epilogue;
+  const chL = I.locChapter(st, ch);
+  $('#dNum').textContent = t('chapterDone', { n: i + 1 });
+  $('#dTitle').textContent = L(p,'title');
+  $('#dMeta').textContent = `${L(p,'artist')} · ${p.year}`;
+  $('#dFact').textContent = chL.fact;
+  $('#dMuseum').textContent = t('today', { m: L(p,'museum') });
+  $('#dEpi').textContent = L(st,'epilogue');
   $('#dEpiWrap').classList.toggle('hidden', !last);
-  $('#dNext').textContent = last ? 'Geschichte abschliessen' : `Weiter: Kapitel ${i + 2}`;
+  $('#dNext').textContent = last ? t('finishStory') : t('nextChapter', { n: i + 2 });
   $('#chDone .card').scrollTop = 0;
   $('#chDone').classList.remove('hidden');
 }
@@ -716,7 +743,7 @@ $('#dNext').onclick = () => {
   else showChapters(st);
 };
 $('#dList').onclick = () => { $('#chDone').classList.add('hidden'); goGallery(); };
-$('#dLook').onclick = () => { $('#chDone').classList.add('hidden'); toast('Tippe auf 💡, um den Text wieder zu sehen'); };
+$('#dLook').onclick = () => { $('#chDone').classList.add('hidden'); toast(t('hintAgain')); };
 $('#chBack').onclick = () => { storyCtx = null; hideSheets(); if (swReload) { location.reload(); return; } showScreen('gallery'); renderStoryEntry(); renderGallery(); };
 
 // ---------- path mode (Lebensweg) ----------
@@ -735,22 +762,21 @@ function showPath(path){
   S = null; showScreen('path');
   const steps = pathSteps(path), n = pathDoneCount(path), N = steps.length;
   $('#pathHead').innerHTML = `<div class="cv" style="background-image:url(data/${path.cover}-orig.jpg)"></div>
-    <div><h1>${path.title}</h1><div class="life">${path.name} · ${path.life} · ${path.part}</div>
-    <p class="intro">${path.intro}</p>
-    <div class="prog">${n} von ${N} Bildern gemalt<div class="bar"><div style="width:${100 * n / Math.max(1,N)}%"></div></div></div></div>`;
+    <div><h1>${L(path,'title')}</h1><div class="life">${path.name} · ${path.life} · ${L(path,'part')}</div>
+    <p class="intro">${L(path,'intro')}</p>
+    <div class="prog">${t('picturesPainted', { n, N })}<div class="bar"><div style="width:${100 * n / Math.max(1,N)}%"></div></div></div></div>`;
   renderPathMap(path);
   const list = $('#pathList'); list.innerHTML = '';
   const note = document.createElement('p');
   note.className = 'pnote' + (n === N ? ' done' : '');
-  note.textContent = n === N
-    ? 'Du hast alle Bilder dieses Weges gemalt. Unten findest du den Schluss.'
-    : 'Die erste Station ist der freie Start. In der Testversion kannst du alle Bilder schon malen; später schaltet jedes fertige Bild das nächste frei.';
+  note.textContent = n === N ? t('pathNoteDone') : t('pathNotePlay');
   list.appendChild(note);
   path.stations.forEach((st, si) => {
     const box = document.createElement('section');
     box.className = 'pstat'; box.id = 'pstat-' + st.id;
-    const intro = st.intro.map(p => `<p>${p}</p>`).join('');
-    box.innerHTML = `<h2>${si + 1}. ${st.place}</h2><div class="when">${st.when}</div><div class="intro">${intro}</div><div class="works"></div>`;
+    const stL = I.locStation(st);
+    const intro = stL.intro.map(tx => `<p>${tx}</p>`).join('');
+    box.innerHTML = `<h2>${si + 1}. ${stL.place}</h2><div class="when">${stL.when}</div><div class="intro">${intro}</div><div class="works"></div>`;
     const works = box.querySelector('.works');
     let nextMarked = false;
     st.works.forEach((w, wi) => {
@@ -759,19 +785,19 @@ function showPath(path){
       const conceptual = pathWorkUnlocked(path, step.idx);
       const b = document.createElement('button');
       let cls = 'chi', badge;
-      if (done) badge = '<span class="st fin">✓ Fertig</span>';
+      if (done) badge = '<span class="st fin">✓ ' + t('done') + '</span>';
       else {
         cls += ' todo';
-        badge = pct > 0 ? `<span class="st">${Math.max(1, pct)} %</span>` : (pathState(path).seen.includes(w.pid) ? '<span class="st">Bereit</span>' : '<span class="st new">Neu</span>');
+        badge = pct > 0 ? `<span class="st">${Math.max(1, pct)} %</span>` : (pathState(path).seen.includes(w.pid) ? '<span class="st">' + t('ready') + '</span>' : '<span class="st new">' + t('neu') + '</span>');
       }
       if (!conceptual) cls += ' softlock';
       if (!done && conceptual && !nextMarked) { cls += ' next'; nextMarked = true; }
       if (!done && !conceptual && !nextMarked) { cls += ' next'; nextMarked = true; }
-      const free = (si === 0 && wi === 0) ? 'Frei zum Start · ' : '';
+      const free = (si === 0 && wi === 0) ? t('freeStart') : '';
       b.className = cls;
       b.innerHTML = `<div class="th" style="background-image:url(data/${w.pid}-${done ? 'orig.jpg' : 'thumb.jpg'})"></div>
-        <div class="tx"><div class="no">${free}${st.place}, ${st.when}</div><div class="t">${p.title}</div>
-        <div class="w">${p.artist}, ${p.year}</div></div>${badge}`;
+        <div class="tx"><div class="no">${free}${stL.place}, ${stL.when}</div><div class="t">${L(p,'title')}</div>
+        <div class="w">${L(p,'artist')}, ${p.year}</div></div>${badge}`;
       b.onclick = () => showPathWork(path, step);
       works.appendChild(b);
     });
@@ -779,9 +805,10 @@ function showPath(path){
   });
   const epi = $('#pathEpi');
   if (n === N) {
-    const paras = (path.ending || [path.epilogue]).map(p => `<p>${p}</p>`).join('');
+    const ending = L(path,'ending') || path.ending || [L(path,'epilogue')];
+    const paras = ending.map(tx => `<p>${tx}</p>`).join('');
     epi.className = 'pfin';
-    epi.innerHTML = `<div class="lbl">Zum Schluss</div>${paras}`;
+    epi.innerHTML = `<div class="lbl">${t('closing')}</div>${paras}`;
     epi.classList.remove('hidden');
   } else {
     epi.className = '';
@@ -794,7 +821,7 @@ function renderPathMap(path){
   const groups = [];
   path.stations.forEach((st, i) => {
     const g = groups.find(x => Math.hypot(x.x - st.map.x, x.y - st.map.y) < 12);
-    if (g) g.si.push(i); else groups.push({ x: st.map.x, y: st.map.y, si: [i], label: st.place.split('·')[0].trim() });
+    if (g) g.si.push(i); else groups.push({ x: st.map.x, y: st.map.y, si: [i], label: I.locStation(st).place.split('·')[0].trim() });
   });
   const doneSt = path.stations.map(stationDone);
   const lines = [];
@@ -814,9 +841,10 @@ function renderPathMap(path){
   }).join('');
   const items = path.stations.map((st, i) => {
     const cls = doneSt[i] ? 'done' : (i === 0 || doneSt[i - 1] ? 'open' : '');
-    return `<li class="${cls}" data-si="${i}"><span class="n">${i + 1}</span>${st.place} · ${st.when}</li>`;
+    const stL = I.locStation(st);
+    return `<li class="${cls}" data-si="${i}"><span class="n">${i + 1}</span>${stL.place} · ${stL.when}</li>`;
   }).join('');
-  wrap.innerHTML = `<svg viewBox="0 0 200 220" class="pmap" role="img" aria-label="Karte der Stationen von Van Goghs Lebensweg">
+  wrap.innerHTML = `<svg viewBox="0 0 200 220" class="pmap" role="img" aria-label="${t('mapAria')}">
     <rect class="sea" x="0" y="0" width="200" height="220"/>
     <path class="land" d="M28,58 C38,32 72,22 98,28 C128,16 168,22 182,42 C190,58 176,74 154,82 C128,96 96,98 70,90 C46,96 26,80 28,58 Z"/>
     <path class="land" d="M18,108 C8,118 10,138 22,150 C36,162 62,160 72,148 C78,136 64,122 50,114 C36,106 26,104 18,108 Z"/>
@@ -837,20 +865,21 @@ function showPathWork(path, step){
   pathCtx = { path, step, pid: step.pid };
   storyCtx = null;
   const o = pathState(path); if (!o.seen.includes(step.pid)) { o.seen.push(step.pid); pathSave(path, o); }
-  $('#cNum').textContent = `${step.st.place} · Bild ${step.idx + 1} von ${steps.length}`;
-  $('#cTitle').textContent = p.title;
-  $('#cMeta').textContent = `${p.artist} · ${p.year} · ${step.st.place}, ${step.st.when}`;
-  $('#cText').innerHTML = w.text.map(tx => `<p>${tx}</p>`).join('');
+  const stL = I.locStation(step.st), wL = I.locPathWork(w);
+  $('#cNum').textContent = t('pictureOf', { place: stL.place, n: step.idx + 1, N: steps.length });
+  $('#cTitle').textContent = L(p,'title');
+  $('#cMeta').textContent = `${L(p,'artist')} · ${p.year} · ${stL.place}, ${stL.when}`;
+  $('#cText').innerHTML = wL.text.map(tx => `<p>${tx}</p>`).join('');
   const q = $('#cQuote');
-  if (w.quote) {
-    $('#cQuoteT').textContent = '«' + w.quote.text + '»';
-    $('#cQuoteC').textContent = w.quote.cite;
+  if (wL.quote) {
+    $('#cQuoteT').textContent = '«' + wL.quote.text + '»';
+    $('#cQuoteC').textContent = wL.quote.cite;
     q.classList.remove('hidden');
   } else q.classList.add('hidden');
   $('#cWork').className = 'cwork' + (done ? ' fin' : '');
   $('#cWork').innerHTML = `<div class="th" style="background-image:url(data/${step.pid}-${done ? 'orig.jpg' : 'thumb.jpg'})"></div>
-    <div>${done ? 'Schon gemalt' : 'Du malst'}: <b>${p.title}</b><br>${p.artist}, ${p.year}</div>`;
-  $('#cGo').textContent = done ? 'Bild ansehen' : (pct > 0 ? 'Weiter malen' : 'Bild malen');
+    ${youArePainting(done, L(p,'title'), L(p,'artist'), p.year)}`;
+  $('#cGo').textContent = paintBtn(done, pct);
   $('#chapter .card').scrollTop = 0;
   $('#chapter').classList.remove('hidden');
 }
@@ -858,20 +887,23 @@ function showPathDone(){
   const c = pathCtx, path = c.path, step = c.step, p = byId(step.pid);
   const steps = pathSteps(path), last = step.idx === steps.length - 1;
   if (last) { showPathFin(path); return; }
-  $('#dNum').textContent = `Bild ${step.idx + 1} geschafft! 🎉`;
-  $('#dTitle').textContent = p.title;
-  $('#dMeta').textContent = `${p.artist} · ${p.year}`;
-  $('#dFact').textContent = step.w.fact;
-  $('#dMuseum').textContent = '🏛 Heute: ' + p.museum;
+  const wL = I.locPathWork(step.w);
+  $('#dNum').textContent = t('pictureDone', { n: step.idx + 1 });
+  $('#dTitle').textContent = L(p,'title');
+  $('#dMeta').textContent = `${L(p,'artist')} · ${p.year}`;
+  $('#dFact').textContent = wL.fact;
+  $('#dMuseum').textContent = t('today', { m: L(p,'museum') });
   $('#dEpiWrap').classList.add('hidden');
-  $('#dNext').textContent = `Weiter: ${byId(steps[step.idx + 1].pid).title}`;
+  $('#dNext').textContent = t('nextPicture', { title: L(byId(steps[step.idx + 1].pid),'title') });
   $('#chDone .card').scrollTop = 0;
   $('#chDone').classList.remove('hidden');
 }
 function showPathFin(path){
   const N = pathSteps(path).length;
-  $('#pfCount').textContent = `Du hast alle ${N} Bilder gemalt.`;
-  $('#pfBody').innerHTML = (path.ending || [path.epilogue]).map(p => `<p>${p}</p>`).join('');
+  $('#pfTitle').textContent = L(path,'title');
+  $('#pfCount').textContent = t('allDone', { N });
+  const ending = L(path,'ending') || path.ending || [L(path,'epilogue')];
+  $('#pfBody').innerHTML = ending.map(tx => `<p>${tx}</p>`).join('');
   hideSheets();
   $('#pathFin .card').scrollTop = 0;
   $('#pathFin').classList.remove('hidden');
@@ -902,5 +934,25 @@ if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.
     if (S) swReload = true; else location.reload();
   });
 }
+function refreshLang(){
+  galGrid = null;
+  I.applyStatic();
+  const gal = document.getElementById('gallery');
+  const onGal = gal && gal.classList.contains('active');
+  const onPath = document.getElementById('path')?.classList.contains('active');
+  const onCh = document.getElementById('chapters')?.classList.contains('active');
+  if (onPath && pathCtx && pathCtx.path) showPath(pathCtx.path);
+  else if (onPath && window.PATHS && window.PATHS[0]) showPath(window.PATHS[0]);
+  else if (onCh && storyCtx && storyCtx.story) showChapters(storyCtx.story);
+  renderStoryEntry();
+  renderGallery();
+}
+window.__i18nOnChange = refreshLang;
+const langSwitch = $('#langSwitch');
+if (langSwitch) langSwitch.addEventListener('click', e => {
+  const b = e.target.closest('button[data-lang]'); if (!b) return;
+  I.setLang(b.getAttribute('data-lang'));
+});
+I.applyStatic();
 renderStoryEntry(); renderGallery();
 })();
