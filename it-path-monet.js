@@ -1,4 +1,4 @@
-// v7.7 Italian path step texts: monet life path.
+// v7.8 Italian path step texts: monet life path.
 // Faithful translation of the existing DE/EN. No new facts.
 // Letter quotes are translations of the German self-translations
 // (except letter 569 / blvdclichy: from Vincent’s own English).
