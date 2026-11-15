@@ -7,14 +7,14 @@
     de: {
       appTitle: 'Malen nach Zahlen',
       docTitle: 'Masilano · Malen nach Zahlen',
-      appSubtitle: '1469 Meisterwerke, Feld für Feld – und die Lebenswege von Van Gogh, Monet, Hokusai, Klimt, Anker, Hodler, Cézanne, Hiroshige, Renoir, Pissarro, Turner und Rembrandt.',
+      appSubtitle: '1529 Meisterwerke, Feld für Feld – und die Lebenswege von Van Gogh, Monet, Hokusai, Klimt, Anker, Hodler, Cézanne, Hiroshige, Renoir, Pissarro, Turner und Rembrandt.',
       sortAria: 'Reihenfolge der Bilder',
       sortGallery: 'Standard',
       sortEasy: 'Leicht zuerst',
       searchPh: 'Bild oder Maler suchen',
       searchClear: 'Suche löschen',
       sourcesBtn: 'Bildquellen & Hinweise',
-      version: 'Testversion 9.6',
+      version: 'Testversion 9.7',
       back: 'Zurück',
       backGallery: 'Zurück zur Galerie',
       backWays: 'Zurück zu den Wegen',
@@ -210,14 +210,14 @@
     en: {
       appTitle: 'Color by Number',
       docTitle: 'Masilano · Color by Number',
-      appSubtitle: '1469 masterpieces, field by field – and the life journeys of Van Gogh, Monet, Hokusai, Klimt, Anker, Hodler, Cézanne, Hiroshige, Renoir, Pissarro, Turner and Rembrandt.',
+      appSubtitle: '1529 masterpieces, field by field – and the life journeys of Van Gogh, Monet, Hokusai, Klimt, Anker, Hodler, Cézanne, Hiroshige, Renoir, Pissarro, Turner and Rembrandt.',
       sortAria: 'Picture order',
       sortGallery: 'Default',
       sortEasy: 'Easy first',
       searchPh: 'Search for a picture or painter',
       searchClear: 'Clear search',
       sourcesBtn: 'Picture sources & notes',
-      version: 'Test version 9.6',
+      version: 'Test version 9.7',
       back: 'Back',
       backGallery: 'Back to the gallery',
       backWays: 'Back to the journeys',
@@ -413,14 +413,14 @@
     es: {
       appTitle: "Pintar por números",
       docTitle: "Masilano · Pintar por números",
-      appSubtitle: "1469 obras maestras, campo a campo – y los caminos de vida de Van Gogh, Monet, Hokusai, Klimt, Anker, Hodler, Cézanne, Hiroshige, Renoir, Pissarro, Turner y Rembrandt.",
+      appSubtitle: "1529 obras maestras, campo a campo – y los caminos de vida de Van Gogh, Monet, Hokusai, Klimt, Anker, Hodler, Cézanne, Hiroshige, Renoir, Pissarro, Turner y Rembrandt.",
       sortAria: "Orden de las imágenes",
       sortGallery: "Estándar",
       sortEasy: "Fáciles primero",
       searchPh: "Buscar un cuadro o un pintor",
       searchClear: "Borrar búsqueda",
       sourcesBtn: "Fuentes e indicaciones",
-      version: "Versión de prueba 9.6",
+      version: "Versión de prueba 9.7",
       back: "Atrás",
       backGallery: "Volver a la galería",
       backWays: "Volver a los caminos",
@@ -616,14 +616,14 @@
     fr: {
       appTitle: "Peinture par numéros",
       docTitle: "Masilano · Peinture par numéros",
-      appSubtitle: "1469 chefs-d’œuvre, case par case – et les parcours de vie de Van Gogh, Monet, Hokusai, Klimt, Anker, Hodler, Cézanne, Hiroshige, Renoir, Pissarro, Turner et Rembrandt.",
+      appSubtitle: "1529 chefs-d’œuvre, case par case – et les parcours de vie de Van Gogh, Monet, Hokusai, Klimt, Anker, Hodler, Cézanne, Hiroshige, Renoir, Pissarro, Turner et Rembrandt.",
       sortAria: "Ordre des images",
       sortGallery: "Standard",
       sortEasy: "Faciles d’abord",
       searchPh: "Chercher un tableau ou un peintre",
       searchClear: "Effacer la recherche",
       sourcesBtn: "Sources et notes",
-      version: "Version d’essai 9.6",
+      version: "Version d’essai 9.7",
       back: "Retour",
       backGallery: "Retour à la galerie",
       backWays: "Retour aux parcours",
@@ -819,14 +819,14 @@
     it: {
       appTitle: "Dipingere con i numeri",
       docTitle: "Masilano · Dipingere con i numeri",
-      appSubtitle: "1469 capolavori, campo dopo campo – e i percorsi di vita di Van Gogh, Monet, Hokusai, Klimt, Anker, Hodler, Cézanne, Hiroshige, Renoir, Pissarro, Turner e Rembrandt.",
+      appSubtitle: "1529 capolavori, campo dopo campo – e i percorsi di vita di Van Gogh, Monet, Hokusai, Klimt, Anker, Hodler, Cézanne, Hiroshige, Renoir, Pissarro, Turner e Rembrandt.",
       sortAria: "Ordine delle immagini",
       sortGallery: "Standard",
       sortEasy: "Prima i facili",
       searchPh: "Cerca un quadro o un pittore",
       searchClear: "Cancella la ricerca",
       sourcesBtn: "Fonti e note",
-      version: "Versione di prova 9.6",
+      version: "Versione di prova 9.7",
       back: "Indietro",
       backGallery: "Torna alla galleria",
       backWays: "Torna ai percorsi",
@@ -1080,9 +1080,9 @@
   let lang = detect();
 
   const PATHTEXT_FILES = {
-    es: ['es-content.js', 'es-path-vangogh.js', 'es-path-monet.js', 'es-path-hokusai.js', 'es-path-klimt.js', 'es-path-klimt-p2.js', 'es-path-anker.js', 'es-path-anker-p2.js', 'es-path-hodler.js', 'es-path-hodler-p2.js', 'es-path-cezanne.js', 'es-path-cezanne-p2.js', 'es-path-hiroshige.js', 'es-path-hiroshige-p2.js', 'es-path-renoir.js', 'es-path-renoir-p2.js', 'es-path-pissarro.js', 'es-path-pissarro-p2.js', 'es-path-turner.js', 'es-path-turner-p2.js', 'es-path-rembrandt.js'],
-    fr: ['fr-content.js', 'fr-path-vangogh.js', 'fr-path-monet.js', 'fr-path-hokusai.js', 'fr-path-klimt.js', 'fr-path-klimt-p2.js', 'fr-path-anker.js', 'fr-path-anker-p2.js', 'fr-path-hodler.js', 'fr-path-hodler-p2.js', 'fr-path-cezanne.js', 'fr-path-cezanne-p2.js', 'fr-path-hiroshige.js', 'fr-path-hiroshige-p2.js', 'fr-path-renoir.js', 'fr-path-renoir-p2.js', 'fr-path-pissarro.js', 'fr-path-pissarro-p2.js', 'fr-path-turner.js', 'fr-path-turner-p2.js', 'fr-path-rembrandt.js'],
-    it: ['it-content.js', 'it-path-vangogh.js', 'it-path-monet.js', 'it-path-hokusai.js', 'it-path-klimt.js', 'it-path-klimt-p2.js', 'it-path-anker.js', 'it-path-anker-p2.js', 'it-path-hodler.js', 'it-path-hodler-p2.js', 'it-path-cezanne.js', 'it-path-cezanne-p2.js', 'it-path-hiroshige.js', 'it-path-hiroshige-p2.js', 'it-path-renoir.js', 'it-path-renoir-p2.js', 'it-path-pissarro.js', 'it-path-pissarro-p2.js', 'it-path-turner.js', 'it-path-turner-p2.js', 'it-path-rembrandt.js']
+    es: ['es-content.js', 'es-path-vangogh.js', 'es-path-monet.js', 'es-path-hokusai.js', 'es-path-klimt.js', 'es-path-klimt-p2.js', 'es-path-anker.js', 'es-path-anker-p2.js', 'es-path-hodler.js', 'es-path-hodler-p2.js', 'es-path-cezanne.js', 'es-path-cezanne-p2.js', 'es-path-hiroshige.js', 'es-path-hiroshige-p2.js', 'es-path-renoir.js', 'es-path-renoir-p2.js', 'es-path-pissarro.js', 'es-path-pissarro-p2.js', 'es-path-turner.js', 'es-path-turner-p2.js', 'es-path-rembrandt.js', 'es-path-rembrandt-p2.js'],
+    fr: ['fr-content.js', 'fr-path-vangogh.js', 'fr-path-monet.js', 'fr-path-hokusai.js', 'fr-path-klimt.js', 'fr-path-klimt-p2.js', 'fr-path-anker.js', 'fr-path-anker-p2.js', 'fr-path-hodler.js', 'fr-path-hodler-p2.js', 'fr-path-cezanne.js', 'fr-path-cezanne-p2.js', 'fr-path-hiroshige.js', 'fr-path-hiroshige-p2.js', 'fr-path-renoir.js', 'fr-path-renoir-p2.js', 'fr-path-pissarro.js', 'fr-path-pissarro-p2.js', 'fr-path-turner.js', 'fr-path-turner-p2.js', 'fr-path-rembrandt.js', 'fr-path-rembrandt-p2.js'],
+    it: ['it-content.js', 'it-path-vangogh.js', 'it-path-monet.js', 'it-path-hokusai.js', 'it-path-klimt.js', 'it-path-klimt-p2.js', 'it-path-anker.js', 'it-path-anker-p2.js', 'it-path-hodler.js', 'it-path-hodler-p2.js', 'it-path-cezanne.js', 'it-path-cezanne-p2.js', 'it-path-hiroshige.js', 'it-path-hiroshige-p2.js', 'it-path-renoir.js', 'it-path-renoir-p2.js', 'it-path-pissarro.js', 'it-path-pissarro-p2.js', 'it-path-turner.js', 'it-path-turner-p2.js', 'it-path-rembrandt.js', 'it-path-rembrandt-p2.js']
   };
   const _scriptProm = {};
   const _pathTextProm = {};
