@@ -1,7 +1,7 @@
 // Van Goghs Lebensweg, Teil 1–4 (1880–1890). Texts: de-CH, no sharp s.
 // Letter quotes: self-translated from the original Dutch/French of the 2009 edition
 // (official letter numbers and dates). Originals are public domain; modern translations were not copied.
-window.PATH_WORKS = [
+window.PATH_WORKS = (window.PATH_WORKS || []).concat([
  { id:'minersnow', title:'Bergleute im Schnee bei Tagesanbruch', artist:'Vincent van Gogh', year:'1880',
    museum:'Kröller-Müller Museum, Otterlo',
    source:'Wikimedia Commons: «Miners-in-the-snow-at-dawn-1880-Cuesmes.jpg», gemeinfrei (Public Domain)' },
@@ -599,9 +599,9 @@ window.PATH_WORKS = [
  { id:'farmsauvers', title:'Höfe bei Auvers', artist:'Vincent van Gogh', year:'1890',
    museum:'Tate, London',
    source:'Wikimedia Commons: «Vincent van Gogh - Farms near Auvers (1890).jpg», gemeinfrei (Public Domain)' },
-];
+]);
 
-window.PATHS = [
+window.PATHS = (window.PATHS || []).concat([
 {
   id: 'vangogh',
   name: 'Vincent van Gogh',
@@ -610,6 +610,7 @@ window.PATHS = [
   part: 'Teil 1–4 · 1880–1890',
   subtitle: 'Von den Bergleuten bis nach Auvers',
   cover: 'almond',
+  musicPack: 'vangogh',
   intro: 'Reise mit Vincent van Gogh durch die Jahre, in denen er Maler wird: vom armen Zeichner im belgischen Kohlerevier über die Kartoffelesser, die Akademie in Antwerpen und die hellen Jahre bei Theo in Paris bis in den Süden – nach Arles, in die Anstalt von Saint-Rémy und ins letzte Atelier in Auvers-sur-Oise. Kurze Stationen, Bilder zum Ausmalen und Stimmen aus seinen Briefen an Theo, an die Schwester Willemien und an Freunde. Der Lebensweg umfasst 1880 bis 1890 – 207 Werke, in der Testversion offen zum Spielen.',
   ending: [
     'Am 27. Juli 1890 wird Vincent in Auvers schwer verletzt. Er stirbt zwei Tage später, am 29. Juli, im Gasthaus Ravoux. Theo ist bei ihm.',
@@ -2244,4 +2245,4 @@ window.PATHS = [
    }
   ]
 }
-];
+]);

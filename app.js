@@ -993,6 +993,9 @@ function closeTopSheet(){
 function showScreen(id){
   const tabId = id === 'gallery' ? 'galerie' : id;
   const isTab = TABS.includes(tabId);
+  const wasPath = $('#path') && $('#path').classList.contains('active');
+  if (window.MASILANO_MUSIC) window.MASILANO_MUSIC.stopSpeak();
+  if (wasPath && id !== 'path' && isTab && window.MASILANO_MUSIC) window.MASILANO_MUSIC.leavePath();
   if (isTab) {
     currentTab = tabId;
     try { localStorage.setItem(TAB_KEY, tabId); } catch (e) {}
@@ -1038,7 +1041,7 @@ function goGallery(){
   if (storyCtx && storyCtx.story) { backOr({ kind: 'story', id: storyCtx.story.id }); return; }
   backOr({ kind: 'tab', tab: currentTab || 'heute' });
 }
-function hideSheets(){ ['#story', '#chapter', '#chDone', '#pathFin', '#installHow', '#settings', '#albumView', '#sources', '#filterSheet', '#certView'].forEach(q => $(q) && $(q).classList.add('hidden')); }
+function hideSheets(){ if (window.MASILANO_MUSIC) window.MASILANO_MUSIC.stopSpeak(); ['#story', '#chapter', '#chDone', '#pathFin', '#installHow', '#settings', '#albumView', '#sources', '#filterSheet', '#certView'].forEach(q => $(q) && $(q).classList.add('hidden')); }
 $('#backBtn').onclick = goGallery;
 let galT = 0;
 function onViewport(){ if (S) resize(); else { clearTimeout(galT); galT = setTimeout(() => { placeFilterPanel(); if (currentTab === 'galerie') { galGrid = null; renderGallery(); } }, 120); } }
@@ -1233,9 +1236,27 @@ function showPath(path, opts){
   path.stations.forEach((st, si) => {
     const box = document.createElement('section');
     box.className = 'pstat'; box.id = 'pstat-' + st.id;
+    box.setAttribute('data-station', st.id);
     const stL = I.locStation(st);
     const intro = stL.intro.map(tx => `<p>${tx}</p>`).join('');
     box.innerHTML = `<h2>${si + 1}. ${stL.place}</h2><div class="when">${stL.when}</div><div class="intro">${intro}</div><div class="works"></div>`;
+    const M = window.MASILANO_MUSIC;
+    if (M && M.canSpeak()) {
+      const tools = document.createElement('div');
+      tools.className = 'xpstat';
+      const nb = document.createElement('button');
+      nb.type = 'button';
+      nb.className = 'btn ghost narrate-btn';
+      nb.setAttribute('data-speak', 'station:' + st.id);
+      nb.setAttribute('aria-label', t('narrateStationAria'));
+      nb.textContent = t('narrate');
+      nb.addEventListener('click', () => M.speakStation(path, st));
+      tools.appendChild(nb);
+      const whenEl = box.querySelector('.when');
+      const introEl = box.querySelector('.intro');
+      if (whenEl) whenEl.after(tools);
+      else if (introEl) introEl.before(tools);
+    }
     const works = box.querySelector('.works');
     let nextMarked = false;
     st.works.forEach((w, wi) => {
@@ -1283,6 +1304,11 @@ function showPath(path, opts){
     epi.classList.add('hidden');
   }
   renderStoryEntry();
+  if (window.MASILANO_MUSIC) {
+    const sts = path.stations || [];
+    const next = sts.find(st => !stationDone(st)) || sts[sts.length - 1] || sts[0];
+    window.MASILANO_MUSIC.attachPath(path, next && next.id);
+  }
 }
 function renderPathMap(path){
   const wrap = $('#pathMap');
@@ -1383,6 +1409,10 @@ function showPathWork(path, step){
   $('#cGo').textContent = paintBtn(done, pct);
   $('#chapter .card').scrollTop = 0;
   revealSheet('#chapter');
+  if (window.MASILANO_MUSIC) {
+    window.MASILANO_MUSIC.setStation(path, step.st && step.st.id);
+    window.MASILANO_MUSIC.refresh();
+  }
 }
 function showPathDone(){
   celebrateIfNeeded();
@@ -1972,6 +2002,7 @@ function openSettings(){
 }
 function closeSettings(){ closeTopSheet(); }
 function bindDelight(){
+  if (window.MASILANO_MUSIC) window.MASILANO_MUSIC.bind();
   if ($('#setBtn')) $('#setBtn').onclick = openSettings;
   if ($('#setClose')) $('#setClose').onclick = closeSettings;
   if ($('#calmToggle')) $('#calmToggle').onclick = () => {
@@ -2602,6 +2633,7 @@ function refreshLang(){
   }
   galGrid = null;
   I.applyStatic();
+  if (window.MASILANO_MUSIC) window.MASILANO_MUSIC.refresh();
   const onPath = document.getElementById('path')?.classList.contains('active');
   const onCh = document.getElementById('chapters')?.classList.contains('active');
   if (onPath && pathCtx && pathCtx.path) showPath(pathCtx.path, { noRoute: true });

@@ -52,7 +52,7 @@
     <footer class="gfoot">
       <button id="srcBtn" class="linkbtn" data-i18n-html="sourcesBtn">Bildquellen &amp; Hinweise</button>
       <a class="linkbtn" href="privacy.html" data-i18n="privacyLink">Datenschutz</a>
-      <div class="ver" data-i18n="version">Testversion 10.1</div>
+      <div class="ver" data-i18n="version">Testversion 10.2</div>
     </footer>
   </div>
 </section>
@@ -148,6 +148,25 @@
     <div class="ttl"><div class="chT" data-i18n="pathMode">Lebensweg</div></div>
     <div class="iconspace"></div>
   </div>
+  <div id="xpBar" class="xpbar hidden" hidden>
+    <div class="xpcontrols">
+      <button type="button" id="musicToggle" class="switch" role="switch" aria-checked="false" data-i18n-aria="musicToggleAria" aria-label="Hintergrundmusik ein- oder ausschalten">
+        <span class="knob" aria-hidden="true"></span>
+        <span class="swlabel" data-i18n="musicOff">Musik aus</span>
+      </button>
+      <div class="xpmusic">
+        <div class="xplabel" data-i18n="musicNoteLabel">Musik dieser Station</div>
+        <div id="musicKind" class="xpkind"></div>
+        <div id="musicTitle" class="xptitle"></div>
+      </div>
+      <label class="xpvol">
+        <span data-i18n="musicVol">Lautstärke</span>
+        <input type="range" id="musicVol" min="0" max="100" value="40" data-i18n-aria="musicVolAria" aria-label="Lautstärke der Hintergrundmusik">
+      </label>
+    </div>
+    <p id="musicNote" class="xpnote"></p>
+    <p id="musicCredit" class="xpcredit"></p>
+  </div>
   <div class="chscroll">
     <header id="pathHead" class="chhead"></header>
     <div id="pathMap" class="pmapwrap"></div>
@@ -205,6 +224,19 @@
         <span class="knob" aria-hidden="true"></span>
       </button>
     </div>
+    <div class="setrow">
+      <div class="settx">
+        <div class="sett" data-i18n="musicSetTitle">Hintergrundmusik</div>
+        <p class="sets" data-i18n="musicSetBody">Leise Musik zum Lebensweg, wenn du sie einschaltest. Sie startet erst nach deiner Wahl und bleibt auf diesem Gerät gespeichert.</p>
+      </div>
+      <button type="button" id="setMusicToggle" class="switch" role="switch" aria-checked="false" data-i18n-aria="musicToggleAria" aria-label="Hintergrundmusik ein- oder ausschalten">
+        <span class="knob" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="setrow setcol">
+      <label class="sett" for="setMusicVol" data-i18n="musicVol">Lautstärke</label>
+      <input type="range" id="setMusicVol" min="0" max="100" value="40" class="setrange" data-i18n-aria="musicVolAria" aria-label="Lautstärke der Hintergrundmusik">
+    </div>
     <div class="setrow setcol">
       <div class="settx">
         <label class="sett" for="playerName" data-i18n="playerNameTitle">Dein Name auf der Urkunde</label>
@@ -225,6 +257,9 @@
     <p id="cLangFallback" class="langfallback hidden" hidden></p>
     <blockquote id="cQuote" class="cquote hidden"><p id="cQuoteT"></p><cite id="cQuoteC"></cite><p id="cQuoteTr" class="quotetr hidden" hidden></p></blockquote>
     <div id="cWork" class="cwork"></div>
+    <div class="btns narrate-row hidden" hidden id="cNarrateRow">
+      <button type="button" id="cNarrate" class="btn ghost narrate-btn" data-speak="chapter" data-i18n="narrate" data-i18n-aria="narrateAria" aria-pressed="false">Vorlesen</button>
+    </div>
     <div class="btns">
       <button id="cBack" class="btn ghost" data-i18n="back">Zurück</button>
       <button id="cGo" class="btn" data-i18n="paint">Bild malen</button>
@@ -351,6 +386,7 @@
 <script src="story.js"></script>
 <script src="path-index.js"></script>
 <script data-src="path-vangogh.js"></script>
+<script data-src="music-vangogh.js"></script>
 <script data-src="path-monet.js"></script>
 <script data-src="path-monet-p2.js"></script>
 <script data-src="path-monet-p3.js"></script>
@@ -412,6 +448,7 @@
 <script data-src="it-content.js"></script>
 <script src="i18n.js"></script>
 <script src="levels.js"></script>
+<script src="music.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
