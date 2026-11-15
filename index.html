@@ -35,12 +35,14 @@
   <div class="tabscroll">
     <h1 data-i18n="todayTitle">Heute</h1>
     <p class="lead" data-i18n="todayLead">Ein Bild, in deinem Tempo.</p>
-    <div id="continueWrap"></div>
     <div id="dailyWrap"></div>
+    <div id="continueWrap"></div>
+    <div id="pathNextWrap"></div>
+    <div id="factWrap"></div>
     <div id="installHint" class="installhint hidden" hidden></div>
     <footer class="gfoot">
       <button id="srcBtn" class="linkbtn" data-i18n-html="sourcesBtn">Bildquellen &amp; Hinweise</button>
-      <div class="ver" data-i18n="version">Testversion 7.3</div>
+      <div class="ver" data-i18n="version">Testversion 7.4</div>
     </footer>
   </div>
 </section>
@@ -57,21 +59,31 @@
   <header class="ghead">
     <h1 data-i18n="galTitle">Galerie</h1>
     <p class="lead sub" data-i18n="appSubtitle">567 Meisterwerke, Feld für Feld – und die Lebenswege von Van Gogh, Monet und Hokusai.</p>
-    <div id="sortBar" class="sortbar" role="group" data-i18n-aria="sortAria" aria-label="Reihenfolge der Bilder">
-      <button type="button" data-sort="gallery" data-i18n="sortGallery">Standard</button>
-      <button type="button" data-sort="easy" data-i18n="sortEasy">Leicht zuerst</button>
-      <button type="button" id="galOpen" class="filtog" aria-pressed="false" data-i18n="filterOpen">Nur offene</button>
-    </div>
-    <div class="filterrow">
-      <label class="fil">
-        <span class="fil-l" data-i18n="filterPainter">Maler</span>
-        <select id="galPainter" data-i18n-aria="filterPainterAria" aria-label="Maler"></select>
-      </label>
-      <div id="levelBar" class="sortbar levels" role="group" data-i18n-aria="filterLevelAria" aria-label="Schwierigkeit">
-        <button type="button" data-level="" data-i18n="filterAll">Alle</button>
-        <button type="button" data-level="leicht" data-i18n="easy">Leicht</button>
-        <button type="button" data-level="mittel" data-i18n="medium">Mittel</button>
-        <button type="button" data-level="schwer" data-i18n="hard">Schwer</button>
+    <div class="gal-toolbar">
+      <button type="button" id="filterBtn" class="filterbtn" hidden data-i18n-aria="filterBtnAria" aria-label="Filter" aria-haspopup="dialog">
+        <span data-i18n="filterBtn">Filter</span>
+        <span id="filterBadge" class="fbadge hidden">0</span>
+      </button>
+      <div id="filterInline">
+        <div id="filterPanel">
+          <div id="sortBar" class="sortbar" role="group" data-i18n-aria="sortAria" aria-label="Reihenfolge der Bilder">
+            <button type="button" data-sort="gallery" data-i18n="sortGallery">Standard</button>
+            <button type="button" data-sort="easy" data-i18n="sortEasy">Leicht zuerst</button>
+            <button type="button" id="galOpen" class="filtog" aria-pressed="false" data-i18n="filterOpen">Nur offene</button>
+          </div>
+          <div class="filterrow">
+            <label class="fil">
+              <span class="fil-l" data-i18n="filterPainter">Maler</span>
+              <select id="galPainter" data-i18n-aria="filterPainterAria" aria-label="Maler"></select>
+            </label>
+            <div id="levelBar" class="sortbar levels" role="group" data-i18n-aria="filterLevelAria" aria-label="Schwierigkeit">
+              <button type="button" data-level="" data-i18n="filterAll">Alle</button>
+              <button type="button" data-level="leicht" data-i18n="easy">Leicht</button>
+              <button type="button" data-level="mittel" data-i18n="medium">Mittel</button>
+              <button type="button" data-level="schwer" data-i18n="hard">Schwer</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="search" role="search">
@@ -146,6 +158,15 @@
     <div id="chEpi" class="chepi hidden"></div>
   </div>
 </section>
+
+<div id="filterSheet" class="sheet hidden" role="dialog" aria-modal="true" aria-labelledby="filterTitle">
+  <div class="card">
+    <h2 id="filterTitle" data-i18n="filterTitle">Filter</h2>
+    <div id="filterHost"></div>
+    <div class="btns"><button type="button" class="btn" id="filterDone" data-i18n="close">Schliessen</button></div>
+  </div>
+</div>
+
 <div id="albumView" class="sheet aview hidden" role="dialog" aria-modal="true" aria-labelledby="avTitle">
   <div class="card">
     <div id="avImg" class="avimg"></div>

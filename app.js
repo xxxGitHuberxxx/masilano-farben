@@ -35,6 +35,7 @@ const STREAK_KEY = 'masilano.streak.v1';
 const MILES_KEY = 'masilano.miles.v1';
 const TAB_KEY = 'masilano.tab.v1';
 const FILTER_KEY = 'masilano.galFilter.v1';
+const ACTIVE_PATH_KEY = 'masilano.activePath.v1';
 let todayOverride = null;
 function calmOn(){ try { return localStorage.getItem(CALM_KEY) === 'on'; } catch (e) { return false; } }
 function applyCalm(){
@@ -196,6 +197,50 @@ function renderFilters(){
     op.classList.toggle('on', !!galFilter.open);
     op.setAttribute('aria-pressed', galFilter.open ? 'true' : 'false');
   }
+  updateFilterBadge();
+}
+function activeFilterCount(){
+  let n = 0;
+  if (galSort === 'easy') n++;
+  if (galFilter.artist) n++;
+  if (galFilter.level) n++;
+  if (galFilter.open) n++;
+  return n;
+}
+function updateFilterBadge(){
+  const badge = $('#filterBadge');
+  const n = activeFilterCount();
+  if (badge) {
+    badge.textContent = String(n);
+    badge.classList.toggle('hidden', n === 0);
+    if (n) badge.setAttribute('aria-label', t('filterBadgeAria', { n }));
+    else badge.removeAttribute('aria-label');
+  }
+  const btn = $('#filterBtn');
+  const sh = $('#filterSheet');
+  if (btn) btn.setAttribute('aria-expanded', !!(sh && !sh.classList.contains('hidden')) ? 'true' : 'false');
+}
+function filtersCompact(){
+  return window.matchMedia && window.matchMedia('(max-width: 767px)').matches;
+}
+function placeFilterPanel(){
+  const panel = $('#filterPanel'); if (!panel) return;
+  const compact = filtersCompact();
+  const dest = compact ? $('#filterHost') : $('#filterInline');
+  if (dest && panel.parentElement !== dest) dest.appendChild(panel);
+  const btn = $('#filterBtn');
+  if (btn) btn.hidden = !compact;
+  const sh = $('#filterSheet');
+  if (!compact && sh && !sh.classList.contains('hidden')) {
+    sh.classList.add('hidden');
+    btn && btn.setAttribute('aria-expanded', 'false');
+  }
+}
+function openFilterSheet(){
+  if (!filtersCompact()) return;
+  placeFilterPanel();
+  revealSheet('#filterSheet');
+  updateFilterBadge();
 }
 function bindFilters(){
   const sel = $('#galPainter');
@@ -232,10 +277,21 @@ function bindFilters(){
       renderGallery();
     });
   }
+  const fbtn = $('#filterBtn');
+  if (fbtn && !fbtn.dataset.bound) {
+    fbtn.dataset.bound = '1';
+    fbtn.addEventListener('click', () => openFilterSheet());
+  }
+  const fdone = $('#filterDone');
+  if (fdone && !fdone.dataset.bound) {
+    fdone.dataset.bound = '1';
+    fdone.addEventListener('click', () => closeTopSheet());
+  }
+  placeFilterPanel();
 }
 function renderSortBar(){
   const bar = $('#sortBar'); if (!bar) return;
-  [...bar.querySelectorAll('button')].forEach(b => {
+  [...bar.querySelectorAll('button[data-sort]')].forEach(b => {
     const on = b.dataset.sort === galSort;
     b.classList.toggle('on', on);
     b.setAttribute('aria-pressed', on ? 'true' : 'false');
@@ -274,25 +330,35 @@ let galPage = +(sessionStorage.getItem('masilano.galPage') || 0);
 // Geometry is measured only after the header (sort + story banners) is in the layout.
 // It is reused across sort toggles so the grid cannot jump when only the order changes.
 let galGrid = null, galFitting = false, galItems = [], galPer = 0;
+function galProgress(s){
+  const started = !!(s && s.filled && s.filled.length);
+  const done = !!(s && s.total && s.filled.length >= s.total);
+  const pct = s && s.total ? Math.floor(100 * s.filled.length / s.total) : 0;
+  return { started, done, pct };
+}
+function galImHtml(p, s, extra){
+  const { started, done, pct } = galProgress(s);
+  const cls = done ? '' : (started ? 'doing' : 'todo');
+  const file = done ? 'orig.jpg' : 'thumb.jpg';
+  const badge = done
+    ? `<span class="badge fin">✓ ${t('done')}</span>`
+    : (started ? `<span class="badge prog">${Math.max(1, pct)} %</span>` : '');
+  const bar = started && !done ? `<div class="imbar"><div style="width:${Math.max(2, pct)}%"></div></div>` : '';
+  return `<div class="im ${cls}" style="background-image:url(data/${p.id}-${file})">${extra || ''}${badge}${bar}</div>`;
+}
 function paintGalCard(item){
   const p = item.p;
   const s = loadSave(p.id);
-  const pct = s ? Math.floor(100 * (s.filled.length / s.total)) : 0;
-  const done = s && s.filled.length >= s.total;
   const b = document.createElement('button');
   if (item.kind === 'story') {
     b.className = 'pc storyc';
-    const doneTag = done ? '<span class="badge fin">✓ ' + t('done') + '</span>' : '';
-    b.innerHTML = `<div class="im ${done ? '' : 'todo'}" style="background-image:url(data/${p.id}-${done ? 'orig.jpg' : 'thumb.jpg'})">
-      <div class="tags"><span class="lv story">${t('storyTag')}</span></div>${doneTag}</div>
+    b.innerHTML = `${galImHtml(p, s, `<div class="tags"><span class="lv story">${t('storyTag')}</span></div>`)}
       <div class="tx"><div class="t">${L(p,'title')}</div><div class="a">${L(p,'artist')}, ${p.year}</div>
       <div class="hint">${t('inStory', { name: item.st.name })}</div></div>`;
     b.onclick = () => openStoryHit(item.st, p);
   } else if (item.kind === 'path') {
     b.className = 'pc storyc';
-    const doneTag = done ? '<span class="badge fin">✓ ' + t('done') + '</span>' : '';
-    b.innerHTML = `<div class="im ${done ? '' : 'todo'}" style="background-image:url(data/${p.id}-${done ? 'orig.jpg' : 'thumb.jpg'})">
-      <div class="tags"><span class="lv path">${t('pathTag')}</span></div>${doneTag}</div>
+    b.innerHTML = `${galImHtml(p, s, `<div class="tags"><span class="lv path">${t('pathTag')}</span></div>`)}
       <div class="tx"><div class="t">${L(p,'title')}</div><div class="a">${L(p,'artist')}, ${p.year}</div>
       <div class="hint">${t('inPath', { name: item.path.name })}</div></div>`;
     b.onclick = () => openPathHit(item.path, p);
@@ -300,10 +366,11 @@ function paintGalCard(item){
     const lv = levelOf(p);
     const tags = `<div class="tags"><span class="lv ${lv}">${levelLabel(lv)}</span>${p.fresh ? '<span class="lv neu">' + t('neu') + '</span>' : ''}</div>`;
     b.className = 'pc';
-    b.innerHTML = `<div class="im ${done ? '' : 'todo'}" style="background-image:url(data/${p.id}-${done ? 'orig.jpg' : 'thumb.jpg'})">
-      ${tags}${done ? '<span class="badge fin">✓ ' + t('done') + '</span>' : (s && s.filled.length ? `<span class="badge">${Math.max(1, pct)} %</span>` : '')}</div>
+    const { started, done, pct } = galProgress(s);
+    const txBar = started || done ? `<div class="bar"><div style="width:${done ? 100 : pct}%"></div></div>` : '';
+    b.innerHTML = `${galImHtml(p, s, tags)}
       <div class="tx"><div class="t">${L(p,'title')}</div><div class="a">${L(p,'artist')}, ${p.year}</div>
-      <div class="bar"><div style="width:${done ? 100 : pct}%"></div></div></div>`;
+      ${txBar}</div>`;
     b.onclick = () => openPainting(p);
   }
   return b;
@@ -865,9 +932,9 @@ function showScreen(id){
     document.querySelectorAll('.tab-screen').forEach(s => s.classList.toggle('active', s.id === elId));
     document.querySelectorAll('.screen.flow').forEach(s => s.classList.remove('active'));
     syncTabBar();
-    if (tabId === 'heute') { renderContinue(); renderDaily(); maybeShowInstallHint(); }
+    if (tabId === 'heute') renderHeute();
     if (tabId === 'wege') renderStoryEntry();
-    if (tabId === 'galerie') { galGrid = null; requestAnimationFrame(() => renderGallery()); }
+    if (tabId === 'galerie') { placeFilterPanel(); galGrid = null; requestAnimationFrame(() => renderGallery()); }
     if (tabId === 'album') renderAlbum();
   } else {
     document.body.classList.add('tabless');
@@ -902,10 +969,10 @@ function goGallery(){
   if (storyCtx && storyCtx.story) { backOr({ kind: 'story', id: storyCtx.story.id }); return; }
   backOr({ kind: 'tab', tab: currentTab || 'heute' });
 }
-function hideSheets(){ ['#story', '#chapter', '#chDone', '#pathFin', '#installHow', '#settings', '#albumView', '#sources'].forEach(q => $(q) && $(q).classList.add('hidden')); }
+function hideSheets(){ ['#story', '#chapter', '#chDone', '#pathFin', '#installHow', '#settings', '#albumView', '#sources', '#filterSheet'].forEach(q => $(q) && $(q).classList.add('hidden')); }
 $('#backBtn').onclick = goGallery;
 let galT = 0;
-function onViewport(){ if (S) resize(); else { clearTimeout(galT); galT = setTimeout(() => { if (currentTab === 'galerie') { galGrid = null; renderGallery(); } }, 120); } }
+function onViewport(){ if (S) resize(); else { clearTimeout(galT); galT = setTimeout(() => { placeFilterPanel(); if (currentTab === 'galerie') { galGrid = null; renderGallery(); } }, 120); } }
 window.addEventListener('resize', onViewport);
 if (window.visualViewport) visualViewport.addEventListener('resize', onViewport);
 
@@ -933,7 +1000,7 @@ function renderStoryEntry(){
     b.setAttribute('aria-label', t('pathAria', { title: L(path,'title') }));
     const pct = N ? Math.round(100 * n / N) : 0;
     b.innerHTML = `<div class="cv" style="background-image:url(data/${path.cover}-thumb.jpg)"></div>
-      <div class="tx"><div class="k">${t('pathKicker')}</div><div class="n">${L(path,'title')}</div>
+      <div class="tx"><div class="k">${pathKickerText(path)}</div><div class="n">${L(path,'title')}</div>
       <div class="s">${L(path,'part')} · ${n ? t('paintedOf', { n, N }) : t('startNow')}</div>
       <div class="bar"><div style="width:${pct}%"></div></div></div><div class="go">›</div>`;
     b.onclick = () => { pathCtx = { path }; storyCtx = null; showPath(path); };
@@ -946,7 +1013,7 @@ function renderStoryEntry(){
     b.className = 'waycard story' + (st.fresh ? ' neu' : '');
     b.setAttribute('data-story', st.id);
     b.setAttribute('aria-label', t('storyAria', { name: st.name }));
-    const kicker = st.fresh ? t('storyKickerNew') : t('storyKicker');
+    const kicker = storyKickerText(st);
     const pct = N ? Math.round(100 * n / N) : 0;
     b.innerHTML = `<div class="cv" style="background-image:url(data/${st.cover}-orig.jpg)"></div>
       <div class="tx"><div class="k">${kicker}</div><div class="n">${st.name}</div>
@@ -1065,6 +1132,7 @@ function stationDone(st){ return st.works.every(w => isDone(w.pid)); }
 function showPath(path, opts){
   if (!opts || !opts.noRoute) navigate({ kind: 'path', id: path.id });
   S = null; showScreen('path');
+  markPathOpened(path);
   const steps = pathSteps(path), n = pathDoneCount(path), N = steps.length;
   $('#pathHead').innerHTML = `<div class="cv" style="background-image:url(data/${path.cover}-orig.jpg)"></div>
     <div><h1>${L(path,'title')}</h1><div class="life">${path.name} · ${path.life} · ${L(path,'part')}</div>
@@ -1319,33 +1387,246 @@ function openHomeWork(p){
   hideSheets();
   return openPainting(p);
 }
+function storyTeaser(p){
+  const lore = workLore(p);
+  let text = '';
+  if (Array.isArray(lore)) text = lore[0] || '';
+  else text = lore || '';
+  text = String(text).replace(/\s+/g, ' ').trim();
+  if (!text) return '';
+  const bits = text.split(/(?<=[.!?…])\s+/).filter(Boolean);
+  let out = bits[0] || text;
+  if (bits[1] && (out + ' ' + bits[1]).length <= 260) out = out + ' ' + bits[1];
+  return out;
+}
 function renderDaily(){
   const wrap = $('#dailyWrap'); if (!wrap) return;
-  const searching = !!(typeof galQuery === 'string' && galQuery.trim());
-  const had = !!wrap.querySelector('#dailyCard');
-  if (searching) {
-    if (had) galGrid = null;
-    wrap.innerHTML = '';
-    return;
-  }
   const day = todayKey();
   const p = pickDaily(day);
-  if (!p) { if (had) galGrid = null; wrap.innerHTML = ''; return; }
+  if (!p) { wrap.innerHTML = ''; return; }
   const done = isDone(p.id);
   const streak = streakText(loadStreak(), day);
+  const teaser = storyTeaser(p);
+  const card = document.createElement('article');
+  card.id = 'dailyCard';
+  card.className = 'dailyhero' + (done ? ' done' : '');
+  const img = 'orig.jpg';
+  const cta = done ? t('dailyCtaView') : t('dailyCta');
+  card.innerHTML = `<button type="button" class="heroim" id="dailyHeroIm" style="background-image:url(data/${p.id}-${img})" aria-label="${esc(t('dailyAria', { title: L(p, 'title') }))}"></button>
+    <div class="tx"><div class="k">${t('dailyKicker')}</div>
+    <div class="n">${esc(L(p,'title'))}</div>
+    <div class="a">${esc(L(p,'artist') || p.artist)}${p.year ? ' · ' + esc(p.year) : ''}</div>
+    <p class="teaser">${esc(teaser)}</p>
+    <button type="button" class="cta" id="dailyCta">${esc(cta)}</button>
+    ${streak ? `<div class="st">${esc(streak)}</div>` : ''}</div>`;
+  const go = () => { if (isDone(p.id)) bumpStreak(day); openHomeWork(p); };
+  card.querySelector('#dailyHeroIm').onclick = go;
+  card.querySelector('#dailyCta').onclick = go;
+  wrap.innerHTML = '';
+  wrap.appendChild(card);
+}
+function sourcedFacts(){
+  const out = [];
+  const seen = new Set();
+  function add(text, cite, pid){
+    const s = String(text || '').replace(/\s+/g, ' ').trim();
+    if (s.length < 24) return;
+    if (seen.has(s)) return;
+    seen.add(s);
+    out.push({ text: s, cite: cite || '', pid: pid || '' });
+  }
+  for (const p of ALL) {
+    const facts = L(p, 'facts') || p.facts;
+    const list = !facts ? [] : (Array.isArray(facts) ? facts : [facts]);
+    list.forEach(f => add(f, L(p, 'title'), p.id));
+  }
+  for (const path of PATHS) {
+    for (const step of pathSteps(path)) {
+      if (!step.w) continue;
+      const w = I.locPathWork(step.w);
+      if (w && w.fact) {
+        const pic = byId(step.pid);
+        add(w.fact, pic ? L(pic, 'title') : (I.locStation(step.st).place || ''), step.pid);
+      }
+    }
+  }
+  for (const st of STORIES) {
+    for (const ch of st.chapters) {
+      const chL = I.locChapter(st, ch);
+      if (chL && chL.fact) {
+        const pic = byId(ch.pid);
+        add(chL.fact, pic ? L(pic, 'title') : st.name, ch.pid);
+      }
+    }
+  }
+  return out;
+}
+function pickDailyFact(dateStr){
+  const facts = sourcedFacts();
+  if (!facts.length) return null;
+  const daily = pickDaily(dateStr);
+  const avoid = daily ? workFact(daily) : '';
+  const pool = avoid ? facts.filter(f => f.text !== avoid && f.pid !== (daily && daily.id)) : facts;
+  const use = pool.length ? pool : facts;
+  const i = fnv1a('masilano.fact.v1|' + todayKey(dateStr)) % use.length;
+  return use[i];
+}
+function renderDailyFact(){
+  const wrap = $('#factWrap'); if (!wrap) return;
+  const fact = pickDailyFact();
+  if (!fact) { wrap.innerHTML = ''; return; }
+  const card = document.createElement('div');
+  card.id = 'factCard';
+  card.className = 'factcard';
+  card.innerHTML = `<div class="k">${t('didYouKnow')}</div>
+    <p class="f">${esc(fact.text)}</p>
+    ${fact.cite && fact.text.indexOf(fact.cite) === -1 ? `<div class="cite">${esc(fact.cite)}</div>` : ''}`;
+  wrap.innerHTML = '';
+  wrap.appendChild(card);
+}
+function renderHeute(){
+  renderDaily();
+  renderContinue();
+  renderPathNext();
+  renderDailyFact();
+  maybeShowInstallHint();
+}
+function rememberActivePath(id){
+  try { if (id) localStorage.setItem(ACTIVE_PATH_KEY, id); } catch (e) {}
+}
+function markPathOpened(path){
+  if (!path) return;
+  const o = pathState(path);
+  if (!o.opened) {
+    o.opened = true;
+    if (!Array.isArray(o.seen)) o.seen = [];
+    pathSave(path, o);
+  }
+  rememberActivePath(path.id);
+}
+function pathOpened(path){
+  const st = pathState(path);
+  if (st && (st.opened || (st.seen && st.seen.length))) return true;
+  if (pathSteps(path).some(s => isDone(s.pid) || pctOf(s.pid) > 0)) return true;
+  try {
+    const o = JSON.parse(localStorage.getItem(LAST_KEY) || 'null');
+    if (o && o.pathId === path.id) return true;
+  } catch (e) {}
+  return false;
+}
+function nextStationInfo(path){
+  const stations = path.stations || [];
+  const N = stations.length;
+  const i = stations.findIndex(s => !stationDone(s));
+  if (i < 0) return { done: true, n: N, N, st: stations[N - 1] || null };
+  return { done: false, n: i + 1, N, st: stations[i] };
+}
+function pathKickerText(path){
+  if (!pathOpened(path)) return t('pathKickerNew');
+  const info = nextStationInfo(path);
+  return t('stationOf', { n: info.n, N: info.N });
+}
+function storyOpened(st){
+  const s = storyState(st);
+  if (s && s.seen && s.seen.length) return true;
+  return st.chapters.some(c => isDone(c.pid) || pctOf(c.pid) > 0);
+}
+function storyKickerText(st){
+  if (!storyOpened(st)) return t('pathKickerNew');
+  const N = st.chapters.length;
+  const next = st.chapters.findIndex(c => !isDone(c.pid));
+  const n = next < 0 ? N : next + 1;
+  return t('chapterOf', { n, N });
+}
+function findActivePath(){
+  const unfinished = p => pathOpened(p) && !nextStationInfo(p).done;
+  try {
+    const id = localStorage.getItem(ACTIVE_PATH_KEY);
+    const p = PATHS.find(x => x.id === id);
+    if (p && unfinished(p)) return p;
+  } catch (e) {}
+  try {
+    const o = JSON.parse(localStorage.getItem(LAST_KEY) || 'null');
+    if (o && o.pathId) {
+      const p = PATHS.find(x => x.id === o.pathId);
+      if (p && unfinished(p)) return p;
+    }
+  } catch (e) {}
+  const openUnfinished = PATHS.find(unfinished);
+  if (openUnfinished) return openUnfinished;
+  const anyOpen = PATHS.find(pathOpened);
+  if (anyOpen) return anyOpen;
+  return null;
+}
+function firstOpenWork(st){
+  if (!st || !st.works) return null;
+  return st.works.find(w => !isDone(w.pid)) || st.works[0] || null;
+}
+function renderPathNext(){
+  const wrap = $('#pathNextWrap'); if (!wrap) return;
+  wrap.innerHTML = '';
+  const path = findActivePath();
+  if (!path) {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.id = 'pathNextCard';
+    b.className = 'pathnext invite';
+    b.setAttribute('aria-label', t('pathInviteCta'));
+    b.innerHTML = `<div class="tx"><div class="k">${t('pathInviteKicker')}</div>
+      <div class="n">${t('pathInviteCta')}</div>
+      <div class="s">${t('pathInviteLead')}</div></div><div class="go">›</div>`;
+    b.onclick = () => { navigate({ kind: 'tab', tab: 'wege' }); showScreen('wege'); };
+    wrap.appendChild(b);
+    return;
+  }
+  const info = nextStationInfo(path);
   const b = document.createElement('button');
   b.type = 'button';
-  b.id = 'dailyCard';
-  b.className = 'dailycard' + (done ? ' done' : '');
-  b.setAttribute('aria-label', t('dailyAria', { title: L(p, 'title') }));
-  const sub = done ? t('dailyDone') : ((L(p, 'artist') || p.artist) + ' · ' + p.year);
-  b.innerHTML = `<div class="cv" style="background-image:url(data/${p.id}-${done ? 'orig.jpg' : 'thumb.jpg'})"></div>
-    <div class="tx"><div class="k">${t('dailyKicker')}</div><div class="n">${L(p,'title')}</div>
-    <div class="s">${sub}</div>${streak ? `<div class="st">${streak}</div>` : ''}</div><div class="go">›</div>`;
-  b.onclick = () => { if (isDone(p.id)) bumpStreak(day); openHomeWork(p); };
-  wrap.innerHTML = '';
+  b.id = 'pathNextCard';
+  b.className = 'pathnext';
+  let thumb = path.cover + '-thumb.jpg';
+  let title = L(path, 'title');
+  let sub, kicker;
+  if (info.done) {
+    const other = PATHS.find(p => p !== path && !nextStationInfo(p).done);
+    if (other) {
+      return renderPathNextFor(wrap, other, nextStationInfo(other));
+    }
+    kicker = t('pathNextKicker');
+    sub = t('pathAllDone');
+  } else {
+    const stL = I.locStation(info.st);
+    kicker = t('pathNextKicker');
+    sub = (stL.place || '') + ' · ' + t('pathNextMeta', { n: info.n, N: info.N });
+    const w = firstOpenWork(info.st);
+    if (w && w.pid) thumb = w.pid + '-thumb.jpg';
+  }
+  b.setAttribute('aria-label', kicker + ': ' + title);
+  b.innerHTML = `<div class="cv" style="background-image:url(data/${thumb})"></div>
+    <div class="tx"><div class="k">${esc(kicker)}</div>
+    <div class="n">${esc(title)}</div>
+    <div class="s">${esc(sub)}</div></div><div class="go">›</div>`;
+  b.onclick = () => { pathCtx = { path }; storyCtx = null; showPath(path); };
   wrap.appendChild(b);
-  if (!had) galGrid = null;
+}
+function renderPathNextFor(wrap, path, info){
+  const stL = I.locStation(info.st);
+  const w = firstOpenWork(info.st);
+  const thumb = (w && w.pid ? w.pid : path.cover) + '-thumb.jpg';
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.id = 'pathNextCard';
+  b.className = 'pathnext';
+  const kicker = t('pathNextKicker');
+  const title = L(path, 'title');
+  const sub = (stL.place || '') + ' · ' + t('pathNextMeta', { n: info.n, N: info.N });
+  b.setAttribute('aria-label', kicker + ': ' + title);
+  b.innerHTML = `<div class="cv" style="background-image:url(data/${thumb})"></div>
+    <div class="tx"><div class="k">${esc(kicker)}</div>
+    <div class="n">${esc(title)}</div>
+    <div class="s">${esc(sub)}</div></div><div class="go">›</div>`;
+  b.onclick = () => { pathCtx = { path }; storyCtx = null; showPath(path); };
+  wrap.appendChild(b);
 }
 
 function doneCount(){
@@ -1554,6 +1835,7 @@ function bindDelight(){
     if (e.key !== 'Escape') return;
     if ($('#albumView') && !$('#albumView').classList.contains('hidden')) { closeAlbumView(); e.preventDefault(); return; }
     if ($('#settings') && !$('#settings').classList.contains('hidden')) { closeSettings(); e.preventDefault(); return; }
+    if ($('#filterSheet') && !$('#filterSheet').classList.contains('hidden')) { closeTopSheet(); e.preventDefault(); return; }
     if ($('#sources') && !$('#sources').classList.contains('hidden')) { closeTopSheet(); e.preventDefault(); }
   });
 }
@@ -1608,8 +1890,7 @@ function findLastWork(){
 function renderContinue(){
   const wrap = $('#continueWrap');
   if (!wrap) return;
-  const searching = !!(typeof galQuery === 'string' && galQuery.trim());
-  const last = searching ? null : findLastWork();
+  const last = findLastWork();
   const had = !!wrap.querySelector('#continueCard');
   if (!last) {
     if (had) { wrap.innerHTML = ''; galGrid = null; }
@@ -1921,9 +2202,9 @@ function refreshLang(){
   maybeShowInstallHint();
   applyCalm();
   syncTabBar();
-  renderContinue();
-  renderDaily();
+  renderHeute();
   renderStoryEntry();
+  placeFilterPanel();
   renderFilters();
   renderGallery();
   if ($('#album') && $('#album').classList.contains('active')) renderAlbum();
