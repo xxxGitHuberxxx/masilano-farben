@@ -807,10 +807,11 @@ function renderPathMap(path){
     const cls = doneSt[i] ? 'done' : (i === 0 || doneSt[i - 1] ? 'open' : '');
     return `<li class="${cls}" data-si="${i}"><span class="n">${i + 1}</span>${st.place} · ${st.when}</li>`;
   }).join('');
-  wrap.innerHTML = `<svg viewBox="0 0 200 160" class="pmap" role="img" aria-label="Karte der Stationen von Van Goghs Lebensweg">
-    <rect class="sea" x="0" y="0" width="200" height="160"/>
+  wrap.innerHTML = `<svg viewBox="0 0 200 220" class="pmap" role="img" aria-label="Karte der Stationen von Van Goghs Lebensweg">
+    <rect class="sea" x="0" y="0" width="200" height="220"/>
     <path class="land" d="M28,58 C38,32 72,22 98,28 C128,16 168,22 182,42 C190,58 176,74 154,82 C128,96 96,98 70,90 C46,96 26,80 28,58 Z"/>
     <path class="land" d="M18,108 C8,118 10,138 22,150 C36,162 62,160 72,148 C78,136 64,122 50,114 C36,106 26,104 18,108 Z"/>
+    <path class="land" d="M48,152 C62,158 78,170 88,190 C94,208 80,218 64,214 C48,210 38,198 40,178 C42,164 44,154 48,152 Z"/>
     ${lines.join('')}
     ${dots}
   </svg><ol class="ptime">${items}</ol>`;

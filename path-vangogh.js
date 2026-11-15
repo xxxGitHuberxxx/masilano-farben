@@ -1,4 +1,4 @@
-// Van Goghs Lebensweg, Teil 1–2 (1880–1888). Texts: de-CH, no sharp s.
+// Van Goghs Lebensweg, Teil 1–3 (1880–1889). Texts: de-CH, no sharp s.
 // Letter quotes: self-translated from the original Dutch/French of the 2009 edition
 // (official letter numbers and dates). Originals are public domain; modern translations were not copied.
 window.PATH_WORKS = [
@@ -287,6 +287,164 @@ window.PATH_WORKS = [
  { id:'selfartist', title:'Selbstbildnis als Maler', artist:'Vincent van Gogh', year:'1888',
    museum:'Van Gogh Museum, Amsterdam',
    source:'Wikimedia Commons: «Zelfportret als schilder - s0022V1962 - Van Gogh Museum.jpg», gemeinfrei (Public Domain)' }
+,
+ // --- v6.3 Arles (Feb 1888–Mai 1889) ---
+ { id:'snowland', title:'Landschaft im Schnee mit Arles im Hintergrund', artist:'Vincent van Gogh', year:'1888',
+   museum:'Privatbesitz',
+   source:'Wikimedia Commons: «Van Gogh - Landschaft im Schnee mit Arles im Hintergrund.jpeg», gemeinfrei (Public Domain)' },
+ { id:'almondsprig', title:'Mandelzweig im Glas', artist:'Vincent van Gogh', year:'1888',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Vincent van Gogh - Sprig of flowering almond in a glass - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'pinkpeach', title:'Blühender Pfirsichbaum (Andenken an Mauve)', artist:'Vincent van Gogh', year:'1888',
+   museum:'Kröller-Müller Museum, Otterlo',
+   source:'Wikimedia Commons: «Van Gogh - Blühender Pfirsichbaum.jpeg», gemeinfrei (Public Domain)' },
+ { id:'pinkorchard', title:'Der rosa Obstgarten', artist:'Vincent van Gogh', year:'1888',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Vincent van Gogh - De roze boomgaard - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'whiteorchard', title:'Der weisse Obstgarten', artist:'Vincent van Gogh', year:'1888',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Vincent van Gogh - The white orchard - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'plumorchard', title:'Blühender Obstgarten (Pflaumenbäume)', artist:'Vincent van Gogh', year:'1888',
+   museum:'Scottish National Gallery, Edinburgh',
+   source:'Wikimedia Commons: «Vincent van Gogh - Orchard in Blossom (Plum Trees) - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'peartree', title:'Blühender Birnbaum', artist:'Vincent van Gogh', year:'1888',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Vincent van Gogh - Bloeiend perenboompje - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'peachblossom', title:'Blühender Pfirsichbaum', artist:'Vincent van Gogh', year:'1888',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Vincent van Gogh - De roze perzikboom - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'fieldflowers', title:'Feld mit Blumen bei Arles', artist:'Vincent van Gogh', year:'1888',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Vincent van Gogh - Veld met bloemen bij Arles - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'langlois', title:'Die Langlois-Brücke', artist:'Vincent van Gogh', year:'1888',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Vincent van Gogh - De brug van Langlois - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'farmwheat', title:'Bauernhaus in einem Weizenfeld', artist:'Vincent van Gogh', year:'1888',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Vincent van Gogh - Boerderij in een korenveld - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'boatsbeach', title:'Fischerboote am Strand von Saintes-Maries', artist:'Vincent van Gogh', year:'1888',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Vincent van Gogh - Vissersboten op het strand van Les Saintes-Maries-de-la-Mer - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'seascape', title:'Meereslandschaft bei Saintes-Maries', artist:'Vincent van Gogh', year:'1888',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Vincent van Gogh - Zeegezicht bij Les Saintes-Maries-de-la-Mer - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'viewsaintes', title:'Blick auf Saintes-Maries', artist:'Vincent van Gogh', year:'1888',
+   museum:'Kröller-Müller Museum, Otterlo',
+   source:'Wikimedia Commons: «Van Gogh - Blick auf Saites-Maries1.jpeg», gemeinfrei (Public Domain)' },
+ { id:'cottages', title:'Drei weisse Hütten in Saintes-Maries', artist:'Vincent van Gogh', year:'1888',
+   museum:'Kunsthaus Zürich',
+   source:'Wikimedia Commons: «Van Gogh - Drei weiße Hütten in Saintes-Maries.jpeg», gemeinfrei (Public Domain)' },
+ { id:'harvest88', title:'Die Ernte, mit Montmajour im Hintergrund', artist:'Vincent van Gogh', year:'1888',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Vincent van Gogh - De oogst - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'hayprovence', title:'Heuschober in der Provence', artist:'Vincent van Gogh', year:'1888',
+   museum:'Kröller-Müller Museum, Otterlo',
+   source:'Wikimedia Commons: «Van Gogh - Heuschober in der Provence.jpeg», gemeinfrei (Public Domain)' },
+ { id:'farmprovence', title:'Bauernhaus in der Provence', artist:'Vincent van Gogh', year:'1888',
+   museum:'National Gallery of Art, Washington',
+   source:'Wikimedia Commons: «Farmhouse in Provence, 1888, Vincent van Gogh, NGA.jpg», gemeinfrei (Public Domain)' },
+ { id:'wheateve', title:'Sommerabend bei Arles', artist:'Vincent van Gogh', year:'1888',
+   museum:'Kunstmuseum Winterthur',
+   source:'Wikimedia Commons: «Van Gogh - Weizenfeld bei Sonnenuntergang.jpeg», gemeinfrei (Public Domain)' },
+ { id:'rocks88', title:'Felsen mit Eiche', artist:'Vincent van Gogh', year:'1888',
+   museum:'Kröller-Müller Museum, Otterlo',
+   source:'Wikimedia Commons: «Vincent van Gogh - The Rocks - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'flowergarden', title:'Blühender Garten', artist:'Vincent van Gogh', year:'1888',
+   museum:'Kunstmuseum Den Haag, Den Haag',
+   source:'Wikimedia Commons: «Vincent van Gogh - Garden at Arles - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'yellowhouse', title:'Das Gelbe Haus', artist:'Vincent van Gogh', year:'1888',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Vincent van Gogh - The yellow house (\'The street\').jpg», gemeinfrei (Public Domain)' },
+ { id:'sunflowermunich', title:'Sonnenblumen (zwölf Blüten)', artist:'Vincent van Gogh', year:'1888',
+   museum:'Neue Pinakothek, München',
+   source:'Wikimedia Commons: «1888 van Gogh Sonnenblumen.jpg», gemeinfrei (Public Domain)' },
+ { id:'poetsgarden', title:'Der Garten des Dichters', artist:'Vincent van Gogh', year:'1888',
+   museum:'Art Institute of Chicago',
+   source:'Wikimedia Commons: «Vincent van Gogh - The Poet\'s Garden - 1933.433 - Art Institute of Chicago.jpg», gemeinfrei (Public Domain)' },
+ { id:'vgchair', title:'Vincents Stuhl', artist:'Vincent van Gogh', year:'1888',
+   museum:'National Gallery, London',
+   source:'Wikimedia Commons: «Vincent Willem van Gogh 138.jpg», gemeinfrei (Public Domain)' },
+ { id:'gauguinchair', title:'Gauguins Sessel', artist:'Vincent van Gogh', year:'1888',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Vincent van Gogh - De stoel van Gauguin - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'sowerarles', title:'Der Sämann', artist:'Vincent van Gogh', year:'1888',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «De zaaier - s0029V1962 - Van Gogh Museum.jpg», gemeinfrei (Public Domain)' },
+ { id:'zouave', title:'Der Zuave (Halbfigur)', artist:'Vincent van Gogh', year:'1888',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Vincent van Gogh - The Zouave - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'mousme', title:'La Mousmé', artist:'Vincent van Gogh', year:'1888',
+   museum:'National Gallery of Art, Washington',
+   source:'Wikimedia Commons: «Vangogh mousme.jpg», gemeinfrei (Public Domain)' },
+ { id:'roulin', title:'Der Briefträger Joseph Roulin', artist:'Vincent van Gogh', year:'1888',
+   museum:'Detroit Institute of Arts',
+   source:'Wikimedia Commons: «Vincent van Gogh - Portrait of Postman Roulin - 1996.25 - Detroit Institute of Arts.jpg», gemeinfrei (Public Domain)' },
+ { id:'escalier', title:'Patience Escalier', artist:'Vincent van Gogh', year:'1888',
+   museum:'Kunsthaus Zürich',
+   source:'Wikimedia Commons: «Van Gogh - Bildnis Patience Escalier2.jpeg», gemeinfrei (Public Domain)' },
+ { id:'boch', title:'Bildnis Eugène Boch (Der Dichter)', artist:'Vincent van Gogh', year:'1888',
+   museum:'Musée d’Orsay, Paris',
+   source:'Wikimedia Commons: «Vincent van Gogh - Eugène Boch - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'milliet', title:'Bildnis des Leutnants Milliet', artist:'Vincent van Gogh', year:'1888',
+   museum:'Kröller-Müller Museum, Otterlo',
+   source:'Wikimedia Commons: «Van Gogh - Bildnis Milliets, Unterleutnant der Zuaven.jpeg», gemeinfrei (Public Domain)' },
+ { id:'armand', title:'Bildnis Armand Roulin', artist:'Vincent van Gogh', year:'1888',
+   museum:'Museum Boijmans Van Beuningen, Rotterdam',
+   source:'Wikimedia Commons: «Vincent van Gogh - Portrait of Armand Roulin - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'arlesienne', title:'Die Arlésienne (Madame Ginoux)', artist:'Vincent van Gogh', year:'1888',
+   museum:'Musée d’Orsay, Paris',
+   source:'Wikimedia Commons: «Vincent van Gogh - The Arlesienne - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'nightcafe', title:'Das Nachtcafé', artist:'Vincent van Gogh', year:'1888',
+   museum:'Yale University Art Gallery, New Haven',
+   source:'Wikimedia Commons: «Van Gogh - The Night Café (1888).jpg», gemeinfrei (Public Domain)' },
+ { id:'rhone', title:'Sternennacht über der Rhône', artist:'Vincent van Gogh', year:'1888',
+   museum:'Musée d’Orsay, Paris',
+   source:'Wikimedia Commons: «Starry Night Over the Rhone.jpg», gemeinfrei (Public Domain)' },
+ { id:'greenvine', title:'Der grüne Weinberg', artist:'Vincent van Gogh', year:'1888',
+   museum:'Kröller-Müller Museum, Otterlo',
+   source:'Wikimedia Commons: «Van Gogh - Der grüne Weinberg.jpeg», gemeinfrei (Public Domain)' },
+ { id:'alyscamps', title:'Les Alyscamps (Fallendes Laub)', artist:'Vincent van Gogh', year:'1888',
+   museum:'Kröller-Müller Museum, Otterlo',
+   source:'Wikimedia Commons: «Van Gogh - Les Alyscamps, fallende Blätter.jpeg», gemeinfrei (Public Domain)' },
+ { id:'redvineyard', title:'Der rote Weinberg', artist:'Vincent van Gogh', year:'1888',
+   museum:'Puschkin-Museum, Moskau',
+   source:'Wikimedia Commons: «Vincent Willem van Gogh 036.jpg», gemeinfrei (Public Domain)' },
+ { id:'memorygarden', title:'Erinnerung an den Garten in Etten', artist:'Vincent van Gogh', year:'1888',
+   museum:'Eremitage, Sankt Petersburg',
+   source:'Wikimedia Commons: «Vincent Willem van Gogh 098.jpg», gemeinfrei (Public Domain)' },
+ { id:'dancehall', title:'Der Tanzsaal in Arles', artist:'Vincent van Gogh', year:'1888',
+   museum:'Musée d’Orsay, Paris',
+   source:'Wikimedia Commons: «Vincent van Gogh - The Dance Hall in Arles - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'selfgauguin', title:'Selbstbildnis, Paul Gauguin gewidmet', artist:'Vincent van Gogh', year:'1888',
+   museum:'Fogg Museum, Cambridge',
+   source:'Wikimedia Commons: «Van Gogh self-portrait dedicated to Gauguin.jpg», gemeinfrei (Public Domain)' },
+ { id:'bandaged', title:'Selbstbildnis mit verbundenem Ohr', artist:'Vincent van Gogh', year:'1889',
+   museum:'Courtauld Gallery, London',
+   source:'Wikimedia Commons: «Self-Portrait with a Bandaged Ear - Vincent van Gogh.jpg», gemeinfrei (Public Domain)' },
+ { id:'bandagedpipe', title:'Selbstbildnis mit verbundenem Ohr und Pfeife', artist:'Vincent van Gogh', year:'1889',
+   museum:'Privatbesitz',
+   source:'Wikimedia Commons: «Van Gogh - Selbstbildnis mit verbundenem Ohr und Pfeife.jpeg», gemeinfrei (Public Domain)' },
+ { id:'berceuse', title:'La Berceuse (Madame Roulin)', artist:'Vincent van Gogh', year:'1889',
+   museum:'Stedelijk Museum, Amsterdam',
+   source:'Wikimedia Commons: «Vincent van Gogh - La berceuse (Portret van Madame Roulin) - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'onions88', title:'Stillleben mit Zwiebeln und Zeichenbrett', artist:'Vincent van Gogh', year:'1889',
+   museum:'Kröller-Müller Museum, Otterlo',
+   source:'Wikimedia Commons: «Still life with a plate of onions - Vincent Van Gogh.jpg», gemeinfrei (Public Domain)' },
+ { id:'crab', title:'Krebs auf dem Rücken', artist:'Vincent van Gogh', year:'1889',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Vincent van Gogh - A crab on its back - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'hospitalgarden', title:'Garten des Spitals in Arles', artist:'Vincent van Gogh', year:'1889',
+   museum:'Sammlung Oskar Reinhart «Am Römerholz», Winterthur',
+   source:'Wikimedia Commons: «Van Gogh - Garten des Hospitals in Arles1.jpeg», gemeinfrei (Public Domain)' },
+ { id:'vieworchards', title:'Blick auf Arles mit blühenden Bäumen', artist:'Vincent van Gogh', year:'1889',
+   museum:'Van Gogh Museum, Amsterdam',
+   source:'Wikimedia Commons: «Vincent van Gogh - Bloeiende boomgaarden, gezicht op Arles - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'roulin89', title:'Der Briefträger Joseph Roulin', artist:'Vincent van Gogh', year:'1889',
+   museum:'Kröller-Müller Museum, Otterlo',
+   source:'Wikimedia Commons: «Vincent van Gogh - Portrait of Joseph Roulin - Google Art Project.jpg», gemeinfrei (Public Domain)' },
+ { id:'doctorrey', title:'Bildnis des Doktor Félix Rey', artist:'Vincent van Gogh', year:'1889',
+   museum:'Puschkin-Museum, Moskau',
+   source:'Wikimedia Commons: «Vincent van Gogh - Portrait of Doctor Félix Rey (F500).jpg», gemeinfrei (Public Domain)' },
 ];
 
 window.PATHS = [
@@ -295,11 +453,11 @@ window.PATHS = [
   name: 'Vincent van Gogh',
   title: 'Van Goghs Lebensweg',
   life: '1853–1890',
-  part: 'Teil 1–2 · 1880–1888',
-  subtitle: 'Von den Bergleuten bis nach Paris',
-  cover: 'plumtree',
-  intro: 'Reise mit Vincent van Gogh durch die Jahre, in denen er Maler wird: vom armen Zeichner im belgischen Kohlerevier über die Kartoffelesser und die Akademie in Antwerpen bis zu den hellen Jahren bei Theo in Paris. Kurze Stationen, Bilder zum Ausmalen und Stimmen aus seinen Briefen an Theo, an die Schwester Willemien und an Freunde. Teil 1 und 2 umfassen 1880 bis 1888 – 97 Werke, in der Testversion offen zum Spielen.',
-  epilogue: 'Im Februar 1888 verlässt Vincent Paris und fährt nach Arles, in den Süden, «wo noch mehr Farbe ist und noch mehr Sonne». Es folgen Arles, Saint-Rémy und Auvers – Teil 3 des Lebenswegs kommt in einer nächsten Version. Theos Frau Jo van Gogh-Bonger bewahrt später die Bilder und die Briefe – ohne sie wüssten wir von diesem Weg viel weniger.',
+  part: 'Teil 1–3 · 1880–1889',
+  subtitle: 'Von den Bergleuten bis nach Arles',
+  cover: 'yellowhouse',
+  intro: 'Reise mit Vincent van Gogh durch die Jahre, in denen er Maler wird: vom armen Zeichner im belgischen Kohlerevier über die Kartoffelesser, die Akademie in Antwerpen und die hellen Jahre bei Theo in Paris bis in den Süden, nach Arles. Kurze Stationen, Bilder zum Ausmalen und Stimmen aus seinen Briefen an Theo, an die Schwester Willemien und an Freunde. Teil 1 bis 3 umfassen 1880 bis 1889 – 152 Werke, in der Testversion offen zum Spielen.',
+  epilogue: 'Im Mai 1889 verlässt Vincent Arles und geht in die Anstalt Saint-Paul-de-Mausole in Saint-Rémy-de-Provence. Es folgen die Monate in Saint-Rémy und das letzte Atelier in Auvers-sur-Oise – Teil 4 des Lebenswegs kommt in einer nächsten Version. Theos Frau Jo van Gogh-Bonger bewahrt später die Bilder und die Briefe – ohne sie wüssten wir von diesem Weg viel weniger.',
   stations: [
    {
     id: 'borinage', place: 'Borinage und Brüssel', when: '1880–1881',
@@ -1024,8 +1182,442 @@ window.PATHS = [
        quote: { text:'Wenn ich Theo nicht hätte, wäre es mir nicht möglich, mit meiner Arbeit zu meinem Recht zu kommen; aber da ich ihn zum Freund habe, glaube ich, dass ich noch vorankommen und es durchhalten kann. Mein Plan ist, sobald ich kann, eine Zeit in den Süden zu gehen, wo noch mehr Farbe ist und noch mehr Sonne. Was ich zu erreichen hoffe, ist, ein gutes Bildnis zu malen.', cite:'Brief 574, Paris, Ende Oktober 1887, an Willemien (Wil)' },
        fact: 'Das Bild gehört dem Van Gogh Museum und entstand im Winter 1887/88, noch vor der Abreise nach Arles. Es ist Vincents Selbstbildnis als Handwerker: Palette, Pinsel, Arbeit.' }
     ]
+   },
+   {
+    id: 'arles-arrive', place: 'Arles · Ankunft und Obstgärten', when: 'Feb.–Mai 1888',
+    map: { x:72, y:200 },
+    intro: [
+      'Im Februar 1888 verlässt Vincent Paris und fährt nach Arles. Er kommt in den Schnee: sechzig Zentimeter, schreibt er Theo, und die Stadt scheint ihm nicht grösser als Breda oder Mons. Die weissen Felder unter dem hellen Himmel erinnern ihn an japanische Winterbilder. «Ich fühle mich in Japan», schreibt er bald darauf – obwohl die gewohnte Pracht noch nicht da ist.',
+      'Sobald der Frost weicht, blühen die Obstgärten: Mandel, Pfirsich, Aprikose, Birne, Pflaume. Vincent arbeitet rasch, oft an mehreren Bildern zugleich. Den rosa Pfirsichbaum bestimmt er zum Andenken an seinen Lehrer Anton Mauve, der gerade gestorben ist, und schickt ihn an Mauves Witwe Jet.',
+      'Arles wird für mehr als ein Jahr sein Ort: zuerst ein Zimmer im Restaurant Carrel, später das Gelbe Haus an der Place Lamartine. Theo trägt weiter den Unterhalt.'
+    ],
+    works: [
+      { pid:'snowland',
+        text: [
+          'Vincent kommt am 20. Februar in Arles an und findet die Stadt und das Land unter Schnee. Er malt die weisse Ebene, im Hintergrund die Stadt, der Himmel so hell wie die Flächen selbst.',
+          'Gleich im ersten Brief an Theo vergleicht er diese Winterbilder mit denen der Japaner. Die Reise in den Süden beginnt also nicht in der Hitze, sondern in einem stillen, leuchtenden Weiss.'
+        ],
+        quote: { text:'Zuerst muss ich dir sagen, dass überall mindestens 60 Zentimeter Schnee gefallen sind und dass es immer noch schneit. Arles scheint mir nicht grösser als Breda oder Mons. Und die Landschaften unter dem Schnee, mit den weissen Gipfeln gegen einen Himmel, der ebenso leuchtend war wie der Schnee, waren ganz wie die Winterlandschaften, die die Japaner gemacht haben.', cite:'Brief 577, Arles, 21. Februar 1888, an Theo' },
+        fact: 'Das Bild ist in Privatbesitz. Es gehört zu den allerersten Studien aus Arles, gemalt im Februar 1888, noch unter dem Schnee.' },
+      { pid:'almondsprig',
+        text: [
+          'Ein einzelner Mandelzweig in einem Glas, schon in Blüte, während draussen noch Schnee liegt. Vincent malt die kleinen Studien rasch, nah am Gegenstand, hell und klar.',
+          'Der Mandelbaum blüht früh im Süden. Für Vincent ist das der erste Beweis, dass der Frühling kommt – und dass er richtig war, Paris zu verlassen.'
+        ],
+        quote: { text:'Hier friert es fest, und auf dem Land liegt immer noch Schnee – ich habe eine Studie einer weiss bedeckten Landschaft mit der Stadt im Hintergrund. Dann zwei kleine Studien eines Mandelzweigs, der trotzdem schon blüht.', cite:'Brief 582, Arles, um den 2. März 1888, an Theo' },
+        fact: 'Das Bild gehört dem Van Gogh Museum. Vincent erwähnt im März zwei kleine Studien eines bereits blühenden Mandelzweigs.' },
+      { pid:'pinkpeach',
+        text: [
+          'Ein Pfirsichbaum in voller rosa Blüte, der Himmel blau, im Gras der Name: Souvenir de Mauve. Vincent bestimmt das Bild für Jet Mauve, die Witwe seines Haager Lehrers.',
+          'Mauve ist im Februar gestorben. Das Bild ist kein dunkles Trauerstück, sondern ein blühender Baum – ein Dank und ein Abschied in der Sprache, die Vincent jetzt sucht: reine Farbe.'
+        ],
+        quote: { text:'Du wirst es vielleicht sehen, denn ich habe beschlossen, dies für Jet Mauve zu bestimmen. Ich habe darauf geschrieben: Souvenir de Mauve, Vincent & Theo.', cite:'Brief 590, Arles, um den 30. März 1888, an Willemien (Wil)' },
+        fact: 'Das Bild gehört dem Kröller-Müller Museum. Vincent und Theo signieren das Andenken gemeinsam; es geht an Jet Mauve nach Den Haag.' },
+      { pid:'pinkorchard',
+        text: [
+          'Aprikosenbäume in Blüte in einem frischgrünen Garten: ein ganzes Bouquet, nicht nur ein einzelner Baum. Vincent arbeitet in diesen Wochen fast täglich im Freien.',
+          'Die rosa und weissen Obstgärten werden zu einer kleinen Reihe. Er will Theo und den Händlern in Holland zeigen, was der Süden an Motiven hergibt.'
+        ],
+        quote: { text:'Ich habe gerade ein Bouquet blühender Aprikosenbäume in einem kleinen, frischgrünen Obstgarten gemacht.', cite:'Brief 589, Arles, um den 25. März 1888, an Theo' },
+        fact: 'Das Bild gehört dem Van Gogh Museum. Es zeigt blühende Aprikosenbäume und entsteht im März 1888.' },
+      { pid:'whiteorchard',
+        text: [
+          'Weisse Blüten vor einem hellen Himmel, der Boden schon grün. Eines der klarsten Obstgartenbilder dieses Frühlings, weit offen und ruhig.',
+          'Vincent sucht hier nicht das Detail jedes Zweigs, sondern die grosse Helligkeit des Blühens. Der Obstgarten wird zur Farbfläche.'
+        ],
+        fact: 'Das Bild gehört dem Van Gogh Museum und entsteht im April 1888, in der dichtesten Reihe der blühenden Gärten.' },
+      { pid:'plumorchard',
+        text: [
+          'Pflaumenbäume in Blüte, der Garten tiefer und kühler im Ton als der weisse Obstgarten. Vincent wechselt die Bäume, bleibt aber bei dem einen Motiv des Frühlings.',
+          'Jedes dieser Bilder ist eine Studie und zugleich ein fertiges Bild. Die Reihe zeigt, wie schnell er in Arles einen eigenen, hellen Stil findet.'
+        ],
+        fact: 'Das Bild hängt in der Scottish National Gallery in Edinburgh. Es entsteht im April 1888.' },
+      { pid:'peartree',
+        text: [
+          'Ein einzelner Birnbaum, hoch und schmal, die Blüten fast weiss vor dem kühlen Himmel. Vincent isoliert den Baum wie ein Bildnis.',
+          'Neben den weiten Gärten steht hier ein einziges Wesen. Die japanischen Holzschnitte, die er in Paris gesammelt hat, sind in solchen Ausschnitten noch zu spüren.'
+        ],
+        fact: 'Das Bild gehört dem Van Gogh Museum. Der blühende Birnbaum entsteht im April 1888.' },
+      { pid:'peachblossom',
+        text: [
+          'Noch ein Pfirsichbaum, diesmal mit einem gelben Zaun, kräftiger im Gelb und Rosa. Nicht das Andenken an Mauve, sondern ein späteres Bild desselben Motivs.',
+          'Vincent kehrt zu Bäumen zurück, die er schon kennt. Die Wiederholung ist kein Mangel – er will sicherer werden in der Farbe des Südens.'
+        ],
+        fact: 'Das Bild gehört dem Van Gogh Museum und entsteht im April und Mai 1888, gegen Ende der Obstgartenreihe.' },
+      { pid:'fieldflowers',
+        text: [
+          'Ein Feld voller Blumen vor Arles, grün und gelb, der Horizont weit. Der Frühling geht in den Frühsommer über.',
+          'Zwischen den Gärten und der späteren Ernte steht dieses offene Feld. Vincent malt, was unmittelbar vor der Stadt wächst.'
+        ],
+        fact: 'Das Bild gehört dem Van Gogh Museum. Es entsteht im Mai 1888, als die Obstblüte vorbei ist und das Land voller Blumen steht.' },
+    ]
+   },
+   {
+    id: 'arles-sea', place: 'Arles · Langlois-Brücke und Saintes-Maries', when: 'März–Juni 1888',
+    map: { x:72, y:200 },
+    intro: [
+      'Gleich in den ersten Wochen malt Vincent die Zugbrücke von Langlois, südlich der Stadt: blauer Himmel, blauer Kanal, orangefarbene Ufer, Wäscherinnen. Die Brücke erinnert ihn an Japan und an Holland zugleich.',
+      'Anfang Juni fährt er für ein paar Tage an die Küste, nach Saintes-Maries-de-la-Mer. Das Mittelmeer, schreibt er, hat eine Farbe wie die Makrelen: man weiss nie genau, ob es grün, violett oder blau ist. Er bringt Boote, die See und den Blick auf das Dorf mit zurück und malt später im Atelier die weissen Hütten.'
+    ],
+    works: [
+      { pid:'langlois',
+        text: [
+          'Eine Zugbrücke über den Kanal, ein kleiner Wagen darauf, der sich gegen den blauen Himmel abzeichnet. Unten Wäscherinnen, die Ufer orange, das Wasser blau.',
+          'Vincent malt die Brücke mehrfach, in Öl und als Zeichnung. Sie ist eines seiner ersten klaren Bilder aus Arles: einfach gebaut, kräftig in der Farbe.'
+        ],
+        quote: { text:'Was die Arbeit angeht, habe ich heute eine Leinwand von 15 mitgebracht: eine Zugbrücke, über die ein kleiner Wagen fährt und sich gegen einen blauen Himmel abzeichnet – der Fluss ebenfalls blau, orangefarbene Ufer mit Grün, eine Gruppe Wäscherinnen mit bunten Jacken und Hauben.', cite:'Brief 585, Arles, um den 16. März 1888, an Theo' },
+        fact: 'Das Bild gehört dem Van Gogh Museum. Die Langlois-Brücke lag südlich von Arles; Vincent malt sie im März 1888 in mehreren Fassungen.' },
+      { pid:'farmwheat',
+        text: [
+          'Ein niedriges Bauernhaus in einem schon hohen Weizenfeld, der Himmel weit. Vincent findet solche Höfe in der Ebene vor der Stadt.',
+          'Zwischen Brücke und Ernte steht dieses ruhige Bild: das Land, das er den Sommer über malen wird, taucht hier schon auf.'
+        ],
+        fact: 'Das Bild gehört dem Van Gogh Museum und entsteht im Mai 1888.' },
+      { pid:'boatsbeach',
+        text: [
+          'Fischerboote auf dem Sand, fest, bunt, klar umrissen, als lägen sie in einer japanischen Farbholzschnittszene. Dahinter das Meer und ein weiteres Segel.',
+          'Vincent zeichnet die Boote in Saintes-Maries und malt sie zum Teil im Atelier zu Ende. Die bunten Rümpfe sind genau beobachtet und zugleich ornamental gesetzt.'
+        ],
+        fact: 'Das Bild gehört dem Van Gogh Museum. Es entsteht im Juni 1888, nach dem kurzen Aufenthalt an der Küste.' },
+      { pid:'seascape',
+        text: [
+          'Das Mittelmeer in bewegtem Blau und Grün, ein kleines Boot, der Horizont tief. Vincent schreibt, man wisse nie genau, welche Farbe das Wasser habe.',
+          'Er malt die See vor Ort, rasch, in der frischen Luft. Es ist eines seiner wenigen reinen Seestücke – und weit weg von der Nordsee bei Scheveningen.'
+        ],
+        quote: { text:'Ich schreibe dir von Saintes-Maries, endlich am Mittelmeer – das Mittelmeer hat eine Farbe wie die Makrelen, das heisst eine wechselnde: man weiss nicht immer, ob es grün oder violett ist, man weiss nicht immer, ob es blau ist, denn in der nächsten Sekunde hat der wechselnde Widerschein einen rosa oder grauen Ton angenommen.', cite:'Brief 619, Saintes-Maries-de-la-Mer, um den 3. oder 4. Juni 1888, an Theo' },
+        fact: 'Das Bild gehört dem Van Gogh Museum und entsteht im Juni 1888 in Saintes-Maries-de-la-Mer.' },
+      { pid:'viewsaintes',
+        text: [
+          'Das Dorf von den Feldern her gesehen: Kirchturm, Dächer, ein Meer aus Grün und Violett im Vordergrund. Saintes-Maries liegt flach hinter dem Land.',
+          'Vincent nennt in seinem Brief aus dem Ort zwei Marinebilder und eine Ansicht des Dorfes. Diese Ansicht hält die kleine Stadt fest, bevor er wieder nach Arles fährt.'
+        ],
+        fact: 'Das Bild gehört dem Kröller-Müller Museum. Es entsteht im Juni 1888.' },
+      { pid:'cottages',
+        text: [
+          'Drei weisse Hütten unter einem blauen Himmel, Grün ringsum, die Dächer dunkel. Ein einfaches, fast festliches Bild der Küste.',
+          'An die Schwester schreibt Vincent später, er habe gedacht, sie würde genau diese weissen Hütten unter dem blauen Himmel wählen, wenn sie ein Bild von ihm mitnehmen dürfte.'
+        ],
+        quote: { text:'Ich hatte selbst gedacht, du hättest die weissen Hütten unter dem blauen Himmel im Grün genommen, die ich in Saintes-Maries am Mittelmeer gemacht habe.', cite:'Brief 678, Arles, 9. und um den 14. September 1888, an Willemien (Wil)' },
+        fact: 'Das Bild gehört dem Kunsthaus Zürich. Es entsteht im Juni 1888, nach der Rückkehr oder noch in Saintes-Maries.' },
+    ]
+   },
+   {
+    id: 'arles-harvest', place: 'Arles · Ernte und Montmajour', when: 'Juni–Juli 1888',
+    map: { x:72, y:200 },
+    intro: [
+      'Im Juni steht die Ernte auf der Ebene von La Crau, mit der Abtei Montmajour im Hintergrund. Vincent arbeitet in der Hitze, «schnell, schnell, schnell und eilig wie der Schnitter». Es entstehen die grosse Ernte, die Heuschober, das Bauernhaus, ein Weizenfeld am Abend.',
+      'Er zeichnet und malt auch bei den Felsen und in einem blühenden Garten. Die goldgelbe Landschaft des Südens ist jetzt sein eigentliches Motiv.'
+    ],
+    works: [
+      { pid:'harvest88',
+        text: [
+          'Die weite Ebene von La Crau zur Erntezeit: gelbe Felder, ein Karren, Gehöfte, am Horizont der Hügel von Montmajour. Eines der grossen Landschaftsbilder des Sommers.',
+          'Vincent arbeitet eine ganze Woche an dieser Leinwand von 30. Er hält sie für ernster als manche rasche Studie – ein Bild, das die Landschaft als Ganzes fasst.'
+        ],
+        quote: { text:'Die Ernte ist etwas ernster. Das ist das Motiv, an dem ich diese Woche auf einer Leinwand von 30 gearbeitet habe.', cite:'Brief 625, Arles, um den 15. und 16. Juni 1888, an Theo' },
+        fact: 'Das Bild gehört dem Van Gogh Museum. Es entsteht im Juni 1888 und zeigt die Ernte in der Crau mit Montmajour im Hintergrund.' },
+      { pid:'hayprovence',
+        text: [
+          'Zwei grosse, leuchtend gelbe Heuschober vor einem weiten Land, der Himmel hell. Vincent skizziert das Motiv zuerst rasch für Theo, dann malt er es aus.',
+          'Die Schober stehen wie Figuren in der Landschaft. Das Gelb des Sommers ist hier fast ohne Mischton, voll und warm.'
+        ],
+        fact: 'Das Bild gehört dem Kröller-Müller Museum und entsteht im Juni 1888.' },
+      { pid:'farmprovence',
+        text: [
+          'Ein geputztes Bauernhaus hinter einer Mauer, ein Heuschober, der Himmel mit einem kühlen Blau. Der Hof wirkt fest, fast heiter.',
+          'Vincent malt nicht nur die weite Ebene, sondern auch den einzelnen Hof. Das Bild gehört heute einer amerikanischen Sammlung.'
+        ],
+        fact: 'Das Bild gehört der National Gallery of Art in Washington und entsteht im Juni 1888.' },
+      { pid:'wheateve',
+        text: [
+          'Ein Weizenfeld in tiefem Gelb, der Himmel schon zum Abend hin, die Stadt als dunkle Silhouette. Die Hitze des Tages klingt ab, die Farbe bleibt.',
+          'Vincent sucht in diesem Sommer nicht nur den Mittag, sondern auch das Ende des Lichts. Das Bild hängt heute in Winterthur.'
+        ],
+        fact: 'Das Bild gehört dem Kunstmuseum Winterthur und entsteht im Juni 1888.' },
+      { pid:'rocks88',
+        text: [
+          'Felsen und eine Eiche, kühler als die Getreidefelder, das Grün kräftiger. Vincent malt bei Montmajour nicht nur die Ferne, sondern auch den Stein.',
+          'Nach Wochen in der Ebene ist dies ein anderes Motiv: massiv, nah, mit hartem Licht auf den Flächen.'
+        ],
+        fact: 'Das Bild gehört dem Kröller-Müller Museum und entsteht im Juli 1888.' },
+      { pid:'flowergarden',
+        text: [
+          'Ein blühender Garten mit einem Weg, dicht, bunt, voller Beete. Neben der goldenen Ernte steht hier das nahe Grün und Rot der Blumen.',
+          'Vincent bleibt bei dem, was die Jahreszeit hergibt. Der Garten ist unruhiger als die weiten Felder – und ebenso vom Süden geprägt.'
+        ],
+        quote: { text:'Ich habe sieben Weizenstudien, leider alle ganz gegen meinen Wunsch nichts als Landschaften. Altgoldgelbe Landschaften – gemacht schnell, schnell, schnell und eilig wie der Schnitter, der unter der glühenden Sonne schweigt und sich darauf konzentriert, sie einzubringen.', cite:'Brief 633, Arles, 27. Juni 1888, an Emile Bernard' },
+        fact: 'Das Bild gehört dem Kunstmuseum Den Haag und entsteht im Juli 1888.' },
+    ]
+   },
+   {
+    id: 'arles-house', place: 'Arles · Das Gelbe Haus', when: 'Aug.–Dez. 1888',
+    map: { x:72, y:200 },
+    intro: [
+      'Im Mai mietet Vincent das rechte Eckhaus an der Place Lamartine, das Gelbe Haus. Er richtet es nicht nur für sich ein, sondern so, dass auch ein Freund wohnen kann. Für das Gästezimmer plant er eine Dekoration: nichts als grosse Sonnenblumen, «eine Sinfonie in Blau und Gelb».',
+      'Er malt das Haus in der Schwefelsonne unter kobalblauem Himmel, sein einfaches Schlafzimmer, den eigenen Stuhl und den Sessel für Gauguin. Den Sämann nimmt er im November noch einmal auf: eine dunkle Figur unter einer gewaltigen gelben Sonne.'
+    ],
+    works: [
+      { pid:'yellowhouse',
+        text: [
+          'Das rechte Eckhaus an der Place Lamartine, aussen buttergelb, die Fensterläden grellgrün, der Himmel rein kobaltblau. Links das Café, davor der Platz mit Bäumen.',
+          'Vincent malt das Haus, in dem er lebt und das er für eine Ateliergemeinschaft herrichten will. Es ist zugleich ein Bild und ein Programm: hier will er bleiben und andere aufnehmen.'
+        ],
+        quote: { text:'Mein Haus hier ist aussen in frischer Buttergelb gestrichen, mit grellgrünen Fensterläden, und es steht in voller Sonne auf dem Platz, wo es einen grünen Garten aus Platanen, Oleander und Akazien gibt. Innen ist es ganz mit Kalk getüncht, und der Boden ist aus roten Ziegeln. Und der tiefblaue Himmel darüber. Darin kann ich leben und atmen und nachdenken und malen.', cite:'Brief 678, Arles, 9. und um den 14. September 1888, an Willemien (Wil)' },
+        fact: 'Das Bild gehört dem Van Gogh Museum. Das Gelbe Haus stand an der Place Lamartine; es wurde im Zweiten Weltkrieg beschädigt und später abgetragen.' },
+      { pid:'bedroom',
+        text: [
+          'Vincents Schlafzimmer im oberen Stock: das Bett, zwei Stühle, der Waschtisch, Bilder an der Wand, die Fensterläden geschlossen. Alles ist einfach und fest gebaut.',
+          'Er will, dass die Farbe allein die Ruhe ausdrückt. Das Bild kennt man aus der kurzen Geschichte; hier steht es an seinem Ort, im Gelben Haus, als Teil der Einrichtung.'
+        ],
+        quote: { text:'Diesmal ist es ganz einfach mein Schlafzimmer; nur die Farbe soll hier die Sache machen und durch ihre Vereinfachung den Dingen einen grösseren Stil geben, und hier die Ruhe oder den Schlaf überhaupt andeuten. Der Anblick des Bildes soll den Kopf oder vielmehr die Einbildungskraft ausruhen. Die Wände sind von einem blassen Violett. Der Boden ist mit roten Fliesen. Das Holz des Bettes und die Stühle sind von der Farbe frischer Butter.', cite:'Brief 705, Arles, 16. Oktober 1888, an Theo' },
+        fact: 'Das Bild gehört dem Van Gogh Museum. Es ist dasselbe Werk wie in der kurzen Van-Gogh-Geschichte; Fortschritte im Ausmalen gelten an beiden Orten.' },
+      { pid:'sunflowers',
+        text: [
+          'Fünfzehn Sonnenblumen in einer gelben Vase vor einem gelben Grund: hell auf hell, das Bild, das Vincent selbst für das beste dieser Reihe hält.',
+          'Er malt die Blumen am frühen Morgen, weil sie schnell verwelken. Sie sollen das Zimmer schmücken, in dem Gauguin wohnen wird – eine Dekoration, keine blosse Studie. Dasselbe Bild steht schon in der Galerie und in der kurzen Geschichte.'
+        ],
+        quote: { text:'Ich male gerade mit dem Eifer eines Marseillers, der Bouillabaisse isst, was dich nicht wundern wird, wenn es um grosse Sonnenblumen geht. In der Hoffnung, mit Gauguin in einem Atelier von uns zu leben, möchte ich eine Dekoration für das Atelier machen. Nichts als grosse Sonnenblumen. Das Ganze wird also eine Sinfonie in Blau und Gelb.', cite:'Brief 666, Arles, 21. oder 22. August 1888, an Theo' },
+        fact: 'Das Bild hängt in der National Gallery in London. Es ist dasselbe Werk wie in der Galerie und in der kurzen Van-Gogh-Geschichte; Fortschritte im Ausmalen gelten an allen Orten.' },
+      { pid:'sunflowermunich',
+        text: [
+          'Zwölf Sonnenblumen in einem gelben Krug, der Grund dunkler als bei der Londoner Fassung. Eine zweite, eigenständige Version derselben Dekoration.',
+          'Vincent führt den Plan mehrerer grosser Blumenbilder wirklich aus. Diese Münchner Leinwand gehört zu den vollendetsten der Reihe.'
+        ],
+        fact: 'Das Bild hängt in der Neuen Pinakothek in München. Es entsteht im August 1888 und ist nicht dasselbe Werk wie die Londoner Sonnenblumen.' },
+      { pid:'poetsgarden',
+        text: [
+          'Der öffentliche Garten vor dem Gelben Haus, dichtes Grün, ein Weg, das Licht schwer und warm. Vincent nennt ihn den Garten des Dichters.',
+          'Er denkt dabei an den Dichter, der kommen soll – an Gauguin, und an das Zimmer, das auf den Garten und den Sonnenaufgang blickt.'
+        ],
+        fact: 'Das Bild gehört dem Art Institute of Chicago und entsteht im September 1888.' },
+      { pid:'vgchair',
+        text: [
+          'Vincents eigener Stuhl: schlicht, aus hellem Holz, mit Pfeife und Tabak darauf, der Boden aus roten Ziegeln. Ein Bildnis ohne Person.',
+          'Zusammen mit Gauguins Sessel bildet der Stuhl ein Paar. Vincent stellt sich selbst als einfachen, hellen Gegenstand dar – nicht als Herr des Hauses, sondern als Bewohner.'
+        ],
+        fact: 'Das Bild hängt in der National Gallery in London. Es entsteht im Dezember 1888, in den Wochen von Gauguins Aufenthalt.' },
+      { pid:'gauguinchair',
+        text: [
+          'Gauguins Sessel ist niedriger, dunkler, nächtlich: auf dem Sitz Kerzen und Bücher, der Teppich rotgrün, die Luft schwerer.',
+          'Vincent malt den abwesenden Freund in seinem Möbel. Das Bild ist kein Spott, sondern ein Gegenstück: zwei Arten zu sitzen, zwei Arten zu leben, in einem Haus.'
+        ],
+        fact: 'Das Bild gehört dem Van Gogh Museum und entsteht im Dezember 1888.' },
+      { pid:'sowerarles',
+        text: [
+          'Ein Sämann vor einer riesigen gelben Sonne, der Baum schwarz wie eine Schrift, der Acker in Violett und Gelb. Vincent kehrt im November zu einem Motiv zurück, das ihn seit Jahren begleitet.',
+          'Schon im Juni hatte er einen Sämann mit gelbem Himmel und violettem Boden umgearbeitet. Diese spätere Fassung ist kühner, flächiger, näher bei dem, was er eine Sprache der Farbe nennt.'
+        ],
+        quote: { text:'Ich habe gestern und heute an dem Sämann gearbeitet, der ganz umgearbeitet ist. Der Himmel ist gelb und grün, der Boden violett und orange.', cite:'Brief 634, Arles, um den 28. Juni 1888, an Theo' },
+        fact: 'Das Bild gehört dem Van Gogh Museum und entsteht im November 1888.' },
+    ]
+   },
+   {
+    id: 'arles-portraits', place: 'Arles · Bildnisse', when: 'Juni–Nov. 1888',
+    map: { x:72, y:200 },
+    intro: [
+      'Im Süden findet Vincent endlich Modelle. Der Zuave mit dem Tigerauge, der Briefträger Joseph Roulin – «ein grosses bärtiges, sehr sokratisches Gesicht», ein wütender Republikaner wie Père Tanguy. Roulin und seine Familie werden zu Freunden.',
+      'Er malt den Hirten Patience Escalier, den belgischen Maler Eugène Boch als Dichter vor einem Sternenhimmel, den Leutnant Milliet, Roulins Sohn Armand und Madame Ginoux, die Wirtin des Café de la Gare, als Arlésienne. Ein junges Mädchen in gestreifter Bluse nennt er, nach einem Wort bei Pierre Loti, eine «Mousmé».'
+    ],
+    works: [
+      { pid:'zouave',
+        text: [
+          'Ein Zuave in blauer Uniform mit verblasstem Rotorange, die Mütze rot, der Blick fest. Vincent hat endlich ein Modell und beginnt mehr als ein Bildnis von ihm.',
+          'Er beschreibt den jungen Mann als Burschen mit kleinem Gesicht, Stiernacken und Tigerauge. Die Farbe der Uniform ist hart, sagt er – ein gewöhnliches, schwer zu treffendes Blau.'
+        ],
+        quote: { text:'Endlich habe ich ein Modell – einen Zuaven – es ist ein Bursche mit kleinem Gesicht, Stiernacken und Tigerauge, und ich habe mit einem Bildnis begonnen und noch eines angefangen.', cite:'Brief 629, Arles, 21. Juni 1888, an Theo' },
+        fact: 'Das Bild gehört dem Van Gogh Museum. Es ist die halbe Figur des Zuaven, gemalt im Juni 1888; eine sitzende Fassung entsteht zur selben Zeit.' },
+      { pid:'mousme',
+        text: [
+          'Ein junges Mädchen aus Arles in gestreifter Bluse, den Oleanderzweig in der Hand, der Blick ruhig. Vincent gibt ihr einen Namen aus der Literatur.',
+          'Den Ausdruck holt er aus Pierre Lotis Roman «Madame Chrysanthème». Eine «Mousmé» ist dort ein japanisches Mädchen; hier ist es eine Provenzalin, gemalt mit der Klarheit, die er in Arles sucht.'
+        ],
+        quote: { text:'Wenn du weisst, was eine «Mousmé» ist (du wirst es wissen, wenn du Madame Chrysanthème von Loti gelesen hast), ich habe gerade eine gemalt.', cite:'Brief 650, Arles, 29. Juli 1888, an Theo' },
+        fact: 'Das Bild gehört der National Gallery of Art in Washington und entsteht im Juli 1888.' },
+      { pid:'roulin',
+        text: [
+          'Joseph Roulin in der blauen, goldbesetzten Uniform der Post, der Bart voll, der Blick offen. Vincent findet in ihm mehr als ein Kostüm.',
+          'Roulin wird zum Freund des Hauses: er sitzt Modell, kümmert sich, bleibt auch später in der Nähe. Das Bildnis ist eines von mehreren, die Vincent von ihm und der Familie malt.'
+        ],
+        quote: { text:'Jetzt bin ich an einem anderen Modell, einem Briefträger in einer blauen, mit Gold besetzten Uniform, ein grosses bärtiges, sehr sokratisches Gesicht. Ein wütender Republikaner wie Père Tanguy. Ein Mann, der interessanter ist als manch andere Leute.', cite:'Brief 652, Arles, 31. Juli 1888, an Theo' },
+        fact: 'Das Bild gehört dem Detroit Institute of Arts und entsteht im August 1888.' },
+      { pid:'escalier',
+        text: [
+          'Patience Escalier, ein Gärtner und früherer Hirte, in einem strohgelben Hut, die Hände gekreuzt, der Grund kräftig. Vincent sucht hier keinen städtischen Typ, sondern einen Menschen der Crau.',
+          'In einem Brief spricht er vom «schrecklichen Menschen», den er in der Glut der Ernte, am Mittag, habe malen müssen: glühendes Orange, altgoldene Töne in der Dunkelheit.'
+        ],
+        fact: 'Das Bild gehört dem Kunsthaus Zürich und entsteht im August 1888.' },
+      { pid:'boch',
+        text: [
+          'Der belgische Maler Eugène Boch, den feinen Kopf vor einem tiefen Ultramarin, in dem Sterne stehen. Vincent malt ihn bewusst als Dichter.',
+          'Boch logiert in der Nähe, die beiden sprechen über den Süden und den Norden. Jahre später kauft Bochs Schwester Anna den roten Weinberg – das einzige Bild, das Vincent zu Lebzeiten verkauft wird.'
+        ],
+        quote: { text:'Ich habe eins zum Anfang, das Bildnis eines jungen belgischen Impressionisten; ich habe ihn ein wenig als Dichter gemalt, den feinen, nervösen Kopf vor einem nächtlichen Himmel aus tiefem Ultramarin mit dem Funkeln der Sterne.', cite:'Brief 678, Arles, 9. und um den 14. September 1888, an Willemien (Wil)' },
+        fact: 'Das Bild hängt im Musée d’Orsay in Paris und entsteht im September 1888.' },
+      { pid:'milliet',
+        text: [
+          'Paul-Eugène Milliet, Unterleutnant der Zuaven, in Uniform, vor einem Nachthimmel mit Sichelmond. Vincent gibt ihm Zeichenunterricht mit dem Perspektivrahmen.',
+          'Milliet sitzt Modell und hilft später, Bilder nach Paris zu bringen. Das Bildnis hängt den Winter über in Vincents Schlafzimmer, neben dem Porträt von Boch.'
+        ],
+        quote: { text:'Ich kenne hier einen Unterleutnant der Zuaven namens Milliet. Ich gebe ihm Zeichenunterricht – mit meinem Perspektivrahmen.', cite:'Brief 628, Arles, um den 19. Juni 1888, an Emile Bernard' },
+        fact: 'Das Bild gehört dem Kröller-Müller Museum und entsteht im September 1888.' },
+      { pid:'armand',
+        text: [
+          'Armand Roulin, der älteste Sohn des Briefträgers, im dunklen Anzug und gelben Hut, der Blick seitwärts, jung und ernst.',
+          'Vincent malt mehrere Mitglieder der Familie: den Vater, die Söhne, später Augustine an der Wiege. Die Roulins sind in diesem Jahr seine Menschen in Arles.'
+        ],
+        fact: 'Das Bild gehört dem Museum Boijmans Van Beuningen in Rotterdam und entsteht im November und Dezember 1888.' },
+      { pid:'arlesienne',
+        text: [
+          'Madame Ginoux, Wirtin des Café de la Gare, als Arlésienne: der schwarze Anzug, der Schirm, die Handschuhe, der Blick zur Seite. Ein Bildnis und ein Typ zugleich.',
+          'Vincent malt sie in wenigen Sitzungen, klar und fest im Umriss. Das Café de la Gare ist einer seiner Orte in der Stadt; die Wirtin kennt das Haus und die Gäste.'
+        ],
+        fact: 'Das Bild hängt im Musée d’Orsay in Paris und entsteht im November 1888.' }
+    ]
+   },
+   {
+    id: 'arles-night', place: 'Arles · Nächte', when: 'Sept. 1888',
+    map: { x:72, y:200 },
+    intro: [
+      'Oft, schreibt Vincent, scheint ihm die Nacht lebendiger und reicher gefärbt als der Tag. Im September malt er drei grosse Nachtbilder: die Caféterrasse unter den Sternen, das Innere des Nachtcafés und den Sternenhimmel über der Rhône.',
+      'Er malt die Nacht auf der Stelle, nicht am Tag nach einer Skizze. Schwarz braucht er kaum: Blau, Violett, Grün, das gelbe Gaslicht und sein Widerschein im Wasser genügen.'
+    ],
+    works: [
+      { pid:'cafe',
+        text: [
+          'Die Terrasse des Cafés an der Place du Forum, gelb erleuchtet, darüber der tiefblaue, gestirnte Himmel, kleine Figuren an den Tischen. Ein Nachtbild ohne Schwarz.',
+          'Vincent malt es nachts, auf der Stelle. Dasselbe Bild kennt man aus der Galerie und der kurzen Geschichte; hier steht es in der Reihe der Arleser Nächte.'
+        ],
+        quote: { text:'Ich habe dieser Tage ein neues Bild gemacht, das die Aussenseite eines Cafés am Abend darstellt. Auf der Terrasse sind kleine Figuren von Trinkern. Eine riesige gelbe Laterne erhellt die Terrasse, die Fassade, den Bürgersteig und wirft sogar ein Licht auf das Pflaster der Strasse, das einen violetten Rosaton annimmt. Das ist ein Nachtbild ohne Schwarz, nur mit schönem Blau und Violett und Grün, und in dieser Umgebung färbt sich der beleuchtete Platz in blassem Schwefel, in Zitronengrün.', cite:'Brief 678, Arles, 9. und um den 14. September 1888, an Willemien (Wil)' },
+        fact: 'Das Bild gehört dem Kröller-Müller Museum. Es ist dasselbe Werk wie in der Galerie und in der kurzen Van-Gogh-Geschichte; Fortschritte im Ausmalen gelten an allen Orten.' },
+      { pid:'nightcafe',
+        text: [
+          'Das Innere des Nachtcafés: blutrote Wände, ein grünes Billard, vier zitronengelbe Lampen, ein paar Gäste, die in den Ecken sitzen oder schlafen. Vincent hat drei Nächte dort gemalt und tagsüber geschlafen.',
+          'Er will mit Rot und Grün die «schrecklichen menschlichen Leidenschaften» ausdrücken. Das Bild, sagt er, sei eines der hässlichsten, die er gemacht habe – und doch hält er es neben die Kartoffelesser.'
+        ],
+        quote: { text:'Oft scheint mir, dass die Nacht viel lebendiger und reicher gefärbt ist als der Tag. Ich habe versucht, mit dem Rot und dem Grün die schrecklichen menschlichen Leidenschaften auszudrücken. Der Saal ist blutrot und dumpfgelb, in der Mitte ein grünes Billard, vier zitronengelbe Lampen mit orangefarbenem und grünem Strahlenkranz.', cite:'Brief 676, Arles, 8. September 1888, an Theo' },
+        fact: 'Das Bild gehört der Yale University Art Gallery in New Haven und entsteht im September 1888.' },
+      { pid:'rhone',
+        text: [
+          'Die Rhône bei Nacht: der Himmel blaugrün, das Wasser königsblau, die Stadt violett, das Gaslicht goldgelb im Strom. Im Vordergrund zwei kleine Figuren. Endlich der Sternenhimmel, in der Nacht selbst gemalt.',
+          'Auf dem Himmel steht der Grosse Wagen, grün und rosa schimmernd, gegen das brutale Gold der Gaslaternen. Es ist nicht die spätere Sternennacht von Saint-Rémy, sondern dieses Flussbild aus Arles.'
+        ],
+        quote: { text:'Beiliegend eine kleine Skizze einer quadratischen Leinwand von 30 – endlich der Sternenhimmel, in der Nacht selbst gemalt, unter einem Gaslicht. Der Himmel ist blaugrün, das Wasser ist Königsblau, das Gelände ist mauvefarben. Die Stadt ist blau und violett. Das Gas ist gelb, und seine Spiegelungen sind rotgold und gehen bis ins Bronzegrün hinunter. Auf dem blaugrünen Feld des Himmels hat der Grosse Wagen ein grünes und rosa Funkeln, dessen diskrete Blässe sich vom brutalen Gold des Gases abhebt. Im Vordergrund zwei farbige Figuren von Liebenden.', cite:'Brief 691, Arles, um den 29. September 1888, an Theo' },
+        fact: 'Das Bild hängt im Musée d’Orsay in Paris und entsteht im September 1888. Es ist ein anderes Werk als die Sternennacht von 1889.' },
+      { pid:'greenvine',
+        text: [
+          'Ein grüner Weinberg bei Arles, Menschen zwischen den Reihen, im Hintergrund die Stadt. Vincent malt die Reben in Grün, Purpur und Gelb, die Trauben violett.',
+          'Neben den Nachtbildern bleibt das Land präsent. Der Weinberg gehört zum Herbst, der jetzt beginnt – noch grün, noch nicht der spätere rote Weinberg mit Gauguin.'
+        ],
+        quote: { text:'Die Weinberge, die ich gerade gemalt habe, sind grün, purpurn, gelb – mit violetten Trauben, mit schwarzen und orangefarbenen Ranken.', cite:'Brief 694, Arles, 3. Oktober 1888, an Theo' },
+        fact: 'Das Bild gehört dem Kröller-Müller Museum und entsteht im September 1888.' }
+    ]
+   },
+   {
+    id: 'arles-gauguin', place: 'Arles · Gauguin und der Dezember 1888', when: 'Okt.–Dez. 1888',
+    map: { x:72, y:200 },
+    intro: [
+      'Vincent hofft auf eine Ateliergemeinschaft im Süden. Er malt ein Selbstbildnis für den Austausch mit Gauguin und lädt ihn ins Gelbe Haus. Am 23. Oktober 1888 kommt Paul Gauguin in Arles an. Die beiden arbeiten zusammen: an den Alyscamps, im Weinberg, später im Tanzsaal. Der rote Weinberg, den Vincent in diesen Wochen malt, wird das einzige Bild, das zu seinen Lebzeiten verkauft wird – an Anna Boch, die Schwester von Eugène Boch.',
+      'Die Wochen sind intensiv, dann wird das Zusammenleben schwierig. Am 23. Dezember erleidet Vincent eine Krise. Er verletzt sich am linken Ohr und wird ins Spital von Arles gebracht. Gauguin reist ab, Theo kommt aus Paris. Die genauen Umstände sind nicht vollständig geklärt; wir halten uns an das, was Briefe und Spitalakten sicher sagen, und erfinden nichts dazu.'
+    ],
+    works: [
+      { pid:'selfgauguin',
+        text: [
+          'Vincent malt sich selbst für den Austausch mit Gauguin: kurzer Bart, durchdringender Blick, der Grund hellgrün. Das Bild entsteht in der Hoffnung, noch bevor der Freund ankommt.',
+          'Die Maler der Gruppe tauschen Köpfe, um einander gegenwärtig zu haben. Vincent schickt sein Bildnis nach Pont-Aven; es ist eine Einladung so gut wie ein Porträt.'
+        ],
+        fact: 'Das Bild gehört dem Fogg Museum in Cambridge und entsteht im September 1888, vor Gauguins Ankunft.' },
+      { pid:'alyscamps',
+        text: [
+          'Die alte Gräberstrasse der Alyscamps im Herbst: hohe Bäume, fallendes Laub, zwei Figuren unter dem Gewölbe der Pappeln. Vincent und Gauguin malen hier nebeneinander.',
+          'Das Motiv ist ein gemeinsames. Man sieht, wie nah die beiden in diesen ersten Wochen zusammenarbeiten – dieselbe Allee, verschiedene Augen.'
+        ],
+        fact: 'Das Bild gehört dem Kröller-Müller Museum und entsteht im November 1888, kurz nach Gauguins Ankunft.' },
+      { pid:'redvineyard',
+        text: [
+          'Arbeiter im Weinberg unter einem tiefgelben Himmel, das Laub schon rot, der Boden violett. Vincent malt die Lese, während Gauguin im Haus ist.',
+          'Anna Boch, selbst Malerin und Schwester von Eugène Boch, kauft das Bild 1890 auf einer Ausstellung in Brüssel. Es bleibt das einzige Gemälde, das Vincent zu Lebzeiten verkauft wird.'
+        ],
+        fact: 'Das Bild gehört dem Puschkin-Museum in Moskau und entsteht im November 1888.' },
+      { pid:'memorygarden',
+        text: [
+          'Erinnerung an den Garten in Etten: die Mutter und die Schwester, ein Weg, Blumen, ein Himmel wie aus einem Traum. Vincent malt das Bild im Haus, nicht vor dem Motiv.',
+          'Gauguin rät in diesen Wochen zu mehr Arbeit aus dem Kopf. Vincent versucht es – und bleibt zwiespältig. Das Bild ist dicht, ornamental, ein wenig fremd in seiner eigenen Reihe.'
+        ],
+        fact: 'Das Bild gehört der Eremitage in Sankt Petersburg und entsteht im November 1888.' },
+      { pid:'dancehall',
+        text: [
+          'Der Tanzsaal in Arles: viele Köpfe, Lichter, ein dichtes Innenraumgelb. Auch dies entsteht in der Zeit des gemeinsamen Arbeitens.',
+          'Das Bild ist unruhiger als die Gärten und Weinberge. Man spürt die Enge des Saals und die Nähe der Stadt im Winter.'
+        ],
+        quote: { text:'Wie du durch mein Telegramm erfahren hast, ist Gauguin wohlbehalten angekommen. Er macht sogar den Eindruck, als ginge es ihm besser als mir. Er ist als Mensch sehr, sehr interessant, und ich habe alles Vertrauen, dass wir mit ihm eine Menge Dinge machen werden.', cite:'Brief 712, Arles, um den 25. Oktober 1888, an Theo' },
+        fact: 'Das Bild hängt im Musée d’Orsay in Paris und entsteht im Dezember 1888.' }
+    ]
+   },
+   {
+    id: 'arles-recovery', place: 'Arles · Genesung', when: 'Jan.–Mai 1889',
+    map: { x:72, y:200 },
+    intro: [
+      'Im Januar 1889 darf Vincent das Spital zeitweise verlassen und malt wieder. Er zeigt sich selbst mit dem Verband, einmal mit Pfeife. Dem jungen Arzt Félix Rey dankt er mit einem Bildnis. Auf einem Stillleben liegen Zwiebeln, ein Zeichenbrett, eine Pfeife und ein Brief von Theo.',
+      'Er malt Augustine Roulin als «Berceuse», die Frau an der Wiege, und nimmt das Bildnis des Freundes Roulin noch einmal auf. Im Garten des Spitals und in den wieder blühenden Obstgärten vor der Stadt sucht er die Ruhe der Arbeit.',
+      'Nach weiteren Rückfällen beschliesst er, Arles zu verlassen. Am 8. Mai 1889 reist er in die Anstalt Saint-Paul-de-Mausole in Saint-Rémy-de-Provence.'
+    ],
+    works: [
+      { pid:'bandaged',
+        text: [
+          'Vincent im Wintermantel, den Kopf in eine Pelzmütze gewickelt, das linke Ohr unter einem weissen Verband. Hinter ihm eine japanische Farbholzschnittszene und eine Leinwand auf der Staffelei.',
+          'Er malt sich, nachdem er das Spital verlassen darf: nicht als Sensation, sondern als Rechenschaft. Der Blick ist wach, die Farbe kühl und klar.'
+        ],
+        fact: 'Das Bild gehört der Courtauld Gallery in London und entsteht im Januar 1889.' },
+      { pid:'bandagedpipe',
+        text: [
+          'Noch einmal der Verband, diesmal mit Pfeife, vor einem doppelten Grund aus Orange und Rot. Ein ruhigeres, fast häusliches Selbstbildnis.',
+          'Die Pfeife ist ein bekanntes Attribut. Vincent zeigt sich rauchend, sitzend, nicht als Kranker im Bett, sondern als Maler, der wieder arbeitet.'
+        ],
+        fact: 'Das Bild ist in Privatbesitz und entsteht im Januar 1889.' },
+      { pid:'onions88',
+        text: [
+          'Ein Zeichenbrett, eine Pfeife, ein Brief, Zwiebeln, ein Kerzenstummel, ein Weinglas: die Dinge auf dem Tisch eines Menschen, der gerade wieder anfängt.',
+          'Auf dem Brief ist Theos Handschrift zu ahnen. Das Stillleben ist ein heimliches Bildnis der Brüder: der eine schreibt, der andere richtet sich im Atelier wieder ein.'
+        ],
+        fact: 'Das Bild gehört dem Kröller-Müller Museum und entsteht im Januar 1889, kurz nach der Entlassung aus dem Spital.' },
+      { pid:'crab',
+        text: [
+          'Ein Krebs auf dem Rücken, der Panzer grell, die Scheren offen, der Grund grün. Ein ungewöhnliches Stillleben dieser Wochen.',
+          'Vincent malt das Tier genau und ohne Schmuck. Neben den Bildnissen und dem Verband bleibt er bei dem, was vor ihm auf dem Tisch liegt.'
+        ],
+        fact: 'Das Bild gehört dem Van Gogh Museum und entsteht im Januar 1889.' },
+      { pid:'doctorrey',
+        text: [
+          'Félix Rey, der junge Arzt des Spitals von Arles, im Anzug, der Blick fest, hinter ihm ein kräftiges Muster. Vincent dankt ihm mit diesem Bildnis.',
+          'Rey hat ihn im Dezember und Januar behandelt. Das Porträt ist ein Zeichen der Dankbarkeit, gemalt sobald die Kraft dazu da ist.'
+        ],
+        fact: 'Das Bild gehört dem Puschkin-Museum in Moskau und entsteht im Januar 1889.' },
+      { pid:'berceuse',
+        text: [
+          'Augustine Roulin als Berceuse: die Frau an der Wiege, das Seil der Wiege in der Hand, der Grund reich und ornamental, der Ausdruck still.',
+          'Vincent malt das Motiv in mehreren Fassungen. Er denkt an Seeleute, die ein solches Bild in der Kabine trösten könnte – eine Wiege, ein Lied, eine ruhige Fläche.'
+        ],
+        fact: 'Dieses Bild gehört dem Stedelijk Museum in Amsterdam und entsteht im März 1889; es ist eine von mehreren Fassungen der Berceuse.' },
+      { pid:'hospitalgarden',
+        text: [
+          'Der Garten des Spitals in Arles: Bäume, Beete, die Fassade, ein paar Figuren. Vincent malt den Ort, an dem er behandelt worden ist, ohne Pathos.',
+          'Im Frühling wird der Garten wieder hell. Die Arbeit im Freien ist Teil der Genesung, so wie die Obstgärten ein Jahr zuvor der Anfang waren.'
+        ],
+        fact: 'Das Bild gehört der Sammlung Oskar Reinhart «Am Römerholz» in Winterthur und entsteht im April 1889.' },
+      { pid:'vieworchards',
+        text: [
+          'Blick auf Arles mit erneut blühenden Bäumen: die Stadt in der Ferne, davor rosa und weisse Blüte. Ein Jahr nach der Ankunft kehrt das erste Motiv zurück.',
+          'Vincent sieht die Gärten jetzt mit anderer Erfahrung. Das Bild ist hell und weit – ein Schlussbild des Jahres in Arles, bevor er nach Saint-Rémy geht.'
+        ],
+        fact: 'Das Bild gehört dem Van Gogh Museum und entsteht im April 1889.' },
+      { pid:'roulin89',
+        text: [
+          'Noch einmal Joseph Roulin, jetzt flächiger, der Bart ornamental, hinter ihm stilisierte Blumen. Eine spätere Fassung des Freundes.',
+          'Roulin ist inzwischen versetzt, das Bild entsteht nach früheren Studien und aus der Erinnerung. Die Freundschaft bleibt im Werk sichtbar, auch wenn der Alltag sich ändert.'
+        ],
+        fact: 'Das Bild gehört dem Kröller-Müller Museum und entsteht im April 1889.' }
+    ]
    }
-
   ]
 }
 ];
