@@ -2577,7 +2577,7 @@ function paintStartShell(){
 paintStartShell();
 function startUi(){
   ingestPathData();
-  window.__pathTextsReady = !!(PATHS.length >= 13);
+  window.__pathTextsReady = !!(PATHS.length >= 14);
   bootRoute();
   maybeShowInstallHint();
   if ((currentTab || 'heute') === 'heute') renderHeute();

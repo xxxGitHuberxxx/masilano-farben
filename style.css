@@ -295,6 +295,7 @@ h1{font-family:Georgia,"Times New Roman",serif;font-weight:normal;font-size:32px
 .sentry.path[data-path="turner"]{background:linear-gradient(100deg,#2a2440 0%,#c0703a 48%,#f0d27a 140%)}
 .sentry.path[data-path="rembrandt"]{background:linear-gradient(100deg,#1c140c 0%,#7a4a1a 48%,#e0b45a 140%)}
 .sentry.path[data-path="sisley"]{background:linear-gradient(100deg,#1a3e4a 0%,#3d8a7a 48%,#d8c878 140%)}
+.sentry.path[data-path="friedrich"]{background:linear-gradient(100deg,#1c2433 0%,#4a5a6e 48%,#e0c08a 140%)}
 
 /* v7.2 retention: daily, album, calm, milestones */
 .headacts{display:flex;align-items:center;gap:6px;flex-shrink:0}
@@ -446,6 +447,7 @@ body.onboarding .apphead,body.onboarding .tabbar,body.onboarding .tab-screen{vis
 .waycard.path[data-path="turner"]{background:linear-gradient(100deg,#2a2440 0%,#c0703a 48%,#f0d27a 140%)}
 .waycard.path[data-path="rembrandt"]{background:linear-gradient(100deg,#1c140c 0%,#7a4a1a 48%,#e0b45a 140%)}
 .waycard.path[data-path="sisley"]{background:linear-gradient(100deg,#1a3e4a 0%,#3d8a7a 48%,#d8c878 140%)}
+.waycard.path[data-path="friedrich"]{background:linear-gradient(100deg,#1c2433 0%,#4a5a6e 48%,#e0c08a 140%)}
 .waycard.story{background:linear-gradient(100deg,#16324d 0%,#2a5f78 55%,#c79a4e 140%)}
 .waycard.story.neu{background:linear-gradient(100deg,#16324d 0%,#2a5f78 55%,#c79a4e 140%)}
 /* reuse sentry palette if present */
