@@ -1,4 +1,4 @@
-// v7.6 Spanish path step texts: vangogh life path.
+// v7.7 Spanish path step texts: vangogh life path.
 // Faithful translation of the existing DE/EN. No new facts.
 // Letter quotes are translations of the German self-translations
 // (except letter 569 / blvdclichy: from Vincent’s own English).

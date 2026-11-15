@@ -1,4 +1,4 @@
-// v7.6 French path step texts: hokusai life path.
+// v7.7 French path step texts: hokusai life path.
 // Faithful translation of the existing DE/EN. No new facts.
 // Letter quotes are translations of the German self-translations
 // (except letter 569 / blvdclichy: from Vincent’s own English).
