@@ -51,7 +51,7 @@
     "title": "Zuckerdose, Birnen und blaue Tasse",
     "artist": "Paul Cézanne",
     "year": "um 1865",
-    "museum": "Sammlung nicht ermittelt",
+    "museum": "Musée d’Orsay, Paris",
     "source": "Wikimedia Commons: «Sucrier, poires et tasse bleue, par Paul Cézanne.jpg», gemeinfrei (Public Domain)"
   },
   {
@@ -131,7 +131,7 @@
     "title": "Das Fischerdorf in L’Estaque",
     "artist": "Paul Cézanne",
     "year": "1870",
-    "museum": "Sammlung nicht ermittelt",
+    "museum": "Philadelphia Museum of Art",
     "source": "Wikimedia Commons: «Paul Cézanne - Le Village des pêcheurs à l'Estaque.jpg», gemeinfrei (Public Domain)"
   },
   {
@@ -179,7 +179,7 @@
     "title": "Quartier Four in Auvers-sur-Oise",
     "artist": "Paul Cézanne",
     "year": "um 1873",
-    "museum": "Sammlung nicht ermittelt",
+    "museum": "Philadelphia Museum of Art",
     "source": "Wikimedia Commons: «Paul Cézanne - Quartier Four, Auvers-sur-Oise.jpg», gemeinfrei (Public Domain)"
   },
   {
@@ -211,7 +211,7 @@
     "title": "Bildnis Victor Chocquet",
     "artist": "Paul Cézanne",
     "year": "1877",
-    "museum": "Sammlung nicht ermittelt",
+    "museum": "Columbus Museum of Art",
     "source": "Wikimedia Commons: «Portrait de Victor Chocquet assis, par Paul Cézanne.jpg», gemeinfrei (Public Domain)"
   },
   {
@@ -283,7 +283,7 @@
     "title": "Morgenblick auf L’Estaque gegen das Licht",
     "artist": "Paul Cézanne",
     "year": "1882–1883",
-    "museum": "Sammlung nicht ermittelt",
+    "museum": "Israel Museum, Jerusalem",
     "source": "Wikimedia Commons: «Paul Cezanne - Morning View of L'Estaque Against the Sunlight - Google Art Project.jpg», gemeinfrei (Public Domain)"
   },
   {
@@ -331,7 +331,7 @@
     "title": "Die kahlen Bäume im Jas de Bouffan",
     "artist": "Paul Cézanne",
     "year": "1880er Jahre",
-    "museum": "Sammlung nicht ermittelt",
+    "museum": "National Museum of Western Art, Tokyo",
     "source": "Wikimedia Commons: «Paul Cézanne - The Bare Trees at Jas de Bouffan - Google Art Project.jpg», gemeinfrei (Public Domain)"
   },
   {
@@ -339,7 +339,7 @@
     "title": "Kastanien und Gehöft im Jas de Bouffan",
     "artist": "Paul Cézanne",
     "year": "um 1878",
-    "museum": "Sammlung nicht ermittelt",
+    "museum": "Norton Simon Museum, Pasadena",
     "source": "Wikimedia Commons: «Marronniers et ferme au Jas de Bouffan, par Paul Cézanne, Yorck.jpg», gemeinfrei (Public Domain)"
   },
   {
@@ -509,7 +509,7 @@
             "Eine Zuckerdose, Birnen und eine blaue Tasse bilden eine kleine, geschlossene Gruppe. Schon hier sucht er Volumen und das Nebeneinander klarer Formen.",
             "Das Bild entsteht um 1865. Neben den Bildnissen ist das Stillleben für Cézanne von Anfang an ein eigenes Feld."
           ],
-          "fact": "um 1865. Sammlung nicht ermittelt."
+          "fact": "um 1865. Musée d’Orsay, Paris."
         },
         {
           "pid": "czgigot",
@@ -623,7 +623,7 @@
             "Die Häuser des Fischerdorfs staffeln sich den Hang hinunter zum Wasser. Die Palette bleibt erdig, die Formen sind fest gesetzt.",
             "1870 malt Cézanne L’Estaque, während in Frankreich der Krieg dauert. Den Militärdienst tritt er nicht an; er bleibt in der Provence."
           ],
-          "fact": "1870. Sammlung nicht ermittelt."
+          "fact": "1870. Philadelphia Museum of Art."
         },
         {
           "pid": "czhortense72",
@@ -688,7 +688,7 @@
             "Im Quartier Four staffeln sich Gärten, Mauern und Dächer den Hang hinauf. Das Licht ist weicher als in den frühen Bildern aus Aix.",
             "Um 1873 gehört dieser Blick zu den Auvers-Jahren, in denen Cézanne die Landschaft der Île-de-France vor der Natur beobachtet."
           ],
-          "fact": "um 1873. Sammlung nicht ermittelt."
+          "fact": "um 1873. Philadelphia Museum of Art."
         },
         {
           "pid": "czsmallpontoise",
@@ -737,7 +737,7 @@
             "Victor Chocquet, ein früher Sammler und Förderer, sitzt im Sessel, die Hände auf den Lehnen, der Blick aufmerksam. Cézanne malt ihn 1877 mehrfach.",
             "Chocquet unterstützt Cézanne und die Impressionisten. Schon 1876 hatte Cézanne in L’Estaque Motive für ihn begonnen."
           ],
-          "fact": "1877. Sammlung nicht ermittelt."
+          "fact": "1877. Columbus Museum of Art."
         },
         {
           "pid": "czcotesaint",
@@ -830,7 +830,7 @@
             "Gegen das Morgenlicht stehen Häuser und Bäume als dunklere Silhouetten, der Himmel und das Wasser hell. Die Sonne kommt dem Blick entgegen.",
             "1882–1883 sucht Cézanne in L’Estaque nicht nur die klare Mittagsform, sondern auch das Gegenlicht des Morgens."
           ],
-          "fact": "1882–1883. Sammlung nicht ermittelt."
+          "fact": "1882–1883. Israel Museum, Jerusalem."
         },
         {
           "pid": "czpins",
@@ -895,7 +895,7 @@
             "Kahle Stämme stehen vor dem Haus und dem Himmel; ohne Laub wird die Konstruktion aus Linien und Flächen besonders sichtbar.",
             "In den 1880er Jahren bleibt der Park des Jas ein nahes Motiv, im Sommer wie im winterlichen Zustand."
           ],
-          "fact": "1880er Jahre. Sammlung nicht ermittelt."
+          "fact": "1880er Jahre. National Museum of Western Art, Tokyo."
         },
         {
           "pid": "czfarmjas",
@@ -903,7 +903,7 @@
             "Kastanien stehen vor einem Gehöft auf dem Gelände des Jas; Gebäude, Bäume und der Boden sind in ruhigen, erdigen Tönen gefügt.",
             "Um 1878 arbeitet Cézanne nicht nur am Herrenhaus, sondern auch an den wirtschaftlichen Bauten und Bäumen des Besitzes."
           ],
-          "fact": "um 1878. Sammlung nicht ermittelt."
+          "fact": "um 1878. Norton Simon Museum, Pasadena."
         },
         {
           "pid": "czvuejas",

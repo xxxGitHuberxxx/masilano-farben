@@ -20,7 +20,11 @@
   "Brooklyn Museum, New York": "Brooklyn Museum, New York",
   "Dallas Museum of Art": "Dallas Museum of Art",
   "Detroit Institute of Arts": "Detroit Institute of Arts",
-  "Cincinnati Art Museum": "Cincinnati Art Museum"
+  "Cincinnati Art Museum": "Cincinnati Art Museum",
+  "Philadelphia Museum of Art": "Philadelphia Museum of Art",
+  "Columbus Museum of Art": "Columbus Museum of Art",
+  "Israel Museum, Jerusalem": "Israel Museum, Jérusalem",
+  "National Museum of Western Art, Tokyo": "National Museum of Western Art, Tokyo"
 });
   P.works = Object.assign(P.works || {}, {
   "czmother": {
@@ -45,7 +49,7 @@
   },
   "czsugar": {
     "title": "Sucrier, poires et tasse bleue",
-    "museum": "Collection non établie"
+    "museum": "Musée d’Orsay, Paris"
   },
   "czgigot": {
     "title": "Pain et gigot d’agneau",
@@ -85,7 +89,7 @@
   },
   "czvillageest": {
     "title": "Le village de pêcheurs à L’Estaque",
-    "museum": "Collection non établie"
+    "museum": "Philadelphia Museum of Art"
   },
   "czhortense72": {
     "title": "Portrait de Madame Cézanne",
@@ -109,7 +113,7 @@
   },
   "czquartier": {
     "title": "Quartier Four à Auvers-sur-Oise",
-    "museum": "Collection non établie"
+    "museum": "Philadelphia Museum of Art"
   },
   "czsmallpontoise": {
     "title": "Petites maisons à Pontoise",
@@ -125,7 +129,7 @@
   },
   "czchocquet": {
     "title": "Portrait de Victor Chocquet",
-    "museum": "Collection non établie"
+    "museum": "Columbus Museum of Art"
   },
   "czcotesaint": {
     "title": "La côte Saint-Denis à Pontoise",
@@ -161,7 +165,7 @@
   },
   "czmorningest": {
     "title": "Vue matinale de L’Estaque à contre-jour",
-    "museum": "Collection non établie"
+    "museum": "Israel Museum, Jérusalem"
   },
   "czpins": {
     "title": "L’Estaque, vue à travers les pins",
@@ -185,11 +189,11 @@
   },
   "czbaretrees": {
     "title": "Les arbres dépouillés du Jas de Bouffan",
-    "museum": "Collection non établie"
+    "museum": "National Museum of Western Art, Tokyo"
   },
   "czfarmjas": {
     "title": "Marronniers et ferme au Jas de Bouffan",
-    "museum": "Collection non établie"
+    "museum": "Norton Simon Museum, Pasadena"
   },
   "czvuejas": {
     "title": "Vue prise du Jas de Bouffan",
@@ -371,7 +375,7 @@
       "Un sucrier, des poires et une tasse bleue forment un petit groupe fermé. Déjà ici, il cherche le volume et la juxtaposition de formes claires.",
       "Le tableau date d’environ 1865. À côté des portraits, la nature morte est d’emblée un champ propre pour Cézanne."
     ],
-    "fact": "vers 1865. Collection non établie."
+    "fact": "vers 1865. Musée d’Orsay, Paris."
   },
   "czgigot": {
     "text": [
@@ -441,7 +445,7 @@
       "Les maisons du village de pêcheurs descendent la pente vers l’eau, par degrés. La palette reste terreuse, les formes sont fermement posées.",
       "En 1870, Cézanne peint L’Estaque tandis que la guerre continue en France. Il ne se présente pas au service militaire ; il reste en Provence."
     ],
-    "fact": "1870. Collection non établie."
+    "fact": "1870. Philadelphia Museum of Art."
   },
   "czhortense72": {
     "text": [
@@ -483,7 +487,7 @@
       "Dans le quartier Four, jardins, murs et toits montent la pente. La lumière est plus douce que dans les tableaux précoces d’Aix.",
       "Vers 1873, cette vue appartient aux années d’Auvers, où Cézanne observe devant le motif le paysage de l’Île-de-France."
     ],
-    "fact": "vers 1873. Collection non établie."
+    "fact": "vers 1873. Philadelphia Museum of Art."
   },
   "czsmallpontoise": {
     "text": [
@@ -511,7 +515,7 @@
       "Victor Chocquet, un collectionneur et soutien précoce, est assis dans le fauteuil, les mains sur les accoudoirs, le regard attentif. Cézanne le peint plusieurs fois en 1877.",
       "Chocquet soutient Cézanne et les impressionnistes. Dès 1876, Cézanne avait commencé pour lui des motifs à L’Estaque."
     ],
-    "fact": "1877. Collection non établie."
+    "fact": "1877. Columbus Museum of Art."
   },
   "czcotesaint": {
     "text": [
@@ -578,7 +582,7 @@
       "À contre-jour du matin, maisons et arbres se tiennent en silhouettes plus sombres, le ciel et l’eau clairs. Le soleil vient à la rencontre du regard.",
       "En 1882-1883, à L’Estaque, Cézanne cherche non seulement la forme claire de midi, mais aussi le contre-jour du matin."
     ],
-    "fact": "1882–1883. Collection non établie."
+    "fact": "1882–1883. Israel Museum, Jérusalem."
   },
   "czpins": {
     "text": [
@@ -620,14 +624,14 @@
       "Des troncs dépouillés se tiennent devant la maison et le ciel ; sans feuilles, la construction de lignes et de plans devient particulièrement visible.",
       "Dans les années 1880, le parc du Jas reste un motif proche, en été comme dans son état hivernal."
     ],
-    "fact": "années 1880. Collection non établie."
+    "fact": "années 1880. National Museum of Western Art, Tokyo."
   },
   "czfarmjas": {
     "text": [
       "Des marronniers se tiennent devant une ferme sur le terrain du Jas ; bâtiments, arbres et sol s’assemblent en tons terreux et calmes.",
       "Vers 1878, Cézanne ne travaille pas seulement à la maison principale, mais aussi aux bâtiments d’exploitation et aux arbres du domaine."
     ],
-    "fact": "vers 1878. Collection non établie."
+    "fact": "vers 1878. Norton Simon Museum, Pasadena."
   },
   "czvuejas": {
     "text": [

@@ -20,7 +20,11 @@
   "Brooklyn Museum, New York": "Brooklyn Museum, New York",
   "Dallas Museum of Art": "Dallas Museum of Art",
   "Detroit Institute of Arts": "Detroit Institute of Arts",
-  "Cincinnati Art Museum": "Cincinnati Art Museum"
+  "Cincinnati Art Museum": "Cincinnati Art Museum",
+  "Philadelphia Museum of Art": "Philadelphia Museum of Art",
+  "Columbus Museum of Art": "Columbus Museum of Art",
+  "Israel Museum, Jerusalem": "Israel Museum, Gerusalemme",
+  "National Museum of Western Art, Tokyo": "National Museum of Western Art, Tokyo"
 });
   P.works = Object.assign(P.works || {}, {
   "czmother": {
@@ -45,7 +49,7 @@
   },
   "czsugar": {
     "title": "Zuccheriera, pere e tazza blu",
-    "museum": "Collezione non determinata"
+    "museum": "Musée d’Orsay, Parigi"
   },
   "czgigot": {
     "title": "Pane e cosciotto d’agnello",
@@ -85,7 +89,7 @@
   },
   "czvillageest": {
     "title": "Il villaggio di pescatori a L’Estaque",
-    "museum": "Collezione non determinata"
+    "museum": "Philadelphia Museum of Art"
   },
   "czhortense72": {
     "title": "Ritratto di Madame Cézanne",
@@ -109,7 +113,7 @@
   },
   "czquartier": {
     "title": "Quartiere Four ad Auvers-sur-Oise",
-    "museum": "Collezione non determinata"
+    "museum": "Philadelphia Museum of Art"
   },
   "czsmallpontoise": {
     "title": "Casette a Pontoise",
@@ -125,7 +129,7 @@
   },
   "czchocquet": {
     "title": "Ritratto di Victor Chocquet",
-    "museum": "Collezione non determinata"
+    "museum": "Columbus Museum of Art"
   },
   "czcotesaint": {
     "title": "La Côte Saint-Denis a Pontoise",
@@ -161,7 +165,7 @@
   },
   "czmorningest": {
     "title": "Veduta mattutina di L’Estaque in controluce",
-    "museum": "Collezione non determinata"
+    "museum": "Israel Museum, Gerusalemme"
   },
   "czpins": {
     "title": "L’Estaque, veduta attraverso i pini",
@@ -185,11 +189,11 @@
   },
   "czbaretrees": {
     "title": "Gli alberi spogli del Jas de Bouffan",
-    "museum": "Collezione non determinata"
+    "museum": "National Museum of Western Art, Tokyo"
   },
   "czfarmjas": {
     "title": "Castagni e fattoria al Jas de Bouffan",
-    "museum": "Collezione non determinata"
+    "museum": "Norton Simon Museum, Pasadena"
   },
   "czvuejas": {
     "title": "Veduta dal Jas de Bouffan",
@@ -371,7 +375,7 @@
       "Una zuccheriera, pere e una tazza blu formano un gruppo piccolo e chiuso. Già qui egli cerca il volume e l’accostamento di forme chiare.",
       "Il quadro data a circa il 1865. Accanto ai ritratti, la natura morta è fin dall’inizio un campo proprio per Cézanne."
     ],
-    "fact": "verso il 1865. Collezione non determinata."
+    "fact": "verso il 1865. Musée d’Orsay, Parigi."
   },
   "czgigot": {
     "text": [
@@ -441,7 +445,7 @@
       "Le case del villaggio di pescatori scendono a gradini il pendio verso l’acqua. La tavolozza resta terrosa, le forme sono saldamente posate.",
       "Nel 1870 Cézanne dipinge L’Estaque mentre in Francia continua la guerra. Non si presenta al servizio militare; resta in Provenza."
     ],
-    "fact": "1870. Collezione non determinata."
+    "fact": "1870. Philadelphia Museum of Art."
   },
   "czhortense72": {
     "text": [
@@ -483,7 +487,7 @@
       "Nel quartiere Four, orti, muri e tetti salgono il pendio. La luce è più morbida che nei quadri precoci di Aix.",
       "Verso il 1873 questa veduta appartiene agli anni di Auvers, in cui Cézanne osserva davanti al motivo il paesaggio dell’Île-de-France."
     ],
-    "fact": "verso il 1873. Collezione non determinata."
+    "fact": "verso il 1873. Philadelphia Museum of Art."
   },
   "czsmallpontoise": {
     "text": [
@@ -511,7 +515,7 @@
       "Victor Chocquet, un collezionista e sostenitore precoce, siede in poltrona, le mani sui braccioli, lo sguardo attento. Cézanne lo ritrae più volte nel 1877.",
       "Chocquet sostiene Cézanne e gli impressionisti. Già nel 1876 Cézanne aveva cominciato per lui dei motivi a L’Estaque."
     ],
-    "fact": "1877. Collezione non determinata."
+    "fact": "1877. Columbus Museum of Art."
   },
   "czcotesaint": {
     "text": [
@@ -578,7 +582,7 @@
       "In controluce del mattino, case e alberi si alzano come silhouettes più scure, il cielo e l’acqua chiari. Il sole viene incontro allo sguardo.",
       "Nel 1882-1883, a L’Estaque, Cézanne cerca non solo la forma chiara del mezzogiorno, ma anche il controluce del mattino."
     ],
-    "fact": "1882–1883. Collezione non determinata."
+    "fact": "1882–1883. Israel Museum, Gerusalemme."
   },
   "czpins": {
     "text": [
@@ -620,14 +624,14 @@
       "Tronchi spogli stanno davanti alla casa e al cielo; senza foglie, la costruzione di linee e piani diventa particolarmente visibile.",
       "Negli anni Ottanta il parco del Jas resta un motivo vicino, in estate come nel suo stato invernale."
     ],
-    "fact": "anni Ottanta. Collezione non determinata."
+    "fact": "anni Ottanta. National Museum of Western Art, Tokyo."
   },
   "czfarmjas": {
     "text": [
       "I castagni stanno davanti a una fattoria nei terreni del Jas; edifici, alberi e il suolo si uniscono in toni terrosi e calmi.",
       "Verso il 1878 Cézanne non lavora solo alla casa padronale, ma anche alle costruzioni di lavoro e agli alberi della tenuta."
     ],
-    "fact": "verso il 1878. Collezione non determinata."
+    "fact": "verso il 1878. Norton Simon Museum, Pasadena."
   },
   "czvuejas": {
     "text": [

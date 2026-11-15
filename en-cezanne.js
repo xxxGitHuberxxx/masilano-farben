@@ -30,7 +30,7 @@
   },
   "czsugar": {
     "title": "Sugar Bowl, Pears and Blue Cup",
-    "museum": "Collection not established"
+    "museum": "Musée d’Orsay, Paris"
   },
   "czgigot": {
     "title": "Still Life of a Leg of Mutton and Bread",
@@ -70,7 +70,7 @@
   },
   "czvillageest": {
     "title": "The Fishing Village at L’Estaque",
-    "museum": "Collection not established"
+    "museum": "Philadelphia Museum of Art"
   },
   "czhortense72": {
     "title": "Portrait of Madame Cézanne",
@@ -94,7 +94,7 @@
   },
   "czquartier": {
     "title": "Quartier Four, Auvers-sur-Oise",
-    "museum": "Collection not established"
+    "museum": "Philadelphia Museum of Art"
   },
   "czsmallpontoise": {
     "title": "Small Houses in Pontoise",
@@ -110,7 +110,7 @@
   },
   "czchocquet": {
     "title": "Portrait of Victor Chocquet Seated",
-    "museum": "Collection not established"
+    "museum": "Columbus Museum of Art"
   },
   "czcotesaint": {
     "title": "The Côte Saint-Denis at Pontoise",
@@ -146,7 +146,7 @@
   },
   "czmorningest": {
     "title": "Morning View of L’Estaque Against the Sunlight",
-    "museum": "Collection not established"
+    "museum": "Israel Museum, Jerusalem"
   },
   "czpins": {
     "title": "L’Estaque, Seen through the Pines",
@@ -170,11 +170,11 @@
   },
   "czbaretrees": {
     "title": "The Bare Trees at the Jas de Bouffan",
-    "museum": "Collection not established"
+    "museum": "National Museum of Western Art, Tokyo"
   },
   "czfarmjas": {
     "title": "Chestnut Trees and Farm at the Jas de Bouffan",
-    "museum": "Collection not established"
+    "museum": "Norton Simon Museum, Pasadena"
   },
   "czvuejas": {
     "title": "View from the Jas de Bouffan",
@@ -355,7 +355,7 @@
       "A sugar bowl, pears and a blue cup form a small, closed group. Already here he seeks volume and the side-by-side of clear forms.",
       "The picture dates from around 1865. Beside the portraits, still life is from the beginning a field of its own for Cézanne."
     ],
-    "fact": "um 1865. Collection not established."
+    "fact": "um 1865. Musée d’Orsay, Paris."
   },
   "czgigot": {
     "text": [
@@ -425,7 +425,7 @@
       "The houses of the fishing village step down the slope towards the water. The palette remains earthy, the forms firmly set.",
       "In 1870 Cézanne paints L’Estaque while the war continues in France. He does not report for military service; he stays in Provence."
     ],
-    "fact": "1870. Collection not established."
+    "fact": "1870. Philadelphia Museum of Art."
   },
   "czhortense72": {
     "text": [
@@ -467,7 +467,7 @@
       "In the Quartier Four, gardens, walls and roofs step up the slope. The light is softer than in the early pictures from Aix.",
       "Around 1873 this view belongs to the Auvers years, in which Cézanne observes the landscape of the Île-de-France in front of the motif."
     ],
-    "fact": "um 1873. Collection not established."
+    "fact": "um 1873. Philadelphia Museum of Art."
   },
   "czsmallpontoise": {
     "text": [
@@ -495,7 +495,7 @@
       "Victor Chocquet, an early collector and supporter, sits in an armchair, his hands on the arms, his gaze attentive. Cézanne paints him several times in 1877.",
       "Chocquet supports Cézanne and the Impressionists. As early as 1876 Cézanne had begun motifs for him at L’Estaque."
     ],
-    "fact": "1877. Collection not established."
+    "fact": "1877. Columbus Museum of Art."
   },
   "czcotesaint": {
     "text": [
@@ -562,7 +562,7 @@
       "Against the morning light, houses and trees stand as darker silhouettes, the sky and the water bright. The sun comes towards the viewer.",
       "In 1882–1883, at L’Estaque, Cézanne seeks not only the clear midday form but also the contre-jour of the morning."
     ],
-    "fact": "1882–1883. Collection not established."
+    "fact": "1882–1883. Israel Museum, Jerusalem."
   },
   "czpins": {
     "text": [
@@ -604,14 +604,14 @@
       "Bare trunks stand before the house and the sky; without leaves, the construction of lines and planes becomes especially visible.",
       "In the 1880s the park of the Jas remains a nearby motif, in summer as in its winter state."
     ],
-    "fact": "1880er Jahre. Collection not established."
+    "fact": "1880er Jahre. National Museum of Western Art, Tokyo."
   },
   "czfarmjas": {
     "text": [
       "Chestnut trees stand in front of a farm building on the grounds of the Jas; buildings, trees and the ground are joined in calm, earthy tones.",
       "Around 1878 Cézanne works not only at the manor house but also on the working buildings and trees of the estate."
     ],
-    "fact": "um 1878. Collection not established."
+    "fact": "um 1878. Norton Simon Museum, Pasadena."
   },
   "czvuejas": {
     "text": [
