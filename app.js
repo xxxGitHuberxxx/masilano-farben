@@ -658,6 +658,8 @@ function renderStoryEntry(){
   if (!STORIES.length && !PATHS.length) { box.style.display = 'none'; return; }
   box.style.display = '';
   box.innerHTML = '';
+  const pathParent = PATHS.length > 1 ? document.createElement('div') : box;
+  if (PATHS.length > 1) { pathParent.className = 'pathrow'; box.appendChild(pathParent); }
   PATHS.forEach(path => {
     const steps = pathSteps(path), n = steps.filter(s => isDone(s.pid)).length, N = steps.length;
     const b = document.createElement('button');
@@ -668,7 +670,7 @@ function renderStoryEntry(){
       <div class="tx"><div class="k">${t('pathKicker')}</div><div class="n">${L(path,'title')}</div>
       <div class="s">${L(path,'part')} · ${n ? t('paintedOf', { n, N }) : t('startNow')}</div></div><div class="go">›</div>`;
     b.onclick = () => { pathCtx = { path }; storyCtx = null; showPath(path); };
-    box.appendChild(b);
+    pathParent.appendChild(b);
   });
   STORIES.forEach(st => {
     const n = chDoneCount(st), N = st.chapters.length;
@@ -851,7 +853,7 @@ function renderPathMap(path){
   const groups = [];
   path.stations.forEach((st, i) => {
     const g = groups.find(x => Math.hypot(x.x - st.map.x, x.y - st.map.y) < 12);
-    if (g) g.si.push(i); else groups.push({ x: st.map.x, y: st.map.y, si: [i], label: I.locStation(st).place.split('·')[0].trim() });
+    if (g) { g.si.push(i); if (st.map.labelDy != null && g.labelDy == null) g.labelDy = st.map.labelDy; } else groups.push({ x: st.map.x, y: st.map.y, si: [i], label: st.mapLabel || I.locStation(st).place.split('·')[0].trim(), labelDy: st.map.labelDy });
   });
   const doneSt = path.stations.map(stationDone);
   const lines = [];
@@ -867,18 +869,26 @@ function renderPathMap(path){
     return `<g class="mdot ${cls}" data-si="${g.si[0]}">
       <circle cx="${g.x}" cy="${g.y}" r="7"/>
       <text x="${g.x}" y="${g.y + 3}">${num}</text>
-      <text class="mlab" x="${g.x}" y="${g.y + 20}">${g.label}</text></g>`;
+      <text class="mlab" x="${g.x}" y="${g.y + (g.labelDy != null ? g.labelDy : 20)}">${g.label}</text></g>`;
   }).join('');
   const items = path.stations.map((st, i) => {
     const cls = doneSt[i] ? 'done' : (i === 0 || doneSt[i - 1] ? 'open' : '');
     const stL = I.locStation(st);
     return `<li class="${cls}" data-si="${i}"><span class="n">${i + 1}</span>${stL.place} · ${stL.when}</li>`;
   }).join('');
-  wrap.innerHTML = `<svg viewBox="0 0 200 220" class="pmap" role="img" aria-label="${t('mapAria')}">
-    <rect class="sea" x="0" y="0" width="200" height="220"/>
-    <path class="land" d="M28,58 C38,32 72,22 98,28 C128,16 168,22 182,42 C190,58 176,74 154,82 C128,96 96,98 70,90 C46,96 26,80 28,58 Z"/>
-    <path class="land" d="M18,108 C8,118 10,138 22,150 C36,162 62,160 72,148 C78,136 64,122 50,114 C36,106 26,104 18,108 Z"/>
-    <path class="land" d="M48,152 C62,158 78,170 88,190 C94,208 80,218 64,214 C48,210 38,198 40,178 C42,164 44,154 48,152 Z"/>
+  const map = path.map || {};
+  const vb = map.viewBox || '0 0 200 220';
+  const [,, vw, vh] = vb.split(/\s+/);
+  const lands = map.lands || [
+    'M28,58 C38,32 72,22 98,28 C128,16 168,22 182,42 C190,58 176,74 154,82 C128,96 96,98 70,90 C46,96 26,80 28,58 Z',
+    'M18,108 C8,118 10,138 22,150 C36,162 62,160 72,148 C78,136 64,122 50,114 C36,106 26,104 18,108 Z',
+    'M48,152 C62,158 78,170 88,190 C94,208 80,218 64,214 C48,210 38,198 40,178 C42,164 44,154 48,152 Z'
+  ];
+  const landPaths = lands.map(d => `<path class="land" d="${d}"/>`).join('');
+  const mapAria = map.ariaKey ? t(map.ariaKey, { title: L(path,'title') }) : (path.id === 'vangogh' ? t('mapAria') : t('mapAriaPath', { title: L(path,'title') }));
+  wrap.innerHTML = `<svg viewBox="${vb}" class="pmap" role="img" aria-label="${mapAria}">
+    <rect class="sea" x="0" y="0" width="${vw||200}" height="${vh||220}"/>
+    ${landPaths}
     ${lines.join('')}
     ${dots}
   </svg><ol class="ptime">${items}</ol>`;

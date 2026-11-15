@@ -284,3 +284,12 @@ h1{font-family:Georgia,"Times New Roman",serif;font-weight:normal;font-size:30px
   .chip{transition:none}
   #pFill{transition:none}
 }
+
+/* v6.7: two life journeys on the home screen */
+.pathrow{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 8px}
+.pathrow .sentry{min-height:72px;padding:7px 10px 7px 7px}
+.pathrow .sentry .cv{width:52px;height:52px}
+.pathrow .sentry .n{font-size:16px}
+.pathrow .sentry .s{font-size:12px}
+@media (max-width:360px){.pathrow{grid-template-columns:1fr}}
+@media (max-height:560px){.pathrow{gap:6px;margin-bottom:6px}.pathrow .sentry{min-height:56px}}
