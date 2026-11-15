@@ -105,7 +105,7 @@
     "title": "Die Brücke von Abergavenny, Monmouthshire",
     "artist": "J. M. W. Turner",
     "year": "1798",
-    "museum": "Victoria and Albert Museum, London",
+    "museum": "Sammlung nicht ermittelt",
     "source": "Wikimedia Commons: «Abergavenny Bridge, Monmouthshire Turner.png», Public domain (gemeinfrei)"
   },
   {
@@ -583,9 +583,9 @@
           "text": [
             "Eine steinerne Brücke führt über den Usk bei Abergavenny; nach dem Regen reisst der Himmel auf.",
             "Turner stellt das Aquarell 1799 an der Royal Academy aus.",
-            "Es gehört zum Victoria and Albert Museum in London."
+            "Wo sich diese Fassung heute befindet, ist nicht ermittelt."
           ],
-          "fact": "1798. Victoria and Albert Museum, London."
+          "fact": "1798. Sammlung nicht ermittelt."
         },
         {
           "pid": "tuharlech",

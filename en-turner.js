@@ -2,7 +2,8 @@
 (function () {
   var EN = window.EN = window.EN || {};
   EN.museums = Object.assign(EN.museums || {}, {
-  "Privatsammlung": "Private collection"
+  "Privatsammlung": "Private collection",
+  "Sammlung nicht ermittelt": "Collection not determined"
 });
   EN.works = Object.assign(EN.works || {}, {
   "tulambeth": {
@@ -55,7 +56,7 @@
   },
   "tuabergavenny": {
     "title": "Abergavenny Bridge, Monmouthshire",
-    "museum": "Victoria and Albert Museum, London"
+    "museum": "Collection not determined"
   },
   "tuharlech": {
     "title": "Harlech Castle, from Twgwyn Ferry, Summer’s Evening Twilight",
@@ -399,9 +400,9 @@
     "text": [
       "A stone bridge crosses the Usk at Abergavenny; after the rain the sky begins to clear.",
       "Turner exhibited the watercolour at the Royal Academy in 1799.",
-      "It belongs to the Victoria and Albert Museum, London."
+      "Where this version is held today has not been determined."
     ],
-    "fact": "1798. Victoria and Albert Museum, London."
+    "fact": "1798. Collection not determined."
   },
   "tuharlech": {
     "text": [

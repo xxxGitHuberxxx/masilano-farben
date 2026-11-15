@@ -2,6 +2,7 @@
 (function () {
   var P = window.ES = window.ES || {};
   P.museums = Object.assign(P.museums || {}, {
+  "Sammlung nicht ermittelt": "Colección no determinada",
   "Tate, London": "Tate, Londres",
   "National Gallery, London": "National Gallery, Londres",
   "Victoria and Albert Museum, London": "Victoria and Albert Museum, Londres",
@@ -61,7 +62,7 @@
   },
   "tuabergavenny": {
     "title": "El puente de Abergavenny, Monmouthshire",
-    "museum": "Victoria and Albert Museum, Londres"
+    "museum": "Colección no determinada"
   },
   "tuharlech": {
     "title": "El Castillo de Harlech desde Twgwyn Ferry, crepúsculo de un atardecer de verano",
@@ -384,9 +385,9 @@
   },
   "tuabergavenny": {
     "text": [
-      "Un puente de piedra cruza el Usk en Abergavenny; después de la lluvia el cielo empieza a abrirse. Turner expone la acuarela en 1799 en la Royal Academy. Pertenece al Victoria and Albert Museum de Londres."
+      "Un puente de piedra cruza el Usk en Abergavenny; después de la lluvia el cielo empieza a abrirse. Turner expone la acuarela en 1799 en la Royal Academy. No se ha determinado dónde se encuentra hoy esta versión."
     ],
-    "fact": "1798. Victoria and Albert Museum, Londres."
+    "fact": "1798. Colección no determinada."
   },
   "tuharlech": {
     "text": [
