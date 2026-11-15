@@ -440,8 +440,7 @@
       },
       "mapLabel": "St. Thomas",
       "intro": [
-        "Jacob Abraham Camille Pissarro wird am 10. Juli 1830 in Charlotte Amalie auf St.",
-        "Thomas geboren, damals eine dänische Kolonie in der Karibik.",
+        "Jacob Abraham Camille Pissarro wird am 10. Juli 1830 in Charlotte Amalie auf St. Thomas geboren, damals eine dänische Kolonie in der Karibik.",
         "Die Familie ist jüdisch und führt ein Geschäft im Hafen. 1842, mit zwölf Jahren, kommt er an die Pension Savary in Passy bei Paris; der Direktor ermutigt ihn, nach der Natur zu zeichnen. 1847 kehrt er zurück und arbeitet im Laden des Vaters, zeichnet aber in der Freizeit."
       ],
       "works": [
@@ -449,8 +448,7 @@
           "pid": "pxcreek",
           "text": [
             "Palmen stehen an einer kleinen Bucht der Insel.",
-            "Das Bild entstand 1856, schon in Paris, nach Motiven von St.",
-            "Thomas.",
+            "Das Bild entstand 1856, schon in Paris, nach Motiven von St. Thomas.",
             "Pissarro hält die karibische Küste fest, an der er aufgewachsen ist.",
             "Es hängt in der National Gallery of Art in Washington."
           ],
@@ -476,8 +474,7 @@
         {
           "pid": "pxboy",
           "text": [
-            "Zwischen 1852 und 1855, noch auf St.",
-            "Thomas, malt Pissarro dieses Knabenbildnis.",
+            "Zwischen 1852 und 1855, noch auf St. Thomas, malt Pissarro dieses Knabenbildnis.",
             "Der Junge trägt Hut und eine weisse Schlinge, der Blick geht direkt zum Betrachter.",
             "Das Bild hängt heute im Museum Ordrupgaard bei Kopenhagen."
           ],
@@ -495,9 +492,7 @@
       },
       "mapLabel": "Caracas",
       "intro": [
-        "Um 1850 begegnet Pissarro auf St.",
-        "Thomas dem dänischen Maler Fritz Melbye. 1852 reisen die beiden nach Venezuela: zuerst in den Hafen La Guaira, dann nach Caracas, wo sie ein Atelier einrichten. 1854 kehrt Pissarro nach St.",
-        "Thomas zurück.",
+        "Um 1850 begegnet Pissarro auf St. Thomas dem dänischen Maler Fritz Melbye. 1852 reisen die beiden nach Venezuela: zuerst in den Hafen La Guaira, dann nach Caracas, wo sie ein Atelier einrichten. 1854 kehrt Pissarro nach St. Thomas zurück.",
         "Im Oktober 1855, im Jahr der Pariser Weltausstellung, kommt er nach Paris."
       ],
       "works": [
@@ -531,8 +526,7 @@
           "pid": "pxmelbye",
           "text": [
             "1857–58, schon in Paris, malt Pissarro das Bildnis von Fritz Melbye, mit dem er durch Venezuela gereist war.",
-            "Melbye hatte ihn auf St.",
-            "Thomas zum ernsthaften Arbeiten nach der Natur ermutigt.",
+            "Melbye hatte ihn auf St. Thomas zum ernsthaften Arbeiten nach der Natur ermutigt.",
             "Das Bildnis hängt im Statens Museum for Kunst in Kopenhagen."
           ],
           "fact": "1857–1858. Statens Museum for Kunst, Kopenhagen."

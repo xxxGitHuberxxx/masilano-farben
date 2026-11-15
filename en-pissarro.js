@@ -228,8 +228,7 @@
     "when": "1830–1852",
     "mapLabel": "St. Thomas",
     "intro": [
-      "Jacob Abraham Camille Pissarro was born on 10 July 1830 in Charlotte Amalie on St.",
-      "Thomas, then a Danish colony in the Caribbean.",
+      "Jacob Abraham Camille Pissarro was born on 10 July 1830 in Charlotte Amalie on St. Thomas, then a Danish colony in the Caribbean.",
       "The family was Jewish and ran a store in the port.",
       "In 1842, at the age of twelve, he was sent to the Savary boarding school in Passy, near Paris; the director encouraged him to draw from nature.",
       "In 1847 he returned and worked in his father’s shop, but drew in his free time."
@@ -240,11 +239,9 @@
     "when": "1852–1855",
     "mapLabel": "Caracas",
     "intro": [
-      "Around 1850, on St.",
-      "Thomas, Pissarro met the Danish painter Fritz Melbye.",
+      "Around 1850, on St. Thomas, Pissarro met the Danish painter Fritz Melbye.",
       "In 1852 the two travelled to Venezuela: first to the port of La Guaira, then to Caracas, where they set up a studio.",
-      "In 1854 Pissarro returned to St.",
-      "Thomas.",
+      "In 1854 Pissarro returned to St. Thomas.",
       "In October 1855, the year of the Paris Exposition Universelle, he arrived in Paris."
     ]
   },
@@ -329,8 +326,7 @@
   "pxcreek": {
     "text": [
       "Palm trees stand by a small creek on the island.",
-      "The picture was painted in 1856, already in Paris, from motifs of St.",
-      "Thomas.",
+      "The picture was painted in 1856, already in Paris, from motifs of St. Thomas.",
       "Pissarro records the Caribbean shore where he had grown up.",
       "It is in the National Gallery of Art, Washington."
     ],
@@ -353,8 +349,7 @@
   },
   "pxboy": {
     "text": [
-      "Between 1852 and 1855, still on St.",
-      "Thomas, Pissarro painted this portrait of a boy.",
+      "Between 1852 and 1855, still on St. Thomas, Pissarro painted this portrait of a boy.",
       "The boy wears a hat and a white sling, and he looks straight at the viewer.",
       "The picture is now at Ordrupgaard, near Copenhagen."
     ],
@@ -386,8 +381,7 @@
   "pxmelbye": {
     "text": [
       "In 1857–58, already in Paris, Pissarro painted the portrait of Fritz Melbye, with whom he had travelled through Venezuela.",
-      "Melbye had encouraged him, on St.",
-      "Thomas, to work seriously from nature.",
+      "Melbye had encouraged him, on St. Thomas, to work seriously from nature.",
       "The portrait is in the Statens Museum for Kunst, Copenhagen."
     ],
     "fact": "1857–1858. Statens Museum for Kunst, Copenhagen."
