@@ -1250,7 +1250,12 @@ function showPathWork(path, step){
   $('#cNum').textContent = t('pictureOf', { place: stL.place, n: step.idx + 1, N: steps.length });
   $('#cTitle').textContent = L(p,'title');
   $('#cMeta').textContent = `${L(p,'artist')} · ${p.year} · ${stL.place}, ${stL.when}`;
-  $('#cText').innerHTML = wL.text.map(tx => `<p>${tx}</p>`).join('');
+  $('#cText').innerHTML = (Array.isArray(wL.text) ? wL.text : [wL.text]).map(tx => `<p>${tx}</p>`).join('');
+  const fb = $('#cLangFallback');
+  if (fb) {
+    if (wL.fallback) { fb.textContent = t('langFallback'); fb.classList.remove('hidden'); fb.hidden = false; }
+    else { fb.textContent = ''; fb.classList.add('hidden'); fb.hidden = true; }
+  }
   const q = $('#cQuote');
   if (wL.quote) {
     $('#cQuoteT').textContent = '«' + wL.quote.text + '»';
@@ -1274,6 +1279,11 @@ function showPathDone(){
   $('#dTitle').textContent = L(p,'title');
   $('#dMeta').textContent = `${L(p,'artist')} · ${p.year}`;
   $('#dFact').textContent = wL.fact;
+  const dfb = $('#dLangFallback');
+  if (dfb) {
+    if (wL.fallback && wL.fact) { dfb.textContent = t('langFallback'); dfb.classList.remove('hidden'); dfb.hidden = false; }
+    else { dfb.textContent = ''; dfb.classList.add('hidden'); dfb.hidden = true; }
+  }
   $('#dMuseum').textContent = t('today', { m: L(p,'museum') });
   $('#dEpiWrap').classList.add('hidden');
   $('#dNext').textContent = t('nextPicture', { title: L(byId(steps[step.idx + 1].pid),'title') });
@@ -1387,18 +1397,19 @@ function openHomeWork(p){
   hideSheets();
   return openPainting(p);
 }
-function storyTeaser(p){
-  const lore = workLore(p);
+function teaserMeta(p){
+  const meta = workLoreMeta(p);
   let text = '';
-  if (Array.isArray(lore)) text = lore[0] || '';
-  else text = lore || '';
+  if (Array.isArray(meta.texts)) text = meta.texts[0] || '';
+  else text = meta.texts || '';
   text = String(text).replace(/\s+/g, ' ').trim();
-  if (!text) return '';
+  if (!text) return { text: '', fallback: false };
   const bits = text.split(/(?<=[.!?…])\s+/).filter(Boolean);
   let out = bits[0] || text;
   if (bits[1] && (out + ' ' + bits[1]).length <= 260) out = out + ' ' + bits[1];
-  return out;
+  return { text: out, fallback: !!meta.fallback };
 }
+function storyTeaser(p){ return teaserMeta(p).text; }
 function renderDaily(){
   const wrap = $('#dailyWrap'); if (!wrap) return;
   const day = todayKey();
@@ -1406,7 +1417,7 @@ function renderDaily(){
   if (!p) { wrap.innerHTML = ''; return; }
   const done = isDone(p.id);
   const streak = streakText(loadStreak(), day);
-  const teaser = storyTeaser(p);
+  const teaser = teaserMeta(p);
   const card = document.createElement('article');
   card.id = 'dailyCard';
   card.className = 'dailyhero' + (done ? ' done' : '');
@@ -1416,7 +1427,8 @@ function renderDaily(){
     <div class="tx"><div class="k">${t('dailyKicker')}</div>
     <div class="n">${esc(L(p,'title'))}</div>
     <div class="a">${esc(L(p,'artist') || p.artist)}${p.year ? ' · ' + esc(p.year) : ''}</div>
-    <p class="teaser">${esc(teaser)}</p>
+    ${teaser.text ? `<p class="teaser">${esc(teaser.text)}</p>` : ''}
+    ${teaser.fallback && teaser.text ? `<p class="langfallback">${esc(t('langFallback'))}</p>` : ''}
     <button type="button" class="cta" id="dailyCta">${esc(cta)}</button>
     ${streak ? `<div class="st">${esc(streak)}</div>` : ''}</div>`;
   const go = () => { if (isDone(p.id)) bumpStreak(day); openHomeWork(p); };
@@ -1428,12 +1440,12 @@ function renderDaily(){
 function sourcedFacts(){
   const out = [];
   const seen = new Set();
-  function add(text, cite, pid){
+  function add(text, cite, pid, fallback){
     const s = String(text || '').replace(/\s+/g, ' ').trim();
     if (s.length < 24) return;
     if (seen.has(s)) return;
     seen.add(s);
-    out.push({ text: s, cite: cite || '', pid: pid || '' });
+    out.push({ text: s, cite: cite || '', pid: pid || '', fallback: !!fallback });
   }
   for (const p of ALL) {
     const facts = L(p, 'facts') || p.facts;
@@ -1446,7 +1458,7 @@ function sourcedFacts(){
       const w = I.locPathWork(step.w);
       if (w && w.fact) {
         const pic = byId(step.pid);
-        add(w.fact, pic ? L(pic, 'title') : (I.locStation(step.st).place || ''), step.pid);
+        add(w.fact, pic ? L(pic, 'title') : (I.locStation(step.st).place || ''), step.pid, w.fallback);
       }
     }
   }
@@ -1480,6 +1492,7 @@ function renderDailyFact(){
   card.className = 'factcard';
   card.innerHTML = `<div class="k">${t('didYouKnow')}</div>
     <p class="f">${esc(fact.text)}</p>
+    ${fact.fallback ? `<p class="langfallback">${esc(t('langFallback'))}</p>` : ''}
     ${fact.cite && fact.text.indexOf(fact.cite) === -1 ? `<div class="cite">${esc(fact.cite)}</div>` : ''}`;
   wrap.innerHTML = '';
   wrap.appendChild(card);
@@ -1665,44 +1678,46 @@ function albumGroups(){
   });
   return groups;
 }
-function workLore(p){
+function workLoreMeta(p){
   const story = L(p, 'story');
-  if (story) return Array.isArray(story) ? story : [story];
+  if (story) return { texts: Array.isArray(story) ? story : [story], fallback: false };
   for (const path of PATHS) {
     const step = pathSteps(path).find(s => s.pid === p.id);
     if (step && step.w) {
       const w = I.locPathWork(step.w);
-      if (w && w.text) return Array.isArray(w.text) ? w.text : [w.text];
+      if (w && w.text) return { texts: Array.isArray(w.text) ? w.text : [w.text], fallback: !!w.fallback };
     }
   }
   for (const st of STORIES) {
     const ch = st.chapters.find(c => c.pid === p.id);
     if (ch) {
       const chL = I.locChapter(st, ch);
-      if (chL && chL.text) return Array.isArray(chL.text) ? chL.text : [chL.text];
+      if (chL && chL.text) return { texts: Array.isArray(chL.text) ? chL.text : [chL.text], fallback: false };
     }
   }
-  return [];
+  return { texts: [], fallback: false };
 }
-function workFact(p){
+function workLore(p){ return workLoreMeta(p).texts; }
+function workFactMeta(p){
   const facts = L(p, 'facts') || p.facts;
-  if (facts && facts.length) return Array.isArray(facts) ? facts[0] : facts;
+  if (facts && facts.length) return { fact: Array.isArray(facts) ? facts[0] : facts, fallback: false };
   for (const path of PATHS) {
     const step = pathSteps(path).find(s => s.pid === p.id);
     if (step && step.w) {
       const w = I.locPathWork(step.w);
-      if (w && w.fact) return w.fact;
+      if (w && w.fact) return { fact: w.fact, fallback: !!w.fallback };
     }
   }
   for (const st of STORIES) {
     const ch = st.chapters.find(c => c.pid === p.id);
     if (ch) {
       const chL = I.locChapter(st, ch);
-      if (chL && chL.fact) return chL.fact;
+      if (chL && chL.fact) return { fact: chL.fact, fallback: false };
     }
   }
-  return '';
+  return { fact: '', fallback: false };
 }
+function workFact(p){ return workFactMeta(p).fact; }
 function renderAlbumEntry(){
   const wrap = $('#albumWrap'); if (!wrap) return;
   const n = doneCount(), N = ALL.length;
@@ -1753,11 +1768,21 @@ function showAlbumView(id, opts){
   const title = L(p, 'title');
   $('#avTitle').textContent = title;
   $('#avMeta').textContent = `${L(p, 'artist')} · ${p.year}`;
-  const lore = workLore(p);
-  $('#avText').innerHTML = lore.map(tx => `<p>${tx}</p>`).join('');
-  const fact = workFact(p);
-  $('#avFact').textContent = fact || '';
-  $('#avFactWrap').classList.toggle('hidden', !fact);
+  const lore = workLoreMeta(p);
+  $('#avText').innerHTML = lore.texts.map(tx => `<p>${tx}</p>`).join('');
+  const fb = $('#avLangFallback');
+  if (fb) {
+    if (lore.fallback) { fb.textContent = t('langFallback'); fb.classList.remove('hidden'); fb.hidden = false; }
+    else { fb.textContent = ''; fb.classList.add('hidden'); fb.hidden = true; }
+  }
+  const factM = workFactMeta(p);
+  $('#avFact').textContent = factM.fact || '';
+  $('#avFactWrap').classList.toggle('hidden', !factM.fact);
+  const ffb = $('#avFactFallback');
+  if (ffb) {
+    if (factM.fallback && factM.fact) { ffb.textContent = t('langFallback'); ffb.classList.remove('hidden'); ffb.hidden = false; }
+    else { ffb.textContent = ''; ffb.classList.add('hidden'); ffb.hidden = true; }
+  }
   $('#avMuseum').textContent = t('museum', { m: L(p, 'museum') });
   $('#avImg').innerHTML = `<img src="data/${esc(p.id)}-orig.jpg" alt="${esc(title)}">`;
   const sh = $('#albumView');

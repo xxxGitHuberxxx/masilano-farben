@@ -1,5 +1,5 @@
-// Language: Deutsch / English. Progress keys are not touched.
-// Stored preference: masilano.lang.v1 ('de' | 'en').
+// Language: Deutsch, English, Español, Français, Italiano. Progress keys are not touched.
+// Stored preference: masilano.lang.v1 ('de' | 'en' | 'es' | 'fr' | 'it').
 (function () {
   const KEY = 'masilano.lang.v1';
 
@@ -14,7 +14,7 @@
       searchPh: 'Bild oder Maler suchen',
       searchClear: 'Suche löschen',
       sourcesBtn: 'Bildquellen & Hinweise',
-      version: 'Testversion 7.4',
+      version: 'Testversion 7.5',
       back: 'Zurück',
       backGallery: 'Zurück zur Galerie',
       backWays: 'Zurück zu den Wegen',
@@ -183,7 +183,12 @@
       mileFirst: 'Dein erstes Bild ist fertig. Schön, dass du da bist.',
       mile10: 'Zehn Bilder. Du machst das in deinem Tempo.',
       mile50: 'Fünfzig Bilder in deinem Album.',
-      mileStation: 'Die erste Station ist vollständig.'
+      mileStation: 'Die erste Station ist vollständig.',
+      langEs: 'Español',
+      langFr: 'Français',
+      langIt: 'Italiano',
+      langFallback: 'Englisch',
+      langMenuAria: 'Sprache wählen',
     },
     en: {
       appTitle: 'Color by Number',
@@ -195,7 +200,7 @@
       searchPh: 'Search for a picture or painter',
       searchClear: 'Clear search',
       sourcesBtn: 'Picture sources & notes',
-      version: 'Test version 7.4',
+      version: 'Test version 7.5',
       back: 'Back',
       backGallery: 'Back to the gallery',
       backWays: 'Back to the journeys',
@@ -364,23 +369,627 @@
       mileFirst: 'Your first picture is finished. How lovely that you are here.',
       mile10: 'Ten pictures. You are doing this at your own pace.',
       mile50: 'Fifty pictures in your collection.',
-      mileStation: 'The first station is complete.'
+      mileStation: 'The first station is complete.',
+      langEs: 'Español',
+      langFr: 'Français',
+      langIt: 'Italiano',
+      langFallback: 'English text',
+      langMenuAria: 'Choose language',
+    },
+    es: {
+      appTitle: "Pintar por números",
+      docTitle: "Masilano · Pintar por números",
+      appSubtitle: "567 obras maestras, campo a campo – y los caminos de vida de Van Gogh, Monet y Hokusai.",
+      sortAria: "Orden de las imágenes",
+      sortGallery: "Estándar",
+      sortEasy: "Fáciles primero",
+      searchPh: "Buscar un cuadro o un pintor",
+      searchClear: "Borrar búsqueda",
+      sourcesBtn: "Fuentes e indicaciones",
+      version: "Versión de prueba 7.5",
+      back: "Atrás",
+      backGallery: "Volver a la galería",
+      backWays: "Volver a los caminos",
+      todayTitle: "Hoy",
+      todayLead: "Un cuadro, a tu ritmo.",
+      dailyCta: "Pintar",
+      dailyCtaView: "Ver el cuadro",
+      pathNextKicker: "Tu camino sigue",
+      pathNextMeta: "Estación {n} de {N}",
+      pathNextDone: "Este camino de vida está completo.",
+      pathInviteKicker: "Un camino de vida",
+      pathInviteLead: "Si quieres, empieza un camino de vida. Estación a estación, a tu ritmo.",
+      pathInviteCta: "A los caminos",
+      pathAllDone: "Has terminado los caminos de vida.",
+      filterBtn: "Filtro",
+      filterTitle: "Filtro",
+      filterBtnAria: "Abrir filtros",
+      filterBadgeAria: "{n} filtros activos",
+      stationOf: "Estación {n} de {N}",
+      pathKickerNew: "Nuevo",
+      waysTitle: "Caminos",
+      waysLead: "Caminos de vida e historias de los pintores.",
+      galTitle: "Galería",
+      tabAria: "Secciones principales",
+      tabHeute: "Hoy",
+      tabWege: "Caminos",
+      tabGalerie: "Galería",
+      tabAlbum: "Álbum",
+      filterPainter: "Pintor",
+      filterPainterAria: "Filtrar por pintor",
+      filterLevelAria: "Filtrar por dificultad",
+      filterAll: "Todos",
+      filterAllPainters: "Todos los pintores",
+      filterOpen: "Solo pendientes",
+      hint: "Pista",
+      pathMode: "Camino de vida",
+      storyMode: "Historias",
+      paint: "Pintar el cuadro",
+      paintContinue: "Seguir pintando",
+      paintView: "Ver el cuadro",
+      didYouKnow: "¿Sabías que?",
+      whatNext: "Cómo sigue",
+      overview: "Resumen",
+      next: "Siguiente",
+      lookAgain: "Ver el cuadro otra vez",
+      finKicker: "Listo",
+      finPath: "Al camino de vida",
+      finGal: "A la galería",
+      storyDone: "¡Listo! 🎉",
+      technique: "Técnica",
+      viewOriginal: "Ver el original",
+      toGallery: "A la galería",
+      resetPaint: "Pintar de nuevo desde el principio",
+      sourcesTitle: "Fuentes de las imágenes",
+      sourcesBody: "Todas las imágenes proceden de Wikimedia Commons y son de dominio público. Se convirtieron automáticamente en campos de color para el juego. Las citas de las cartas de Van Gogh las tradujo Masilano del original neerlandés o francés (números y fechas según la edición de las cartas de 2009). Las citas de las cartas de Monet las tradujo Masilano del original francés (destinatario y fecha según Wildenstein). Tu progreso se guarda solo en este dispositivo.",
+      close: "Cerrar",
+      easy: "Fácil",
+      medium: "Medio",
+      hard: "Difícil",
+      done: "Listo",
+      ready: "Listo para pintar",
+      neu: "Nuevo",
+      storyTag: "Historia",
+      pathTag: "Camino de vida",
+      inStory: "En la historia de {name}",
+      inPath: "En el camino de vida de {name}",
+      noHits: "Sin resultados",
+      noHitsHint: "Prueba con otro título, pintor, año o museo.",
+      pageN: "Página {n}",
+      lockedStory: "Este cuadro pertenece a la historia de {name}. Se desbloquea capítulo a capítulo.",
+      colorHere: "Aquí va el color {n}",
+      pickOpen: "Elige un color que aún esté pendiente",
+      hintToast: "Toca «Pista» para volver a ver la historia",
+      resetConfirm: "¿Borrar el progreso de este cuadro y empezar de nuevo?",
+      museum: "🏛 Museo: {m}",
+      today: "🏛 Hoy: {m}",
+      original: "Original",
+      yours: "Tu versión",
+      paintedOf: "{n} de {N} pintados",
+      startNow: "Empezar ahora",
+      pathKicker: "Nuevo · Camino de vida",
+      storyKickerNew: "Nuevo · Historias",
+      storyKicker: "Historias",
+      chaptersPainted: "{n} de {N} capítulos pintados",
+      pictureOf: "{place} · Cuadro {n} de {N}",
+      picturesPainted: "{n} de {N} cuadros pintados",
+      chapterN: "Capítulo {n}",
+      chapterOf: "Capítulo {n} de {N}",
+      chapterLine: "Capítulo {n} · {place}, {when}",
+      lockedUntil: "🔒 Se desbloquea cuando el capítulo {n} está terminado",
+      paintFirst: "Pinta primero el capítulo {n}; después sigue aquí.",
+      already: "Ya pintado",
+      youPaint: "Estás pintando",
+      chapterDone: "¡Capítulo {n} terminado! 🎉",
+      finishStory: "Terminar la historia",
+      nextChapter: "Siguiente: capítulo {n}",
+      pictureDone: "¡Cuadro {n} terminado! 🎉",
+      nextPicture: "Siguiente: {title}",
+      pathNotePlay: "La primera estación es un inicio libre. En la versión de prueba ya puedes pintar todos los cuadros; más adelante, cada cuadro terminado desbloqueará el siguiente.",
+      pathNoteDone: "Has pintado todos los cuadros de este camino. El final está más abajo.",
+      freeStart: "Inicio libre · ",
+      closing: "Al final",
+      mapAria: "Mapa de las estaciones del camino de vida de Van Gogh",
+      mapAriaPath: "Mapa de las estaciones: {title}",
+      allDone: "Has pintado los {N} cuadros.",
+      museumWord: "Museo",
+      pathAria: "Camino de vida: {title}",
+      storyAria: "Historias: {name}",
+      langAria: "Idioma",
+      langDe: "Deutsch",
+      langEn: "English",
+      langEs: "Español",
+      langFr: "Français",
+      langIt: "Italiano",
+      langFallback: "Texto en inglés",
+      langMenuAria: "Elegir idioma",
+      publicDomain: "dominio público",
+      publicDomainCC0: "dominio público (CC0)",
+      hintAgain: "Toca 💡 para volver a ver el texto",
+      colorAlready: "Este color ya está terminado",
+      colorFinished: "Color {n} terminado ✓",
+      colorAria: "Color {n}",
+      colorAriaDone: "Color {n}, terminado",
+      obSkip: "Saltar",
+      obNext: "Siguiente",
+      obStart: "Vamos",
+      obStep: "{n} de {N}",
+      ob1Title: "Bienvenido a Masilano",
+      ob1Body: "Aquí pintas obras maestras famosas, campo a campo, a tu ritmo.",
+      ob2Title: "Así funciona",
+      ob2Body: "Elige un color y toca los campos con ese número. Puedes interrumpir cuando quieras y seguir más tarde.",
+      ob3Title: "Siempre a tu ritmo",
+      ob3Body: "Descubre el camino de vida de Van Gogh y las historias de los pintores. Tu progreso permanece solo en este dispositivo.",
+      continueKicker: "Seguir pintando",
+      continueAria: "Seguir pintando: {title}",
+      installTitle: "Añadir a la pantalla de inicio",
+      installBody: "Así Masilano queda a mano, como una aplicación.",
+      installAdd: "Añadir",
+      installDismiss: "Cerrar",
+      installHowTitle: "Cómo añadir Masilano",
+      installHowIOS: "Toca el icono de compartir y elige «Añadir a la pantalla de inicio».",
+      installHowGeneric: "En el menú del navegador, elige «Añadir a la pantalla de inicio» o «Instalar aplicación».",
+      installGotIt: "Entendido",
+      share: "Compartir el cuadro",
+      shareText: "He pintado «{title}» de {artist} con Masilano.",
+      shareCredit: "pintado con Masilano",
+      shareSaved: "Cuadro guardado",
+      shareFailed: "No se ha podido compartir. El cuadro se ha guardado.",
+      settingsTitle: "Ajustes",
+      settingsAria: "Ajustes",
+      calmTitle: "Modo reposo",
+      calmBody: "Solo cuadros fáciles, botones más grandes y movimientos más suaves.",
+      calmAria: "Modo reposo",
+      dailyKicker: "Cuadro del día",
+      dailyAria: "Cuadro del día: {title}",
+      dailyDone: "Ya pintado",
+      dailyPaint: "Pintar hoy",
+      streakToday: "{n} días: qué bien que estés aquí hoy",
+      streakActive: "{n} días seguidos",
+      streakPaused: "{n} días, a tu ritmo",
+      streakToday1: "Qué bien que estés aquí hoy",
+      streakActive1: "Un día",
+      streakPaused1: "Un día, a tu ritmo",
+      albumTitle: "Álbum",
+      albumAria: "Abrir el álbum",
+      albumOpen: "Álbum",
+      albumCount: "{n} de {N} cuadros",
+      albumGroup: "{n}/{N}",
+      albumEmpty: "Tu álbum aún está vacío. Cada cuadro terminado encontrará aquí su lugar.",
+      albumViewAria: "Cuadro terminado: {title}",
+      mileFirst: "Tu primer cuadro está terminado. Qué bien que estés aquí.",
+      mile10: "Diez cuadros. Lo haces a tu ritmo.",
+      mile50: "Cincuenta cuadros en tu álbum.",
+      mileStation: "La primera estación está completa."
+    },
+    fr: {
+      appTitle: "Peinture par numéros",
+      docTitle: "Masilano · Peinture par numéros",
+      appSubtitle: "567 chefs-d’œuvre, case par case – et les parcours de vie de Van Gogh, Monet et Hokusai.",
+      sortAria: "Ordre des images",
+      sortGallery: "Standard",
+      sortEasy: "Faciles d’abord",
+      searchPh: "Chercher un tableau ou un peintre",
+      searchClear: "Effacer la recherche",
+      sourcesBtn: "Sources et notes",
+      version: "Version d’essai 7.5",
+      back: "Retour",
+      backGallery: "Retour à la galerie",
+      backWays: "Retour aux parcours",
+      todayTitle: "Aujourd’hui",
+      todayLead: "Un tableau, à ton rythme.",
+      dailyCta: "Peindre",
+      dailyCtaView: "Voir le tableau",
+      pathNextKicker: "Ton parcours continue",
+      pathNextMeta: "Station {n} sur {N}",
+      pathNextDone: "Ce parcours de vie est achevé.",
+      pathInviteKicker: "Un parcours de vie",
+      pathInviteLead: "Si tu veux, commence un parcours de vie. Station après station, à ton rythme.",
+      pathInviteCta: "Vers les parcours",
+      pathAllDone: "Tu as achevé les parcours de vie.",
+      filterBtn: "Filtre",
+      filterTitle: "Filtre",
+      filterBtnAria: "Ouvrir les filtres",
+      filterBadgeAria: "{n} filtres actifs",
+      stationOf: "Station {n} sur {N}",
+      pathKickerNew: "Nouveau",
+      waysTitle: "Parcours",
+      waysLead: "Parcours de vie et récits des peintres.",
+      galTitle: "Galerie",
+      tabAria: "Sections principales",
+      tabHeute: "Aujourd’hui",
+      tabWege: "Parcours",
+      tabGalerie: "Galerie",
+      tabAlbum: "Album",
+      filterPainter: "Peintre",
+      filterPainterAria: "Filtrer par peintre",
+      filterLevelAria: "Filtrer par difficulté",
+      filterAll: "Tous",
+      filterAllPainters: "Tous les peintres",
+      filterOpen: "Non terminés seulement",
+      hint: "Indice",
+      pathMode: "Parcours de vie",
+      storyMode: "Récits",
+      paint: "Peindre le tableau",
+      paintContinue: "Continuer à peindre",
+      paintView: "Voir le tableau",
+      didYouKnow: "Le savais-tu ?",
+      whatNext: "La suite",
+      overview: "Aperçu",
+      next: "Suivant",
+      lookAgain: "Revoir le tableau",
+      finKicker: "Terminé",
+      finPath: "Vers le parcours de vie",
+      finGal: "Vers la galerie",
+      storyDone: "Terminé ! 🎉",
+      technique: "Technique",
+      viewOriginal: "Voir l’original",
+      toGallery: "Vers la galerie",
+      resetPaint: "Recommencer ce tableau",
+      sourcesTitle: "Sources des images",
+      sourcesBody: "Toutes les images proviennent de Wikimedia Commons et sont dans le domaine public. Elles ont été automatiquement transformées en cases de couleur pour le jeu. Masilano a traduit les citations des lettres de Van Gogh depuis l’original néerlandais ou français (numéros et dates selon l’édition des lettres de 2009). Masilano a traduit les citations des lettres de Monet depuis l’original français (destinataire et date selon Wildenstein). Tes progrès sont enregistrés uniquement sur cet appareil.",
+      close: "Fermer",
+      easy: "Facile",
+      medium: "Moyen",
+      hard: "Difficile",
+      done: "Terminé",
+      ready: "Prêt",
+      neu: "Nouveau",
+      storyTag: "Récit",
+      pathTag: "Parcours de vie",
+      inStory: "Dans le récit de {name}",
+      inPath: "Dans le parcours de vie de {name}",
+      noHits: "Aucun résultat",
+      noHitsHint: "Essaie un autre titre, peintre, année ou musée.",
+      pageN: "Page {n}",
+      lockedStory: "Ce tableau fait partie du récit de {name}. Il se débloque chapitre par chapitre.",
+      colorHere: "La couleur {n} va ici",
+      pickOpen: "Choisis une couleur encore ouverte",
+      hintToast: "Touche « Indice » pour revoir le récit",
+      resetConfirm: "Effacer tes progrès sur ce tableau et recommencer ?",
+      museum: "🏛 Musée : {m}",
+      today: "🏛 Aujourd’hui : {m}",
+      original: "Original",
+      yours: "Ta version",
+      paintedOf: "{n} sur {N} peints",
+      startNow: "Commencer maintenant",
+      pathKicker: "Nouveau · Parcours de vie",
+      storyKickerNew: "Nouveau · Récits",
+      storyKicker: "Récits",
+      chaptersPainted: "{n} sur {N} chapitres peints",
+      pictureOf: "{place} · Tableau {n} sur {N}",
+      picturesPainted: "{n} sur {N} tableaux peints",
+      chapterN: "Chapitre {n}",
+      chapterOf: "Chapitre {n} sur {N}",
+      chapterLine: "Chapitre {n} · {place}, {when}",
+      lockedUntil: "🔒 Se débloque lorsque le chapitre {n} est terminé",
+      paintFirst: "Peins d’abord le chapitre {n} ; ensuite, cela continue ici.",
+      already: "Déjà peint",
+      youPaint: "Tu peins",
+      chapterDone: "Chapitre {n} terminé ! 🎉",
+      finishStory: "Terminer le récit",
+      nextChapter: "Suivant : chapitre {n}",
+      pictureDone: "Tableau {n} terminé ! 🎉",
+      nextPicture: "Suivant : {title}",
+      pathNotePlay: "La première station est un départ libre. Dans la version d’essai, tu peux déjà peindre tous les tableaux ; plus tard, chaque tableau terminé débloquera le suivant.",
+      pathNoteDone: "Tu as peint tous les tableaux de ce parcours. La fin se trouve plus bas.",
+      freeStart: "Départ libre · ",
+      closing: "Pour finir",
+      mapAria: "Carte des stations du parcours de vie de Van Gogh",
+      mapAriaPath: "Carte des stations : {title}",
+      allDone: "Tu as peint les {N} tableaux.",
+      museumWord: "Musée",
+      pathAria: "Parcours de vie : {title}",
+      storyAria: "Récits : {name}",
+      langAria: "Langue",
+      langDe: "Deutsch",
+      langEn: "English",
+      langEs: "Español",
+      langFr: "Français",
+      langIt: "Italiano",
+      langFallback: "Texte en anglais",
+      langMenuAria: "Choisir la langue",
+      publicDomain: "domaine public",
+      publicDomainCC0: "domaine public (CC0)",
+      hintAgain: "Touche 💡 pour revoir le texte",
+      colorAlready: "Cette couleur est déjà terminée",
+      colorFinished: "Couleur {n} terminée ✓",
+      colorAria: "Couleur {n}",
+      colorAriaDone: "Couleur {n}, terminée",
+      obSkip: "Passer",
+      obNext: "Suivant",
+      obStart: "C’est parti",
+      obStep: "{n} sur {N}",
+      ob1Title: "Bienvenue chez Masilano",
+      ob1Body: "Ici tu peins des chefs-d’œuvre célèbres, case par case, à ton rythme.",
+      ob2Title: "Comment cela fonctionne",
+      ob2Body: "Choisis une couleur et touche les cases qui portent ce numéro. Tu peux t’arrêter à tout moment et continuer plus tard.",
+      ob3Title: "Toujours à ton rythme",
+      ob3Body: "Découvre le parcours de vie de Van Gogh et les récits des peintres. Tes progrès restent uniquement sur cet appareil.",
+      continueKicker: "Continuer à peindre",
+      continueAria: "Continuer à peindre : {title}",
+      installTitle: "Ajouter à l’écran d’accueil",
+      installBody: "Ainsi Masilano est à portée de main, comme une application.",
+      installAdd: "Ajouter",
+      installDismiss: "Fermer",
+      installHowTitle: "Comment ajouter Masilano",
+      installHowIOS: "Touche l’icône de partage et choisis « Sur l’écran d’accueil ».",
+      installHowGeneric: "Dans le menu de ton navigateur, choisis « Ajouter à l’écran d’accueil » ou « Installer l’application ».",
+      installGotIt: "Compris",
+      share: "Partager le tableau",
+      shareText: "J’ai peint « {title} » de {artist} avec Masilano.",
+      shareCredit: "peint avec Masilano",
+      shareSaved: "Tableau enregistré",
+      shareFailed: "Le partage n’a pas fonctionné. Le tableau a été enregistré.",
+      settingsTitle: "Réglages",
+      settingsAria: "Réglages",
+      calmTitle: "Mode calme",
+      calmBody: "Uniquement des tableaux faciles, des boutons plus grands et des mouvements plus doux.",
+      calmAria: "Mode calme",
+      dailyKicker: "Tableau du jour",
+      dailyAria: "Tableau du jour : {title}",
+      dailyDone: "Déjà peint",
+      dailyPaint: "Peindre aujourd’hui",
+      streakToday: "{n} jours – c’est beau que tu sois là aujourd’hui",
+      streakActive: "{n} jours d’affilée",
+      streakPaused: "{n} jours, à ton rythme",
+      streakToday1: "C’est beau que tu sois là aujourd’hui",
+      streakActive1: "Un jour",
+      streakPaused1: "Un jour, à ton rythme",
+      albumTitle: "Album",
+      albumAria: "Ouvrir l’album",
+      albumOpen: "Album",
+      albumCount: "{n} sur {N} tableaux",
+      albumGroup: "{n}/{N}",
+      albumEmpty: "Ton album est encore vide. Chaque tableau terminé y trouvera sa place.",
+      albumViewAria: "Tableau terminé : {title}",
+      mileFirst: "Ton premier tableau est terminé. Quel plaisir que tu sois là.",
+      mile10: "Dix tableaux. Tu fais cela à ton rythme.",
+      mile50: "Cinquante tableaux dans ton album.",
+      mileStation: "La première station est complète."
+    },
+    it: {
+      appTitle: "Dipingere con i numeri",
+      docTitle: "Masilano · Dipingere con i numeri",
+      appSubtitle: "567 capolavori, campo dopo campo – e i percorsi di vita di Van Gogh, Monet e Hokusai.",
+      sortAria: "Ordine delle immagini",
+      sortGallery: "Standard",
+      sortEasy: "Prima i facili",
+      searchPh: "Cerca un quadro o un pittore",
+      searchClear: "Cancella la ricerca",
+      sourcesBtn: "Fonti e note",
+      version: "Versione di prova 7.5",
+      back: "Indietro",
+      backGallery: "Torna alla galleria",
+      backWays: "Torna ai percorsi",
+      todayTitle: "Oggi",
+      todayLead: "Un quadro, al tuo ritmo.",
+      dailyCta: "Dipingere",
+      dailyCtaView: "Vedi il quadro",
+      pathNextKicker: "Il tuo percorso continua",
+      pathNextMeta: "Stazione {n} di {N}",
+      pathNextDone: "Questo percorso di vita è completo.",
+      pathInviteKicker: "Un percorso di vita",
+      pathInviteLead: "Se vuoi, inizia un percorso di vita. Stazione dopo stazione, al tuo ritmo.",
+      pathInviteCta: "Ai percorsi",
+      pathAllDone: "Hai completato i percorsi di vita.",
+      filterBtn: "Filtro",
+      filterTitle: "Filtro",
+      filterBtnAria: "Apri i filtri",
+      filterBadgeAria: "{n} filtri attivi",
+      stationOf: "Stazione {n} di {N}",
+      pathKickerNew: "Nuovo",
+      waysTitle: "Percorsi",
+      waysLead: "Percorsi di vita e storie dei pittori.",
+      galTitle: "Galleria",
+      tabAria: "Sezioni principali",
+      tabHeute: "Oggi",
+      tabWege: "Percorsi",
+      tabGalerie: "Galleria",
+      tabAlbum: "Album",
+      filterPainter: "Pittore",
+      filterPainterAria: "Filtra per pittore",
+      filterLevelAria: "Filtra per difficoltà",
+      filterAll: "Tutti",
+      filterAllPainters: "Tutti i pittori",
+      filterOpen: "Solo da finire",
+      hint: "Suggerimento",
+      pathMode: "Percorso di vita",
+      storyMode: "Storie",
+      paint: "Dipingere il quadro",
+      paintContinue: "Continua a dipingere",
+      paintView: "Vedi il quadro",
+      didYouKnow: "Lo sapevi?",
+      whatNext: "Come continua",
+      overview: "Panoramica",
+      next: "Avanti",
+      lookAgain: "Rivedi il quadro",
+      finKicker: "Fatto",
+      finPath: "Al percorso di vita",
+      finGal: "Alla galleria",
+      storyDone: "Fatto! 🎉",
+      technique: "Tecnica",
+      viewOriginal: "Vedi l’originale",
+      toGallery: "Alla galleria",
+      resetPaint: "Dipingere di nuovo da capo",
+      sourcesTitle: "Fonti delle immagini",
+      sourcesBody: "Tutte le immagini provengono da Wikimedia Commons e sono di pubblico dominio. Sono state trasformate automaticamente in campi di colore per il gioco. Le citazioni dalle lettere di Van Gogh le ha tradotte Masilano dall’originale olandese o francese (numeri e date secondo l’edizione delle lettere del 2009). Le citazioni dalle lettere di Monet le ha tradotte Masilano dall’originale francese (destinatario e data secondo Wildenstein). I tuoi progressi sono salvati solo su questo dispositivo.",
+      close: "Chiudi",
+      easy: "Facile",
+      medium: "Medio",
+      hard: "Difficile",
+      done: "Fatto",
+      ready: "Pronto",
+      neu: "Nuovo",
+      storyTag: "Storia",
+      pathTag: "Percorso di vita",
+      inStory: "Nella storia di {name}",
+      inPath: "Nel percorso di vita di {name}",
+      noHits: "Nessun risultato",
+      noHitsHint: "Prova un altro titolo, pittore, anno o museo.",
+      pageN: "Pagina {n}",
+      lockedStory: "Questo quadro appartiene alla storia di {name}. Si sblocca capitolo per capitolo.",
+      colorHere: "Qui va il colore {n}",
+      pickOpen: "Scegli un colore ancora aperto",
+      hintToast: "Tocca «Suggerimento» per rivedere la storia",
+      resetConfirm: "Cancellare i progressi su questo quadro e ricominciare?",
+      museum: "🏛 Museo: {m}",
+      today: "🏛 Oggi: {m}",
+      original: "Originale",
+      yours: "La tua versione",
+      paintedOf: "{n} di {N} dipinti",
+      startNow: "Inizia ora",
+      pathKicker: "Nuovo · Percorso di vita",
+      storyKickerNew: "Nuovo · Storie",
+      storyKicker: "Storie",
+      chaptersPainted: "{n} di {N} capitoli dipinti",
+      pictureOf: "{place} · Quadro {n} di {N}",
+      picturesPainted: "{n} di {N} quadri dipinti",
+      chapterN: "Capitolo {n}",
+      chapterOf: "Capitolo {n} di {N}",
+      chapterLine: "Capitolo {n} · {place}, {when}",
+      lockedUntil: "🔒 Si sblocca quando il capitolo {n} è finito",
+      paintFirst: "Dipingi prima il capitolo {n}; poi si continua qui.",
+      already: "Già dipinto",
+      youPaint: "Stai dipingendo",
+      chapterDone: "Capitolo {n} completato! 🎉",
+      finishStory: "Concludi la storia",
+      nextChapter: "Avanti: capitolo {n}",
+      pictureDone: "Quadro {n} completato! 🎉",
+      nextPicture: "Avanti: {title}",
+      pathNotePlay: "La prima stazione è un inizio libero. Nella versione di prova puoi già dipingere tutti i quadri; più avanti, ogni quadro finito sbloccherà il successivo.",
+      pathNoteDone: "Hai dipinto tutti i quadri di questo percorso. La conclusione è più in basso.",
+      freeStart: "Inizio libero · ",
+      closing: "Alla fine",
+      mapAria: "Mappa delle stazioni del percorso di vita di Van Gogh",
+      mapAriaPath: "Mappa delle stazioni: {title}",
+      allDone: "Hai dipinto tutti i {N} quadri.",
+      museumWord: "Museo",
+      pathAria: "Percorso di vita: {title}",
+      storyAria: "Storie: {name}",
+      langAria: "Lingua",
+      langDe: "Deutsch",
+      langEn: "English",
+      langEs: "Español",
+      langFr: "Français",
+      langIt: "Italiano",
+      langFallback: "Testo in inglese",
+      langMenuAria: "Scegli la lingua",
+      publicDomain: "pubblico dominio",
+      publicDomainCC0: "pubblico dominio (CC0)",
+      hintAgain: "Tocca 💡 per rivedere il testo",
+      colorAlready: "Questo colore è già finito",
+      colorFinished: "Colore {n} finito ✓",
+      colorAria: "Colore {n}",
+      colorAriaDone: "Colore {n}, finito",
+      obSkip: "Salta",
+      obNext: "Avanti",
+      obStart: "Iniziamo",
+      obStep: "{n} di {N}",
+      ob1Title: "Benvenuto in Masilano",
+      ob1Body: "Qui dipingi capolavori famosi, campo dopo campo, al tuo ritmo.",
+      ob2Title: "Come funziona",
+      ob2Body: "Scegli un colore e tocca i campi con quel numero. Puoi interrompere quando vuoi e continuare più tardi.",
+      ob3Title: "Sempre al tuo ritmo",
+      ob3Body: "Scopri il percorso di vita di Van Gogh e le storie dei pittori. I tuoi progressi restano solo su questo dispositivo.",
+      continueKicker: "Continua a dipingere",
+      continueAria: "Continua a dipingere: {title}",
+      installTitle: "Aggiungi alla schermata Home",
+      installBody: "Così Masilano è a portata di mano, come un’app.",
+      installAdd: "Aggiungi",
+      installDismiss: "Chiudi",
+      installHowTitle: "Come aggiungere Masilano",
+      installHowIOS: "Tocca l’icona di condivisione e scegli «Aggiungi alla schermata Home».",
+      installHowGeneric: "Nel menu del browser scegli «Aggiungi alla schermata Home» o «Installa app».",
+      installGotIt: "Capito",
+      share: "Condividi il quadro",
+      shareText: "Ho dipinto «{title}» di {artist} con Masilano.",
+      shareCredit: "dipinto con Masilano",
+      shareSaved: "Quadro salvato",
+      shareFailed: "La condivisione non è riuscita. Il quadro è stato salvato.",
+      settingsTitle: "Impostazioni",
+      settingsAria: "Impostazioni",
+      calmTitle: "Modalità calma",
+      calmBody: "Solo quadri facili, pulsanti più grandi e movimenti più tranquilli.",
+      calmAria: "Modalità calma",
+      dailyKicker: "Quadro del giorno",
+      dailyAria: "Quadro del giorno: {title}",
+      dailyDone: "Già dipinto",
+      dailyPaint: "Dipingere oggi",
+      streakToday: "{n} giorni – che bello che tu sia qui oggi",
+      streakActive: "{n} giorni di fila",
+      streakPaused: "{n} giorni, al tuo ritmo",
+      streakToday1: "Che bello che tu sia qui oggi",
+      streakActive1: "Un giorno",
+      streakPaused1: "Un giorno, al tuo ritmo",
+      albumTitle: "Album",
+      albumAria: "Apri l’album",
+      albumOpen: "Album",
+      albumCount: "{n} di {N} quadri",
+      albumGroup: "{n}/{N}",
+      albumEmpty: "Il tuo album è ancora vuoto. Ogni quadro finito troverà qui il suo posto.",
+      albumViewAria: "Quadro finito: {title}",
+      mileFirst: "Il tuo primo quadro è finito. Che bello che tu sia qui.",
+      mile10: "Dieci quadri. Lo fai al tuo ritmo.",
+      mile50: "Cinquanta quadri nel tuo album.",
+      mileStation: "La prima stazione è completa."
     }
   };
 
+  const LANGS = ['de', 'en', 'es', 'fr', 'it'];
+  const LANG_NAMES = { de: 'Deutsch', en: 'English', es: 'Español', fr: 'Français', it: 'Italiano' };
+  const LANG_HTML = { de: 'de-CH', en: 'en', es: 'es', fr: 'fr', it: 'it' };
+  const CONTENT_GLOB = { en: 'EN', es: 'ES', fr: 'FR', it: 'IT' };
+
   const MONTHS = {
-    'Januar':'January','Februar':'February','März':'March','April':'April','Mai':'May','Juni':'June',
-    'Juli':'July','August':'August','September':'September','Oktober':'October','November':'November','Dezember':'December',
-    'Jan.':'Jan.','Feb.':'Feb.','März':'March','Apr.':'Apr.','Aug.':'Aug.','Sept.':'Sept.','Okt.':'Oct.','Nov.':'Nov.','Dez.':'Dec.'
+    en: {
+      'Januar':'January','Februar':'February','März':'March','April':'April','Mai':'May','Juni':'June',
+      'Juli':'July','August':'August','September':'September','Oktober':'October','November':'November','Dezember':'December',
+      'Jan.':'Jan.','Feb.':'Feb.','März':'March','Apr.':'Apr.','Aug.':'Aug.','Sept.':'Sept.','Okt.':'Oct.','Nov.':'Nov.','Dez.':'Dec.'
+    },
+    es: {
+      'Januar':'enero','Februar':'febrero','März':'marzo','April':'abril','Mai':'mayo','Juni':'junio',
+      'Juli':'julio','August':'agosto','September':'septiembre','Oktober':'octubre','November':'noviembre','Dezember':'diciembre',
+      'Jan.':'ene.','Feb.':'feb.','März':'marzo','Apr.':'abr.','Aug.':'ago.','Sept.':'sept.','Okt.':'oct.','Nov.':'nov.','Dez.':'dic.'
+    },
+    fr: {
+      'Januar':'janvier','Februar':'février','März':'mars','April':'avril','Mai':'mai','Juni':'juin',
+      'Juli':'juillet','August':'août','September':'septembre','Oktober':'octobre','November':'novembre','Dezember':'décembre',
+      'Jan.':'janv.','Feb.':'févr.','März':'mars','Apr.':'avr.','Aug.':'août','Sept.':'sept.','Okt.':'oct.','Nov.':'nov.','Dez.':'déc.'
+    },
+    it: {
+      'Januar':'gennaio','Februar':'febbraio','März':'marzo','April':'aprile','Mai':'maggio','Juni':'giugno',
+      'Juli':'luglio','August':'agosto','September':'settembre','Oktober':'ottobre','November':'novembre','Dezember':'dicembre',
+      'Jan.':'gen.','Feb.':'feb.','März':'marzo','Apr.':'apr.','Aug.':'ago.','Sept.':'sett.','Okt.':'ott.','Nov.':'nov.','Dez.':'dic.'
+    }
   };
+
+  function mapLangTag(raw) {
+    const n = String(raw || '').toLowerCase().replace('_', '-');
+    if (n.indexOf('de') === 0) return 'de';
+    if (n.indexOf('es') === 0) return 'es';
+    if (n.indexOf('fr') === 0) return 'fr';
+    if (n.indexOf('it') === 0) return 'it';
+    if (n.indexOf('en') === 0) return 'en';
+    return null;
+  }
 
   function detect() {
     try {
       const s = localStorage.getItem(KEY);
-      if (s === 'de' || s === 'en') return s;
+      if (LANGS.indexOf(s) >= 0) return s;
     } catch (e) {}
-    const nav = String((typeof navigator !== 'undefined' && (navigator.language || navigator.userLanguage)) || 'en').toLowerCase();
-    return nav.indexOf('de') === 0 ? 'de' : 'en';
+    const navs = [];
+    if (typeof navigator !== 'undefined') {
+      if (navigator.languages && navigator.languages.length) navs.push.apply(navs, navigator.languages);
+      if (navigator.language) navs.push(navigator.language);
+      if (navigator.userLanguage) navs.push(navigator.userLanguage);
+    }
+    for (let i = 0; i < navs.length; i++) {
+      const m = mapLangTag(navs[i]);
+      if (m) return m;
+    }
+    return 'en';
   }
 
   let lang = detect();
@@ -392,13 +1001,40 @@
     return s;
   }
 
-  function whenEn(s) {
-    if (!s) return s;
-    let out = s;
-    const keys = Object.keys(MONTHS).sort((a,b) => b.length - a.length);
-    for (const k of keys) out = out.split(k).join(MONTHS[k]);
+  function contentPack(which) {
+    const code = which || lang;
+    if (code === 'de') return null;
+    const g = CONTENT_GLOB[code];
+    return (g && window[g]) || null;
+  }
+
+  function applyMonths(s, to) {
+    if (!s || to === 'de') return s;
+    const map = MONTHS[to] || MONTHS.en;
+    let out = String(s);
+    const keys = Object.keys(map).sort((a, b) => b.length - a.length);
+    for (let i = 0; i < keys.length; i++) out = out.split(keys[i]).join(map[keys[i]]);
+    if (to === 'en') {
+      out = out.replace(/(\d+)\.(\s+)(January|February|March|April|May|June|July|August|September|October|November|December|Jan\.|Feb\.|Apr\.|Aug\.|Sept\.|Oct\.|Nov\.|Dec\.)/g, '$1$2$3');
+    }
+    if (to === 'es') {
+      out = out.replace(/\bum\s+/g, 'hacia ');
+      out = out.replace(/\bab\s+/g, 'desde ');
+      out = out.replace(/\b(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.|feb\.|abr\.|ago\.|sept\.|oct\.|nov\.|dic\.)(\s+)(\d{4})/gi, '$1 de$2$3');
+    }
+    if (to === 'fr') {
+      out = out.replace(/\bum\s+/g, 'vers ');
+      out = out.replace(/\bab\s+/g, 'à partir de ');
+    }
+    if (to === 'it') {
+      out = out.replace(/\bum\s+/g, 'circa ');
+      out = out.replace(/\bab\s+/g, 'dal ');
+    }
     return out;
   }
+
+  function whenEn(s) { return applyMonths(s, 'en'); }
+  function whenLoc(s) { return applyMonths(s, lang); }
 
   function citeEn(cite) {
     if (!cite) return cite;
@@ -417,90 +1053,192 @@
     s = s.replace(/, an /, ', to ');
     s = s.replace(/, von Theo$/, ', from Theo');
     s = s.replace(/, von Jo van Gogh-Bonger$/, ', from Jo van Gogh-Bonger');
-    const keys = Object.keys(MONTHS).sort((a,b) => b.length - a.length);
-    for (const k of keys) s = s.split(k).join(MONTHS[k]);
-    // drop German ordinal dots after day numbers in running English? keep "23. May" -> "23 May"
-    s = s.replace(/(\d+)\.(\s+)(January|February|March|April|May|June|July|August|September|October|November|December|Jan\.|Feb\.|Apr\.|Aug\.|Sept\.|Oct\.|Nov\.|Dec\.)/g, '$1$2$3');
+    s = applyMonths(s, 'en');
     return s;
   }
 
-  function enPack(id, bucket) {
-    const EN = window.EN || {};
-    return (EN[bucket] && EN[bucket][id]) || null;
+  function packGet(P, bucket, id) {
+    return (P && P[bucket] && P[bucket][id]) || null;
   }
 
   function loc(obj, field) {
     if (!obj) return '';
-    if (lang === 'en') {
-      if (obj.id) {
-        const w = enPack(obj.id, 'works');
+    if (lang !== 'de') {
+      const P = contentPack();
+      if (P && obj.id) {
+        const w = packGet(P, 'works', obj.id);
         if (w && w[field] != null) return w[field];
-        const s = enPack(obj.id, 'stories');
+        const s = packGet(P, 'stories', obj.id);
         if (s && s[field] != null) return s[field];
-        const p = enPack(obj.id, 'paths');
+        const p = packGet(P, 'paths', obj.id);
         if (p && p[field] != null) return p[field];
       }
-      if (field === 'museum') {
+      if (field === 'museum' && P && P.museums && obj.museum && P.museums[obj.museum]) return P.museums[obj.museum];
+      if (field === 'artist' && P && P.artists && obj.artist && P.artists[obj.artist]) return P.artists[obj.artist];
+      if (field === 'when') return whenLoc(obj.when);
+      // Path-only titles and museums: prefer English over German when this language has no entry.
+      if (lang !== 'en' && (field === 'title' || field === 'museum' || field === 'artist' || field === 'part' || field === 'subtitle' || field === 'intro' || field === 'ending' || field === 'epilogue')) {
         const EN = window.EN || {};
-        if (EN.museums && obj.museum && EN.museums[obj.museum]) return EN.museums[obj.museum];
+        if (obj.id) {
+          const w = packGet(EN, 'works', obj.id);
+          if (w && w[field] != null) return w[field];
+          const s = packGet(EN, 'stories', obj.id);
+          if (s && s[field] != null) return s[field];
+          const p = packGet(EN, 'paths', obj.id);
+          if (p && p[field] != null) return p[field];
+        }
+        if (field === 'museum' && EN.museums && obj.museum && EN.museums[obj.museum]) return EN.museums[obj.museum];
+        if (field === 'artist' && EN.artists && obj.artist && EN.artists[obj.artist]) return EN.artists[obj.artist];
       }
-      if (field === 'artist') {
-        const EN = window.EN || {};
-        if (EN.artists && obj.artist && EN.artists[obj.artist]) return EN.artists[obj.artist];
-      }
-      if (field === 'when') return whenEn(obj.when);
     }
     return obj[field];
   }
 
+  function asArr(v) {
+    if (v == null || v === '') return [];
+    return Array.isArray(v) ? v : [v];
+  }
+
   function locStation(st) {
-    if (lang !== 'en') return { place: st.place, when: st.when, intro: st.intro };
-    const e = enPack(st.id, 'stations') || {};
+    if (!st) return { place: '', when: '', intro: [] };
+    if (lang === 'de') return { place: st.place, when: st.when, intro: asArr(st.intro) };
+    const P = contentPack();
+    const e = packGet(P, 'stations', st.id) || {};
+    const en = packGet(window.EN, 'stations', st.id) || {};
     return {
-      place: e.place || st.place,
-      when: e.when || whenEn(st.when),
-      intro: e.intro || st.intro
+      place: e.place || en.place || st.place,
+      when: e.when || (en.when || whenLoc(st.when)),
+      intro: asArr(e.intro && e.intro.length ? e.intro : (en.intro || st.intro))
     };
   }
 
   function locPathWork(w) {
-    if (lang !== 'en') return { text: w.text, fact: w.fact, quote: w.quote };
-    const e = enPack(w.pid, 'pathTexts') || {};
-    const q = w.quote ? {
-      text: (e.quote && e.quote.text) || w.quote.text,
-      cite: (e.quote && e.quote.cite) || citeEn(w.quote.cite)
-    } : null;
-    return {
-      text: e.text || w.text,
-      fact: e.fact || w.fact,
-      quote: q
-    };
+    const de = { text: asArr(w && w.text), fact: w && w.fact, quote: w && w.quote, fallback: false };
+    if (!w) return de;
+    if (lang === 'de') return de;
+    const P = contentPack();
+    const e = packGet(P, 'pathTexts', w.pid) || {};
+    const en = packGet(window.EN, 'pathTexts', w.pid) || {};
+    function quoteFrom(src, fallbackCite) {
+      if (src && src.quote) {
+        return {
+          text: src.quote.text || (w.quote && w.quote.text),
+          cite: src.quote.cite || fallbackCite || (w.quote && w.quote.cite)
+        };
+      }
+      if (w.quote) {
+        return { text: w.quote.text, cite: fallbackCite || w.quote.cite };
+      }
+      return null;
+    }
+    if (e.text || e.fact || e.quote) {
+      return {
+        text: asArr(e.text || en.text || w.text),
+        fact: e.fact || en.fact || w.fact,
+        quote: quoteFrom(e, lang === 'en' ? citeEn(w.quote && w.quote.cite) : (en.quote && en.quote.cite)),
+        fallback: false
+      };
+    }
+    const enHas = !!(en.text || en.fact || en.quote);
+    if (lang === 'en' || enHas) {
+      const qCite = citeEn(w.quote && w.quote.cite);
+      return {
+        text: asArr(en.text || w.text),
+        fact: en.fact || w.fact,
+        quote: quoteFrom(en, qCite),
+        fallback: lang !== 'en' && enHas
+      };
+    }
+    return de;
   }
 
   function locChapter(story, ch) {
-    if (lang !== 'en') return { title: ch.title, place: ch.place, when: ch.when, text: ch.text, fact: ch.fact };
-    const pack = enPack(story.id, 'stories');
-    const e = (pack && pack.chapters && (pack.chapters[ch.pid] || pack.chapters[ch.title])) || {};
+    if (!ch) return { title: '', place: '', when: '', text: [], fact: '' };
+    if (lang === 'de') return { title: ch.title, place: ch.place, when: ch.when, text: asArr(ch.text), fact: ch.fact };
+    const P = contentPack();
+    function chap(pack) {
+      const s = pack && pack.stories && story && pack.stories[story.id];
+      return (s && s.chapters && (s.chapters[ch.pid] || s.chapters[ch.title])) || {};
+    }
+    const e = chap(P);
+    const en = chap(window.EN);
     return {
-      title: e.title || ch.title,
-      place: e.place || ch.place,
-      when: e.when || whenEn(ch.when),
-      text: e.text || ch.text,
-      fact: e.fact || ch.fact
+      title: e.title || en.title || ch.title,
+      place: e.place || en.place || ch.place,
+      when: e.when || en.when || whenLoc(ch.when),
+      text: asArr(e.text && (Array.isArray(e.text) ? e.text.length : e.text) ? e.text : (en.text || ch.text)),
+      fact: e.fact || en.fact || ch.fact
     };
   }
 
   function sourceLine(src) {
-    if (lang !== 'en' || !src) return src;
+    if (!src || lang === 'de') return src;
     return String(src)
       .replace(/gemeinfrei \(Public Domain\)/g, t('publicDomain'))
       .replace(/gemeinfrei \(CC0\)/g, t('publicDomainCC0'))
-      .replace(/gemeinfrei/g, 'public domain');
+      .replace(/gemeinfrei/g, t('publicDomain'));
+  }
+
+  function closeLangMenus() {
+    document.querySelectorAll('.langmenu-list').forEach(el => el.classList.add('hidden'));
+    document.querySelectorAll('.langmenu-btn').forEach(el => el.setAttribute('aria-expanded', 'false'));
+  }
+
+  function syncLangMenus() {
+    document.querySelectorAll('.langmenu-btn .langlabel, .langmenu-btn .lang-label').forEach(el => {
+      el.textContent = LANG_NAMES[lang] || lang;
+    });
+    document.querySelectorAll('.langmenu-btn').forEach(btn => {
+      const lab = btn.querySelector('.langlabel') || btn;
+      if (lab === btn && !btn.querySelector('.langlabel')) {
+        /* keep */
+      }
+    });
+    document.querySelectorAll('.langmenu-btn').forEach(btn => {
+      const span = btn.querySelector('.langlabel');
+      if (span) span.textContent = LANG_NAMES[lang] || lang;
+    });
+    document.querySelectorAll('.langopt, .langmenu-list [data-lang]').forEach(b => {
+      const on = b.getAttribute('data-lang') === lang;
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+  }
+
+  function bindLangMenus() {
+    if (bindLangMenus.done) return;
+    bindLangMenus.done = true;
+    document.addEventListener('click', e => {
+      const opt = e.target.closest('[data-lang]');
+      if (opt && opt.closest('#langSwitch, #obLang, .langmenu')) {
+        const next = opt.getAttribute('data-lang');
+        if (LANGS.indexOf(next) >= 0) setLang(next);
+        closeLangMenus();
+        e.preventDefault();
+        return;
+      }
+      const btn = e.target.closest('.langmenu-btn');
+      if (btn) {
+        const menu = btn.parentElement && btn.parentElement.querySelector('.langmenu-list');
+        const open = menu && menu.classList.contains('hidden');
+        closeLangMenus();
+        if (menu && open) {
+          menu.classList.remove('hidden');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+        e.preventDefault();
+        return;
+      }
+      if (!e.target.closest('.langmenu')) closeLangMenus();
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLangMenus();
+    });
   }
 
   function applyStatic() {
     const root = document.documentElement;
-    if (root) root.setAttribute('lang', lang === 'de' ? 'de-CH' : 'en');
+    if (root) root.setAttribute('lang', LANG_HTML[lang] || lang);
     if (document.title !== undefined) document.title = t('docTitle');
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const k = el.getAttribute('data-i18n');
@@ -518,15 +1256,12 @@
       const k = el.getAttribute('data-i18n-aria');
       if (k) el.setAttribute('aria-label', t(k));
     });
-    document.querySelectorAll('.langbtn').forEach(b => {
-      const on = b.getAttribute('data-lang') === lang;
-      b.classList.toggle('on', on);
-      b.setAttribute('aria-pressed', on ? 'true' : 'false');
-    });
+    syncLangMenus();
+    bindLangMenus();
   }
 
   function setLang(next) {
-    if (next !== 'de' && next !== 'en') return;
+    if (LANGS.indexOf(next) < 0) return;
     lang = next;
     try { localStorage.setItem(KEY, lang); } catch (e) {}
     applyStatic();
@@ -535,9 +1270,11 @@
 
   window.I18N = {
     key: KEY,
+    langs: LANGS,
+    names: LANG_NAMES,
     get lang() { return lang; },
-    t, loc, locStation, locPathWork, locChapter, sourceLine, citeEn, whenEn,
-    applyStatic, setLang, detect, dict
+    t, loc, locStation, locPathWork, locChapter, sourceLine, citeEn, whenEn, whenLoc,
+    applyStatic, setLang, detect, dict, contentPack, closeLangMenus
   };
 
   if (document.readyState === 'loading') {

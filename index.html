@@ -18,9 +18,18 @@
 <header id="appHead" class="apphead">
   <div class="wordmark">Masilano</div>
   <div class="headacts">
-    <div id="langSwitch" class="langswitch" role="group" data-i18n-aria="langAria" aria-label="Sprache">
-      <button type="button" class="langbtn" data-lang="de" aria-pressed="true">Deutsch</button>
-      <button type="button" class="langbtn" data-lang="en" aria-pressed="false">English</button>
+    <div id="langSwitch" class="langmenu">
+      <button type="button" class="langmenu-btn" aria-haspopup="listbox" aria-expanded="false" data-i18n-aria="langMenuAria" aria-label="Sprache wählen">
+        <span class="langlabel">Deutsch</span>
+        <span class="langchev" aria-hidden="true">▾</span>
+      </button>
+      <ul class="langmenu-list hidden" role="listbox">
+        <li role="presentation"><button type="button" class="langopt" data-lang="de" role="option">Deutsch</button></li>
+        <li role="presentation"><button type="button" class="langopt" data-lang="en" role="option">English</button></li>
+        <li role="presentation"><button type="button" class="langopt" data-lang="es" role="option">Español</button></li>
+        <li role="presentation"><button type="button" class="langopt" data-lang="fr" role="option">Français</button></li>
+        <li role="presentation"><button type="button" class="langopt" data-lang="it" role="option">Italiano</button></li>
+      </ul>
     </div>
     <button type="button" id="setBtn" class="gear" data-i18n-aria="settingsAria" aria-label="Einstellungen">
       <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
@@ -42,7 +51,7 @@
     <div id="installHint" class="installhint hidden" hidden></div>
     <footer class="gfoot">
       <button id="srcBtn" class="linkbtn" data-i18n-html="sourcesBtn">Bildquellen &amp; Hinweise</button>
-      <div class="ver" data-i18n="version">Testversion 7.4</div>
+      <div class="ver" data-i18n="version">Testversion 7.5</div>
     </footer>
   </div>
 </section>
@@ -173,7 +182,8 @@
     <h2 id="avTitle"></h2>
     <div id="avMeta" class="meta"></div>
     <div id="avText" class="ctext"></div>
-    <div id="avFactWrap" class="hidden"><div class="lbl" data-i18n="didYouKnow">Wusstest du?</div><p id="avFact"></p></div>
+    <p id="avLangFallback" class="langfallback hidden" hidden></p>
+    <div id="avFactWrap" class="hidden"><div class="lbl" data-i18n="didYouKnow">Wusstest du?</div><p id="avFact"></p><p id="avFactFallback" class="langfallback hidden" hidden></p></div>
     <div id="avMuseum" class="museum"></div>
     <div class="btns"><button type="button" id="avClose" class="btn" data-i18n="close">Schliessen</button></div>
   </div>
@@ -201,6 +211,7 @@
     <h2 id="cTitle"></h2>
     <div id="cMeta" class="meta"></div>
     <div id="cText" class="ctext"></div>
+    <p id="cLangFallback" class="langfallback hidden" hidden></p>
     <blockquote id="cQuote" class="cquote hidden"><p id="cQuoteT"></p><cite id="cQuoteC"></cite></blockquote>
     <div id="cWork" class="cwork"></div>
     <div class="btns">
@@ -216,6 +227,7 @@
     <h2 id="dTitle"></h2>
     <div id="dMeta" class="meta"></div>
     <div class="lbl" data-i18n="didYouKnow">Wusstest du?</div><p id="dFact"></p>
+    <p id="dLangFallback" class="langfallback hidden" hidden></p>
     <div id="dEpiWrap" class="hidden"><div class="lbl" data-i18n="whatNext">Wie es weitergeht</div><p id="dEpi"></p></div>
     <div id="dMuseum" class="museum"></div>
     <div class="btns">
@@ -274,9 +286,18 @@
 <div id="onboard" class="onboard hidden" hidden role="dialog" aria-modal="true" aria-labelledby="obTitle">
   <div class="obcard">
     <div class="obtop">
-      <div id="obLang" class="langswitch" role="group" data-i18n-aria="langAria" aria-label="Sprache">
-        <button type="button" class="langbtn" data-lang="de">Deutsch</button>
-        <button type="button" class="langbtn" data-lang="en">English</button>
+      <div id="obLang" class="langmenu">
+        <button type="button" class="langmenu-btn" aria-haspopup="listbox" aria-expanded="false" data-i18n-aria="langMenuAria" aria-label="Sprache wählen">
+          <span class="langlabel">Deutsch</span>
+          <span class="langchev" aria-hidden="true">▾</span>
+        </button>
+        <ul class="langmenu-list hidden" role="listbox">
+          <li role="presentation"><button type="button" class="langopt" data-lang="de" role="option">Deutsch</button></li>
+          <li role="presentation"><button type="button" class="langopt" data-lang="en" role="option">English</button></li>
+          <li role="presentation"><button type="button" class="langopt" data-lang="es" role="option">Español</button></li>
+          <li role="presentation"><button type="button" class="langopt" data-lang="fr" role="option">Français</button></li>
+          <li role="presentation"><button type="button" class="langopt" data-lang="it" role="option">Italiano</button></li>
+        </ul>
       </div>
       <div id="obStep" class="obstep"></div>
     </div>
@@ -311,6 +332,9 @@
 <script src="en-monet-p3.js"></script>
 <script src="en-hokusai.js"></script>
 <script src="en-hokusai-p2.js"></script>
+<script src="es-content.js"></script>
+<script src="fr-content.js"></script>
+<script src="it-content.js"></script>
 <script src="i18n.js"></script>
 <script src="levels.js"></script>
 <script src="app.js"></script>
