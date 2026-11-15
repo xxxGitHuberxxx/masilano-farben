@@ -14,7 +14,7 @@
       searchPh: 'Bild oder Maler suchen',
       searchClear: 'Suche löschen',
       sourcesBtn: 'Bildquellen & Hinweise',
-      version: 'Testversion 7.5',
+      version: 'Testversion 7.6',
       back: 'Zurück',
       backGallery: 'Zurück zur Galerie',
       backWays: 'Zurück zu den Wegen',
@@ -188,6 +188,8 @@
       langFr: 'Français',
       langIt: 'Italiano',
       langFallback: 'Englisch',
+      quoteSelfTr: 'Übersetzung der Eigenübertragung (aus dem Original).',
+      quoteFromEnOrig: 'Übersetzung des englischen Originalbriefs von Vincent.',
       langMenuAria: 'Sprache wählen',
     },
     en: {
@@ -200,7 +202,7 @@
       searchPh: 'Search for a picture or painter',
       searchClear: 'Clear search',
       sourcesBtn: 'Picture sources & notes',
-      version: 'Test version 7.5',
+      version: 'Test version 7.6',
       back: 'Back',
       backGallery: 'Back to the gallery',
       backWays: 'Back to the journeys',
@@ -374,6 +376,8 @@
       langFr: 'Français',
       langIt: 'Italiano',
       langFallback: 'English text',
+      quoteSelfTr: 'Translation of the self-translation (from the original).',
+      quoteFromEnOrig: 'Translation of Vincent’s original English letter.',
       langMenuAria: 'Choose language',
     },
     es: {
@@ -386,7 +390,7 @@
       searchPh: "Buscar un cuadro o un pintor",
       searchClear: "Borrar búsqueda",
       sourcesBtn: "Fuentes e indicaciones",
-      version: "Versión de prueba 7.5",
+      version: "Versión de prueba 7.6",
       back: "Atrás",
       backGallery: "Volver a la galería",
       backWays: "Volver a los caminos",
@@ -502,6 +506,8 @@
       langFr: "Français",
       langIt: "Italiano",
       langFallback: "Texto en inglés",
+      quoteSelfTr: "Traducción de la autotraducción (a partir del original).",
+      quoteFromEnOrig: "Traducción de la carta original en inglés de Vincent.",
       langMenuAria: "Elegir idioma",
       publicDomain: "dominio público",
       publicDomainCC0: "dominio público (CC0)",
@@ -572,7 +578,7 @@
       searchPh: "Chercher un tableau ou un peintre",
       searchClear: "Effacer la recherche",
       sourcesBtn: "Sources et notes",
-      version: "Version d’essai 7.5",
+      version: "Version d’essai 7.6",
       back: "Retour",
       backGallery: "Retour à la galerie",
       backWays: "Retour aux parcours",
@@ -688,6 +694,8 @@
       langFr: "Français",
       langIt: "Italiano",
       langFallback: "Texte en anglais",
+      quoteSelfTr: "Traduction de l’autotraduction (à partir de l’original).",
+      quoteFromEnOrig: "Traduction de la lettre originale en anglais de Vincent.",
       langMenuAria: "Choisir la langue",
       publicDomain: "domaine public",
       publicDomainCC0: "domaine public (CC0)",
@@ -758,7 +766,7 @@
       searchPh: "Cerca un quadro o un pittore",
       searchClear: "Cancella la ricerca",
       sourcesBtn: "Fonti e note",
-      version: "Versione di prova 7.5",
+      version: "Versione di prova 7.6",
       back: "Indietro",
       backGallery: "Torna alla galleria",
       backWays: "Torna ai percorsi",
@@ -874,6 +882,8 @@
       langFr: "Français",
       langIt: "Italiano",
       langFallback: "Testo in inglese",
+      quoteSelfTr: "Traduzione dell’autotraduzione (a partire dall’originale).",
+      quoteFromEnOrig: "Traduzione della lettera originale in inglese di Vincent.",
       langMenuAria: "Scegli la lingua",
       publicDomain: "pubblico dominio",
       publicDomainCC0: "pubblico dominio (CC0)",
@@ -994,6 +1004,45 @@
 
   let lang = detect();
 
+  const PATHTEXT_FILES = {
+    es: ['es-path-vangogh.js', 'es-path-monet.js', 'es-path-hokusai.js'],
+    fr: ['fr-path-vangogh.js', 'fr-path-monet.js', 'fr-path-hokusai.js'],
+    it: ['it-path-vangogh.js', 'it-path-monet.js', 'it-path-hokusai.js']
+  };
+  const _scriptProm = {};
+  const _pathTextProm = {};
+
+  function loadScriptOnce(src) {
+    if (_scriptProm[src]) return _scriptProm[src];
+    _scriptProm[src] = new Promise((resolve, reject) => {
+      const s = document.createElement('script');
+      s.src = src;
+      s.async = true;
+      s.onload = () => resolve(src);
+      s.onerror = () => reject(new Error('Failed to load ' + src));
+      document.head.appendChild(s);
+    });
+    return _scriptProm[src];
+  }
+
+  function pathTextsReady(code) {
+    code = code || lang;
+    if (code === 'de' || code === 'en') return true;
+    const P = contentPack(code);
+    return !!(P && P.pathTexts && Object.keys(P.pathTexts).length);
+  }
+
+  function ensurePathTexts(code) {
+    code = code || lang;
+    if (code === 'de' || code === 'en') return Promise.resolve(code);
+    if (pathTextsReady(code)) return Promise.resolve(code);
+    if (_pathTextProm[code]) return _pathTextProm[code];
+    const files = PATHTEXT_FILES[code] || [];
+    _pathTextProm[code] = Promise.all(files.map(loadScriptOnce)).then(() => code);
+    return _pathTextProm[code];
+  }
+
+
   function t(key, vars) {
     const pack = dict[lang] || dict.de;
     let s = (pack[key] != null ? pack[key] : (dict.de[key] != null ? dict.de[key] : key));
@@ -1055,6 +1104,99 @@
     s = s.replace(/, von Jo van Gogh-Bonger$/, ', from Jo van Gogh-Bonger');
     s = applyMonths(s, 'en');
     return s;
+  }
+
+  function citeLoc(cite, to) {
+    if (!cite) return cite;
+    to = to || lang;
+    if (to === 'de') return cite;
+    if (to === 'en') return citeEn(cite);
+    let s = cite;
+    if (to === 'es') {
+      s = s.replace(/^Brief\s+an /, 'Carta a ');
+      s = s.replace(/^Brief\s+/, 'Carta ');
+      s = s.replace(/, um den /g, ', hacia el ');
+      s = s.replace(/ und um den /g, ' y hacia el ');
+      s = s.replace(/ oder /g, ' o ');
+      s = s.replace(/, an die Mutter$/, ', a su madre');
+      s = s.replace(/, an Theo und Jo$/, ', a Theo y Jo');
+      s = s.replace(/, an Willemien \(Wil\)$/, ', a Willemien (Wil)');
+      s = s.replace(/, an Emile Bernard$/, ', a Emile Bernard');
+      s = s.replace(/, an Albert Aurier$/, ', a Albert Aurier');
+      s = s.replace(/, an Paul Gauguin$/, ', a Paul Gauguin');
+      s = s.replace(/, an Eugène Boch$/, ', a Eugène Boch');
+      s = s.replace(/, an Horace Mann Livens$/, ', a Horace Mann Livens');
+      s = s.replace(/, an Theo$/, ', a Theo');
+      s = s.replace(/, an /, ', a ');
+      s = s.replace(/, von Theo$/, ', de Theo');
+      s = s.replace(/, von Jo van Gogh-Bonger$/, ', de Jo van Gogh-Bonger');
+      s = s.replace(/\bEnde\s+/g, 'finales de ');
+      s = s.replace(/\bDienstag\b/g, 'martes');
+      s = s.replace(/\bbei\s+Christiania\b/g, 'cerca de Christiania');
+      s = applyMonths(s, 'es');
+      s = s.replace(/\bo\s+octubre\b/g, 'u octubre');
+      s = s.replace(/(\d+)\.\s+/g, '$1 ');
+      s = s.replace(/(\d+)\s+(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)/g, '$1 de $2');
+      s = s.replace(/(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\s+(\d{4})/g, '$1 de $2');
+      s = s.replace(/ und /g, ' y ');
+      s = s.replace(', Paris,', ', París,');
+      return s;
+    }
+    if (to === 'fr') {
+      s = s.replace(/^Brief\s+an /, 'Lettre à ');
+      s = s.replace(/^Brief\s+/, 'Lettre ');
+      s = s.replace(/, um den /g, ', vers le ');
+      s = s.replace(/ und um den /g, ' et vers le ');
+      s = s.replace(/ oder /g, ' ou ');
+      s = s.replace(/, an die Mutter$/, ', à sa mère');
+      s = s.replace(/, an Theo und Jo$/, ', à Theo et Jo');
+      s = s.replace(/, an Willemien \(Wil\)$/, ', à Willemien (Wil)');
+      s = s.replace(/, an Emile Bernard$/, ', à Emile Bernard');
+      s = s.replace(/, an Albert Aurier$/, ', à Albert Aurier');
+      s = s.replace(/, an Paul Gauguin$/, ', à Paul Gauguin');
+      s = s.replace(/, an Eugène Boch$/, ', à Eugène Boch');
+      s = s.replace(/, an Horace Mann Livens$/, ', à Horace Mann Livens');
+      s = s.replace(/, an Theo$/, ', à Theo');
+      s = s.replace(/, an /, ', à ');
+      s = s.replace(/, von Theo$/, ', de Theo');
+      s = s.replace(/, von Jo van Gogh-Bonger$/, ', de Jo van Gogh-Bonger');
+      s = s.replace(/\bEnde\s+/g, 'fin ');
+      s = s.replace(/\bDienstag\b/g, 'mardi');
+      s = s.replace(/\bbei\s+Christiania\b/g, 'près de Christiania');
+      s = applyMonths(s, 'fr');
+      s = s.replace(/ und /g, ' et ');
+      s = s.replace(/(\d+)\.\s+/g, '$1\u00a0');
+      s = s.replace(/(\d+)\.–(\d+)/g, '$1–$2');
+      return s;
+    }
+    if (to === 'it') {
+      s = s.replace(/^Brief\s+an /, 'Lettera a ');
+      s = s.replace(/^Brief\s+/, 'Lettera ');
+      s = s.replace(/, um den /g, ', circa il ');
+      s = s.replace(/ und um den /g, ' e circa il ');
+      s = s.replace(/ oder /g, ' o ');
+      s = s.replace(/, an die Mutter$/, ', alla madre');
+      s = s.replace(/, an Theo und Jo$/, ', a Theo e Jo');
+      s = s.replace(/, an Willemien \(Wil\)$/, ', a Willemien (Wil)');
+      s = s.replace(/, an Emile Bernard$/, ', a Emile Bernard');
+      s = s.replace(/, an Albert Aurier$/, ', ad Albert Aurier');
+      s = s.replace(/, an Paul Gauguin$/, ', a Paul Gauguin');
+      s = s.replace(/, an Eugène Boch$/, ', a Eugène Boch');
+      s = s.replace(/, an Horace Mann Livens$/, ', a Horace Mann Livens');
+      s = s.replace(/, an Theo$/, ', a Theo');
+      s = s.replace(/, an /, ', a ');
+      s = s.replace(/, von Theo$/, ', di Theo');
+      s = s.replace(/, von Jo van Gogh-Bonger$/, ', di Jo van Gogh-Bonger');
+      s = s.replace(/\bEnde\s+/g, 'fine ');
+      s = s.replace(/\bDienstag\b/g, 'martedì');
+      s = s.replace(/\bbei\s+Christiania\b/g, 'presso Christiania');
+      s = applyMonths(s, 'it');
+      s = s.replace(/(\d+)\.\s+/g, '$1 ');
+      s = s.replace(/(\d+)\.–(\d+)/g, '$1–$2');
+      s = s.replace(/ und /g, ' e ');
+      return s;
+    }
+    return citeEn(cite);
   }
 
   function packGet(P, bucket, id) {
@@ -1135,7 +1277,7 @@
       return {
         text: asArr(e.text || en.text || w.text),
         fact: e.fact || en.fact || w.fact,
-        quote: quoteFrom(e, lang === 'en' ? citeEn(w.quote && w.quote.cite) : (en.quote && en.quote.cite)),
+        quote: quoteFrom(e, lang === 'en' ? citeEn(w.quote && w.quote.cite) : (e.quote && e.quote.cite) || citeLoc(w.quote && w.quote.cite)),
         fallback: false
       };
     }
@@ -1266,6 +1408,9 @@
     try { localStorage.setItem(KEY, lang); } catch (e) {}
     applyStatic();
     if (typeof window.__i18nOnChange === 'function') window.__i18nOnChange(lang);
+    ensurePathTexts(lang).then(function () {
+      if (typeof window.__i18nOnChange === 'function') window.__i18nOnChange(lang);
+    });
   }
 
   window.I18N = {
@@ -1273,8 +1418,9 @@
     langs: LANGS,
     names: LANG_NAMES,
     get lang() { return lang; },
-    t, loc, locStation, locPathWork, locChapter, sourceLine, citeEn, whenEn, whenLoc,
-    applyStatic, setLang, detect, dict, contentPack, closeLangMenus
+    t, loc, locStation, locPathWork, locChapter, sourceLine, citeEn, citeLoc, whenEn, whenLoc,
+    applyStatic, setLang, detect, dict, contentPack, closeLangMenus,
+    ensurePathTexts, pathTextsReady, PATHTEXT_FILES
   };
 
   if (document.readyState === 'loading') {

@@ -1259,9 +1259,23 @@ function showPathWork(path, step){
   const q = $('#cQuote');
   if (wL.quote) {
     $('#cQuoteT').textContent = '«' + wL.quote.text + '»';
-    $('#cQuoteC').textContent = wL.quote.cite;
+    $('#cQuoteC').textContent = wL.quote.cite || '';
+    const qn = $('#cQuoteTr');
+    if (qn) {
+      if (I.lang !== 'de' && I.lang !== 'en') {
+        const fromEn = (step.pid === 'blvdclichy') || /Livens/.test((wL.quote.cite || '') + (w.quote && w.quote.cite || ''));
+        qn.textContent = t(fromEn ? 'quoteFromEnOrig' : 'quoteSelfTr');
+        qn.classList.remove('hidden'); qn.hidden = false;
+      } else {
+        qn.textContent = ''; qn.classList.add('hidden'); qn.hidden = true;
+      }
+    }
     q.classList.remove('hidden');
-  } else q.classList.add('hidden');
+  } else {
+    const qn = $('#cQuoteTr');
+    if (qn) { qn.textContent = ''; qn.classList.add('hidden'); qn.hidden = true; }
+    q.classList.add('hidden');
+  }
   $('#cWork').className = 'cwork' + (done ? ' fin' : '');
   $('#cWork').innerHTML = `<div class="th" style="background-image:url(data/${step.pid}-${done ? 'orig.jpg' : 'thumb.jpg'})"></div>
     ${youArePainting(done, L(p,'title'), L(p,'artist'), p.year)}`;
@@ -2223,6 +2237,8 @@ function refreshLang(){
   const onCh = document.getElementById('chapters')?.classList.contains('active');
   if (onPath && pathCtx && pathCtx.path) showPath(pathCtx.path, { noRoute: true });
   else if (onCh && storyCtx && storyCtx.story) showChapters(storyCtx.story, { noRoute: true });
+  if (pathCtx && pathCtx.step && pathCtx.path && $('#chapter') && !$('#chapter').classList.contains('hidden')) showPathWork(pathCtx.path, pathCtx.step);
+  if (pathCtx && pathCtx.step && $('#chDone') && !$('#chDone').classList.contains('hidden')) showPathDone();
   if (!$('#onboard').classList.contains('hidden')) renderOnboard();
   maybeShowInstallHint();
   applyCalm();
@@ -2246,6 +2262,12 @@ bindDelight();
 bindTabs();
 bindFilters();
 maybeStartOnboard();
-bootRoute();
-maybeShowInstallHint();
+window.__pathTextsReady = (I.lang === 'de' || I.lang === 'en');
+function startUi(){
+  window.__pathTextsReady = true;
+  bootRoute();
+  maybeShowInstallHint();
+}
+if (I.ensurePathTexts) I.ensurePathTexts().then(startUi, startUi);
+else startUi();
 })();

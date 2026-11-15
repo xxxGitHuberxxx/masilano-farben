@@ -588,3 +588,6 @@ body.calm .tab-screen{bottom:calc(80px + env(safe-area-inset-bottom))}
 .langfallback{font-size:13px;color:#6a635c;margin:8px 0 0;letter-spacing:.02em}
 .langfallback.hidden{display:none}
 body.calm .langmenu-btn,body.calm .langopt{min-height:52px}
+
+.quotetr{font-size:12px;color:#6a635c;margin:6px 0 0;letter-spacing:.02em;font-style:italic}
+.quotetr.hidden{display:none}
