@@ -13,14 +13,60 @@ const byId = id => ALL.find(p => p.id === id);
 function ingestPathData(){
   const src = window.PATHS || [];
   if (src !== PATHS) {
+    const seen = new Map();
+    src.forEach(p => { if (p && p.id) seen.set(p.id, p); });
     PATHS.length = 0;
-    src.forEach(p => PATHS.push(p));
+    seen.forEach(p => PATHS.push(p));
     window.PATHS = PATHS;
   }
   (window.PATH_WORKS || []).forEach(w => {
-    if (!w || !w.id || ALL.some(p => p.id === w.id)) return;
+    if (!w || !w.id) return;
+    const existing = ALL.find(p => p.id === w.id);
+    if (existing) {
+      if (w.source && !existing.source) existing.source = w.source;
+      if (w.title && !existing.title) existing.title = w.title;
+      if (w.museum && !existing.museum) existing.museum = w.museum;
+      if (w.artist && !existing.artist) existing.artist = w.artist;
+      if (w.year && !existing.year) existing.year = w.year;
+      return;
+    }
     knownIds.add(w.id);
     ALL.push(w);
+  });
+}
+function livePath(pathOrId){
+  const id = typeof pathOrId === 'string' ? pathOrId : (pathOrId && pathOrId.id);
+  return PATHS.find(p => p.id === id) || pathOrId || null;
+}
+function pathOwning(pid){
+  if (!pid) return null;
+  for (const path of PATHS) {
+    const st = path.stations || [];
+    for (let i = 0; i < st.length; i++) {
+      const works = st[i].works || [];
+      for (let j = 0; j < works.length; j++) if (works[j].pid === pid) return path;
+    }
+  }
+  return null;
+}
+function adoptPath(full, prev){
+  if (!full) return full;
+  if (pathCtx && pathCtx.path && pathCtx.path.id === full.id) {
+    pathCtx.path = full;
+    if (pathCtx.step || pathCtx.pid) {
+      const pid = pathCtx.pid || (pathCtx.step && pathCtx.step.pid);
+      const step = pathSteps(full).find(s => s.pid === pid);
+      if (step) { pathCtx.step = step; pathCtx.pid = step.pid; }
+    }
+  }
+  return full;
+}
+function withPathPack(path, fn){
+  const id = path && path.id;
+  if (!id || !I.ensurePathPack) return Promise.resolve(fn(path));
+  return I.ensurePathPack(id).then(function () {
+    ingestPathData();
+    return fn(adoptPath(livePath(id), path));
   });
 }
 const PLAYER_NAME_KEY = 'masilano.playerName.v1';
@@ -524,6 +570,12 @@ function u32(r, g, b){ return (255 << 24 | b << 16 | g << 8 | r) >>> 0; }
 function lum(c){ return 0.299 * c[0] + 0.587 * c[1] + 0.114 * c[2]; }
 
 async function openPainting(p, opts){
+  const owner = p && pathOwning(p.id);
+  if (owner && I.ensurePathPack && !I.pathPackReady(owner.id)) {
+    await I.ensurePathPack(owner.id);
+    ingestPathData();
+    p = byId(p.id) || p;
+  }
   if (!opts || !opts.noRoute) navigate({ kind: 'paint', id: p.id });
   showScreen('paint'); $('#pTitle').textContent = L(p,'title');
   ctx.clearRect(0, 0, cv.width, cv.height);
@@ -1160,6 +1212,10 @@ function pathDoneCount(path){ return pathSteps(path).filter(s => isDone(s.pid)).
 function pathWorkUnlocked(path, idx){ return idx === 0 || isDone(pathSteps(path)[idx - 1].pid); }
 function stationDone(st){ return st.works.every(w => isDone(w.pid)); }
 function showPath(path, opts){
+  if (path && I.ensurePathPack && !I.pathPackReady(path.id)) {
+    if (!opts || !opts.noRoute) navigate({ kind: 'path', id: path.id });
+    return withPathPack(path, p => showPath(p, Object.assign({}, opts || {}, { noRoute: true })));
+  }
   if (!opts || !opts.noRoute) navigate({ kind: 'path', id: path.id });
   S = null; showScreen('path');
   markPathOpened(path);
@@ -1280,6 +1336,12 @@ function renderPathMap(path){
   });
 }
 function showPathWork(path, step){
+  if (path && I.ensurePathPack && !I.pathPackReady(path.id)) {
+    return withPathPack(path, p => {
+      const next = pathSteps(p).find(s => s.pid === (step && step.pid));
+      return showPathWork(p, next || step);
+    });
+  }
   const w = step.w, p = byId(step.pid), done = isDone(step.pid), pct = pctOf(step.pid);
   const steps = pathSteps(path);
   pathCtx = { path, step, pid: step.pid };
@@ -1344,6 +1406,9 @@ function showPathDone(){
   revealSheet('#chDone');
 }
 function showPathFin(path){
+  if (path && I.ensurePathPack && !I.pathPackReady(path.id)) {
+    return withPathPack(path, p => showPathFin(p));
+  }
   const N = pathSteps(path).length;
   recordCertDate(path);
   $('#pfTitle').textContent = L(path,'title');
@@ -2488,6 +2553,9 @@ async function refreshCertPreview(){
   } catch (e) { return null; }
 }
 function showCertificate(path){
+  if (path && I.ensurePathPack && !I.pathPackReady(path.id)) {
+    return withPathPack(path, p => showCertificate(p));
+  }
   if (!path || !pathIsComplete(path)) return;
   certCtx = { path };
   recordCertDate(path);
@@ -2527,6 +2595,11 @@ if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.
 }
 function refreshLang(){
   ingestPathData();
+  const openId = pathCtx && pathCtx.path && pathCtx.path.id;
+  if (openId && I.ensurePathPack && !I.pathPackReady(openId)) {
+    I.ensurePathPack(openId).then(function () { ingestPathData(); refreshLang(); });
+    return;
+  }
   galGrid = null;
   I.applyStatic();
   const onPath = document.getElementById('path')?.classList.contains('active');
@@ -2577,7 +2650,7 @@ function paintStartShell(){
 paintStartShell();
 function startUi(){
   ingestPathData();
-  window.__pathTextsReady = !!(PATHS.length >= 14);
+  window.__pathTextsReady = !!(window.__pathIndexReady || PATHS.length >= 14);
   bootRoute();
   maybeShowInstallHint();
   if ((currentTab || 'heute') === 'heute') renderHeute();

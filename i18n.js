@@ -7,7 +7,7 @@
     de: {
       appTitle: 'Malen nach Zahlen',
       docTitle: 'Masilano · Malen nach Zahlen',
-      appSubtitle: '1691 Meisterwerke, Feld für Feld – und die Lebenswege von Van Gogh, Monet, Hokusai, Klimt, Anker, Hodler, Cézanne, Hiroshige, Renoir, Pissarro, Turner, Rembrandt, Sisley und Friedrich.',
+      appSubtitle: '1751 Meisterwerke, Feld für Feld – und die Lebenswege von Van Gogh, Monet, Hokusai, Klimt, Anker, Hodler, Cézanne, Hiroshige, Renoir, Pissarro, Turner, Rembrandt, Sisley und Friedrich.',
       sortAria: 'Reihenfolge der Bilder',
       sortGallery: 'Standard',
       sortEasy: 'Leicht zuerst',
@@ -15,7 +15,7 @@
       searchClear: 'Suche löschen',
       sourcesBtn: 'Bildquellen & Hinweise',
       privacyLink: 'Datenschutz',
-      version: 'Testversion 10.0',
+      version: 'Testversion 10.1',
       back: 'Zurück',
       backGallery: 'Zurück zur Galerie',
       backWays: 'Zurück zu den Wegen',
@@ -211,7 +211,7 @@
     en: {
       appTitle: 'Color by Number',
       docTitle: 'Masilano · Color by Number',
-      appSubtitle: '1691 masterpieces, field by field – and the life journeys of Van Gogh, Monet, Hokusai, Klimt, Anker, Hodler, Cézanne, Hiroshige, Renoir, Pissarro, Turner, Rembrandt, Sisley and Friedrich.',
+      appSubtitle: '1751 masterpieces, field by field – and the life journeys of Van Gogh, Monet, Hokusai, Klimt, Anker, Hodler, Cézanne, Hiroshige, Renoir, Pissarro, Turner, Rembrandt, Sisley and Friedrich.',
       sortAria: 'Picture order',
       sortGallery: 'Default',
       sortEasy: 'Easy first',
@@ -219,7 +219,7 @@
       searchClear: 'Clear search',
       sourcesBtn: 'Picture sources & notes',
       privacyLink: 'Privacy',
-      version: 'Test version 10.0',
+      version: 'Test version 10.1',
       back: 'Back',
       backGallery: 'Back to the gallery',
       backWays: 'Back to the journeys',
@@ -415,7 +415,7 @@
     es: {
       appTitle: "Pintar por números",
       docTitle: "Masilano · Pintar por números",
-      appSubtitle: "1691 obras maestras, campo a campo – y los caminos de vida de Van Gogh, Monet, Hokusai, Klimt, Anker, Hodler, Cézanne, Hiroshige, Renoir, Pissarro, Turner, Rembrandt, Sisley y Friedrich.",
+      appSubtitle: "1751 obras maestras, campo a campo – y los caminos de vida de Van Gogh, Monet, Hokusai, Klimt, Anker, Hodler, Cézanne, Hiroshige, Renoir, Pissarro, Turner, Rembrandt, Sisley y Friedrich.",
       sortAria: "Orden de las imágenes",
       sortGallery: "Estándar",
       sortEasy: "Fáciles primero",
@@ -423,7 +423,7 @@
       searchClear: "Borrar búsqueda",
       sourcesBtn: "Fuentes e indicaciones",
       privacyLink: "Privacidad",
-      version: "Versión de prueba 10.0",
+      version: "Versión de prueba 10.1",
       back: "Atrás",
       backGallery: "Volver a la galería",
       backWays: "Volver a los caminos",
@@ -619,7 +619,7 @@
     fr: {
       appTitle: "Peinture par numéros",
       docTitle: "Masilano · Peinture par numéros",
-      appSubtitle: "1691 chefs-d’œuvre, case par case – et les parcours de vie de Van Gogh, Monet, Hokusai, Klimt, Anker, Hodler, Cézanne, Hiroshige, Renoir, Pissarro, Turner, Rembrandt, Sisley et Friedrich.",
+      appSubtitle: "1751 chefs-d’œuvre, case par case – et les parcours de vie de Van Gogh, Monet, Hokusai, Klimt, Anker, Hodler, Cézanne, Hiroshige, Renoir, Pissarro, Turner, Rembrandt, Sisley et Friedrich.",
       sortAria: "Ordre des images",
       sortGallery: "Standard",
       sortEasy: "Faciles d’abord",
@@ -627,7 +627,7 @@
       searchClear: "Effacer la recherche",
       sourcesBtn: "Sources et notes",
       privacyLink: "Confidentialité",
-      version: "Version d’essai 10.0",
+      version: "Version d’essai 10.1",
       back: "Retour",
       backGallery: "Retour à la galerie",
       backWays: "Retour aux parcours",
@@ -823,7 +823,7 @@
     it: {
       appTitle: "Dipingere con i numeri",
       docTitle: "Masilano · Dipingere con i numeri",
-      appSubtitle: "1691 capolavori, campo dopo campo – e i percorsi di vita di Van Gogh, Monet, Hokusai, Klimt, Anker, Hodler, Cézanne, Hiroshige, Renoir, Pissarro, Turner, Rembrandt, Sisley e Friedrich.",
+      appSubtitle: "1751 capolavori, campo dopo campo – e i percorsi di vita di Van Gogh, Monet, Hokusai, Klimt, Anker, Hodler, Cézanne, Hiroshige, Renoir, Pissarro, Turner, Rembrandt, Sisley e Friedrich.",
       sortAria: "Ordine delle immagini",
       sortGallery: "Standard",
       sortEasy: "Prima i facili",
@@ -831,7 +831,7 @@
       searchClear: "Cancella la ricerca",
       sourcesBtn: "Fonti e note",
       privacyLink: "Privacy",
-      version: "Versione di prova 10.0",
+      version: "Versione di prova 10.1",
       back: "Indietro",
       backGallery: "Torna alla galleria",
       backWays: "Torna ai percorsi",
@@ -1085,9 +1085,9 @@
   let lang = detect();
 
   const PATHTEXT_FILES = {
-    es: ['es-content.js', 'es-path-vangogh.js', 'es-path-monet.js', 'es-path-hokusai.js', 'es-path-klimt.js', 'es-path-klimt-p2.js', 'es-path-anker.js', 'es-path-anker-p2.js', 'es-path-hodler.js', 'es-path-hodler-p2.js', 'es-path-cezanne.js', 'es-path-cezanne-p2.js', 'es-path-hiroshige.js', 'es-path-hiroshige-p2.js', 'es-path-renoir.js', 'es-path-renoir-p2.js', 'es-path-pissarro.js', 'es-path-pissarro-p2.js', 'es-path-turner.js', 'es-path-turner-p2.js', 'es-path-rembrandt.js', 'es-path-rembrandt-p2.js', 'es-path-sisley.js', 'es-path-sisley-p2.js', 'es-path-friedrich.js'],
-    fr: ['fr-content.js', 'fr-path-vangogh.js', 'fr-path-monet.js', 'fr-path-hokusai.js', 'fr-path-klimt.js', 'fr-path-klimt-p2.js', 'fr-path-anker.js', 'fr-path-anker-p2.js', 'fr-path-hodler.js', 'fr-path-hodler-p2.js', 'fr-path-cezanne.js', 'fr-path-cezanne-p2.js', 'fr-path-hiroshige.js', 'fr-path-hiroshige-p2.js', 'fr-path-renoir.js', 'fr-path-renoir-p2.js', 'fr-path-pissarro.js', 'fr-path-pissarro-p2.js', 'fr-path-turner.js', 'fr-path-turner-p2.js', 'fr-path-rembrandt.js', 'fr-path-rembrandt-p2.js', 'fr-path-sisley.js', 'fr-path-sisley-p2.js', 'fr-path-friedrich.js'],
-    it: ['it-content.js', 'it-path-vangogh.js', 'it-path-monet.js', 'it-path-hokusai.js', 'it-path-klimt.js', 'it-path-klimt-p2.js', 'it-path-anker.js', 'it-path-anker-p2.js', 'it-path-hodler.js', 'it-path-hodler-p2.js', 'it-path-cezanne.js', 'it-path-cezanne-p2.js', 'it-path-hiroshige.js', 'it-path-hiroshige-p2.js', 'it-path-renoir.js', 'it-path-renoir-p2.js', 'it-path-pissarro.js', 'it-path-pissarro-p2.js', 'it-path-turner.js', 'it-path-turner-p2.js', 'it-path-rembrandt.js', 'it-path-rembrandt-p2.js', 'it-path-sisley.js', 'it-path-sisley-p2.js', 'it-path-friedrich.js']
+    es: ['es-content.js', 'es-path-index.js', 'es-path-vangogh.js', 'es-path-monet.js', 'es-path-hokusai.js', 'es-path-klimt.js', 'es-path-klimt-p2.js', 'es-path-anker.js', 'es-path-anker-p2.js', 'es-path-hodler.js', 'es-path-hodler-p2.js', 'es-path-cezanne.js', 'es-path-cezanne-p2.js', 'es-path-hiroshige.js', 'es-path-hiroshige-p2.js', 'es-path-renoir.js', 'es-path-renoir-p2.js', 'es-path-pissarro.js', 'es-path-pissarro-p2.js', 'es-path-turner.js', 'es-path-turner-p2.js', 'es-path-rembrandt.js', 'es-path-rembrandt-p2.js', 'es-path-sisley.js', 'es-path-sisley-p2.js', 'es-path-friedrich.js', 'es-path-friedrich-p2.js'],
+    fr: ['fr-content.js', 'fr-path-index.js', 'fr-path-vangogh.js', 'fr-path-monet.js', 'fr-path-hokusai.js', 'fr-path-klimt.js', 'fr-path-klimt-p2.js', 'fr-path-anker.js', 'fr-path-anker-p2.js', 'fr-path-hodler.js', 'fr-path-hodler-p2.js', 'fr-path-cezanne.js', 'fr-path-cezanne-p2.js', 'fr-path-hiroshige.js', 'fr-path-hiroshige-p2.js', 'fr-path-renoir.js', 'fr-path-renoir-p2.js', 'fr-path-pissarro.js', 'fr-path-pissarro-p2.js', 'fr-path-turner.js', 'fr-path-turner-p2.js', 'fr-path-rembrandt.js', 'fr-path-rembrandt-p2.js', 'fr-path-sisley.js', 'fr-path-sisley-p2.js', 'fr-path-friedrich.js', 'fr-path-friedrich-p2.js'],
+    it: ['it-content.js', 'it-path-index.js', 'it-path-vangogh.js', 'it-path-monet.js', 'it-path-hokusai.js', 'it-path-klimt.js', 'it-path-klimt-p2.js', 'it-path-anker.js', 'it-path-anker-p2.js', 'it-path-hodler.js', 'it-path-hodler-p2.js', 'it-path-cezanne.js', 'it-path-cezanne-p2.js', 'it-path-hiroshige.js', 'it-path-hiroshige-p2.js', 'it-path-renoir.js', 'it-path-renoir-p2.js', 'it-path-pissarro.js', 'it-path-pissarro-p2.js', 'it-path-turner.js', 'it-path-turner-p2.js', 'it-path-rembrandt.js', 'it-path-rembrandt-p2.js', 'it-path-sisley.js', 'it-path-sisley-p2.js', 'it-path-friedrich.js', 'it-path-friedrich-p2.js']
   };
   const _scriptProm = {};
   const _pathTextProm = {};
@@ -1121,7 +1121,7 @@
   }
 
   function pathDataReady() {
-    return !!(window.PATHS && window.PATHS.length >= 14);
+    return !!(window.__pathIndexReady || (window.PATHS && window.PATHS.length >= 14));
   }
 
   function loadInOrder(files) {
@@ -1133,37 +1133,40 @@
   function ensurePathData() {
     if (pathDataReady()) return Promise.resolve();
     if (_pathDataProm) return _pathDataProm;
-    const files = dataSrcFiles(/^path-/);
-    _pathDataProm = loadInOrder(files).then(function () {
+    _pathDataProm = loadScriptOnce('path-index.js').then(function () {
       if (!pathDataReady()) throw new Error('Path data failed to load');
     }).catch(function (err) { _pathDataProm = null; throw err; });
     return _pathDataProm;
   }
 
   function enReady() {
-    return !!(window.EN && (window.EN.pathTexts || window.EN.stations || window.EN.paintings));
+    return !!(window.EN && (window.EN.pathTexts || window.EN.stations || window.EN.paintings || window.EN.works || window.EN.paths));
   }
 
-  function pathTextsReady(code) {
-    code = code || lang;
+  function langMetaReady(code) {
     if (code === 'de') return pathDataReady();
     if (code === 'en') return pathDataReady() && enReady();
     const P = contentPack(code);
-    return pathDataReady() && !!(P && P.pathTexts && Object.keys(P.pathTexts).length);
+    return pathDataReady() && !!(P && (P.paintings || P.works || P.paths || P.stations || (P.pathTexts && Object.keys(P.pathTexts).length)));
+  }
+
+  function pathTextsReady(code) {
+    return langMetaReady(code || lang);
+  }
+
+  function eagerLangFiles(code) {
+    if (code === 'en') {
+      const files = dataSrcFiles(/^en-/);
+      const pick = files.filter(function (f) { return f === 'en-content.js' || f === 'en-path-index.js'; });
+      return pick.length ? pick : ['en-content.js', 'en-path-index.js'];
+    }
+    const files = PATHTEXT_FILES[code] || [];
+    return files.filter(function (f) { return /-content\.js$/.test(f) || /-path-index\.js$/.test(f); });
   }
 
   function ensureLangPacks(code) {
     if (code === 'de') return Promise.resolve(code);
-    if (code === 'en') {
-      const files = dataSrcFiles(/^en-/);
-      const content = files.filter(function (f) { return f === 'en-content.js'; });
-      const rest = files.filter(function (f) { return f !== 'en-content.js'; });
-      return Promise.all(content.map(loadScriptOnce)).then(function () { return loadWaves(rest); });
-    }
-    const files = PATHTEXT_FILES[code] || [];
-    const content = files.filter(function (f) { return /-content\.js$/.test(f); });
-    const rest = files.filter(function (f) { return !/-content\.js$/.test(f); });
-    return Promise.all(content.map(loadScriptOnce)).then(function () { return loadWaves(rest); });
+    return loadInOrder(eagerLangFiles(code));
   }
 
   function ensurePathTexts(code) {
@@ -1176,6 +1179,107 @@
       return code;
     }).catch(function (err) { delete _pathTextProm[code]; throw err; });
     return _pathTextProm[code];
+  }
+
+  function packRank(f) {
+    const m = String(f).match(/-p([0-9]+)\.js$/);
+    return m ? +m[1] : 0;
+  }
+
+  function sortPacks(files) {
+    return (files || []).slice().sort(function (a, b) { return packRank(a) - packRank(b); });
+  }
+
+  function escapeRe(s) {
+    return String(s).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function pathPackFiles(id) {
+    return sortPacks(dataSrcFiles(new RegExp('^path-' + escapeRe(id) + '(?:-p[0-9]+)?\\.js$')));
+  }
+
+  function langPackFiles(id, code) {
+    code = code || lang;
+    if (!code || code === 'de') return [];
+    if (code === 'en') return sortPacks(dataSrcFiles(new RegExp('^en-' + escapeRe(id) + '(?:-p[0-9]+)?\\.js$')));
+    const re = new RegExp('^' + escapeRe(code) + '-path-' + escapeRe(id) + '(?:-p[0-9]+)?\\.js$');
+    return sortPacks((PATHTEXT_FILES[code] || []).filter(function (f) { return re.test(f); }));
+  }
+
+  function evictPath(id) {
+    const src = window.PATHS;
+    if (!src || !src.length) return;
+    const keep = [];
+    for (let i = 0; i < src.length; i++) if (src[i] && src[i].id !== id) keep.push(src[i]);
+    if (keep.length === src.length) return;
+    if (typeof src.splice === 'function') {
+      src.length = 0;
+      for (let i = 0; i < keep.length; i++) src.push(keep[i]);
+      window.PATHS = src;
+    } else window.PATHS = keep;
+  }
+
+  const _pathPackProm = {};
+  const _pathPackReady = {};
+
+  function pathPackReady(id, code) {
+    if (!id) return false;
+    if (!_pathPackReady[id + ':de']) return false;
+    code = code || lang;
+    if (code === 'de') return true;
+    return !!_pathPackReady[id + ':' + code];
+  }
+
+  // A loaded pack re-appends its path; put every path back where the index had it (keeps menu order stable).
+  function restoreOrder(order) {
+    const list = window.PATHS;
+    if (!list || !list.length || !order || !order.length) return;
+    const rank = {};
+    order.forEach(function (pid, i) { if (pid != null && rank[pid] == null) rank[pid] = i; });
+    const sorted = list.slice().sort(function (x, y) {
+      const a = x && rank[x.id] != null ? rank[x.id] : 1e6, b = y && rank[y.id] != null ? rank[y.id] : 1e6;
+      return a - b;
+    });
+    for (let i = 0; i < sorted.length; i++) list[i] = sorted[i];
+  }
+
+  function markPackFull(id) {
+    const list = window.PATHS || [];
+    for (let i = 0; i < list.length; i++) if (list[i] && list[i].id === id) list[i]._full = true;
+  }
+
+  function ensurePathPack(id, code) {
+    code = code || lang;
+    if (!id) return Promise.resolve(id);
+    const langKey = id + ':' + (code || 'de');
+    if (pathPackReady(id, code)) return Promise.resolve(id);
+    if (_pathPackProm[langKey]) return _pathPackProm[langKey];
+
+    function loadDe() {
+      const deKey = id + ':de';
+      if (_pathPackReady[deKey]) return Promise.resolve(id);
+      if (_pathPackProm[deKey]) return _pathPackProm[deKey];
+      const order = (window.PATHS || []).map(function (p) { return p && p.id; });
+      evictPath(id);
+      const files = pathPackFiles(id);
+      _pathPackProm[deKey] = loadInOrder(files).then(function () {
+        restoreOrder(order);
+        markPackFull(id);
+        _pathPackReady[deKey] = true;
+        return id;
+      }).catch(function (err) { delete _pathPackProm[deKey]; throw err; });
+      return _pathPackProm[deKey];
+    }
+
+    _pathPackProm[langKey] = loadDe().then(function () {
+      if (code === 'de') return id;
+      const files = langPackFiles(id, code);
+      return loadInOrder(files).then(function () {
+        _pathPackReady[langKey] = true;
+        return id;
+      });
+    }).catch(function (err) { delete _pathPackProm[langKey]; throw err; });
+    return _pathPackProm[langKey];
   }
 
 
@@ -1558,7 +1662,7 @@
     get lang() { return lang; },
     t, loc, locStation, locPathWork, locChapter, sourceLine, citeEn, citeLoc, whenEn, whenLoc,
     applyStatic, setLang, detect, dict, contentPack, closeLangMenus,
-    ensurePathTexts, pathTextsReady, PATHTEXT_FILES
+    ensurePathTexts, pathTextsReady, PATHTEXT_FILES, ensurePathPack, pathPackReady, pathPackFiles, loadScriptOnce
   };
 
   if (document.readyState === 'loading') {
