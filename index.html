@@ -14,49 +14,103 @@
 <meta name="apple-mobile-web-app-title" content="Masilano">
 </head>
 <body>
-<section id="gallery" class="screen active">
-  <header class="ghead">
-    <div class="headrow">
-      <div class="wordmark">Masilano</div>
-      <div class="headacts">
-        <div id="langSwitch" class="langswitch" role="group" data-i18n-aria="langAria" aria-label="Sprache">
-          <button type="button" class="langbtn" data-lang="de" aria-pressed="true">Deutsch</button>
-          <button type="button" class="langbtn" data-lang="en" aria-pressed="false">English</button>
-        </div>
-        <button type="button" id="setBtn" class="gear" data-i18n-aria="settingsAria" aria-label="Einstellungen">
-          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="3"/>
-            <path d="M19.4 13.5a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V20a2 2 0 1 1-4 0v-.2a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H4a2 2 0 1 1 0-4h.2a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H10a1.6 1.6 0 0 0 1-1.5V4a2 2 0 1 1 4 0v.2a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V10c.3.6.9 1 1.5 1H20a2 2 0 1 1 0 4h-.2a1.6 1.6 0 0 0-1.5 1.5z"/>
-          </svg>
-        </button>
-      </div>
+<body>
+<header id="appHead" class="apphead">
+  <div class="wordmark">Masilano</div>
+  <div class="headacts">
+    <div id="langSwitch" class="langswitch" role="group" data-i18n-aria="langAria" aria-label="Sprache">
+      <button type="button" class="langbtn" data-lang="de" aria-pressed="true">Deutsch</button>
+      <button type="button" class="langbtn" data-lang="en" aria-pressed="false">English</button>
     </div>
-    <h1 data-i18n="appTitle">Malen nach Zahlen</h1>
-    <p class="sub" data-i18n="appSubtitle">567 Meisterwerke, Feld für Feld – und die Lebenswege von Van Gogh, Monet und Hokusai.</p>
+    <button type="button" id="setBtn" class="gear" data-i18n-aria="settingsAria" aria-label="Einstellungen">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M19.4 13.5a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V20a2 2 0 1 1-4 0v-.2a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H4a2 2 0 1 1 0-4h.2a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H10a1.6 1.6 0 0 0 1-1.5V4a2 2 0 1 1 4 0v.2a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V10c.3.6.9 1 1.5 1H20a2 2 0 1 1 0 4h-.2a1.6 1.6 0 0 0-1.5 1.5z"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<section id="heute" class="tab-screen active">
+  <div class="tabscroll">
+    <h1 data-i18n="todayTitle">Heute</h1>
+    <p class="lead" data-i18n="todayLead">Ein Bild, in deinem Tempo.</p>
+    <div id="continueWrap"></div>
+    <div id="dailyWrap"></div>
+    <div id="installHint" class="installhint hidden" hidden></div>
+    <footer class="gfoot">
+      <button id="srcBtn" class="linkbtn" data-i18n-html="sourcesBtn">Bildquellen &amp; Hinweise</button>
+      <div class="ver" data-i18n="version">Testversion 7.3</div>
+    </footer>
+  </div>
+</section>
+
+<section id="wege" class="tab-screen">
+  <div class="tabscroll">
+    <h1 data-i18n="waysTitle">Wege</h1>
+    <p class="lead" data-i18n="waysLead">Lebenswege und Geschichten der Maler.</p>
+    <div id="storyEntries" class="wayslist"></div>
+  </div>
+</section>
+
+<section id="gallery" class="tab-screen">
+  <header class="ghead">
+    <h1 data-i18n="galTitle">Galerie</h1>
+    <p class="lead sub" data-i18n="appSubtitle">567 Meisterwerke, Feld für Feld – und die Lebenswege von Van Gogh, Monet und Hokusai.</p>
     <div id="sortBar" class="sortbar" role="group" data-i18n-aria="sortAria" aria-label="Reihenfolge der Bilder">
-      <button type="button" data-sort="gallery" data-i18n="sortGallery">Galerie</button>
+      <button type="button" data-sort="gallery" data-i18n="sortGallery">Standard</button>
       <button type="button" data-sort="easy" data-i18n="sortEasy">Leicht zuerst</button>
+      <button type="button" id="galOpen" class="filtog" aria-pressed="false" data-i18n="filterOpen">Nur offene</button>
+    </div>
+    <div class="filterrow">
+      <label class="fil">
+        <span class="fil-l" data-i18n="filterPainter">Maler</span>
+        <select id="galPainter" data-i18n-aria="filterPainterAria" aria-label="Maler"></select>
+      </label>
+      <div id="levelBar" class="sortbar levels" role="group" data-i18n-aria="filterLevelAria" aria-label="Schwierigkeit">
+        <button type="button" data-level="" data-i18n="filterAll">Alle</button>
+        <button type="button" data-level="leicht" data-i18n="easy">Leicht</button>
+        <button type="button" data-level="mittel" data-i18n="medium">Mittel</button>
+        <button type="button" data-level="schwer" data-i18n="hard">Schwer</button>
+      </div>
     </div>
     <div class="search" role="search">
       <svg class="sico" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       <input id="galSearch" type="text" enterkeyhint="search" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" data-i18n-placeholder="searchPh" data-i18n-aria="searchPh" placeholder="Bild oder Maler suchen" aria-label="Bild oder Maler suchen">
       <button type="button" id="galSearchClear" class="sclear hidden" data-i18n-aria="searchClear" aria-label="Suche löschen">×</button>
     </div>
-    <div id="continueWrap"></div>
-    <div id="dailyWrap"></div>
-    <div id="albumWrap"></div>
-    <div id="storyEntries" class="sentries"></div>
   </header>
   <div id="pager" class="pager"></div>
   <div id="dots" class="dots"></div>
-  <div id="installHint" class="installhint hidden" hidden></div>
-  <footer class="gfoot">
-    <button id="srcBtn" class="linkbtn" data-i18n-html="sourcesBtn">Bildquellen &amp; Hinweise</button>
-    <div class="ver" data-i18n="version">Testversion 7.2</div>
-  </footer>
 </section>
 
-<section id="paint" class="screen">
+<section id="album" class="tab-screen">
+  <header class="ghead albumhead">
+    <h1 data-i18n="albumTitle">Sammelalbum</h1>
+  </header>
+  <div id="albumBody" class="albumscroll"></div>
+</section>
+
+<nav id="tabbar" class="tabbar" role="tablist" data-i18n-aria="tabAria" aria-label="Hauptbereiche">
+  <button type="button" class="tab on" role="tab" data-tab="heute" aria-selected="true" aria-controls="heute" id="tab-heute">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M3 12h2M19 12h2M5.2 18.8l1.4-1.4M17.4 6.6l1.4-1.4"/></svg>
+    <span data-i18n="tabHeute">Heute</span>
+  </button>
+  <button type="button" class="tab" role="tab" data-tab="wege" aria-selected="false" aria-controls="wege" id="tab-wege">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19c4-3 5-9 5-9s2 3 6 3 5-3 5-3"/><circle cx="8" cy="8" r="2.2"/><circle cx="16" cy="14" r="2.2"/></svg>
+    <span data-i18n="tabWege">Wege</span>
+  </button>
+  <button type="button" class="tab" role="tab" data-tab="galerie" aria-selected="false" aria-controls="gallery" id="tab-galerie">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg>
+    <span data-i18n="tabGalerie">Galerie</span>
+  </button>
+  <button type="button" class="tab" role="tab" data-tab="album" aria-selected="false" aria-controls="album" id="tab-album">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 15l4.5-3.5L13 16l3-2.5 4 3"/></svg>
+    <span data-i18n="tabAlbum">Album</span>
+  </button>
+</nav>
+
+<section id="paint" class="screen flow">
   <div class="topbar">
     <button id="backBtn" class="iconbtn" data-i18n-aria="back" aria-label="Zurück">‹</button>
     <div class="ttl"><div id="pTitle"></div><div class="pbar"><div id="pFill"></div></div></div>
@@ -66,9 +120,9 @@
   <div class="palwrap"><div id="palette"></div></div>
 </section>
 
-<section id="path" class="screen">
+<section id="path" class="screen flow">
   <div class="topbar">
-    <button id="pathBack" class="iconbtn" data-i18n-aria="backGallery" aria-label="Zurück zur Galerie">‹</button>
+    <button id="pathBack" class="iconbtn" data-i18n-aria="backWays" aria-label="Zurück zu den Wegen">‹</button>
     <div class="ttl"><div class="chT" data-i18n="pathMode">Lebensweg</div></div>
     <div class="iconspace"></div>
   </div>
@@ -80,9 +134,9 @@
   </div>
 </section>
 
-<section id="chapters" class="screen">
+<section id="chapters" class="screen flow">
   <div class="topbar">
-    <button id="chBack" class="iconbtn" data-i18n-aria="backGallery" aria-label="Zurück zur Galerie">‹</button>
+    <button id="chBack" class="iconbtn" data-i18n-aria="backWays" aria-label="Zurück zu den Wegen">‹</button>
     <div class="ttl"><div class="chT" data-i18n="storyMode">Geschichten</div></div>
     <div class="iconspace"></div>
   </div>
@@ -92,16 +146,6 @@
     <div id="chEpi" class="chepi hidden"></div>
   </div>
 </section>
-
-<section id="album" class="screen">
-  <div class="topbar">
-    <button type="button" id="albumBack" class="iconbtn" data-i18n-aria="backGallery" aria-label="Zurück zur Galerie">‹</button>
-    <div class="ttl"><div class="chT" data-i18n="albumTitle">Sammelalbum</div></div>
-    <div class="iconspace"></div>
-  </div>
-  <div id="albumBody" class="albumscroll"></div>
-</section>
-
 <div id="albumView" class="sheet aview hidden" role="dialog" aria-modal="true" aria-labelledby="avTitle">
   <div class="card">
     <div id="avImg" class="avimg"></div>

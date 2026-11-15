@@ -33,6 +33,8 @@ const INSTALL_KEY = 'masilano.installHint.v1';
 const CALM_KEY = 'masilano.calm.v1';
 const STREAK_KEY = 'masilano.streak.v1';
 const MILES_KEY = 'masilano.miles.v1';
+const TAB_KEY = 'masilano.tab.v1';
+const FILTER_KEY = 'masilano.galFilter.v1';
 let todayOverride = null;
 function calmOn(){ try { return localStorage.getItem(CALM_KEY) === 'on'; } catch (e) { return false; } }
 function applyCalm(){
@@ -74,6 +76,16 @@ function levelOf(p){
 function levelLabel(lv){ return lv === 'leicht' ? t('easy') : lv === 'mittel' ? t('medium') : t('hard'); }
 let galSort = 'gallery';
 try { const s = localStorage.getItem(SORT_KEY); if (s === 'easy' || s === 'gallery') galSort = s; } catch(e){}
+let galFilter = { artist: '', level: '', open: false };
+try {
+  const f = JSON.parse(localStorage.getItem(FILTER_KEY) || 'null');
+  if (f && typeof f === 'object') {
+    if (typeof f.artist === 'string') galFilter.artist = f.artist;
+    if (f.level === 'leicht' || f.level === 'mittel' || f.level === 'schwer' || f.level === '') galFilter.level = f.level || '';
+    galFilter.open = !!f.open;
+  }
+} catch (e) {}
+function saveFilter(){ try { localStorage.setItem(FILTER_KEY, JSON.stringify(galFilter)); } catch(e){} }
 function fold(s){
   return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 }
@@ -100,7 +112,11 @@ let galQuery = '';
 function galleryList(){
   const q = fold(galQuery);
   let arr = P.filter(p => matchesQuery(p, q));
-  if (calmOn()) arr = arr.filter(p => levelOf(p) === 'leicht');
+  if (calmOn() || galFilter.level === 'leicht') arr = arr.filter(p => levelOf(p) === 'leicht');
+  else if (galFilter.level === 'mittel') arr = arr.filter(p => levelOf(p) === 'mittel');
+  else if (galFilter.level === 'schwer') arr = arr.filter(p => levelOf(p) === 'schwer');
+  if (galFilter.artist) arr = arr.filter(p => p.artist === galFilter.artist);
+  if (galFilter.open) arr = arr.filter(p => !isDone(p.id));
   if (galSort === 'easy') {
     arr.sort((a,b) => (LEVEL_RANK[levelOf(a)] - LEVEL_RANK[levelOf(b)]) || ((a.regions || 999) - (b.regions || 999)) || L(a,'title').localeCompare(L(b,'title'), I.lang === 'de' ? 'de-CH' : 'en'));
   }
@@ -149,6 +165,73 @@ function openStoryHit(st, p){
   if (i < 0) return;
   if (chUnlocked(st, i)) showChapter(st, i);
   else ctoast(t('lockedStory', { name: st.name }));
+}
+
+function painterOptions(){
+  const set = new Map();
+  P.forEach(p => { if (p.artist && !set.has(p.artist)) set.set(p.artist, artistLabel(p.artist)); });
+  return [...set.entries()].sort((a,b) => a[1].localeCompare(b[1], I.lang === 'de' ? 'de-CH' : 'en'));
+}
+function renderFilters(){
+  const sel = $('#galPainter');
+  if (sel) {
+    const cur = galFilter.artist;
+    sel.innerHTML = ['<option value="">' + t('filterAllPainters') + '</option>']
+      .concat(painterOptions().map(([id, label]) => `<option value="${esc(id)}"${id === cur ? ' selected' : ''}>${esc(label)}</option>`)).join('');
+    sel.value = cur;
+  }
+  const bar = $('#levelBar');
+  if (bar) {
+    const calm = calmOn();
+    [...bar.querySelectorAll('button[data-level]')].forEach(b => {
+      const lv = b.getAttribute('data-level');
+      if (lv === 'mittel' || lv === 'schwer') b.hidden = calm;
+      const on = galFilter.level === lv;
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+  const op = $('#galOpen');
+  if (op) {
+    op.classList.toggle('on', !!galFilter.open);
+    op.setAttribute('aria-pressed', galFilter.open ? 'true' : 'false');
+  }
+}
+function bindFilters(){
+  const sel = $('#galPainter');
+  if (sel && !sel.dataset.bound) {
+    sel.dataset.bound = '1';
+    sel.addEventListener('change', () => {
+      galFilter.artist = sel.value || '';
+      saveFilter();
+      galPage = 0; try { sessionStorage.setItem('masilano.galPage', '0'); } catch(e){}
+      galGrid = null;
+      renderGallery();
+    });
+  }
+  const bar = $('#levelBar');
+  if (bar && !bar.dataset.bound) {
+    bar.dataset.bound = '1';
+    bar.addEventListener('click', e => {
+      const b = e.target.closest('button[data-level]'); if (!b) return;
+      galFilter.level = b.getAttribute('data-level') || '';
+      saveFilter();
+      galPage = 0; try { sessionStorage.setItem('masilano.galPage', '0'); } catch(e){}
+      galGrid = null;
+      renderGallery();
+    });
+  }
+  const op = $('#galOpen');
+  if (op && !op.dataset.bound) {
+    op.dataset.bound = '1';
+    op.addEventListener('click', () => {
+      galFilter.open = !galFilter.open;
+      saveFilter();
+      galPage = 0; try { sessionStorage.setItem('masilano.galPage', '0'); } catch(e){}
+      galGrid = null;
+      renderGallery();
+    });
+  }
 }
 function renderSortBar(){
   const bar = $('#sortBar'); if (!bar) return;
@@ -236,15 +319,15 @@ function hydrateGal(center){
   for (let i = a; i <= b; i++) fillGalPage(pages[i], i);
 }
 function renderGallery(){
-  renderContinue();
-  renderDaily();
-  renderAlbumEntry();
   const pager = $('#pager'), dots = $('#dots');
+  if (!pager || !dots) return;
+  renderSortBar();
+  renderFilters();
+  if (!pager.clientWidth || !pager.clientHeight) return;
   const list = galleryList();
   const storyHits = storySearchHits();
   const pathHits = pathSearchHits();
   const items = list.map(p => ({ kind:'gal', p })).concat(storyHits.map(h => ({ kind:'story', p:h.p, st:h.st }))).concat(pathHits.map(h => ({ kind:'path', p:h.p, path:h.path, step:h.step })));
-  renderSortBar();
   syncSearchClear();
   const gap = 14;
   const boxW = pager.clientWidth, boxH = pager.clientHeight;
@@ -311,9 +394,9 @@ function markDots(){
 $('#pager').addEventListener('scroll', () => requestAnimationFrame(markDots), { passive: true });
 $('#srcBtn').onclick = () => {
   $('#srcList').innerHTML = ALL.map(p => `<li><b>${L(p,'title')}</b> (${L(p,'artist')}): ${I.sourceLine(p.source) || ''}. ${t('museumWord')}: ${L(p,'museum')}.</li>`).join('');
-  $('#sources').classList.remove('hidden');
+  revealSheet('#sources');
 };
-$('#srcClose').onclick = () => $('#sources').classList.add('hidden');
+$('#srcClose').onclick = () => closeTopSheet();
 
 // ---------- data loading ----------
 function loadImg(src){ return new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = src; }); }
@@ -356,7 +439,8 @@ const LINE = u32(150, 150, 158), WHITE = u32(255, 255, 255), HL = u32(196, 200, 
 function u32(r, g, b){ return (255 << 24 | b << 16 | g << 8 | r) >>> 0; }
 function lum(c){ return 0.299 * c[0] + 0.587 * c[1] + 0.114 * c[2]; }
 
-async function openPainting(p){
+async function openPainting(p, opts){
+  if (!opts || !opts.noRoute) navigate({ kind: 'paint', id: p.id });
   showScreen('paint'); $('#pTitle').textContent = L(p,'title');
   ctx.clearRect(0, 0, cv.width, cv.height);
   const pz = await loadPuzzle(p);
@@ -636,14 +720,14 @@ function showStory(){
   const facts = L(p,'facts') || p.facts || [];
   $('#sFacts').innerHTML = facts.map(f => `<li>${f}</li>`).join('');
   $('#sMuseum').textContent = t('museum', { m: L(p,'museum') });
-  $('#story').classList.remove('hidden');
+  revealSheet('#story');
 }
 let showingOrig = true;
 $('#sCompare').onclick = () => {
   $('#story').classList.add('hidden');
   toast(t('hintToast'));
 };
-$('#sGallery').onclick = () => { $('#story').classList.add('hidden'); goGallery(); };
+$('#sGallery').onclick = () => { hideSheets(); S = null; pathCtx = null; storyCtx = null; navigate({ kind: 'tab', tab: currentTab || 'heute' }, { replace: true }); showScreen(currentTab || 'heute'); };
 $('#sReset').onclick = () => {
   if (!confirm(t('resetConfirm'))) return;
   localStorage.removeItem(KEY(S.p.id)); $('#story').classList.add('hidden'); const p = S.p; openPainting(p);
@@ -656,18 +740,172 @@ $('#hintBtn').onclick = () => { if (S && S.done) { showStory(); return; } origHi
 cv.addEventListener('click', () => { if (S && S.done && !anim && !(S.doneAt && performance.now() - S.doneAt < 4000)) { reveal = reveal > 0.5 ? 0 : 1; draw(); toast(reveal ? t('original') : t('yours')); } });
 
 // ---------- navigation ----------
-function showScreen(id){ document.querySelectorAll('.screen').forEach(s => s.classList.toggle('active', s.id === id)); }
+const TABS = ['heute','wege','galerie','album'];
+let currentTab = 'heute';
+let routeSilent = false;
+function storedTab(){
+  try {
+    const s = localStorage.getItem(TAB_KEY);
+    if (TABS.includes(s)) return s;
+  } catch (e) {}
+  return 'heute';
+}
+function parseHash(){
+  const raw = (location.hash || '').replace(/^#\/?/, '');
+  if (!raw) return { kind: 'tab', tab: storedTab() };
+  const parts = raw.split('/').filter(Boolean);
+  const a = decodeURIComponent(parts[0] || '');
+  const b = parts[1] ? decodeURIComponent(parts[1]) : '';
+  if (TABS.includes(a)) {
+    if (a === 'album' && b) return { kind: 'albumView', id: b };
+    return { kind: 'tab', tab: a };
+  }
+  if ((a === 'weg' || a === 'path') && b) return { kind: 'path', id: b };
+  if ((a === 'geschichte' || a === 'story') && b) return { kind: 'story', id: b };
+  if ((a === 'bild' || a === 'paint') && b) return { kind: 'paint', id: b };
+  return { kind: 'tab', tab: storedTab() };
+}
+function hashFor(route){
+  if (!route) return '#heute';
+  if (route.kind === 'tab') return '#' + (route.tab || 'heute');
+  if (route.kind === 'path') return '#weg/' + route.id;
+  if (route.kind === 'story') return '#geschichte/' + route.id;
+  if (route.kind === 'paint') return '#bild/' + route.id;
+  if (route.kind === 'albumView') return '#album/' + route.id;
+  return '#heute';
+}
+function navigate(route, opts){
+  const h = hashFor(route);
+  const replace = opts && opts.replace;
+  if (routeSilent) return;
+  lastApplied = h;
+  if ((location.hash || '#') !== h) {
+    if (replace) history.replaceState({ masilano: 1 }, '', h);
+    else history.pushState({ masilano: 1 }, '', h);
+  }
+}
+function backOr(route){
+  if (history.state && history.state.masilano && !history.state.home) history.back();
+  else {
+    navigate(route || { kind: 'tab', tab: currentTab || 'heute' }, { replace: true });
+    applyRoute(route || { kind: 'tab', tab: currentTab || 'heute' });
+  }
+}
+function applyRoute(route){
+  hideSheets();
+  if (!route) route = parseHash();
+  if (route.kind === 'tab') {
+    S = null; pathCtx = null; storyCtx = null;
+    showScreen(route.tab);
+    return;
+  }
+  if (route.kind === 'path') {
+    const path = PATHS.find(x => x.id === route.id);
+    if (path) { pathCtx = { path }; storyCtx = null; showPath(path, { noRoute: true }); }
+    else showScreen('wege');
+    return;
+  }
+  if (route.kind === 'story') {
+    const st = STORIES.find(x => x.id === route.id);
+    if (st) { storyCtx = { story: st }; pathCtx = null; showChapters(st, { noRoute: true }); }
+    else showScreen('wege');
+    return;
+  }
+  if (route.kind === 'paint') {
+    const p = byId(route.id);
+    if (p) openPainting(p, { noRoute: true });
+    else showScreen('galerie');
+    return;
+  }
+  if (route.kind === 'albumView') {
+    showScreen('album');
+    showAlbumView(route.id, { noRoute: true });
+  }
+}
+function bootRoute(){
+  const r = parseHash();
+  if (r.kind !== 'tab') {
+    const tab = r.kind === 'albumView' ? 'album' : (r.kind === 'paint' ? storedTab() : 'wege');
+    history.replaceState({ masilano: 1, home: true }, '', '#' + tab);
+    history.pushState({ masilano: 1 }, '', hashFor(r));
+  } else {
+    history.replaceState({ masilano: 1, home: true }, '', hashFor(r));
+  }
+  lastApplied = hashFor(r);
+  applyRoute(r);
+}
+let lastApplied = '';
+function onRouteChange(){
+  const h = location.hash || '#heute';
+  hideSheets();
+  if (h === lastApplied) return;
+  lastApplied = h;
+  applyRoute(parseHash());
+}
+window.addEventListener('popstate', onRouteChange);
+window.addEventListener('hashchange', onRouteChange);
+function revealSheet(sel){
+  const el = $(sel);
+  if (!el) return;
+  if (el.classList.contains('hidden')) history.pushState({ masilano: 1, sheet: el.id }, '', location.href);
+  el.classList.remove('hidden');
+}
+function closeTopSheet(){
+  if (history.state && history.state.sheet) history.back();
+  else hideSheets();
+}
+function showScreen(id){
+  const tabId = id === 'gallery' ? 'galerie' : id;
+  const isTab = TABS.includes(tabId);
+  if (isTab) {
+    currentTab = tabId;
+    try { localStorage.setItem(TAB_KEY, tabId); } catch (e) {}
+    document.body.classList.remove('tabless');
+    const elId = tabId === 'galerie' ? 'gallery' : tabId;
+    document.querySelectorAll('.tab-screen').forEach(s => s.classList.toggle('active', s.id === elId));
+    document.querySelectorAll('.screen.flow').forEach(s => s.classList.remove('active'));
+    syncTabBar();
+    if (tabId === 'heute') { renderContinue(); renderDaily(); maybeShowInstallHint(); }
+    if (tabId === 'wege') renderStoryEntry();
+    if (tabId === 'galerie') { galGrid = null; requestAnimationFrame(() => renderGallery()); }
+    if (tabId === 'album') renderAlbum();
+  } else {
+    document.body.classList.add('tabless');
+    document.querySelectorAll('.tab-screen').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.screen.flow').forEach(s => s.classList.toggle('active', s.id === id));
+  }
+}
+function syncTabBar(){
+  const bar = $('#tabbar'); if (!bar) return;
+  bar.querySelectorAll('.tab').forEach(b => {
+    const on = b.getAttribute('data-tab') === currentTab;
+    b.classList.toggle('on', on);
+    b.setAttribute('aria-selected', on ? 'true' : 'false');
+  });
+}
+function bindTabs(){
+  const bar = $('#tabbar'); if (!bar) return;
+  bar.addEventListener('click', e => {
+    const b = e.target.closest('.tab[data-tab]'); if (!b) return;
+    const tab = b.getAttribute('data-tab');
+    if (!TABS.includes(tab)) return;
+    S = null; pathCtx = null; storyCtx = null;
+    hideSheets();
+    navigate({ kind: 'tab', tab });
+    showScreen(tab);
+  });
+}
 function goGallery(){
   if (swReload) { location.reload(); return; }
   S = null; hideSheets();
-  if (pathCtx) { showPath(pathCtx.path); return; }
-  if (storyCtx) { showChapters(storyCtx.story); return; }
-  showScreen('gallery'); renderStoryEntry(); renderGallery();
+  if (pathCtx && pathCtx.path) { backOr({ kind: 'path', id: pathCtx.path.id }); return; }
+  if (storyCtx && storyCtx.story) { backOr({ kind: 'story', id: storyCtx.story.id }); return; }
+  backOr({ kind: 'tab', tab: currentTab || 'heute' });
 }
-function hideSheets(){ ['#story', '#chapter', '#chDone', '#pathFin', '#installHow', '#settings', '#albumView'].forEach(q => $(q) && $(q).classList.add('hidden')); }
+function hideSheets(){ ['#story', '#chapter', '#chDone', '#pathFin', '#installHow', '#settings', '#albumView', '#sources'].forEach(q => $(q) && $(q).classList.add('hidden')); }
 $('#backBtn').onclick = goGallery;
 let galT = 0;
-function onViewport(){ if (S) resize(); else { clearTimeout(galT); galT = setTimeout(renderGallery, 120); } }
+function onViewport(){ if (S) resize(); else { clearTimeout(galT); galT = setTimeout(() => { if (currentTab === 'galerie') { galGrid = null; renderGallery(); } }, 120); } }
 window.addEventListener('resize', onViewport);
 if (window.visualViewport) visualViewport.addEventListener('resize', onViewport);
 
@@ -681,40 +919,47 @@ function chUnlocked(st, i){ return i === 0 || isDone(st.chapters[i - 1].pid); }
 function chDoneCount(st){ return st.chapters.filter(c => isDone(c.pid)).length; }
 function renderStoryEntry(){
   const box = $('#storyEntries');
+  if (!box) return;
   if (!STORIES.length && !PATHS.length) { box.style.display = 'none'; return; }
   box.style.display = '';
+  box.className = 'wayslist';
   box.innerHTML = '';
-  const pathParent = PATHS.length > 1 ? document.createElement('div') : box;
-  if (PATHS.length > 1) { pathParent.className = 'pathrow'; box.appendChild(pathParent); }
   PATHS.forEach(path => {
     const steps = pathSteps(path), n = steps.filter(s => isDone(s.pid)).length, N = steps.length;
     const b = document.createElement('button');
-    b.className = 'sentry path neu';
+    b.type = 'button';
+    b.className = 'waycard path';
     b.setAttribute('data-path', path.id);
     b.setAttribute('aria-label', t('pathAria', { title: L(path,'title') }));
+    const pct = N ? Math.round(100 * n / N) : 0;
     b.innerHTML = `<div class="cv" style="background-image:url(data/${path.cover}-thumb.jpg)"></div>
       <div class="tx"><div class="k">${t('pathKicker')}</div><div class="n">${L(path,'title')}</div>
-      <div class="s">${L(path,'part')} · ${n ? t('paintedOf', { n, N }) : t('startNow')}</div></div><div class="go">›</div>`;
+      <div class="s">${L(path,'part')} · ${n ? t('paintedOf', { n, N }) : t('startNow')}</div>
+      <div class="bar"><div style="width:${pct}%"></div></div></div><div class="go">›</div>`;
     b.onclick = () => { pathCtx = { path }; storyCtx = null; showPath(path); };
-    pathParent.appendChild(b);
+    box.appendChild(b);
   });
   STORIES.forEach(st => {
     const n = chDoneCount(st), N = st.chapters.length;
     const b = document.createElement('button');
-    b.className = 'sentry' + (st.fresh ? ' neu' : '');
+    b.type = 'button';
+    b.className = 'waycard story' + (st.fresh ? ' neu' : '');
     b.setAttribute('data-story', st.id);
     b.setAttribute('aria-label', t('storyAria', { name: st.name }));
     const kicker = st.fresh ? t('storyKickerNew') : t('storyKicker');
+    const pct = N ? Math.round(100 * n / N) : 0;
     b.innerHTML = `<div class="cv" style="background-image:url(data/${st.cover}-orig.jpg)"></div>
       <div class="tx"><div class="k">${kicker}</div><div class="n">${st.name}</div>
-      <div class="s">${L(st,'subtitle')} · ${n ? t('paintedOf', { n, N }) : t('startNow')}</div></div><div class="go">›</div>`;
+      <div class="s">${L(st,'subtitle')} · ${n ? t('paintedOf', { n, N }) : t('startNow')}</div>
+      <div class="bar"><div style="width:${pct}%"></div></div></div><div class="go">›</div>`;
     b.onclick = () => { storyCtx = { story: st }; showChapters(st); };
     box.appendChild(b);
   });
 }
 let ctoastT = 0;
 function ctoast(msg){ const t = $('#ctoast'); t.textContent = msg; t.classList.add('show'); clearTimeout(ctoastT); ctoastT = setTimeout(() => t.classList.remove('show'), 1800); }
-function showChapters(st){
+function showChapters(st, opts){
+  if (!opts || !opts.noRoute) navigate({ kind: 'story', id: st.id });
   S = null; showScreen('chapters');
   const N = st.chapters.length, n = chDoneCount(st), seen = storyState(st).seen;
   $('#chHead').innerHTML = `<div class="cv" style="background-image:url(data/${st.cover}-orig.jpg)"></div>
@@ -759,9 +1004,9 @@ function showChapter(st, i){
     ${youArePainting(done, L(p,'title'), L(p,'artist'), p.year)}`;
   $('#cGo').textContent = paintBtn(done, pct);
   $('#chapter .card').scrollTop = 0;
-  $('#chapter').classList.remove('hidden');
+  revealSheet('#chapter');
 }
-$('#cBack').onclick = () => { $('#chapter').classList.add('hidden'); if (pathCtx) showPath(pathCtx.path); else if (storyCtx) showChapters(storyCtx.story); };
+$('#cBack').onclick = () => { closeTopSheet(); };
 $('#cGo').onclick = async () => {
   $('#chapter').classList.add('hidden');
   const c = pathCtx || storyCtx, p = byId(c.pid);
@@ -782,7 +1027,7 @@ function showChapterDone(){
   $('#dEpiWrap').classList.toggle('hidden', !last);
   $('#dNext').textContent = last ? t('finishStory') : t('nextChapter', { n: i + 2 });
   $('#chDone .card').scrollTop = 0;
-  $('#chDone').classList.remove('hidden');
+  revealSheet('#chDone');
 }
 $('#dNext').onclick = () => {
   if (pathCtx && pathCtx.step) {
@@ -801,9 +1046,9 @@ $('#dNext').onclick = () => {
   if (i < st.chapters.length - 1) { showChapters(st); showChapter(st, i + 1); }
   else showChapters(st);
 };
-$('#dList').onclick = () => { $('#chDone').classList.add('hidden'); goGallery(); };
+$('#dList').onclick = () => { hideSheets(); if (pathCtx && pathCtx.path) showPath(pathCtx.path, { noRoute: true }); else if (storyCtx && storyCtx.story) showChapters(storyCtx.story, { noRoute: true }); else { S = null; navigate({ kind: 'tab', tab: 'wege' }); showScreen('wege'); } };
 $('#dLook').onclick = () => { $('#chDone').classList.add('hidden'); toast(t('hintAgain')); };
-$('#chBack').onclick = () => { storyCtx = null; hideSheets(); if (swReload) { location.reload(); return; } showScreen('gallery'); renderStoryEntry(); renderGallery(); };
+$('#chBack').onclick = () => { const st = storyCtx && storyCtx.story; storyCtx = null; hideSheets(); if (swReload) { location.reload(); return; } backOr({ kind: 'tab', tab: 'wege' }); };
 
 // ---------- path mode (Lebensweg) ----------
 let pathCtx = null; // { path, step, pid } while playing a path work
@@ -817,7 +1062,8 @@ function pathSave(path, o){ try { localStorage.setItem(PKEY(path.id), JSON.strin
 function pathDoneCount(path){ return pathSteps(path).filter(s => isDone(s.pid)).length; }
 function pathWorkUnlocked(path, idx){ return idx === 0 || isDone(pathSteps(path)[idx - 1].pid); }
 function stationDone(st){ return st.works.every(w => isDone(w.pid)); }
-function showPath(path){
+function showPath(path, opts){
+  if (!opts || !opts.noRoute) navigate({ kind: 'path', id: path.id });
   S = null; showScreen('path');
   const steps = pathSteps(path), n = pathDoneCount(path), N = steps.length;
   $('#pathHead').innerHTML = `<div class="cv" style="background-image:url(data/${path.cover}-orig.jpg)"></div>
@@ -948,7 +1194,7 @@ function showPathWork(path, step){
     ${youArePainting(done, L(p,'title'), L(p,'artist'), p.year)}`;
   $('#cGo').textContent = paintBtn(done, pct);
   $('#chapter .card').scrollTop = 0;
-  $('#chapter').classList.remove('hidden');
+  revealSheet('#chapter');
 }
 function showPathDone(){
   celebrateIfNeeded();
@@ -964,7 +1210,7 @@ function showPathDone(){
   $('#dEpiWrap').classList.add('hidden');
   $('#dNext').textContent = t('nextPicture', { title: L(byId(steps[step.idx + 1].pid),'title') });
   $('#chDone .card').scrollTop = 0;
-  $('#chDone').classList.remove('hidden');
+  revealSheet('#chDone');
 }
 function showPathFin(path){
   const N = pathSteps(path).length;
@@ -974,9 +1220,9 @@ function showPathFin(path){
   $('#pfBody').innerHTML = ending.map(tx => `<p>${tx}</p>`).join('');
   hideSheets();
   $('#pathFin .card').scrollTop = 0;
-  $('#pathFin').classList.remove('hidden');
+  revealSheet('#pathFin');
 }
-$('#pathBack').onclick = () => { pathCtx = null; hideSheets(); if (swReload) { location.reload(); return; } showScreen('gallery'); renderStoryEntry(); renderGallery(); };
+$('#pathBack').onclick = () => { pathCtx = null; hideSheets(); if (swReload) { location.reload(); return; } backOr({ kind: 'tab', tab: 'wege' }); };
 
 
 if ($('#pfPath')) $('#pfPath').onclick = () => {
@@ -988,7 +1234,9 @@ if ($('#pfPath')) $('#pfPath').onclick = () => {
 };
 if ($('#pfGal')) $('#pfGal').onclick = () => {
   $('#pathFin').classList.add('hidden');
-  pathCtx = null; goGallery();
+  pathCtx = null;
+  navigate({ kind: 'tab', tab: 'galerie' });
+  showScreen('galerie');
 };
 
 
@@ -1190,8 +1438,8 @@ function renderAlbumEntry(){
 function showAlbum(){
   hideSheets();
   S = null;
+  navigate({ kind: 'tab', tab: 'album' });
   showScreen('album');
-  renderAlbum();
 }
 function renderAlbum(){
   const box = $('#albumBody'); if (!box) return;
@@ -1218,8 +1466,9 @@ function renderAlbum(){
     b.onclick = () => showAlbumView(b.getAttribute('data-id'));
   });
 }
-function showAlbumView(id){
+function showAlbumView(id, opts){
   const p = byId(id); if (!p) return;
+  if (!opts || !opts.noRoute) navigate({ kind: 'albumView', id });
   const title = L(p, 'title');
   $('#avTitle').textContent = title;
   $('#avMeta').textContent = `${L(p, 'artist')} · ${p.year}`;
@@ -1234,7 +1483,10 @@ function showAlbumView(id){
   sh.classList.remove('hidden');
   const cl = $('#avClose'); if (cl) cl.focus();
 }
-function closeAlbumView(){ $('#albumView').classList.add('hidden'); }
+function closeAlbumView(){
+  $('#albumView').classList.add('hidden');
+  if ((location.hash || '').indexOf('#album/') === 0) backOr({ kind: 'tab', tab: 'album' });
+}
 
 function loadMiles(){
   try { return JSON.parse(localStorage.getItem(MILES_KEY) || 'null') || {}; } catch (e) { return {}; }
@@ -1282,10 +1534,10 @@ function celebrateIfNeeded(){
 }
 function openSettings(){
   applyCalm();
-  $('#settings').classList.remove('hidden');
+  revealSheet('#settings');
   const sw = $('#calmToggle'); if (sw) sw.focus();
 }
-function closeSettings(){ $('#settings').classList.add('hidden'); }
+function closeSettings(){ closeTopSheet(); }
 function bindDelight(){
   if ($('#setBtn')) $('#setBtn').onclick = openSettings;
   if ($('#setClose')) $('#setClose').onclick = closeSettings;
@@ -1296,12 +1548,13 @@ function bindDelight(){
     renderGallery();
     if ($('#album') && $('#album').classList.contains('active')) renderAlbum();
   };
-  if ($('#albumBack')) $('#albumBack').onclick = () => { closeAlbumView(); showScreen('gallery'); renderStoryEntry(); renderGallery(); };
+  if ($('#albumBack')) $('#albumBack').onclick = () => { closeAlbumView(); backOr({ kind: 'tab', tab: 'album' }); };
   if ($('#avClose')) $('#avClose').onclick = closeAlbumView;
   document.addEventListener('keydown', e => {
     if (e.key !== 'Escape') return;
     if ($('#albumView') && !$('#albumView').classList.contains('hidden')) { closeAlbumView(); e.preventDefault(); return; }
-    if ($('#settings') && !$('#settings').classList.contains('hidden')) { closeSettings(); e.preventDefault(); }
+    if ($('#settings') && !$('#settings').classList.contains('hidden')) { closeSettings(); e.preventDefault(); return; }
+    if ($('#sources') && !$('#sources').classList.contains('hidden')) { closeTopSheet(); e.preventDefault(); }
   });
 }
 
@@ -1507,7 +1760,7 @@ async function onInstallAdd(){
     } catch (e) {}
   }
   $('#ihBody').textContent = isIOSDevice() ? t('installHowIOS') : t('installHowGeneric');
-  $('#installHow').classList.remove('hidden');
+  revealSheet('#installHow');
 }
 if ($('#ihGotIt')) $('#ihGotIt').onclick = () => { $('#installHow').classList.add('hidden'); hideInstallHint(true); };
 
@@ -1660,17 +1913,18 @@ if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.
 function refreshLang(){
   galGrid = null;
   I.applyStatic();
-  const gal = document.getElementById('gallery');
-  const onGal = gal && gal.classList.contains('active');
   const onPath = document.getElementById('path')?.classList.contains('active');
   const onCh = document.getElementById('chapters')?.classList.contains('active');
-  if (onPath && pathCtx && pathCtx.path) showPath(pathCtx.path);
-  else if (onPath && window.PATHS && window.PATHS[0]) showPath(window.PATHS[0]);
-  else if (onCh && storyCtx && storyCtx.story) showChapters(storyCtx.story);
+  if (onPath && pathCtx && pathCtx.path) showPath(pathCtx.path, { noRoute: true });
+  else if (onCh && storyCtx && storyCtx.story) showChapters(storyCtx.story, { noRoute: true });
   if (!$('#onboard').classList.contains('hidden')) renderOnboard();
   maybeShowInstallHint();
   applyCalm();
+  syncTabBar();
+  renderContinue();
+  renderDaily();
   renderStoryEntry();
+  renderFilters();
   renderGallery();
   if ($('#album') && $('#album').classList.contains('active')) renderAlbum();
 }
@@ -1683,6 +1937,9 @@ document.addEventListener('click', e => {
 I.applyStatic();
 applyCalm();
 bindDelight();
+bindTabs();
+bindFilters();
 maybeStartOnboard();
-renderStoryEntry(); renderGallery(); maybeShowInstallHint();
+bootRoute();
+maybeShowInstallHint();
 })();
