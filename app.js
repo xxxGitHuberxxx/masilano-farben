@@ -2278,7 +2278,7 @@ async function renderShareCard(p){
   const aLines = wrapText(ctx, artist, maxImgW);
   const topY = 96;
   const imgY = topY + 28;
-  const textY = imgY + ih + 44;
+  const textY = imgY + ih + 68;
   const H = textY + tLines.length * 62 + aLines.length * 38 + 28 + 22 + 70 + 80;
   c.width = W; c.height = H;
   ctx.fillStyle = '#f6f3ee';
@@ -2397,7 +2397,7 @@ async function renderCertificateCard(path, name){
   const jLines = wrapText(ctx, journey, W - pad * 2 - 20);
   const top = 100;
   const imgY = top + 70;
-  const textY = imgY + (ih || 0) + 48;
+  const textY = imgY + (ih || 0) + 72;
   const H = textY + tLines.length * 64 + jLines.length * 44 + 38 + 38 + (forName ? 44 : 0) + 170;
   c.width = W; c.height = H;
   ctx.fillStyle = '#f4efe6';
@@ -2577,7 +2577,7 @@ function paintStartShell(){
 paintStartShell();
 function startUi(){
   ingestPathData();
-  window.__pathTextsReady = !!(PATHS.length >= 6);
+  window.__pathTextsReady = !!(PATHS.length >= 7);
   bootRoute();
   maybeShowInstallHint();
   if ((currentTab || 'heute') === 'heute') renderHeute();

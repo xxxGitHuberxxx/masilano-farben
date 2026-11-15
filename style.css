@@ -288,6 +288,7 @@ h1{font-family:Georgia,"Times New Roman",serif;font-weight:normal;font-size:32px
 @media (max-width:360px){.pathrow{grid-template-columns:1fr}}
 @media (max-height:560px){.pathrow{gap:6px;margin-bottom:6px}.pathrow .sentry{min-height:56px}}
 .sentry.path[data-path="hokusai"]{background:linear-gradient(100deg,#0f2a44 0%,#1a4a6e 50%,#3d7ab0 140%)}
+.sentry.path[data-path="cezanne"]{background:linear-gradient(100deg,#7a2e22 0%,#c46a3a 48%,#1e6a8a 140%)}
 
 /* v7.2 retention: daily, album, calm, milestones */
 .headacts{display:flex;align-items:center;gap:6px;flex-shrink:0}
@@ -432,6 +433,7 @@ body.onboarding .apphead,body.onboarding .tabbar,body.onboarding .tab-screen{vis
 .waycard.path{background:linear-gradient(100deg,#3a2a14 0%,#6a4a22 55%,#c79a4e 140%)}
 .waycard.path[data-path="vangogh"]{background:linear-gradient(100deg,#16324d 0%,#2a5f78 55%,#c79a4e 140%)}
 .waycard.path[data-path="hokusai"]{background:linear-gradient(100deg,#0f2a44 0%,#1a4a6e 50%,#3d7ab0 140%)}
+.waycard.path[data-path="cezanne"]{background:linear-gradient(100deg,#7a2e22 0%,#c46a3a 48%,#1e6a8a 140%)}
 .waycard.story{background:linear-gradient(100deg,#16324d 0%,#2a5f78 55%,#c79a4e 140%)}
 .waycard.story.neu{background:linear-gradient(100deg,#16324d 0%,#2a5f78 55%,#c79a4e 140%)}
 /* reuse sentry palette if present */
