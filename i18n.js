@@ -7,14 +7,14 @@
     de: {
       appTitle: 'Malen nach Zahlen',
       docTitle: 'Masilano · Malen nach Zahlen',
-      appSubtitle: '676 Meisterwerke, Feld für Feld – und die Lebenswege von Van Gogh, Monet, Hokusai und Klimt.',
+      appSubtitle: '725 Meisterwerke, Feld für Feld – und die Lebenswege von Van Gogh, Monet, Hokusai, Klimt und Anker.',
       sortAria: 'Reihenfolge der Bilder',
       sortGallery: 'Standard',
       sortEasy: 'Leicht zuerst',
       searchPh: 'Bild oder Maler suchen',
       searchClear: 'Suche löschen',
       sourcesBtn: 'Bildquellen & Hinweise',
-      version: 'Testversion 8.0',
+      version: 'Testversion 8.1',
       back: 'Zurück',
       backGallery: 'Zurück zur Galerie',
       backWays: 'Zurück zu den Wegen',
@@ -195,14 +195,14 @@
     en: {
       appTitle: 'Color by Number',
       docTitle: 'Masilano · Color by Number',
-      appSubtitle: '676 masterpieces, field by field – and the life journeys of Van Gogh, Monet, Hokusai and Klimt.',
+      appSubtitle: '725 masterpieces, field by field – and the life journeys of Van Gogh, Monet, Hokusai, Klimt and Anker.',
       sortAria: 'Picture order',
       sortGallery: 'Default',
       sortEasy: 'Easy first',
       searchPh: 'Search for a picture or painter',
       searchClear: 'Clear search',
       sourcesBtn: 'Picture sources & notes',
-      version: 'Test version 8.0',
+      version: 'Test version 8.1',
       back: 'Back',
       backGallery: 'Back to the gallery',
       backWays: 'Back to the journeys',
@@ -383,14 +383,14 @@
     es: {
       appTitle: "Pintar por números",
       docTitle: "Masilano · Pintar por números",
-      appSubtitle: "676 obras maestras, campo a campo – y los caminos de vida de Van Gogh, Monet, Hokusai y Klimt.",
+      appSubtitle: "725 obras maestras, campo a campo – y los caminos de vida de Van Gogh, Monet, Hokusai, Klimt y Anker.",
       sortAria: "Orden de las imágenes",
       sortGallery: "Estándar",
       sortEasy: "Fáciles primero",
       searchPh: "Buscar un cuadro o un pintor",
       searchClear: "Borrar búsqueda",
       sourcesBtn: "Fuentes e indicaciones",
-      version: "Versión de prueba 8.0",
+      version: "Versión de prueba 8.1",
       back: "Atrás",
       backGallery: "Volver a la galería",
       backWays: "Volver a los caminos",
@@ -571,14 +571,14 @@
     fr: {
       appTitle: "Peinture par numéros",
       docTitle: "Masilano · Peinture par numéros",
-      appSubtitle: "676 chefs-d’œuvre, case par case – et les parcours de vie de Van Gogh, Monet, Hokusai et Klimt.",
+      appSubtitle: "725 chefs-d’œuvre, case par case – et les parcours de vie de Van Gogh, Monet, Hokusai, Klimt et Anker.",
       sortAria: "Ordre des images",
       sortGallery: "Standard",
       sortEasy: "Faciles d’abord",
       searchPh: "Chercher un tableau ou un peintre",
       searchClear: "Effacer la recherche",
       sourcesBtn: "Sources et notes",
-      version: "Version d’essai 8.0",
+      version: "Version d’essai 8.1",
       back: "Retour",
       backGallery: "Retour à la galerie",
       backWays: "Retour aux parcours",
@@ -759,14 +759,14 @@
     it: {
       appTitle: "Dipingere con i numeri",
       docTitle: "Masilano · Dipingere con i numeri",
-      appSubtitle: "676 capolavori, campo dopo campo – e i percorsi di vita di Van Gogh, Monet, Hokusai e Klimt.",
+      appSubtitle: "725 capolavori, campo dopo campo – e i percorsi di vita di Van Gogh, Monet, Hokusai, Klimt e Anker.",
       sortAria: "Ordine delle immagini",
       sortGallery: "Standard",
       sortEasy: "Prima i facili",
       searchPh: "Cerca un quadro o un pittore",
       searchClear: "Cancella la ricerca",
       sourcesBtn: "Fonti e note",
-      version: "Versione di prova 8.0",
+      version: "Versione di prova 8.1",
       back: "Indietro",
       backGallery: "Torna alla galleria",
       backWays: "Torna ai percorsi",
@@ -1005,9 +1005,9 @@
   let lang = detect();
 
   const PATHTEXT_FILES = {
-    es: ['es-path-vangogh.js', 'es-path-monet.js', 'es-path-hokusai.js', 'es-path-klimt.js', 'es-path-klimt-p2.js'],
-    fr: ['fr-path-vangogh.js', 'fr-path-monet.js', 'fr-path-hokusai.js', 'fr-path-klimt.js', 'fr-path-klimt-p2.js'],
-    it: ['it-path-vangogh.js', 'it-path-monet.js', 'it-path-hokusai.js', 'it-path-klimt.js', 'it-path-klimt-p2.js']
+    es: ['es-path-vangogh.js', 'es-path-monet.js', 'es-path-hokusai.js', 'es-path-klimt.js', 'es-path-klimt-p2.js', 'es-path-anker.js'],
+    fr: ['fr-path-vangogh.js', 'fr-path-monet.js', 'fr-path-hokusai.js', 'fr-path-klimt.js', 'fr-path-klimt-p2.js', 'fr-path-anker.js'],
+    it: ['it-path-vangogh.js', 'it-path-monet.js', 'it-path-hokusai.js', 'it-path-klimt.js', 'it-path-klimt-p2.js', 'it-path-anker.js']
   };
   const _scriptProm = {};
   const _pathTextProm = {};
