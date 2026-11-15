@@ -18,13 +18,21 @@
   <header class="ghead">
     <div class="headrow">
       <div class="wordmark">Masilano</div>
-      <div id="langSwitch" class="langswitch" role="group" data-i18n-aria="langAria" aria-label="Sprache">
-        <button type="button" class="langbtn" data-lang="de" aria-pressed="true">Deutsch</button>
-        <button type="button" class="langbtn" data-lang="en" aria-pressed="false">English</button>
+      <div class="headacts">
+        <div id="langSwitch" class="langswitch" role="group" data-i18n-aria="langAria" aria-label="Sprache">
+          <button type="button" class="langbtn" data-lang="de" aria-pressed="true">Deutsch</button>
+          <button type="button" class="langbtn" data-lang="en" aria-pressed="false">English</button>
+        </div>
+        <button type="button" id="setBtn" class="gear" data-i18n-aria="settingsAria" aria-label="Einstellungen">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 13.5a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V20a2 2 0 1 1-4 0v-.2a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H4a2 2 0 1 1 0-4h.2a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H10a1.6 1.6 0 0 0 1-1.5V4a2 2 0 1 1 4 0v.2a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V10c.3.6.9 1 1.5 1H20a2 2 0 1 1 0 4h-.2a1.6 1.6 0 0 0-1.5 1.5z"/>
+          </svg>
+        </button>
       </div>
     </div>
     <h1 data-i18n="appTitle">Malen nach Zahlen</h1>
-    <p class="sub" data-i18n="appSubtitle">554 Meisterwerke, Feld für Feld – und die Lebenswege von Van Gogh, Monet und Hokusai.</p>
+    <p class="sub" data-i18n="appSubtitle">567 Meisterwerke, Feld für Feld – und die Lebenswege von Van Gogh, Monet und Hokusai.</p>
     <div id="sortBar" class="sortbar" role="group" data-i18n-aria="sortAria" aria-label="Reihenfolge der Bilder">
       <button type="button" data-sort="gallery" data-i18n="sortGallery">Galerie</button>
       <button type="button" data-sort="easy" data-i18n="sortEasy">Leicht zuerst</button>
@@ -35,6 +43,8 @@
       <button type="button" id="galSearchClear" class="sclear hidden" data-i18n-aria="searchClear" aria-label="Suche löschen">×</button>
     </div>
     <div id="continueWrap"></div>
+    <div id="dailyWrap"></div>
+    <div id="albumWrap"></div>
     <div id="storyEntries" class="sentries"></div>
   </header>
   <div id="pager" class="pager"></div>
@@ -42,7 +52,7 @@
   <div id="installHint" class="installhint hidden" hidden></div>
   <footer class="gfoot">
     <button id="srcBtn" class="linkbtn" data-i18n-html="sourcesBtn">Bildquellen &amp; Hinweise</button>
-    <div class="ver" data-i18n="version">Testversion 7.1</div>
+    <div class="ver" data-i18n="version">Testversion 7.2</div>
   </footer>
 </section>
 
@@ -82,6 +92,43 @@
     <div id="chEpi" class="chepi hidden"></div>
   </div>
 </section>
+
+<section id="album" class="screen">
+  <div class="topbar">
+    <button type="button" id="albumBack" class="iconbtn" data-i18n-aria="backGallery" aria-label="Zurück zur Galerie">‹</button>
+    <div class="ttl"><div class="chT" data-i18n="albumTitle">Sammelalbum</div></div>
+    <div class="iconspace"></div>
+  </div>
+  <div id="albumBody" class="albumscroll"></div>
+</section>
+
+<div id="albumView" class="sheet aview hidden" role="dialog" aria-modal="true" aria-labelledby="avTitle">
+  <div class="card">
+    <div id="avImg" class="avimg"></div>
+    <h2 id="avTitle"></h2>
+    <div id="avMeta" class="meta"></div>
+    <div id="avText" class="ctext"></div>
+    <div id="avFactWrap" class="hidden"><div class="lbl" data-i18n="didYouKnow">Wusstest du?</div><p id="avFact"></p></div>
+    <div id="avMuseum" class="museum"></div>
+    <div class="btns"><button type="button" id="avClose" class="btn" data-i18n="close">Schliessen</button></div>
+  </div>
+</div>
+
+<div id="settings" class="sheet hidden" role="dialog" aria-modal="true" aria-labelledby="setTitle">
+  <div class="card">
+    <h2 id="setTitle" data-i18n="settingsTitle">Einstellungen</h2>
+    <div class="setrow">
+      <div class="settx">
+        <div class="sett" id="calmTitle" data-i18n="calmTitle">Ruhemodus</div>
+        <p class="sets" data-i18n="calmBody">Nur leichte Bilder, grössere Schaltflächen und ruhigere Bewegungen.</p>
+      </div>
+      <button type="button" id="calmToggle" class="switch" role="switch" aria-checked="false" data-i18n-aria="calmAria" aria-label="Ruhemodus">
+        <span class="knob" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="btns"><button type="button" class="btn" id="setClose" data-i18n="close">Schliessen</button></div>
+  </div>
+</div>
 
 <div id="chapter" class="sheet hidden">
   <div class="card">
@@ -157,6 +204,7 @@
   </div>
 </div>
 <div id="ctoast" class="ctoast"></div>
+<div id="mtoast" class="mtoast" role="status" aria-live="polite"></div>
 
 <div id="onboard" class="onboard hidden" hidden role="dialog" aria-modal="true" aria-labelledby="obTitle">
   <div class="obcard">
@@ -199,6 +247,7 @@
 <script src="en-hokusai.js"></script>
 <script src="en-hokusai-p2.js"></script>
 <script src="i18n.js"></script>
+<script src="levels.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

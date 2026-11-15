@@ -1,6 +1,7 @@
 (() => {
 'use strict';
 const $ = s => document.querySelector(s);
+const esc = s => String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const KEY = id => 'masilano.color.v1.' + id;
 const P = window.PAINTINGS;
 const STORIES = window.STORIES || [];
@@ -29,7 +30,21 @@ const SORT_KEY = 'masilano.galSort.v5';
 const LAST_KEY = 'masilano.last.v1';
 const ONBOARD_KEY = 'masilano.onboard.v1';
 const INSTALL_KEY = 'masilano.installHint.v1';
-function reduceMotion(){ return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); }
+const CALM_KEY = 'masilano.calm.v1';
+const STREAK_KEY = 'masilano.streak.v1';
+const MILES_KEY = 'masilano.miles.v1';
+let todayOverride = null;
+function calmOn(){ try { return localStorage.getItem(CALM_KEY) === 'on'; } catch (e) { return false; } }
+function applyCalm(){
+  document.body.classList.toggle('calm', calmOn());
+  const sw = $('#calmToggle');
+  if (sw) sw.setAttribute('aria-checked', calmOn() ? 'true' : 'false');
+}
+function setCalm(on){
+  try { localStorage.setItem(CALM_KEY, on ? 'on' : 'off'); } catch (e) {}
+  applyCalm();
+}
+function reduceMotion(){ return calmOn() || !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); }
 function isStandalone(){
   return (window.matchMedia && (window.matchMedia('(display-mode: standalone)').matches || window.matchMedia('(display-mode: fullscreen)').matches))
     || window.navigator.standalone === true;
@@ -47,8 +62,13 @@ function smoothIntoView(el, opts){
   el.scrollIntoView(o);
 }
 const LEVEL_RANK = {leicht:0, mittel:1, schwer:2};
+function regionsOf(p){
+  if (p && typeof p.regions === 'number') return p.regions;
+  const lv = window.LEVELS || {};
+  return (p && lv[p.id]) || 999;
+}
 function levelOf(p){
-  const r = p.regions || 999;
+  const r = regionsOf(p);
   return r < 220 ? 'leicht' : r < 400 ? 'mittel' : 'schwer';
 }
 function levelLabel(lv){ return lv === 'leicht' ? t('easy') : lv === 'mittel' ? t('medium') : t('hard'); }
@@ -79,7 +99,8 @@ function matchesQuery(p, q, extra){
 let galQuery = '';
 function galleryList(){
   const q = fold(galQuery);
-  const arr = P.filter(p => matchesQuery(p, q));
+  let arr = P.filter(p => matchesQuery(p, q));
+  if (calmOn()) arr = arr.filter(p => levelOf(p) === 'leicht');
   if (galSort === 'easy') {
     arr.sort((a,b) => (LEVEL_RANK[levelOf(a)] - LEVEL_RANK[levelOf(b)]) || ((a.regions || 999) - (b.regions || 999)) || L(a,'title').localeCompare(L(b,'title'), I.lang === 'de' ? 'de-CH' : 'en'));
   }
@@ -216,6 +237,8 @@ function hydrateGal(center){
 }
 function renderGallery(){
   renderContinue();
+  renderDaily();
+  renderAlbumEntry();
   const pager = $('#pager'), dots = $('#dots');
   const list = galleryList();
   const storyHits = storySearchHits();
@@ -588,8 +611,10 @@ function toast(msg){ const t = $('#toast'); t.textContent = msg; t.classList.add
 
 // ---------- completion ----------
 function finish(){
-  S.done = true; S.doneAt = performance.now(); rebuild();
+  S.done = true; S.doneAt = performance.now(); S.justFinished = true; rebuild();
   clearLastIf(S.p.id);
+  const doneArr = []; S.filled.forEach((v, i) => v && doneArr.push(i));
+  writeSave(S.p.id, { total: S.pz.R, filled: doneArr });
   if (reduceMotion()) { reveal = 1; draw(); setTimeout(showStory, 200); return; }
   const s = fitS, to = { s, tx: (cw - S.pz.w * s) / 2, ty: (ch - S.pz.h * s) / 2 };
   setTimeout(() => {
@@ -604,6 +629,7 @@ function finish(){
 function showStory(){
   if (pathCtx && S && pathCtx.pid === S.p.id) { showPathDone(); return; }
   if (storyCtx && S && storyCtx.pid === S.p.id) { showChapterDone(); return; }
+  celebrateIfNeeded();
   const p = S.p;
   $('#sTitle').textContent = L(p,'title'); $('#sMeta').textContent = `${L(p,'artist')} · ${p.year}`;
   $('#sStory').textContent = L(p,'story'); $('#sTech').textContent = L(p,'technique');
@@ -638,7 +664,7 @@ function goGallery(){
   if (storyCtx) { showChapters(storyCtx.story); return; }
   showScreen('gallery'); renderStoryEntry(); renderGallery();
 }
-function hideSheets(){ ['#story', '#chapter', '#chDone', '#pathFin', '#installHow'].forEach(q => $(q) && $(q).classList.add('hidden')); }
+function hideSheets(){ ['#story', '#chapter', '#chDone', '#pathFin', '#installHow', '#settings', '#albumView'].forEach(q => $(q) && $(q).classList.add('hidden')); }
 $('#backBtn').onclick = goGallery;
 let galT = 0;
 function onViewport(){ if (S) resize(); else { clearTimeout(galT); galT = setTimeout(renderGallery, 120); } }
@@ -744,6 +770,7 @@ $('#cGo').onclick = async () => {
   else if (S && S.done && storyCtx === c) setTimeout(() => { if (S && S.p === p) showChapterDone(); }, 900);
 };
 function showChapterDone(){
+  celebrateIfNeeded();
   const c = storyCtx, st = c.story, i = c.idx, ch = st.chapters[i], p = byId(ch.pid), N = st.chapters.length, last = i === N - 1;
   const chL = I.locChapter(st, ch);
   $('#dNum').textContent = t('chapterDone', { n: i + 1 });
@@ -924,6 +951,7 @@ function showPathWork(path, step){
   $('#chapter').classList.remove('hidden');
 }
 function showPathDone(){
+  celebrateIfNeeded();
   const c = pathCtx, path = c.path, step = c.step, p = byId(step.pid);
   const steps = pathSteps(path), last = step.idx === steps.length - 1;
   if (last) { showPathFin(path); return; }
@@ -963,6 +991,319 @@ if ($('#pfGal')) $('#pfGal').onclick = () => {
   pathCtx = null; goGallery();
 };
 
+
+
+// ---------- v7.2: daily, album, calm, milestones ----------
+function todayKey(d){
+  if (!d && todayOverride) return todayOverride;
+  let x;
+  if (d instanceof Date) x = d;
+  else if (typeof d === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(d)) return d;
+  else x = new Date();
+  const y = x.getFullYear(), m = x.getMonth() + 1, day = x.getDate();
+  return y + '-' + String(m).padStart(2, '0') + '-' + String(day).padStart(2, '0');
+}
+function shiftDate(dateStr, days){
+  const d = new Date(dateStr + 'T12:00:00');
+  d.setDate(d.getDate() + days);
+  return todayKey(d);
+}
+function fnv1a(s){
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return h >>> 0;
+}
+function dailyPool(){
+  const maxRank = calmOn() ? 0 : 1;
+  return ALL.filter(p => LEVEL_RANK[levelOf(p)] <= maxRank)
+    .slice()
+    .sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
+}
+function pickDaily(dateStr){
+  const key = todayKey(dateStr);
+  const pool = dailyPool();
+  if (!pool.length) return null;
+  return pool[fnv1a('masilano.daily.v1|' + key) % pool.length];
+}
+function loadStreak(){
+  try {
+    const o = JSON.parse(localStorage.getItem(STREAK_KEY) || 'null') || {};
+    return { n: +o.n || 0, last: o.last || '' };
+  } catch (e) { return { n: 0, last: '' }; }
+}
+function saveStreak(o){
+  try { localStorage.setItem(STREAK_KEY, JSON.stringify({ n: o.n || 0, last: o.last || '' })); } catch (e) {}
+}
+function streakKind(st, day){
+  if (!st || !st.n) return null;
+  if (st.last === day) return 'today';
+  if (st.last === shiftDate(day, -1)) return 'active';
+  return 'paused';
+}
+function streakText(st, day){
+  const kind = streakKind(st, day);
+  if (!kind) return '';
+  if (st.n === 1) return t(kind === 'today' ? 'streakToday1' : kind === 'active' ? 'streakActive1' : 'streakPaused1');
+  return t(kind === 'today' ? 'streakToday' : kind === 'active' ? 'streakActive' : 'streakPaused', { n: st.n });
+}
+function bumpStreak(day){
+  const d = day || todayKey();
+  const st = loadStreak();
+  if (st.last === d) return st;
+  st.n = (st.n || 0) + 1;
+  st.last = d;
+  saveStreak(st);
+  return st;
+}
+function openHomeWork(p){
+  if (!p) return;
+  pathCtx = null; storyCtx = null;
+  for (const path of PATHS) {
+    const step = pathSteps(path).find(s => s.pid === p.id);
+    if (step) { pathCtx = { path, step, pid: p.id }; break; }
+  }
+  if (!pathCtx) {
+    for (const st of STORIES) {
+      const idx = st.chapters.findIndex(c => c.pid === p.id);
+      if (idx >= 0) { storyCtx = { story: st, idx, pid: p.id }; break; }
+    }
+  }
+  hideSheets();
+  return openPainting(p);
+}
+function renderDaily(){
+  const wrap = $('#dailyWrap'); if (!wrap) return;
+  const searching = !!(typeof galQuery === 'string' && galQuery.trim());
+  const had = !!wrap.querySelector('#dailyCard');
+  if (searching) {
+    if (had) galGrid = null;
+    wrap.innerHTML = '';
+    return;
+  }
+  const day = todayKey();
+  const p = pickDaily(day);
+  if (!p) { if (had) galGrid = null; wrap.innerHTML = ''; return; }
+  const done = isDone(p.id);
+  const streak = streakText(loadStreak(), day);
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.id = 'dailyCard';
+  b.className = 'dailycard' + (done ? ' done' : '');
+  b.setAttribute('aria-label', t('dailyAria', { title: L(p, 'title') }));
+  const sub = done ? t('dailyDone') : ((L(p, 'artist') || p.artist) + ' · ' + p.year);
+  b.innerHTML = `<div class="cv" style="background-image:url(data/${p.id}-${done ? 'orig.jpg' : 'thumb.jpg'})"></div>
+    <div class="tx"><div class="k">${t('dailyKicker')}</div><div class="n">${L(p,'title')}</div>
+    <div class="s">${sub}</div>${streak ? `<div class="st">${streak}</div>` : ''}</div><div class="go">›</div>`;
+  b.onclick = () => { if (isDone(p.id)) bumpStreak(day); openHomeWork(p); };
+  wrap.innerHTML = '';
+  wrap.appendChild(b);
+  if (!had) galGrid = null;
+}
+
+function doneCount(){
+  let n = 0;
+  for (const p of ALL) if (isDone(p.id)) n++;
+  return n;
+}
+function artistLabel(artist){
+  if (!artist) return '';
+  if (I.lang === 'en') return enField({ artist }, 'artist') || artist;
+  return artist;
+}
+function albumGroups(){
+  const claimed = new Set();
+  const groups = [];
+  PATHS.forEach(path => {
+    const ids = [];
+    pathSteps(path).forEach(s => { if (!claimed.has(s.pid) && byId(s.pid)) { claimed.add(s.pid); ids.push(s.pid); } });
+    // include duplicates? count unique only. Reused gallery works belong to the path group.
+    groups.push({ kind: 'path', id: path.id, title: L(path, 'title'), ids });
+  });
+  // Fix: works already claimed wrongly skipped if they appeared in an earlier path — VG/Monet/Hokusai don't overlap.
+  STORIES.forEach(st => {
+    const ids = [];
+    st.chapters.forEach(ch => { if (!claimed.has(ch.pid) && byId(ch.pid)) { claimed.add(ch.pid); ids.push(ch.pid); } });
+    if (ids.length) groups.push({ kind: 'story', id: st.id, title: st.name, ids });
+  });
+  const rest = {};
+  ALL.forEach(p => {
+    if (claimed.has(p.id)) return;
+    const art = p.artist || '';
+    (rest[art] || (rest[art] = [])).push(p.id);
+  });
+  Object.keys(rest).sort((a, b) => artistLabel(a).localeCompare(artistLabel(b), I.lang === 'de' ? 'de-CH' : 'en')).forEach(art => {
+    groups.push({ kind: 'artist', id: art, title: artistLabel(art), ids: rest[art] });
+  });
+  return groups;
+}
+function workLore(p){
+  const story = L(p, 'story');
+  if (story) return Array.isArray(story) ? story : [story];
+  for (const path of PATHS) {
+    const step = pathSteps(path).find(s => s.pid === p.id);
+    if (step && step.w) {
+      const w = I.locPathWork(step.w);
+      if (w && w.text) return Array.isArray(w.text) ? w.text : [w.text];
+    }
+  }
+  for (const st of STORIES) {
+    const ch = st.chapters.find(c => c.pid === p.id);
+    if (ch) {
+      const chL = I.locChapter(st, ch);
+      if (chL && chL.text) return Array.isArray(chL.text) ? chL.text : [chL.text];
+    }
+  }
+  return [];
+}
+function workFact(p){
+  const facts = L(p, 'facts') || p.facts;
+  if (facts && facts.length) return Array.isArray(facts) ? facts[0] : facts;
+  for (const path of PATHS) {
+    const step = pathSteps(path).find(s => s.pid === p.id);
+    if (step && step.w) {
+      const w = I.locPathWork(step.w);
+      if (w && w.fact) return w.fact;
+    }
+  }
+  for (const st of STORIES) {
+    const ch = st.chapters.find(c => c.pid === p.id);
+    if (ch) {
+      const chL = I.locChapter(st, ch);
+      if (chL && chL.fact) return chL.fact;
+    }
+  }
+  return '';
+}
+function renderAlbumEntry(){
+  const wrap = $('#albumWrap'); if (!wrap) return;
+  const n = doneCount(), N = ALL.length;
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.id = 'albumCard';
+  b.className = 'albumcard';
+  b.setAttribute('aria-label', t('albumAria'));
+  b.innerHTML = `<div class="tx"><div class="k">${t('albumOpen')}</div><div class="s">${t('albumCount', { n, N })}</div></div><div class="go">›</div>`;
+  b.onclick = () => showAlbum();
+  wrap.innerHTML = '';
+  wrap.appendChild(b);
+}
+function showAlbum(){
+  hideSheets();
+  S = null;
+  showScreen('album');
+  renderAlbum();
+}
+function renderAlbum(){
+  const box = $('#albumBody'); if (!box) return;
+  const groups = albumGroups();
+  const n = doneCount(), N = ALL.length;
+  let html = `<div class="albumsum">${t('albumCount', { n, N })}</div>`;
+  if (!n) {
+    html += `<div class="albumempty">${t('albumEmpty')}</div>`;
+    box.innerHTML = html;
+    return;
+  }
+  groups.forEach(g => {
+    const doneIds = g.ids.filter(id => isDone(id));
+    if (!doneIds.length) return;
+    html += `<section class="agroup" data-group="${esc(g.id)}"><h2>${esc(g.title)}<span class="cnt">${t('albumGroup', { n: doneIds.length, N: g.ids.length })}</span></h2><div class="awall">`;
+    doneIds.forEach(id => {
+      const p = byId(id); if (!p) return;
+      html += `<button type="button" class="atile" data-id="${esc(id)}" aria-label="${esc(t('albumViewAria', { title: L(p, 'title') }))}"><img src="data/${esc(id)}-thumb.jpg" alt="" loading="lazy" width="200" height="200"></button>`;
+    });
+    html += `</div></section>`;
+  });
+  box.innerHTML = html;
+  box.querySelectorAll('.atile').forEach(b => {
+    b.onclick = () => showAlbumView(b.getAttribute('data-id'));
+  });
+}
+function showAlbumView(id){
+  const p = byId(id); if (!p) return;
+  const title = L(p, 'title');
+  $('#avTitle').textContent = title;
+  $('#avMeta').textContent = `${L(p, 'artist')} · ${p.year}`;
+  const lore = workLore(p);
+  $('#avText').innerHTML = lore.map(tx => `<p>${tx}</p>`).join('');
+  const fact = workFact(p);
+  $('#avFact').textContent = fact || '';
+  $('#avFactWrap').classList.toggle('hidden', !fact);
+  $('#avMuseum').textContent = t('museum', { m: L(p, 'museum') });
+  $('#avImg').innerHTML = `<img src="data/${esc(p.id)}-orig.jpg" alt="${esc(title)}">`;
+  const sh = $('#albumView');
+  sh.classList.remove('hidden');
+  const cl = $('#avClose'); if (cl) cl.focus();
+}
+function closeAlbumView(){ $('#albumView').classList.add('hidden'); }
+
+function loadMiles(){
+  try { return JSON.parse(localStorage.getItem(MILES_KEY) || 'null') || {}; } catch (e) { return {}; }
+}
+function saveMiles(o){ try { localStorage.setItem(MILES_KEY, JSON.stringify(o)); } catch (e) {} }
+function justCompletedStation(pid){
+  for (const path of PATHS) {
+    for (const st of (path.stations || [])) {
+      if (!(st.works || []).some(w => w.pid === pid)) continue;
+      if (stationDone(st)) return st;
+    }
+  }
+  return null;
+}
+let mtoastT = 0;
+function mtoast(msg){
+  const el = $('#mtoast'); if (!el || !msg) return;
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(mtoastT);
+  mtoastT = setTimeout(() => el.classList.remove('show'), 3800);
+}
+function maybeMilestones(pid){
+  const seen = loadMiles();
+  const n = doneCount();
+  let key = null, msg = null;
+  if (n === 1 && !seen.first) { key = 'first'; msg = t('mileFirst'); }
+  else if (n === 10 && !seen.n10) { key = 'n10'; msg = t('mile10'); }
+  else if (n === 50 && !seen.n50) { key = 'n50'; msg = t('mile50'); }
+  if (!key && !seen.station && justCompletedStation(pid)) { key = 'station'; msg = t('mileStation'); }
+  if (!key) return;
+  seen[key] = 1;
+  saveMiles(seen);
+  setTimeout(() => mtoast(msg), 700);
+}
+function afterFinish(pid){
+  const pick = pickDaily();
+  if (pick && pick.id === pid) bumpStreak();
+  maybeMilestones(pid);
+}
+function celebrateIfNeeded(){
+  if (!S || !S.justFinished) return;
+  S.justFinished = false;
+  afterFinish(S.p.id);
+}
+function openSettings(){
+  applyCalm();
+  $('#settings').classList.remove('hidden');
+  const sw = $('#calmToggle'); if (sw) sw.focus();
+}
+function closeSettings(){ $('#settings').classList.add('hidden'); }
+function bindDelight(){
+  if ($('#setBtn')) $('#setBtn').onclick = openSettings;
+  if ($('#setClose')) $('#setClose').onclick = closeSettings;
+  if ($('#calmToggle')) $('#calmToggle').onclick = () => {
+    setCalm(!calmOn());
+    galGrid = null; galPage = 0;
+    try { sessionStorage.setItem('masilano.galPage', '0'); } catch (e) {}
+    renderGallery();
+    if ($('#album') && $('#album').classList.contains('active')) renderAlbum();
+  };
+  if ($('#albumBack')) $('#albumBack').onclick = () => { closeAlbumView(); showScreen('gallery'); renderStoryEntry(); renderGallery(); };
+  if ($('#avClose')) $('#avClose').onclick = closeAlbumView;
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+    if ($('#albumView') && !$('#albumView').classList.contains('hidden')) { closeAlbumView(); e.preventDefault(); return; }
+    if ($('#settings') && !$('#settings').classList.contains('hidden')) { closeSettings(); e.preventDefault(); }
+  });
+}
 
 // ---------- last picture / continue ----------
 function hasAnyProgress(){
@@ -1328,8 +1669,10 @@ function refreshLang(){
   else if (onCh && storyCtx && storyCtx.story) showChapters(storyCtx.story);
   if (!$('#onboard').classList.contains('hidden')) renderOnboard();
   maybeShowInstallHint();
+  applyCalm();
   renderStoryEntry();
   renderGallery();
+  if ($('#album') && $('#album').classList.contains('active')) renderAlbum();
 }
 window.__i18nOnChange = refreshLang;
 document.addEventListener('click', e => {
@@ -1338,6 +1681,8 @@ document.addEventListener('click', e => {
   I.setLang(b.getAttribute('data-lang'));
 });
 I.applyStatic();
+applyCalm();
+bindDelight();
 maybeStartOnboard();
 renderStoryEntry(); renderGallery(); maybeShowInstallHint();
 })();
