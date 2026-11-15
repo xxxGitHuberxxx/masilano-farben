@@ -1,7 +1,7 @@
 // v9.0 Pierre-Auguste Renoir life journey, Part 1 (1841–1881).
 // Appends to PATH_WORKS / PATHS; does not rewrite earlier paths.
 // Public-domain / CC0 museum scans only. Documented facts only; no unverified quotations.
-// No nudes, no bathers as works, no death-bed images. Reuses gallery works galette and watering by pid only.
+// No nudes, no bathers as works, no death-bed images. Reuses gallery work watering by pid only; the Galette step uses the coarser rngalette (v9.1).
 (function () {
   var works = [
   {
@@ -267,6 +267,14 @@
     "year": "1876",
     "museum": "Harvard Art Museums, Cambridge",
     "source": "Wikimedia Commons: «Renoir, Pierre-Auguste - Self-portrait - Harvard Art Museums.Fogg Museum.jpg», Public domain (gemeinfrei)"
+  },
+  {
+    "id": "rngalette",
+    "title": "Bal du moulin de la Galette",
+    "artist": "Pierre-Auguste Renoir",
+    "year": "1876",
+    "museum": "Musée d’Orsay, Paris",
+    "source": "Wikimedia Commons: «Auguste Renoir - Dance at Le Moulin de la Galette - Google Art Project.jpg», Public domain (gemeinfrei)"
   },
   {
     "id": "rnswing",
@@ -795,7 +803,7 @@
       ],
       "works": [
         {
-          "pid": "galette",
+          "pid": "rngalette",
           "text": [
             "Im Garten des Moulin de la Galette in Montmartre malt Renoir 1876 das Sonntagspublikum beim Tanz.",
             "Das grosse Bild wurde 1877 auf der dritten Impressionisten-Ausstellung gezeigt und hängt im Musée d’Orsay."

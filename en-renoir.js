@@ -139,6 +139,10 @@
     "title": "Self-Portrait",
     "museum": "Harvard Art Museums, Cambridge"
   },
+  "rngalette": {
+    "title": "Bal du moulin de la Galette",
+    "museum": "Musée d’Orsay, Paris"
+  },
   "rnswing": {
     "title": "The Swing",
     "museum": "Musée d’Orsay, Paris"
@@ -536,7 +540,7 @@
     ],
     "fact": "1876. Harvard Art Museums, Cambridge."
   },
-  "galette": {
+  "rngalette": {
     "text": [
       "In the garden of the Moulin de la Galette in Montmartre, Renoir painted the Sunday crowd at the dance in 1876. The large picture was shown at the third Impressionist exhibition in 1877 and is in the Musée d’Orsay."
     ],

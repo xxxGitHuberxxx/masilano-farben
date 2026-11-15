@@ -146,6 +146,10 @@
     "title": "Autoritratto",
     "museum": "Harvard Art Museums, Cambridge"
   },
+  "rngalette": {
+    "title": "Ballo al Moulin de la Galette",
+    "museum": "Musée d’Orsay, Parigi"
+  },
   "rnswing": {
     "title": "L’altalena",
     "museum": "Musée d’Orsay, Parigi"
@@ -542,7 +546,7 @@
     ],
     "fact": "1876. Harvard Art Museums, Cambridge."
   },
-  "galette": {
+  "rngalette": {
     "text": [
       "Nel giardino del Moulin de la Galette, a Montmartre, Renoir dipinge nel 1876 il pubblico della domenica che balla.",
       "Il grande quadro fu esposto nel 1877 alla terza mostra impressionista ed è al Musée d’Orsay."

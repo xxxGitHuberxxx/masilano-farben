@@ -147,6 +147,10 @@
     "title": "Autorretrato",
     "museum": "Harvard Art Museums, Cambridge"
   },
+  "rngalette": {
+    "title": "Baile en el Moulin de la Galette",
+    "museum": "Musée d’Orsay, París"
+  },
   "rnswing": {
     "title": "El columpio",
     "museum": "Musée d’Orsay, París"
@@ -543,7 +547,7 @@
     ],
     "fact": "1876. Harvard Art Museums, Cambridge."
   },
-  "galette": {
+  "rngalette": {
     "text": [
       "En el jardín del Moulin de la Galette, en Montmartre, Renoir pinta en 1876 al público del domingo bailando.",
       "El gran cuadro se mostró en 1877 en la tercera exposición impresionista y está en el Musée d’Orsay."

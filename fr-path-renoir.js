@@ -145,6 +145,10 @@
     "title": "Autoportrait",
     "museum": "Harvard Art Museums, Cambridge"
   },
+  "rngalette": {
+    "title": "Bal du moulin de la Galette",
+    "museum": "Musée d’Orsay, Paris"
+  },
   "rnswing": {
     "title": "La Balançoire",
     "museum": "Musée d’Orsay, Paris"
@@ -541,7 +545,7 @@
     ],
     "fact": "1876. Harvard Art Museums, Cambridge."
   },
-  "galette": {
+  "rngalette": {
     "text": [
       "Dans le jardin du Moulin de la Galette, à Montmartre, Renoir peint en 1876 le public du dimanche qui danse.",
       "Le grand tableau fut montré en 1877 à la troisième exposition impressionniste et se trouve au musée d’Orsay."
