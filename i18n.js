@@ -14,7 +14,7 @@
       searchPh: 'Bild oder Maler suchen',
       searchClear: 'Suche löschen',
       sourcesBtn: 'Bildquellen & Hinweise',
-      version: 'Testversion 8.4',
+      version: 'Testversion 8.5',
       back: 'Zurück',
       backGallery: 'Zurück zur Galerie',
       backWays: 'Zurück zu den Wegen',
@@ -158,6 +158,21 @@
       shareCredit: 'gemalt mit Masilano',
       shareSaved: 'Bild gespeichert',
       shareFailed: 'Teilen hat nicht geklappt. Das Bild wurde gespeichert.',
+      shareBrand: 'Masilano Farben',
+      cert: 'Urkunde',
+      certKicker: 'Urkunde',
+      certJourney: 'Du bist mit {name} von {from} bis {to} gereist.',
+      certCount: '{n} Bilder',
+      certDate: 'ausgestellt am {date}',
+      certFor: 'für {name}',
+      certNameLabel: 'Dein Name (bleibt nur auf diesem Gerät)',
+      certNamePh: 'Name, wenn du möchtest',
+      certShare: 'Urkunde teilen',
+      certSaved: 'Urkunde gespeichert',
+      certOpen: 'Urkunde ansehen',
+      certAria: 'Urkunde für {title}',
+      playerNameTitle: 'Dein Name auf der Urkunde',
+      playerNameHint: 'Wird nur auf diesem Gerät gespeichert, niemals verschickt.',
       settingsTitle: 'Einstellungen',
       settingsAria: 'Einstellungen',
       calmTitle: 'Ruhemodus',
@@ -202,7 +217,7 @@
       searchPh: 'Search for a picture or painter',
       searchClear: 'Clear search',
       sourcesBtn: 'Picture sources & notes',
-      version: 'Test version 8.4',
+      version: 'Test version 8.5',
       back: 'Back',
       backGallery: 'Back to the gallery',
       backWays: 'Back to the journeys',
@@ -346,6 +361,21 @@
       shareCredit: 'painted with Masilano',
       shareSaved: 'Picture saved',
       shareFailed: 'Sharing didn’t work. The picture was saved.',
+      shareBrand: 'Masilano Farben',
+      cert: 'Certificate',
+      certKicker: 'Certificate',
+      certJourney: 'You have travelled with {name} from {from} to {to}.',
+      certCount: '{n} pictures',
+      certDate: 'issued on {date}',
+      certFor: 'for {name}',
+      certNameLabel: 'Your name (stays on this device only)',
+      certNamePh: 'A name, if you like',
+      certShare: 'Share certificate',
+      certSaved: 'Certificate saved',
+      certOpen: 'View certificate',
+      certAria: 'Certificate for {title}',
+      playerNameTitle: 'Your name on the certificate',
+      playerNameHint: 'Saved only on this device, never sent away.',
       settingsTitle: 'Settings',
       settingsAria: 'Settings',
       calmTitle: 'Calm mode',
@@ -390,7 +420,7 @@
       searchPh: "Buscar un cuadro o un pintor",
       searchClear: "Borrar búsqueda",
       sourcesBtn: "Fuentes e indicaciones",
-      version: "Versión de prueba 8.4",
+      version: "Versión de prueba 8.5",
       back: "Atrás",
       backGallery: "Volver a la galería",
       backWays: "Volver a los caminos",
@@ -541,6 +571,21 @@
       shareCredit: "pintado con Masilano",
       shareSaved: "Cuadro guardado",
       shareFailed: "No se ha podido compartir. El cuadro se ha guardado.",
+      shareBrand: "Masilano Farben",
+      cert: "Diploma",
+      certKicker: "Diploma",
+      certJourney: "Has viajado con {name} de {from} a {to}.",
+      certCount: "{n} cuadros",
+      certDate: "expedido el {date}",
+      certFor: "para {name}",
+      certNameLabel: "Tu nombre (se queda solo en este aparato)",
+      certNamePh: "Un nombre, si quieres",
+      certShare: "Compartir el diploma",
+      certSaved: "Diploma guardado",
+      certOpen: "Ver el diploma",
+      certAria: "Diploma de {title}",
+      playerNameTitle: "Tu nombre en el diploma",
+      playerNameHint: "Se guarda solo en este aparato, nunca se envía.",
       settingsTitle: "Ajustes",
       settingsAria: "Ajustes",
       calmTitle: "Modo reposo",
@@ -578,7 +623,7 @@
       searchPh: "Chercher un tableau ou un peintre",
       searchClear: "Effacer la recherche",
       sourcesBtn: "Sources et notes",
-      version: "Version d’essai 8.4",
+      version: "Version d’essai 8.5",
       back: "Retour",
       backGallery: "Retour à la galerie",
       backWays: "Retour aux parcours",
@@ -729,6 +774,21 @@
       shareCredit: "peint avec Masilano",
       shareSaved: "Tableau enregistré",
       shareFailed: "Le partage n’a pas fonctionné. Le tableau a été enregistré.",
+      shareBrand: "Masilano Farben",
+      cert: "Diplôme",
+      certKicker: "Diplôme",
+      certJourney: "Tu as voyagé avec {name} de {from} à {to}.",
+      certCount: "{n} tableaux",
+      certDate: "délivré le {date}",
+      certFor: "pour {name}",
+      certNameLabel: "Ton nom (reste uniquement sur cet appareil)",
+      certNamePh: "Un nom, si tu veux",
+      certShare: "Partager le diplôme",
+      certSaved: "Diplôme enregistré",
+      certOpen: "Voir le diplôme",
+      certAria: "Diplôme pour {title}",
+      playerNameTitle: "Ton nom sur le diplôme",
+      playerNameHint: "Enregistré uniquement sur cet appareil, jamais envoyé.",
       settingsTitle: "Réglages",
       settingsAria: "Réglages",
       calmTitle: "Mode calme",
@@ -766,7 +826,7 @@
       searchPh: "Cerca un quadro o un pittore",
       searchClear: "Cancella la ricerca",
       sourcesBtn: "Fonti e note",
-      version: "Versione di prova 8.4",
+      version: "Versione di prova 8.5",
       back: "Indietro",
       backGallery: "Torna alla galleria",
       backWays: "Torna ai percorsi",
@@ -917,6 +977,21 @@
       shareCredit: "dipinto con Masilano",
       shareSaved: "Quadro salvato",
       shareFailed: "La condivisione non è riuscita. Il quadro è stato salvato.",
+      shareBrand: "Masilano Farben",
+      cert: "Attestato",
+      certKicker: "Attestato",
+      certJourney: "Hai viaggiato con {name} da {from} a {to}.",
+      certCount: "{n} quadri",
+      certDate: "rilasciato il {date}",
+      certFor: "per {name}",
+      certNameLabel: "Il tuo nome (resta soltanto su questo dispositivo)",
+      certNamePh: "Un nome, se vuoi",
+      certShare: "Condividi l’attestato",
+      certSaved: "Attestato salvato",
+      certOpen: "Vedi l’attestato",
+      certAria: "Attestato per {title}",
+      playerNameTitle: "Il tuo nome sull’attestato",
+      playerNameHint: "Salvato soltanto su questo dispositivo, mai inviato.",
       settingsTitle: "Impostazioni",
       settingsAria: "Impostazioni",
       calmTitle: "Modalità calma",
@@ -1005,12 +1080,13 @@
   let lang = detect();
 
   const PATHTEXT_FILES = {
-    es: ['es-path-vangogh.js', 'es-path-monet.js', 'es-path-hokusai.js', 'es-path-klimt.js', 'es-path-klimt-p2.js', 'es-path-anker.js', 'es-path-anker-p2.js', 'es-path-hodler.js', 'es-path-hodler-p2.js'],
-    fr: ['fr-path-vangogh.js', 'fr-path-monet.js', 'fr-path-hokusai.js', 'fr-path-klimt.js', 'fr-path-klimt-p2.js', 'fr-path-anker.js', 'fr-path-anker-p2.js', 'fr-path-hodler.js', 'fr-path-hodler-p2.js'],
-    it: ['it-path-vangogh.js', 'it-path-monet.js', 'it-path-hokusai.js', 'it-path-klimt.js', 'it-path-klimt-p2.js', 'it-path-anker.js', 'it-path-anker-p2.js', 'it-path-hodler.js', 'it-path-hodler-p2.js']
+    es: ['es-content.js', 'es-path-vangogh.js', 'es-path-monet.js', 'es-path-hokusai.js', 'es-path-klimt.js', 'es-path-klimt-p2.js', 'es-path-anker.js', 'es-path-anker-p2.js', 'es-path-hodler.js', 'es-path-hodler-p2.js'],
+    fr: ['fr-content.js', 'fr-path-vangogh.js', 'fr-path-monet.js', 'fr-path-hokusai.js', 'fr-path-klimt.js', 'fr-path-klimt-p2.js', 'fr-path-anker.js', 'fr-path-anker-p2.js', 'fr-path-hodler.js', 'fr-path-hodler-p2.js'],
+    it: ['it-content.js', 'it-path-vangogh.js', 'it-path-monet.js', 'it-path-hokusai.js', 'it-path-klimt.js', 'it-path-klimt-p2.js', 'it-path-anker.js', 'it-path-anker-p2.js', 'it-path-hodler.js', 'it-path-hodler-p2.js']
   };
   const _scriptProm = {};
   const _pathTextProm = {};
+  let _pathDataProm = null;
 
   function loadScriptOnce(src) {
     if (_scriptProm[src]) return _scriptProm[src];
@@ -1025,20 +1101,75 @@
     return _scriptProm[src];
   }
 
+  function dataSrcFiles(re) {
+    return Array.prototype.slice.call(document.querySelectorAll('script[data-src]'))
+      .map(function (s) { return s.getAttribute('data-src'); })
+      .filter(function (src) { return src && re.test(src); });
+  }
+
+  function loadWaves(files) {
+    const p1 = files.filter(function (f) { return !/-p[0-9]+\.js$/.test(f); });
+    const p2 = files.filter(function (f) { return /-p2\.js$/.test(f); });
+    const p3 = files.filter(function (f) { return /-p3\.js$/.test(f); });
+    function wave(list) { return list.length ? Promise.all(list.map(loadScriptOnce)) : Promise.resolve(); }
+    return wave(p1).then(function () { return wave(p2); }).then(function () { return wave(p3); });
+  }
+
+  function pathDataReady() {
+    return !!(window.PATHS && window.PATHS.length >= 6);
+  }
+
+  function loadInOrder(files) {
+    return files.reduce(function (p, f) {
+      return p.then(function () { return loadScriptOnce(f); });
+    }, Promise.resolve());
+  }
+
+  function ensurePathData() {
+    if (pathDataReady()) return Promise.resolve();
+    if (_pathDataProm) return _pathDataProm;
+    const files = dataSrcFiles(/^path-/);
+    _pathDataProm = loadInOrder(files).then(function () {
+      if (!pathDataReady()) throw new Error('Path data failed to load');
+    }).catch(function (err) { _pathDataProm = null; throw err; });
+    return _pathDataProm;
+  }
+
+  function enReady() {
+    return !!(window.EN && (window.EN.pathTexts || window.EN.stations || window.EN.paintings));
+  }
+
   function pathTextsReady(code) {
     code = code || lang;
-    if (code === 'de' || code === 'en') return true;
+    if (code === 'de') return pathDataReady();
+    if (code === 'en') return pathDataReady() && enReady();
     const P = contentPack(code);
-    return !!(P && P.pathTexts && Object.keys(P.pathTexts).length);
+    return pathDataReady() && !!(P && P.pathTexts && Object.keys(P.pathTexts).length);
+  }
+
+  function ensureLangPacks(code) {
+    if (code === 'de') return Promise.resolve(code);
+    if (code === 'en') {
+      const files = dataSrcFiles(/^en-/);
+      const content = files.filter(function (f) { return f === 'en-content.js'; });
+      const rest = files.filter(function (f) { return f !== 'en-content.js'; });
+      return Promise.all(content.map(loadScriptOnce)).then(function () { return loadWaves(rest); });
+    }
+    const files = PATHTEXT_FILES[code] || [];
+    const content = files.filter(function (f) { return /-content\.js$/.test(f); });
+    const rest = files.filter(function (f) { return !/-content\.js$/.test(f); });
+    return Promise.all(content.map(loadScriptOnce)).then(function () { return loadWaves(rest); });
   }
 
   function ensurePathTexts(code) {
     code = code || lang;
-    if (code === 'de' || code === 'en') return Promise.resolve(code);
     if (pathTextsReady(code)) return Promise.resolve(code);
     if (_pathTextProm[code]) return _pathTextProm[code];
-    const files = PATHTEXT_FILES[code] || [];
-    _pathTextProm[code] = Promise.all(files.map(loadScriptOnce)).then(() => code);
+    window.__pathTextsReady = false;
+    _pathTextProm[code] = ensurePathData().then(function () { return ensureLangPacks(code); }).then(function () {
+      if (!pathTextsReady(code)) throw new Error('Language pack failed to load: ' + code);
+      return code;
+    }).catch(function (err) { delete _pathTextProm[code]; throw err; });
     return _pathTextProm[code];
   }
 
@@ -1406,9 +1537,11 @@
     if (LANGS.indexOf(next) < 0) return;
     lang = next;
     try { localStorage.setItem(KEY, lang); } catch (e) {}
+    window.__pathTextsReady = pathTextsReady(lang);
     applyStatic();
     if (typeof window.__i18nOnChange === 'function') window.__i18nOnChange(lang);
     ensurePathTexts(lang).then(function () {
+      window.__pathTextsReady = true;
       if (typeof window.__i18nOnChange === 'function') window.__i18nOnChange(lang);
     });
   }

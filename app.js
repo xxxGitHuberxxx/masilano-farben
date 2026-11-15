@@ -5,11 +5,28 @@ const esc = s => String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt
 const KEY = id => 'masilano.color.v1.' + id;
 const P = window.PAINTINGS;
 const STORIES = window.STORIES || [];
-const PATHS = window.PATHS || [];
+const PATHS = (window.PATHS = window.PATHS || []);
 const knownIds = new Set(P.map(p => p.id).concat((window.STORY_WORKS || []).map(w => w.id)));
 const ALL = P.concat((window.STORY_WORKS || []).filter(w => !P.some(p => p.id === w.id)))
   .concat((window.PATH_WORKS || []).filter(w => !knownIds.has(w.id)));
 const byId = id => ALL.find(p => p.id === id);
+function ingestPathData(){
+  const src = window.PATHS || [];
+  if (src !== PATHS) {
+    PATHS.length = 0;
+    src.forEach(p => PATHS.push(p));
+    window.PATHS = PATHS;
+  }
+  (window.PATH_WORKS || []).forEach(w => {
+    if (!w || !w.id || ALL.some(p => p.id === w.id)) return;
+    knownIds.add(w.id);
+    ALL.push(w);
+  });
+}
+const PLAYER_NAME_KEY = 'masilano.playerName.v1';
+const CERT_DATE_KEY = id => 'masilano.certDate.v1.' + id;
+let albumViewId = null;
+let certCtx = null;
 const I = window.I18N;
 const t = (k, v) => I.t(k, v);
 const L = (obj, field) => I.loc(obj, field);
@@ -969,7 +986,7 @@ function goGallery(){
   if (storyCtx && storyCtx.story) { backOr({ kind: 'story', id: storyCtx.story.id }); return; }
   backOr({ kind: 'tab', tab: currentTab || 'heute' });
 }
-function hideSheets(){ ['#story', '#chapter', '#chDone', '#pathFin', '#installHow', '#settings', '#albumView', '#sources', '#filterSheet'].forEach(q => $(q) && $(q).classList.add('hidden')); }
+function hideSheets(){ ['#story', '#chapter', '#chDone', '#pathFin', '#installHow', '#settings', '#albumView', '#sources', '#filterSheet', '#certView'].forEach(q => $(q) && $(q).classList.add('hidden')); }
 $('#backBtn').onclick = goGallery;
 let galT = 0;
 function onViewport(){ if (S) resize(); else { clearTimeout(galT); galT = setTimeout(() => { placeFilterPanel(); if (currentTab === 'galerie') { galGrid = null; renderGallery(); } }, 120); } }
@@ -1004,7 +1021,20 @@ function renderStoryEntry(){
       <div class="s">${L(path,'part')} · ${n ? t('paintedOf', { n, N }) : t('startNow')}</div>
       <div class="bar"><div style="width:${pct}%"></div></div></div><div class="go">›</div>`;
     b.onclick = () => { pathCtx = { path }; storyCtx = null; showPath(path); };
-    box.appendChild(b);
+    const row = document.createElement('div');
+    row.className = 'wayrow';
+    row.appendChild(b);
+    if (N && n === N) {
+      const cb = document.createElement('button');
+      cb.type = 'button';
+      cb.className = 'waycert';
+      cb.setAttribute('data-cert', path.id);
+      cb.setAttribute('aria-label', t('certAria', { title: L(path,'title') }));
+      cb.textContent = t('certOpen');
+      cb.onclick = ev => { ev.stopPropagation(); showCertificate(path); };
+      row.appendChild(cb);
+    }
+    box.appendChild(row);
   });
   STORIES.forEach(st => {
     const n = chDoneCount(st), N = st.chapters.length;
@@ -1177,12 +1207,21 @@ function showPath(path, opts){
     list.appendChild(box);
   });
   const epi = $('#pathEpi');
+  const oldCert = $('#pathCertBtn');
+  if (oldCert) oldCert.remove();
   if (n === N) {
+    recordCertDate(path);
     const ending = L(path,'ending') || path.ending || [L(path,'epilogue')];
     const paras = ending.map(tx => `<p>${tx}</p>`).join('');
     epi.className = 'pfin';
     epi.innerHTML = `<div class="lbl">${t('closing')}</div>${paras}`;
     epi.classList.remove('hidden');
+    const wrap = document.createElement('div');
+    wrap.className = 'path-certwrap';
+    wrap.innerHTML = `<button type="button" id="pathCertBtn" class="btn sharebtn">${esc(t('certOpen'))}</button>`;
+    wrap.querySelector('button').onclick = () => showCertificate(path);
+    const head = $('#pathHead');
+    if (head && head.parentNode) head.parentNode.insertBefore(wrap, head.nextSibling);
   } else {
     epi.className = '';
     epi.classList.add('hidden');
@@ -1306,6 +1345,7 @@ function showPathDone(){
 }
 function showPathFin(path){
   const N = pathSteps(path).length;
+  recordCertDate(path);
   $('#pfTitle').textContent = L(path,'title');
   $('#pfCount').textContent = t('allDone', { N });
   const ending = L(path,'ending') || path.ending || [L(path,'epilogue')];
@@ -1323,6 +1363,10 @@ if ($('#pfPath')) $('#pfPath').onclick = () => {
   if (swReload) { location.reload(); return; }
   S = null; pathCtx = pathCtx || { path, step: null, pid: null };
   showPath(path);
+};
+if ($('#pfCert')) $('#pfCert').onclick = () => {
+  const path = (pathCtx && pathCtx.path) || (window.PATHS && window.PATHS[0]);
+  if (path) showCertificate(path);
 };
 if ($('#pfGal')) $('#pfGal').onclick = () => {
   $('#pathFin').classList.add('hidden');
@@ -1778,6 +1822,7 @@ function renderAlbum(){
 }
 function showAlbumView(id, opts){
   const p = byId(id); if (!p) return;
+  albumViewId = id;
   if (!opts || !opts.noRoute) navigate({ kind: 'albumView', id });
   const title = L(p, 'title');
   $('#avTitle').textContent = title;
@@ -1804,6 +1849,7 @@ function showAlbumView(id, opts){
   const cl = $('#avClose'); if (cl) cl.focus();
 }
 function closeAlbumView(){
+  albumViewId = null;
   $('#albumView').classList.add('hidden');
   if ((location.hash || '').indexOf('#album/') === 0) backOr({ kind: 'tab', tab: 'album' });
 }
@@ -1846,6 +1892,7 @@ function afterFinish(pid){
   const pick = pickDaily();
   if (pick && pick.id === pid) bumpStreak();
   maybeMilestones(pid);
+  PATHS.forEach(path => { if (pathIsComplete(path) && pathSteps(path).some(s => s.pid === pid)) recordCertDate(path); });
 }
 function celebrateIfNeeded(){
   if (!S || !S.justFinished) return;
@@ -1854,6 +1901,7 @@ function celebrateIfNeeded(){
 }
 function openSettings(){
   applyCalm();
+  const pn = $('#playerName'); if (pn) pn.value = loadPlayerName();
   revealSheet('#settings');
   const sw = $('#calmToggle'); if (sw) sw.focus();
 }
@@ -1870,8 +1918,37 @@ function bindDelight(){
   };
   if ($('#albumBack')) $('#albumBack').onclick = () => { closeAlbumView(); backOr({ kind: 'tab', tab: 'album' }); };
   if ($('#avClose')) $('#avClose').onclick = closeAlbumView;
+  if ($('#avShare')) $('#avShare').onclick = () => { const p = currentSharePainting(); if (p) sharePainting(p); };
+  const syncNameInputs = (val) => {
+    const v = savePlayerName(val);
+    ['#playerName', '#certName'].forEach(sel => { const el = $(sel); if (el && el.value !== v && document.activeElement !== el) el.value = v; });
+    return v;
+  };
+  if ($('#playerName')) {
+    $('#playerName').value = loadPlayerName();
+    $('#playerName').addEventListener('change', e => syncNameInputs(e.target.value));
+    $('#playerName').addEventListener('blur', e => syncNameInputs(e.target.value));
+  }
+  if ($('#certName')) {
+    $('#certName').addEventListener('input', () => {
+      clearTimeout(certRenderT);
+      certRenderT = setTimeout(() => {
+        savePlayerName($('#certName').value);
+        const pn = $('#playerName'); if (pn) pn.value = loadPlayerName();
+        refreshCertPreview();
+      }, 400);
+    });
+    $('#certName').addEventListener('change', e => {
+      savePlayerName(e.target.value);
+      const pn = $('#playerName'); if (pn) pn.value = loadPlayerName();
+      refreshCertPreview();
+    });
+  }
+  if ($('#certShare')) $('#certShare').onclick = () => { if (certCtx && certCtx.path) shareCertificate(certCtx.path); };
+  if ($('#certClose')) $('#certClose').onclick = () => closeTopSheet();
   document.addEventListener('keydown', e => {
     if (e.key !== 'Escape') return;
+    if ($('#certView') && !$('#certView').classList.contains('hidden')) { closeTopSheet(); e.preventDefault(); return; }
     if ($('#albumView') && !$('#albumView').classList.contains('hidden')) { closeAlbumView(); e.preventDefault(); return; }
     if ($('#settings') && !$('#settings').classList.contains('hidden')) { closeSettings(); e.preventDefault(); return; }
     if ($('#filterSheet') && !$('#filterSheet').classList.contains('hidden')) { closeTopSheet(); e.preventDefault(); return; }
@@ -2084,12 +2161,75 @@ async function onInstallAdd(){
 }
 if ($('#ihGotIt')) $('#ihGotIt').onclick = () => { $('#installHow').classList.add('hidden'); hideInstallHint(true); };
 
-// ---------- share finished painting ----------
+// ---------- share finished painting + certificate ----------
 function currentSharePainting(){
   if (S && S.p) return S.p;
+  if (albumViewId) {
+    const av = $('#albumView');
+    if (av && !av.classList.contains('hidden')) return byId(albumViewId);
+  }
   if (pathCtx && pathCtx.pid) return byId(pathCtx.pid);
   if (storyCtx && storyCtx.pid) return byId(storyCtx.pid);
   return null;
+}
+function appUrl(){
+  try {
+    const h = location.hostname;
+    if (h && h !== 'localhost' && h !== '127.0.0.1') {
+      let path = location.pathname.replace(/index\.html$/, '');
+      if (!path.endsWith('/')) path = path.replace(/[^/]+$/, '') || '/';
+      return location.origin + path;
+    }
+  } catch (e) {}
+  return 'https://xxxgithuberxxx.github.io/masilano-farben/';
+}
+function loadPlayerName(){
+  try { return (localStorage.getItem(PLAYER_NAME_KEY) || '').trim(); } catch (e) { return ''; }
+}
+function savePlayerName(name){
+  try {
+    name = String(name || '').trim().slice(0, 60);
+    if (name) localStorage.setItem(PLAYER_NAME_KEY, name);
+    else localStorage.removeItem(PLAYER_NAME_KEY);
+  } catch (e) {}
+  return name;
+}
+function pathYearSpan(path){
+  const part = (path && (path.part || L(path, 'part'))) || '';
+  let m = String(part).match(/(\d{3,4})\s*[–-]\s*(\d{3,4})/);
+  if (m) return { from: m[1], to: m[2] };
+  const life = (path && path.life) || '';
+  m = String(life).match(/(\d{3,4})\s*[–-]\s*(\d{3,4})/);
+  if (m) return { from: m[1], to: m[2] };
+  return { from: '', to: '' };
+}
+function pathIsComplete(path){
+  if (!path) return false;
+  const steps = pathSteps(path);
+  return steps.length > 0 && pathDoneCount(path) === steps.length;
+}
+function recordCertDate(path){
+  if (!path || !pathIsComplete(path)) return null;
+  const key = CERT_DATE_KEY(path.id);
+  try {
+    let d = localStorage.getItem(key);
+    if (!d) {
+      const now = new Date();
+      d = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0');
+      localStorage.setItem(key, d);
+    }
+    return d;
+  } catch (e) { return null; }
+}
+function certDateText(iso){
+  let d;
+  if (iso && /^\d{4}-\d{2}-\d{2}$/.test(iso)) {
+    const p = iso.split('-');
+    d = new Date(Number(p[0]), Number(p[1]) - 1, Number(p[2]));
+  } else d = new Date();
+  const loc = { de: 'de-CH', en: 'en-GB', es: 'es-ES', fr: 'fr-FR', it: 'it-IT' }[I.lang] || 'de-CH';
+  try { return d.toLocaleDateString(loc, { day: 'numeric', month: 'long', year: 'numeric' }); }
+  catch (e) { return iso || ''; }
 }
 function wrapText(ctx, text, maxW){
   const words = String(text || '').split(/\s+/);
@@ -2128,7 +2268,8 @@ async function renderShareCard(p){
   if (ih > maxImgH) { ih = maxImgH; iw = Math.round(img.width * (ih / img.height)); }
   const title = L(p, 'title') || p.title;
   const artist = (L(p, 'artist') || p.artist) + (p.year ? '  ·  ' + p.year : '');
-  const credit = t('shareCredit');
+  const brand = t('shareBrand');
+  const url = appUrl();
   const c = document.createElement('canvas');
   const ctx = c.getContext('2d');
   ctx.font = '600 52px Georgia, "Times New Roman", serif';
@@ -2138,7 +2279,7 @@ async function renderShareCard(p){
   const topY = 96;
   const imgY = topY + 28;
   const textY = imgY + ih + 44;
-  const H = textY + tLines.length * 62 + aLines.length * 38 + 28 + 22 + 80;
+  const H = textY + tLines.length * 62 + aLines.length * 38 + 28 + 22 + 70 + 80;
   c.width = W; c.height = H;
   ctx.fillStyle = '#f6f3ee';
   ctx.fillRect(0, 0, W, H);
@@ -2175,7 +2316,11 @@ async function renderShareCard(p){
   y += 36;
   ctx.fillStyle = '#6a4a22';
   ctx.font = '600 22px Georgia, "Times New Roman", serif';
-  ctx.fillText(credit, W / 2, y);
+  ctx.fillText(brand, W / 2, y);
+  y += 32;
+  ctx.fillStyle = '#8a7d70';
+  ctx.font = '400 20px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+  ctx.fillText(url, W / 2, y);
   return new Promise((resolve, reject) => c.toBlob(b => b ? resolve(b) : reject(new Error('blob')), 'image/png'));
 }
 function downloadBlob(blob, name){
@@ -2186,33 +2331,183 @@ function downloadBlob(blob, name){
   a.click();
   setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 2000);
 }
+async function shareBlobFile(blob, name, title, text, savedKey){
+  const file = new File([blob], name, { type: 'image/png' });
+  try {
+    if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({ title, text, files: [file] });
+      return blob;
+    }
+    if (navigator.share) {
+      downloadBlob(blob, name);
+      await navigator.share({ title, text });
+      return blob;
+    }
+  } catch (e) {
+    if (e && e.name === 'AbortError') return blob;
+    downloadBlob(blob, name);
+    toast(t('shareFailed'));
+    return blob;
+  }
+  downloadBlob(blob, name);
+  toast(t(savedKey || 'shareSaved'));
+  return blob;
+}
 async function sharePainting(p){
   if (!p) return null;
   try {
     const blob = await renderShareCard(p);
     const name = 'masilano-' + p.id + '.png';
-    const file = new File([blob], name, { type: 'image/png' });
     const title = L(p, 'title') || p.title;
     const text = t('shareText', { title, artist: L(p, 'artist') || p.artist });
-    try {
-      if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
-        await navigator.share({ title, text, files: [file] });
-        return blob;
-      }
-      if (navigator.share) {
-        downloadBlob(blob, name);
-        await navigator.share({ title, text });
-        return blob;
-      }
-    } catch (e) {
-      if (e && e.name === 'AbortError') return blob;
-      downloadBlob(blob, name);
-      toast(t('shareFailed'));
-      return blob;
+    return await shareBlobFile(blob, name, title, text, 'shareSaved');
+  } catch (e) {
+    toast(t('shareFailed'));
+    return null;
+  }
+}
+async function renderCertificateCard(path, name){
+  if (!path) return null;
+  name = (name == null ? loadPlayerName() : String(name || '')).trim().slice(0, 60);
+  const years = pathYearSpan(path);
+  const n = pathSteps(path).length;
+  const iso = recordCertDate(path);
+  const journey = t('certJourney', { name: path.name, from: years.from, to: years.to });
+  const count = t('certCount', { n });
+  const issued = t('certDate', { date: certDateText(iso) });
+  const forName = name ? t('certFor', { name }) : '';
+  const brand = t('shareBrand');
+  const url = appUrl();
+  const title = L(path, 'title') || path.title;
+  const kicker = t('certKicker');
+  let img = null;
+  try { if (path.cover) img = await loadImg('data/' + path.cover + '-orig.jpg'); } catch (e) {}
+  const W = 1080, pad = 80;
+  const maxImgW = 520, maxImgH = 420;
+  let iw = 0, ih = 0;
+  if (img) {
+    iw = maxImgW; ih = Math.round(img.height * (iw / img.width));
+    if (ih > maxImgH) { ih = maxImgH; iw = Math.round(img.width * (ih / img.height)); }
+  }
+  const c = document.createElement('canvas');
+  const ctx = c.getContext('2d');
+  ctx.font = '600 54px Georgia, "Times New Roman", serif';
+  const tLines = wrapText(ctx, title, W - pad * 2);
+  ctx.font = '400 32px Georgia, "Times New Roman", serif';
+  const jLines = wrapText(ctx, journey, W - pad * 2 - 20);
+  const top = 100;
+  const imgY = top + 70;
+  const textY = imgY + (ih || 0) + 48;
+  const H = textY + tLines.length * 64 + jLines.length * 44 + 38 + 38 + (forName ? 44 : 0) + 170;
+  c.width = W; c.height = H;
+  ctx.fillStyle = '#f4efe6';
+  ctx.fillRect(0, 0, W, H);
+  const m = 36;
+  ctx.fillStyle = '#fbf7f0';
+  roundRectPath(ctx, m, m, W - m * 2, H - m * 2, 12);
+  ctx.fill();
+  ctx.strokeStyle = '#c79a4e';
+  ctx.lineWidth = 3;
+  roundRectPath(ctx, m + 10, m + 10, W - (m + 10) * 2, H - (m + 10) * 2, 8);
+  ctx.stroke();
+  ctx.lineWidth = 1;
+  roundRectPath(ctx, m + 18, m + 18, W - (m + 18) * 2, H - (m + 18) * 2, 6);
+  ctx.stroke();
+  ctx.fillStyle = '#6a4a22';
+  ctx.font = '700 18px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+  drawSpaced(ctx, brand.toUpperCase(), W / 2, top, 8);
+  ctx.fillStyle = '#c79a4e';
+  ctx.font = '700 20px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'alphabetic';
+  ctx.fillText(kicker.toUpperCase(), W / 2, top + 36);
+  if (img) {
+    const ix = Math.round((W - iw) / 2);
+    ctx.save();
+    ctx.shadowColor = 'rgba(60,40,20,0.18)';
+    ctx.shadowBlur = 24;
+    ctx.shadowOffsetY = 6;
+    roundRectPath(ctx, ix, imgY, iw, ih, 16);
+    ctx.fillStyle = '#eee';
+    ctx.fill();
+    ctx.restore();
+    ctx.save();
+    roundRectPath(ctx, ix, imgY, iw, ih, 16);
+    ctx.clip();
+    ctx.drawImage(img, ix, imgY, iw, ih);
+    ctx.restore();
+  }
+  let y = textY;
+  ctx.fillStyle = '#2b2722';
+  ctx.font = '600 54px Georgia, "Times New Roman", serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'alphabetic';
+  tLines.forEach(line => { ctx.fillText(line, W / 2, y); y += 64; });
+  y += 8;
+  ctx.strokeStyle = '#c79a4e';
+  ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.moveTo(W / 2 - 48, y); ctx.lineTo(W / 2 + 48, y); ctx.stroke();
+  y += 44;
+  ctx.fillStyle = '#3f3a34';
+  ctx.font = '400 32px Georgia, "Times New Roman", serif';
+  jLines.forEach(line => { ctx.fillText(line, W / 2, y); y += 44; });
+  y += 14;
+  ctx.fillStyle = '#5f564c';
+  ctx.font = '600 26px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+  ctx.fillText(count, W / 2, y); y += 38;
+  ctx.font = '400 24px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+  ctx.fillText(issued, W / 2, y); y += 38;
+  if (forName) {
+    ctx.fillStyle = '#6a4a22';
+    ctx.font = 'italic 600 28px Georgia, "Times New Roman", serif';
+    ctx.fillText(forName, W / 2, y); y += 44;
+  }
+  y += 28;
+  ctx.fillStyle = '#8a7d70';
+  ctx.font = '400 18px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+  ctx.fillText(url, W / 2, y);
+  return new Promise((resolve, reject) => c.toBlob(b => b ? resolve(b) : reject(new Error('blob')), 'image/png'));
+}
+let certRenderT = 0;
+async function refreshCertPreview(){
+  if (!certCtx || !certCtx.path) return null;
+  const name = ($('#certName') && $('#certName').value) || loadPlayerName();
+  try {
+    const blob = await renderCertificateCard(certCtx.path, name);
+    certCtx.blob = blob;
+    const img = $('#certImg');
+    if (img) {
+      const next = URL.createObjectURL(blob);
+      const prev = img.getAttribute('data-blob') || '';
+      img.src = next;
+      img.setAttribute('data-blob', next);
+      img.alt = t('certAria', { title: L(certCtx.path, 'title') });
+      if (prev && prev.indexOf('blob:') === 0) setTimeout(() => URL.revokeObjectURL(prev), 2000);
     }
-    downloadBlob(blob, name);
-    toast(t('shareSaved'));
     return blob;
+  } catch (e) { return null; }
+}
+function showCertificate(path){
+  if (!path || !pathIsComplete(path)) return;
+  certCtx = { path };
+  recordCertDate(path);
+  const inp = $('#certName');
+  if (inp) inp.value = loadPlayerName();
+  const heading = $('#certHeading');
+  if (heading) heading.textContent = t('certKicker');
+  hideSheets();
+  const card = $('#certView .card'); if (card) card.scrollTop = 0;
+  revealSheet('#certView');
+  refreshCertPreview();
+}
+async function shareCertificate(path){
+  if (!path) return null;
+  try {
+    const name = ($('#certName') && !$('#certView').classList.contains('hidden') ? $('#certName').value : loadPlayerName());
+    const blob = (certCtx && certCtx.path === path && certCtx.blob) ? certCtx.blob : await renderCertificateCard(path, name);
+    const file = 'masilano-urkunde-' + path.id + '.png';
+    const title = t('cert') + ' · ' + (L(path, 'title') || path.title);
+    return await shareBlobFile(blob, file, title, t('certJourney', Object.assign({ name: path.name }, pathYearSpan(path))), 'certSaved');
   } catch (e) {
     toast(t('shareFailed'));
     return null;
@@ -2231,6 +2526,7 @@ if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.
   });
 }
 function refreshLang(){
+  ingestPathData();
   galGrid = null;
   I.applyStatic();
   const onPath = document.getElementById('path')?.classList.contains('active');
@@ -2262,12 +2558,31 @@ bindDelight();
 bindTabs();
 bindFilters();
 maybeStartOnboard();
-window.__pathTextsReady = (I.lang === 'de' || I.lang === 'en');
+window.__pathTextsReady = false;
+function paintStartShell(){
+  try {
+    const r = parseHash();
+    let tab = 'heute';
+    if (r.kind === 'tab') tab = r.tab || 'heute';
+    else if (r.kind === 'albumView') tab = 'album';
+    else if (r.kind === 'paint') tab = storedTab();
+    document.body.classList.remove('tabless');
+    const elId = tab === 'galerie' ? 'gallery' : tab;
+    document.querySelectorAll('.tab-screen').forEach(s => s.classList.toggle('active', s.id === elId));
+    document.querySelectorAll('.screen.flow').forEach(s => s.classList.remove('active'));
+    currentTab = tab;
+    syncTabBar();
+  } catch (e) {}
+}
+paintStartShell();
 function startUi(){
-  window.__pathTextsReady = true;
+  ingestPathData();
+  window.__pathTextsReady = !!(PATHS.length >= 6);
   bootRoute();
   maybeShowInstallHint();
+  if ((currentTab || 'heute') === 'heute') renderHeute();
+  if ((currentTab || 'heute') === 'wege') renderStoryEntry();
 }
-if (I.ensurePathTexts) I.ensurePathTexts().then(startUi, startUi);
+if (I.ensurePathTexts) I.ensurePathTexts().then(startUi, function (err) { console.error(err); startUi(); });
 else startUi();
 })();

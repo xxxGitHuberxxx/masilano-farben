@@ -10,7 +10,7 @@ h1{font-family:Georgia,"Times New Roman",serif;font-weight:normal;font-size:32px
 .sub{margin:0 0 8px;color:#6f665c;font-size:16px;line-height:1.4}
 
 .sortbar{display:flex;gap:8px;margin:0 0 8px;flex-wrap:wrap}
-.sortbar button{min-height:44px;padding:0 14px;border:0;border-radius:22px;background:#efe8de;color:#2b2722;font-size:15px;font-weight:600}
+.sortbar button{min-height:48px;padding:0 16px;border:0;border-radius:24px;background:#efe8de;color:#2b2722;font-size:16px;font-weight:600}
 .sortbar button.on{background:#2b2722;color:#fff}
 
 .search{display:flex;align-items:center;gap:8px;margin:0 0 8px;background:#fff;border-radius:24px;min-height:48px;padding:0 4px 0 14px;box-shadow:0 1px 4px rgba(60,40,20,.08)}
@@ -291,7 +291,7 @@ h1{font-family:Georgia,"Times New Roman",serif;font-weight:normal;font-size:32px
 
 /* v7.2 retention: daily, album, calm, milestones */
 .headacts{display:flex;align-items:center;gap:6px;flex-shrink:0}
-.gear{flex:none;width:44px;height:44px;border:0;border-radius:22px;background:transparent;color:#5c5348;display:flex;align-items:center;justify-content:center;padding:0}
+.gear{flex:none;width:48px;height:48px;min-width:48px;min-height:48px;border:0;border-radius:24px;background:transparent;color:#5c5348;display:flex;align-items:center;justify-content:center;padding:0}
 .gear:focus-visible{outline:2px solid #2b2722;outline-offset:2px}
 
 #dailyWrap{margin:0 0 8px}
@@ -527,7 +527,7 @@ body.calm .waycard{min-height:108px}
 .factcard .cite{font-size:13px;color:#6a635c;margin-top:8px}
 
 .gal-toolbar{display:flex;align-items:flex-start;gap:8px;margin:0 0 8px}
-.filterbtn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px;border:0;border-radius:22px;background:#efe8de;color:#2b2722;font-size:15px;font-weight:600;flex:none}
+.filterbtn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 16px;border:0;border-radius:24px;background:#efe8de;color:#2b2722;font-size:16px;font-weight:600;flex:none}
 .filterbtn[hidden]{display:none !important}
 .fbadge{min-width:20px;height:20px;padding:0 6px;border-radius:10px;background:#2b2722;color:#fff;font-size:12px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;line-height:1}
 .fbadge.hidden{display:none}
@@ -575,13 +575,13 @@ body.calm .tab-screen{bottom:calc(80px + env(safe-area-inset-bottom))}
 
 /* v7.5 language menu */
 .langmenu{position:relative;flex-shrink:0}
-.langmenu-btn{appearance:none;display:inline-flex;align-items:center;gap:6px;border:0;background:#efe8dc;color:#3f3a34;border-radius:999px;padding:8px 12px 8px 14px;font:600 14px/1.1 system-ui,sans-serif;min-height:44px;cursor:pointer;max-width:42vw}
+.langmenu-btn{appearance:none;display:inline-flex;align-items:center;gap:6px;border:0;background:#efe8dc;color:#3f3a34;border-radius:999px;padding:8px 14px 8px 16px;font:600 15px/1.1 system-ui,sans-serif;min-height:48px;min-width:48px;cursor:pointer;max-width:42vw}
 .langmenu-btn .langlabel{white-space:nowrap}
 .langchev{font-size:11px;opacity:.7}
 .langmenu-btn[aria-expanded="true"]{background:#3f3a34;color:#f6f3ee}
 .langmenu-list{position:absolute;right:0;top:calc(100% + 6px);z-index:40;margin:0;padding:6px;list-style:none;background:#fffdf9;border-radius:14px;box-shadow:0 8px 28px rgba(40,30,20,.18);min-width:168px}
 .langmenu-list.hidden{display:none}
-.langopt{display:block;width:100%;text-align:left;border:0;background:transparent;border-radius:10px;padding:10px 12px;font:600 16px/1.2 system-ui,sans-serif;color:#2b2722;min-height:44px;cursor:pointer}
+.langopt{display:block;width:100%;text-align:left;border:0;background:transparent;border-radius:10px;padding:12px 14px;font:600 16px/1.2 system-ui,sans-serif;color:#2b2722;min-height:48px;cursor:pointer}
 .langopt.on{background:#3f3a34;color:#f6f3ee}
 .langopt:focus-visible{outline:2px solid #c79a4e;outline-offset:1px}
 #obLang.langmenu{margin-left:auto}
@@ -591,3 +591,20 @@ body.calm .langmenu-btn,body.calm .langopt{min-height:52px}
 
 .quotetr{font-size:12px;color:#6a635c;margin:6px 0 0;letter-spacing:.02em;font-style:italic}
 .quotetr.hidden{display:none}
+
+/* v8.5 share / certificate / larger chrome */
+.setrow.setcol{flex-direction:column;align-items:stretch;gap:10px}
+.setinput, #certName{width:100%;min-height:48px;font-size:16px;border:1px solid #d7cbb8;border-radius:12px;background:#fff;padding:10px 14px;color:#2b2722;box-sizing:border-box}
+.setinput:focus-visible, #certName:focus-visible{outline:2px solid #2b2722;outline-offset:2px}
+.wayrow{display:flex;flex-direction:column;gap:8px;margin:0 0 12px}
+.wayrow .waycard{margin:0}
+.waycert{appearance:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:48px;padding:0 16px;border:0;border-radius:14px;background:#c79a4e;color:#fff;font:600 16px/1.2 system-ui,sans-serif;cursor:pointer}
+.waycert:focus-visible{outline:2px solid #2b2722;outline-offset:2px}
+.path-certwrap{margin:16px 0 8px;max-width:900px}
+.cert-card{text-align:left}
+.certk{color:#c79a4e;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 12px}
+.certprev{background:#efe8dc;border-radius:16px;overflow:hidden;margin:0 0 16px;box-shadow:0 2px 10px rgba(60,40,20,.08)}
+.certprev img{display:block;width:100%;height:auto}
+.certname{display:block;margin:0 0 16px}
+.certname span{display:block;font-size:15px;font-weight:600;color:#2b2722;margin:0 0 8px}
+body.calm .waycert,body.calm .setinput,body.calm #certName,body.calm .filterbtn,body.calm .langmenu-btn,body.calm .langopt{min-height:52px}

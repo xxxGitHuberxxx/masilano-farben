@@ -51,7 +51,7 @@
     <div id="installHint" class="installhint hidden" hidden></div>
     <footer class="gfoot">
       <button id="srcBtn" class="linkbtn" data-i18n-html="sourcesBtn">Bildquellen &amp; Hinweise</button>
-      <div class="ver" data-i18n="version">Testversion 8.4</div>
+      <div class="ver" data-i18n="version">Testversion 8.5</div>
     </footer>
   </div>
 </section>
@@ -185,7 +185,10 @@
     <p id="avLangFallback" class="langfallback hidden" hidden></p>
     <div id="avFactWrap" class="hidden"><div class="lbl" data-i18n="didYouKnow">Wusstest du?</div><p id="avFact"></p><p id="avFactFallback" class="langfallback hidden" hidden></p></div>
     <div id="avMuseum" class="museum"></div>
-    <div class="btns"><button type="button" id="avClose" class="btn" data-i18n="close">Schliessen</button></div>
+    <div class="btns">
+      <button type="button" id="avShare" class="btn sharebtn" data-i18n="share">Bild teilen</button>
+      <button type="button" id="avClose" class="btn" data-i18n="close">Schliessen</button>
+    </div>
   </div>
 </div>
 
@@ -200,6 +203,13 @@
       <button type="button" id="calmToggle" class="switch" role="switch" aria-checked="false" data-i18n-aria="calmAria" aria-label="Ruhemodus">
         <span class="knob" aria-hidden="true"></span>
       </button>
+    </div>
+    <div class="setrow setcol">
+      <div class="settx">
+        <label class="sett" for="playerName" data-i18n="playerNameTitle">Dein Name auf der Urkunde</label>
+        <p class="sets" data-i18n="playerNameHint">Wird nur auf diesem Gerät gespeichert, niemals verschickt.</p>
+      </div>
+      <input type="text" id="playerName" class="setinput" maxlength="60" autocomplete="name" data-i18n-placeholder="certNamePh" placeholder="Name, wenn du möchtest">
     </div>
     <div class="btns"><button type="button" class="btn" id="setClose" data-i18n="close">Schliessen</button></div>
   </div>
@@ -248,8 +258,26 @@
     <p class="pfin-n" id="pfCount"></p>
     <div class="pfin-body" id="pfBody"></div>
     <div class="btns">
+      <button id="pfCert" class="btn sharebtn" data-i18n="certOpen">Urkunde ansehen</button>
+    </div>
+    <div class="btns">
       <button id="pfPath" class="btn" data-i18n="finPath">Zum Lebensweg</button>
       <button id="pfGal" class="btn ghost" data-i18n="finGal">Zur Galerie</button>
+    </div>
+  </div>
+</div>
+
+<div id="certView" class="sheet hidden" role="dialog" aria-modal="true" aria-labelledby="certHeading">
+  <div class="card cert-card">
+    <div class="certk" id="certHeading" data-i18n="certKicker">Urkunde</div>
+    <div id="certPreview" class="certprev"><img id="certImg" alt=""></div>
+    <label class="certname" for="certName">
+      <span data-i18n="certNameLabel">Dein Name (bleibt nur auf diesem Gerät)</span>
+      <input type="text" id="certName" maxlength="60" autocomplete="name" data-i18n-placeholder="certNamePh" placeholder="Name, wenn du möchtest">
+    </label>
+    <div class="btns">
+      <button type="button" id="certShare" class="btn sharebtn" data-i18n="certShare">Urkunde teilen</button>
+      <button type="button" id="certClose" class="btn ghost" data-i18n="close">Schliessen</button>
     </div>
   </div>
 </div>
@@ -320,33 +348,33 @@
 
 <script src="paintings.js"></script>
 <script src="story.js"></script>
-<script src="path-vangogh.js"></script>
-<script src="path-monet.js"></script>
-<script src="path-monet-p2.js"></script>
-<script src="path-monet-p3.js"></script>
-<script src="path-hokusai.js"></script>
-<script src="path-hokusai-p2.js"></script>
-<script src="path-klimt.js"></script>
-<script src="path-klimt-p2.js"></script>
-<script src="path-anker.js"></script>
-<script src="path-anker-p2.js"></script>
-<script src="path-hodler.js"></script>
-<script src="path-hodler-p2.js"></script>
-<script src="en-content.js"></script>
-<script src="en-monet.js"></script>
-<script src="en-monet-p2.js"></script>
-<script src="en-monet-p3.js"></script>
-<script src="en-hokusai.js"></script>
-<script src="en-hokusai-p2.js"></script>
-<script src="en-klimt.js"></script>
-<script src="en-klimt-p2.js"></script>
-<script src="en-anker.js"></script>
-<script src="en-anker-p2.js"></script>
-<script src="en-hodler.js"></script>
-<script src="en-hodler-p2.js"></script>
-<script src="es-content.js"></script>
-<script src="fr-content.js"></script>
-<script src="it-content.js"></script>
+<script data-src="path-vangogh.js"></script>
+<script data-src="path-monet.js"></script>
+<script data-src="path-monet-p2.js"></script>
+<script data-src="path-monet-p3.js"></script>
+<script data-src="path-hokusai.js"></script>
+<script data-src="path-hokusai-p2.js"></script>
+<script data-src="path-klimt.js"></script>
+<script data-src="path-klimt-p2.js"></script>
+<script data-src="path-anker.js"></script>
+<script data-src="path-anker-p2.js"></script>
+<script data-src="path-hodler.js"></script>
+<script data-src="path-hodler-p2.js"></script>
+<script data-src="en-content.js"></script>
+<script data-src="en-monet.js"></script>
+<script data-src="en-monet-p2.js"></script>
+<script data-src="en-monet-p3.js"></script>
+<script data-src="en-hokusai.js"></script>
+<script data-src="en-hokusai-p2.js"></script>
+<script data-src="en-klimt.js"></script>
+<script data-src="en-klimt-p2.js"></script>
+<script data-src="en-anker.js"></script>
+<script data-src="en-anker-p2.js"></script>
+<script data-src="en-hodler.js"></script>
+<script data-src="en-hodler-p2.js"></script>
+<script data-src="es-content.js"></script>
+<script data-src="fr-content.js"></script>
+<script data-src="it-content.js"></script>
 <script src="i18n.js"></script>
 <script src="levels.js"></script>
 <script src="app.js"></script>
