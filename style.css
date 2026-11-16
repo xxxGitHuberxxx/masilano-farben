@@ -1173,3 +1173,181 @@ body.calm .waycard .n{font-size:32px}
   z-index:2;
 }
 .pc .badge.fin{background:#c79a4e;color:#152a5c}
+
+
+/* v10.8: Sternennacht wall on Saal pages; keep picture lights; gold type out of the cone */
+:root{
+  --night:#101c34;
+  --night-mid:#16324d;
+  --night-hi:#1c4468;
+  --gold-hi:#f6e4a8;
+  --gold:#e8c56b;
+  --cream:#f3ead6;
+  --text-on-night:#f0e6d4;
+  --muted-on-night:#d2c4a8;
+}
+/* Room pages + chrome use the Van Gogh Malerweg palette (waycard #16324d / #2a5f78 / gold).
+   Path/paint/studio stay on the cream paper so interior path text keeps its contrast. */
+html,body{
+  background-color:var(--night);
+  background-image:
+    radial-gradient(ellipse at 50% -12%,rgba(42,95,120,.55) 0%,transparent 58%),
+    radial-gradient(ellipse at 100% 0,rgba(199,154,78,.16) 0%,transparent 42%),
+    radial-gradient(ellipse at 0 80%,rgba(22,50,77,.8) 0%,transparent 50%),
+    linear-gradient(180deg,#0c162c 0%,#101c34 42%,#16324d 100%);
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  color:var(--text-on-night);
+}
+#path,#chapters,#paint,.screen.flow{
+  background-color:#e9dfd0;
+  background-image:url("img/paper.png"),linear-gradient(180deg,#f3eadc,#e4d8c4);
+  background-repeat:repeat,no-repeat;
+  background-size:128px 128px,100% 100%;
+  color:#2b2722;
+}
+#heute,#wege,#gallery,#album{
+  --ink-gold:var(--gold-hi);
+  color:var(--text-on-night);
+  background:transparent;
+}
+.apphead{
+  background:var(--night);
+  border-bottom:1px solid rgba(199,154,78,.42);
+  box-shadow:0 1px 0 rgba(15,26,48,.8);
+}
+.apphead .wordmark,.wordmark{color:var(--gold-hi)}
+.gear{color:var(--gold-hi)}
+.gear:focus-visible{outline-color:var(--gold)}
+.langmenu-btn{background:#1c4468;color:var(--cream);box-shadow:inset 0 0 0 1px rgba(199,154,78,.45)}
+.langmenu-btn[aria-expanded="true"]{background:var(--gold);color:#101c34}
+
+.tabbar{
+  background:#0c162c;
+  border-top:1px solid rgba(199,154,78,.42);
+  box-shadow:0 -4px 16px rgba(0,0,0,.28);
+}
+.tab{color:#c9b89a}
+.tab.on,.tab[aria-selected="true"]{color:var(--gold-hi)}
+.tab.on{color:var(--gold-hi)}
+.tab:focus-visible{outline-color:var(--gold)}
+.tab .ndot{box-shadow:0 0 0 2px #0c162c}
+
+#heute .tab-screen h1,#wege .tab-screen h1,#gallery h1,#album h1,
+#heute h1,#wege h1,#gallery.tab-screen h1,#album.tab-screen h1,
+#heute .roomlab,#wege .roomlab,#gallery .roomlab,#album .roomlab,
+#heute h2.roomlab,#wege h2.roomlab{
+  color:var(--gold-hi);
+}
+#heute .lead,#wege .lead,#gallery .lead,#album .lead,
+#heute .sub,#wege .sub,#gallery .sub,#album .sub,
+#gallery .ghead .lead.sub{
+  color:var(--text-on-night);
+}
+#heute .gfoot,#gallery .gfoot,#wege .gfoot,#album .gfoot,
+#heute .linkbtn,#gallery .linkbtn,#wege .linkbtn,#album .linkbtn{
+  color:var(--muted-on-night);
+}
+#heute .linkbtn,#gallery .linkbtn{color:var(--gold)}
+
+.orn::before{
+  background:linear-gradient(90deg,transparent 0%,#c79a4e 18%,#f0d48a 50%,#c79a4e 82%,transparent 100%);
+}
+.orn::after{
+  background:var(--night);
+  box-shadow:inset 0 0 0 1.5px #e8c56b;
+}
+
+#heute .qpanel p,#heute .epigraph p{
+  color:var(--gold-hi);
+}
+#heute .qpanel figcaption,#heute .epigraph figcaption{
+  color:var(--gold);
+}
+
+/* Picture light stays — but only on the artwork, never over gold type or badges */
+.banners::before,.dailyhero::before,.pc::before{content:none !important;display:none !important;background:none !important}
+.bimg,.dailyhero .heroim,.pc .im,.waycard .cv,.contcard .cv,.pathnext .cv,.atile,.chi .th,.chhead .cv,#pathHead .cv{
+  overflow:hidden;
+}
+.dailyhero .heroim,.pc .im,.waycard .cv,.contcard .cv,.pathnext .cv,.atile,.chi .th,.chhead .cv,#pathHead .cv{
+  position:relative;
+}
+.bimg{position:absolute}
+.bimg::before,.dailyhero .heroim::before,.pc .im::before,.waycard .cv::before,.contcard .cv::before,.pathnext .cv::before,.atile::before,.chi .th::before,.chhead .cv::before,#pathHead .cv::before{
+  content:"";position:absolute;left:8%;right:8%;top:-10px;height:48px;
+  background:radial-gradient(ellipse at 50% 0,rgba(255,246,214,.8) 0%,rgba(255,232,180,.3) 50%,transparent 76%);
+  pointer-events:none;z-index:1;
+}
+.pc .tags,.pc .badge{z-index:3}
+.btx{z-index:3}
+.bgrad{background:linear-gradient(180deg,rgba(8,16,36,.0) 28%,rgba(8,16,36,.55) 68%,rgba(8,16,36,.82) 100%);z-index:2}
+.bk,.bt,.ba{
+  text-shadow:0 1px 2px rgba(0,0,0,.9),0 2px 14px rgba(0,0,0,.65);
+}
+.bk{color:#ffe9a8}
+.bt{color:#fff}
+.ba{color:rgba(255,248,230,.92)}
+
+/* Gold kickers on path cards sit beside the lit frame, not in the cone; give them weight */
+.waycard .k,.sentry .k{
+  color:#ffe9a8;
+  opacity:1;
+  text-shadow:0 1px 2px rgba(0,0,0,.85),0 0 10px rgba(0,0,0,.5);
+}
+
+/* Gallery: opaque toolbar so tiles can never slide under search / filter / tabs */
+#gallery .ghead{
+  position:relative;
+  z-index:5;
+  background-color:var(--night);
+  background-image:
+    radial-gradient(ellipse at 50% -40%,rgba(42,95,120,.4) 0%,transparent 60%),
+    linear-gradient(180deg,#0c162c 0%,#101c34 100%);
+  padding-bottom:14px;
+  box-shadow:0 8px 16px rgba(8,14,28,.35);
+}
+#gallery .pager{z-index:1;margin-top:2px}
+#gallery .catrow,#gallery .gal-toolbar,#gallery .search{position:relative;z-index:6}
+.cattabs button{color:var(--muted-on-night)}
+.cattabs button.on{color:var(--gold-hi)}
+.catmore{background:#1c4468;color:var(--gold-hi);box-shadow:inset 0 0 0 1px rgba(199,154,78,.4)}
+.search{background:#f3ead6;box-shadow:0 1px 4px rgba(0,0,0,.28)}
+#galSearch{color:#1a140c}
+#galSearch::placeholder{color:#6a635c}
+.sclear{color:#5c5348}
+.filterbtn{background:#f3ead6;color:#1a140c}
+.dots button{background:#5a4e3a}
+.dots button.on{background:#e8c56b}
+.bdots button{background:#5a4e3a}
+.bdots button.on{background:#e8c56b}
+
+.albumsum,.albumempty,#album .empty,.empty,.empty .e1,.empty .e2{
+  color:var(--text-on-night);
+}
+.empty .e2{color:var(--muted-on-night)}
+.albumcard{background:#f3ead6;color:#1a140c}
+.albumcard .k{color:#6a4a22}
+.albumcard .s{color:#5f564c}
+
+/* Keep cream/warm cards and plaques as museum objects on the night wall */
+.contcard,.pathnext,.factcard,.installhint{
+  background:#f3ead6;
+  color:#1a140c;
+  box-shadow:0 4px 18px rgba(0,0,0,.28);
+}
+.contcard .n,.pathnext .n{color:#152a5c}
+.factcard .k{color:#6a4a22}
+.factcard .f{color:#2b2722}
+.factcard .cite{color:#5c5348}
+
+/* Colorful waycards stay vivid on the dark wall */
+.waycard{box-shadow:0 6px 20px rgba(0,0,0,.35)}
+
+/* v10.8 head clearance: script flourishes must not meet the fixed header */
+#gallery .ghead,#album .albumhead,#album.tab-screen .albumhead{
+  padding-top:18px;
+}
+#heute .tabscroll,#wege .tabscroll{padding-top:16px}
+#heute .tabscroll > .roomlab:first-child,#wege .tabscroll > .roomlab:first-child,
+#gallery .ghead .roomlab,#album .albumhead .roomlab{padding-top:4px}
