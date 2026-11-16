@@ -744,17 +744,17 @@ function renderGallery(){
   const W = Math.max(0, boxW - 32), H = Math.max(0, boxH - 8);
   const cols = Math.max(2, Math.min(6, Math.round(W / 230)));
   const cw2 = cols ? (W - (cols - 1) * gap) / cols : W;
-  const minH = Math.max(188, cw2 * 0.75 + 76);
+  const minH = Math.max(232, cw2 * 0.72 + 108);
   const sizeKey = cols + ':' + Math.round(boxW) + 'x' + Math.round(boxH);
   let rows, cardH;
   if (galGrid && galGrid.sizeKey === sizeKey) {
     rows = galGrid.rows; cardH = galGrid.cardH;
   } else {
     rows = Math.max(1, Math.floor((H + gap) / (minH + gap)));
-    cardH = Math.min((H - (rows - 1) * gap) / rows, cw2 * 1.3 + 80);
+    cardH = Math.min((H - (rows - 1) * gap) / rows, cw2 * 1.25 + 110);
     while (rows > 1 && rows * cardH + (rows - 1) * gap > H) {
       rows--;
-      cardH = Math.min((H - (rows - 1) * gap) / rows, cw2 * 1.3 + 80);
+      cardH = Math.min((H - (rows - 1) * gap) / rows, cw2 * 1.25 + 110);
     }
     galGrid = { sizeKey, cols, rows, cardH };
   }
@@ -788,7 +788,7 @@ function renderGallery(){
     const overflow = [...pager.querySelectorAll('.page[data-filled] .pc')].some(c => c.getBoundingClientRect().bottom > pb.bottom + 1.5);
     if (overflow) {
       galGrid.rows -= 1;
-      galGrid.cardH = Math.min((H - (galGrid.rows - 1) * gap) / galGrid.rows, cw2 * 1.3 + 80);
+      galGrid.cardH = Math.min((H - (galGrid.rows - 1) * gap) / galGrid.rows, cw2 * 1.25 + 110);
       galFitting = true;
       renderGallery();
       galFitting = false;
@@ -1952,16 +1952,21 @@ function paintHomeQuote(){
   el.hidden = false;
   if (quoteIdx < 0 || quoteIdx >= list.length) quoteIdx = pickQuoteIndex(list.length);
   const q = list[quoteIdx];
-  const p = $('#homeQuoteT'), c = $('#homeQuoteC');
-  const apply = () => {
-    if (p) p.textContent = q.text;
-    if (c) c.textContent = q.cite;
-    el.classList.remove('is-out');
-  };
-  if (p && p.textContent && p.textContent !== q.text && !reduceMotion()) {
-    el.classList.add('is-out');
-    setTimeout(apply, 450);
-  } else apply();
+  const panels = [...el.querySelectorAll('.qpanel')];
+  if (!panels.length) return;
+  const on = panels.find(n => n.classList.contains('on')) || panels[0];
+  const already = (on.querySelector('p') && on.querySelector('p').textContent) === q.text;
+  if (already) return;
+  const nxt = panels.find(n => n !== on) || on;
+  const pEl = nxt.querySelector('p'), cEl = nxt.querySelector('figcaption');
+  if (pEl) pEl.textContent = q.text;
+  if (cEl) cEl.textContent = q.cite;
+  if (nxt === on || reduceMotion()) {
+    panels.forEach(n => n.classList.toggle('on', n === nxt));
+    return;
+  }
+  nxt.classList.add('on');
+  on.classList.remove('on');
 }
 function restartQuoteTimer(){
   if (quoteTimer) { clearInterval(quoteTimer); quoteTimer = null; }

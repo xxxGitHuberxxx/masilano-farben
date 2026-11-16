@@ -47,8 +47,10 @@
     <h1 data-i18n="todayTitle">Heute</h1>
     <div class="orn" aria-hidden="true"></div>
     <figure id="homeQuote" class="epigraph">
-      <blockquote><p id="homeQuoteT"></p></blockquote>
-      <figcaption id="homeQuoteC"></figcaption>
+      <div class="qstack">
+        <blockquote class="qpanel on"><p></p><figcaption></figcaption></blockquote>
+        <blockquote class="qpanel"><p></p><figcaption></figcaption></blockquote>
+      </div>
     </figure>
     <div id="homeBanner" class="banners" hidden></div>
     <div id="dailyWrap"></div>
@@ -59,7 +61,7 @@
     <footer class="gfoot">
       <button id="srcBtn" class="linkbtn" data-i18n-html="sourcesBtn">Bildquellen &amp; Hinweise</button>
       <a class="linkbtn" href="privacy.html" data-i18n="privacyLink">Datenschutz</a>
-      <div class="ver" data-i18n="version">Testversion 10.5</div>
+      <div class="ver" data-i18n="version">Testversion 10.6</div>
     </footer>
   </div>
 </section>
