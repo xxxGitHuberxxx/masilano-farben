@@ -294,7 +294,6 @@ function bannerSlides(kind){
   if (path) {
     slides.push({ kind: 'path', path, kicker: t('bannerPathKicker') });
   }
-  if (kind === 'home') addPaint(pickDaily(todayKey()), 'bannerDailyKicker');
   return slides;
 }
 function renderFeatureBanner(el){
@@ -704,8 +703,9 @@ function paintGalCard(item){
   } else {
     const lv = levelOf(p);
     const onPath = !!pathOwning(p.id);
-    const painter = painterChip(p);
-    const tags = `<div class="tags">${p.fresh ? '<span class="lv neu">' + t('neu') + '</span>' : ''}<span class="lv ${lv}">${levelLabel(lv)}</span>${onPath ? '<span class="lv path">' + t('pathBadge') + '</span>' : ''}</div>${painter ? '<span class="painterchip">' + painter + '</span>' : ''}`;
+    const pathIco = onPath ? `<span class="lv path ico" title="${esc(t('pathBadge'))}" aria-label="${esc(t('pathBadge'))}"><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M2.2 12.5c2-1.2 3-3.2 4.2-5.4 1 1.6 2.3 3 4.4 3.3 1.6.2 3.1-.6 5-1.8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="6.2" cy="5.2" r="1.7" fill="currentColor"/></svg></span>` : '';
+    const neuDot = p.fresh ? `<span class="lv neu dot" title="${esc(t('neu'))}" aria-label="${esc(t('neu'))}"></span>` : '';
+    const tags = `<div class="tags">${neuDot}<span class="lv ${lv}">${levelLabel(lv)}</span>${pathIco}</div>`;
     b.className = 'pc';
     const { started, done, pct } = galProgress(s);
     const txBar = started || done ? `<div class="bar"><div style="width:${done ? 100 : pct}%"></div></div>` : '';
@@ -1857,7 +1857,7 @@ function renderDaily(){
   const img = 'orig.jpg';
   const cta = done ? t('dailyCtaView') : t('dailyCta');
   card.innerHTML = `<button type="button" class="heroim" id="dailyHeroIm" style="background-image:url(data/${p.id}-${img})" aria-label="${esc(t('dailyAria', { title: L(p, 'title') }))}"></button>
-    <div class="tx"><div class="k roomlab">${t('roomDaily')}</div>
+    <div class="tx"><div class="roomlab">${t('roomDaily')}</div>
     <div class="plaque"><div class="n">${esc(L(p,'title'))}</div>
     <div class="a">${esc(L(p,'artist') || p.artist)}${p.year ? ' · ' + esc(p.year) : ''}</div></div>
     ${teaser.text ? `<p class="teaser">${esc(teaser.text)}</p>` : ''}
