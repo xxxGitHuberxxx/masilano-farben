@@ -692,13 +692,13 @@ function paintGalCard(item){
   if (item.kind === 'story') {
     b.className = 'pc storyc';
     b.innerHTML = `${galImHtml(p, s, `<div class="tags"><span class="lv story">${t('storyTag')}</span></div>`)}
-      <div class="tx"><div class="t">${L(p,'title')}</div><div class="a">${L(p,'artist')}, ${p.year}</div>
+      <div class="tx"><div class="plaque"><div class="t">${L(p,'title')}</div><div class="a">${L(p,'artist')}, ${p.year}</div></div>
       <div class="hint">${t('inStory', { name: item.st.name })}</div></div>`;
     b.onclick = () => openStoryHit(item.st, p);
   } else if (item.kind === 'path') {
     b.className = 'pc storyc';
     b.innerHTML = `${galImHtml(p, s, `<div class="tags"><span class="lv path">${t('pathTag')}</span></div>`)}
-      <div class="tx"><div class="t">${L(p,'title')}</div><div class="a">${L(p,'artist')}, ${p.year}</div>
+      <div class="tx"><div class="plaque"><div class="t">${L(p,'title')}</div><div class="a">${L(p,'artist')}, ${p.year}</div></div>
       <div class="hint">${t('inPath', { name: item.path.name })}</div></div>`;
     b.onclick = () => openPathHit(item.path, p);
   } else {
@@ -710,7 +710,7 @@ function paintGalCard(item){
     const { started, done, pct } = galProgress(s);
     const txBar = started || done ? `<div class="bar"><div style="width:${done ? 100 : pct}%"></div></div>` : '';
     b.innerHTML = `${galImHtml(p, s, tags)}
-      <div class="tx"><div class="t">${L(p,'title')}</div><div class="a">${L(p,'artist')}, ${p.year}</div>
+      <div class="tx"><div class="plaque"><div class="t">${L(p,'title')}</div><div class="a">${L(p,'artist')}, ${p.year}</div></div>
       ${txBar}</div>`;
     b.onclick = () => openPainting(p);
   }
@@ -1857,9 +1857,9 @@ function renderDaily(){
   const img = 'orig.jpg';
   const cta = done ? t('dailyCtaView') : t('dailyCta');
   card.innerHTML = `<button type="button" class="heroim" id="dailyHeroIm" style="background-image:url(data/${p.id}-${img})" aria-label="${esc(t('dailyAria', { title: L(p, 'title') }))}"></button>
-    <div class="tx"><div class="k">${t('dailyKicker')}</div>
-    <div class="n">${esc(L(p,'title'))}</div>
-    <div class="a">${esc(L(p,'artist') || p.artist)}${p.year ? ' · ' + esc(p.year) : ''}</div>
+    <div class="tx"><div class="k roomlab">${t('roomDaily')}</div>
+    <div class="plaque"><div class="n">${esc(L(p,'title'))}</div>
+    <div class="a">${esc(L(p,'artist') || p.artist)}${p.year ? ' · ' + esc(p.year) : ''}</div></div>
     ${teaser.text ? `<p class="teaser">${esc(teaser.text)}</p>` : ''}
     ${teaser.fallback && teaser.text ? `<p class="langfallback">${esc(t('langFallback'))}</p>` : ''}
     <button type="button" class="cta" id="dailyCta">${esc(cta)}</button>
@@ -1930,12 +1930,74 @@ function renderDailyFact(){
   wrap.innerHTML = '';
   wrap.appendChild(card);
 }
+
+let quoteTimer = null, quoteIdx = -1, quoteBound = false;
+function homeQuoteList(){
+  const all = (window.I18N && I.homeQuotes) || [];
+  const lang = (I && I.lang) || 'de';
+  return all.map(q => q[lang] || q.de).filter(q => q && q.text);
+}
+function pickQuoteIndex(len){
+  if (len <= 1) return 0;
+  let seed = 0;
+  const day = todayKey();
+  for (let i = 0; i < day.length; i++) seed = (seed * 33 + day.charCodeAt(i)) % 2147483647;
+  return seed % len;
+}
+function paintHomeQuote(){
+  const el = $('#homeQuote');
+  if (!el) return;
+  const list = homeQuoteList();
+  if (!list.length) { el.hidden = true; return; }
+  el.hidden = false;
+  if (quoteIdx < 0 || quoteIdx >= list.length) quoteIdx = pickQuoteIndex(list.length);
+  const q = list[quoteIdx];
+  const p = $('#homeQuoteT'), c = $('#homeQuoteC');
+  const apply = () => {
+    if (p) p.textContent = q.text;
+    if (c) c.textContent = q.cite;
+    el.classList.remove('is-out');
+  };
+  if (p && p.textContent && p.textContent !== q.text && !reduceMotion()) {
+    el.classList.add('is-out');
+    setTimeout(apply, 450);
+  } else apply();
+}
+function restartQuoteTimer(){
+  if (quoteTimer) { clearInterval(quoteTimer); quoteTimer = null; }
+  if (reduceMotion() || document.hidden) return;
+  quoteTimer = setInterval(() => {
+    const el = $('#homeQuote');
+    if (!el || !el.offsetParent) return;
+    const n = homeQuoteList().length;
+    if (n < 2) return;
+    quoteIdx = (quoteIdx + 1) % n;
+    paintHomeQuote();
+  }, 10000);
+}
+function bindHomeQuote(){
+  if (quoteBound) return;
+  quoteBound = true;
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) { if (quoteTimer) { clearInterval(quoteTimer); quoteTimer = null; } }
+    else restartQuoteTimer();
+  });
+}
+function renderHomeQuote(reset){
+  bindHomeQuote();
+  const list = homeQuoteList();
+  if (reset || quoteIdx < 0) quoteIdx = pickQuoteIndex(list.length || 1);
+  paintHomeQuote();
+  restartQuoteTimer();
+}
+
 function renderHeute(){
   renderDaily();
   renderContinue();
   renderPathNext();
   renderDailyFact();
   renderFeatureBanner($('#homeBanner'));
+  renderHomeQuote(false);
   updateHeuteDot();
   maybeShowInstallHint();
 }
@@ -2012,7 +2074,7 @@ function firstOpenWork(st){
 }
 function renderPathNext(){
   const wrap = $('#pathNextWrap'); if (!wrap) return;
-  wrap.innerHTML = '';
+  wrap.innerHTML = `<h2 class="roomlab">${t('roomPath')}</h2>`;
   const path = findActivePath();
   if (!path) {
     const b = document.createElement('button');
@@ -2404,7 +2466,7 @@ function renderContinue(){
     <div class="s">${L(p,'artist')} · ${pct} %</div>
     <div class="bar"><div style="width:${pct}%"></div></div></div><div class="go">›</div>`;
   b.onclick = () => resumeLast();
-  wrap.innerHTML = '';
+  wrap.innerHTML = `<h2 class="roomlab">${t('roomContinue')}</h2>`;
   wrap.appendChild(b);
   if (!had) galGrid = null;
 }

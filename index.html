@@ -7,6 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>Masilano · Malen nach Zahlen</title>
 <link rel="stylesheet" href="style.css">
+<link rel="preload" href="fonts/GreatVibes.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="icons/icon-192.png" type="image/png">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
@@ -42,8 +43,13 @@
 
 <section id="heute" class="tab-screen active">
   <div class="tabscroll">
+    <p class="roomlab" data-i18n="roomHeute">Ausstellung</p>
     <h1 data-i18n="todayTitle">Heute</h1>
-    <p class="lead" data-i18n="todayLead">Ein Bild, in deinem Tempo.</p>
+    <div class="orn" aria-hidden="true"></div>
+    <figure id="homeQuote" class="epigraph">
+      <blockquote><p id="homeQuoteT"></p></blockquote>
+      <figcaption id="homeQuoteC"></figcaption>
+    </figure>
     <div id="homeBanner" class="banners" hidden></div>
     <div id="dailyWrap"></div>
     <div id="continueWrap"></div>
@@ -53,14 +59,16 @@
     <footer class="gfoot">
       <button id="srcBtn" class="linkbtn" data-i18n-html="sourcesBtn">Bildquellen &amp; Hinweise</button>
       <a class="linkbtn" href="privacy.html" data-i18n="privacyLink">Datenschutz</a>
-      <div class="ver" data-i18n="version">Testversion 10.4</div>
+      <div class="ver" data-i18n="version">Testversion 10.5</div>
     </footer>
   </div>
 </section>
 
 <section id="wege" class="tab-screen">
   <div class="tabscroll">
+    <p class="roomlab" data-i18n="roomWege">Saal der Wege</p>
     <h1 data-i18n="waysTitle">Wege</h1>
+    <div class="orn" aria-hidden="true"></div>
     <p class="lead" data-i18n="waysLead">Lebenswege und Geschichten der Maler.</p>
     <div id="storyEntries" class="wayslist"></div>
   </div>
@@ -68,7 +76,9 @@
 
 <section id="gallery" class="tab-screen">
   <header class="ghead">
+    <p class="roomlab" data-i18n="roomGalerie">Gemäldesaal</p>
     <h1 data-i18n="galTitle">Galerie</h1>
+    <div class="orn" aria-hidden="true"></div>
     <p class="lead sub" data-i18n="appSubtitle">1751 Meisterwerke, Feld für Feld – und die Lebenswege von Van Gogh, Monet, Hokusai, Klimt, Anker, Hodler, Cézanne, Hiroshige, Renoir, Pissarro, Turner, Rembrandt, Sisley und Friedrich.</p>
     <div id="galBanner" class="banners" hidden></div>
     <div class="catrow">
@@ -116,7 +126,9 @@
 
 <section id="album" class="tab-screen">
   <header class="ghead albumhead">
+    <p class="roomlab" data-i18n="roomAlbum">Kabinett</p>
     <h1 data-i18n="albumTitle">Sammelalbum</h1>
+    <div class="orn" aria-hidden="true"></div>
   </header>
   <div id="albumBody" class="albumscroll"></div>
 </section>

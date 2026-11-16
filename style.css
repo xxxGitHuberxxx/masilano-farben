@@ -688,7 +688,7 @@ body.calm .tab .ticon,body.calm .tab .ticon svg{width:28px;height:28px}
 .bdots button.on{width:18px;background:#c79a4e}
 #heute .banners{margin:4px 16px 16px}
 #heute .tabscroll{padding-left:0;padding-right:0}
-#heute .tabscroll > h1,#heute .tabscroll > .lead,#heute .tabscroll > #dailyWrap,#heute .tabscroll > #continueWrap,#heute .tabscroll > #pathNextWrap,#heute .tabscroll > #factWrap,#heute .tabscroll > #installHint,#heute .tabscroll > .gfoot{padding-left:16px;padding-right:16px}
+#heute .tabscroll > h1,#heute .tabscroll > .roomlab,#heute .tabscroll > .orn,#heute .tabscroll > .epigraph,#heute .tabscroll > .lead,#heute .tabscroll > #dailyWrap,#heute .tabscroll > #continueWrap,#heute .tabscroll > #pathNextWrap,#heute .tabscroll > #factWrap,#heute .tabscroll > #installHint,#heute .tabscroll > .gfoot{padding-left:16px;padding-right:16px}
 #gallery .banners{margin:4px 0 12px}
 
 .catrow{display:flex;align-items:center;gap:8px;margin:0 0 10px}
@@ -717,3 +717,282 @@ body.calm .bt{font-size:24px}
 #gallery .ghead{padding-bottom:8px}
 #gallery .catrow{margin:0 0 6px}
 #gallery .gal-toolbar{margin-bottom:8px}
+
+/* v10.5 artistic surfaces: paper, script headings, gilded frames, gold ornaments */
+@font-face{
+  font-family:"Great Vibes";
+  src:url("fonts/GreatVibes.woff2") format("woff2");
+  font-weight:400;font-style:normal;font-display:swap;
+  unicode-range:U+0000-00FF,U+0100-017F,U+0180-024F,U+1E00-1EFF,U+2000-206F,U+2070-209F,U+20A0-20CF,U+2100-214F;
+}
+html,body{
+  background-color:#e9dfd0;
+  background-image:url("img/paper.png"),
+    radial-gradient(ellipse at 50% -10%,rgba(255,244,214,.55),transparent 46%),
+    linear-gradient(180deg,#f3eadc,#e4d8c4);
+  background-repeat:repeat,no-repeat,no-repeat;
+  background-size:128px 128px,100% 70%,100% 100%;
+}
+.apphead{background-color:rgba(245,238,226,.78);border-bottom:1px solid rgba(199,154,78,.28)}
+.wordmark{color:#8a6a22;letter-spacing:.3em}
+.tab-screen h1,.chhead h1,.onboard h1,.aview h2,.sheet h2,.agroup h2,.pstat h2{
+  font-family:"Great Vibes",Georgia,"Times New Roman",cursive;
+  font-weight:400;
+  color:#152a5c;
+  line-height:1.15;
+  padding:.12em 0 .06em;
+  text-wrap:balance;
+}
+.tab-screen h1{font-size:48px;margin:2px 0 0}
+.chhead h1{font-size:40px}
+.onboard h1{font-size:46px}
+.agroup h2,.pstat h2,.aview h2{font-size:32px}
+.sheet h2{font-size:34px}
+#pTitle{
+  font-family:"Great Vibes",Georgia,"Times New Roman",cursive;
+  font-weight:400;
+  font-size:26px;
+  line-height:1.15;
+  color:#152a5c;
+  padding-top:2px;
+}
+.topbar{background:#f7f3ec;border-bottom:1px solid #eadfcf}
+.topbar .ttl{position:relative}
+.topbar .ttl::after{
+  content:"";position:absolute;left:0;right:0;bottom:-2px;height:3px;
+  background:linear-gradient(90deg,transparent,#c79a4e 12%,#e8d48a 50%,#c79a4e 88%,transparent);
+  opacity:.85;pointer-events:none;
+}
+@media (max-width:520px){
+  .tab-screen h1{font-size:42px}
+  #pTitle{font-size:22px}
+}
+@media (max-height:560px){
+  .tab-screen h1{font-size:34px}
+}
+
+/* gold ornamental divider */
+.orn{position:relative;height:18px;margin:2px 0 8px;pointer-events:none}
+.orn::before{
+  content:"";position:absolute;left:0;right:0;top:50%;height:1px;
+  background:linear-gradient(90deg,transparent 0%,#c79a4e 18%,#e8d48a 50%,#c79a4e 82%,transparent 100%);
+  transform:translateY(-50%);
+}
+.orn::after{
+  content:"";position:absolute;left:50%;top:50%;width:9px;height:9px;
+  margin:-5px 0 0 -5px;
+  background:#f4f1ec;
+  box-shadow:inset 0 0 0 1.5px #c79a4e;
+  transform:rotate(45deg);
+}
+#gallery .ghead .orn{margin:0 0 6px}
+
+/* rotating artist epigraph */
+.epigraph{margin:0 0 8px;padding:0;border:0}
+.epigraph blockquote{margin:0;padding:0;border:0}
+.epigraph p{
+  margin:0;
+  font-family:"Great Vibes",Georgia,cursive;
+  font-size:24px;
+  line-height:1.22;
+  color:#152a5c;
+  text-wrap:balance;
+}
+.epigraph figcaption{
+  display:block;
+  margin:6px 0 0;
+  font-size:12px;
+  letter-spacing:.02em;
+  color:#8a6a22;
+  font-style:italic;
+}
+.epigraph figcaption::before{content:"— ";}
+.epigraph.is-out p,.epigraph.is-out figcaption{opacity:0;transition:opacity .45s ease}
+.epigraph p,.epigraph figcaption{opacity:1;transition:opacity .45s ease}
+@media (max-width:520px){ .epigraph p{font-size:22px} }
+
+/* gilded Klimt-mosaic frames */
+.frame,.frame-lg,.frame-sm{
+  border-style:solid;
+  border-color:transparent;
+  border-image-source:url("img/frame.svg");
+  border-image-slice:32;
+  border-image-repeat:repeat;
+  background-origin:padding-box;
+  background-clip:padding-box;
+  box-shadow:0 8px 20px rgba(21,42,92,.14);
+}
+.frame-lg{border-width:12px;border-image-width:12px}
+.frame,.frame-md{border-width:8px;border-image-width:8px}
+.frame-sm{border-width:4px;border-image-width:4px;box-shadow:0 3px 8px rgba(21,42,92,.12)}
+
+#homeBanner.banners,#galBanner.banners{
+  padding:0;
+  background:none;
+}
+.banners .btrack{
+  border:12px solid transparent;
+  border-image-source:url("img/frame.svg");
+  border-image-slice:32;
+  border-image-width:12px;
+  border-radius:0;
+  box-shadow:0 10px 24px rgba(21,42,92,.16);
+  background-color:#1a1408;
+}
+.bslide{border-radius:0}
+.bimg{border-radius:0}
+
+.dailyhero{background:transparent;box-shadow:none;border-radius:0;overflow:visible}
+.dailyhero .heroim{
+  border:12px solid transparent;
+  border-image-source:url("img/frame.svg");
+  border-image-slice:32;
+  border-image-width:12px;
+  border-radius:0;
+  background-origin:padding-box;
+  background-clip:padding-box;
+  box-shadow:0 10px 24px rgba(21,42,92,.16);
+}
+.dailyhero .tx{
+  background:rgba(255,253,248,.92);
+  border-radius:0 0 14px 14px;
+  margin:0 8px;
+  box-shadow:0 6px 16px rgba(21,42,92,.08);
+}
+
+.pc{overflow:visible;background:#fffdf8}
+.pc .im{
+  border:5px solid transparent;
+  border-image-source:url("img/frame.svg");
+  border-image-slice:32;
+  border-image-width:5px;
+  border-radius:0;
+  background-origin:padding-box;
+  background-clip:padding-box;
+}
+.pc .tx{padding-top:10px}
+
+.waycard .cv,.contcard .cv,.chhead .cv,#pathHead .cv,.pathnext .cv{
+  border:6px solid transparent;
+  border-image-source:url("img/frame.svg");
+  border-image-slice:32;
+  border-image-width:6px;
+  border-radius:0;
+  background-origin:padding-box;
+  background-clip:padding-box;
+  box-shadow:0 4px 12px rgba(21,42,92,.12);
+}
+.chi .th,.cwork .th{
+  border:4px solid transparent;
+  border-image-source:url("img/frame.svg");
+  border-image-slice:32;
+  border-image-width:4px;
+  border-radius:0;
+  background-origin:padding-box;
+  background-clip:padding-box;
+}
+.atile{
+  border:4px solid transparent;
+  border-image-source:url("img/frame.svg");
+  border-image-slice:32;
+  border-image-width:4px;
+  border-radius:0;
+  background-origin:padding-box;
+  background-clip:padding-box;
+  overflow:visible;
+  box-shadow:0 4px 12px rgba(21,42,92,.12);
+}
+.atile img{border-radius:0}
+
+/* keep badges inside the picture, not on the frame */
+.pc .tags{top:8px;left:8px;right:8px}
+.pc .painterchip{left:10px;bottom:12px}
+
+body.calm .tab-screen h1{font-size:52px}
+body.calm .epigraph p{font-size:28px}
+body.calm #pTitle{font-size:28px}
+
+@media (prefers-reduced-motion:reduce){
+  .epigraph p,.epigraph figcaption{transition:none}
+}
+
+/* v10.5 exhibition ambience: gallery wall, spotlight, brass plaques, rooms */
+.roomlab{
+  margin:8px 0 0;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#8a6a22;
+}
+h2.roomlab{font-size:11px;font-weight:700;font-family:Georgia,"Times New Roman",serif;padding:0;line-height:1.3;margin:14px 0 8px;color:#8a6a22}
+#heute .tabscroll > .roomlab:first-child,#wege .tabscroll > .roomlab:first-child{margin-top:2px}
+#gallery .ghead .roomlab,#album .roomlab{margin:0 0 0}
+
+/* soft picture-light above framed works */
+.banners,.dailyhero,.pc,.waycard,.contcard,.pathnext,.atile,.chi,.chhead,.cwork{
+  position:relative;
+}
+.banners::before,.dailyhero::before,.pc::before,.waycard .cv::before,.contcard .cv::before,.pathnext .cv::before,.atile::before,.chi .th::before,.chhead .cv::before{
+  content:"";position:absolute;left:8%;right:8%;top:-16px;height:52px;
+  background:radial-gradient(ellipse at 50% 0,rgba(255,246,214,.72) 0%,rgba(255,232,180,.22) 48%,transparent 74%);
+  pointer-events:none;z-index:3;
+}
+.pc::before{top:-8px;height:42px;z-index:4}
+.atile{overflow:visible}
+.waycard .cv,.contcard .cv,.pathnext .cv,.chi .th,.chhead .cv{position:relative}
+
+/* museum brass plaques under pictures */
+.plaque{
+  margin:8px 8px 6px;
+  padding:8px 10px 9px;
+  text-align:center;
+  background:linear-gradient(180deg,#f6e9c4 0%,#e2c57a 42%,#c79a4e 100%);
+  box-shadow:inset 0 1px 0 #fff4d2,inset 0 -1px 0 rgba(90,66,20,.28),0 0 0 1px #8a6a22,0 2px 5px rgba(60,40,20,.18);
+  border-radius:2px;
+  color:#152a5c;
+}
+.plaque .n,.plaque .t{
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:normal;
+  font-size:15px;
+  line-height:1.25;
+  color:#152a5c;
+  margin:0;
+}
+.plaque .a{
+  margin:3px 0 0;
+  font-size:12px;
+  font-style:italic;
+  color:#5c4214;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.pc{background:transparent;box-shadow:none;border-radius:0;overflow:visible}
+.pc .tx{height:auto;min-height:0;padding:0 0 8px;background:transparent}
+.pc .plaque{margin:8px 6px 4px}
+.pc .plaque .t{font-size:14px;-webkit-line-clamp:2}
+.pc .hint{margin:0 8px 2px;text-align:center}
+.pc .bar{margin:4px 10px 0;height:3px;background:rgba(21,42,92,.08);border-radius:2px}
+.dailyhero .tx{background:transparent;box-shadow:none;margin:0;padding:12px 4px 8px;border-radius:0}
+.dailyhero .k{text-align:center;margin:0 0 8px}
+.dailyhero .plaque{margin:0 12px 12px}
+.dailyhero .plaque .n{font-size:20px;-webkit-line-clamp:2;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}
+.dailyhero .teaser{margin:0 12px 12px;text-align:center}
+.dailyhero .cta{margin:0 12px}
+.dailyhero .st{margin:10px 12px 0;text-align:center}
+.contcard,.pathnext,.waycard{background:rgba(255,253,248,.72)}
+.contcard .n,.pathnext .n,.waycard .n{font-family:Georgia,serif}
+
+/* gentle exhibition motion */
+.pc .im,.dailyhero .heroim,.bslide,.atile img,.waycard .cv,.contcard .cv,.pathnext .cv{
+  transition:filter .45s ease, transform .45s ease;
+}
+@media (prefers-reduced-motion:reduce){
+  .pc .im,.dailyhero .heroim,.bslide,.atile img,.waycard .cv,.contcard .cv,.pathnext .cv,
+  .epigraph p,.epigraph figcaption{transition:none}
+}
+.tabbar{background:rgba(255,253,248,.9)}
+
+#heute .bslide{max-height:22vh;min-height:120px}
+#heute .dailyhero .heroim{max-height:32vh}

@@ -15,7 +15,7 @@
       searchClear: 'Suche löschen',
       sourcesBtn: 'Bildquellen & Hinweise',
       privacyLink: 'Datenschutz',
-      version: 'Testversion 10.4',
+      version: 'Testversion 10.5',
       back: 'Zurück',
       backGallery: 'Zurück zur Galerie',
       backWays: 'Zurück zu den Wegen',
@@ -97,6 +97,13 @@
       bannerDailyKicker: 'Bild des Tages',
       bannerPathKicker: 'Dein Malerweg',
       bannerMasterKicker: 'Ein Meisterwerk',
+      roomHeute: 'Ausstellung',
+      roomWege: 'Saal der Wege',
+      roomGalerie: 'Gemäldesaal',
+      roomAlbum: 'Kabinett',
+      roomDaily: 'Saal des Tages',
+      roomContinue: 'Atelier',
+      roomPath: 'Saal der Wege',
       inStory: 'In der Geschichte von {name}',
       inPath: 'Im Lebensweg von {name}',
       noHits: 'Keine Treffer',
@@ -250,7 +257,7 @@
       searchClear: 'Clear search',
       sourcesBtn: 'Picture sources & notes',
       privacyLink: 'Privacy',
-      version: 'Test version 10.4',
+      version: 'Test version 10.5',
       back: 'Back',
       backGallery: 'Back to the gallery',
       backWays: 'Back to the journeys',
@@ -332,6 +339,13 @@
       bannerDailyKicker: 'Picture of the day',
       bannerPathKicker: 'Your life path',
       bannerMasterKicker: 'A masterpiece',
+      roomHeute: 'Exhibition',
+      roomWege: 'Hall of Journeys',
+      roomGalerie: 'Picture Gallery',
+      roomAlbum: 'Cabinet',
+      roomDaily: 'Hall of the Day',
+      roomContinue: 'Studio',
+      roomPath: 'Hall of Journeys',
       inStory: 'In the story of {name}',
       inPath: 'In the life journey of {name}',
       noHits: 'No results',
@@ -485,7 +499,7 @@
       searchClear: "Borrar búsqueda",
       sourcesBtn: "Fuentes e indicaciones",
       privacyLink: "Privacidad",
-      version: "Versión de prueba 10.4",
+      version: "Versión de prueba 10.5",
       back: "Atrás",
       backGallery: "Volver a la galería",
       backWays: "Volver a los caminos",
@@ -567,6 +581,13 @@
       bannerDailyKicker: "Cuadro del día",
       bannerPathKicker: "Tu camino de vida",
       bannerMasterKicker: "Una obra maestra",
+      roomHeute: "Exposición",
+      roomWege: "Sala de los caminos",
+      roomGalerie: "Sala de pintura",
+      roomAlbum: "Gabinete",
+      roomDaily: "Sala del día",
+      roomContinue: "Taller",
+      roomPath: "Sala de los caminos",
       inStory: "En la historia de {name}",
       inPath: "En el camino de vida de {name}",
       noHits: "Sin resultados",
@@ -720,7 +741,7 @@
       searchClear: "Effacer la recherche",
       sourcesBtn: "Sources et notes",
       privacyLink: "Confidentialité",
-      version: "Version d’essai 10.4",
+      version: "Version d’essai 10.5",
       back: "Retour",
       backGallery: "Retour à la galerie",
       backWays: "Retour aux parcours",
@@ -802,6 +823,13 @@
       bannerDailyKicker: "Tableau du jour",
       bannerPathKicker: "Ton parcours de vie",
       bannerMasterKicker: "Un chef-d’œuvre",
+      roomHeute: "Exposition",
+      roomWege: "Salle des parcours",
+      roomGalerie: "Salle des tableaux",
+      roomAlbum: "Cabinet",
+      roomDaily: "Salle du jour",
+      roomContinue: "Atelier",
+      roomPath: "Salle des parcours",
       inStory: "Dans le récit de {name}",
       inPath: "Dans le parcours de vie de {name}",
       noHits: "Aucun résultat",
@@ -955,7 +983,7 @@
       searchClear: "Cancella la ricerca",
       sourcesBtn: "Fonti e note",
       privacyLink: "Privacy",
-      version: "Versione di prova 10.4",
+      version: "Versione di prova 10.5",
       back: "Indietro",
       backGallery: "Torna alla galleria",
       backWays: "Torna ai percorsi",
@@ -1037,6 +1065,13 @@
       bannerDailyKicker: "Quadro del giorno",
       bannerPathKicker: "Il tuo percorso di vita",
       bannerMasterKicker: "Un capolavoro",
+      roomHeute: "Mostra",
+      roomWege: "Sala dei percorsi",
+      roomGalerie: "Sala dei dipinti",
+      roomAlbum: "Gabinetto",
+      roomDaily: "Sala del giorno",
+      roomContinue: "Atelier",
+      roomPath: "Sala dei percorsi",
       inStory: "Nella storia di {name}",
       inPath: "Nel percorso di vita di {name}",
       noHits: "Nessun risultato",
@@ -1810,8 +1845,150 @@
     });
   }
 
+
+  const HOME_QUOTES = [
+  {
+    "id": "vg393",
+    "de": {
+      "text": "Es ist hier ganz und gar das, was ich schön finde. Das heisst: hier ist Frieden.",
+      "cite": "Brief 393, Nieuw-Amsterdam, um den 7. Oktober 1883, an Theo"
+    },
+    "en": {
+      "text": "It is here entirely what I find beautiful. That is to say: here there is peace.",
+      "cite": "Letter 393, Nieuw-Amsterdam, around 7 October 1883, to Theo"
+    },
+    "es": {
+      "text": "Aquí es por completo lo que encuentro bello. Es decir: aquí hay paz.",
+      "cite": "Carta 393, Nieuw-Amsterdam, hacia el 7 de octubre de 1883, a Theo"
+    },
+    "fr": {
+      "text": "C’est ici tout entier ce que je trouve beau. C’est-à-dire : ici il y a la paix.",
+      "cite": "Lettre 393, Nieuw-Amsterdam, vers le 7 octobre 1883, à Theo"
+    },
+    "it": {
+      "text": "Qui è interamente ciò che trovo bello. Cioè: qui c’è pace.",
+      "cite": "Lettera 393, Nieuw-Amsterdam, circa il 7 ottobre 1883, a Theo"
+    }
+  },
+  {
+    "id": "vg589",
+    "de": {
+      "text": "Ich habe gerade ein Bouquet blühender Aprikosenbäume in einem kleinen, frischgrünen Obstgarten gemacht.",
+      "cite": "Brief 589, Arles, um den 25. März 1888, an Theo"
+    },
+    "en": {
+      "text": "I have just made a bouquet of blossoming apricot trees in a small orchard of fresh green.",
+      "cite": "Letter 589, Arles, around 25 March 1888, to Theo"
+    },
+    "es": {
+      "text": "Acabo de hacer un ramo de albaricoqueros en flor en un pequeño huerto de un verde fresco.",
+      "cite": "Carta 589, Arles, hacia el 25 de marzo de 1888, a Theo"
+    },
+    "fr": {
+      "text": "Je viens de faire un bouquet d’abricotiers en fleurs dans un petit verger d’un vert frais.",
+      "cite": "Lettre 589, Arles, vers le 25 mars 1888, à Theo"
+    },
+    "it": {
+      "text": "Ho appena fatto un mazzo di albicocchi in fiore in un piccolo frutteto di un verde fresco.",
+      "cite": "Lettera 589, Arles, circa il 25 marzo 1888, a Theo"
+    }
+  },
+  {
+    "id": "vg782",
+    "de": {
+      "text": "Nun habe ich eine Landschaft mit Olivenbäumen und auch eine neue Studie des Sternenhimmels.",
+      "cite": "Brief 782, Saint-Rémy-de-Provence, um den 18. Juni 1889, an Theo"
+    },
+    "en": {
+      "text": "I now have a landscape with olive trees and also a new study of the starry sky.",
+      "cite": "Letter 782, Saint-Rémy-de-Provence, around 18 June 1889, to Theo"
+    },
+    "es": {
+      "text": "Ahora tengo un paisaje con olivos y también un nuevo estudio del cielo estrellado.",
+      "cite": "Carta 782, Saint-Rémy-de-Provence, hacia el 18 de junio de 1889, a Theo"
+    },
+    "fr": {
+      "text": "Maintenant j’ai un paysage avec des oliviers et aussi une nouvelle étude du ciel étoilé.",
+      "cite": "Lettre 782, Saint-Rémy-de-Provence, vers le 18 juin 1889, à Theo"
+    },
+    "it": {
+      "text": "Ora ho un paesaggio con olivi e anche un nuovo studio del cielo stellato.",
+      "cite": "Lettera 782, Saint-Rémy-de-Provence, circa il 18 giugno 1889, a Theo"
+    }
+  },
+  {
+    "id": "monet1865",
+    "de": {
+      "text": "Komm also schnell zu mir, der Wald ist köstlich.",
+      "cite": "Brief an Frédéric Bazille, Chailly, 28. April 1865"
+    },
+    "en": {
+      "text": "Do come quickly and join me, the forest is delicious.",
+      "cite": "Letter to Frédéric Bazille, Chailly, 28 April 1865"
+    },
+    "es": {
+      "text": "Ven pues de prisa a reunirte conmigo, el bosque es delicioso.",
+      "cite": "Carta a Frédéric Bazille, Chailly, 28 de abril de 1865"
+    },
+    "fr": {
+      "text": "Viens donc vite me rejoindre, la forêt est délicieuse.",
+      "cite": "Lettre à Frédéric Bazille, Chailly, 28 avril 1865"
+    },
+    "it": {
+      "text": "Vieni dunque in fretta a raggiungermi, la foresta è deliziosa.",
+      "cite": "Lettera a Frédéric Bazille, Chailly, 28 aprile 1865"
+    }
+  },
+  {
+    "id": "cezanne1905",
+    "de": {
+      "text": "Ich schulde Ihnen die Wahrheit in der Malerei, und ich werde sie Ihnen sagen.",
+      "cite": "Brief an Émile Bernard, Aix, 23. Oktober 1905."
+    },
+    "en": {
+      "text": "I owe you the truth in painting, and I shall tell it to you.",
+      "cite": "Letter to Émile Bernard, Aix, 23 October 1905."
+    },
+    "es": {
+      "text": "Les debo la verdad en la pintura, y se la diré.",
+      "cite": "Carta a Émile Bernard, Aix, 23 de octubre de 1905."
+    },
+    "fr": {
+      "text": "Je vous dois la vérité en peinture et je vous la dirai.",
+      "cite": "Lettre à Émile Bernard, Aix, 23 octobre 1905."
+    },
+    "it": {
+      "text": "Vi devo la verità in pittura e ve la dirò.",
+      "cite": "Lettera a Émile Bernard, Aix, 23 ottobre 1905."
+    }
+  },
+  {
+    "id": "klimt1901",
+    "de": {
+      "text": "Ich sehne mich hinaus wie noch nie.",
+      "cite": "Ansichtskarte an Emilie Flöge, 1. August 1901"
+    },
+    "en": {
+      "text": "I long to get out as never before.",
+      "cite": "Postcard to Emilie Flöge, 1 August 1901"
+    },
+    "es": {
+      "text": "Anhelo salir como nunca.",
+      "cite": "Postal a Emilie Flöge, 1 de agosto de 1901"
+    },
+    "fr": {
+      "text": "J’aspire à partir comme jamais.",
+      "cite": "Carte postale à Emilie Flöge, 1er août 1901"
+    },
+    "it": {
+      "text": "Desidero andare via come mai prima.",
+      "cite": "Cartolina a Emilie Flöge, 1° agosto 1901"
+    }
+  }
+];
   window.I18N = {
     key: KEY,
+    homeQuotes: HOME_QUOTES,
     langs: LANGS,
     names: LANG_NAMES,
     get lang() { return lang; },
