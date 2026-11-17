@@ -8,681 +8,1290 @@
     sunflowers: ['sunflowers','sunflowermunich']
   };
   const PATH_IDS = ['vangogh','monet','hokusai','klimt','anker','hodler','cezanne','hiroshige','renoir','pissarro','turner','rembrandt','sisley','friedrich'];
-  const PATH_MOTIF = {
-    vangogh:'sunflower', monet:'lily', hokusai:'wave', klimt:'mosaic',
-    anker:'house', hodler:'mountain', cezanne:'apple', hiroshige:'bridge',
-    renoir:'rose', pissarro:'tree', turner:'suncloud', rembrandt:'hat',
-    sisley:'river', friedrich:'peak'
+  const CATS = ['flowers','landscapes','water','animals','portraits','city'];
+  const TROPHY = {
+    first:'cup', n10:'cup', n50:'cup',
+    n100:'statue', n250:'statue', n500:'statue',
+    streak3:'victory', streak7:'victory', streak30:'victory',
+    painters3:'badge', painters10:'badge', painters25:'badge',
+    vgDelight:'diploma'
   };
   const GROUPS = [
-    { id:'start', ach:['first','n5','n25','n100','n250','n500'] },
-    { id:'paths', ach:['pathFirst','stationFirst'].concat(PATH_IDS.map(function (id) { return 'path:' + id; })) },
+    { id:'start', ach:['first','n10','n50','n100','n250','n500'] },
+    { id:'paths', ach: PATH_IDS.reduce(function (a, id) { return a.concat(['path:'+id+':b','path:'+id+':s','path:'+id]); }, []) },
     { id:'streak', ach:['streak3','streak7','streak30'] },
-    { id:'collect', ach:['set:lilies','set:fuji','set:sunflowers','cat:flowers','cat:landscapes','cat:water','cat:animals','cat:portraits','cat:city'] },
-    { id:'explore', ach:['painters10','vgDelight'] }
+    { id:'collect', ach:['set:lilies:b','set:lilies:s','set:lilies','set:fuji:b','set:fuji:s','set:fuji','set:sunflowers:b','set:sunflowers:s','set:sunflowers','imp:b','imp:s','imp:g'].concat(CATS.reduce(function (a, c) { return a.concat(['cat:'+c+':b','cat:'+c+':s','cat:'+c+':g']); }, [])) },
+    { id:'explore', ach:['painters3','painters10','painters25','vgDelight'] }
   ];
   const TEXTS = {
   "de": {
-    "title": "Ehrenvitrine",
-    "lead": "Medaillen für Wege, Werkgruppen und Treue.",
-    "date": "Festgehalten am {d}",
+    "title": "Ehrentitel",
+    "lead": "Ehrentitel in Bronze, Silber und Gold für Wege, Werkgruppen und Treue.",
+    "date": "Verliehen am {d}",
     "progress": "{n} von {N}",
     "lockedAria": "Noch nicht erreicht, {n} von {N}",
-    "openHint": "Zur Ehrenvitrine",
+    "lockedHint": "Noch zu tun",
+    "openHint": "Zu den Trophäen",
+    "tier": {
+      "bronze": "Bronze",
+      "silver": "Silber",
+      "gold": "Gold"
+    },
     "groups": {
-      "start": "Anfänge",
+      "start": "Im Atelier",
       "paths": "Malerwege",
       "streak": "Treue",
       "collect": "Sammler",
       "explore": "Entdecker"
     },
+    "pathBronze": {
+      "n": "Erste Station bei {name}",
+      "d": "Schliesse eine Station auf {name} ab.",
+      "t": "Die erste Station bei {name} ist vollendet."
+    },
+    "pathSilver": {
+      "n": "Auf halbem Weg mit {name}",
+      "d": "Male die Hälfte der Bilder auf {name} fertig.",
+      "t": "Der Weg mit {name} ist zur Hälfte geschafft."
+    },
+    "pathGold": {
+      "n": "Den Weg mit {name} vollendet",
+      "d": "Male alle Bilder auf {name} fertig.",
+      "t": "Der Lebensweg mit {name} ist vollständig."
+    },
     "ach": {
       "first": {
-        "n": "Erstes Bild",
-        "d": "Dein erstes fertiges Bild hat seinen Platz im Album gefunden.",
+        "n": "Erster Pinselstrich",
+        "d": "Male dein erstes Bild fertig.",
         "t": "Dein erstes Bild ist fertig."
       },
-      "n5": {
-        "n": "Fünf Meisterwerke",
-        "d": "Fünf Bilder sind fertig gemalt.",
-        "t": "Fünf Meisterwerke in deinem Album."
+      "n10": {
+        "n": "Geübte Hand",
+        "d": "Male zehn Bilder fertig.",
+        "t": "Zehn Meisterwerke in deinem Album."
       },
-      "n25": {
-        "n": "Fünfundzwanzig Meisterwerke",
-        "d": "Fünfundzwanzig Bilder sind fertig gemalt.",
-        "t": "Fünfundzwanzig Meisterwerke."
+      "n50": {
+        "n": "Meister im Atelier",
+        "d": "Male fünfzig Bilder fertig.",
+        "t": "Fünfzig Meisterwerke."
       },
       "n100": {
         "n": "Hundert Meisterwerke",
-        "d": "Hundert Bilder sind fertig gemalt.",
+        "d": "Male hundert Bilder fertig.",
         "t": "Hundert Meisterwerke."
       },
       "n250": {
-        "n": "Zweihundertfünfzig Meisterwerke",
-        "d": "Zweihundertfünfzig Bilder sind fertig gemalt.",
-        "t": "Zweihundertfünfzig Meisterwerke."
+        "n": "Grosses Oeuvre",
+        "d": "Male zweihundertfünfzig Bilder fertig.",
+        "t": "Ein grosses Oeuvre."
       },
       "n500": {
-        "n": "Fünfhundert Meisterwerke",
-        "d": "Fünfhundert Bilder sind fertig gemalt.",
-        "t": "Fünfhundert Meisterwerke."
-      },
-      "pathFirst": {
-        "n": "Erste Station",
-        "d": "Du hast das erste Bild eines Malerwegs fertig gemalt.",
-        "t": "Die erste Station ist eröffnet."
-      },
-      "stationFirst": {
-        "n": "Eine Station vollständig",
-        "d": "Alle Bilder einer Station auf einem Malerweg sind fertig.",
-        "t": "Eine ganze Station ist vollständig."
+        "n": "Ein Lebenswerk",
+        "d": "Male fünfhundert Bilder fertig.",
+        "t": "Ein Lebenswerk im Album."
       },
       "streak3": {
-        "n": "Drei Tage",
-        "d": "An drei Tagen hast du das Bild des Tages fertig gemalt.",
+        "n": "Treuer Besuch",
+        "d": "Male an drei Tagen das Bild des Tages fertig.",
         "t": "Drei Tage mit dem Bild des Tages."
       },
       "streak7": {
-        "n": "Sieben Tage",
-        "d": "An sieben Tagen hast du das Bild des Tages fertig gemalt.",
+        "n": "Eine Woche im Saal",
+        "d": "Male an sieben Tagen das Bild des Tages fertig.",
         "t": "Sieben Tage mit dem Bild des Tages."
       },
       "streak30": {
-        "n": "Dreissig Tage",
-        "d": "An dreissig Tagen hast du das Bild des Tages fertig gemalt.",
+        "n": "Immer im Museum",
+        "d": "Male an dreissig Tagen das Bild des Tages fertig.",
         "t": "Dreissig Tage mit dem Bild des Tages."
       },
+      "set:lilies:b": {
+        "n": "Erste Seerose",
+        "d": "Male eine der Seerosen von Monet fertig.",
+        "t": "Die erste Seerose ist fertig."
+      },
+      "set:lilies:s": {
+        "n": "Kenner der Seerosen",
+        "d": "Male die Hälfte der Seerosen-Bilder fertig.",
+        "t": "Die Hälfte der Seerosen ist fertig."
+      },
       "set:lilies": {
-        "n": "Monets Seerosen",
-        "d": "Claude Monet malte die Seerosen in seinem Garten in Giverny. Du hast alle Seerosen-Bilder in Masilano fertig gemalt.",
+        "n": "Meister der Seerosen",
+        "d": "Male alle Seerosen-Bilder von Monet fertig.",
         "t": "Alle Seerosen von Monet sind fertig."
       },
+      "set:fuji:b": {
+        "n": "Erster Blick auf den Fuji",
+        "d": "Male eine Fuji- oder Wellenansicht fertig.",
+        "t": "Der erste Blick auf den Fuji."
+      },
+      "set:fuji:s": {
+        "n": "Kenner des Fuji",
+        "d": "Male die Hälfte der Fuji- und Wellenblätter fertig.",
+        "t": "Die Hälfte der Fuji-Ansichten ist fertig."
+      },
       "set:fuji": {
-        "n": "Ansichten des Fuji",
-        "d": "Hokusais Folge «36 Ansichten des Berges Fuji» zeigt den Berg bei Wind, Sonne und Sturm. Du hast die Fuji- und Wellenblätter in Masilano fertig gemalt.",
+        "n": "Alle Ansichten des Fuji",
+        "d": "Male alle Fuji- und Wellenblätter fertig.",
         "t": "Die Fuji-Ansichten sind vollständig."
+      },
+      "set:sunflowers:b": {
+        "n": "Erste Sonnenblume",
+        "d": "Male eine der Sonnenblumen von Van Gogh fertig.",
+        "t": "Die erste Sonnenblume ist fertig."
+      },
+      "set:sunflowers:s": {
+        "n": "Unter Sonnenblumen",
+        "d": "Male die Hälfte der Sonnenblumen-Bilder fertig.",
+        "t": "Unter Van Goghs Sonnenblumen."
       },
       "set:sunflowers": {
         "n": "Van Goghs Sonnenblumen",
-        "d": "Van Gogh malte mehrere Sonnenblumen-Stillleben in Arles. Du hast die Sonnenblumen-Bilder in Masilano fertig gemalt.",
+        "d": "Male alle Sonnenblumen-Bilder von Van Gogh fertig.",
         "t": "Die Sonnenblumen sind fertig."
       },
-      "cat:flowers": {
-        "n": "Blumen",
-        "d": "Du hast alle Bilder der Kategorie Blumen in der Galerie fertig gemalt.",
+      "cat:flowers:b": {
+        "n": "Erste Blüte",
+        "d": "Male ein Bild der Kategorie Blumen fertig.",
+        "t": "Die erste Blüte ist gemalt."
+      },
+      "cat:flowers:s": {
+        "n": "Blütenkenner",
+        "d": "Male die Hälfte der Blumen-Bilder fertig.",
+        "t": "Die Hälfte der Blumen ist fertig."
+      },
+      "cat:flowers:g": {
+        "n": "Garten voller Blüten",
+        "d": "Male alle Bilder der Kategorie Blumen fertig.",
         "t": "Die Kategorie Blumen ist vollständig."
       },
-      "cat:landscapes": {
-        "n": "Landschaften",
-        "d": "Du hast alle Bilder der Kategorie Landschaften in der Galerie fertig gemalt.",
+      "cat:landscapes:b": {
+        "n": "Erste Landschaft",
+        "d": "Male ein Bild der Kategorie Landschaften fertig.",
+        "t": "Die erste Landschaft ist gemalt."
+      },
+      "cat:landscapes:s": {
+        "n": "Weite Wege",
+        "d": "Male die Hälfte der Landschaften fertig.",
+        "t": "Die Hälfte der Landschaften ist fertig."
+      },
+      "cat:landscapes:g": {
+        "n": "Weite Landschaften",
+        "d": "Male alle Bilder der Kategorie Landschaften fertig.",
         "t": "Die Kategorie Landschaften ist vollständig."
       },
-      "cat:water": {
+      "cat:water:b": {
+        "n": "Am Ufer",
+        "d": "Male ein Bild der Kategorie Meer und Wasser fertig.",
+        "t": "Das erste Wasserbild ist gemalt."
+      },
+      "cat:water:s": {
+        "n": "Kenner der Wasser",
+        "d": "Male die Hälfte der Wasser-Bilder fertig.",
+        "t": "Die Hälfte der Wasser-Bilder ist fertig."
+      },
+      "cat:water:g": {
         "n": "Meer und Wasser",
-        "d": "Du hast alle Bilder der Kategorie Meer und Wasser in der Galerie fertig gemalt.",
+        "d": "Male alle Bilder der Kategorie Meer und Wasser fertig.",
         "t": "Die Kategorie Meer und Wasser ist vollständig."
       },
-      "cat:animals": {
-        "n": "Tiere",
-        "d": "Du hast alle Bilder der Kategorie Tiere in der Galerie fertig gemalt.",
+      "cat:animals:b": {
+        "n": "Erstes Tierbild",
+        "d": "Male ein Bild der Kategorie Tiere fertig.",
+        "t": "Das erste Tierbild ist gemalt."
+      },
+      "cat:animals:s": {
+        "n": "Tierkenner",
+        "d": "Male die Hälfte der Tierbilder fertig.",
+        "t": "Die Hälfte der Tierbilder ist fertig."
+      },
+      "cat:animals:g": {
+        "n": "Alle Tiere",
+        "d": "Male alle Bilder der Kategorie Tiere fertig.",
         "t": "Die Kategorie Tiere ist vollständig."
       },
-      "cat:portraits": {
-        "n": "Porträts",
-        "d": "Du hast alle Bilder der Kategorie Porträts in der Galerie fertig gemalt.",
+      "cat:portraits:b": {
+        "n": "Erstes Bildnis",
+        "d": "Male ein Bild der Kategorie Porträts fertig.",
+        "t": "Das erste Bildnis ist gemalt."
+      },
+      "cat:portraits:s": {
+        "n": "Kenner der Bildnisse",
+        "d": "Male die Hälfte der Porträts fertig.",
+        "t": "Die Hälfte der Bildnisse ist fertig."
+      },
+      "cat:portraits:g": {
+        "n": "Saal der Bildnisse",
+        "d": "Male alle Bilder der Kategorie Porträts fertig.",
         "t": "Die Kategorie Porträts ist vollständig."
       },
-      "cat:city": {
+      "cat:city:b": {
+        "n": "Erste Stadtansicht",
+        "d": "Male ein Bild der Kategorie Stadt und Architektur fertig.",
+        "t": "Die erste Stadtansicht ist gemalt."
+      },
+      "cat:city:s": {
+        "n": "Durch die Städte",
+        "d": "Male die Hälfte der Stadtansichten fertig.",
+        "t": "Die Hälfte der Stadtansichten ist fertig."
+      },
+      "cat:city:g": {
         "n": "Stadt und Architektur",
-        "d": "Du hast alle Bilder der Kategorie Stadt und Architektur in der Galerie fertig gemalt.",
+        "d": "Male alle Bilder der Kategorie Stadt und Architektur fertig.",
         "t": "Die Kategorie Stadt und Architektur ist vollständig."
       },
+      "imp:b": {
+        "n": "Erstes Licht",
+        "d": "Male ein Bild der Impressionisten fertig.",
+        "t": "Das erste impressionistische Bild ist fertig."
+      },
+      "imp:s": {
+        "n": "Kenner des Impressionismus",
+        "d": "Male die Hälfte der impressionistischen Bilder fertig.",
+        "t": "Die Hälfte der impressionistischen Bilder ist fertig."
+      },
+      "imp:g": {
+        "n": "Im Licht der Impressionisten",
+        "d": "Male alle Bilder der Impressionisten fertig.",
+        "t": "Die impressionistischen Bilder sind vollständig."
+      },
+      "painters3": {
+        "n": "Drei Meister",
+        "d": "Male Bilder von drei verschiedenen Malern fertig.",
+        "t": "Bilder von drei Malern sind fertig."
+      },
       "painters10": {
-        "n": "Zehn Maler",
-        "d": "Du hast Bilder von zehn verschiedenen Malern fertig gemalt.",
+        "n": "Kenner der Schulen",
+        "d": "Male Bilder von zehn verschiedenen Malern fertig.",
         "t": "Bilder von zehn Malern sind fertig."
       },
-      "vgDelight": {
-        "n": "Musik und Wort",
-        "d": "Auf Van Goghs Lebensweg hast du die Musik seiner Zeit oder das Vorlesen genutzt.",
-        "t": "Musik oder Vorlesen auf Van Goghs Weg."
+      "painters25": {
+        "n": "Weites Haus",
+        "d": "Male Bilder von fünfundzwanzig verschiedenen Malern fertig.",
+        "t": "Bilder von fünfundzwanzig Malern sind fertig."
       },
-      "pathDone": {
-        "d": "Du hast alle Bilder auf diesem Lebensweg fertig gemalt.",
-        "t": "Ein Lebensweg ist vollständig."
+      "vgDelight": {
+        "n": "Klang der Briefe",
+        "d": "Nutze auf Van Goghs Lebensweg die Musik seiner Zeit oder das Vorlesen.",
+        "t": "Musik oder Vorlesen auf Van Goghs Weg."
       }
     }
   },
   "en": {
-    "title": "Cabinet of Honour",
-    "lead": "Medals for paths, groups of works, and loyalty.",
-    "date": "Recorded on {d}",
+    "title": "Honorary titles",
+    "lead": "Honorary titles in bronze, silver and gold for paths, groups of works, and loyalty.",
+    "date": "Awarded on {d}",
     "progress": "{n} of {N}",
     "lockedAria": "Not yet earned, {n} of {N}",
-    "openHint": "Open the cabinet of honour",
+    "lockedHint": "Still to do",
+    "openHint": "Open the trophies",
+    "tier": {
+      "bronze": "Bronze",
+      "silver": "Silver",
+      "gold": "Gold"
+    },
     "groups": {
-      "start": "Beginnings",
+      "start": "In the studio",
       "paths": "Painters’ paths",
       "streak": "Loyalty",
       "collect": "Collecting",
       "explore": "Discovery"
     },
+    "pathBronze": {
+      "n": "First station with {name}",
+      "d": "Finish one station on {name}.",
+      "t": "The first station with {name} is complete."
+    },
+    "pathSilver": {
+      "n": "Halfway with {name}",
+      "d": "Finish half of the pictures on {name}.",
+      "t": "The path with {name} is halfway done."
+    },
+    "pathGold": {
+      "n": "The path with {name} completed",
+      "d": "Finish every picture on {name}.",
+      "t": "The life journey with {name} is complete."
+    },
     "ach": {
       "first": {
-        "n": "First picture",
-        "d": "Your first finished picture has found its place in the album.",
+        "n": "First brushstroke",
+        "d": "Finish your first picture.",
         "t": "Your first picture is finished."
       },
-      "n5": {
-        "n": "Five masterpieces",
-        "d": "Five pictures have been coloured.",
-        "t": "Five masterpieces in your album."
+      "n10": {
+        "n": "A practised hand",
+        "d": "Finish ten pictures.",
+        "t": "Ten masterpieces in your album."
       },
-      "n25": {
-        "n": "Twenty-five masterpieces",
-        "d": "Twenty-five pictures have been coloured.",
-        "t": "Twenty-five masterpieces."
+      "n50": {
+        "n": "Master of the studio",
+        "d": "Finish fifty pictures.",
+        "t": "Fifty masterpieces."
       },
       "n100": {
         "n": "A hundred masterpieces",
-        "d": "A hundred pictures have been coloured.",
+        "d": "Finish a hundred pictures.",
         "t": "A hundred masterpieces."
       },
       "n250": {
-        "n": "Two hundred and fifty masterpieces",
-        "d": "Two hundred and fifty pictures have been coloured.",
-        "t": "Two hundred and fifty masterpieces."
+        "n": "A grand oeuvre",
+        "d": "Finish two hundred and fifty pictures.",
+        "t": "A grand oeuvre."
       },
       "n500": {
-        "n": "Five hundred masterpieces",
-        "d": "Five hundred pictures have been coloured.",
-        "t": "Five hundred masterpieces."
-      },
-      "pathFirst": {
-        "n": "First station",
-        "d": "You have finished the first picture on a painter’s path.",
-        "t": "The first station is open."
-      },
-      "stationFirst": {
-        "n": "A station completed",
-        "d": "Every picture in a station on a painter’s path is finished.",
-        "t": "A whole station is complete."
+        "n": "A life’s work",
+        "d": "Finish five hundred pictures.",
+        "t": "A life’s work in the album."
       },
       "streak3": {
-        "n": "Three days",
-        "d": "You have finished the picture of the day on three days.",
-        "t": "Three days with the picture of the day."
+        "n": "A loyal visit",
+        "d": "Finish the painting of the day on three days.",
+        "t": "Three days with the painting of the day."
       },
       "streak7": {
-        "n": "Seven days",
-        "d": "You have finished the picture of the day on seven days.",
-        "t": "Seven days with the picture of the day."
+        "n": "A week in the hall",
+        "d": "Finish the painting of the day on seven days.",
+        "t": "Seven days with the painting of the day."
       },
       "streak30": {
-        "n": "Thirty days",
-        "d": "You have finished the picture of the day on thirty days.",
-        "t": "Thirty days with the picture of the day."
+        "n": "Always at the museum",
+        "d": "Finish the painting of the day on thirty days.",
+        "t": "Thirty days with the painting of the day."
+      },
+      "set:lilies:b": {
+        "n": "First water lily",
+        "d": "Finish one of Monet’s water lilies.",
+        "t": "The first water lily is finished."
+      },
+      "set:lilies:s": {
+        "n": "Connoisseur of the lilies",
+        "d": "Finish half of the water-lily pictures.",
+        "t": "Half of the water lilies are finished."
       },
       "set:lilies": {
-        "n": "Monet’s Water Lilies",
-        "d": "Claude Monet painted the water lilies in his garden at Giverny. You have finished every water-lily picture in Masilano.",
+        "n": "Master of the water lilies",
+        "d": "Finish all of Monet’s water-lily pictures.",
         "t": "All of Monet’s water lilies are finished."
       },
+      "set:fuji:b": {
+        "n": "First view of Fuji",
+        "d": "Finish one Fuji or wave print.",
+        "t": "The first view of Fuji."
+      },
+      "set:fuji:s": {
+        "n": "Connoisseur of Fuji",
+        "d": "Finish half of the Fuji and wave prints.",
+        "t": "Half of the Fuji views are finished."
+      },
       "set:fuji": {
-        "n": "Views of Mount Fuji",
-        "d": "Hokusai’s series «36 Views of Mount Fuji» shows the mountain in wind, sun and storm. You have finished the Fuji and wave prints in Masilano.",
-        "t": "The views of Mount Fuji are complete."
+        "n": "All views of Fuji",
+        "d": "Finish all of the Fuji and wave prints.",
+        "t": "The Fuji views are complete."
+      },
+      "set:sunflowers:b": {
+        "n": "First sunflower",
+        "d": "Finish one of Van Gogh’s sunflowers.",
+        "t": "The first sunflower is finished."
+      },
+      "set:sunflowers:s": {
+        "n": "Among sunflowers",
+        "d": "Finish half of the sunflower pictures.",
+        "t": "Among Van Gogh’s sunflowers."
       },
       "set:sunflowers": {
-        "n": "Van Gogh’s Sunflowers",
-        "d": "Van Gogh painted several sunflower still lifes in Arles. You have finished the sunflower pictures in Masilano.",
+        "n": "Van Gogh’s sunflowers",
+        "d": "Finish all of Van Gogh’s sunflower pictures.",
         "t": "The sunflowers are finished."
       },
-      "cat:flowers": {
-        "n": "Flowers",
-        "d": "You have finished every picture in the Flowers category in the gallery.",
+      "cat:flowers:b": {
+        "n": "First blossom",
+        "d": "Finish one picture in the Flowers category.",
+        "t": "The first blossom is painted."
+      },
+      "cat:flowers:s": {
+        "n": "Connoisseur of blossoms",
+        "d": "Finish half of the flower pictures.",
+        "t": "Half of the flowers are finished."
+      },
+      "cat:flowers:g": {
+        "n": "A garden of blossoms",
+        "d": "Finish every picture in the Flowers category.",
         "t": "The Flowers category is complete."
       },
-      "cat:landscapes": {
-        "n": "Landscapes",
-        "d": "You have finished every picture in the Landscapes category in the gallery.",
+      "cat:landscapes:b": {
+        "n": "First landscape",
+        "d": "Finish one picture in the Landscapes category.",
+        "t": "The first landscape is painted."
+      },
+      "cat:landscapes:s": {
+        "n": "Open roads",
+        "d": "Finish half of the landscapes.",
+        "t": "Half of the landscapes are finished."
+      },
+      "cat:landscapes:g": {
+        "n": "Open landscapes",
+        "d": "Finish every picture in the Landscapes category.",
         "t": "The Landscapes category is complete."
       },
-      "cat:water": {
-        "n": "Sea and water",
-        "d": "You have finished every picture in the Sea and water category in the gallery.",
-        "t": "The Sea and water category is complete."
+      "cat:water:b": {
+        "n": "At the shore",
+        "d": "Finish one picture in the Sea and Water category.",
+        "t": "The first water picture is painted."
       },
-      "cat:animals": {
-        "n": "Animals",
-        "d": "You have finished every picture in the Animals category in the gallery.",
+      "cat:water:s": {
+        "n": "Connoisseur of the waters",
+        "d": "Finish half of the water pictures.",
+        "t": "Half of the water pictures are finished."
+      },
+      "cat:water:g": {
+        "n": "Sea and water",
+        "d": "Finish every picture in the Sea and Water category.",
+        "t": "The Sea and Water category is complete."
+      },
+      "cat:animals:b": {
+        "n": "First animal picture",
+        "d": "Finish one picture in the Animals category.",
+        "t": "The first animal picture is painted."
+      },
+      "cat:animals:s": {
+        "n": "Connoisseur of animals",
+        "d": "Finish half of the animal pictures.",
+        "t": "Half of the animal pictures are finished."
+      },
+      "cat:animals:g": {
+        "n": "All the animals",
+        "d": "Finish every picture in the Animals category.",
         "t": "The Animals category is complete."
       },
-      "cat:portraits": {
-        "n": "Portraits",
-        "d": "You have finished every picture in the Portraits category in the gallery.",
+      "cat:portraits:b": {
+        "n": "First likeness",
+        "d": "Finish one picture in the Portraits category.",
+        "t": "The first likeness is painted."
+      },
+      "cat:portraits:s": {
+        "n": "Connoisseur of likenesses",
+        "d": "Finish half of the portraits.",
+        "t": "Half of the likenesses are finished."
+      },
+      "cat:portraits:g": {
+        "n": "Hall of likenesses",
+        "d": "Finish every picture in the Portraits category.",
         "t": "The Portraits category is complete."
       },
-      "cat:city": {
+      "cat:city:b": {
+        "n": "First city view",
+        "d": "Finish one picture in the City and Architecture category.",
+        "t": "The first city view is painted."
+      },
+      "cat:city:s": {
+        "n": "Through the cities",
+        "d": "Finish half of the city views.",
+        "t": "Half of the city views are finished."
+      },
+      "cat:city:g": {
         "n": "City and architecture",
-        "d": "You have finished every picture in the City and architecture category in the gallery.",
-        "t": "The City and architecture category is complete."
+        "d": "Finish every picture in the City and Architecture category.",
+        "t": "The City and Architecture category is complete."
+      },
+      "imp:b": {
+        "n": "First light",
+        "d": "Finish one Impressionist picture.",
+        "t": "The first Impressionist picture is finished."
+      },
+      "imp:s": {
+        "n": "Connoisseur of Impressionism",
+        "d": "Finish half of the Impressionist pictures.",
+        "t": "Half of the Impressionist pictures are finished."
+      },
+      "imp:g": {
+        "n": "In the light of the Impressionists",
+        "d": "Finish all of the Impressionist pictures.",
+        "t": "The Impressionist pictures are complete."
+      },
+      "painters3": {
+        "n": "Three masters",
+        "d": "Finish pictures by three different painters.",
+        "t": "Pictures by three painters are finished."
       },
       "painters10": {
-        "n": "Ten painters",
-        "d": "You have finished pictures by ten different painters.",
+        "n": "Connoisseur of the schools",
+        "d": "Finish pictures by ten different painters.",
         "t": "Pictures by ten painters are finished."
       },
-      "vgDelight": {
-        "n": "Music and words",
-        "d": "On Van Gogh’s path you have used the music of his time or the read-aloud.",
-        "t": "Music or read-aloud on Van Gogh’s path."
+      "painters25": {
+        "n": "A wide house",
+        "d": "Finish pictures by twenty-five different painters.",
+        "t": "Pictures by twenty-five painters are finished."
       },
-      "pathDone": {
-        "d": "You have finished every picture on this life path.",
-        "t": "A life path is complete."
+      "vgDelight": {
+        "n": "The sound of letters",
+        "d": "On Van Gogh’s life journey, use the music of his time or the reading aloud.",
+        "t": "Music or reading on Van Gogh’s path."
       }
     }
   },
   "es": {
-    "title": "Vitrina de honor",
-    "lead": "Medallas por caminos, grupos de obras y constancia.",
-    "date": "Registrado el {d}",
+    "title": "Títulos de honor",
+    "lead": "Títulos de honor en bronce, plata y oro por caminos, grupos de obras y fidelidad.",
+    "date": "Concedido el {d}",
     "progress": "{n} de {N}",
-    "lockedAria": "Aún no conseguida, {n} de {N}",
-    "openHint": "Abrir la vitrina de honor",
+    "lockedAria": "Aún no alcanzado, {n} de {N}",
+    "lockedHint": "Aún por hacer",
+    "openHint": "Abrir los trofeos",
+    "tier": {
+      "bronze": "Bronce",
+      "silver": "Plata",
+      "gold": "Oro"
+    },
     "groups": {
-      "start": "Comienzos",
-      "paths": "Caminos de pintores",
-      "streak": "Constancia",
+      "start": "En el taller",
+      "paths": "Caminos de los pintores",
+      "streak": "Fidelidad",
       "collect": "Colección",
       "explore": "Descubrimiento"
     },
+    "pathBronze": {
+      "n": "Primera estación con {name}",
+      "d": "Termina una estación en {name}.",
+      "t": "La primera estación con {name} está completa."
+    },
+    "pathSilver": {
+      "n": "A mitad de camino con {name}",
+      "d": "Termina la mitad de los cuadros en {name}.",
+      "t": "El camino con {name} está a mitad."
+    },
+    "pathGold": {
+      "n": "El camino con {name} concluido",
+      "d": "Termina todos los cuadros en {name}.",
+      "t": "El camino de vida con {name} está completo."
+    },
     "ach": {
       "first": {
-        "n": "Primer cuadro",
-        "d": "Tu primer cuadro terminado ha encontrado su lugar en el álbum.",
+        "n": "Primera pincelada",
+        "d": "Termina tu primer cuadro.",
         "t": "Tu primer cuadro está terminado."
       },
-      "n5": {
-        "n": "Cinco obras maestras",
-        "d": "Cinco cuadros están terminados.",
-        "t": "Cinco obras maestras en tu álbum."
+      "n10": {
+        "n": "Mano ejercitada",
+        "d": "Termina diez cuadros.",
+        "t": "Diez obras maestras en tu álbum."
       },
-      "n25": {
-        "n": "Veinticinco obras maestras",
-        "d": "Veinticinco cuadros están terminados.",
-        "t": "Veinticinco obras maestras."
+      "n50": {
+        "n": "Maestro del taller",
+        "d": "Termina cincuenta cuadros.",
+        "t": "Cincuenta obras maestras."
       },
       "n100": {
         "n": "Cien obras maestras",
-        "d": "Cien cuadros están terminados.",
+        "d": "Termina cien cuadros.",
         "t": "Cien obras maestras."
       },
       "n250": {
-        "n": "Doscientas cincuenta obras maestras",
-        "d": "Doscientos cincuenta cuadros están terminados.",
-        "t": "Doscientas cincuenta obras maestras."
+        "n": "Gran obra",
+        "d": "Termina doscientos cincuenta cuadros.",
+        "t": "Una gran obra."
       },
       "n500": {
-        "n": "Quinientas obras maestras",
-        "d": "Quinientos cuadros están terminados.",
-        "t": "Quinientas obras maestras."
-      },
-      "pathFirst": {
-        "n": "Primera estación",
-        "d": "Has terminado el primer cuadro de un camino de pintor.",
-        "t": "La primera estación está abierta."
-      },
-      "stationFirst": {
-        "n": "Una estación completa",
-        "d": "Todos los cuadros de una estación en un camino están terminados.",
-        "t": "Una estación entera está completa."
+        "n": "Una obra de una vida",
+        "d": "Termina quinientos cuadros.",
+        "t": "Una obra de una vida en el álbum."
       },
       "streak3": {
-        "n": "Tres días",
-        "d": "Has terminado el cuadro del día en tres días.",
+        "n": "Visita leal",
+        "d": "Termina el cuadro del día en tres días.",
         "t": "Tres días con el cuadro del día."
       },
       "streak7": {
-        "n": "Siete días",
-        "d": "Has terminado el cuadro del día en siete días.",
+        "n": "Una semana en la sala",
+        "d": "Termina el cuadro del día en siete días.",
         "t": "Siete días con el cuadro del día."
       },
       "streak30": {
-        "n": "Treinta días",
-        "d": "Has terminado el cuadro del día en treinta días.",
+        "n": "Siempre en el museo",
+        "d": "Termina el cuadro del día en treinta días.",
         "t": "Treinta días con el cuadro del día."
       },
+      "set:lilies:b": {
+        "n": "Primer nenúfar",
+        "d": "Termina uno de los nenúfares de Monet.",
+        "t": "El primer nenúfar está terminado."
+      },
+      "set:lilies:s": {
+        "n": "Conocedor de los nenúfares",
+        "d": "Termina la mitad de los nenúfares.",
+        "t": "La mitad de los nenúfares está terminada."
+      },
       "set:lilies": {
-        "n": "Los nenúfares de Monet",
-        "d": "Claude Monet pintó los nenúfares en su jardín de Giverny. Has terminado todos los nenúfares de Masilano.",
+        "n": "Maestro de los nenúfares",
+        "d": "Termina todos los nenúfares de Monet.",
         "t": "Todos los nenúfares de Monet están terminados."
       },
+      "set:fuji:b": {
+        "n": "Primera vista del Fuji",
+        "d": "Termina una vista del Fuji o de las olas.",
+        "t": "La primera vista del Fuji."
+      },
+      "set:fuji:s": {
+        "n": "Conocedor del Fuji",
+        "d": "Termina la mitad de las vistas del Fuji y de las olas.",
+        "t": "La mitad de las vistas del Fuji está terminada."
+      },
       "set:fuji": {
-        "n": "Vistas del Fuji",
-        "d": "La serie de Hokusai «36 vistas del monte Fuji» muestra la montaña con viento, sol y tormenta. Has terminado las estampas del Fuji y de la ola en Masilano.",
+        "n": "Todas las vistas del Fuji",
+        "d": "Termina todas las vistas del Fuji y de las olas.",
         "t": "Las vistas del Fuji están completas."
+      },
+      "set:sunflowers:b": {
+        "n": "Primer girasol",
+        "d": "Termina uno de los girasoles de Van Gogh.",
+        "t": "El primer girasol está terminado."
+      },
+      "set:sunflowers:s": {
+        "n": "Entre girasoles",
+        "d": "Termina la mitad de los girasoles.",
+        "t": "Entre los girasoles de Van Gogh."
       },
       "set:sunflowers": {
         "n": "Los girasoles de Van Gogh",
-        "d": "Van Gogh pintó varios bodegones de girasoles en Arlés. Has terminado los girasoles de Masilano.",
+        "d": "Termina todos los girasoles de Van Gogh.",
         "t": "Los girasoles están terminados."
       },
-      "cat:flowers": {
-        "n": "Flores",
-        "d": "Has terminado todos los cuadros de la categoría Flores en la galería.",
+      "cat:flowers:b": {
+        "n": "Primera flor",
+        "d": "Termina un cuadro de la categoría Flores.",
+        "t": "La primera flor está pintada."
+      },
+      "cat:flowers:s": {
+        "n": "Conocedor de las flores",
+        "d": "Termina la mitad de los cuadros de flores.",
+        "t": "La mitad de las flores está terminada."
+      },
+      "cat:flowers:g": {
+        "n": "Jardín en flor",
+        "d": "Termina todos los cuadros de la categoría Flores.",
         "t": "La categoría Flores está completa."
       },
-      "cat:landscapes": {
-        "n": "Paisajes",
-        "d": "Has terminado todos los cuadros de la categoría Paisajes en la galería.",
+      "cat:landscapes:b": {
+        "n": "Primer paisaje",
+        "d": "Termina un cuadro de la categoría Paisajes.",
+        "t": "El primer paisaje está pintado."
+      },
+      "cat:landscapes:s": {
+        "n": "Caminos abiertos",
+        "d": "Termina la mitad de los paisajes.",
+        "t": "La mitad de los paisajes está terminada."
+      },
+      "cat:landscapes:g": {
+        "n": "Paisajes abiertos",
+        "d": "Termina todos los cuadros de la categoría Paisajes.",
         "t": "La categoría Paisajes está completa."
       },
-      "cat:water": {
+      "cat:water:b": {
+        "n": "A orillas del agua",
+        "d": "Termina un cuadro de la categoría Mar y agua.",
+        "t": "El primer cuadro de agua está pintado."
+      },
+      "cat:water:s": {
+        "n": "Conocedor de las aguas",
+        "d": "Termina la mitad de los cuadros de agua.",
+        "t": "La mitad de los cuadros de agua está terminada."
+      },
+      "cat:water:g": {
         "n": "Mar y agua",
-        "d": "Has terminado todos los cuadros de la categoría Mar y agua en la galería.",
+        "d": "Termina todos los cuadros de la categoría Mar y agua.",
         "t": "La categoría Mar y agua está completa."
       },
-      "cat:animals": {
-        "n": "Animales",
-        "d": "Has terminado todos los cuadros de la categoría Animales en la galería.",
+      "cat:animals:b": {
+        "n": "Primer animal",
+        "d": "Termina un cuadro de la categoría Animales.",
+        "t": "El primer animal está pintado."
+      },
+      "cat:animals:s": {
+        "n": "Conocedor de los animales",
+        "d": "Termina la mitad de los cuadros de animales.",
+        "t": "La mitad de los animales está terminada."
+      },
+      "cat:animals:g": {
+        "n": "Todos los animales",
+        "d": "Termina todos los cuadros de la categoría Animales.",
         "t": "La categoría Animales está completa."
       },
-      "cat:portraits": {
-        "n": "Retratos",
-        "d": "Has terminado todos los cuadros de la categoría Retratos en la galería.",
+      "cat:portraits:b": {
+        "n": "Primer retrato",
+        "d": "Termina un cuadro de la categoría Retratos.",
+        "t": "El primer retrato está pintado."
+      },
+      "cat:portraits:s": {
+        "n": "Conocedor de los retratos",
+        "d": "Termina la mitad de los retratos.",
+        "t": "La mitad de los retratos está terminada."
+      },
+      "cat:portraits:g": {
+        "n": "Sala de retratos",
+        "d": "Termina todos los cuadros de la categoría Retratos.",
         "t": "La categoría Retratos está completa."
       },
-      "cat:city": {
+      "cat:city:b": {
+        "n": "Primera vista urbana",
+        "d": "Termina un cuadro de la categoría Ciudad y arquitectura.",
+        "t": "La primera vista urbana está pintada."
+      },
+      "cat:city:s": {
+        "n": "Por las ciudades",
+        "d": "Termina la mitad de las vistas urbanas.",
+        "t": "La mitad de las vistas urbanas está terminada."
+      },
+      "cat:city:g": {
         "n": "Ciudad y arquitectura",
-        "d": "Has terminado todos los cuadros de la categoría Ciudad y arquitectura en la galería.",
+        "d": "Termina todos los cuadros de la categoría Ciudad y arquitectura.",
         "t": "La categoría Ciudad y arquitectura está completa."
       },
+      "imp:b": {
+        "n": "Primera luz",
+        "d": "Termina un cuadro impresionista.",
+        "t": "El primer cuadro impresionista está terminado."
+      },
+      "imp:s": {
+        "n": "Conocedor del impresionismo",
+        "d": "Termina la mitad de los cuadros impresionistas.",
+        "t": "La mitad de los cuadros impresionistas está terminada."
+      },
+      "imp:g": {
+        "n": "A la luz de los impresionistas",
+        "d": "Termina todos los cuadros impresionistas.",
+        "t": "Los cuadros impresionistas están completos."
+      },
+      "painters3": {
+        "n": "Tres maestros",
+        "d": "Termina cuadros de tres pintores distintos.",
+        "t": "Hay cuadros de tres pintores terminados."
+      },
       "painters10": {
-        "n": "Diez pintores",
-        "d": "Has terminado cuadros de diez pintores distintos.",
-        "t": "Cuadros de diez pintores están terminados."
+        "n": "Conocedor de las escuelas",
+        "d": "Termina cuadros de diez pintores distintos.",
+        "t": "Hay cuadros de diez pintores terminados."
+      },
+      "painters25": {
+        "n": "Casa vasta",
+        "d": "Termina cuadros de veinticinco pintores distintos.",
+        "t": "Hay cuadros de veinticinco pintores terminados."
       },
       "vgDelight": {
-        "n": "Música y palabra",
-        "d": "En el camino de Van Gogh has usado la música de su tiempo o la lectura en voz alta.",
+        "n": "El sonido de las cartas",
+        "d": "En el camino de Van Gogh, usa la música de su tiempo o la lectura en voz alta.",
         "t": "Música o lectura en el camino de Van Gogh."
-      },
-      "pathDone": {
-        "d": "Has terminado todos los cuadros de este camino de vida.",
-        "t": "Un camino de vida está completo."
       }
     }
   },
   "fr": {
-    "title": "Vitrine d’honneur",
-    "lead": "Médailles pour les chemins, les groupes d’œuvres et la fidélité.",
-    "date": "Enregistré le {d}",
+    "title": "Titres d’honneur",
+    "lead": "Titres d’honneur en bronze, argent et or pour les parcours, les groupes d’œuvres et la fidélité.",
+    "date": "Décerné le {d}",
     "progress": "{n} sur {N}",
-    "lockedAria": "Pas encore obtenue, {n} sur {N}",
-    "openHint": "Ouvrir la vitrine d’honneur",
+    "lockedAria": "Pas encore obtenu, {n} sur {N}",
+    "lockedHint": "Encore à faire",
+    "openHint": "Ouvrir les trophées",
+    "tier": {
+      "bronze": "Bronze",
+      "silver": "Argent",
+      "gold": "Or"
+    },
     "groups": {
-      "start": "Commencements",
-      "paths": "Chemins de peintres",
+      "start": "À l’atelier",
+      "paths": "Parcours des peintres",
       "streak": "Fidélité",
       "collect": "Collection",
       "explore": "Découverte"
     },
+    "pathBronze": {
+      "n": "Première station avec {name}",
+      "d": "Termine une station sur {name}.",
+      "t": "La première station avec {name} est achevée."
+    },
+    "pathSilver": {
+      "n": "À mi-chemin avec {name}",
+      "d": "Termine la moitié des tableaux sur {name}.",
+      "t": "Le parcours avec {name} est à mi-chemin."
+    },
+    "pathGold": {
+      "n": "Le parcours avec {name} achevé",
+      "d": "Termine tous les tableaux sur {name}.",
+      "t": "Le parcours de vie avec {name} est complet."
+    },
     "ach": {
       "first": {
-        "n": "Premier tableau",
-        "d": "Ton premier tableau achevé a trouvé sa place dans l’album.",
-        "t": "Ton premier tableau est achevé."
+        "n": "Premier coup de pinceau",
+        "d": "Termine ton premier tableau.",
+        "t": "Ton premier tableau est terminé."
       },
-      "n5": {
-        "n": "Cinq chefs-d’œuvre",
-        "d": "Cinq tableaux sont achevés.",
-        "t": "Cinq chefs-d’œuvre dans ton album."
+      "n10": {
+        "n": "Main exercée",
+        "d": "Termine dix tableaux.",
+        "t": "Dix chefs-d’œuvre dans ton album."
       },
-      "n25": {
-        "n": "Vingt-cinq chefs-d’œuvre",
-        "d": "Vingt-cinq tableaux sont achevés.",
-        "t": "Vingt-cinq chefs-d’œuvre."
+      "n50": {
+        "n": "Maître de l’atelier",
+        "d": "Termine cinquante tableaux.",
+        "t": "Cinquante chefs-d’œuvre."
       },
       "n100": {
         "n": "Cent chefs-d’œuvre",
-        "d": "Cent tableaux sont achevés.",
+        "d": "Termine cent tableaux.",
         "t": "Cent chefs-d’œuvre."
       },
       "n250": {
-        "n": "Deux cent cinquante chefs-d’œuvre",
-        "d": "Deux cent cinquante tableaux sont achevés.",
-        "t": "Deux cent cinquante chefs-d’œuvre."
+        "n": "Grand œuvre",
+        "d": "Termine deux cent cinquante tableaux.",
+        "t": "Un grand œuvre."
       },
       "n500": {
-        "n": "Cinq cents chefs-d’œuvre",
-        "d": "Cinq cents tableaux sont achevés.",
-        "t": "Cinq cents chefs-d’œuvre."
-      },
-      "pathFirst": {
-        "n": "Première station",
-        "d": "Tu as achevé le premier tableau d’un chemin de peintre.",
-        "t": "La première station est ouverte."
-      },
-      "stationFirst": {
-        "n": "Une station complète",
-        "d": "Tous les tableaux d’une station sur un chemin sont achevés.",
-        "t": "Toute une station est complète."
+        "n": "Une œuvre d’une vie",
+        "d": "Termine cinq cents tableaux.",
+        "t": "Une œuvre d’une vie dans l’album."
       },
       "streak3": {
-        "n": "Trois jours",
-        "d": "Tu as achevé le tableau du jour à trois reprises.",
+        "n": "Visite fidèle",
+        "d": "Termine le tableau du jour pendant trois jours.",
         "t": "Trois jours avec le tableau du jour."
       },
       "streak7": {
-        "n": "Sept jours",
-        "d": "Tu as achevé le tableau du jour à sept reprises.",
+        "n": "Une semaine dans la salle",
+        "d": "Termine le tableau du jour pendant sept jours.",
         "t": "Sept jours avec le tableau du jour."
       },
       "streak30": {
-        "n": "Trente jours",
-        "d": "Tu as achevé le tableau du jour à trente reprises.",
+        "n": "Toujours au musée",
+        "d": "Termine le tableau du jour pendant trente jours.",
         "t": "Trente jours avec le tableau du jour."
       },
+      "set:lilies:b": {
+        "n": "Premier nymphéa",
+        "d": "Termine l’un des nymphéas de Monet.",
+        "t": "Le premier nymphéa est terminé."
+      },
+      "set:lilies:s": {
+        "n": "Connaisseur des nymphéas",
+        "d": "Termine la moitié des nymphéas.",
+        "t": "La moitié des nymphéas est terminée."
+      },
       "set:lilies": {
-        "n": "Les Nymphéas de Monet",
-        "d": "Claude Monet a peint les Nymphéas dans son jardin à Giverny. Tu as achevé tous les Nymphéas de Masilano.",
-        "t": "Tous les Nymphéas de Monet sont achevés."
+        "n": "Maître des nymphéas",
+        "d": "Termine tous les nymphéas de Monet.",
+        "t": "Tous les nymphéas de Monet sont terminés."
+      },
+      "set:fuji:b": {
+        "n": "Premier regard sur le Fuji",
+        "d": "Termine une vue du Fuji ou des vagues.",
+        "t": "Le premier regard sur le Fuji."
+      },
+      "set:fuji:s": {
+        "n": "Connaisseur du Fuji",
+        "d": "Termine la moitié des vues du Fuji et des vagues.",
+        "t": "La moitié des vues du Fuji est terminée."
       },
       "set:fuji": {
-        "n": "Vues du Fuji",
-        "d": "La série d’Hokusai « 36 vues du mont Fuji » montre la montagne dans le vent, le soleil et l’orage. Tu as achevé les estampes du Fuji et de la vague dans Masilano.",
+        "n": "Toutes les vues du Fuji",
+        "d": "Termine toutes les vues du Fuji et des vagues.",
         "t": "Les vues du Fuji sont complètes."
       },
-      "set:sunflowers": {
-        "n": "Les Tournesols de Van Gogh",
-        "d": "Van Gogh a peint plusieurs natures mortes de tournesols à Arles. Tu as achevé les tournesols de Masilano.",
-        "t": "Les tournesols sont achevés."
+      "set:sunflowers:b": {
+        "n": "Premier tournesol",
+        "d": "Termine l’un des tournesols de Van Gogh.",
+        "t": "Le premier tournesol est terminé."
       },
-      "cat:flowers": {
-        "n": "Fleurs",
-        "d": "Tu as achevé tous les tableaux de la catégorie Fleurs dans la galerie.",
+      "set:sunflowers:s": {
+        "n": "Parmi les tournesols",
+        "d": "Termine la moitié des tournesols.",
+        "t": "Parmi les tournesols de Van Gogh."
+      },
+      "set:sunflowers": {
+        "n": "Les tournesols de Van Gogh",
+        "d": "Termine tous les tournesols de Van Gogh.",
+        "t": "Les tournesols sont terminés."
+      },
+      "cat:flowers:b": {
+        "n": "Première fleur",
+        "d": "Termine un tableau de la catégorie Fleurs.",
+        "t": "La première fleur est peinte."
+      },
+      "cat:flowers:s": {
+        "n": "Connaisseur des fleurs",
+        "d": "Termine la moitié des tableaux de fleurs.",
+        "t": "La moitié des fleurs est terminée."
+      },
+      "cat:flowers:g": {
+        "n": "Jardin en fleurs",
+        "d": "Termine tous les tableaux de la catégorie Fleurs.",
         "t": "La catégorie Fleurs est complète."
       },
-      "cat:landscapes": {
-        "n": "Paysages",
-        "d": "Tu as achevé tous les tableaux de la catégorie Paysages dans la galerie.",
+      "cat:landscapes:b": {
+        "n": "Premier paysage",
+        "d": "Termine un tableau de la catégorie Paysages.",
+        "t": "Le premier paysage est peint."
+      },
+      "cat:landscapes:s": {
+        "n": "Chemins ouverts",
+        "d": "Termine la moitié des paysages.",
+        "t": "La moitié des paysages est terminée."
+      },
+      "cat:landscapes:g": {
+        "n": "Paysages ouverts",
+        "d": "Termine tous les tableaux de la catégorie Paysages.",
         "t": "La catégorie Paysages est complète."
       },
-      "cat:water": {
+      "cat:water:b": {
+        "n": "Au bord de l’eau",
+        "d": "Termine un tableau de la catégorie Mer et eau.",
+        "t": "Le premier tableau d’eau est peint."
+      },
+      "cat:water:s": {
+        "n": "Connaisseur des eaux",
+        "d": "Termine la moitié des tableaux d’eau.",
+        "t": "La moitié des tableaux d’eau est terminée."
+      },
+      "cat:water:g": {
         "n": "Mer et eau",
-        "d": "Tu as achevé tous les tableaux de la catégorie Mer et eau dans la galerie.",
+        "d": "Termine tous les tableaux de la catégorie Mer et eau.",
         "t": "La catégorie Mer et eau est complète."
       },
-      "cat:animals": {
-        "n": "Animaux",
-        "d": "Tu as achevé tous les tableaux de la catégorie Animaux dans la galerie.",
+      "cat:animals:b": {
+        "n": "Premier animal",
+        "d": "Termine un tableau de la catégorie Animaux.",
+        "t": "Le premier animal est peint."
+      },
+      "cat:animals:s": {
+        "n": "Connaisseur des animaux",
+        "d": "Termine la moitié des tableaux d’animaux.",
+        "t": "La moitié des animaux est terminée."
+      },
+      "cat:animals:g": {
+        "n": "Tous les animaux",
+        "d": "Termine tous les tableaux de la catégorie Animaux.",
         "t": "La catégorie Animaux est complète."
       },
-      "cat:portraits": {
-        "n": "Portraits",
-        "d": "Tu as achevé tous les tableaux de la catégorie Portraits dans la galerie.",
+      "cat:portraits:b": {
+        "n": "Premier portrait",
+        "d": "Termine un tableau de la catégorie Portraits.",
+        "t": "Le premier portrait est peint."
+      },
+      "cat:portraits:s": {
+        "n": "Connaisseur des portraits",
+        "d": "Termine la moitié des portraits.",
+        "t": "La moitié des portraits est terminée."
+      },
+      "cat:portraits:g": {
+        "n": "Salle des portraits",
+        "d": "Termine tous les tableaux de la catégorie Portraits.",
         "t": "La catégorie Portraits est complète."
       },
-      "cat:city": {
+      "cat:city:b": {
+        "n": "Première vue urbaine",
+        "d": "Termine un tableau de la catégorie Ville et architecture.",
+        "t": "La première vue urbaine est peinte."
+      },
+      "cat:city:s": {
+        "n": "À travers les villes",
+        "d": "Termine la moitié des vues urbaines.",
+        "t": "La moitié des vues urbaines est terminée."
+      },
+      "cat:city:g": {
         "n": "Ville et architecture",
-        "d": "Tu as achevé tous les tableaux de la catégorie Ville et architecture dans la galerie.",
+        "d": "Termine tous les tableaux de la catégorie Ville et architecture.",
         "t": "La catégorie Ville et architecture est complète."
       },
+      "imp:b": {
+        "n": "Première lumière",
+        "d": "Termine un tableau impressionniste.",
+        "t": "Le premier tableau impressionniste est terminé."
+      },
+      "imp:s": {
+        "n": "Connaisseur de l’impressionnisme",
+        "d": "Termine la moitié des tableaux impressionnistes.",
+        "t": "La moitié des tableaux impressionnistes est terminée."
+      },
+      "imp:g": {
+        "n": "Dans la lumière des impressionnistes",
+        "d": "Termine tous les tableaux impressionnistes.",
+        "t": "Les tableaux impressionnistes sont complets."
+      },
+      "painters3": {
+        "n": "Trois maîtres",
+        "d": "Termine des tableaux de trois peintres différents.",
+        "t": "Des tableaux de trois peintres sont terminés."
+      },
       "painters10": {
-        "n": "Dix peintres",
-        "d": "Tu as achevé des tableaux de dix peintres différents.",
-        "t": "Des tableaux de dix peintres sont achevés."
+        "n": "Connaisseur des écoles",
+        "d": "Termine des tableaux de dix peintres différents.",
+        "t": "Des tableaux de dix peintres sont terminés."
+      },
+      "painters25": {
+        "n": "Maison vaste",
+        "d": "Termine des tableaux de vingt-cinq peintres différents.",
+        "t": "Des tableaux de vingt-cinq peintres sont terminés."
       },
       "vgDelight": {
-        "n": "Musique et parole",
-        "d": "Sur le chemin de Van Gogh, tu as utilisé la musique de son temps ou la lecture à voix haute.",
-        "t": "Musique ou lecture sur le chemin de Van Gogh."
-      },
-      "pathDone": {
-        "d": "Tu as achevé tous les tableaux de ce chemin de vie.",
-        "t": "Un chemin de vie est complet."
+        "n": "Le chant des lettres",
+        "d": "Sur le parcours de Van Gogh, utilise la musique de son temps ou la lecture à voix haute.",
+        "t": "Musique ou lecture sur le parcours de Van Gogh."
       }
     }
   },
   "it": {
-    "title": "Vetrina d’onore",
-    "lead": "Medaglie per i percorsi, i gruppi di opere e la costanza.",
-    "date": "Registrato il {d}",
+    "title": "Titoli onorifici",
+    "lead": "Titoli onorifici in bronzo, argento e oro per i percorsi, i gruppi di opere e la fedeltà.",
+    "date": "Conferito il {d}",
     "progress": "{n} di {N}",
-    "lockedAria": "Non ancora ottenuta, {n} di {N}",
-    "openHint": "Aprire la vetrina d’onore",
+    "lockedAria": "Non ancora ottenuto, {n} di {N}",
+    "lockedHint": "Ancora da fare",
+    "openHint": "Apri i trofei",
+    "tier": {
+      "bronze": "Bronzo",
+      "silver": "Argento",
+      "gold": "Oro"
+    },
     "groups": {
-      "start": "Inizi",
+      "start": "In atelier",
       "paths": "Percorsi dei pittori",
-      "streak": "Costanza",
+      "streak": "Fedeltà",
       "collect": "Collezione",
       "explore": "Scoperta"
     },
+    "pathBronze": {
+      "n": "Prima stazione con {name}",
+      "d": "Termina una stazione in {name}.",
+      "t": "La prima stazione con {name} è completa."
+    },
+    "pathSilver": {
+      "n": "A metà strada con {name}",
+      "d": "Termina la metà dei quadri in {name}.",
+      "t": "Il percorso con {name} è a metà."
+    },
+    "pathGold": {
+      "n": "Il percorso con {name} compiuto",
+      "d": "Termina tutti i quadri in {name}.",
+      "t": "Il percorso di vita con {name} è completo."
+    },
     "ach": {
       "first": {
-        "n": "Primo quadro",
-        "d": "Il tuo primo quadro finito ha trovato posto nell’album.",
+        "n": "Prima pennellata",
+        "d": "Termina il tuo primo quadro.",
         "t": "Il tuo primo quadro è finito."
       },
-      "n5": {
-        "n": "Cinque capolavori",
-        "d": "Cinque quadri sono finiti.",
-        "t": "Cinque capolavori nel tuo album."
+      "n10": {
+        "n": "Mano esercitata",
+        "d": "Termina dieci quadri.",
+        "t": "Dieci capolavori nel tuo album."
       },
-      "n25": {
-        "n": "Venticinque capolavori",
-        "d": "Venticinque quadri sono finiti.",
-        "t": "Venticinque capolavori."
+      "n50": {
+        "n": "Maestro dell’atelier",
+        "d": "Termina cinquanta quadri.",
+        "t": "Cinquanta capolavori."
       },
       "n100": {
         "n": "Cento capolavori",
-        "d": "Cento quadri sono finiti.",
+        "d": "Termina cento quadri.",
         "t": "Cento capolavori."
       },
       "n250": {
-        "n": "Duecentocinquanta capolavori",
-        "d": "Duecentocinquanta quadri sono finiti.",
-        "t": "Duecentocinquanta capolavori."
+        "n": "Grande opera",
+        "d": "Termina duecentocinquanta quadri.",
+        "t": "Una grande opera."
       },
       "n500": {
-        "n": "Cinquecento capolavori",
-        "d": "Cinquecento quadri sono finiti.",
-        "t": "Cinquecento capolavori."
-      },
-      "pathFirst": {
-        "n": "Prima stazione",
-        "d": "Hai finito il primo quadro di un percorso di pittore.",
-        "t": "La prima stazione è aperta."
-      },
-      "stationFirst": {
-        "n": "Una stazione completa",
-        "d": "Tutti i quadri di una stazione su un percorso sono finiti.",
-        "t": "Un’intera stazione è completa."
+        "n": "Un’opera di una vita",
+        "d": "Termina cinquecento quadri.",
+        "t": "Un’opera di una vita nell’album."
       },
       "streak3": {
-        "n": "Tre giorni",
-        "d": "Hai finito il quadro del giorno in tre giorni.",
+        "n": "Visita fedele",
+        "d": "Termina il quadro del giorno in tre giorni.",
         "t": "Tre giorni con il quadro del giorno."
       },
       "streak7": {
-        "n": "Sette giorni",
-        "d": "Hai finito il quadro del giorno in sette giorni.",
+        "n": "Una settimana in sala",
+        "d": "Termina il quadro del giorno in sette giorni.",
         "t": "Sette giorni con il quadro del giorno."
       },
       "streak30": {
-        "n": "Trenta giorni",
-        "d": "Hai finito il quadro del giorno in trenta giorni.",
+        "n": "Sempre al museo",
+        "d": "Termina il quadro del giorno in trenta giorni.",
         "t": "Trenta giorni con il quadro del giorno."
       },
+      "set:lilies:b": {
+        "n": "Prima ninfea",
+        "d": "Termina una delle ninfee di Monet.",
+        "t": "La prima ninfea è finita."
+      },
+      "set:lilies:s": {
+        "n": "Conoscitore delle ninfee",
+        "d": "Termina la metà delle ninfee.",
+        "t": "La metà delle ninfee è finita."
+      },
       "set:lilies": {
-        "n": "Le Ninfee di Monet",
-        "d": "Claude Monet dipinse le Ninfee nel suo giardino a Giverny. Hai finito tutte le ninfee di Masilano.",
-        "t": "Tutte le Ninfee di Monet sono finite."
+        "n": "Maestro delle ninfee",
+        "d": "Termina tutte le ninfee di Monet.",
+        "t": "Tutte le ninfee di Monet sono finite."
+      },
+      "set:fuji:b": {
+        "n": "Primo sguardo al Fuji",
+        "d": "Termina una veduta del Fuji o delle onde.",
+        "t": "Il primo sguardo al Fuji."
+      },
+      "set:fuji:s": {
+        "n": "Conoscitore del Fuji",
+        "d": "Termina la metà delle vedute del Fuji e delle onde.",
+        "t": "La metà delle vedute del Fuji è finita."
       },
       "set:fuji": {
-        "n": "Vedute del Fuji",
-        "d": "La serie di Hokusai «36 vedute del monte Fuji» mostra la montagna con vento, sole e temporale. Hai finito le stampe del Fuji e dell’onda in Masilano.",
+        "n": "Tutte le vedute del Fuji",
+        "d": "Termina tutte le vedute del Fuji e delle onde.",
         "t": "Le vedute del Fuji sono complete."
       },
+      "set:sunflowers:b": {
+        "n": "Primo girasole",
+        "d": "Termina uno dei girasoli di Van Gogh.",
+        "t": "Il primo girasole è finito."
+      },
+      "set:sunflowers:s": {
+        "n": "Tra i girasoli",
+        "d": "Termina la metà dei girasoli.",
+        "t": "Tra i girasoli di Van Gogh."
+      },
       "set:sunflowers": {
-        "n": "I Girasoli di Van Gogh",
-        "d": "Van Gogh dipinse diverse nature morte di girasoli ad Arles. Hai finito i girasoli di Masilano.",
+        "n": "I girasoli di Van Gogh",
+        "d": "Termina tutti i girasoli di Van Gogh.",
         "t": "I girasoli sono finiti."
       },
-      "cat:flowers": {
-        "n": "Fiori",
-        "d": "Hai finito tutti i quadri della categoria Fiori in galleria.",
+      "cat:flowers:b": {
+        "n": "Primo fiore",
+        "d": "Termina un quadro della categoria Fiori.",
+        "t": "Il primo fiore è dipinto."
+      },
+      "cat:flowers:s": {
+        "n": "Conoscitore dei fiori",
+        "d": "Termina la metà dei quadri di fiori.",
+        "t": "La metà dei fiori è finita."
+      },
+      "cat:flowers:g": {
+        "n": "Giardino in fiore",
+        "d": "Termina tutti i quadri della categoria Fiori.",
         "t": "La categoria Fiori è completa."
       },
-      "cat:landscapes": {
-        "n": "Paesaggi",
-        "d": "Hai finito tutti i quadri della categoria Paesaggi in galleria.",
+      "cat:landscapes:b": {
+        "n": "Primo paesaggio",
+        "d": "Termina un quadro della categoria Paesaggi.",
+        "t": "Il primo paesaggio è dipinto."
+      },
+      "cat:landscapes:s": {
+        "n": "Strade aperte",
+        "d": "Termina la metà dei paesaggi.",
+        "t": "La metà dei paesaggi è finita."
+      },
+      "cat:landscapes:g": {
+        "n": "Paesaggi aperti",
+        "d": "Termina tutti i quadri della categoria Paesaggi.",
         "t": "La categoria Paesaggi è completa."
       },
-      "cat:water": {
+      "cat:water:b": {
+        "n": "Sulla riva",
+        "d": "Termina un quadro della categoria Mare e acqua.",
+        "t": "Il primo quadro d’acqua è dipinto."
+      },
+      "cat:water:s": {
+        "n": "Conoscitore delle acque",
+        "d": "Termina la metà dei quadri d’acqua.",
+        "t": "La metà dei quadri d’acqua è finita."
+      },
+      "cat:water:g": {
         "n": "Mare e acqua",
-        "d": "Hai finito tutti i quadri della categoria Mare e acqua in galleria.",
+        "d": "Termina tutti i quadri della categoria Mare e acqua.",
         "t": "La categoria Mare e acqua è completa."
       },
-      "cat:animals": {
-        "n": "Animali",
-        "d": "Hai finito tutti i quadri della categoria Animali in galleria.",
+      "cat:animals:b": {
+        "n": "Primo animale",
+        "d": "Termina un quadro della categoria Animali.",
+        "t": "Il primo animale è dipinto."
+      },
+      "cat:animals:s": {
+        "n": "Conoscitore degli animali",
+        "d": "Termina la metà dei quadri di animali.",
+        "t": "La metà degli animali è finita."
+      },
+      "cat:animals:g": {
+        "n": "Tutti gli animali",
+        "d": "Termina tutti i quadri della categoria Animali.",
         "t": "La categoria Animali è completa."
       },
-      "cat:portraits": {
-        "n": "Ritratti",
-        "d": "Hai finito tutti i quadri della categoria Ritratti in galleria.",
+      "cat:portraits:b": {
+        "n": "Primo ritratto",
+        "d": "Termina un quadro della categoria Ritratti.",
+        "t": "Il primo ritratto è dipinto."
+      },
+      "cat:portraits:s": {
+        "n": "Conoscitore dei ritratti",
+        "d": "Termina la metà dei ritratti.",
+        "t": "La metà dei ritratti è finita."
+      },
+      "cat:portraits:g": {
+        "n": "Sala dei ritratti",
+        "d": "Termina tutti i quadri della categoria Ritratti.",
         "t": "La categoria Ritratti è completa."
       },
-      "cat:city": {
+      "cat:city:b": {
+        "n": "Prima veduta urbana",
+        "d": "Termina un quadro della categoria Città e architettura.",
+        "t": "La prima veduta urbana è dipinta."
+      },
+      "cat:city:s": {
+        "n": "Attraverso le città",
+        "d": "Termina la metà delle vedute urbane.",
+        "t": "La metà delle vedute urbane è finita."
+      },
+      "cat:city:g": {
         "n": "Città e architettura",
-        "d": "Hai finito tutti i quadri della categoria Città e architettura in galleria.",
+        "d": "Termina tutti i quadri della categoria Città e architettura.",
         "t": "La categoria Città e architettura è completa."
       },
+      "imp:b": {
+        "n": "Prima luce",
+        "d": "Termina un quadro impressionista.",
+        "t": "Il primo quadro impressionista è finito."
+      },
+      "imp:s": {
+        "n": "Conoscitore dell’impressionismo",
+        "d": "Termina la metà dei quadri impressionisti.",
+        "t": "La metà dei quadri impressionisti è finita."
+      },
+      "imp:g": {
+        "n": "Nella luce degli impressionisti",
+        "d": "Termina tutti i quadri impressionisti.",
+        "t": "I quadri impressionisti sono completi."
+      },
+      "painters3": {
+        "n": "Tre maestri",
+        "d": "Termina quadri di tre pittori diversi.",
+        "t": "Ci sono quadri di tre pittori terminati."
+      },
       "painters10": {
-        "n": "Dieci pittori",
-        "d": "Hai finito quadri di dieci pittori diversi.",
-        "t": "Quadri di dieci pittori sono finiti."
+        "n": "Conoscitore delle scuole",
+        "d": "Termina quadri di dieci pittori diversi.",
+        "t": "Ci sono quadri di dieci pittori terminati."
+      },
+      "painters25": {
+        "n": "Casa vasta",
+        "d": "Termina quadri di venticinque pittori diversi.",
+        "t": "Ci sono quadri di venticinque pittori terminati."
       },
       "vgDelight": {
-        "n": "Musica e parola",
-        "d": "Sul percorso di Van Gogh hai usato la musica del suo tempo o la lettura ad alta voce.",
+        "n": "Il suono delle lettere",
+        "d": "Sul percorso di Van Gogh, usa la musica del suo tempo o la lettura ad alta voce.",
         "t": "Musica o lettura sul percorso di Van Gogh."
-      },
-      "pathDone": {
-        "d": "Hai finito tutti i quadri di questo percorso di vita.",
-        "t": "Un percorso di vita è completo."
       }
     }
   }
 };
-
-  let host = null;
-  let toastQ = [];
-  let toastBusy = false;
-  let toastT = 0;
+  const IMG = 'img/trophies/';
+  let host = null, toastT = 0, toastQ = [], toastBusy = false;
 
   function lang(){ return (host && host.lang) || (window.I18N && window.I18N.lang) || 'de'; }
   function pack(){ return TEXTS[lang()] || TEXTS.de; }
@@ -692,44 +1301,72 @@
   function esc(s){ return String(s || '').replace(/[&<>"']/g, function (c) { return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]; }); }
 
   function loadStore(){
-    try { return JSON.parse(localStorage.getItem(ACH_KEY) || 'null') || { unlocked: {} }; }
-    catch (e) { return { unlocked: {} }; }
+    let o;
+    try { o = JSON.parse(localStorage.getItem(ACH_KEY) || 'null') || { unlocked: {} }; }
+    catch (e) { o = { unlocked: {} }; }
+    if (!o.unlocked) o.unlocked = {};
+    return o;
   }
   function saveStore(o){ try { localStorage.setItem(ACH_KEY, JSON.stringify(o)); } catch (e) {} }
   function delightOn(){
-    try { const o = JSON.parse(localStorage.getItem(DELIGHT_KEY) || 'null') || {}; return !!o.vgMusic; }
+    try { const x = JSON.parse(localStorage.getItem(DELIGHT_KEY) || 'null') || {}; return !!x.vgMusic; }
     catch (e) { return false; }
+  }
+
+  function trophyType(ach){
+    if (ach.trophy) return ach.trophy;
+    if (TROPHY[ach.id]) return TROPHY[ach.id];
+    if (ach.kind === 'pathStat' || ach.kind === 'path' || (ach.id && ach.id.indexOf('path:') === 0)) return 'badge';
+    if (ach.kind === 'set' || ach.kind === 'cat' || ach.kind === 'pool' || ach.kind === 'delight') return 'diploma';
+    return 'cup';
+  }
+  function trophySrc(ach, unlocked){
+    const type = trophyType(ach);
+    const metal = ach.tier || 'gold';
+    return IMG + type + '-' + metal + '.webp';
   }
 
   function catalog(){
     const rows = [
-      { id:'first', group:'start', tier:'bronze', motif:'star', kind:'count', n:1 },
-      { id:'n5', group:'start', tier:'bronze', motif:'palette', kind:'count', n:5 },
-      { id:'n25', group:'start', tier:'silver', motif:'palette', kind:'count', n:25 },
-      { id:'n100', group:'start', tier:'gold', motif:'laurel', kind:'count', n:100 },
-      { id:'n250', group:'start', tier:'gold', motif:'laurel', kind:'count', n:250 },
-      { id:'n500', group:'start', tier:'gold', motif:'laurel', kind:'count', n:500 },
-      { id:'pathFirst', group:'paths', tier:'bronze', motif:'sign', kind:'pathWork' },
-      { id:'stationFirst', group:'paths', tier:'silver', motif:'sign', kind:'station' }
+      { id:'first', group:'start', tier:'bronze', kind:'count', n:1, trophy:'cup' },
+      { id:'n10', group:'start', tier:'silver', kind:'count', n:10, trophy:'cup' },
+      { id:'n50', group:'start', tier:'gold', kind:'count', n:50, trophy:'cup' },
+      { id:'n100', group:'start', tier:'bronze', kind:'count', n:100, trophy:'statue' },
+      { id:'n250', group:'start', tier:'silver', kind:'count', n:250, trophy:'statue' },
+      { id:'n500', group:'start', tier:'gold', kind:'count', n:500, trophy:'statue' }
     ];
     PATH_IDS.forEach(function (pid) {
-      rows.push({ id:'path:' + pid, group:'paths', tier:'gold', motif: PATH_MOTIF[pid] || 'sign', kind:'path', path:pid });
+      rows.push({ id:'path:' + pid + ':b', group:'paths', tier:'bronze', kind:'pathStat', path:pid, trophy:'badge' });
+      rows.push({ id:'path:' + pid + ':s', group:'paths', tier:'silver', kind:'pathHalf', path:pid, trophy:'badge' });
+      rows.push({ id:'path:' + pid, group:'paths', tier:'gold', kind:'path', path:pid, trophy:'badge' });
     });
     rows.push(
-      { id:'streak3', group:'streak', tier:'bronze', motif:'sun', kind:'streak', n:3 },
-      { id:'streak7', group:'streak', tier:'silver', motif:'sun', kind:'streak', n:7 },
-      { id:'streak30', group:'streak', tier:'gold', motif:'sun', kind:'streak', n:30 },
-      { id:'set:lilies', group:'collect', tier:'gold', motif:'lily', kind:'set', set:'lilies' },
-      { id:'set:fuji', group:'collect', tier:'gold', motif:'wave', kind:'set', set:'fuji' },
-      { id:'set:sunflowers', group:'collect', tier:'gold', motif:'sunflower', kind:'set', set:'sunflowers' },
-      { id:'cat:flowers', group:'collect', tier:'silver', motif:'blossom', kind:'cat', cat:'flowers' },
-      { id:'cat:landscapes', group:'collect', tier:'silver', motif:'mountain', kind:'cat', cat:'landscapes' },
-      { id:'cat:water', group:'collect', tier:'silver', motif:'wave', kind:'cat', cat:'water' },
-      { id:'cat:animals', group:'collect', tier:'silver', motif:'hare', kind:'cat', cat:'animals' },
-      { id:'cat:portraits', group:'collect', tier:'silver', motif:'portrait', kind:'cat', cat:'portraits' },
-      { id:'cat:city', group:'collect', tier:'silver', motif:'facade', kind:'cat', cat:'city' },
-      { id:'painters10', group:'explore', tier:'bronze', motif:'compass', kind:'painters', n:10 },
-      { id:'vgDelight', group:'explore', tier:'silver', motif:'lyre', kind:'delight' }
+      { id:'streak3', group:'streak', tier:'bronze', kind:'streak', n:3, trophy:'victory' },
+      { id:'streak7', group:'streak', tier:'silver', kind:'streak', n:7, trophy:'victory' },
+      { id:'streak30', group:'streak', tier:'gold', kind:'streak', n:30, trophy:'victory' },
+      { id:'set:lilies:b', group:'collect', tier:'bronze', kind:'set', set:'lilies', need:'one', trophy:'diploma' },
+      { id:'set:lilies:s', group:'collect', tier:'silver', kind:'set', set:'lilies', need:'half', trophy:'diploma' },
+      { id:'set:lilies', group:'collect', tier:'gold', kind:'set', set:'lilies', need:'all', trophy:'diploma' },
+      { id:'set:fuji:b', group:'collect', tier:'bronze', kind:'set', set:'fuji', need:'one', trophy:'diploma' },
+      { id:'set:fuji:s', group:'collect', tier:'silver', kind:'set', set:'fuji', need:'half', trophy:'diploma' },
+      { id:'set:fuji', group:'collect', tier:'gold', kind:'set', set:'fuji', need:'all', trophy:'diploma' },
+      { id:'set:sunflowers:b', group:'collect', tier:'bronze', kind:'set', set:'sunflowers', need:'one', trophy:'diploma' },
+      { id:'set:sunflowers:s', group:'collect', tier:'silver', kind:'set', set:'sunflowers', need:'half', trophy:'diploma' },
+      { id:'set:sunflowers', group:'collect', tier:'gold', kind:'set', set:'sunflowers', need:'all', trophy:'diploma' },
+      { id:'imp:b', group:'collect', tier:'bronze', kind:'pool', pool:'impression', need:'one', trophy:'diploma' },
+      { id:'imp:s', group:'collect', tier:'silver', kind:'pool', pool:'impression', need:'half', trophy:'diploma' },
+      { id:'imp:g', group:'collect', tier:'gold', kind:'pool', pool:'impression', need:'all', trophy:'diploma' }
+    );
+    CATS.forEach(function (c) {
+      rows.push({ id:'cat:' + c + ':b', group:'collect', tier:'bronze', kind:'cat', cat:c, need:'one', trophy:'diploma' });
+      rows.push({ id:'cat:' + c + ':s', group:'collect', tier:'silver', kind:'cat', cat:c, need:'half', trophy:'diploma' });
+      rows.push({ id:'cat:' + c + ':g', group:'collect', tier:'gold', kind:'cat', cat:c, need:'all', trophy:'diploma' });
+    });
+    rows.push(
+      { id:'painters3', group:'explore', tier:'bronze', kind:'painters', n:3, trophy:'badge' },
+      { id:'painters10', group:'explore', tier:'silver', kind:'painters', n:10, trophy:'badge' },
+      { id:'painters25', group:'explore', tier:'gold', kind:'painters', n:25, trophy:'badge' },
+      { id:'vgDelight', group:'explore', tier:'gold', kind:'delight', trophy:'diploma' }
     );
     return rows;
   }
@@ -744,17 +1381,36 @@
     (ids || []).forEach(function (id) { if (host.isDone(id)) n++; });
     return n;
   }
-  function pathWorksDone(){
-    let n = 0;
-    ((host && host.PATHS) || []).forEach(function (p) {
-      (host.pathSteps(p) || []).forEach(function (s) { if (s.pid && host.isDone(s.pid)) n++; });
-    });
-    return n;
+  function needOf(ids, need){
+    const N = (ids || []).length;
+    if (need === 'one') return 1;
+    if (need === 'half') return Math.max(1, Math.ceil(N / 2));
+    return Math.max(1, N);
   }
-  function stationsDone(){
+  function progressNeed(ids, need){
+    const list = unique(ids);
+    const n = doneOf(list);
+    const N = needOf(list, need || 'all');
+    return { n: Math.min(n, N), N: N, done: list.length > 0 && n >= N };
+  }
+  function impressionIds(){
+    const re = /(^|\s)(claude\s+)?monet\b|(^|\s)renoir\b|(^|\s)pissarro\b|(^|\s)sisley\b|(^|\s)degas\b|(^|\s)(e|é)douard\s+manet\b|(^|\s)manet\b|(^|\s)morisot\b|(^|\s)cassatt\b/i;
+    const ids = [];
+    (host.ALL || []).forEach(function (p) {
+      if (!p || !p.id) return;
+      const a = String(p.artist || '');
+      if (re.test(a)) ids.push(p.id);
+    });
+    return unique(ids);
+  }
+  function catIds(cat){
+    if (host && typeof host.idsInCat === 'function') return unique(host.idsInCat(cat));
+    return unique((host && host.galCats && host.galCats[cat]) || []);
+  }
+  function stationsDoneOn(path){
     let n = 0;
-    ((host && host.PATHS) || []).forEach(function (p) {
-      (p.stations || []).forEach(function (st) { if (st.works && st.works.length && host.stationDone(st)) n++; });
+    (path.stations || []).forEach(function (st) {
+      if (st.works && st.works.length && host.stationDone(st)) n++;
     });
     return n;
   }
@@ -768,31 +1424,26 @@
       const n = ((host.loadStreak() || {}).n) || 0;
       return { n: Math.min(n, ach.n), N: ach.n, done: n >= ach.n };
     }
-    if (ach.kind === 'pathWork') {
-      const n = pathWorksDone() > 0 ? 1 : 0;
-      return { n:n, N:1, done: n >= 1 };
+    if (ach.kind === 'pathStat') {
+      const path = ((host.PATHS || []).find(function (p) { return p.id === ach.path; })) || null;
+      if (!path) return { n:0, N:1, done:false };
+      const n = stationsDoneOn(path);
+      return { n: Math.min(n, 1), N:1, done: n >= 1 };
     }
-    if (ach.kind === 'station') {
-      const n = stationsDone() > 0 ? 1 : 0;
-      return { n:n, N:1, done: n >= 1 };
-    }
-    if (ach.kind === 'path') {
+    if (ach.kind === 'pathHalf' || ach.kind === 'path') {
       const path = ((host.PATHS || []).find(function (p) { return p.id === ach.path; })) || null;
       if (!path) return { n:0, N:1, done:false };
       const steps = host.pathSteps(path) || [];
       const n = steps.filter(function (s) { return host.isDone(s.pid); }).length;
+      if (ach.kind === 'pathHalf') {
+        const N = Math.max(1, Math.ceil(steps.length / 2));
+        return { n: Math.min(n, N), N: N, done: steps.length > 0 && n >= N };
+      }
       return { n:n, N: steps.length || 1, done: steps.length > 0 && n >= steps.length };
     }
-    if (ach.kind === 'set') {
-      const ids = unique(SETS[ach.set] || []);
-      const n = doneOf(ids);
-      return { n:n, N: ids.length || 1, done: ids.length > 0 && n >= ids.length };
-    }
-    if (ach.kind === 'cat') {
-      const ids = unique((host.galCats && host.galCats[ach.cat]) || []);
-      const n = doneOf(ids);
-      return { n:n, N: ids.length || 1, done: ids.length > 0 && n >= ids.length };
-    }
+    if (ach.kind === 'set') return progressNeed(SETS[ach.set] || [], ach.need);
+    if (ach.kind === 'cat') return progressNeed(catIds(ach.cat), ach.need);
+    if (ach.kind === 'pool' && ach.pool === 'impression') return progressNeed(impressionIds(), ach.need);
     if (ach.kind === 'painters') {
       const seen = {};
       let n = 0;
@@ -809,15 +1460,22 @@
     return { n:0, N:1, done:false };
   }
 
-  function textsFor(id){
+  function pathName(pid){
+    const path = ((host && host.PATHS) || []).find(function (p) { return p.id === pid; });
+    if (path && host && host.L) return host.L(path, 'title') || path.title || pid;
+    return (path && path.title) || pid;
+  }
+  function textsFor(idOrAch){
     const P = pack();
-    const A = (P.ach && P.ach[id]) || {};
-    if (id.indexOf('path:') === 0) {
-      const pid = id.slice(5);
-      const path = ((host && host.PATHS) || []).find(function (p) { return p.id === pid; });
-      const name = (path && host && host.L) ? (host.L(path, 'title') || path.title) : (path && path.title) || pid;
-      return { n: name, d: (P.ach.pathDone && P.ach.pathDone.d) || '', t: (P.ach.pathDone && P.ach.pathDone.t) || '' };
+    const id = typeof idOrAch === 'string' ? idOrAch : (idOrAch && idOrAch.id);
+    const m = id && /^path:([^:]+)(?::([bs]))?$/.exec(id);
+    if (m) {
+      const name = pathName(m[1]);
+      const key = m[2] === 'b' ? 'pathBronze' : (m[2] === 's' ? 'pathSilver' : 'pathGold');
+      const T = P[key] || {};
+      return { n: fill(T.n, { name:name }), d: fill(T.d, { name:name }), t: fill(T.t, { name:name }) };
     }
+    const A = (P.ach && P.ach[id]) || {};
     return { n: A.n || id, d: A.d || '', t: A.t || '' };
   }
 
@@ -831,76 +1489,49 @@
     catch (e) { return iso; }
   }
 
-  function motifPath(name){
-    const m = {
-      star: '<polygon points="40,16 44,32 60,32 47,42 52,58 40,48 28,58 33,42 20,32 36,32"/>',
-      palette: '<path d="M26 26c-7 7-8 20 1 27 7 5 16 4 20-2 2-3 0-6-3-6-3 0-5 2-7 2-4 0-6-3-6-6s2-5 6-5c2 0 3 1 5 1 3 0 5-3 5-6 0-7-7-12-16-12-2 0-4 0-5 1z"/><circle cx="34" cy="30" r="2"/><circle cx="43" cy="27" r="2"/><circle cx="50" cy="32" r="2"/><circle cx="33" cy="40" r="2"/>',
-      laurel: '<path fill="none" stroke-width="2" d="M40 18v44M40 28c-10 4-16 14-16 24M40 28c10 4 16 14 16 24M28 36c-2 2-4 6-4 10M52 36c2 2 4 6 4 10"/>',
-      sunflower: '<circle cx="40" cy="40" r="7"/><g fill="none" stroke-width="2">'+[0,30,60,90,120,150].map(function(a){return '<ellipse transform="rotate('+a+' 40 40)" cx="40" cy="24" rx="5" ry="9"/>';}).join('')+'</g>',
-      lily: '<path d="M40 58c0-8 0-16 0-22 8 2 16 10 16 20 0 0-8 2-16 2zM40 58c0-8 0-16 0-22-8 2-16 10-16 20 0 0 8 2 16 2z"/><path d="M40 20c2 8 4 12 8 16-6 0-8 2-8 10 0-8-2-10-8-10 4-4 6-8 8-16z"/>',
-      wave: '<path fill="none" stroke-width="2.2" d="M14 48c8-14 12-22 20-22 8 0 8 14 16 14 8 0 10-10 16-16"/><path fill="none" stroke-width="2.2" d="M16 58c10-6 16-4 24-4 10 0 14-6 22-12"/>',
-      mosaic: '<rect x="24" y="22" width="14" height="14" rx="1"/><rect x="42" y="22" width="14" height="14" rx="1"/><rect x="24" y="40" width="14" height="14" rx="1"/><rect x="42" y="40" width="10" height="10" rx="1"/><rect x="54" y="42" width="6" height="14" rx="1"/>',
-      mountain: '<path d="M12 58l18-28 8 12 10-18 20 34z"/>',
-      peak: '<path d="M16 58l14-26 8 10 6-14 20 30z"/><path fill="none" stroke-width="1.6" d="M30 32l4 4 4-3"/>',
-      apple: '<path d="M40 24c2 6 2 8 0 10-10-2-18 6-18 16 0 12 10 20 18 20s18-8 18-20c0-10-8-18-18-16z"/><path fill="none" stroke-width="1.8" d="M40 24c2-8 8-10 12-10"/>',
-      bridge: '<path fill="none" stroke-width="2" d="M14 50h52M20 50V36c10-10 30-10 40 0v14M26 50v8M54 50v8"/>',
-      rose: '<circle cx="40" cy="40" r="5"/><path fill="none" stroke-width="1.8" d="M40 28c8 2 12 8 12 14M40 28c-8 2-12 8-12 14M28 44c4 10 12 14 12 14s8-4 12-14"/>',
-      tree: '<path d="M40 58V36"/><path d="M40 40c-10-2-16-12-8-18 2 6 6 6 8 4 2 2 6 2 8-4 8 6 2 16-8 18z"/>',
-      sun: '<circle cx="40" cy="40" r="10"/><g fill="none" stroke-width="2" stroke-linecap="round"><path d="M40 18v6M40 56v6M18 40h6M56 40h6M24 24l4 4M52 52l4 4M24 56l4-4M52 28l4-4"/></g>',
-      suncloud: '<circle cx="36" cy="34" r="8"/><path d="M28 50h26c4 0 8-3 8-7s-4-7-8-7c-1-6-6-9-11-8-3 4-3 8-2 10-6 0-13 4-13 12z"/>',
-      hat: '<path d="M22 48h36c0-2-2-4-6-5-2-10-10-16-12-16s-10 6-12 16c-4 1-6 3-6 5z"/>',
-      river: '<path fill="none" stroke-width="2.2" d="M18 28c12 6 12 10 0 16 14 6 14 10 2 16M40 24c12 6 12 10 0 16 14 6 14 10 2 16"/>',
-      house: '<path d="M20 44l20-18 20 18v18H20z"/><path d="M36 62V50h8v12"/>',
-      sign: '<rect x="36" y="22" width="8" height="40" rx="1"/><path d="M44 26h16l-4 8 4 8H44z"/>',
-      blossom: '<circle cx="40" cy="40" r="5"/><ellipse cx="40" cy="26" rx="6" ry="9"/><ellipse cx="40" cy="54" rx="6" ry="9"/><ellipse cx="26" cy="40" rx="9" ry="6"/><ellipse cx="54" cy="40" rx="9" ry="6"/>',
-      hare: '<path d="M28 50c0-8 6-14 14-14 4 0 6 1 8 2 2-8 4-16 8-20 1 8-1 16-4 20 4 3 6 8 4 14-3 8-14 12-22 10-6-2-8-6-8-12z"/>',
-      portrait: '<circle cx="40" cy="32" r="9"/><path d="M22 58c2-12 10-16 18-16s16 4 18 16z"/>',
-      facade: '<path d="M20 58V28l20-12 20 12v30z"/><path fill="none" stroke-width="1.6" d="M32 58V42h16v16M28 34h6M46 34h6M28 44h6"/>',
-      compass: '<circle cx="40" cy="40" r="16" fill="none" stroke-width="2"/><path d="M40 20v6M40 54v6M20 40h6M54 40h6"/><path d="M40 26l6 22-6-4-6 4z"/>',
-      lyre: '<path fill="none" stroke-width="2" d="M28 22c0 16 4 28 12 28s12-12 12-28"/><path d="M36 50h8v10h-8z"/><path fill="none" stroke-width="1.6" d="M32 24h16M32 32h16M32 40h16"/>'
-    };
-    return m[name] || m.star;
+  function inheritIds(ach){
+    const id = ach.id;
+    const out = [];
+    if (id === 'n10') out.push('n5','n25','n100','n250','n500');
+    if (id === 'n50') out.push('n25','n100','n250','n500');
+    if (id === 'painters3') out.push('painters10');
+    const pm = /^path:([^:]+)(?::([bs]))?$/.exec(id);
+    if (pm && pm[2]) out.push('path:' + pm[1]);
+    const sm = /^(set:[^:]+):[bs]$/.exec(id);
+    if (sm) out.push(sm[1]);
+    const im = /^(imp):[bs]$/.exec(id);
+    if (im) out.push('imp:g');
+    return out;
   }
-
-  const DEFS = '<defs>'
-    + '<radialGradient id="achGoldFill" cx="38%" cy="32%"><stop offset="0%" stop-color="#fff4d2"/><stop offset="45%" stop-color="#e2c57a"/><stop offset="100%" stop-color="#a87a32"/></radialGradient>'
-    + '<radialGradient id="achSilverFill" cx="38%" cy="32%"><stop offset="0%" stop-color="#f7f8fa"/><stop offset="50%" stop-color="#c5c9ce"/><stop offset="100%" stop-color="#7e868e"/></radialGradient>'
-    + '<radialGradient id="achBronzeFill" cx="38%" cy="32%"><stop offset="0%" stop-color="#f3d2b0"/><stop offset="50%" stop-color="#c4844e"/><stop offset="100%" stop-color="#7a4a28"/></radialGradient>'
-    + '</defs>';
-
-  function beads(){
-    let s = '';
-    for (let i = 0; i < 16; i++) {
-      const a = (Math.PI * 2 * i) / 16;
-      s += '<circle class="m-bead" cx="'+(40 + Math.cos(a) * 36.2).toFixed(1)+'" cy="'+(40 + Math.sin(a) * 36.2).toFixed(1)+'" r="1.4"/>';
+  function inheritDate(ach, store){
+    const ids = inheritIds(ach);
+    for (let i = 0; i < ids.length; i++) {
+      const rec = store.unlocked[ids[i]];
+      if (rec && rec.at) return rec.at;
     }
-    return s;
+    return null;
   }
 
-  function medalSvg(ach){
-    return '<svg viewBox="0 0 80 80" aria-hidden="true">'+DEFS
-      + '<circle class="m-fill" cx="40" cy="40" r="31"/>'
-      + '<circle class="m-rim" cx="40" cy="40" r="37.5" fill="none" stroke-width="3"/>'
-      + '<circle class="m-rim" cx="40" cy="40" r="33" fill="none" stroke-width="1.2" opacity=".85"/>'
-      + beads()
-      + '<g class="m-motif">'+motifPath(ach.motif)+'</g>'
-      + '</svg>';
-  }
-
-  function medalMarkup(ach, pr, unlocked){
-    const tx = textsFor(ach.id);
+  function trophyMarkup(ach, pr, unlocked){
+    const tx = textsFor(ach);
     const P = pack();
-    const label = unlocked ? tx.n : fill(P.lockedAria, pr) + ', ' + tx.n;
-    let plaque = '<span class="medal-plaque"><span class="nm">'+esc(tx.n)+'</span>';
-    if (!unlocked && pr.N) plaque += '<span class="pr">'+esc(fill(P.progress, pr))+'</span>';
+    const tierName = (P.tier && P.tier[ach.tier]) || ach.tier;
+    const label = unlocked ? (tx.n + ', ' + tierName) : fill(P.lockedAria, pr) + ', ' + tx.n;
+    const src = trophySrc(ach, unlocked);
+    const img = '<img class="trophy-img" src="'+esc(src)+'" alt="" width="256" height="256" loading="lazy" decoding="async">';
+    const face = unlocked
+      ? '<span class="trophy-face">'+img+'</span>'
+      : '<span class="trophy-face locked"><span class="trophy-sil">'+img+'</span></span>';
+    let plaque = '<span class="trophy-plaque"><span class="nm">'+esc(tx.n)+'</span>';
+    plaque += '<span class="tier tier-'+esc(ach.tier)+'">'+esc(tierName)+'</span>';
+    if (!unlocked) plaque += '<span class="pr">'+esc(fill(P.progress, pr))+' · '+esc(tx.d)+'</span>';
     plaque += '</span>';
-    return '<button type="button" class="medal '+ach.tier+(unlocked?'':' locked')+'" data-ach="'+esc(ach.id)+'" aria-label="'+esc(label)+'">'
-      + '<span class="medal-face">'+medalSvg(ach)+'</span>'+plaque+'</button>';
+    return '<button type="button" class="trophy '+esc(ach.tier)+(unlocked?'':' locked')+'" data-ach="'+esc(ach.id)+'" data-kind="'+esc(trophyType(ach))+'" aria-label="'+esc(label)+'">'+face+plaque+'</button>';
   }
 
-  function bindMedals(root){
+  function bindTrophies(root){
     if (!root) return;
-    root.querySelectorAll('.medal').forEach(function (b) {
+    root.querySelectorAll('.trophy').forEach(function (b) {
       b.onclick = function () { openDetail(b.getAttribute('data-ach')); };
     });
   }
@@ -912,20 +1543,19 @@
     const cat = catalog();
     const byId = {};
     cat.forEach(function (a) { byId[a.id] = a; });
-    let html = '<svg width="0" height="0" style="position:absolute" aria-hidden="true">'+DEFS+'</svg>';
-    html += '<h2 class="vitrine-title">'+esc(P.title)+'</h2><p class="vitrine-lead">'+esc(P.lead)+'</p>';
+    let html = '<h2 class="vitrine-title">'+esc(P.title)+'</h2><p class="vitrine-lead">'+esc(P.lead)+'</p>';
     GROUPS.forEach(function (g) {
       html += '<section class="vitrine-group" data-group="'+g.id+'"><div class="vitrine-kicker">'+esc(P.groups[g.id] || g.id)+'</div><div class="vitrine-grid">';
       g.ach.forEach(function (id) {
         const ach = byId[id]; if (!ach) return;
         const pr = progress(ach);
         const rec = store.unlocked[id];
-        html += medalMarkup(ach, pr, !!(rec || pr.done));
+        html += trophyMarkup(ach, pr, !!(rec || pr.done));
       });
       html += '</div></section>';
     });
     el.innerHTML = html;
-    bindMedals(el);
+    bindTrophies(el);
   }
 
   function sync(opts){
@@ -938,18 +1568,19 @@
       const pr = progress(ach);
       if (!pr.done) return;
       if (!store.unlocked[ach.id]) {
-        let at = today;
+        const inherited = inheritDate(ach, store);
+        let at = inherited || today;
         if (ach.kind === 'path' && host.certDate) {
           const cd = host.certDate(ach.path);
           if (cd) at = cd;
         }
         store.unlocked[ach.id] = { at: at };
-        newly.push(ach);
+        if (!inherited) newly.push(ach);
       }
     });
-    if (newly.length) saveStore(store);
+    if (newly.length || true) saveStore(store);
     if (opts.toast && newly.length) enqueueToasts(newly);
-    const root = document.getElementById('vitrine');
+    const root = document.getElementById('trophiesBody') || document.getElementById('vitrine');
     if (root) render(root);
     return newly;
   }
@@ -967,20 +1598,20 @@
     const ach = typeof achOrId === 'string' ? catalog().find(function (a) { return a.id === achOrId; }) : achOrId;
     const el = document.getElementById('achToast');
     if (!ach || !el) return Promise.resolve();
-    const tx = textsFor(ach.id);
+    const tx = textsFor(ach);
     const P = pack();
+    const tierName = (P.tier && P.tier[ach.tier]) || ach.tier;
     el.hidden = false;
-    el.innerHTML = '<div class="medal-face medal '+ach.tier+'">'+medalSvg(ach)+'</div>'
-      + '<div class="ach-name">'+esc(tx.n)+'</div><p class="ach-line">'+esc(tx.t)+'</p>';
-    el.setAttribute('aria-label', tx.n + '. ' + tx.t + '. ' + P.openHint);
+    el.removeAttribute('hidden');
+    el.innerHTML = '<div class="trophy-face">'+
+      '<img class="trophy-img" src="'+esc(trophySrc(ach, true))+'" alt="" width="256" height="256">'+
+      '</div><div class="ach-body"><div class="ach-tier">'+esc(tierName)+'</div>'+
+      '<div class="ach-name">'+esc(tx.n)+'</div><p class="ach-line">'+esc(tx.t)+'</p></div>';
+    el.setAttribute('aria-label', tx.n + '. ' + tierName + '. ' + tx.t + '. ' + P.openHint);
     el.classList.add('show');
     el.onclick = function () {
       hideToast();
-      if (host && host.showAlbum) host.showAlbum();
-      setTimeout(function () {
-        const v = document.getElementById('vitrine');
-        if (v) v.scrollIntoView({ block:'start', behavior: (host && host.reduceMotion && host.reduceMotion()) ? 'auto' : 'smooth' });
-      }, 200);
+      if (host && host.showTrophies) host.showTrophies();
     };
     return new Promise(function (res) {
       clearTimeout(toastT);
@@ -996,6 +1627,23 @@
     setTimeout(function () { if (el && !el.classList.contains('show')) el.hidden = true; }, 400);
   }
 
+
+  function sealSvg(tier){
+    const fills = {
+      gold: { a:'#e8c56b', b:'#8a6a22', c:'#f6e4a8' },
+      silver: { a:'#c5cdd4', b:'#5a646c', c:'#eef2f4' },
+      bronze: { a:'#c47a3a', b:'#6a3e16', c:'#e8b07a' }
+    };
+    const c = fills[tier] || fills.gold;
+    return '<svg viewBox="0 0 64 64" aria-hidden="true">'
+      + '<defs><radialGradient id="ds'+tier+'" cx="38%" cy="32%" r="70%">'
+      + '<stop offset="0%" stop-color="'+c.c+'"/><stop offset="55%" stop-color="'+c.a+'"/><stop offset="100%" stop-color="'+c.b+'"/></radialGradient></defs>'
+      + '<circle cx="32" cy="32" r="30" fill="url(#ds'+tier+')"/>'
+      + '<circle cx="32" cy="32" r="25" fill="none" stroke="'+c.b+'" stroke-width="1.4"/>'
+      + '<circle cx="32" cy="32" r="22" fill="none" stroke="'+c.c+'" stroke-width="0.7" stroke-dasharray="2.2 1.6" opacity=".9"/>'
+      + '</svg>';
+  }
+
   function openDetail(id){
     const ach = catalog().find(function (a) { return a.id === id; });
     const sh = document.getElementById('achView');
@@ -1004,19 +1652,50 @@
     const rec = store.unlocked[id];
     const pr = progress(ach);
     const unlocked = !!(rec || pr.done);
-    const tx = textsFor(id);
+    const tx = textsFor(ach);
     const P = pack();
+    const isDip = trophyType(ach) === 'diploma' && unlocked;
+    sh.classList.toggle('diploma', isDip);
     const hold = document.getElementById('achViewMedal');
-    if (hold) hold.innerHTML = '<div class="medal-face medal '+ach.tier+(unlocked?'':' locked')+'">'+medalSvg(ach)+'</div>';
+    if (hold) {
+      if (isDip) {
+        const dateStr = (unlocked && rec && rec.at) ? fill(P.date, { d: formatDate(rec.at) }) : '';
+        const tierName = (P.tier && P.tier[ach.tier]) || ach.tier;
+        hold.innerHTML = '<div class="diploma-sheet diploma-tier-'+esc(ach.tier)+'">'+
+          '<img class="diploma-frame" src="img/trophies/diploma-frame.webp" alt="" width="792" height="769" decoding="async" loading="eager">'+
+          '<div class="diploma-inner">'+
+          '<p class="diploma-kicker">'+esc(P.title)+'</p>'+
+          '<h2 class="diploma-title">'+esc(tx.n)+'</h2>'+
+          (dateStr ? '<p class="diploma-date">'+esc(dateStr)+'</p>' : '')+
+          '<p class="diploma-desc">'+esc(tx.d)+'</p>'+
+          '<div class="diploma-seal '+esc(ach.tier)+'" aria-hidden="true">'+sealSvg(ach.tier)+'<span>'+esc(tierName)+'</span></div>'+
+          '<p class="diploma-sign">Masilano · Meisterwerke</p>'+
+          '</div></div>';
+      } else {
+        hold.innerHTML = '<div class="trophy-face trophy '+ach.tier+(unlocked?'':' locked')+'">'+
+          '<img class="trophy-img" src="'+esc(trophySrc(ach, unlocked))+'" alt="" width="256" height="256">'+
+          '</div>';
+      }
+    }
     const title = document.getElementById('achViewTitle');
-    if (title) title.textContent = tx.n;
+    if (title) {
+      title.textContent = isDip ? '' : tx.n;
+      title.hidden = isDip;
+    }
     const desc = document.getElementById('achViewDesc');
-    if (desc) desc.textContent = tx.d;
+    if (desc) {
+      desc.textContent = isDip ? '' : tx.d;
+      desc.hidden = isDip;
+    }
     const date = document.getElementById('achViewDate');
     if (date) {
-      if (unlocked && rec && rec.at) date.textContent = fill(P.date, { d: formatDate(rec.at) });
-      else if (!unlocked) date.textContent = fill(P.progress, pr);
-      else date.textContent = '';
+      if (isDip) { date.textContent = ''; date.hidden = true; }
+      else {
+        date.hidden = false;
+        if (unlocked && rec && rec.at) date.textContent = fill(P.date, { d: formatDate(rec.at) });
+        else if (!unlocked) date.textContent = fill(P.progress, pr);
+        else date.textContent = '';
+      }
     }
     sh.classList.remove('hidden');
     const cl = document.getElementById('achViewClose');
@@ -1024,7 +1703,7 @@
   }
   function closeDetail(){
     const sh = document.getElementById('achView');
-    if (sh) sh.classList.add('hidden');
+    if (sh) { sh.classList.add('hidden'); sh.classList.remove('diploma'); }
   }
 
   function onDelight(){ sync({ toast: true }); }
@@ -1041,6 +1720,6 @@
     return api;
   }
 
-  const api = { init:init, sync:sync, render:render, showToast:showToast, hideToast:hideToast, openDetail:openDetail, closeDetail:closeDetail, onDelight:onDelight, catalog:catalog, progress:progress, textsFor:textsFor, loadStore:loadStore };
+  const api = { init:init, sync:sync, render:render, showToast:showToast, hideToast:hideToast, openDetail:openDetail, closeDetail:closeDetail, onDelight:onDelight, catalog:catalog, progress:progress, textsFor:textsFor, loadStore:loadStore, trophySrc:trophySrc, trophyType:trophyType };
   window.MASILANO_ACHIEVEMENTS = api;
 })();

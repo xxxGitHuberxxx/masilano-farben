@@ -498,7 +498,7 @@ body:not(.tabless) .ctoast,body:not(.tabless) .mtoast{bottom:calc(env(safe-area-
 @media (min-width:768px){
   .tab-screen h1{font-size:38px}
   .lead{font-size:19px}
-  #gallery .ghead,#album .albumhead{padding-left:24px;padding-right:24px}
+  #gallery .ghead,#album .albumhead,#trophies .albumhead{padding-left:24px;padding-right:24px}
   .pager .page{padding-left:24px;padding-right:24px}
   .tab{font-size:14px;min-height:58px}
   .tab svg{width:26px;height:26px}
@@ -1006,7 +1006,7 @@ body.calm{--head-h:calc(env(safe-area-inset-top,0px) + 72px)}
 }
 .tab-screen{top:var(--head-h)}
 .tabscroll{padding-top:12px}
-#gallery .ghead,#album .albumhead{padding-top:12px}
+#gallery .ghead,#album .albumhead,#trophies .albumhead{padding-top:12px}
 #heute .tabscroll{padding-top:12px}
 
 /* darker, readable gold / room labels in script */
@@ -1233,14 +1233,14 @@ html,body{
 .tab:focus-visible{outline-color:var(--gold)}
 .tab .ndot{box-shadow:0 0 0 2px #0c162c}
 
-#heute .tab-screen h1,#wege .tab-screen h1,#gallery h1,#album h1,
-#heute h1,#wege h1,#gallery.tab-screen h1,#album.tab-screen h1,
-#heute .roomlab,#wege .roomlab,#gallery .roomlab,#album .roomlab,
-#heute h2.roomlab,#wege h2.roomlab{
+#heute .tab-screen h1,#wege .tab-screen h1,#gallery h1,#album h1,#trophies h1,
+#heute h1,#wege h1,#gallery.tab-screen h1,#album.tab-screen h1,#trophies.tab-screen h1,
+#heute .roomlab,#wege .roomlab,#gallery .roomlab,#album .roomlab,#trophies .roomlab,
+#heute h2.roomlab,#wege h2.roomlab,#trophies h2.roomlab{
   color:var(--gold-hi);
 }
-#heute .lead,#wege .lead,#gallery .lead,#album .lead,
-#heute .sub,#wege .sub,#gallery .sub,#album .sub,
+#heute .lead,#wege .lead,#gallery .lead,#album .lead,#trophies .lead,
+#heute .sub,#wege .sub,#gallery .sub,#album .sub,#trophies .sub,
 #gallery .ghead .lead.sub{
   color:var(--text-on-night);
 }
@@ -1345,7 +1345,7 @@ html,body{
 .waycard{box-shadow:0 6px 20px rgba(0,0,0,.35)}
 
 /* v10.8 / v10.9 head clearance: script flourishes must not meet the fixed header */
-#gallery .ghead,#album .albumhead,#album.tab-screen .albumhead{
+#gallery .ghead,#album .albumhead,#album.tab-screen .albumhead,#trophies .albumhead{
   padding-top:32px;
 }
 #heute .tabscroll,#wege .tabscroll{padding-top:18px}
@@ -1900,3 +1900,176 @@ body.calm .contcard .cv,body.calm .dailycard .cv{ --cv-w: 68px; }
   white-space:nowrap;
 }
 .gfoot .ver{font-size:11px}
+
+
+/* v10.17: gallery infinite scroll, album tiles, fifth tab */
+#gallery.tab-screen{overflow-y:auto;-webkit-overflow-scrolling:touch}
+#gallery .pager{
+  flex:1 0 auto;
+  height:auto;
+  min-height:0;
+  overflow:visible;
+  display:block;
+  scroll-snap-type:none;
+}
+#gallery #dots, #gallery .dots{display:none !important}
+#gallery .galgrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(158px, 1fr));
+  gap:16px;
+  padding:8px 16px 12px;
+  width:100%;
+  box-sizing:border-box;
+}
+@media (min-width:700px){
+  #gallery .galgrid{grid-template-columns:repeat(auto-fill, minmax(180px, 1fr));gap:18px}
+}
+#gallery .galgrid .pc{min-width:0;width:100%}
+#gallery .pc .im{
+  position:relative;
+  overflow:hidden;
+  aspect-ratio:4/3;
+  min-height:110px;
+  background-color:#1a1612;
+  background-size:cover;
+  background-position:center;
+}
+#gallery .pc .im img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+#gallery .galcount{
+  text-align:center;
+  font-size:14px;
+  color:#c9c0b0;
+  padding:12px 16px calc(env(safe-area-inset-bottom) + 88px);
+  margin:0;
+}
+
+/* Five tabs: slightly tighter on the phone */
+.tabbar{padding-left:0;padding-right:0}
+.tab{font-size:12px;padding:6px 1px;min-height:54px}
+.tab .ticon svg,.tab svg{width:22px;height:22px}
+@media (min-width:700px){
+  .tab{font-size:13px;padding:6px 4px}
+  .tab .ticon svg,.tab svg{width:26px;height:26px}
+}
+
+/* Album tiles: isolate from later frame/vitrine rules */
+#album .albumscroll{padding:8px 16px calc(env(safe-area-inset-bottom) + 24px)}
+#album .agroup{
+  display:block;
+  position:relative;
+  isolation:isolate;
+  margin:0 0 28px;
+  width:100%;
+}
+#album .agroup h2{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  justify-content:flex-start;
+  gap:6px 16px;
+  position:relative;
+  width:100%;
+  margin:0 0 12px;
+  font-family:"Great Vibes",Georgia,"Times New Roman",cursive !important;
+  font-weight:400;
+  font-size:32px !important;
+  line-height:1.2;
+  color:var(--gold-hi, #f6e4a8);
+  text-transform:none;
+  letter-spacing:0;
+}
+@media (min-width:700px){
+  #album .agroup h2{font-size:36px !important}
+}
+#album .agroup h2 .agtitle{min-width:0;flex:0 1 auto;color:inherit;text-transform:none}
+#album .agroup h2 .cnt{
+  margin-left:0;
+  flex:none;
+  font-family:Georgia,"Times New Roman",serif !important;
+  font-size:15px !important;
+  font-style:italic;
+  font-weight:normal;
+  color:var(--cream, #f3ead6);
+  letter-spacing:0;
+  text-transform:none;
+}
+#album .awall{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(96px, 1fr));
+  gap:14px 12px;
+  align-items:stretch;
+  margin:0;
+  width:100%;
+}
+@media (min-width:700px){
+  #album .awall{grid-template-columns:repeat(auto-fill, minmax(110px, 1fr));gap:16px 14px}
+}
+@media (min-width:1100px){
+  #album .awall{grid-template-columns:repeat(auto-fill, minmax(120px, 1fr))}
+}
+#album .atile{
+  --fo-t: 0.088542;
+  --fo-r: 0.088542;
+  --fo-b: 0.091146;
+  --fo-l: 0.091146;
+  --frame-src: url("img/frame-ivory-gold.webp");
+  position:relative;
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  aspect-ratio:1 / 1;
+  min-width:0;
+  min-height:0;
+  overflow:hidden !important;
+  isolation:isolate;
+  border:0 none !important;
+  border-image:none !important;
+  border-radius:0;
+  padding:0;
+  margin:0;
+  background:#1a1612;
+  box-shadow:0 2px 8px rgba(20,16,10,.28);
+  z-index:0;
+}
+#album .atile::before{
+  content:none !important;
+  display:none !important;
+}
+#album .atile::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: var(--frame-src) center / 100% 100% no-repeat;
+  pointer-events:none;
+  z-index:2;
+  filter:none;
+  box-shadow:none;
+}
+#album .atile img{
+  position:absolute;
+  top:calc(var(--fo-t) * 100%);
+  left:calc(var(--fo-l) * 100%);
+  width:calc(100% - (var(--fo-l) + var(--fo-r)) * 100%);
+  height:calc(100% - (var(--fo-t) + var(--fo-b)) * 100%);
+  right:auto;
+  bottom:auto;
+  max-width:none;
+  max-height:none;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+  border:0;
+  border-radius:0;
+  z-index:1;
+  filter:none;
+}
+#trophies.tab-screen{overflow-y:auto;-webkit-overflow-scrolling:touch}
+#trophies .albumscroll{flex:1;min-height:0;overflow-y:auto}

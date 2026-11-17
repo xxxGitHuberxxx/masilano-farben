@@ -207,12 +207,42 @@ function painterChip(p){
   }
   return esc(parts[parts.length - 1] || a);
 }
+const CAT_KW = {
+  flowers: ['lily','lilies','seerose','seerosen','nymphea','nympheas','nenufar','nenufares','ninfea','ninfee','sunflower','sunflowers','sonnenblume','sonnenblumen','girasol','girasole','tournesol','tournesols','iris','irises','rose','rosen','roses','poppy','poppies','mohn','coquelicot','tulip','tulpe','tulpen','bouquet','blumen','flower','flowers','fleur','fleurs','fiori','blossom','bluete','blute','garden','garten','jardin','giardino','peony','pfingstrose','chrysanth','orangerie','almond','mandel','wisteria','glyzinie','daffodil','narzisse','hyacinth','carnation','nelke','orchid','orchidee','water lily','wasserlilie','lilie','lilien','anemone','oleander','hortensia','hydrangea'],
+  landscapes: ['landscape','landschaft','landschaften','paysage','paesaggio','mountain','mountains','berg','berge','montagne','wheat','weizen','harvest','ernte','haystack','heuschober','wanderer','valley','tal','tree','trees','baum','baeume','baume','forest','wald','field','feld','felder','meadow','wiese','snow','schnee','neige','neve','plain','ebene','cliff','klippe','glacier','gletscher','alps','alpen','dune','dünen','dunen'],
+  water: ['sea','mer','meer','oceano','ocean','wave','waves','welle','wellen','vogue','onda','onde','lake','lago','lac','river','fluss','riviere','fiume','canal','kanal','boat','boot','barque','barca','marina','harbor','harbour','hafen','port','rain','regen','pluie','pioggia','water','wasser','eau','acqua','bridge over','pont','seerose','nymph','nenufar','lilypond','lily pond','lily-pond','nacht am','nocturne','seascape','marine'],
+  animals: ['horse','horses','pferd','pferde','cheval','cavallo','hare','hasen','lievre','lepre','dog','hund','chien','cane','cow','kuh','vache','mucca','bird','birds','vogel','oiseau','uccello','sheep','schaf','mouton','pecora','lion','lowe','lionne','cat','katze','chat','gatto','fish','fisch','poisson','pesce','stag','hirsch','cerf','cervo','bull','stier','taureau','toro','owl','eule','swan','schwan','cygne','cigno','fox','fuchs','renard','volpe','butterfly','schmetterling','peacock','pfau','paon','pavone','eagle','adler','aigle','aquila','ermine','wiesel','heron','reiher'],
+  portraits: ['portrait','portrat','portraet','retrato','ritratto','self-portrait','self portrait','selbstbildnis','selbstportrat','autoportrait','autoritratto','madonna','madame','monsieur','senora','signora','lady','girl','boy','junge','madchen','maedchen','kind','enfant','bambina','bambino','infant','woman','man','frau','mann','femme','homme','donna','uomo','head of','kopf','visage','volto'],
+  city: ['city','stadt','ville','citta','città','street','strasse','strasse','rue','via','paris','london','venice','venedig','venise','venezia','amsterdam','bridge','brucke','bruecke','pont','ponte','cafe','café','cathedral','kathedrale','kirche','eglise','chiesa','tower','turm','tour','torre','plaza','platz','markt','market','marche','piazza','boulevard','quartier','roof','dach','toit','tetto','square','platz','harbour town','harbour','hafenstadt','skyline','facade','fassade']
+};
+function foldCat(s){
+  return fold(String(s || ''));
+}
+function hayForCat(p){
+  return foldCat([p.id, p.title, L(p,'title'), p.artist, L(p,'artist'), p.museum, L(p,'museum')].filter(Boolean).join(' '));
+}
 function paintingInCat(p, cat){
   if (!p || !cat || cat === 'alle') return true;
   if (cat === 'paths') return !!pathOwning(p.id);
   if (cat === 'furdich') return forYouSet().has(p.id);
   const list = GAL_CATS[cat];
-  return !!(list && list.indexOf(p.id) >= 0);
+  if (list && list.indexOf(p.id) >= 0) return true;
+  const hay = hayForCat(p);
+  const kws = CAT_KW[cat] || [];
+  for (let i = 0; i < kws.length; i++) {
+    const k = foldCat(kws[i]);
+    if (k.length >= 3 && hay.indexOf(k) >= 0) return true;
+  }
+  return false;
+}
+function idsInCat(cat){
+  return uniqueWorks(ALL).filter(p => paintingInCat(p, cat)).map(p => p.id);
+}
+function uniqueWorks(arr){
+  const seen = new Set();
+  const out = [];
+  (arr || []).forEach(p => { if (p && p.id && !seen.has(p.id)) { seen.add(p.id); out.push(p); } });
+  return out;
 }
 function forYouSet(){
   const ids = [];
@@ -221,13 +251,15 @@ function forYouSet(){
   const day = todayKey();
   const daily = pickDaily(day);
   if (daily && !isDone(daily.id)) add(daily.id);
-  P.forEach(p => { const s = loadSave(p.id); if (s && s.filled && s.filled.length && !(s.total && s.filled.length >= s.total)) add(p.id); });
+  const pool = uniqueWorks(ALL);
+  pool.forEach(p => { const sv = loadSave(p.id); if (sv && sv.filled && sv.filled.length && !(sv.total && sv.filled.length >= sv.total)) add(p.id); });
   const last = findLastWork && findLastWork();
   if (last && last.id) add(last.id);
   const ap = findActivePath && findActivePath();
-  if (ap) pathSteps(ap).forEach(s => { if (s.pid && P.some(p => p.id === s.pid) && !isDone(s.pid)) add(s.pid); });
-  P.filter(p => levelOf(p) === 'leicht' && !isDone(p.id)).forEach(p => add(p.id));
-  P.filter(p => !isDone(p.id)).forEach(p => add(p.id));
+  if (ap) pathSteps(ap).forEach(st => { if (st.pid && !isDone(st.pid)) add(st.pid); });
+  const cap = 48;
+  pool.filter(p => levelOf(p) === 'leicht' && !isDone(p.id)).forEach(p => { if (ids.length < cap) add(p.id); });
+  if (ids.length < cap) pool.filter(p => !isDone(p.id)).forEach(p => { if (ids.length < cap) add(p.id); });
   return seen;
 }
 function setGalCat(cat, opts){
@@ -236,8 +268,9 @@ function setGalCat(cat, opts){
   saveGalCat();
   renderCatTabs();
   if (!opts || !opts.silent) {
-    galGrid = null; galPage = 0;
+    galGrid = null; galPage = 0; galShown = 0; galReset = true;
     try { sessionStorage.setItem('masilano.galPage', '0'); } catch (e) {}
+    const gsc = $('#gallery'); if (gsc) gsc.scrollTop = 0;
     renderGallery();
   }
 }
@@ -479,7 +512,7 @@ function updateHeuteDot(){
 
 function galleryList(){
   const q = fold(galQuery);
-  let arr = P.filter(p => matchesQuery(p, q));
+  let arr = uniqueWorks(ALL).filter(p => matchesQuery(p, q));
   if (calmOn() || galFilter.level === 'leicht') arr = arr.filter(p => levelOf(p) === 'leicht');
   else if (galFilter.level === 'mittel') arr = arr.filter(p => levelOf(p) === 'mittel');
   else if (galFilter.level === 'schwer') arr = arr.filter(p => levelOf(p) === 'schwer');
@@ -487,14 +520,14 @@ function galleryList(){
   if (galFilter.open) arr = arr.filter(p => !isDone(p.id));
   if (!q && galCat && galCat !== 'alle') arr = arr.filter(p => paintingInCat(p, galCat));
   if (galSort === 'easy') {
-    arr.sort((a,b) => (LEVEL_RANK[levelOf(a)] - LEVEL_RANK[levelOf(b)]) || ((a.regions || 999) - (b.regions || 999)) || L(a,'title').localeCompare(L(b,'title'), I.lang === 'de' ? 'de-CH' : 'en'));
+    arr.sort((a,b) => (LEVEL_RANK[levelOf(a)] - LEVEL_RANK[levelOf(b)]) || (regionsOf(a) - regionsOf(b)) || L(a,'title').localeCompare(L(b,'title'), I.lang === 'de' ? 'de-CH' : 'en'));
   }
   return arr;
 }
 function storySearchHits(){
   const q = fold(galQuery);
   if (!q) return [];
-  const galIds = new Set(P.map(p => p.id));
+  const galIds = new Set(uniqueWorks(ALL).map(p => p.id));
   const hits = [];
   for (const st of STORIES) {
     for (const ch of st.chapters) {
@@ -509,7 +542,7 @@ function storySearchHits(){
 function pathSearchHits(){
   const q = fold(galQuery);
   if (!q) return [];
-  const galIds = new Set(P.map(p => p.id));
+  const galIds = new Set(uniqueWorks(ALL).map(p => p.id));
   const hits = [];
   for (const path of PATHS) {
     for (const step of pathSteps(path)) {
@@ -538,7 +571,7 @@ function openStoryHit(st, p){
 
 function painterOptions(){
   const set = new Map();
-  P.forEach(p => { if (p.artist && !set.has(p.artist)) set.set(p.artist, artistLabel(p.artist)); });
+  uniqueWorks(ALL).forEach(p => { if (p.artist && !set.has(p.artist)) set.set(p.artist, artistLabel(p.artist)); });
   return [...set.entries()].sort((a,b) => a[1].localeCompare(b[1], I.lang === 'de' ? 'de-CH' : 'en'));
 }
 function renderFilters(){
@@ -617,7 +650,7 @@ function bindFilters(){
     sel.addEventListener('change', () => {
       galFilter.artist = sel.value || '';
       saveFilter();
-      galPage = 0; try { sessionStorage.setItem('masilano.galPage', '0'); } catch(e){}
+      galPage = 0; galShown = 0; galReset = true; try { sessionStorage.setItem('masilano.galPage', '0'); } catch(e){}
       galGrid = null;
       renderGallery();
     });
@@ -629,7 +662,7 @@ function bindFilters(){
       const b = e.target.closest('button[data-level]'); if (!b) return;
       galFilter.level = b.getAttribute('data-level') || '';
       saveFilter();
-      galPage = 0; try { sessionStorage.setItem('masilano.galPage', '0'); } catch(e){}
+      galPage = 0; galShown = 0; galReset = true; try { sessionStorage.setItem('masilano.galPage', '0'); } catch(e){}
       galGrid = null;
       renderGallery();
     });
@@ -640,7 +673,7 @@ function bindFilters(){
     op.addEventListener('click', () => {
       galFilter.open = !galFilter.open;
       saveFilter();
-      galPage = 0; try { sessionStorage.setItem('masilano.galPage', '0'); } catch(e){}
+      galPage = 0; galShown = 0; galReset = true; try { sessionStorage.setItem('masilano.galPage', '0'); } catch(e){}
       galGrid = null;
       renderGallery();
     });
@@ -670,7 +703,7 @@ if (sortBarEl) sortBarEl.addEventListener('click', e => {
   const b = e.target.closest('button[data-sort]'); if (!b) return;
   galSort = b.dataset.sort;
   try { localStorage.setItem(SORT_KEY, galSort); } catch(e){}
-  galPage = 0; try { sessionStorage.setItem('masilano.galPage', '0'); } catch(e){}
+  galPage = 0; galShown = 0; galReset = true; try { sessionStorage.setItem('masilano.galPage', '0'); } catch(e){}
   renderGallery();
 });
 function syncSearchClear(){
@@ -681,7 +714,7 @@ if (searchEl) {
   searchEl.addEventListener('input', () => {
     galQuery = searchEl.value;
     syncSearchClear();
-    galPage = 0; try { sessionStorage.setItem('masilano.galPage', '0'); } catch(e){}
+    galPage = 0; galShown = 0; galReset = true; try { sessionStorage.setItem('masilano.galPage', '0'); } catch(e){}
     renderGallery();
   });
   searchEl.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); searchEl.blur(); } });
@@ -691,7 +724,7 @@ if (searchClear) searchClear.addEventListener('click', () => {
   galQuery = '';
   if (searchEl) { searchEl.value = ''; searchEl.focus(); }
   syncSearchClear();
-  galPage = 0; try { sessionStorage.setItem('masilano.galPage', '0'); } catch(e){}
+  galPage = 0; galShown = 0; galReset = true; try { sessionStorage.setItem('masilano.galPage', '0'); } catch(e){}
   renderGallery();
 });
 let galPage = +(sessionStorage.getItem('masilano.galPage') || 0);
@@ -707,12 +740,11 @@ function galProgress(s){
 function galImHtml(p, s, extra){
   const { started, done, pct } = galProgress(s);
   const cls = done ? '' : (started ? 'doing' : 'todo');
-  const file = done ? 'orig.jpg' : 'thumb.jpg';
   const badge = done
     ? `<span class="badge fin">✓ ${t('done')}</span>`
     : (started ? `<span class="badge prog">${Math.max(1, pct)} %</span>` : '');
   const bar = started && !done ? `<div class="imbar"><div style="width:${Math.max(2, pct)}%"></div></div>` : '';
-  return `<div class="im ${cls}" style="background-image:url(data/${p.id}-${file})">${extra || ''}${badge}${bar}</div>`;
+  return `<div class="im ${cls}"><img src="data/${p.id}-thumb.jpg" alt="" loading="lazy" decoding="async" width="240" height="180">${extra || ''}${badge}${bar}</div>`;
 }
 function paintGalCard(item){
   const p = item.p;
@@ -746,92 +778,82 @@ function paintGalCard(item){
   }
   return b;
 }
-function fillGalPage(page, pg){
-  if (!page || page.dataset.filled) return;
-  page.dataset.filled = '1';
-  galItems.slice(pg * galPer, pg * galPer + galPer).forEach(item => page.appendChild(paintGalCard(item)));
+const GAL_BATCH = 48;
+let galShown = 0, galScrollBound = false, galReset = false;
+function galGridEl(){ return $('#galGrid'); }
+function bindGalScroll(){
+  if (galScrollBound) return;
+  const sc = $('#gallery');
+  if (!sc) return;
+  galScrollBound = true;
+  sc.addEventListener('scroll', onGalScroll, { passive: true });
 }
-function hydrateGal(center){
-  const pages = [...document.querySelectorAll('#pager .page')];
-  const a = Math.max(0, (center || 0) - 1), b = Math.min(pages.length - 1, (center || 0) + 1);
-  for (let i = a; i <= b; i++) fillGalPage(pages[i], i);
+function onGalScroll(){
+  if (currentTab !== 'galerie') return;
+  const sc = $('#gallery');
+  if (!sc) return;
+  if (sc.scrollHeight - sc.scrollTop - sc.clientHeight < 900) appendGalBatch();
+}
+function updateGalCount(){
+  const el = $('#galCount');
+  if (!el) return;
+  el.textContent = t('galShown', { n: galShown, N: galItems.length });
+  el.hidden = !galItems.length;
+}
+function appendGalBatch(){
+  const grid = galGridEl();
+  if (!grid || galShown >= galItems.length) { updateGalCount(); return 0; }
+  const next = galItems.slice(galShown, galShown + GAL_BATCH);
+  const frag = document.createDocumentFragment();
+  next.forEach(item => frag.appendChild(paintGalCard(item)));
+  grid.appendChild(frag);
+  galShown += next.length;
+  updateGalCount();
+  return next.length;
 }
 function renderGallery(){
   const pager = $('#pager'), dots = $('#dots');
-  if (!pager || !dots) return;
+  if (!pager) return;
   renderCatTabs();
   renderFeatureBanner($('#galBanner'));
   renderSortBar();
   renderFilters();
-  if (!pager.clientWidth || !pager.clientHeight) return;
+  bindGalScroll();
   const list = galleryList();
-  const storyHits = storySearchHits();
-  const pathHits = pathSearchHits();
+  const have = new Set(list.map(p => p.id));
+  const storyHits = storySearchHits().filter(h => h.p && !have.has(h.p.id));
+  storyHits.forEach(h => have.add(h.p.id));
+  const pathHits = pathSearchHits().filter(h => h.p && !have.has(h.p.id));
   const items = list.map(p => ({ kind:'gal', p })).concat(storyHits.map(h => ({ kind:'story', p:h.p, st:h.st }))).concat(pathHits.map(h => ({ kind:'path', p:h.p, path:h.path, step:h.step })));
   syncSearchClear();
-  const gap = 16;
-  const boxW = pager.clientWidth, boxH = pager.clientHeight;
-  const W = Math.max(0, boxW - 32), H = Math.max(0, boxH - 8);
-  const cols = Math.max(2, Math.min(6, Math.round(W / 230)));
-  const cw2 = cols ? (W - (cols - 1) * gap) / cols : W;
-  const minH = Math.max(232, cw2 * 0.72 + 108);
-  const sizeKey = cols + ':' + Math.round(boxW) + 'x' + Math.round(boxH);
-  let rows, cardH;
-  if (galGrid && galGrid.sizeKey === sizeKey) {
-    rows = galGrid.rows; cardH = galGrid.cardH;
-  } else {
-    rows = Math.max(1, Math.floor((H + gap) / (minH + gap)));
-    cardH = Math.min((H - (rows - 1) * gap) / rows, cw2 * 1.25 + 110);
-    while (rows > 1 && rows * cardH + (rows - 1) * gap > H) {
-      rows--;
-      cardH = Math.min((H - (rows - 1) * gap) / rows, cw2 * 1.25 + 110);
-    }
-    galGrid = { sizeKey, cols, rows, cardH };
-  }
-  const per = cols * rows, nPages = Math.ceil(items.length / Math.max(1, per));
-  pager.innerHTML = ''; dots.innerHTML = '';
+  if (dots) { dots.innerHTML = ''; dots.hidden = true; }
+  const keepTop = (!galReset && currentTab === 'galerie') ? ($('#gallery') && $('#gallery').scrollTop) || 0 : 0;
+  const keepShown = (!galReset && galItems.length && items.length === galItems.length) ? galShown : 0;
+  galReset = false;
+  pager.innerHTML = '';
   if (!items.length) {
+    galItems = []; galShown = 0; galPer = GAL_BATCH;
     const empty = document.createElement('div'); empty.className = 'empty';
     empty.innerHTML = `<div class="e1">${t('noHits')}</div><div class="e2">${t('noHitsHint')}</div>`;
     pager.appendChild(empty);
-    const ph = document.createElement('button');
-    ph.disabled = true; ph.setAttribute('aria-hidden', 'true'); ph.tabIndex = -1;
-    ph.style.visibility = 'hidden';
-    dots.appendChild(ph);
     return;
   }
-  galItems = items; galPer = per;
-  for (let pg = 0; pg < nPages; pg++) {
-    const page = document.createElement('div'); page.className = 'page';
-    page.style.gridTemplateColumns = `repeat(${cols}, 1fr)`; page.style.gridAutoRows = cardH + 'px';
-    pager.appendChild(page);
-    const d = document.createElement('button'); d.setAttribute('aria-label', t('pageN', { n: pg + 1 }));
-    d.onclick = () => { hydrateGal(pg); smoothScroll(pager, { left: pg * pager.clientWidth, behavior: 'smooth' }); };
-    dots.appendChild(d);
-  }
-  galPage = Math.min(galPage, nPages - 1);
-  hydrateGal(galPage);
-  pager.scrollLeft = galPage * pager.clientWidth;
-  markDots();
-  if (!galFitting && galGrid && galGrid.rows > 1) {
-    const pb = pager.getBoundingClientRect();
-    const overflow = [...pager.querySelectorAll('.page[data-filled] .pc')].some(c => c.getBoundingClientRect().bottom > pb.bottom + 1.5);
-    if (overflow) {
-      galGrid.rows -= 1;
-      galGrid.cardH = Math.min((H - (galGrid.rows - 1) * gap) / galGrid.rows, cw2 * 1.25 + 110);
-      galFitting = true;
-      renderGallery();
-      galFitting = false;
-    }
-  }
+  galItems = items; galPer = GAL_BATCH; galShown = 0;
+  const grid = document.createElement('div');
+  grid.id = 'galGrid';
+  grid.className = 'galgrid';
+  pager.appendChild(grid);
+  const count = document.createElement('p');
+  count.id = 'galCount';
+  count.className = 'galcount';
+  pager.appendChild(count);
+  const want = Math.max(GAL_BATCH, keepShown || 0);
+  while (galShown < want && galShown < galItems.length) appendGalBatch();
+  updateGalCount();
+  const sc = $('#gallery');
+  if (sc) sc.scrollTop = keepTop;
 }
-function markDots(){
-  const pager = $('#pager'), n = Math.round(pager.scrollLeft / Math.max(1, pager.clientWidth));
-  [...$('#dots').children].forEach((d, i) => d.classList.toggle('on', i === n));
-  if (n !== galPage) { galPage = n; try { sessionStorage.setItem('masilano.galPage', n); } catch(e){} }
-  hydrateGal(n);
-}
-$('#pager').addEventListener('scroll', () => requestAnimationFrame(markDots), { passive: true });
+function markDots(){ /* pager dots retired in v10.17; infinite scroll */ }
 $('#srcBtn').onclick = () => {
   $('#srcList').innerHTML = ALL.map(p => `<li><b>${L(p,'title')}</b> (${L(p,'artist')}): ${I.sourceLine(p.source) || ''}. ${t('museumWord')}: ${L(p,'museum')}.</li>`).join('');
   revealSheet('#sources');
@@ -1186,7 +1208,7 @@ $('#hintBtn').onclick = () => { if (S && S.done) { showStory(); return; } origHi
 cv.addEventListener('click', () => { if (S && S.done && !anim && !(S.doneAt && performance.now() - S.doneAt < 4000)) { reveal = reveal > 0.5 ? 0 : 1; draw(); toast(reveal ? t('original') : t('yours')); } });
 
 // ---------- navigation ----------
-const TABS = ['heute','wege','galerie','album'];
+const TABS = ['heute','wege','galerie','album','trophies'];
 let currentTab = 'heute';
 let routeSilent = false;
 function storedTab(){
@@ -1316,8 +1338,9 @@ function showScreen(id){
     syncTabBar();
     if (tabId === 'heute') renderHeute();
     if (tabId === 'wege') renderStoryEntry();
-    if (tabId === 'galerie') { placeFilterPanel(); galGrid = null; requestAnimationFrame(() => renderGallery()); }
+    if (tabId === 'galerie') { placeFilterPanel(); requestAnimationFrame(() => renderGallery()); }
     if (tabId === 'album') renderAlbum();
+    if (tabId === 'trophies') renderTrophies();
   } else {
     document.body.classList.add('tabless');
     document.querySelectorAll('.tab-screen').forEach(s => s.classList.remove('active'));
@@ -1354,7 +1377,7 @@ function goGallery(){
 function hideSheets(){ if (window.MASILANO_MUSIC) window.MASILANO_MUSIC.stopSpeak(); ['#story', '#chapter', '#chDone', '#pathFin', '#installHow', '#settings', '#albumView', '#sources', '#filterSheet', '#catSheet', '#certView'].forEach(q => $(q) && $(q).classList.add('hidden')); }
 $('#backBtn').onclick = goGallery;
 let galT = 0;
-function onViewport(){ if (S) resize(); else { clearTimeout(galT); galT = setTimeout(() => { placeFilterPanel(); if (currentTab === 'galerie') { galGrid = null; renderGallery(); } }, 120); } }
+function onViewport(){ if (S) resize(); else { clearTimeout(galT); galT = setTimeout(() => { placeFilterPanel(); }, 120); } }
 window.addEventListener('resize', onViewport);
 if (window.visualViewport) visualViewport.addEventListener('resize', onViewport);
 
@@ -2276,17 +2299,16 @@ function renderAlbum(){
   const box = $('#albumBody'); if (!box) return;
   const groups = albumGroups();
   const n = doneCount(), N = ALL.length;
-  let html = `<div id="vitrine" class="vitrine"></div><div class="albumsum">${t('albumCount', { n, N })}</div>`;
+  let html = `<div class="albumsum">${t('albumCount', { n, N })}</div>`;
   if (!n) {
     html += `<div class="albumempty">${t('albumEmpty')}</div>`;
     box.innerHTML = html;
-    loadAchievements().then(A => { const el = box.querySelector('#vitrine'); if (A && el) { A.sync({ toast: false }); A.render(el); } }).catch(() => {});
     return;
   }
   groups.forEach(g => {
     const doneIds = g.ids.filter(id => isDone(id));
     if (!doneIds.length) return;
-    html += `<section class="agroup" data-group="${esc(g.id)}"><h2>${esc(g.title)}<span class="cnt">${t('albumGroup', { n: doneIds.length, N: g.ids.length })}</span></h2><div class="awall">`;
+    html += `<section class="agroup" data-group="${esc(g.id)}"><h2><span class="agtitle">${esc(g.title)}</span><span class="cnt">${t('albumGroup', { n: doneIds.length, N: g.ids.length })}</span></h2><div class="awall">`;
     doneIds.forEach(id => {
       const p = byId(id); if (!p) return;
       html += `<button type="button" class="atile" data-id="${esc(id)}" aria-label="${esc(t('albumViewAria', { title: L(p, 'title') }))}"><img src="data/${esc(id)}-thumb.jpg" alt="" loading="lazy" width="200" height="200"></button>`;
@@ -2297,7 +2319,16 @@ function renderAlbum(){
   box.querySelectorAll('.atile').forEach(b => {
     b.onclick = () => showAlbumView(b.getAttribute('data-id'));
   });
-  loadAchievements().then(A => { const el = box.querySelector('#vitrine'); if (A && el) { A.sync({ toast: false }); A.render(el); } }).catch(() => {});
+}
+function showTrophies(){
+  hideSheets();
+  S = null;
+  navigate({ kind: 'tab', tab: 'trophies' });
+  showScreen('trophies');
+}
+function renderTrophies(){
+  const box = $('#trophiesBody'); if (!box) return;
+  loadAchievements().then(A => { if (A && box) { A.sync({ toast: false }); A.render(box); } }).catch(() => {});
 }
 function showAlbumView(id, opts){
   const p = byId(id); if (!p) return;
@@ -2360,7 +2391,7 @@ function achHost(){
     isDone, doneCount, loadStreak, pathSteps, stationDone, pathIsComplete,
     get PATHS(){ return PATHS; },
     get ALL(){ return ALL; },
-    byId, todayKey, L, reduceMotion, showAlbum,
+    byId, todayKey, L, reduceMotion, showAlbum, showTrophies, idsInCat,
     get lang(){ return I.lang; },
     galCats: GAL_CATS,
     certDate(id){ try { return localStorage.getItem(CERT_DATE_KEY(id)); } catch (e) { return null; } }
@@ -2417,8 +2448,9 @@ function bindDelight(){
   if ($('#setClose')) $('#setClose').onclick = closeSettings;
   if ($('#calmToggle')) $('#calmToggle').onclick = () => {
     setCalm(!calmOn());
-    galGrid = null; galPage = 0;
+    galGrid = null; galPage = 0; galShown = 0; galReset = true;
     try { sessionStorage.setItem('masilano.galPage', '0'); } catch (e) {}
+    const gsc = $('#gallery'); if (gsc) gsc.scrollTop = 0;
     renderGallery();
     if ($('#album') && $('#album').classList.contains('active')) renderAlbum();
   };
@@ -3060,8 +3092,10 @@ function refreshLang(){
   renderStoryEntry();
   placeFilterPanel();
   renderFilters();
+  galReset = true;
   renderGallery();
   if ($('#album') && $('#album').classList.contains('active')) renderAlbum();
+  if ($('#trophies') && $('#trophies').classList.contains('active')) renderTrophies();
 }
 window.__i18nOnChange = refreshLang;
 document.addEventListener('click', e => {
