@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Datenschutz / Privacy · Masilano Farben</title>
-  <meta name="description" content="Datenschutzerklärung von Masilano Farben. Es werden keine personenbezogenen Daten erhoben. Der Fortschritt bleibt auf diesem Gerät.">
+  <title>Datenschutz / Privacy · Meisterwerke – Malen nach Zahlen</title>
+  <meta name="description" content="Datenschutzerklärung von Meisterwerke – Malen nach Zahlen. Es werden keine personenbezogenen Daten erhoben. Der Fortschritt bleibt auf diesem Gerät.">
   <style>
     :root { --cream:#f6f3ee; --ink:#2b2722; --gold:#c79a4e; --muted:#6a635c; --line:#e4dcd0; }
     html,body { margin:0; background:var(--cream); color:var(--ink);
@@ -47,9 +47,7 @@
   </header>
   <main>
     <article id="de" class="langblock" lang="de-CH">
-      <p>Masilano Farben («die App», «wir») ist ein Malen-nach-Zahlen im Browser und als installierbare App. Verantwortlich ist Andi Grasse, Schweiz.</p>
-
-      <p class="note"><strong>Kontakt:</strong> <a href="mailto:Masilano@gmx.ch">Masilano@gmx.ch</a></p>
+      <p>Meisterwerke – Malen nach Zahlen («die App», «wir») ist ein Malen-nach-Zahlen im Browser und als installierbare App. Verantwortlich ist Andi Grasse, Schweiz.</p>
 
       <h2>Kurz gesagt</h2>
       <p>Wir erheben keine personenbezogenen Daten. Es gibt kein Benutzerkonto, keine Analyse-Werkzeuge, keine Werbung und keine Tracker. Dein Fortschritt wird nur auf diesem Gerät gespeichert.</p>
@@ -86,13 +84,11 @@
       <p>Wenn sich diese Erklärung ändert, aktualisieren wir das Datum oben auf dieser Seite. Die jeweils gültige Fassung findest du immer unter dieser Adresse.</p>
 
       <h2>Kontakt</h2>
-      <p class="note">Schreib an: <a href="mailto:Masilano@gmx.ch">Masilano@gmx.ch</a>.</p>
+      <p class="note">Schreib an <a href="mailto:Masilano@gmx.ch">Masilano@gmx.ch</a>.</p>
     </article>
 
     <article id="en" class="langblock" lang="en" hidden>
-      <p>Masilano Farben (“the app”, “we”) is a color-by-number experience in the browser and as an installable app. The publisher is Andi Grasse, Switzerland.</p>
-
-      <p class="note"><strong>Contact:</strong> <a href="mailto:Masilano@gmx.ch">Masilano@gmx.ch</a></p>
+      <p>Masterpieces – Color by Number (“the app”, “we”) is a color-by-number experience in the browser and as an installable app. The publisher is Andi Grasse, Switzerland.</p>
 
       <h2>In short</h2>
       <p>We do not collect personal data. There is no user account, no analytics, no advertising, and no tracking. Your progress stays on this device.</p>
@@ -129,11 +125,11 @@
       <p>If this policy changes, we will update the date at the top of this page. The current version is always available at this address.</p>
 
       <h2>Contact</h2>
-      <p class="note">Write to: <a href="mailto:Masilano@gmx.ch">Masilano@gmx.ch</a>.</p>
+      <p class="note">Write to <a href="mailto:Masilano@gmx.ch">Masilano@gmx.ch</a>.</p>
     </article>
   </main>
   <footer>
-    <p><a href="./">Masilano Farben</a></p>
+    <p><a href="./" id="homeLink">Meisterwerke – Malen nach Zahlen</a></p>
   </footer>
   <script>
     function setLang(l) {
@@ -143,6 +139,11 @@
       document.getElementById('btnDe').classList.toggle('on', de);
       document.getElementById('btnEn').classList.toggle('on', !de);
       document.getElementById('docTitle').textContent = de ? 'Datenschutz' : 'Privacy';
+      var home = document.getElementById('homeLink');
+      if (home) home.textContent = de ? 'Meisterwerke – Malen nach Zahlen' : 'Masterpieces – Color by Number';
+      document.title = de
+        ? 'Datenschutz / Privacy · Meisterwerke – Malen nach Zahlen'
+        : 'Privacy / Datenschutz · Masterpieces – Color by Number';
       document.getElementById('updated').textContent = de
         ? 'Stand: 15. November 2026'
         : 'Last updated: 15 November 2026';
