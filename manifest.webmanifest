@@ -1,7 +1,7 @@
 {
-  "name": "Masilano Farben",
-  "short_name": "Masilano",
-  "description": "Color by number with famous masterpieces. / Malen nach Zahlen mit berühmten Meisterwerken.",
+  "name": "Meisterwerke – Malen nach Zahlen",
+  "short_name": "Meisterwerke",
+  "description": "Meisterwerke – Malen nach Zahlen / Masterpieces – Color by Number.",
   "id": "./",
   "start_url": "./",
   "scope": "./",
