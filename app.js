@@ -296,6 +296,7 @@ function bannerSlides(kind){
   }
   return slides;
 }
+
 function renderFeatureBanner(el){
   if (!el) return;
   const slides = bannerSlides(el.id === 'homeBanner' ? 'home' : 'gal');
@@ -347,7 +348,10 @@ function renderFeatureBanner(el){
     dots.appendChild(d);
   });
   el.innerHTML = '';
-  el.appendChild(track);
+  const wrap = document.createElement('div');
+  wrap.className = 'frame-baroque';
+  wrap.appendChild(track);
+  el.appendChild(wrap);
   el.appendChild(dots);
   bindBanner(el, slides.length);
   upgradeBannerImgs(el);
@@ -1856,7 +1860,7 @@ function renderDaily(){
   card.className = 'dailyhero' + (done ? ' done' : '');
   const img = 'orig.jpg';
   const cta = done ? t('dailyCtaView') : t('dailyCta');
-  card.innerHTML = `<button type="button" class="heroim" id="dailyHeroIm" style="background-image:url(data/${p.id}-${img})" aria-label="${esc(t('dailyAria', { title: L(p, 'title') }))}"></button>
+  card.innerHTML = `<div class="frame-baroque"><button type="button" class="heroim" id="dailyHeroIm" style="background-image:url(data/${p.id}-${img})" aria-label="${esc(t('dailyAria', { title: L(p, 'title') }))}"></button></div>
     <div class="tx"><div class="roomlab">${t('roomDaily')}</div>
     <div class="plaque"><div class="n">${esc(L(p,'title'))}</div>
     <div class="a">${esc(L(p,'artist') || p.artist)}${p.year ? ' · ' + esc(p.year) : ''}</div></div>

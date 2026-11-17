@@ -815,7 +815,7 @@ html,body{
 .frame,.frame-lg,.frame-sm{
   border-style:solid;
   border-color:transparent;
-  border-image-source:url("img/frame-slim.png");
+  border-image-source:none;
   border-image-slice:32;
   border-image-repeat:repeat;
   background-origin:padding-box;
@@ -832,7 +832,7 @@ html,body{
 }
 .banners .btrack{
   border:12px solid transparent;
-  border-image-source:url("img/frame-slim.png");
+  border-image-source:none;
   border-image-slice:32;
   border-image-width:12px;
   border-radius:0;
@@ -845,7 +845,7 @@ html,body{
 .dailyhero{background:transparent;box-shadow:none;border-radius:0;overflow:visible}
 .dailyhero .heroim{
   border:12px solid transparent;
-  border-image-source:url("img/frame-slim.png");
+  border-image-source:none;
   border-image-slice:32;
   border-image-width:12px;
   border-radius:0;
@@ -863,7 +863,7 @@ html,body{
 .pc{overflow:visible;background:#fffdf8}
 .pc .im{
   border:5px solid transparent;
-  border-image-source:url("img/frame-slim.png");
+  border-image-source:none;
   border-image-slice:32;
   border-image-width:5px;
   border-radius:0;
@@ -874,7 +874,7 @@ html,body{
 
 .waycard .cv,.contcard .cv,.chhead .cv,#pathHead .cv,.pathnext .cv{
   border:6px solid transparent;
-  border-image-source:url("img/frame-slim.png");
+  border-image-source:none;
   border-image-slice:32;
   border-image-width:6px;
   border-radius:0;
@@ -884,7 +884,7 @@ html,body{
 }
 .chi .th,.cwork .th{
   border:4px solid transparent;
-  border-image-source:url("img/frame-slim.png");
+  border-image-source:none;
   border-image-slice:32;
   border-image-width:4px;
   border-radius:0;
@@ -893,7 +893,7 @@ html,body{
 }
 .atile{
   border:4px solid transparent;
-  border-image-source:url("img/frame-slim.png");
+  border-image-source:none;
   border-image-slice:32;
   border-image-width:4px;
   border-radius:0;
@@ -1077,7 +1077,7 @@ h2.roomlab{font-size:32px;margin:14px 0 8px;padding:0}
 /* richer gilded frames */
 .banners .btrack,.dailyhero .heroim{
   border:16px solid transparent;
-  border-image-source:url("img/frame-ornate.png");
+  border-image-source:none;
   border-image-slice:64;
   border-image-width:16px;
   border-image-repeat:round;
@@ -1088,7 +1088,7 @@ h2.roomlab{font-size:32px;margin:14px 0 8px;padding:0}
 }
 .pc .im,.atile{
   border:7px solid transparent;
-  border-image-source:url("img/frame-slim.png");
+  border-image-source:none;
   border-image-slice:48;
   border-image-width:7px;
   border-image-repeat:round;
@@ -1098,7 +1098,7 @@ h2.roomlab{font-size:32px;margin:14px 0 8px;padding:0}
 }
 .waycard .cv,.contcard .cv,.chhead .cv,#pathHead .cv,.pathnext .cv{
   border:8px solid transparent;
-  border-image-source:url("img/frame-slim.png");
+  border-image-source:none;
   border-image-slice:48;
   border-image-width:8px;
   border-image-repeat:round;
@@ -1108,7 +1108,7 @@ h2.roomlab{font-size:32px;margin:14px 0 8px;padding:0}
 }
 .chi .th,.cwork .th{
   border:5px solid transparent;
-  border-image-source:url("img/frame-slim.png");
+  border-image-source:none;
   border-image-slice:48;
   border-image-width:5px;
   border-image-repeat:round;
@@ -1344,10 +1344,268 @@ html,body{
 /* Colorful waycards stay vivid on the dark wall */
 .waycard{box-shadow:0 6px 20px rgba(0,0,0,.35)}
 
-/* v10.8 head clearance: script flourishes must not meet the fixed header */
+/* v10.8 / v10.9 head clearance: script flourishes must not meet the fixed header */
 #gallery .ghead,#album .albumhead,#album.tab-screen .albumhead{
-  padding-top:18px;
+  padding-top:32px;
 }
-#heute .tabscroll,#wege .tabscroll{padding-top:16px}
+#heute .tabscroll,#wege .tabscroll{padding-top:18px}
 #heute .tabscroll > .roomlab:first-child,#wege .tabscroll > .roomlab:first-child,
-#gallery .ghead .roomlab,#album .albumhead .roomlab{padding-top:4px}
+#gallery .ghead .roomlab,#album .albumhead .roomlab{
+  padding-top:10px;
+  line-height:1.45;
+  overflow:visible;
+}
+
+
+/* v10.9: carved frames as full overlays so mid cartouches keep their shape.
+   Unitless --fo-* are fractions of the frame box (top/bottom of height, left/right of width). */
+.frame-baroque,
+.pc .im,
+.waycard .cv,.contcard .cv,.pathnext .cv,.chhead .cv,#pathHead .cv,
+.chi .th,.cwork .th,
+.frame,.frame-lg,.frame-md,.frame-sm{
+  --fo-t: 0.216146;
+  --fo-r: 0.166992;
+  --fo-b: 0.221354;
+  --fo-l: 0.166992;
+  --frame-src: url("img/frame-baroque-gold.webp");
+  position: relative;
+  overflow: visible;
+  border: 0 none;
+  border-image: none;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+.frame-baroque::after,
+.pc .im::after,
+.waycard .cv::after,.contcard .cv::after,.pathnext .cv::after,.chhead .cv::after,#pathHead .cv::after,
+.chi .th::after,.cwork .th::after,
+.frame::after,.frame-lg::after,.frame-md::after,.frame-sm::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--frame-src) center / 100% 100% no-repeat;
+  pointer-events: none;
+  z-index: 5;
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,.48)) drop-shadow(0 2px 4px rgba(0,0,0,.28));
+}
+
+/* Banner: 16:9 assembled wide frame, painting sits in the opening */
+.banners .frame-baroque{
+  --frame-src: url("img/frame-baroque-gold-wide.webp");
+  --fo-t: 0.215278;
+  --fo-r: 0.125;
+  --fo-b: 0.220486;
+  --fo-l: 0.125;
+  display: block;
+  width: 100%;
+  max-width: calc(22vh * 16 / 9);
+  margin-inline: auto;
+  aspect-ratio: 16 / 9;
+  min-height: 132px;
+  max-height: 22vh;
+  overflow: visible;
+}
+#gallery .banners .frame-baroque{
+  max-width: calc(20vh * 16 / 9);
+  max-height: 20vh;
+  min-height: 112px;
+}
+.banners .btrack{
+  position: absolute;
+  inset: calc(var(--fo-t) * 100%) calc(var(--fo-r) * 100%) calc(var(--fo-b) * 100%) calc(var(--fo-l) * 100%);
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  border: 0 none;
+  border-image: none;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: #1a1408;
+  height: auto;
+  width: auto;
+}
+.banners .btrack::-webkit-scrollbar{display:none}
+.banners .bslide{
+  flex: none;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  min-height: 0;
+  max-height: none;
+  border: 0;
+  border-radius: 0;
+  overflow: hidden;
+}
+#heute .banners .btrack,#gallery .banners .btrack{box-shadow:none}
+.banners .btx{padding-bottom: 18px; z-index: 4;}
+
+/* Daily hero: 4:3 gold overlay, opening is the painting */
+.dailyhero .frame-baroque{
+  --frame-src: url("img/frame-baroque-gold.webp");
+  display: block;
+  width: 100%;
+  max-width: calc(42vh * 4 / 3);
+  margin-inline: auto;
+  aspect-ratio: 4 / 3;
+  min-height: 200px;
+  max-height: 42vh;
+  overflow: visible;
+}
+.dailyhero .heroim{
+  position: absolute;
+  inset: calc(var(--fo-t) * 100%) calc(var(--fo-r) * 100%) calc(var(--fo-b) * 100%) calc(var(--fo-l) * 100%);
+  display: block;
+  width: auto;
+  height: auto;
+  aspect-ratio: auto;
+  min-height: 0;
+  max-height: none;
+  padding: 0;
+  border: 0 none;
+  border-image: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+  background-color: #1a1408;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+/* Gallery tiles: 384px 4:3 tile variant. Painting is clipped to the opening. */
+#gallery .pc .im{
+  --frame-src: url("img/frame-baroque-tile.webp");
+  aspect-ratio: 4 / 3;
+  flex: 0 0 auto;
+  width: 100%;
+  padding: calc(var(--fo-t) * 0.75 * 100%) calc(var(--fo-r) * 100%) calc(var(--fo-b) * 0.75 * 100%) calc(var(--fo-l) * 100%);
+  box-sizing: border-box;
+  background-origin: content-box;
+  background-clip: content-box;
+  overflow: visible;
+}
+#gallery .pc .imbar{
+  left: calc(var(--fo-l) * 100%);
+  right: calc(var(--fo-r) * 100%);
+  bottom: calc(var(--fo-b) * 100%);
+}
+#gallery .pc .tags{
+  top: calc(var(--fo-t) * 100% + 6px);
+  left: calc(var(--fo-l) * 100% + 6px);
+  right: calc(var(--fo-r) * 100% + 6px);
+}
+#gallery .pc .painterchip{
+  left: calc(var(--fo-l) * 100% + 8px);
+  bottom: calc(var(--fo-b) * 100% + 10px);
+}
+
+/* Small thumbs sit in a wider card, so padding % would be of the parent width.
+   Use --cv-w (the thumb's own width) instead. */
+.waycard .cv,.chi .th,.cwork .th,.chhead .cv,#pathHead .cv,
+.contcard .cv,.pathnext .cv,.dailycard .cv,.sentry .cv{
+  aspect-ratio: 4 / 3;
+  height: auto;
+  box-sizing: border-box;
+  padding: calc(var(--fo-t) * 0.75 * var(--cv-w)) calc(var(--fo-r) * var(--cv-w)) calc(var(--fo-b) * 0.75 * var(--cv-w)) calc(var(--fo-l) * var(--cv-w));
+  background-origin: content-box;
+  background-clip: content-box;
+  overflow: visible;
+}
+.waycard .cv,.chi .th,.cwork .th,.chhead .cv,#pathHead .cv{
+  --frame-src: url("img/frame-baroque-tile.webp");
+}
+.waycard .cv{ --cv-w: 72px; }
+.contcard .cv,.pathnext .cv,#heute .dailycard .cv,#heute .contcard .cv{ --cv-w: 68px; }
+.dailycard .cv,.contcard .cv{ --cv-w: 60px; }
+#heute .dailycard .cv,#heute .contcard .cv,.pathnext .cv{ --cv-w: 68px; }
+.chi .th{ --cv-w: 74px; }
+.cwork .th{ --cv-w: 56px; }
+.chhead .cv,#pathHead .cv{ --cv-w: 96px; }
+.sentry .cv{ --cv-w: 60px; }
+.pathrow .sentry .cv{ --cv-w: 52px; }
+body.calm .contcard .cv,body.calm .dailycard .cv{ --cv-w: 68px; }
+@media (max-height:700px){
+  .waycard .cv{ --cv-w: 60px; }
+}
+@media (max-height:560px){
+  .contcard .cv,.dailycard .cv{ --cv-w: 44px; }
+}
+@media (max-height:860px){
+  .dailycard .cv{ --cv-w: 52px; }
+  .pathrow .sentry .cv,.sentry .cv{ --cv-w: 48px; }
+}
+@media (max-width:520px){
+  .chhead .cv,#pathHead .cv{ --cv-w: 72px; }
+}
+
+/* Kabinett / album: square ivory frame */
+.atile{
+  --fo-t: 0.130208;
+  --fo-r: 0.131510;
+  --fo-b: 0.135417;
+  --fo-l: 0.134115;
+  --frame-src: url("img/frame-ivory-gold.webp");
+  position: relative;
+  overflow: visible;
+  border: 0 none;
+  border-image: none;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: transparent;
+  aspect-ratio: 1;
+}
+.atile::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--frame-src) center / 100% 100% no-repeat;
+  pointer-events: none;
+  z-index: 5;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,.42)) drop-shadow(0 2px 3px rgba(0,0,0,.25));
+}
+.atile img{
+  position: absolute;
+  inset: calc(var(--fo-t) * 100%) calc(var(--fo-r) * 100%) calc(var(--fo-b) * 100%) calc(var(--fo-l) * 100%);
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+}
+
+/* Spotlight stays on the painting only (inside the opening), never on gold type */
+.banners::before,.dailyhero::before,.pc::before{content:none !important;display:none !important;background:none !important}
+.dailyhero .heroim::before,
+.pc .im::before,
+.waycard .cv::before,.contcard .cv::before,.pathnext .cv::before,
+.atile::before,.chi .th::before,.chhead .cv::before,#pathHead .cv::before{
+  /* default cone was a short bar at the top of the painting box; keep it there */
+  left: 8%;
+  right: 8%;
+  top: -10px;
+  height: 48px;
+  z-index: 1;
+}
+/* On padded tile hosts the painting starts at the opening, so shift the cone into the opening */
+#gallery .pc .im::before,
+.waycard .cv::before,.contcard .cv::before,.pathnext .cv::before,
+.chi .th::before,.cwork .th::before,.chhead .cv::before,#pathHead .cv::before{
+  top: calc(var(--fo-t) * 100% - 8px);
+}
+.atile::before{
+  left: calc(var(--fo-l) * 100% + 8%);
+  right: calc(var(--fo-r) * 100% + 8%);
+  top: calc(var(--fo-t) * 100% - 8px);
+}
+.bimg{overflow: hidden; position: absolute;}
+.btx{z-index: 4;}
+.dailyhero .heroim{z-index: 1;}
+
+/* mid-jewel leftovers (procedural pass) are gone */
+.frame-jewels,.fj{display:none !important;}
