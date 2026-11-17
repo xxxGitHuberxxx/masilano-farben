@@ -19,6 +19,7 @@
   const GROUPS = [
     { id:'start', ach:['first','n10','n50','n100','n250','n500'] },
     { id:'paths', ach: PATH_IDS.reduce(function (a, id) { return a.concat(['path:'+id+':b','path:'+id+':s','path:'+id]); }, []) },
+    { id:'faces', ach: (window.MASILANO_FACES ? window.MASILANO_FACES.achRows().map(function (r) { return r.id; }) : []) },
     { id:'streak', ach:['streak3','streak7','streak30'] },
     { id:'collect', ach:['set:lilies:b','set:lilies:s','set:lilies','set:fuji:b','set:fuji:s','set:fuji','set:sunflowers:b','set:sunflowers:s','set:sunflowers','imp:b','imp:s','imp:g'].concat(CATS.reduce(function (a, c) { return a.concat(['cat:'+c+':b','cat:'+c+':s','cat:'+c+':g']); }, [])) },
     { id:'explore', ach:['painters3','painters10','painters25','vgDelight'] }
@@ -1321,6 +1322,7 @@
     return 'cup';
   }
   function trophySrc(ach, unlocked){
+    if (ach.img) return ach.img;
     const type = trophyType(ach);
     const metal = ach.tier || 'gold';
     return IMG + type + '-' + metal + '.webp';
@@ -1362,6 +1364,7 @@
       rows.push({ id:'cat:' + c + ':s', group:'collect', tier:'silver', kind:'cat', cat:c, need:'half', trophy:'diploma' });
       rows.push({ id:'cat:' + c + ':g', group:'collect', tier:'gold', kind:'cat', cat:c, need:'all', trophy:'diploma' });
     });
+    if (window.MASILANO_FACES) window.MASILANO_FACES.achRows().forEach(function (r) { rows.push(r); });
     rows.push(
       { id:'painters3', group:'explore', tier:'bronze', kind:'painters', n:3, trophy:'badge' },
       { id:'painters10', group:'explore', tier:'silver', kind:'painters', n:10, trophy:'badge' },
@@ -1475,6 +1478,10 @@
       const T = P[key] || {};
       return { n: fill(T.n, { name:name }), d: fill(T.d, { name:name }), t: fill(T.t, { name:name }) };
     }
+    if (id && id.indexOf('face:') === 0 && window.MASILANO_FACES) {
+      const ft = window.MASILANO_FACES.achTexts(id);
+      if (ft) return ft;
+    }
     const A = (P.ach && P.ach[id]) || {};
     return { n: A.n || id, d: A.d || '', t: A.t || '' };
   }
@@ -1545,7 +1552,8 @@
     cat.forEach(function (a) { byId[a.id] = a; });
     let html = '<h2 class="vitrine-title">'+esc(P.title)+'</h2><p class="vitrine-lead">'+esc(P.lead)+'</p>';
     GROUPS.forEach(function (g) {
-      html += '<section class="vitrine-group" data-group="'+g.id+'"><div class="vitrine-kicker">'+esc(P.groups[g.id] || g.id)+'</div><div class="vitrine-grid">';
+      const gname = g.id === 'faces' && window.MASILANO_FACES ? window.MASILANO_FACES.texts().group : (P.groups[g.id] || g.id);
+      html += '<section class="vitrine-group" data-group="'+g.id+'"><div class="vitrine-kicker">'+esc(gname)+'</div><div class="vitrine-grid">';
       g.ach.forEach(function (id) {
         const ach = byId[id]; if (!ach) return;
         const pr = progress(ach);
@@ -1665,9 +1673,11 @@
           '<img class="diploma-frame" src="img/trophies/diploma-frame.webp" alt="" width="792" height="769" decoding="async" loading="eager">'+
           '<div class="diploma-inner">'+
           '<p class="diploma-kicker">'+esc(P.title)+'</p>'+
-          '<h2 class="diploma-title">'+esc(tx.n)+'</h2>'+
+          '<h2 class="diploma-title">'+esc(tx.s || tx.n)+'</h2>'+
+          (ach.img ? '<img class="diploma-face" src="'+esc(ach.img)+'" alt="" width="440" height="440" decoding="async">' : '')+
           (dateStr ? '<p class="diploma-date">'+esc(dateStr)+'</p>' : '')+
-          '<p class="diploma-desc">'+esc(tx.d)+'</p>'+
+          '<p class="diploma-desc">'+esc(ach.img ? tx.t : tx.d)+'</p>'+
+          (ach.img && window.MASILANO_FACES ? '<p class="diploma-code">'+esc(window.MASILANO_FACES.texts().pending)+'</p>' : '')+
           '<div class="diploma-seal '+esc(ach.tier)+'" aria-hidden="true">'+sealSvg(ach.tier)+'<span>'+esc(tierName)+'</span></div>'+
           '<p class="diploma-sign">Masilano · Meisterwerke</p>'+
           '</div></div>';

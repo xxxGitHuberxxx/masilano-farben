@@ -1228,6 +1228,7 @@ function parseHash(){
     if (a === 'album' && b) return { kind: 'albumView', id: b };
     return { kind: 'tab', tab: a };
   }
+  if (a === 'zifferblaetter' || a === 'faces') return { kind: 'faces' };
   if ((a === 'weg' || a === 'path') && b) return { kind: 'path', id: b };
   if ((a === 'geschichte' || a === 'story') && b) return { kind: 'story', id: b };
   if ((a === 'bild' || a === 'paint') && b) return { kind: 'paint', id: b };
@@ -1237,6 +1238,7 @@ function hashFor(route){
   if (!route) return '#heute';
   if (route.kind === 'tab') return '#' + (route.tab || 'heute');
   if (route.kind === 'path') return '#weg/' + route.id;
+  if (route.kind === 'faces') return '#zifferblaetter';
   if (route.kind === 'story') return '#geschichte/' + route.id;
   if (route.kind === 'paint') return '#bild/' + route.id;
   if (route.kind === 'albumView') return '#album/' + route.id;
@@ -1285,6 +1287,7 @@ function applyRoute(route){
     else showScreen('galerie');
     return;
   }
+  if (route.kind === 'faces') { S = null; pathCtx = null; storyCtx = null; showHall({ noRoute: true }); return; }
   if (route.kind === 'albumView') {
     showScreen('album');
     showAlbumView(route.id, { noRoute: true });
@@ -1293,7 +1296,7 @@ function applyRoute(route){
 function bootRoute(){
   const r = parseHash();
   if (r.kind !== 'tab') {
-    const tab = r.kind === 'albumView' ? 'album' : (r.kind === 'paint' ? storedTab() : 'wege');
+    const tab = r.kind === 'albumView' ? 'album' : (r.kind === 'paint' ? storedTab() : (r.kind === 'faces' ? 'trophies' : 'wege'));
     history.replaceState({ masilano: 1, home: true }, '', '#' + tab);
     history.pushState({ masilano: 1 }, '', hashFor(r));
   } else {
@@ -1374,7 +1377,7 @@ function goGallery(){
   if (storyCtx && storyCtx.story) { backOr({ kind: 'story', id: storyCtx.story.id }); return; }
   backOr({ kind: 'tab', tab: currentTab || 'heute' });
 }
-function hideSheets(){ if (window.MASILANO_MUSIC) window.MASILANO_MUSIC.stopSpeak(); ['#story', '#chapter', '#chDone', '#pathFin', '#installHow', '#settings', '#albumView', '#sources', '#filterSheet', '#catSheet', '#certView'].forEach(q => $(q) && $(q).classList.add('hidden')); }
+function hideSheets(){ if (window.MASILANO_MUSIC) window.MASILANO_MUSIC.stopSpeak(); ['#story', '#chapter', '#chDone', '#pathFin', '#installHow', '#settings', '#albumView', '#sources', '#filterSheet', '#catSheet', '#certView', '#faceView', '#achView'].forEach(q => $(q) && $(q).classList.add('hidden')); }
 $('#backBtn').onclick = goGallery;
 let galT = 0;
 function onViewport(){ if (S) resize(); else { clearTimeout(galT); galT = setTimeout(() => { placeFilterPanel(); }, 120); } }
@@ -1636,6 +1639,13 @@ function showPath(path, opts){
     epi.className = '';
     epi.classList.add('hidden');
   }
+  const rw = $('#pathReward');
+  if (rw) {
+    rw.innerHTML = '';
+    const F = window.MASILANO_FACES;
+    const el = F && F.rewardEl(path, n === N);
+    if (el) rw.appendChild(el);
+  }
   renderStoryEntry();
   if (window.MASILANO_MUSIC) {
     const sts = path.stations || [];
@@ -1778,6 +1788,9 @@ function showPathFin(path){
   $('#pfCount').textContent = t('allDone', { N });
   const ending = L(path,'ending') || path.ending || [L(path,'epilogue')];
   $('#pfBody').innerHTML = ending.map(tx => `<p>${tx}</p>`).join('');
+  const F = window.MASILANO_FACES;
+  const rwEl = F && F.rewardEl(path, true);
+  if (rwEl) $('#pfBody').appendChild(rwEl);
   hideSheets();
   $('#pathFin .card').scrollTop = 0;
   revealSheet('#pathFin');
@@ -2320,6 +2333,40 @@ function renderAlbum(){
     b.onclick = () => showAlbumView(b.getAttribute('data-id'));
   });
 }
+// ---------- v10.18: Saal der Zifferblaetter ----------
+function showHall(opts){
+  hideSheets();
+  S = null;
+  if (!opts || !opts.noRoute) navigate({ kind: 'faces' });
+  showScreen('faces');
+  const F = window.MASILANO_FACES;
+  if (F) F.renderHall($('#facesBody'));
+  const sc = document.querySelector('#faces .chscroll');
+  if (sc) sc.scrollTop = 0;
+}
+function facesHost(){
+  return {
+    get PATHS(){ return PATHS; },
+    get lang(){ return I.lang; },
+    pathSteps, isDone, L, todayKey, revealSheet,
+    showHall: () => showHall(),
+    onClaim: () => {
+      const rw = $('#pathReward');
+      if (rw && pathCtx && pathCtx.path && $('#path').classList.contains('active')) {
+        const F = window.MASILANO_FACES, steps = pathSteps(pathCtx.path);
+        const el = F && F.rewardEl(pathCtx.path, steps.length > 0 && steps.every(s => isDone(s.pid)));
+        rw.innerHTML = ''; if (el) rw.appendChild(el);
+      }
+    },
+    closeSheet: () => closeTopSheet(),
+    openPath: (path) => { pathCtx = { path }; storyCtx = null; showPath(path); }
+  };
+}
+function initFaces(){
+  const F = window.MASILANO_FACES;
+  if (F && F.init) F.init(facesHost());
+}
+if ($('#facesBack')) $('#facesBack').onclick = () => { hideSheets(); backOr({ kind: 'tab', tab: currentTab || 'trophies' }); };
 function showTrophies(){
   hideSheets();
   S = null;
@@ -2328,6 +2375,7 @@ function showTrophies(){
 }
 function renderTrophies(){
   const box = $('#trophiesBody'); if (!box) return;
+  if (window.MASILANO_FACES) window.MASILANO_FACES.refresh();
   loadAchievements().then(A => { if (A && box) { A.sync({ toast: false }); A.render(box); } }).catch(() => {});
 }
 function showAlbumView(id, opts){
@@ -3096,6 +3144,11 @@ function refreshLang(){
   renderGallery();
   if ($('#album') && $('#album').classList.contains('active')) renderAlbum();
   if ($('#trophies') && $('#trophies').classList.contains('active')) renderTrophies();
+  if (window.MASILANO_FACES) window.MASILANO_FACES.refresh();
+  if ($('#faceView') && !$('#faceView').classList.contains('hidden') && window.MASILANO_FACES) {
+    const fv = $('#faceView .zf-big');
+    if (fv && fv.dataset.face) window.MASILANO_FACES.openFace(fv.dataset.face);
+  }
 }
 window.__i18nOnChange = refreshLang;
 document.addEventListener('click', e => {
@@ -3131,6 +3184,7 @@ function startUi(){
   ingestPathData();
   syncAppSubtitle();
   window.__pathTextsReady = !!(window.__pathIndexReady || PATHS.length >= 14);
+  initFaces();
   bootRoute();
   maybeShowInstallHint();
   if ((currentTab || 'heute') === 'heute') renderHeute();

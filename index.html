@@ -15,7 +15,6 @@
 <meta name="apple-mobile-web-app-title" content="Meisterwerke">
 </head>
 <body>
-<body>
 <header id="appHead" class="apphead">
   <div class="wordmark">Meisterwerke</div>
   <div class="headacts">
@@ -61,7 +60,7 @@
     <footer class="gfoot">
       <button id="srcBtn" class="linkbtn" data-i18n-html="sourcesBtn">Bildquellen &amp; Hinweise</button>
       <a class="linkbtn" href="privacy.html" data-i18n="privacyLink">Datenschutz</a>
-      <div class="credit"><span class="byline" data-i18n="byline">von Masilano</span><span class="ver" data-i18n="version">Testversion 10.17</span></div>
+      <div class="credit"><span class="byline" data-i18n="byline">von Masilano</span><span class="ver" data-i18n="version">Testversion 10.18</span></div>
     </footer>
   </div>
 </section>
@@ -73,6 +72,7 @@
     <div class="orn" aria-hidden="true"></div>
     <p class="lead" data-i18n="waysLead">Bilderchronologie und Geschichten vom Leben der Maler.</p>
     <div id="storyEntries" class="wayslist"></div>
+    <div id="facesEntryW" class="zf-entrywrap"></div>
   </div>
 </section>
 
@@ -142,6 +142,7 @@
     <h1 data-i18n="trophiesTitle">Trophäen</h1>
     <div class="orn" aria-hidden="true"></div>
   </header>
+  <div id="facesEntryT" class="zf-entrywrap"></div>
   <div id="trophiesBody" class="albumscroll"></div>
 </section>
 
@@ -219,6 +220,7 @@
     <div id="pathMap" class="pmapwrap"></div>
     <div id="pathList" class="pathlist"></div>
     <div id="pathEpi" class="chepi hidden"></div>
+    <div id="pathReward"></div>
   </div>
 </section>
 
@@ -234,6 +236,19 @@
     <div id="chEpi" class="chepi hidden"></div>
   </div>
 </section>
+
+<section id="faces" class="screen flow">
+  <div class="topbar">
+    <button id="facesBack" class="iconbtn" data-i18n-aria="back" aria-label="Zurück">‹</button>
+    <div class="ttl"><div class="chT" data-i18n="facesHall">Zifferblätter</div></div>
+    <div class="iconspace"></div>
+  </div>
+  <div class="chscroll zf-hall"><div id="facesBody"></div></div>
+</section>
+
+<div id="faceView" class="sheet zf-sheet hidden" role="dialog" aria-modal="true" aria-labelledby="zfTitle">
+  <div class="card"></div>
+</div>
 
 <div id="filterSheet" class="sheet hidden" role="dialog" aria-modal="true" aria-labelledby="filterTitle">
   <div class="card">
@@ -515,6 +530,7 @@
 <script src="i18n.js"></script>
 <script src="levels.js"></script>
 <script src="music.js"></script>
+<script src="zifferblaetter.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
