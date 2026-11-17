@@ -1684,3 +1684,44 @@ body.calm .contcard .cv,body.calm .dailycard .cv{ --cv-w: 68px; }
 
 /* mid-jewel leftovers are gone */
 .frame-jewels,.fj{display:none !important;}
+
+/* v10.11: framed openings fill completely; gallery tab scrolls to tiles */
+#heute .banners .bslide,
+#gallery .banners .bslide{
+  height:100%;
+  width:100%;
+  aspect-ratio:auto;
+  min-height:0;
+  max-height:none;
+}
+#heute .dailyhero .heroim,
+.dailyhero .heroim{
+  max-height:none;
+  min-height:0;
+  aspect-ratio:auto;
+}
+#gallery .pc .im{
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+#gallery.tab-screen{
+  overflow-x:hidden;
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior-y:contain;
+}
+#gallery .ghead{flex:0 0 auto}
+#gallery .pager{
+  flex:1 0 auto;
+  min-height:520px;
+  height:auto;
+  overflow-x:auto;
+  overflow-y:hidden;
+}
+#gallery .pager .page{
+  height:auto;
+  min-height:500px;
+  align-content:start;
+}
+#gallery #dots{flex:0 0 auto}

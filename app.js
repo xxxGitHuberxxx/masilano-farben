@@ -419,7 +419,9 @@ function upgradeBannerImgs(el){
   };
   const start = () => {
     if (el._origTimer) clearTimeout(el._origTimer);
-    el._origTimer = setTimeout(later, 2600);
+    // Heute first-load must stay under 1250 KB, so home orig waits; gallery can sharpen sooner.
+    const origDelay = (el.id === 'homeBanner') ? 2600 : 400;
+    el._origTimer = setTimeout(later, origDelay);
     if (el._thumbTimer) clearTimeout(el._thumbTimer);
     el._thumbTimer = setTimeout(() => { if (imgs[1]) applyThumb(imgs[1]); }, 4000);
   };
@@ -1792,9 +1794,12 @@ function fnv1a(s){
   for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
   return h >>> 0;
 }
+/* All-over stipple / foliage works that stay unreadable in a phone-sized 4:3 or 16:9 hero crop. */
+const HERO_SKIP = new Set(['thepark','kapple','pfarrgarten','kpoppies','rosetrees','kpeartree','birkforest','kammerave','italygarden','weissenbach','hkirsch05','undergrowth','litzlberg','pinkpeach','malcesine']);
+function heroReadable(p){ return !!(p && p.id && !HERO_SKIP.has(p.id)); }
 function dailyPool(){
   const maxRank = calmOn() ? 0 : 1;
-  return ALL.filter(p => LEVEL_RANK[levelOf(p)] <= maxRank)
+  return ALL.filter(p => LEVEL_RANK[levelOf(p)] <= maxRank && heroReadable(p))
     .slice()
     .sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
 }
