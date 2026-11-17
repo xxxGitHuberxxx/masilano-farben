@@ -76,6 +76,14 @@ let certCtx = null;
 const I = window.I18N;
 const t = (k, v) => I.t(k, v);
 const L = (obj, field) => I.loc(obj, field);
+
+window.__masilanoWorkCount = () => (ALL && ALL.length) || 1751;
+function syncAppSubtitle(){
+  const el = document.querySelector('[data-i18n="appSubtitle"]');
+  if (!el) return;
+  const n = (typeof ALL !== 'undefined' && ALL && ALL.length) ? ALL.length : 1751;
+  el.textContent = t('appSubtitle', { n: n });
+}
 function paintBtn(done, pct){ return done ? t('paintView') : (pct > 0 ? t('paintContinue') : t('paint')); }
 function youArePainting(done, title, artist, year){
   return `<div>${done ? t('already') : t('youPaint')}: <b>${title}</b><br>${artist}, ${year}</div>`;
@@ -3036,6 +3044,7 @@ function refreshLang(){
   }
   galGrid = null;
   I.applyStatic();
+  syncAppSubtitle();
   if (window.MASILANO_MUSIC) window.MASILANO_MUSIC.refresh();
   const onPath = document.getElementById('path')?.classList.contains('active');
   const onCh = document.getElementById('chapters')?.classList.contains('active');
@@ -3061,6 +3070,7 @@ document.addEventListener('click', e => {
   I.setLang(b.getAttribute('data-lang'));
 });
 I.applyStatic();
+syncAppSubtitle();
 applyCalm();
 bindDelight();
 bindTabs();
@@ -3085,6 +3095,7 @@ function paintStartShell(){
 paintStartShell();
 function startUi(){
   ingestPathData();
+  syncAppSubtitle();
   window.__pathTextsReady = !!(window.__pathIndexReady || PATHS.length >= 14);
   bootRoute();
   maybeShowInstallHint();
