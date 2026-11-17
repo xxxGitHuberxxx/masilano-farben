@@ -1357,17 +1357,18 @@ html,body{
 }
 
 
-/* v10.9: carved frames as full overlays so mid cartouches keep their shape.
+/* v10.10: slimmer carved frames (~9% of width). The painting fills most of the box.
    Unitless --fo-* are fractions of the frame box (top/bottom of height, left/right of width). */
 .frame-baroque,
 .pc .im,
 .waycard .cv,.contcard .cv,.pathnext .cv,.chhead .cv,#pathHead .cv,
 .chi .th,.cwork .th,
 .frame,.frame-lg,.frame-md,.frame-sm{
-  --fo-t: 0.216146;
-  --fo-r: 0.166992;
-  --fo-b: 0.221354;
-  --fo-l: 0.166992;
+  --fo-t: 0.110454;
+  --fo-r: 0.090625;
+  --fo-b: 0.112426;
+  --fo-l: 0.090625;
+  --fo-ar: 640 / 507;
   --frame-src: url("img/frame-baroque-gold.webp");
   position: relative;
   overflow: visible;
@@ -1391,26 +1392,26 @@ html,body{
   filter: drop-shadow(0 8px 16px rgba(0,0,0,.48)) drop-shadow(0 2px 4px rgba(0,0,0,.28));
 }
 
-/* Banner: 16:9 assembled wide frame, painting sits in the opening */
+/* Banner: 16:9 painting dominates; slim 16:9-opening gold frame; caption lives under the frame */
 .banners .frame-baroque{
   --frame-src: url("img/frame-baroque-gold-wide.webp");
-  --fo-t: 0.215278;
-  --fo-r: 0.125;
-  --fo-b: 0.220486;
-  --fo-l: 0.125;
+  --fo-t: 0.137255;
+  --fo-r: 0.090625;
+  --fo-b: 0.139706;
+  --fo-l: 0.090625;
   display: block;
   width: 100%;
-  max-width: calc(22vh * 16 / 9);
+  max-width: none;
   margin-inline: auto;
-  aspect-ratio: 16 / 9;
-  min-height: 132px;
-  max-height: 22vh;
+  aspect-ratio: 640 / 408;
+  min-height: 0;
+  max-height: none;
   overflow: visible;
 }
 #gallery .banners .frame-baroque{
-  max-width: calc(20vh * 16 / 9);
-  max-height: 20vh;
-  min-height: 112px;
+  max-width: none;
+  max-height: none;
+  min-height: 0;
 }
 .banners .btrack{
   position: absolute;
@@ -1440,20 +1441,74 @@ html,body{
   border: 0;
   border-radius: 0;
   overflow: hidden;
+  position: relative;
 }
 #heute .banners .btrack,#gallery .banners .btrack{box-shadow:none}
-.banners .btx{padding-bottom: 18px; z-index: 4;}
+.banners .bimg{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  image-rendering: auto;
+  filter: none;
+  overflow: hidden;
+}
+.banners .bgrad{display:none}
+.banners .bplaque{
+  margin: 8px 4px 0;
+  padding: 4px 8px 2px;
+  text-align: center;
+  position: relative;
+  z-index: 4;
+}
+.banners .bplaque .bk{
+  font-family: Georgia,"Times New Roman",serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #ffe9a8;
+  text-shadow: 0 1px 2px rgba(0,0,0,.9), 0 2px 10px rgba(0,0,0,.55);
+}
+.banners .bplaque .bt{
+  font-family: "Great Vibes",Georgia,"Times New Roman",cursive;
+  font-size: 26px;
+  line-height: 1.25;
+  margin: 2px 0 2px;
+  color: #fff6d8;
+  text-transform: none;
+  letter-spacing: 0;
+  white-space: normal;
+  overflow: visible;
+  display: block;
+  -webkit-line-clamp: unset;
+  max-height: none;
+  text-shadow: 0 1px 2px rgba(0,0,0,.9), 0 2px 10px rgba(0,0,0,.55);
+}
+.banners .bplaque .ba{
+  font-size: 14px;
+  line-height: 1.35;
+  color: rgba(255,248,230,.92);
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+  text-shadow: 0 1px 2px rgba(0,0,0,.85);
+}
+.banners .bdots{margin: 8px 0 2px}
 
-/* Daily hero: 4:3 gold overlay, opening is the painting */
+/* Daily hero: 4:3 painting dominates, sharp orig, no veil */
 .dailyhero .frame-baroque{
   --frame-src: url("img/frame-baroque-gold.webp");
   display: block;
   width: 100%;
-  max-width: calc(42vh * 4 / 3);
+  max-width: none;
   margin-inline: auto;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 640 / 507;
   min-height: 200px;
-  max-height: 42vh;
+  max-height: none;
   overflow: visible;
 }
 .dailyhero .heroim{
@@ -1475,20 +1530,29 @@ html,body{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  image-rendering: auto;
+  filter: none !important;
   cursor: pointer;
+  z-index: 1;
 }
 
-/* Gallery tiles: 384px 4:3 tile variant. Painting is clipped to the opening. */
+/* Gallery tiles: slimmer 4:3-opening tile frame, painting is the majority */
 #gallery .pc .im{
   --frame-src: url("img/frame-baroque-tile.webp");
-  aspect-ratio: 4 / 3;
+  --fo-t: 0.111842;
+  --fo-r: 0.091146;
+  --fo-b: 0.115132;
+  --fo-l: 0.091146;
+  aspect-ratio: 384 / 304;
   flex: 0 0 auto;
   width: 100%;
-  padding: calc(var(--fo-t) * 0.75 * 100%) calc(var(--fo-r) * 100%) calc(var(--fo-b) * 0.75 * 100%) calc(var(--fo-l) * 100%);
+  padding: calc(var(--fo-t) * 304 / 384 * 100%) calc(var(--fo-r) * 100%) calc(var(--fo-b) * 304 / 384 * 100%) calc(var(--fo-l) * 100%);
   box-sizing: border-box;
   background-origin: content-box;
   background-clip: content-box;
   overflow: visible;
+  image-rendering: auto;
+  filter: none;
 }
 #gallery .pc .imbar{
   left: calc(var(--fo-l) * 100%);
@@ -1505,17 +1569,22 @@ html,body{
   bottom: calc(var(--fo-b) * 100% + 10px);
 }
 
-/* Small thumbs sit in a wider card, so padding % would be of the parent width.
-   Use --cv-w (the thumb's own width) instead. */
+/* Small thumbs: padding from --cv-w so it is not the parent width */
 .waycard .cv,.chi .th,.cwork .th,.chhead .cv,#pathHead .cv,
 .contcard .cv,.pathnext .cv,.dailycard .cv,.sentry .cv{
-  aspect-ratio: 4 / 3;
+  --fo-t: 0.111842;
+  --fo-r: 0.091146;
+  --fo-b: 0.115132;
+  --fo-l: 0.091146;
+  aspect-ratio: 384 / 304;
   height: auto;
   box-sizing: border-box;
-  padding: calc(var(--fo-t) * 0.75 * var(--cv-w)) calc(var(--fo-r) * var(--cv-w)) calc(var(--fo-b) * 0.75 * var(--cv-w)) calc(var(--fo-l) * var(--cv-w));
+  padding: calc(var(--fo-t) * 304 / 384 * var(--cv-w)) calc(var(--fo-r) * var(--cv-w)) calc(var(--fo-b) * 304 / 384 * var(--cv-w)) calc(var(--fo-l) * var(--cv-w));
   background-origin: content-box;
   background-clip: content-box;
   overflow: visible;
+  image-rendering: auto;
+  filter: none;
 }
 .waycard .cv,.chi .th,.cwork .th,.chhead .cv,#pathHead .cv{
   --frame-src: url("img/frame-baroque-tile.webp");
@@ -1544,12 +1613,12 @@ body.calm .contcard .cv,body.calm .dailycard .cv{ --cv-w: 68px; }
   .chhead .cv,#pathHead .cv{ --cv-w: 72px; }
 }
 
-/* Kabinett / album: square ivory frame */
+/* Kabinett / album: slimmer square ivory, painting dominates */
 .atile{
-  --fo-t: 0.130208;
-  --fo-r: 0.131510;
-  --fo-b: 0.135417;
-  --fo-l: 0.134115;
+  --fo-t: 0.088542;
+  --fo-r: 0.088542;
+  --fo-b: 0.091146;
+  --fo-l: 0.091146;
   --frame-src: url("img/frame-ivory-gold.webp");
   position: relative;
   overflow: visible;
@@ -1577,35 +1646,41 @@ body.calm .contcard .cv,body.calm .dailycard .cv{ --cv-w: 68px; }
   object-fit: cover;
   border-radius: 0;
   display: block;
+  image-rendering: auto;
+  filter: none;
 }
 
-/* Spotlight stays on the painting only (inside the opening), never on gold type */
+/* Spotlight stays on the painting only, soft enough not to wash the picture */
 .banners::before,.dailyhero::before,.pc::before{content:none !important;display:none !important;background:none !important}
+.bimg::before,
 .dailyhero .heroim::before,
 .pc .im::before,
 .waycard .cv::before,.contcard .cv::before,.pathnext .cv::before,
 .atile::before,.chi .th::before,.chhead .cv::before,#pathHead .cv::before{
-  /* default cone was a short bar at the top of the painting box; keep it there */
-  left: 8%;
-  right: 8%;
-  top: -10px;
-  height: 48px;
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  top: -8px;
+  height: 36px;
+  background: radial-gradient(ellipse at 50% 0,rgba(255,246,214,.45) 0%,rgba(255,232,180,.14) 52%,transparent 78%);
+  pointer-events: none;
   z-index: 1;
+  filter: none;
 }
-/* On padded tile hosts the painting starts at the opening, so shift the cone into the opening */
 #gallery .pc .im::before,
 .waycard .cv::before,.contcard .cv::before,.pathnext .cv::before,
 .chi .th::before,.cwork .th::before,.chhead .cv::before,#pathHead .cv::before{
-  top: calc(var(--fo-t) * 100% - 8px);
+  top: calc(var(--fo-t) * 100% - 6px);
 }
 .atile::before{
-  left: calc(var(--fo-l) * 100% + 8%);
-  right: calc(var(--fo-r) * 100% + 8%);
-  top: calc(var(--fo-t) * 100% - 8px);
+  left: calc(var(--fo-l) * 100% + 12%);
+  right: calc(var(--fo-r) * 100% + 12%);
+  top: calc(var(--fo-t) * 100% - 6px);
 }
-.bimg{overflow: hidden; position: absolute;}
+.bimg{overflow: hidden; position: absolute; inset: 0;}
 .btx{z-index: 4;}
 .dailyhero .heroim{z-index: 1;}
 
-/* mid-jewel leftovers (procedural pass) are gone */
+/* mid-jewel leftovers are gone */
 .frame-jewels,.fj{display:none !important;}

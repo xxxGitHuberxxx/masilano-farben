@@ -331,9 +331,10 @@ function renderFeatureBanner(el){
     const thumb = 'data/' + imgId + '-thumb.jpg';
     const orig = 'data/' + imgId + '-orig.jpg';
     const bg = i === 0 ? `style="background-image:url(${thumb})"` : `data-thumb="${thumb}"`;
-    b.innerHTML = `<div class="bimg" data-orig="${orig}" ${bg}></div>
-      <div class="bgrad"></div>
-      <div class="btx"><div class="bk">${esc(s.kicker)}</div><div class="bt">${esc(title)}</div><div class="ba">${esc(artist)}</div></div>`;
+    b.dataset.kicker = s.kicker || '';
+    b.dataset.title = title || '';
+    b.dataset.artist = artist || '';
+    b.innerHTML = `<div class="bimg" data-orig="${orig}" ${bg}></div>`;
     b.onclick = go;
     track.appendChild(b);
   });
@@ -351,10 +352,24 @@ function renderFeatureBanner(el){
   const wrap = document.createElement('div');
   wrap.className = 'frame-baroque';
   wrap.appendChild(track);
+  const plaque = document.createElement('div');
+  plaque.className = 'bplaque';
+  plaque.setAttribute('aria-live', 'polite');
   el.appendChild(wrap);
+  el.appendChild(plaque);
   el.appendChild(dots);
   bindBanner(el, slides.length);
+  updateBannerPlaque(el);
   upgradeBannerImgs(el);
+}
+function updateBannerPlaque(el){
+  const track = el.querySelector('.btrack');
+  const plaque = el.querySelector('.bplaque');
+  if (!track || !plaque) return;
+  const i = Math.round(track.scrollLeft / Math.max(1, track.clientWidth));
+  const slide = track.children[i] || track.children[0];
+  if (!slide) { plaque.innerHTML = ''; return; }
+  plaque.innerHTML = `<div class="bk">${esc(slide.dataset.kicker || '')}</div><div class="bt">${esc(slide.dataset.title || '')}</div><div class="ba">${esc(slide.dataset.artist || '')}</div>`;
 }
 function scrollBanner(el, i, user){
   const track = el.querySelector('.btrack');
@@ -371,6 +386,7 @@ function markBannerDots(el){
   const i = Math.round(track.scrollLeft / Math.max(1, track.clientWidth));
   bannerIdx = i;
   [...(el.querySelectorAll('.bdots button'))].forEach((d, n) => d.classList.toggle('on', n === i));
+  updateBannerPlaque(el);
 }
 function upgradeBannerImgs(el){
   const imgs = el.querySelectorAll('.bimg[data-orig], .bimg[data-thumb]');
@@ -403,7 +419,7 @@ function upgradeBannerImgs(el){
   };
   const start = () => {
     if (el._origTimer) clearTimeout(el._origTimer);
-    el._origTimer = setTimeout(later, 2800);
+    el._origTimer = setTimeout(later, 2600);
     if (el._thumbTimer) clearTimeout(el._thumbTimer);
     el._thumbTimer = setTimeout(() => { if (imgs[1]) applyThumb(imgs[1]); }, 4000);
   };
