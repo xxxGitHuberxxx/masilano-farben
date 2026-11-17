@@ -1887,7 +1887,7 @@ function renderDaily(){
     <div class="a">${esc(L(p,'artist') || p.artist)}${p.year ? ' · ' + esc(p.year) : ''}</div></div>
     ${teaser.text ? `<p class="teaser">${esc(teaser.text)}</p>` : ''}
     ${teaser.fallback && teaser.text ? `<p class="langfallback">${esc(t('langFallback'))}</p>` : ''}
-    <button type="button" class="cta" id="dailyCta">${esc(cta)}</button>
+    <button type="button" class="cta goldcta" id="dailyCta">${esc(cta)}</button>
     ${streak ? `<div class="st">${esc(streak)}</div>` : ''}</div>`;
   const go = () => { if (isDone(p.id)) bumpStreak(day); openHomeWork(p); };
   card.querySelector('#dailyHeroIm').onclick = go;

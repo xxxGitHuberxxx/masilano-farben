@@ -1725,3 +1725,97 @@ body.calm .contcard .cv,body.calm .dailycard .cv{ --cv-w: 68px; }
   align-content:start;
 }
 #gallery #dots{flex:0 0 auto}
+
+/* v10.12: primary actions as museum plaques */
+.goldcta,
+.dailyhero .cta{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  box-sizing:border-box;
+  appearance:none;
+  -webkit-appearance:none;
+  border:0;
+  border-radius:2px;
+  padding:12px 22px;
+  min-height:48px;
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:600;
+  font-size:17px;
+  line-height:1.25;
+  letter-spacing:0;
+  text-transform:none;
+  font-style:normal;
+  color:#152a5c;
+  text-align:center;
+  cursor:pointer;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.38) 0%, rgba(255,244,210,.12) 36%, rgba(255,255,255,0) 52%),
+    linear-gradient(180deg, #f6e9c4 0%, #e2c57a 42%, #c79a4e 100%);
+  box-shadow:
+    inset 0 1px 0 #fff4d2,
+    inset 0 -1px 0 rgba(90,66,20,.28),
+    0 0 0 1px #8a6a22,
+    0 2px 5px rgba(60,40,20,.18);
+  -webkit-tap-highlight-color:transparent;
+}
+.goldcta::before,
+.goldcta::after,
+.dailyhero .cta::before,
+.dailyhero .cta::after{
+  content:"";
+  width:7px;
+  height:7px;
+  flex:none;
+  box-sizing:border-box;
+  border:1.5px solid #152a5c;
+  transform:rotate(45deg);
+  opacity:.82;
+  pointer-events:none;
+}
+.dailyhero .cta{
+  width:max-content;
+  min-width:min(12em, 72%);
+  max-width:calc(100% - 48px);
+  margin:0 auto;
+}
+.btn.goldcta{
+  flex:1;
+  width:auto;
+  max-width:none;
+  margin:0;
+  font-size:16px;
+}
+.goldcta:hover,
+.dailyhero .cta:hover{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.48) 0%, rgba(255,244,210,.16) 36%, rgba(255,255,255,0) 52%),
+    linear-gradient(180deg, #f8eecb 0%, #e8cc88 42%, #d0a454 100%);
+}
+.goldcta:active,
+.dailyhero .cta:active{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.15) 0%, rgba(255,255,255,0) 40%),
+    linear-gradient(180deg, #e2c57a 0%, #d4b05e 45%, #c79a4e 100%);
+  box-shadow:
+    inset 0 2px 5px rgba(90,66,20,.38),
+    inset 0 1px 0 rgba(90,66,20,.2),
+    0 0 0 1px #6e5418;
+  transform:translateY(1px);
+}
+.goldcta:focus-visible,
+.dailyhero .cta:focus-visible{
+  outline:2.5px solid #152a5c;
+  outline-offset:3px;
+  box-shadow:
+    inset 0 1px 0 #fff4d2,
+    inset 0 -1px 0 rgba(90,66,20,.28),
+    0 0 0 1px #8a6a22,
+    0 0 0 5px rgba(246,233,196,.92),
+    0 2px 5px rgba(60,40,20,.18);
+}
+@media (prefers-reduced-motion:reduce){
+  .goldcta:active,
+  .dailyhero .cta:active{transform:none}
+}
