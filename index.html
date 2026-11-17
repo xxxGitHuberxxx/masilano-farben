@@ -61,7 +61,7 @@
     <footer class="gfoot">
       <button id="srcBtn" class="linkbtn" data-i18n-html="sourcesBtn">Bildquellen &amp; Hinweise</button>
       <a class="linkbtn" href="privacy.html" data-i18n="privacyLink">Datenschutz</a>
-      <div class="ver" data-i18n="version">Testversion 10.12</div>
+      <div class="ver" data-i18n="version">Testversion 10.13</div>
     </footer>
   </div>
 </section>
@@ -385,6 +385,17 @@
 </div>
 <div id="ctoast" class="ctoast"></div>
 <div id="mtoast" class="mtoast" role="status" aria-live="polite"></div>
+<div id="achToast" class="achtoast" role="status" aria-live="polite" hidden></div>
+<div id="achView" class="sheet hidden" role="dialog" aria-modal="true" aria-labelledby="achViewTitle">
+  <div class="card ach-card">
+    <div id="achViewMedal" class="ach-view-medal"></div>
+    <h2 id="achViewTitle"></h2>
+    <p id="achViewDate" class="meta"></p>
+    <p id="achViewDesc"></p>
+    <div class="btns"><button type="button" class="btn" id="achViewClose" data-i18n="close">Schliessen</button></div>
+  </div>
+</div>
+
 
 <div id="onboard" class="onboard hidden" hidden role="dialog" aria-modal="true" aria-labelledby="obTitle">
   <div class="obcard">

@@ -2268,10 +2268,11 @@ function renderAlbum(){
   const box = $('#albumBody'); if (!box) return;
   const groups = albumGroups();
   const n = doneCount(), N = ALL.length;
-  let html = `<div class="albumsum">${t('albumCount', { n, N })}</div>`;
+  let html = `<div id="vitrine" class="vitrine"></div><div class="albumsum">${t('albumCount', { n, N })}</div>`;
   if (!n) {
     html += `<div class="albumempty">${t('albumEmpty')}</div>`;
     box.innerHTML = html;
+    loadAchievements().then(A => { const el = box.querySelector('#vitrine'); if (A && el) { A.sync({ toast: false }); A.render(el); } }).catch(() => {});
     return;
   }
   groups.forEach(g => {
@@ -2288,6 +2289,7 @@ function renderAlbum(){
   box.querySelectorAll('.atile').forEach(b => {
     b.onclick = () => showAlbumView(b.getAttribute('data-id'));
   });
+  loadAchievements().then(A => { const el = box.querySelector('#vitrine'); if (A && el) { A.sync({ toast: false }); A.render(el); } }).catch(() => {});
 }
 function showAlbumView(id, opts){
   const p = byId(id); if (!p) return;
@@ -2344,18 +2346,43 @@ function mtoast(msg){
   clearTimeout(mtoastT);
   mtoastT = setTimeout(() => el.classList.remove('show'), 3800);
 }
+let achMod = null, achLoading = null;
+function achHost(){
+  return {
+    isDone, doneCount, loadStreak, pathSteps, stationDone, pathIsComplete,
+    get PATHS(){ return PATHS; },
+    get ALL(){ return ALL; },
+    byId, todayKey, L, reduceMotion, showAlbum,
+    get lang(){ return I.lang; },
+    galCats: GAL_CATS,
+    certDate(id){ try { return localStorage.getItem(CERT_DATE_KEY(id)); } catch (e) { return null; } }
+  };
+}
+function loadAchievements(){
+  if (achMod) return Promise.resolve(achMod);
+  if (achLoading) return achLoading;
+  achLoading = new Promise((resolve, reject) => {
+    if (!document.querySelector('link[data-ach-css]')) {
+      const l = document.createElement('link');
+      l.rel = 'stylesheet';
+      l.href = 'achievements.css';
+      l.setAttribute('data-ach-css', '1');
+      document.head.appendChild(l);
+    }
+    const s = document.createElement('script');
+    s.src = 'achievements.js';
+    s.onload = () => {
+      achMod = window.MASILANO_ACHIEVEMENTS;
+      if (achMod && achMod.init) achMod.init(achHost());
+      resolve(achMod);
+    };
+    s.onerror = reject;
+    document.body.appendChild(s);
+  });
+  return achLoading;
+}
 function maybeMilestones(pid){
-  const seen = loadMiles();
-  const n = doneCount();
-  let key = null, msg = null;
-  if (n === 1 && !seen.first) { key = 'first'; msg = t('mileFirst'); }
-  else if (n === 10 && !seen.n10) { key = 'n10'; msg = t('mile10'); }
-  else if (n === 50 && !seen.n50) { key = 'n50'; msg = t('mile50'); }
-  if (!key && !seen.station && justCompletedStation(pid)) { key = 'station'; msg = t('mileStation'); }
-  if (!key) return;
-  seen[key] = 1;
-  saveMiles(seen);
-  setTimeout(() => mtoast(msg), 700);
+  loadAchievements().then(A => { if (A) A.sync({ toast: true, pid }); }).catch(() => {});
 }
 function afterFinish(pid){
   const pick = pickDaily();

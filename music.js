@@ -189,6 +189,25 @@
     });
   }
 
+
+  function noteVgDelight() {
+    const vg = (currentPath && currentPath.id === 'vangogh')
+      || (function () { try { const p = window.__dbg && window.__dbg.pathCtx && window.__dbg.pathCtx.path; return p && p.id === 'vangogh'; } catch (e) { return false; } })();
+    if (!vg) return;
+    try {
+      const o = JSON.parse(localStorage.getItem('masilano.delight.v1') || 'null') || {};
+      if (!o.vgMusic) {
+        const d = new Date();
+        const at = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+        o.vgMusic = 1; o.at = at;
+        localStorage.setItem('masilano.delight.v1', JSON.stringify(o));
+      }
+    } catch (e) {}
+    if (window.MASILANO_ACHIEVEMENTS && typeof window.MASILANO_ACHIEVEMENTS.onDelight === 'function') {
+      window.MASILANO_ACHIEVEMENTS.onDelight('vgMusic');
+    }
+  }
+
   function ensurePlaying() {
     if (!enabled || !gesture || !pathActive || !currentFile) return;
     const a = getAudio();
@@ -203,6 +222,7 @@
     const p = a.play();
     if (p && p.catch) p.catch(function () { /* wait for a later gesture */ });
     fadeTo(targetGain(), fadeMs());
+    noteVgDelight();
   }
 
   function switchFile(file) {
@@ -430,6 +450,7 @@
     stopSpeak();
     const parts = (texts || []).map(function (s) { return String(s || '').replace(/\s+/g, ' ').trim(); }).filter(Boolean);
     if (!parts.length) return;
+    noteVgDelight();
     const lang = (window.I18N && window.I18N.lang) || 'de';
     const tag = ({ de: 'de-DE', en: 'en-GB', es: 'es-ES', fr: 'fr-FR', it: 'it-IT' })[lang] || lang;
     const token = ++speakToken;

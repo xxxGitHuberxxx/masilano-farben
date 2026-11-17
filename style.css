@@ -1819,3 +1819,46 @@ body.calm .contcard .cv,body.calm .dailycard .cv{ --cv-w: 68px; }
   .goldcta:active,
   .dailyhero .cta:active{transform:none}
 }
+
+
+/* v10.13: framed museum tablets — ivory paper in a slim gold/dark profile,
+   so labels no longer resemble the solid-gold Malen button */
+.plaque{
+  background-color:#f6efe0;
+  background-image:linear-gradient(180deg,#fbf6ea 0%,#f3ead8 100%);
+  color:#152a5c;
+  border-radius:3px;
+  border:0;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,252,244,.85),
+    0 0 0 1px #5a3f16,
+    0 0 0 3px #c9a45a,
+    0 0 0 4px #2d210e,
+    0 2px 6px rgba(0,0,0,.28);
+}
+.plaque .n,.plaque .t{
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:normal;
+  color:#152a5c;
+  text-transform:none;
+  letter-spacing:0;
+}
+.plaque .a{
+  font-family:Georgia,"Times New Roman",serif;
+  font-style:italic;
+  color:#3a2a12;
+}
+.dailyhero .plaque{
+  margin:0 12px 14px;
+  padding:10px 12px 11px;
+}
+.pc .plaque{
+  margin:8px 6px 4px;
+  padding:6px 7px 7px;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,252,244,.8),
+    0 0 0 1px #5a3f16,
+    0 0 0 2px #c9a45a,
+    0 0 0 3px #2d210e,
+    0 1px 4px rgba(0,0,0,.22);
+}
