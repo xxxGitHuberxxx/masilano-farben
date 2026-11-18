@@ -1,4 +1,4 @@
-/* v10.18 Saal der Zifferblaetter: exclusive Museums-Zifferblaetter (Wear OS) as Lebensweg rewards. */
+/* v10.25 Saal der Vollendung: exclusive Museums-Zifferblaetter (Wear OS) as Lebensweg rewards. */
 (function () {
   'use strict';
   const CLAIM_KEY = 'masilano.faceClaims.v1';
@@ -35,13 +35,55 @@
       w:{ de:'Der Niesen', en:'The Niesen', fr:'Le Niesen', it:'Il Niesen', es:'El Niesen' } },
     { id:'segantini', path:'segantini', artist:'Giovanni Segantini', year:'1891',
       n:{ de:'Mittag in den Alpen', en:'Midday in the Alps', fr:'Midi dans les Alpes', it:'Mezzogiorno sulle Alpi', es:'Mediodía en los Alpes' },
-      w:{ de:'Mittag in den Alpen', en:'Midday in the Alps', fr:'Midi dans les Alpes', it:'Mezzogiorno sulle Alpi', es:'Mediodía en los Alpes' } }
+      w:{ de:'Mittag in den Alpen', en:'Midday in the Alps', fr:'Midi dans les Alpes', it:'Mezzogiorno sulle Alpi', es:'Mediodía en los Alpes' } },
+    { id:'ballon', path:'vallotton', artist:'Félix Vallotton', year:'1899',
+      n:{ de:'Der Ball', en:'The Ball', fr:'Le Ballon', it:'Il pallone', es:'El balón' },
+      w:{ de:'Der Ball', en:'The Ball', fr:'Le Ballon', it:'Il pallone', es:'El balón' } },
+    { id:'silsersee', path:'giacometti', artist:'Giovanni Giacometti', year:'1927',
+      n:{ de:'Silsersee', en:'Lake Sils', fr:'Lac de Sils', it:'Lago di Sils', es:'Lago de Sils' },
+      w:{ de:'Blick auf den Silsersee von Capolago', en:'View of Lake Sils from Capolago', fr:'Vue du lac de Sils depuis Capolago', it:'Veduta del lago di Sils da Capolago', es:'Vista del lago de Sils desde Capolago' } },
+    { id:'buecherwurm', path:'spitzweg', artist:'Carl Spitzweg', year:'um 1850',
+      n:{ de:'Der Bücherwurm', en:'The Bookworm', fr:'Le Bibliomane', it:'Il topo di biblioteca', es:'El ratón de biblioteca' },
+      w:{ de:'Der Bücherwurm', en:'The Bookworm', fr:'Le Bibliomane', it:'Il topo di biblioteca', es:'El ratón de biblioteca' } },
+    { id:'primeln', path:'moser', artist:'Koloman Moser', year:'um 1912',
+      n:{ de:'Primeln', en:'Primroses', fr:'Primevères', it:'Primule', es:'Primaveras' },
+      w:{ de:'Primeln im Korb', en:'Primroses in a Basket', fr:'Primevères dans un panier', it:'Primule in un cesto', es:'Primaveras en un cesto' } },
+    { id:'ernte', path:'zuend', artist:'Robert Zünd', year:'1860',
+      n:{ de:'Die Ernte', en:'The Harvest', fr:'La Moisson', it:'La mietitura', es:'La cosecha' },
+      w:{ de:'Die Ernte', en:'The Harvest', fr:'La Moisson', it:'La mietitura', es:'La cosecha' } },
+    { id:'montreux', path:'calame', artist:'Alexandre Calame', year:'1863',
+      n:{ de:'Montreux', en:'Montreux', fr:'Montreux', it:'Montreux', es:'Montreux' },
+      w:{ de:'Das Ende des Genfersees bei Montreux', en:'The Head of Lake Geneva near Montreux', fr:'Vue de l’extrémité du lac de Genève près de Montreux', it:'L’estremità del lago Lemano presso Montreux', es:'El extremo del lago Lemán cerca de Montreux' } },
+    { id:'gletscher', path:'wolf', artist:'Caspar Wolf', year:'1774',
+      n:{ de:'Der Gletscher', en:'The Glacier', fr:'Le Glacier', it:'Il ghiacciaio', es:'El glaciar' },
+      w:{ de:'Der Untere Grindelwaldgletscher', en:'The Lower Grindelwald Glacier', fr:'Le glacier inférieur de Grindelwald', it:'Il ghiacciaio inferiore di Grindelwald', es:'El glaciar inferior de Grindelwald' } },
+    { id:'sonnenschein', path:'ancher', artist:'Anna Ancher', year:'1891',
+      n:{ de:'Sonnenschein', en:'Sunlight', fr:'Soleil', it:'Sole', es:'Luz de sol' },
+      w:{ de:'Sonnenschein im blauen Zimmer', en:'Sunlight in the Blue Room', fr:'Soleil dans la chambre bleue', it:'Sole nella stanza blu', es:'Luz de sol en la habitación azul' } },
+    { id:'prater', path:'blau', artist:'Tina Blau', year:'1882',
+      n:{ de:'Frühling im Prater', en:'Spring in the Prater', fr:'Printemps au Prater', it:'Primavera al Prater', es:'Primavera en el Prater' },
+      w:{ de:'Frühling im Prater', en:'Spring in the Prater', fr:'Printemps au Prater', it:'Primavera al Prater', es:'Primavera en el Prater' } },
+    { id:'gotthard', path:'koller', artist:'Rudolf Koller', year:'1873',
+      n:{ de:'Die Gotthardpost', en:'The Gotthard Post', fr:'La diligence du Gothard', it:'La diligenza del Gottardo', es:'La diligencia del Gotardo' },
+      w:{ de:'Die Gotthardpost', en:'The Gotthard Post', fr:'La diligence du Gothard', it:'La diligenza del Gottardo', es:'La diligencia del Gotardo' } },
+    { id:'gewitter', path:'diday', artist:'François Diday', year:'1839',
+      n:{ de:'Das Gewitter', en:'The Storm', fr:'L’Orage', it:'Il temporale', es:'La tormenta' },
+      w:{ de:'Gewitter über dem Genfersee', en:'Storm over Lake Geneva', fr:'Orage sur le Léman', it:'Temporale sul Lemano', es:'Tormenta sobre el lago Lemán' } },
+    { id:'hacking', path:'schindler', artist:'Emil Jakob Schindler', year:'1883',
+      n:{ de:'Frühling in Hacking', en:'Spring in Hacking', fr:'Printemps à Hacking', it:'Primavera a Hacking', es:'Primavera en Hacking' },
+      w:{ de:'Frühling in Hacking', en:'Spring in Hacking', fr:'Printemps à Hacking', it:'Primavera a Hacking', es:'Primavera en Hacking' } },
+    { id:'pergola', path:'egner', artist:'Marie Egner', year:'1910',
+      n:{ de:'Die Pergola', en:'The Pergola', fr:'La Pergola', it:'Il pergolato', es:'La pérgola' },
+      w:{ de:'In der Pergola', en:'In the Pergola', fr:'Sous la pergola', it:'Sotto il pergolato', es:'En la pérgola' } },
+    { id:'mohn', path:'wisinger', artist:'Olga Wisinger-Florian', year:'um 1895',
+      n:{ de:'Blühender Mohn', en:'Poppies in Bloom', fr:'Coquelicots en fleurs', it:'Papaveri in fiore', es:'Amapolas en flor' },
+      w:{ de:'Blühender Mohn', en:'Poppies in Bloom', fr:'Coquelicots en fleurs', it:'Papaveri in fiore', es:'Amapolas en flor' } }
   ];
   const TX = {
     de: {
       room:'Saal der Vollendung', title:'Zifferblätter', motto:'Normal unbezahlbar, nur für Vollender',
       lead:'Museums-Zifferblätter für Wear-OS-Uhren, jedes im eigenen Goldrahmen. Normal unbezahlbar. Wer den Lebensweg eines Malers vollendet, erhält dessen Zifferblatt mit einem persönlichen Code als Belohnung. Für die Apple Watch gibt es das Gemälde für das Zifferblatt «Fotos».',
-      entryK:'Exklusiv', entryS:'Elf Meisterwerke am Handgelenk',
+      entryK:'Exklusiv', entryS:'Fünfundzwanzig Meisterwerke am Handgelenk',
       earned:'Verliehen', claimed:'Angefordert', soon:'Bald', prog:'{n} von {N} Bildern',
       onPath:'Lohn für {path}', soonLong:'Der Lebensweg von {artist} ist in Vorbereitung. Bis dahin bleibt dieses Zifferblatt hinter Glas.',
       lockedLong:'Dieses Zifferblatt erhält nur, wer {path} vollendet. Es wird nirgends beworben.',
@@ -59,7 +101,7 @@
     en: {
       room:'Hall of Completion', title:'Watch Faces', motto:'Normally priceless, only for those who finish',
       lead:'Museum watch faces for Wear OS watches, each in its own gilded frame. Normally priceless. Anyone who completes a painter\u2019s life path receives that painter\u2019s watch face, with a personal code, as a reward. Apple Watch owners receive the painting for the Photos face.',
-      entryK:'Exclusive', entryS:'Eleven masterpieces on your wrist',
+      entryK:'Exclusive', entryS:'Twenty-five masterpieces on your wrist',
       earned:'Awarded', claimed:'Requested', soon:'Soon', prog:'{n} of {N} pictures',
       onPath:'Reward for {path}', soonLong:'{artist}\u2019s life path is in preparation. Until then this watch face stays behind glass.',
       lockedLong:'Only those who finish {path} receive this watch face. It is not advertised anywhere.',
@@ -77,7 +119,7 @@
     fr: {
       room:'Salle de l\u2019accomplissement', title:'Cadrans', motto:'D\u2019ordinaire inestimables, réservés à qui va jusqu\u2019au bout',
       lead:'Des cadrans de musée pour montres Wear OS, chacun dans son cadre doré. D\u2019ordinaire inestimables. Qui achève le parcours de vie d\u2019un peintre reçoit son cadran, avec un code personnel, en récompense. Sur Apple Watch, le tableau est offert pour le cadran « Photos ».',
-      entryK:'Exclusif', entryS:'Onze chefs-d\u2019œuvre au poignet',
+      entryK:'Exclusif', entryS:'Vingt-cinq chefs-d\u2019œuvre au poignet',
       earned:'Décerné', claimed:'Demandé', soon:'Bientôt', prog:'{n} sur {N} tableaux',
       onPath:'Récompense de {path}', soonLong:'Le parcours de vie de {artist} est en préparation. D\u2019ici là, ce cadran reste sous vitrine.',
       lockedLong:'Seuls ceux qui achèvent {path} reçoivent ce cadran. Il n\u2019est promu nulle part.',
@@ -95,7 +137,7 @@
     it: {
       room:'Sala del compimento', title:'Quadranti', motto:'Di norma impagabili, solo per chi arriva in fondo',
       lead:'Quadranti da museo per orologi Wear OS, ciascuno nella sua cornice dorata. Di norma impagabili. Chi completa il percorso di vita di un pittore riceve il suo quadrante, con un codice personale, come premio. Su Apple Watch il dipinto è disponibile per il quadrante «Foto».',
-      entryK:'Esclusivo', entryS:'Undici capolavori al polso',
+      entryK:'Esclusivo', entryS:'Venticinque capolavori al polso',
       earned:'Conferito', claimed:'Richiesto', soon:'Presto', prog:'{n} di {N} quadri',
       onPath:'Premio per {path}', soonLong:'Il percorso di vita di {artist} è in preparazione. Fino ad allora questo quadrante resta dietro il vetro.',
       lockedLong:'Ricevono questo quadrante solo coloro che completano {path}. Non viene pubblicizzato da nessuna parte.',
@@ -113,7 +155,7 @@
     es: {
       room:'Sala de la culminación', title:'Esferas', motto:'Normalmente impagables, solo para quien llega al final',
       lead:'Esferas de museo para relojes Wear OS, cada una en su marco dorado. Normalmente impagables. Quien completa el camino de vida de un pintor recibe su esfera, con un código personal, como recompensa. En Apple Watch, la pintura se ofrece para la esfera «Fotos».',
-      entryK:'Exclusivo', entryS:'Once obras maestras en la muñeca',
+      entryK:'Exclusivo', entryS:'Veinticinco obras maestras en la muñeca',
       earned:'Concedida', claimed:'Solicitada', soon:'Pronto', prog:'{n} de {N} cuadros',
       onPath:'Premio por {path}', soonLong:'El camino de vida de {artist} está en preparación. Hasta entonces, esta esfera permanece tras el cristal.',
       lockedLong:'Solo quienes completan {path} reciben esta esfera. No se anuncia en ninguna parte.',
