@@ -1215,7 +1215,7 @@ $('#hintBtn').onclick = () => { if (S && S.done) { showStory(); return; } origHi
 cv.addEventListener('click', () => { if (S && S.done && !anim && !(S.doneAt && performance.now() - S.doneAt < 4000)) { reveal = reveal > 0.5 ? 0 : 1; draw(); toast(reveal ? t('original') : t('yours')); } });
 
 // ---------- navigation ----------
-const TABS = ['heute','wege','galerie','album','trophies'];
+const TABS = ['heute','wege','galerie','album','trophies','faces','rankings'];
 let currentTab = 'heute';
 let routeSilent = false;
 function storedTab(){
@@ -1237,8 +1237,8 @@ function parseHash(){
     if (a === 'album' && b) return { kind: 'albumView', id: b };
     return { kind: 'tab', tab: a };
   }
-  if (a === 'zifferblaetter' || a === 'faces') return { kind: 'faces' };
-  if (a === 'rangliste' || a === 'rankings' || a === 'ranglisten') return { kind: 'rankings' };
+  if (a === 'zifferblaetter' || a === 'faces') return { kind: 'tab', tab: 'faces' };
+  if (a === 'rangliste' || a === 'rankings' || a === 'ranglisten') return { kind: 'tab', tab: 'rankings' };
   if ((a === 'weg' || a === 'path') && b) {
     if ((c === 'bild' || c === 'paint') && d) return { kind: 'paint', id: d, from: { kind: 'path', id: b } };
     return { kind: 'path', id: b };
@@ -1252,7 +1252,11 @@ function parseHash(){
 }
 function hashFor(route){
   if (!route) return '#heute';
-  if (route.kind === 'tab') return '#' + (route.tab || 'heute');
+  if (route.kind === 'tab') {
+    if (route.tab === 'faces') return '#zifferblaetter';
+    if (route.tab === 'rankings') return '#rangliste';
+    return '#' + (route.tab || 'heute');
+  }
   if (route.kind === 'path') return '#weg/' + route.id;
   if (route.kind === 'faces') return '#zifferblaetter';
   if (route.kind === 'rankings') return '#rangliste';
@@ -1426,6 +1430,15 @@ function showScreen(id){
     if (tabId === 'galerie') { placeFilterPanel(); requestAnimationFrame(() => renderGallery()); }
     if (tabId === 'album') renderAlbum();
     if (tabId === 'trophies') renderTrophies();
+    if (tabId === 'faces') {
+      const F = window.MASILANO_FACES;
+      if (F) F.renderHall($('#facesBody'));
+    }
+    if (tabId === 'rankings') {
+      const Lb = window.MASILANO_LB;
+      if (Lb && Lb.showPage) Lb.showPage();
+    }
+    syncOverlayBack();
   } else {
     document.body.classList.add('tabless');
     document.querySelectorAll('.tab-screen').forEach(s => s.classList.remove('active'));
@@ -1448,6 +1461,8 @@ function bindTabs(){
     if (!TABS.includes(tab)) return;
     S = null; pathCtx = null; storyCtx = null;
     hideSheets();
+    facesParent = null;
+    rankingsParent = null;
     navigate({ kind: 'tab', tab });
     showScreen(tab);
   });
@@ -2425,27 +2440,58 @@ function renderAlbum(){
   });
 }
 // ---------- v10.18: Saal der Zifferblaetter ----------
+let facesParent = null, rankingsParent = null;
+function rememberOverlayParent(kind){
+  const cur = parseHash();
+  if (cur.kind === 'tab' && cur.tab === kind) return;
+  if (cur.kind === kind) return;
+  const parent = (pathCtx && pathCtx.path) ? { kind: 'path', id: pathCtx.path.id }
+    : (storyCtx && storyCtx.story) ? { kind: 'story', id: storyCtx.story.id }
+    : (cur.kind === 'tab' && cur.tab !== kind) ? cur
+    : { kind: 'tab', tab: currentTab && currentTab !== kind ? currentTab : 'wege' };
+  if (kind === 'faces') facesParent = parent;
+  else rankingsParent = parent;
+}
+function syncOverlayBack(){
+  function setBtn(id, parent){
+    const btn = $(id); if (!btn) return;
+    const show = !!(parent && parent.kind);
+    btn.classList.toggle('hidden', !show);
+    btn.hidden = !show;
+  }
+  setBtn('#facesBack', facesParent);
+  setBtn('#lbBack', rankingsParent);
+}
 function showHall(opts){
   hideSheets();
   S = null;
-  if (!opts || !opts.noRoute) navigate({ kind: 'faces' });
+  if (!opts || !opts.noRoute) {
+    rememberOverlayParent('faces');
+    navigate({ kind: 'tab', tab: 'faces' });
+  }
   showScreen('faces');
-  const F = window.MASILANO_FACES;
-  if (F) F.renderHall($('#facesBody'));
   const sc = document.querySelector('#faces .chscroll');
   if (sc) sc.scrollTop = 0;
+  syncOverlayBack();
 }
 function showRankings(opts){
   hideSheets();
   S = null;
-  if (!opts || !opts.noRoute) navigate({ kind: 'rankings' });
+  if (!opts || !opts.noRoute) {
+    rememberOverlayParent('rankings');
+    navigate({ kind: 'tab', tab: 'rankings' });
+  }
   showScreen('rankings');
-  const Lb = window.MASILANO_LB;
-  if (Lb && Lb.showPage) Lb.showPage();
   const sc = document.querySelector('#rankings .chscroll');
   if (sc) sc.scrollTop = 0;
+  syncOverlayBack();
 }
-if ($('#lbBack')) $('#lbBack').onclick = () => { hideSheets(); backOr({ kind: 'tab', tab: currentTab || 'trophies' }); };
+if ($('#lbBack')) $('#lbBack').onclick = () => {
+  hideSheets();
+  const parent = rankingsParent || { kind: 'tab', tab: 'trophies' };
+  rankingsParent = null;
+  backOr(parent);
+};
 function lbHost(){
   return {
     get PATHS(){ return PATHS; },
@@ -2481,7 +2527,12 @@ function initFaces(){
   const F = window.MASILANO_FACES;
   if (F && F.init) F.init(facesHost());
 }
-if ($('#facesBack')) $('#facesBack').onclick = () => { hideSheets(); backOr({ kind: 'tab', tab: currentTab || 'trophies' }); };
+if ($('#facesBack')) $('#facesBack').onclick = () => {
+  hideSheets();
+  const parent = facesParent || { kind: 'tab', tab: 'wege' };
+  facesParent = null;
+  backOr(parent);
+};
 function showTrophies(){
   hideSheets();
   S = null;

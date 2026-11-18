@@ -2254,3 +2254,136 @@ body.calm .contcard .cv,body.calm .dailycard .cv{ --cv-w: 68px; }
 .rl-code{font-size:15px;letter-spacing:.08em;word-break:break-all;margin:12px 0 !important}
 .rl-link{all:unset;cursor:pointer;display:block;margin:14px auto 0;color:#e8c56b;font-size:13px;text-decoration:underline;text-underline-offset:3px}
 #rankings.screen h1,#rankings .zf-title{text-transform:none}
+
+/* v10.27: paintings sit inside the frame opening; 7-tab bar; hall and ranks as tabs */
+#gallery .pc .im{
+  aspect-ratio: 384 / 304;
+  box-sizing: border-box;
+  background-origin: content-box;
+  background-clip: content-box;
+  overflow: visible;
+  padding: calc(var(--fo-t) * 304 / 384 * 100%) calc(var(--fo-r) * 100%) calc(var(--fo-b) * 304 / 384 * 100%) calc(var(--fo-l) * 100%);
+}
+#gallery .pc .im img{
+  position: absolute;
+  inset: auto;
+  top: calc(var(--fo-t) * 100% + 0.5px);
+  left: calc(var(--fo-l) * 100% + 0.5px);
+  width: calc(100% - (var(--fo-l) + var(--fo-r)) * 100% - 1px);
+  height: calc(100% - (var(--fo-t) + var(--fo-b)) * 100% - 1px);
+  right: auto;
+  bottom: auto;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border: 0;
+  border-radius: 0;
+  z-index: 1;
+}
+.dailyhero .heroim,
+.banners .btrack,
+.atile img,
+.zf-velvet{
+  /* keep paintings inside the opening; half-pixel inset avoids subpixel bleed at corners */
+  box-sizing: border-box;
+}
+.atile img{
+  top: calc(var(--fo-t) * 100% + 0.5px);
+  left: calc(var(--fo-l) * 100% + 0.5px);
+  width: calc(100% - (var(--fo-l) + var(--fo-r)) * 100% - 1px);
+  height: calc(100% - (var(--fo-t) + var(--fo-b)) * 100% - 1px);
+  right: auto;
+  bottom: auto;
+  inset: auto;
+}
+#album .atile img{
+  top: calc(var(--fo-t) * 100% + 0.5px);
+  left: calc(var(--fo-l) * 100% + 0.5px);
+  width: calc(100% - (var(--fo-l) + var(--fo-r)) * 100% - 1px);
+  height: calc(100% - (var(--fo-t) + var(--fo-b)) * 100% - 1px);
+  right: auto;
+  bottom: auto;
+}
+
+/* Seven tabs at 320–430px: short labels, compact icons, no wrap overflow */
+.tabbar{padding-left:0;padding-right:0}
+.tab{
+  flex:1 1 0;
+  min-width:0;
+  gap:1px;
+  font-size:10px;
+  font-weight:600;
+  padding:4px 0 3px;
+  min-height:52px;
+  letter-spacing:0;
+  line-height:1.1;
+}
+.tab > span:not(.ticon):not(.ndot){
+  max-width:100%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  padding:0 1px;
+}
+.tab .ticon svg,.tab svg{width:20px;height:20px}
+@media (min-width:400px){
+  .tab{font-size:11px;padding:5px 1px}
+  .tab .ticon svg,.tab svg{width:22px;height:22px}
+}
+@media (min-width:700px){
+  .tab{font-size:13px;padding:6px 4px;min-height:56px;gap:2px}
+  .tab .ticon svg,.tab svg{width:26px;height:26px}
+}
+
+/* Saal der Vollendung and Ranglisten as tab pages */
+#faces.tab-screen,#rankings.tab-screen{
+  background:radial-gradient(ellipse at 50% -8%,#24365f 0%,#101c38 48%,#070d1d 100%);
+}
+#faces .chscroll,#rankings .chscroll{
+  flex:1;
+  min-height:0;
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+}
+#faces .zf-title,#rankings .zf-title,
+#faces .roomlab,#rankings .roomlab,
+#faces h1,#rankings h1,
+#faces.tab-screen .zf-title,#rankings.tab-screen .zf-title{
+  color:var(--gold-hi, #f6e4a8);
+  text-transform:none;
+  letter-spacing:0;
+}
+.tabback{
+  position:absolute;
+  top:8px;
+  left:8px;
+  z-index:8;
+  width:40px;
+  height:40px;
+  color:var(--gold-hi, #f6e4a8);
+  background:rgba(8,14,28,.45);
+  border-radius:20px;
+}
+.tabback.hidden,.tabback[hidden]{display:none !important}
+#faces .zf-hall,#rankings .rl-hall{padding-top:8px}
+
+/* Trophies-only page: give Ehrentitel more room now the banners are gone */
+#trophies .albumhead{flex:none}
+#trophies .vitrine-title{font-size:42px}
+#trophies .trophy-face{
+  width:78%;
+  max-width:112px;
+  height:auto;
+  aspect-ratio:1;
+}
+
+
+/* v10.27: keep 2 gallery columns on phones (360px was 4px short of minmax(158px)). */
+#gallery .galgrid{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (min-width: 700px){
+  #gallery .galgrid{grid-template-columns:repeat(auto-fill, minmax(180px, 1fr));gap:18px}
+}
