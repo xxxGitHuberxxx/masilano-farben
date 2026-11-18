@@ -269,7 +269,7 @@
   function rewardEl(path, done){
     const list = facesFor(path && path.id);
     if (!list.length) {
-      if (!path || !({vallotton:1, giacometti:1, spitzweg:1, moser:1, zuend:1, calame:1, wolf:1, ancher:1, blau:1})[path.id]) return null;
+      if (!path || !({vallotton:1, giacometti:1, spitzweg:1, moser:1, zuend:1, calame:1, wolf:1, ancher:1, blau:1, koller:1, diday:1, schindler:1, egner:1, wisinger:1})[path.id]) return null;
       const P = T();
       const box = document.createElement('section');
       box.className = 'zf-reward zf-reward-soon';

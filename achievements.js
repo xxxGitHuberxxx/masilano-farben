@@ -7,7 +7,7 @@
     fuji: ['amiura','artistsfuji','ashishiro','chinowa','fujimi','fujimitsui','fujinibon','fujisundai','fujisuri','fujitotomi','fujitsukuda','futomi','gotenyama','kanaya','mikiri','minobu','murasame','oigawafuji','redfuji','sankifuji','thunder','wave'],
     sunflowers: ['sunflowers','sunflowermunich']
   };
-  const PATH_IDS = ['vangogh','monet','hokusai','klimt','anker','hodler','cezanne','hiroshige','renoir','pissarro','turner','rembrandt','sisley','friedrich','segantini','vallotton','giacometti','spitzweg','moser','zuend','calame','wolf','ancher','blau'];
+  const PATH_IDS = ['vangogh','monet','hokusai','klimt','anker','hodler','cezanne','hiroshige','renoir','pissarro','turner','rembrandt','sisley','friedrich','segantini','vallotton','giacometti','spitzweg','moser','zuend','calame','wolf','ancher','blau','koller','diday','schindler','egner','wisinger'];
   const CATS = ['flowers','landscapes','water','animals','portraits','city'];
   const TROPHY = {
     first:'cup', n10:'cup', n50:'cup',
