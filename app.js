@@ -926,7 +926,10 @@ async function openPainting(p, opts){
   loadImg(`data/${p.id}-orig.jpg`).then(i => { if (S && S.p === p) origImg = i; });
   buildPalette(); resize(); fitView(); rebuild(); updateProgress();
   if (S.nFilled >= pz.R) { S.done = true; reveal = 1; draw(); clearLastIf(p.id); }
-  else rememberLast(p);
+  else {
+    rememberLast(p);
+    if (window.MASILANO_LB && window.MASILANO_LB.markStart) window.MASILANO_LB.markStart(p.id);
+  }
 }
 
 function rebuild(){
@@ -1229,6 +1232,7 @@ function parseHash(){
     return { kind: 'tab', tab: a };
   }
   if (a === 'zifferblaetter' || a === 'faces') return { kind: 'faces' };
+  if (a === 'rangliste' || a === 'rankings' || a === 'ranglisten') return { kind: 'rankings' };
   if ((a === 'weg' || a === 'path') && b) return { kind: 'path', id: b };
   if ((a === 'geschichte' || a === 'story') && b) return { kind: 'story', id: b };
   if ((a === 'bild' || a === 'paint') && b) return { kind: 'paint', id: b };
@@ -1239,6 +1243,7 @@ function hashFor(route){
   if (route.kind === 'tab') return '#' + (route.tab || 'heute');
   if (route.kind === 'path') return '#weg/' + route.id;
   if (route.kind === 'faces') return '#zifferblaetter';
+  if (route.kind === 'rankings') return '#rangliste';
   if (route.kind === 'story') return '#geschichte/' + route.id;
   if (route.kind === 'paint') return '#bild/' + route.id;
   if (route.kind === 'albumView') return '#album/' + route.id;
@@ -1288,6 +1293,7 @@ function applyRoute(route){
     return;
   }
   if (route.kind === 'faces') { S = null; pathCtx = null; storyCtx = null; showHall({ noRoute: true }); return; }
+  if (route.kind === 'rankings') { S = null; pathCtx = null; storyCtx = null; showRankings({ noRoute: true }); return; }
   if (route.kind === 'albumView') {
     showScreen('album');
     showAlbumView(route.id, { noRoute: true });
@@ -1296,7 +1302,7 @@ function applyRoute(route){
 function bootRoute(){
   const r = parseHash();
   if (r.kind !== 'tab') {
-    const tab = r.kind === 'albumView' ? 'album' : (r.kind === 'paint' ? storedTab() : (r.kind === 'faces' ? 'trophies' : 'wege'));
+    const tab = r.kind === 'albumView' ? 'album' : (r.kind === 'paint' ? storedTab() : ((r.kind === 'faces' || r.kind === 'rankings') ? 'trophies' : 'wege'));
     history.replaceState({ masilano: 1, home: true }, '', '#' + tab);
     history.pushState({ masilano: 1 }, '', hashFor(r));
   } else {
@@ -1377,7 +1383,7 @@ function goGallery(){
   if (storyCtx && storyCtx.story) { backOr({ kind: 'story', id: storyCtx.story.id }); return; }
   backOr({ kind: 'tab', tab: currentTab || 'heute' });
 }
-function hideSheets(){ if (window.MASILANO_MUSIC) window.MASILANO_MUSIC.stopSpeak(); ['#story', '#chapter', '#chDone', '#pathFin', '#installHow', '#settings', '#albumView', '#sources', '#filterSheet', '#catSheet', '#certView', '#faceView', '#achView'].forEach(q => $(q) && $(q).classList.add('hidden')); }
+function hideSheets(){ if (window.MASILANO_MUSIC) window.MASILANO_MUSIC.stopSpeak(); ['#story', '#chapter', '#chDone', '#pathFin', '#installHow', '#settings', '#albumView', '#sources', '#filterSheet', '#catSheet', '#certView', '#faceView', '#achView', '#lbJoin'].forEach(q => $(q) && $(q).classList.add('hidden')); }
 $('#backBtn').onclick = goGallery;
 let galT = 0;
 function onViewport(){ if (S) resize(); else { clearTimeout(galT); galT = setTimeout(() => { placeFilterPanel(); }, 120); } }
@@ -2344,6 +2350,30 @@ function showHall(opts){
   const sc = document.querySelector('#faces .chscroll');
   if (sc) sc.scrollTop = 0;
 }
+function showRankings(opts){
+  hideSheets();
+  S = null;
+  if (!opts || !opts.noRoute) navigate({ kind: 'rankings' });
+  showScreen('rankings');
+  const Lb = window.MASILANO_LB;
+  if (Lb && Lb.showPage) Lb.showPage();
+  const sc = document.querySelector('#rankings .chscroll');
+  if (sc) sc.scrollTop = 0;
+}
+if ($('#lbBack')) $('#lbBack').onclick = () => { hideSheets(); backOr({ kind: 'tab', tab: currentTab || 'trophies' }); };
+function lbHost(){
+  return {
+    get PATHS(){ return PATHS; },
+    get lang(){ return I.lang; },
+    pathOwning, pathSteps, isDone, L, mtoast, revealSheet,
+    closeSheet: () => closeTopSheet(),
+    showRankings: () => showRankings()
+  };
+}
+function initRankings(){
+  const Lb = window.MASILANO_LB;
+  if (Lb && Lb.init) Lb.init(lbHost());
+}
 function facesHost(){
   return {
     get PATHS(){ return PATHS; },
@@ -2376,6 +2406,7 @@ function showTrophies(){
 function renderTrophies(){
   const box = $('#trophiesBody'); if (!box) return;
   if (window.MASILANO_FACES) window.MASILANO_FACES.refresh();
+  if (window.MASILANO_LB) window.MASILANO_LB.refresh();
   loadAchievements().then(A => { if (A && box) { A.sync({ toast: false }); A.render(box); } }).catch(() => {});
 }
 function showAlbumView(id, opts){
@@ -2476,6 +2507,7 @@ function afterFinish(pid){
   if (pick && pick.id === pid) bumpStreak();
   maybeMilestones(pid);
   PATHS.forEach(path => { if (pathIsComplete(path) && pathSteps(path).some(s => s.pid === pid)) recordCertDate(path); });
+  if (window.MASILANO_LB && window.MASILANO_LB.reportComplete) window.MASILANO_LB.reportComplete(pid);
 }
 function celebrateIfNeeded(){
   if (!S || !S.justFinished) return;
@@ -2534,6 +2566,7 @@ function bindDelight(){
   if ($('#certClose')) $('#certClose').onclick = () => closeTopSheet();
   document.addEventListener('keydown', e => {
     if (e.key !== 'Escape') return;
+    if ($('#lbJoin') && !$('#lbJoin').classList.contains('hidden')) { closeTopSheet(); e.preventDefault(); return; }
     if ($('#certView') && !$('#certView').classList.contains('hidden')) { closeTopSheet(); e.preventDefault(); return; }
     if ($('#albumView') && !$('#albumView').classList.contains('hidden')) { closeAlbumView(); e.preventDefault(); return; }
     if ($('#settings') && !$('#settings').classList.contains('hidden')) { closeSettings(); e.preventDefault(); return; }
@@ -3185,6 +3218,7 @@ function startUi(){
   syncAppSubtitle();
   window.__pathTextsReady = !!(window.__pathIndexReady || PATHS.length >= 14);
   initFaces();
+  initRankings();
   bootRoute();
   maybeShowInstallHint();
   if ((currentTab || 'heute') === 'heute') renderHeute();

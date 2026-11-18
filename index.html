@@ -60,7 +60,7 @@
     <footer class="gfoot">
       <button id="srcBtn" class="linkbtn" data-i18n-html="sourcesBtn">Bildquellen &amp; Hinweise</button>
       <a class="linkbtn" href="privacy.html" data-i18n="privacyLink">Datenschutz</a>
-      <div class="credit"><span class="byline" data-i18n="byline">von Masilano</span><span class="ver" data-i18n="version">Testversion 10.19</span></div>
+      <div class="credit"><span class="byline" data-i18n="byline">von Masilano</span><span class="ver" data-i18n="version">Testversion 10.20</span></div>
     </footer>
   </div>
 </section>
@@ -143,6 +143,7 @@
     <div class="orn" aria-hidden="true"></div>
   </header>
   <div id="facesEntryT" class="zf-entrywrap"></div>
+  <div id="lbEntryT" class="zf-entrywrap"></div>
   <div id="trophiesBody" class="albumscroll"></div>
 </section>
 
@@ -245,6 +246,19 @@
   </div>
   <div class="chscroll zf-hall"><div id="facesBody"></div></div>
 </section>
+
+<section id="rankings" class="screen flow">
+  <div class="topbar">
+    <button id="lbBack" class="iconbtn" data-i18n-aria="back" aria-label="Zurück">‹</button>
+    <div class="ttl"><div class="chT" id="lbTopTitle">Ranglisten</div></div>
+    <div class="iconspace"></div>
+  </div>
+  <div class="chscroll rl-hall"><div id="rankingsBody"></div></div>
+</section>
+
+<div id="lbJoin" class="sheet zf-sheet hidden" role="dialog" aria-modal="true" aria-labelledby="lbJoinTitle">
+  <div class="card" id="lbJoinCard"></div>
+</div>
 
 <div id="faceView" class="sheet zf-sheet hidden" role="dialog" aria-modal="true" aria-labelledby="zfTitle">
   <div class="card"></div>
@@ -531,6 +545,7 @@
 <script src="levels.js"></script>
 <script src="music.js"></script>
 <script src="zifferblaetter.js"></script>
+<script src="rankings.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
