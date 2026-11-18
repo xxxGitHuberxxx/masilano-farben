@@ -136,10 +136,10 @@
   "cover": "mgpergola",
   "intro": "Reise mit Marie Egner, der österreichischen Landschafts- und Blumenmalerin: von den ersten Studien in Tirol über die Donauauen und das Atelier in Wien bis an die Küsten Italiens und Dalmatiens und in die Gärten ihres langen Lebens. Kurze Stationen und Bilder zum Ausmalen. Dieser erste Teil folgt ihrem Licht.",
   "ending": [
-    "Marie Egner stirbt am 31. März 1940 in Wien, kurz nach ihrem neunzigsten Geburtstag. Fast sechzig Jahre lang hat sie draussen vor der Natur gemalt.",
+    "Marie Egner stirbt am 31. März 1940 in Maria Anzbach in Niederösterreich, im Alter von 89 Jahren. Fast sechzig Jahre lang hat sie draussen vor der Natur gemalt.",
     "Der Weg kann weiterwachsen. Weitere Gärten und Reisebilder können in einem späteren Teil folgen."
   ],
-  "epilogue": "Am 31. März 1940 stirbt Egner in Wien. Ein späterer Teil kann weitere Gärten nachtragen.",
+  "epilogue": "Am 31. März 1940 stirbt Egner in Maria Anzbach. Ein späterer Teil kann weitere Gärten nachtragen.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [
@@ -157,7 +157,7 @@
       },
       "mapLabel": "Nauders",
       "intro": [
-        "Marie Egner wird am 25. März 1850 in Radkersburg in der Steiermark geboren. Sie lernt in Graz und in Düsseldorf.",
+        "Marie Egner wird am 25. August 1850 in Radkersburg in der Steiermark geboren. Sie lernt in Graz und in Düsseldorf.",
         "In Tirol malt sie ihre ersten Bergdörfer."
       ],
       "works": [
@@ -326,7 +326,7 @@
       "mapLabel": "Gastein",
       "intro": [
         "Auch im Alter malt Egner im Freien, in den Bergen und im Gasteiner Tal.",
-        "Sie stirbt am 31. März 1940 in Wien."
+        "Sie stirbt am 31. März 1940 in Maria Anzbach in Niederösterreich."
       ],
       "works": [
         {

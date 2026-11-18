@@ -2,8 +2,8 @@
 (function () {
   var P = window.IT = window.IT || {};
   P.museums = Object.assign(P.museums || {}, {
-  "Privatsammlung": "Collezione privata",
-  "Belvedere, Wien": "Belvedere, Vienna"
+  "Belvedere, Wien": "Belvedere, Vienna",
+  "Privatsammlung": "Collezione privata"
 });
   P.works = Object.assign(P.works || {}, {
   "mgnauders": {
@@ -75,10 +75,10 @@
   "subtitle": "Da Nauders a Gastein",
   "intro": "Viaggia con Marie Egner, la pittrice austriaca di paesaggi e fiori: dai primi studi in Tirolo, attraverso le golene del Danubio e il suo studio a Vienna, fino alle coste d’Italia e di Dalmazia e ai giardini della sua lunga vita. Brevi tappe e quadri da colorare. Questa prima parte segue la sua luce.",
   "ending": [
-    "Marie Egner muore a Vienna il 31 marzo 1940, poco dopo il suo novantesimo compleanno. Per quasi sessant’anni ha dipinto all’aperto davanti alla natura.",
+    "Marie Egner muore a Maria Anzbach, in Bassa Austria, il 31 marzo 1940, all’età di 89 anni. Per quasi sessant’anni ha dipinto all’aperto davanti alla natura.",
     "Il percorso può ancora crescere. Altri giardini e quadri di viaggio potranno seguire in una parte successiva."
   ],
-  "epilogue": "Il 31 marzo 1940 Egner muore a Vienna. Una parte successiva potrà aggiungere altri giardini."
+  "epilogue": "Il 31 marzo 1940 Egner muore a Maria Anzbach. Una parte successiva potrà aggiungere altri giardini."
 };
   P.stations = Object.assign(P.stations || {}, {
   "mgjung": {
@@ -86,7 +86,7 @@
     "when": "1850–1881",
     "mapLabel": "Nauders",
     "intro": [
-      "Marie Egner nasce a Radkersburg, in Stiria, il 25 marzo 1850. Si forma a Graz e a Düsseldorf.",
+      "Marie Egner nasce a Radkersburg, in Stiria, il 25 agosto 1850. Si forma a Graz e a Düsseldorf.",
       "In Tirolo dipinge i suoi primi villaggi di montagna."
     ]
   },
@@ -123,7 +123,7 @@
     "mapLabel": "Gastein",
     "intro": [
       "Anche da anziana Egner dipinge all’aperto, in montagna e nella valle di Gastein.",
-      "Muore a Vienna il 31 marzo 1940."
+      "Muore a Maria Anzbach, in Bassa Austria, il 31 marzo 1940."
     ]
   }
 });

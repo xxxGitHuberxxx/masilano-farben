@@ -2,13 +2,13 @@
 (function () {
   var P = window.ES = window.ES || {};
   P.museums = Object.assign(P.museums || {}, {
+  "Musée Toulouse-Lautrec, Albi": "Musée Toulouse-Lautrec, Albi",
+  "Musée d’Orsay, Paris": "Musée d’Orsay, París",
   "MuMA, Le Havre": "MuMA, Le Havre",
   "Privatsammlung": "Colección particular",
-  "Musée Toulouse-Lautrec, Albi": "Musée Toulouse-Lautrec, Albi",
   "Kunsthaus Zürich": "Kunsthaus de Zúrich",
-  "Baltimore Museum of Art": "Baltimore Museum of Art",
   "Musée cantonal des Beaux-Arts, Lausanne": "Musée cantonal des Beaux-Arts, Lausana",
-  "Musée d’Orsay, Paris": "Musée d’Orsay, París"
+  "Baltimore Museum of Art": "Baltimore Museum of Art"
 });
   P.works = Object.assign(P.works || {}, {
   "fvmother": {
@@ -53,7 +53,7 @@
   },
   "fvself": {
     "title": "Autorretrato",
-    "museum": "Colección particular"
+    "museum": "Kunsthaus de Zúrich"
   }
 });
   P.paths = P.paths || {};
@@ -64,10 +64,10 @@
   "subtitle": "Los Nabis, los interiores y la luz de Normandía",
   "intro": "Viaja con Félix Vallotton, el pintor de Lausana que en París se suma a los Nabis: desde los retratos tempranos, pasando por los interiores nítidos y «El balón», hasta los paisajes de Honfleur. Estaciones breves y cuadros para colorear. Esta primera parte llega hasta los años tardíos.",
   "ending": [
-    "Vallotton muere en París el 29 de diciembre de 1925, un día después de su sesenta cumpleaños. Sigue unido por igual al cantón de Vaud y a Francia.",
+    "Vallotton muere en Neuilly-sur-Seine el 29 de diciembre de 1925, un día después de su sesenta cumpleaños. Sigue unido por igual al cantón de Vaud y a Francia.",
     "El camino puede seguir creciendo. Xilografías, más naturalezas muertas y los paisajes tardíos del sur pueden seguir en una parte posterior."
   ],
-  "epilogue": "El 29 de diciembre de 1925 Vallotton muere en París, a los sesenta años. Una parte posterior puede añadir xilografías y más naturalezas muertas."
+  "epilogue": "El 29 de diciembre de 1925 Vallotton muere en Neuilly-sur-Seine, a los sesenta años. Una parte posterior puede añadir xilografías y más naturalezas muertas."
 };
   P.stations = Object.assign(P.stations || {}, {
   "fvlausanne": {
@@ -104,15 +104,6 @@
     "intro": [
       "Ya en 1901 Vallotton pinta el puerto de Honfleur de noche. Desde 1909 tiene allí una casa; la costa normanda se vuelve su segundo estudio.",
       "Mañanas de verano, caminos al sol y puestas tardías: ordena la luz en franjas serenas y firmes."
-    ]
-  },
-  "fvlate": {
-    "place": "Años tardíos",
-    "when": "1914–1925",
-    "mapLabel": "París",
-    "intro": [
-      "En 1914 nace un autorretrato firme. En los años tardíos Vallotton se vuelve también hacia el bodegón, nítido y sin transiciones blandas.",
-      "Muere en París el 29 de diciembre de 1925. Una parte posterior puede añadir xilografías y más cuadros."
     ]
   }
 });
@@ -190,10 +181,10 @@
   },
   "fvself": {
     "text": [
-      "En 1914 Vallotton se mira con firmeza y sin adorno. El rostro está nítidamente recortado, el fondo es sereno.",
+      "En 1905 Vallotton se mira con firmeza y sin adorno. El rostro está nítidamente recortado, el fondo es sereno.",
       "Ya es ciudadano francés y un pintor conocido de la generación Nabi. El retrato sigue sobrio, casi austero."
     ],
-    "fact": "1914. Colección particular."
+    "fact": "1905. Kunsthaus de Zúrich."
   }
 };
   for (var k in add) if (Object.prototype.hasOwnProperty.call(add, k)) pt[k] = add[k];

@@ -2,8 +2,8 @@
 (function () {
   var EN = window.EN = window.EN || {};
   EN.museums = Object.assign(EN.museums || {}, {
-  "Privatsammlung": "Private collection",
-  "Belvedere, Wien": "Belvedere, Vienna"
+  "Belvedere, Wien": "Belvedere, Vienna",
+  "Privatsammlung": "Private collection"
 });
   EN.works = Object.assign(EN.works || {}, {
   "mgnauders": {
@@ -75,10 +75,10 @@
   "subtitle": "From Nauders to Gastein",
   "intro": "Travel with Marie Egner, the Austrian painter of landscapes and flowers: from her first studies in Tyrol, through the Danube meadows and her studio in Vienna, to the coasts of Italy and Dalmatia and the gardens of her long life. Short stations and pictures to colour. This first part follows her light.",
   "ending": [
-    "Marie Egner dies in Vienna on 31 March 1940, shortly after her ninetieth birthday. For almost sixty years she painted outdoors in front of nature.",
+    "Marie Egner dies in Maria Anzbach, Lower Austria, on 31 March 1940, at the age of 89. For almost sixty years she painted outdoors in front of nature.",
     "The path can grow further. More gardens and travel pictures may follow in a later part."
   ],
-  "epilogue": "On 31 March 1940 Egner dies in Vienna. A later part can add further gardens."
+  "epilogue": "On 31 March 1940 Egner dies in Maria Anzbach. A later part can add further gardens."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "mgjung": {
@@ -86,7 +86,7 @@
     "when": "1850–1881",
     "mapLabel": "Nauders",
     "intro": [
-      "Marie Egner is born in Radkersburg in Styria on 25 March 1850. She trains in Graz and in Düsseldorf.",
+      "Marie Egner is born in Radkersburg in Styria on 25 August 1850. She trains in Graz and in Düsseldorf.",
       "In Tyrol she paints her first mountain villages."
     ]
   },
@@ -123,7 +123,7 @@
     "mapLabel": "Gastein",
     "intro": [
       "In old age too Egner paints outdoors, in the mountains and the Gastein valley.",
-      "She dies in Vienna on 31 March 1940."
+      "She dies in Maria Anzbach, Lower Austria, on 31 March 1940."
     ]
   }
 });

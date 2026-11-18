@@ -8,7 +8,7 @@
     "id": "ggkinder",
     "title": "Spielende Kinder",
     "artist": "Giovanni Giacometti",
-    "year": "um 1905",
+    "year": "1912",
     "museum": "Kunsthaus Zürich",
     "source": "Wikimedia Commons: «Giovanni Giacometti - Spielende Kinder - 1884 - Kunsthaus Zürich.jpg», Public domain (gemeinfrei)"
   },
@@ -64,7 +64,7 @@
     "id": "ggherbst",
     "title": "Herbstsonne",
     "artist": "Giovanni Giacometti",
-    "year": "um 1913",
+    "year": "1908",
     "museum": "Kunsthaus Zürich",
     "source": "Wikimedia Commons: «Giovanni Giacometti - Herbstsonne. (Annetta mit Bruno, Ottilia und Kindern. Studie) - 2012-0034 - Kunsthaus Zürich.jpg», Public domain (gemeinfrei)"
   },
@@ -72,7 +72,7 @@
     "id": "ggsommer",
     "title": "Sommernachmittag",
     "artist": "Giovanni Giacometti",
-    "year": "um 1915",
+    "year": "1903",
     "museum": "Kunsthaus Zürich",
     "source": "Wikimedia Commons: «Giovanni Giacometti - Sommernachmittag - 1987-0024 - Kunsthaus Zürich.jpg», Public domain (gemeinfrei)"
   },
@@ -169,14 +169,6 @@
             "Giacometti ist noch jung, aber der Blick auf den Alltag im Tal ist schon fest. Die Farbe beginnt, sich von der bloss dunklen Tonmalerei zu lösen."
           ],
           "fact": "1891. Privatsammlung."
-        },
-        {
-          "pid": "ggkinder",
-          "text": [
-            "Kinder spielen im Freien, die Farben sind hell, die Bewegung locker. Giacometti beobachtet das Spiel, ohne es festzuhalten wie eine Pose.",
-            "Das Bild im Kunsthaus Zürich gehört zu den heiteren, familiären Motiven, die ihn sein Leben lang begleiten."
-          ],
-          "fact": "um 1905. Kunsthaus Zürich."
         }
       ]
     },
@@ -215,7 +207,7 @@
     {
       "id": "ggfam",
       "place": "Familie und Licht",
-      "when": "1909–1915",
+      "when": "1903–1915",
       "map": {
         "x": 170,
         "y": 88
@@ -226,6 +218,22 @@
         "Bildnisse, Lampenlicht, Herbstsonne und Blumenstücke: in diesen Jahren wird das Innere so wichtig wie die Berge."
       ],
       "works": [
+        {
+          "pid": "ggsommer",
+          "text": [
+            "Ein Sommernachmittag in lockerem Licht, die Farben warm und offen. Giacometti lässt die Szene atmen, ohne sie fest zu umreissen.",
+            "Das Bild im Kunsthaus Zürich zeigt seine reife, impressionistisch freie Hand, fest verwurzelt im Bündner Alltag."
+          ],
+          "fact": "1903. Kunsthaus Zürich."
+        },
+        {
+          "pid": "ggherbst",
+          "text": [
+            "Annetta sitzt mit Bruno, Ottilia und den Kindern in herbstlichem Licht. Die Studie hält die Familie fest, ohne sie festlich zu machen.",
+            "Giacometti hat 1900 Annetta Stampa geheiratet. Das Haus und die Kinder – Alberto, Diego, Ottilia, Bruno – gehören fortan zu seinem Werk."
+          ],
+          "fact": "1908. Kunsthaus Zürich."
+        },
         {
           "pid": "ggfiammetta",
           "text": [
@@ -243,28 +251,20 @@
           "fact": "1912. Kunsthaus Zürich."
         },
         {
+          "pid": "ggkinder",
+          "text": [
+            "Kinder spielen im Freien, die Farben sind hell, die Bewegung locker. Giacometti beobachtet das Spiel, ohne es festzuhalten wie eine Pose.",
+            "Das Bild im Kunsthaus Zürich gehört zu den heiteren, familiären Motiven, die ihn sein Leben lang begleiten."
+          ],
+          "fact": "1912. Kunsthaus Zürich."
+        },
+        {
           "pid": "gglaceombra",
           "text": [
             "Licht und Schatten teilen den Raum, die Farbe steht in klaren Gegensätzen. Das Bild von 1912 hängt im Bündner Kunstmuseum in Chur.",
             "Giacometti sucht hier nicht die Anekdote, sondern das Spiel der Helligkeit auf Flächen und Gestalten."
           ],
           "fact": "1912. Bündner Kunstmuseum, Chur."
-        },
-        {
-          "pid": "ggherbst",
-          "text": [
-            "Annetta sitzt mit Bruno, Ottilia und den Kindern in herbstlichem Licht. Die Studie hält die Familie fest, ohne sie festlich zu machen.",
-            "Giacometti hat 1900 Annetta Stampa geheiratet. Das Haus und die Kinder – Alberto, Diego, Ottilia, Bruno – gehören fortan zu seinem Werk."
-          ],
-          "fact": "um 1913. Kunsthaus Zürich."
-        },
-        {
-          "pid": "ggsommer",
-          "text": [
-            "Ein Sommernachmittag in lockerem Licht, die Farben warm und offen. Giacometti lässt die Szene atmen, ohne sie fest zu umreissen.",
-            "Das Bild im Kunsthaus Zürich zeigt seine reife, impressionistisch freie Hand, fest verwurzelt im Bündner Alltag."
-          ],
-          "fact": "um 1915. Kunsthaus Zürich."
         }
       ]
     },

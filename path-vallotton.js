@@ -88,8 +88,8 @@
     "id": "fvself",
     "title": "Selbstbildnis",
     "artist": "Félix Vallotton",
-    "year": "1914",
-    "museum": "Privatsammlung",
+    "year": "1905",
+    "museum": "Kunsthaus Zürich",
     "source": "Wikimedia Commons: «Felix Vallotton Selbstbildnis.jpg», Public domain (gemeinfrei)"
   }
 ];
@@ -104,10 +104,10 @@
   "cover": "ballon",
   "intro": "Reise mit Félix Vallotton, dem Lausanner, der in Paris zu den Nabis gehört: von den frühen Bildnissen über die klaren Interieurs und «Der Ball» bis zu den Landschaften von Honfleur. Kurze Stationen und Bilder zum Ausmalen. Dieser erste Teil reicht bis in die späten Jahre.",
   "ending": [
-    "Vallotton stirbt am 29. Dezember 1925 in Paris, einen Tag nach seinem sechzigsten Geburtstag. Er bleibt dem Waadtland und Frankreich gleichermassen verbunden.",
+    "Vallotton stirbt am 29. Dezember 1925 in Neuilly-sur-Seine, einen Tag nach seinem sechzigsten Geburtstag. Er bleibt dem Waadtland und Frankreich gleichermassen verbunden.",
     "Der Weg kann weiterwachsen. Holzschnitte, weitere Stillleben und die späten südlichen Landschaften können in einem späteren Teil folgen."
   ],
-  "epilogue": "Am 29. Dezember 1925 stirbt Vallotton in Paris, sechzig Jahre alt. Ein späterer Teil kann Holzschnitte und weitere Stillleben nachtragen.",
+  "epilogue": "Am 29. Dezember 1925 stirbt Vallotton in Neuilly-sur-Seine, sechzig Jahre alt. Ein späterer Teil kann Holzschnitte und weitere Stillleben nachtragen.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [
@@ -217,6 +217,14 @@
             "Das Bild im Kunsthaus Zürich gehört zu den stillen Interieurs, in denen Haltung und Farbe mehr sagen als eine Handlung."
           ],
           "fact": "1903. Kunsthaus Zürich."
+        },
+        {
+          "pid": "fvself",
+          "text": [
+            "Vallotton betrachtet sich 1905 fest und ohne Schmuck. Das Gesicht ist klar geschnitten, der Hintergrund ruhig.",
+            "Er ist inzwischen französischer Bürger und ein bekannter Maler der Nabis-Generation. Das Bildnis bleibt nüchtern, fast herb."
+          ],
+          "fact": "1905. Kunsthaus Zürich."
         }
       ]
     },
@@ -257,30 +265,6 @@
             "Das Bild im Kunsthaus Zürich gehört zu den späten Küstenlandschaften, in denen das Licht selbst zum Gegenstand wird."
           ],
           "fact": "um 1917. Kunsthaus Zürich."
-        }
-      ]
-    },
-    {
-      "id": "fvlate",
-      "place": "Späte Jahre",
-      "when": "1914–1925",
-      "map": {
-        "x": 86,
-        "y": 70
-      },
-      "mapLabel": "Paris",
-      "intro": [
-        "1914 entsteht ein festes Selbstbildnis. In den späten Jahren wendet sich Vallotton auch Stillleben zu, klar und ohne weiche Übergänge.",
-        "Er stirbt am 29. Dezember 1925 in Paris. Ein späterer Teil kann Holzschnitte und weitere Bilder nachtragen."
-      ],
-      "works": [
-        {
-          "pid": "fvself",
-          "text": [
-            "Vallotton betrachtet sich 1914 fest und ohne Schmuck. Das Gesicht ist klar geschnitten, der Hintergrund ruhig.",
-            "Er ist inzwischen französischer Bürger und ein bekannter Maler der Nabis-Generation. Das Bildnis bleibt nüchtern, fast herb."
-          ],
-          "fact": "1914. Privatsammlung."
         }
       ]
     }

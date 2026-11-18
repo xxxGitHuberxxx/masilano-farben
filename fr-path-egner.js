@@ -2,8 +2,8 @@
 (function () {
   var P = window.FR = window.FR || {};
   P.museums = Object.assign(P.museums || {}, {
-  "Privatsammlung": "Collection particulière",
-  "Belvedere, Wien": "Belvédère, Vienne"
+  "Belvedere, Wien": "Belvédère, Vienne",
+  "Privatsammlung": "Collection particulière"
 });
   P.works = Object.assign(P.works || {}, {
   "mgnauders": {
@@ -75,10 +75,10 @@
   "subtitle": "De Nauders à Gastein",
   "intro": "Voyage avec Marie Egner, peintre autrichienne de paysages et de fleurs : de ses premières études au Tyrol aux prairies du Danube et à son atelier de Vienne, jusqu’aux côtes d’Italie et de Dalmatie et aux jardins de sa longue vie. De courtes étapes et des tableaux à colorier. Cette première partie suit sa lumière.",
   "ending": [
-    "Marie Egner meurt à Vienne le 31 mars 1940, peu après son quatre-vingt-dixième anniversaire. Pendant près de soixante ans, elle a peint dehors, face à la nature.",
+    "Marie Egner meurt à Maria Anzbach, en Basse-Autriche, le 31 mars 1940, à l’âge de 89 ans. Pendant près de soixante ans, elle a peint dehors, face à la nature.",
     "Le chemin peut encore s’allonger. D’autres jardins et vues de voyage pourront suivre dans une partie ultérieure."
   ],
-  "epilogue": "Le 31 mars 1940, Egner meurt à Vienne. Une partie ultérieure pourra ajouter d’autres jardins."
+  "epilogue": "Le 31 mars 1940, Egner meurt à Maria Anzbach. Une partie ultérieure pourra ajouter d’autres jardins."
 };
   P.stations = Object.assign(P.stations || {}, {
   "mgjung": {
@@ -86,7 +86,7 @@
     "when": "1850–1881",
     "mapLabel": "Nauders",
     "intro": [
-      "Marie Egner naît à Radkersburg, en Styrie, le 25 mars 1850. Elle se forme à Graz et à Düsseldorf.",
+      "Marie Egner naît à Radkersburg, en Styrie, le 25 août 1850. Elle se forme à Graz et à Düsseldorf.",
       "Au Tyrol, elle peint ses premiers villages de montagne."
     ]
   },
@@ -123,7 +123,7 @@
     "mapLabel": "Gastein",
     "intro": [
       "Même âgée, Egner peint en plein air, en montagne et dans la vallée de Gastein.",
-      "Elle meurt à Vienne le 31 mars 1940."
+      "Elle meurt à Maria Anzbach, en Basse-Autriche, le 31 mars 1940."
     ]
   }
 });

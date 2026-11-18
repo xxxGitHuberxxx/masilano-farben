@@ -100,7 +100,7 @@
   },
   "ggfam": {
     "place": "Family and light",
-    "when": "1909–1915",
+    "when": "1903–1915",
     "mapLabel": "Family",
     "intro": [
       "In 1900 Giacometti marries Annetta Stampa. The children Alberto, Diego, Ottilia and Bruno grow up in a house where painting is done.",
@@ -132,7 +132,7 @@
       "Children play outdoors, the colours bright, the movement loose. Giacometti watches the game without fixing it as a pose.",
       "The picture in the Kunsthaus Zürich belongs to the cheerful, familiar subjects that stay with him all his life."
     ],
-    "fact": "c. 1905. Kunsthaus Zürich."
+    "fact": "1912. Kunsthaus Zürich."
   },
   "ggscheren": {
     "text": [
@@ -181,14 +181,14 @@
       "Annetta sits with Bruno, Ottilia and the children in autumnal light. The study records the family without making them ceremonial.",
       "In 1900 Giacometti married Annetta Stampa. The house and the children – Alberto, Diego, Ottilia, Bruno – belong from then on to his work."
     ],
-    "fact": "c. 1913. Kunsthaus Zürich."
+    "fact": "1908. Kunsthaus Zürich."
   },
   "ggsommer": {
     "text": [
       "A summer afternoon in loose light, the colours warm and open. Giacometti lets the scene breathe, without drawing it tight.",
       "The picture in the Kunsthaus Zürich shows his mature, freely Impressionist hand, firmly rooted in everyday Graubünden."
     ],
-    "fact": "c. 1915. Kunsthaus Zürich."
+    "fact": "1903. Kunsthaus Zürich."
   },
   "ggbrunnen": {
     "text": [

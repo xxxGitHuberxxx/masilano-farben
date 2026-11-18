@@ -2,10 +2,9 @@
 (function () {
   var EN = window.EN = window.EN || {};
   EN.museums = Object.assign(EN.museums || {}, {
-  "Neue Pinakothek, München": "Neue Pinakothek, Munich",
   "Nationalgalerie, Prag": "National Gallery, Prague",
-  "Galleria d’Arte Moderna, Mailand": "Galleria d’Arte Moderna, Milan",
-  "Privatsammlung": "Private collection"
+  "Privatsammlung": "Private collection",
+  "Neue Pinakothek, München": "Neue Pinakothek, Munich"
 });
   EN.works = Object.assign(EN.works || {}, {
   "sgself80": {
@@ -14,7 +13,7 @@
   },
   "sgbrianza": {
     "title": "Landscape in the Brianza",
-    "museum": "Private collection"
+    "museum": "Galleria Civica G. Segantini, Arco"
   },
   "avemaria": {
     "title": "Ave Maria Crossing the Lake",
@@ -26,7 +25,7 @@
   },
   "sgmadri": {
     "title": "The Two Mothers",
-    "museum": "Galleria d’Arte Moderna, Milan"
+    "museum": "Bündner Kunstmuseum, Chur"
   },
   "sgcalza": {
     "title": "Girl Knitting",
@@ -50,7 +49,7 @@
   },
   "sgmessa": {
     "title": "To the Last Mass",
-    "museum": "Private collection"
+    "museum": "Galleria Civica G. Segantini, Arco"
   },
   "sgcavalli": {
     "title": "Horses at the Ford",
@@ -134,7 +133,7 @@
       "Hills, paths and farmsteads of the Brianza in quiet light. It is one of the early landscapes in which Segantini looks closely at the Lombard countryside.",
       "The stroke is still softer, less broken than later in the mountains. The Brianza remains his school before the Alps."
     ],
-    "fact": "c. 1882. Private collection."
+    "fact": "1884–1885. Galleria Civica G. Segantini, Arco."
   },
   "avemaria": {
     "text": [
@@ -145,17 +144,17 @@
   },
   "sgstanga": {
     "text": [
-      "Cows stand at the tying-bar in the pasture as evening settles over the land. The large picture belongs to the first years in Savognin.",
+      "Cows stand at the tying-bar in the pasture as evening settles over the land. This version, in the National Gallery in Prague, belongs to the first years in Savognin.",
       "The animals are heavy and close, the sky already cool. Here Segantini finds the quiet grandeur that marks his Alpine paintings."
     ],
     "fact": "1886–1888. National Gallery, Prague."
   },
   "sgmadri": {
     "text": [
-      "A mother holds her child; beside them a cow stands with her calf. The picture sets human and animal care side by side, without pathos.",
-      "It was painted around 1889, still before the move to Maloja, and is one of Segantini’s most tender works."
+      "A mother carries her child on a mountain path; a sheep and a lamb follow her. Behind them the peaks lie in the light.",
+      "Segantini begins the picture in 1899 in Maloja; after his death Giovanni Giacometti completes it. It hangs in the Bündner Kunstmuseum in Chur."
     ],
-    "fact": "1889. Galleria d’Arte Moderna, Milan."
+    "fact": "1899–1900. Bündner Kunstmuseum, Chur."
   },
   "sgcalza": {
     "text": [
@@ -197,7 +196,7 @@
       "People walk to mass, in a quiet, almost solemn movement. The subject still belongs to the Lombard and early Graubünden years.",
       "Segantini joins the everyday life of the village to a silent devotion, without turning the picture into a scene."
     ],
-    "fact": "c. 1885. Private collection."
+    "fact": "1886–1887. Galleria Civica G. Segantini, Arco."
   },
   "sgcavalli": {
     "text": [

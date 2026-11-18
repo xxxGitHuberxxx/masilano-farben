@@ -3,8 +3,8 @@
   var P = window.FR = window.FR || {};
   P.museums = Object.assign(P.museums || {}, {
   "Privatsammlung": "Collection particulière",
-  "Kunsthaus Zürich": "Kunsthaus de Zurich",
-  "Bündner Kunstmuseum, Chur": "Bündner Kunstmuseum, Coire"
+  "Bündner Kunstmuseum, Chur": "Bündner Kunstmuseum, Coire",
+  "Kunsthaus Zürich": "Kunsthaus de Zurich"
 });
   P.works = Object.assign(P.works || {}, {
   "ggkinder": {
@@ -102,7 +102,7 @@
   },
   "ggfam": {
     "place": "Famille et lumière",
-    "when": "1909–1915",
+    "when": "1903–1915",
     "mapLabel": "Famille",
     "intro": [
       "En 1900, Giacometti épouse Annetta Stampa. Les enfants Alberto, Diego, Ottilia et Bruno grandissent dans une maison où l’on peint.",
@@ -135,7 +135,7 @@
       "Des enfants jouent en plein air, les couleurs sont claires, le mouvement est lâche. Giacometti observe le jeu sans le figer en pose.",
       "Le tableau du Kunsthaus de Zurich appartient aux motifs gais et familiers qui l’accompagnent toute sa vie."
     ],
-    "fact": "vers 1905. Kunsthaus de Zurich."
+    "fact": "1912. Kunsthaus de Zurich."
   },
   "ggscheren": {
     "text": [
@@ -184,14 +184,14 @@
       "Annetta est assise avec Bruno, Ottilia et les enfants dans une lumière d’automne. L’étude retient la famille sans la rendre solennelle.",
       "En 1900, Giacometti a épousé Annetta Stampa. La maison et les enfants – Alberto, Diego, Ottilia, Bruno – appartiennent dès lors à son œuvre."
     ],
-    "fact": "vers 1913. Kunsthaus de Zurich."
+    "fact": "1908. Kunsthaus de Zurich."
   },
   "ggsommer": {
     "text": [
       "Un après-midi d’été dans une lumière lâche, les couleurs chaudes et ouvertes. Giacometti laisse la scène respirer, sans la cerner trop ferme.",
       "Le tableau du Kunsthaus de Zurich montre sa main mûre, d’une liberté impressionniste, fermement enracinée dans le quotidien grison."
     ],
-    "fact": "vers 1915. Kunsthaus de Zurich."
+    "fact": "1903. Kunsthaus de Zurich."
   },
   "ggbrunnen": {
     "text": [

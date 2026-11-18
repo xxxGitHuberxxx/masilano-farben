@@ -2,13 +2,14 @@
 (function () {
   var P = window.IT = window.IT || {};
   P.museums = Object.assign(P.museums || {}, {
-  "Museo del Paesaggio, Novara": "Museo del Paesaggio, Novara",
-  "Neue Pinakothek, München": "Neue Pinakothek, Monaco",
-  "Segantini Museum, St. Moritz": "Museo Segantini, St. Moritz",
+  "Bündner Kunstmuseum, Chur": "Bündner Kunstmuseum, Coira",
   "Nationalgalerie, Prag": "Galleria nazionale, Praga",
-  "Galleria d’Arte Moderna, Mailand": "Galleria d’Arte Moderna, Milano",
   "Privatsammlung": "Collezione privata",
-  "Kunsthaus Zürich": "Kunsthaus di Zurigo"
+  "Museo del Paesaggio, Novara": "Museo del Paesaggio, Novara",
+  "Segantini Museum, St. Moritz": "Museo Segantini, St. Moritz",
+  "Kunsthaus Zürich": "Kunsthaus di Zurigo",
+  "Neue Pinakothek, München": "Neue Pinakothek, Monaco",
+  "Galleria Civica G. Segantini, Arco": "Galleria Civica G. Segantini, Arco"
 });
   P.works = Object.assign(P.works || {}, {
   "sgself80": {
@@ -17,7 +18,7 @@
   },
   "sgbrianza": {
     "title": "Paesaggio brianteo",
-    "museum": "Collezione privata"
+    "museum": "Galleria Civica G. Segantini, Arco"
   },
   "avemaria": {
     "title": "Ave Maria a trasbordo",
@@ -29,7 +30,7 @@
   },
   "sgmadri": {
     "title": "Le due madri",
-    "museum": "Galleria d’Arte Moderna, Milano"
+    "museum": "Bündner Kunstmuseum, Coira"
   },
   "sgcalza": {
     "title": "Ragazza che fa la calza",
@@ -53,7 +54,7 @@
   },
   "sgmessa": {
     "title": "A messa ultima",
-    "museum": "Collezione privata"
+    "museum": "Galleria Civica G. Segantini, Arco"
   },
   "sgcavalli": {
     "title": "Cavalli al guado",
@@ -138,7 +139,7 @@
       "Colline, sentieri e cascine della Brianza in una luce quieta. È uno dei paesaggi giovanili in cui Segantini osserva da vicino la campagna lombarda.",
       "Il tratto è ancora più morbido, meno spezzato che più tardi in montagna. La Brianza resta la sua scuola prima delle Alpi."
     ],
-    "fact": "circa 1882. Collezione privata."
+    "fact": "1884–1885. Galleria Civica G. Segantini, Arco."
   },
   "avemaria": {
     "text": [
@@ -149,17 +150,17 @@
   },
   "sgstanga": {
     "text": [
-      "Le mucche sono legate alla stanga nel pascolo, mentre la sera scende sul paese. Il grande quadro appartiene ai primi anni a Savognin.",
+      "Le mucche sono legate alla stanga nel pascolo, mentre la sera scende sul paese. Questa versione, alla Galleria nazionale di Praga, appartiene ai primi anni a Savognin.",
       "Gli animali sono pesanti e vicini, il cielo già fresco. Qui Segantini trova la quieta grandezza che contraddistingue i suoi dipinti alpini."
     ],
     "fact": "1886–1888. Galleria nazionale, Praga."
   },
   "sgmadri": {
     "text": [
-      "Una madre tiene in braccio il bambino; accanto, una mucca sta con il suo vitello. Il quadro mette accanto la cura umana e quella animale, senza pathos.",
-      "Nasce intorno al 1889, ancora prima del trasferimento a Maloja, ed è una delle opere più tenere di Segantini."
+      "Una madre porta il suo bambino su un sentiero di montagna; una pecora e un agnello la seguono. Dietro, le cime stanno nella luce.",
+      "Segantini inizia il quadro nel 1899 a Maloja; dopo la sua morte lo termina Giovanni Giacometti. È conservato al Bündner Kunstmuseum di Coira."
     ],
-    "fact": "1889. Galleria d’Arte Moderna, Milano."
+    "fact": "1899–1900. Bündner Kunstmuseum, Coira."
   },
   "sgcalza": {
     "text": [
@@ -201,7 +202,7 @@
       "La gente va a messa, in un movimento quieto, quasi solenne. Il soggetto appartiene ancora al tempo lombardo e ai primi anni grigionesi.",
       "Segantini unisce la vita quotidiana del villaggio a una devozione silenziosa, senza fare del quadro una scena."
     ],
-    "fact": "circa 1885. Collezione privata."
+    "fact": "1886–1887. Galleria Civica G. Segantini, Arco."
   },
   "sgcavalli": {
     "text": [

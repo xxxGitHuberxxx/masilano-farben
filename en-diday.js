@@ -81,7 +81,7 @@
     "when": "1802–1832",
     "mapLabel": "Geneva",
     "intro": [
-      "François Diday is born in Geneva on 10 February 1802. He studies with Wolfgang-Adam Töpffer, goes to Antoine-Jean Gros in Paris in 1824 and travels to Italy.",
+      "François Diday is born in Geneva on 12 February 1802. He studies with Wolfgang-Adam Töpffer, goes to Antoine-Jean Gros in Paris in 1821 and travels to Italy in 1824.",
       "Back in Switzerland he discovers the Bernese Oberland."
     ]
   },

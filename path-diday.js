@@ -149,7 +149,7 @@
       },
       "mapLabel": "Genf",
       "intro": [
-        "François Diday wird am 10. Februar 1802 in Genf geboren. Er lernt bei Wolfgang-Adam Töpffer, geht 1824 nach Paris zu Antoine-Jean Gros und reist nach Italien.",
+        "François Diday wird am 12. Februar 1802 in Genf geboren. Er lernt bei Wolfgang-Adam Töpffer, geht 1821 nach Paris zu Antoine-Jean Gros und reist 1824 nach Italien.",
         "Zurück in der Schweiz entdeckt er das Berner Oberland."
       ],
       "works": [

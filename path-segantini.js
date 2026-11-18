@@ -16,8 +16,8 @@
     "id": "sgbrianza",
     "title": "Landschaft in der Brianza",
     "artist": "Giovanni Segantini",
-    "year": "um 1882",
-    "museum": "Privatsammlung",
+    "year": "1884–1885",
+    "museum": "Galleria Civica G. Segantini, Arco",
     "source": "Wikimedia Commons: «Giovanni Segantini, Paesaggio Brianteo.jpg», CC0 (gemeinfrei)"
   },
   {
@@ -40,8 +40,8 @@
     "id": "sgmadri",
     "title": "Die zwei Mütter",
     "artist": "Giovanni Segantini",
-    "year": "1889",
-    "museum": "Galleria d’Arte Moderna, Mailand",
+    "year": "1899–1900",
+    "museum": "Bündner Kunstmuseum, Chur",
     "source": "Wikimedia Commons: «Segantini Le due Madri.jpg», Public domain (gemeinfrei)"
   },
   {
@@ -88,8 +88,8 @@
     "id": "sgmessa",
     "title": "Zur letzten Messe",
     "artist": "Giovanni Segantini",
-    "year": "um 1885",
-    "museum": "Privatsammlung",
+    "year": "1886–1887",
+    "museum": "Galleria Civica G. Segantini, Arco",
     "source": "Wikimedia Commons: «Giovanni Segantini, A messa ultima.jpg», CC0 (gemeinfrei)"
   },
   {
@@ -176,7 +176,7 @@
             "Hügel, Wege und Höfe der Brianza in ruhigem Licht. Es ist eine der frühen Landschaften, in denen Segantini die lombardische Gegend genau beobachtet.",
             "Noch ist der Strich weicher, weniger zerlegt als später in den Bergen. Die Brianza bleibt seine Schule vor den Alpen."
           ],
-          "fact": "um 1882. Privatsammlung."
+          "fact": "1884–1885. Galleria Civica G. Segantini, Arco."
         },
         {
           "pid": "sgcavalli",
@@ -200,7 +200,7 @@
             "Menschen gehen zur Messe, in ruhiger, fast feierlicher Bewegung. Das Motiv gehört noch in die lombardische und frühe Bündner Zeit.",
             "Segantini verbindet den Alltag des Dorfes mit einer stillen Andacht, ohne das Bild zur Szene zu machen."
           ],
-          "fact": "um 1885. Privatsammlung."
+          "fact": "1886–1887. Galleria Civica G. Segantini, Arco."
         }
       ]
     },
@@ -221,18 +221,10 @@
         {
           "pid": "sgstanga",
           "text": [
-            "Kühe stehen an der Stange auf der Weide, der Abend legt sich über das Land. Das grosse Bild entsteht in den ersten Savogniner Jahren.",
+            "Kühe stehen an der Stange auf der Weide, der Abend legt sich über das Land. Diese Fassung in der Prager Nationalgalerie entsteht in den ersten Savogniner Jahren.",
             "Die Tiere sind schwer und nah, der Himmel schon kühl. Segantini findet hier die ruhige Grösse, die seine Alpenbilder auszeichnet."
           ],
           "fact": "1886–1888. Nationalgalerie, Prag."
-        },
-        {
-          "pid": "sgmadri",
-          "text": [
-            "Eine Mutter hält ihr Kind, daneben steht die Kuh bei ihrem Kalb. Das Bild stellt menschliche und tierische Fürsorge nebeneinander, ohne Pathos.",
-            "Es entsteht um 1889, noch vor dem Umzug nach Maloja, und gehört zu Segantinis zärtlichsten Werken."
-          ],
-          "fact": "1889. Galleria d’Arte Moderna, Mailand."
         },
         {
           "pid": "sgcalza",
@@ -313,6 +305,14 @@
             "Segantini arbeitet in den letzten Lebensjahren daran. Das Bild bleibt das reifste Zeugnis seiner Alpenmalerei."
           ],
           "fact": "1897–1899. Segantini Museum, St. Moritz."
+        },
+        {
+          "pid": "sgmadri",
+          "text": [
+            "Eine Mutter trägt ihr Kind auf einem Bergweg, ein Schaf und ein Lamm folgen ihr. Dahinter liegen die Gipfel im Licht.",
+            "Segantini beginnt das Bild 1899 in Maloja; nach seinem Tod vollendet es Giovanni Giacometti. Es hängt im Bündner Kunstmuseum in Chur."
+          ],
+          "fact": "1899–1900. Bündner Kunstmuseum, Chur."
         }
       ]
     }

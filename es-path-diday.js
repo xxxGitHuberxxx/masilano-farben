@@ -2,10 +2,10 @@
 (function () {
   var P = window.ES = window.ES || {};
   P.museums = Object.assign(P.museums || {}, {
-  "Privatsammlung": "Colección particular",
-  "Musée des beaux-arts, La Chaux-de-Fonds": "Musée des beaux-arts, La Chaux-de-Fonds",
   "Royal Collection": "Royal Collection",
-  "Kunsthaus Zürich": "Kunsthaus de Zúrich"
+  "Kunsthaus Zürich": "Kunsthaus de Zúrich",
+  "Musée des beaux-arts, La Chaux-de-Fonds": "Musée des beaux-arts, La Chaux-de-Fonds",
+  "Privatsammlung": "Colección particular"
 });
   P.works = Object.assign(P.works || {}, {
   "fdnapoli": {
@@ -84,7 +84,7 @@
     "when": "1802–1832",
     "mapLabel": "Ginebra",
     "intro": [
-      "François Diday nace en Ginebra el 10 de febrero de 1802. Aprende con Wolfgang-Adam Töpffer, va a París con Antoine-Jean Gros en 1824 y viaja a Italia.",
+      "François Diday nace en Ginebra el 12 de febrero de 1802. Aprende con Wolfgang-Adam Töpffer, va a París con Antoine-Jean Gros en 1821 y viaja a Italia en 1824.",
       "De vuelta en Suiza descubre el Oberland bernés."
     ]
   },

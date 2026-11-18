@@ -47,7 +47,7 @@
   },
   "fvself": {
     "title": "Self-Portrait",
-    "museum": "Private collection"
+    "museum": "Kunsthaus Zürich"
   }
 });
   EN.paths = EN.paths || {};
@@ -58,10 +58,10 @@
   "subtitle": "The Nabis, the interiors and the light of Normandy",
   "intro": "Travel with Félix Vallotton, the painter from Lausanne who joined the Nabis in Paris: from the early portraits, through the clear interiors and “The Ball”, to the landscapes of Honfleur. Short stations and pictures to colour. This first part runs into the late years.",
   "ending": [
-    "Vallotton dies in Paris on 29 December 1925, the day after his sixtieth birthday. He remains attached to the canton of Vaud and to France alike.",
+    "Vallotton dies in Neuilly-sur-Seine on 29 December 1925, the day after his sixtieth birthday. He remains attached to the canton of Vaud and to France alike.",
     "The path can grow further. Woodcuts, further still lifes and the late southern landscapes may follow in a later part."
   ],
-  "epilogue": "On 29 December 1925 Vallotton dies in Paris, aged sixty. A later part can add woodcuts and further still lifes."
+  "epilogue": "On 29 December 1925 Vallotton dies in Neuilly-sur-Seine, aged sixty. A later part can add woodcuts and further still lifes."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "fvlausanne": {
@@ -98,15 +98,6 @@
     "intro": [
       "As early as 1901 Vallotton paints the port of Honfleur at night. From 1909 he has a house there; the Norman coast becomes his second studio.",
       "Summer mornings, sunlit paths and late sunsets: he orders the light in quiet, firm bands."
-    ]
-  },
-  "fvlate": {
-    "place": "Late years",
-    "when": "1914–1925",
-    "mapLabel": "Paris",
-    "intro": [
-      "In 1914 a firm self-portrait appears. In the late years Vallotton also turns to still life, clear and without soft transitions.",
-      "He dies in Paris on 29 December 1925. A later part can add woodcuts and further pictures."
     ]
   }
 });
@@ -183,10 +174,10 @@
   },
   "fvself": {
     "text": [
-      "In 1914 Vallotton looks at himself firmly and without ornament. The face is clearly cut, the background quiet.",
+      "In 1905 Vallotton looks at himself firmly and without ornament. The face is clearly cut, the background quiet.",
       "He is by now a French citizen and a well-known painter of the Nabi generation. The portrait stays sober, almost austere."
     ],
-    "fact": "1914. Private collection."
+    "fact": "1905. Kunsthaus Zürich."
   }
 });
 })();
