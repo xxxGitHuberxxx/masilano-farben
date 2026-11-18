@@ -77,11 +77,11 @@ const I = window.I18N;
 const t = (k, v) => I.t(k, v);
 const L = (obj, field) => I.loc(obj, field);
 
-window.__masilanoWorkCount = () => (ALL && ALL.length) || 1810;
+window.__masilanoWorkCount = () => (ALL && ALL.length) || 1878;
 function syncAppSubtitle(){
   const el = document.querySelector('[data-i18n="appSubtitle"]');
   if (!el) return;
-  const n = (typeof ALL !== 'undefined' && ALL && ALL.length) ? ALL.length : 1810;
+  const n = (typeof ALL !== 'undefined' && ALL && ALL.length) ? ALL.length : 1878;
   el.textContent = t('appSubtitle', { n: n });
 }
 function paintBtn(done, pct){ return done ? t('paintView') : (pct > 0 ? t('paintContinue') : t('paint')); }
