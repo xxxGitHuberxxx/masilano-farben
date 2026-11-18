@@ -908,7 +908,11 @@ async function openPainting(p, opts){
     ingestPathData();
     p = byId(p.id) || p;
   }
-  if (!opts || !opts.noRoute) navigate({ kind: 'paint', id: p.id });
+  if (!opts || !opts.noRoute) {
+    const from = (opts && opts.from) || currentFrom();
+    rememberFrom(from);
+    navigate({ kind: 'paint', id: p.id, from }, { replace: opts && opts.replace });
+  }
   showScreen('paint'); $('#pTitle').textContent = L(p,'title');
   ctx.clearRect(0, 0, cv.width, cv.height);
   const pz = await loadPuzzle(p);
@@ -1227,14 +1231,22 @@ function parseHash(){
   const parts = raw.split('/').filter(Boolean);
   const a = decodeURIComponent(parts[0] || '');
   const b = parts[1] ? decodeURIComponent(parts[1]) : '';
+  const c = parts[2] ? decodeURIComponent(parts[2]) : '';
+  const d = parts[3] ? decodeURIComponent(parts[3]) : '';
   if (TABS.includes(a)) {
     if (a === 'album' && b) return { kind: 'albumView', id: b };
     return { kind: 'tab', tab: a };
   }
   if (a === 'zifferblaetter' || a === 'faces') return { kind: 'faces' };
   if (a === 'rangliste' || a === 'rankings' || a === 'ranglisten') return { kind: 'rankings' };
-  if ((a === 'weg' || a === 'path') && b) return { kind: 'path', id: b };
-  if ((a === 'geschichte' || a === 'story') && b) return { kind: 'story', id: b };
+  if ((a === 'weg' || a === 'path') && b) {
+    if ((c === 'bild' || c === 'paint') && d) return { kind: 'paint', id: d, from: { kind: 'path', id: b } };
+    return { kind: 'path', id: b };
+  }
+  if ((a === 'geschichte' || a === 'story') && b) {
+    if ((c === 'bild' || c === 'paint') && d) return { kind: 'paint', id: d, from: { kind: 'story', id: b } };
+    return { kind: 'story', id: b };
+  }
   if ((a === 'bild' || a === 'paint') && b) return { kind: 'paint', id: b };
   return { kind: 'tab', tab: storedTab() };
 }
@@ -1245,14 +1257,52 @@ function hashFor(route){
   if (route.kind === 'faces') return '#zifferblaetter';
   if (route.kind === 'rankings') return '#rangliste';
   if (route.kind === 'story') return '#geschichte/' + route.id;
-  if (route.kind === 'paint') return '#bild/' + route.id;
+  if (route.kind === 'paint') {
+    const from = route.from;
+    if (from && from.kind === 'path' && from.id) return '#weg/' + from.id + '/bild/' + route.id;
+    if (from && from.kind === 'story' && from.id) return '#geschichte/' + from.id + '/bild/' + route.id;
+    return '#bild/' + route.id;
+  }
   if (route.kind === 'albumView') return '#album/' + route.id;
   return '#heute';
 }
+const FROM_KEY = 'masilano.from.v1';
+function currentFrom(){
+  if (pathCtx && pathCtx.path) return { kind: 'path', id: pathCtx.path.id };
+  if (storyCtx && storyCtx.story) return { kind: 'story', id: storyCtx.story.id };
+  return { kind: 'tab', tab: currentTab || 'heute' };
+}
+function rememberFrom(from){
+  try { if (from) sessionStorage.setItem(FROM_KEY, JSON.stringify(from)); } catch (e) {}
+}
+function storedFrom(){
+  try {
+    const s = JSON.parse(sessionStorage.getItem(FROM_KEY) || 'null');
+    if (s && s.kind) return s;
+  } catch (e) {}
+  return null;
+}
+function shouldReplaceLeaf(route){
+  const cur = parseHash();
+  if (cur.kind === 'paint' && (route.kind === 'paint' || route.kind === 'path' || route.kind === 'story')) return true;
+  if (cur.kind === 'path' && route.kind === 'path' && cur.id === route.id) return true;
+  if (cur.kind === 'story' && route.kind === 'story' && cur.id === route.id) return true;
+  return false;
+}
 function navigate(route, opts){
   const h = hashFor(route);
-  const replace = opts && opts.replace;
+  let replace = opts && opts.replace;
   if (routeSilent) return;
+  if (!replace && shouldReplaceLeaf(route)) replace = true;
+  if (!replace && (route.kind === 'path' || route.kind === 'story')) {
+    const cur = parseHash();
+    if (cur.kind === 'tab' && cur.tab !== 'wege') {
+      history.pushState({ masilano: 1 }, '', '#wege');
+    } else if (cur.kind !== 'tab' && cur.kind !== 'path' && cur.kind !== 'story' && cur.kind !== 'paint') {
+      const hNow = location.hash || '#';
+      if (hNow !== '#wege') history.pushState({ masilano: 1 }, '', '#wege');
+    }
+  }
   lastApplied = h;
   if ((location.hash || '#') !== h) {
     if (replace) history.replaceState({ masilano: 1 }, '', h);
@@ -1260,11 +1310,11 @@ function navigate(route, opts){
   }
 }
 function backOr(route){
-  if (history.state && history.state.masilano && !history.state.home) history.back();
-  else {
-    navigate(route || { kind: 'tab', tab: currentTab || 'heute' }, { replace: true });
-    applyRoute(route || { kind: 'tab', tab: currentTab || 'heute' });
-  }
+  const r = route || { kind: 'tab', tab: currentTab || 'heute' };
+  hideSheets();
+  if (r.kind === 'tab') { S = null; pathCtx = null; storyCtx = null; }
+  navigate(r, { replace: true });
+  applyRoute(r);
 }
 function applyRoute(route){
   hideSheets();
@@ -1287,6 +1337,24 @@ function applyRoute(route){
     return;
   }
   if (route.kind === 'paint') {
+    const from = route.from || storedFrom();
+    if (from && from.kind === 'path') {
+      const path = PATHS.find(x => x.id === from.id);
+      if (path) {
+        const step = pathSteps(path).find(s => s.pid === route.id);
+        pathCtx = step ? { path, step, pid: step.pid } : { path };
+        storyCtx = null;
+      }
+      rememberFrom(from);
+    } else if (from && from.kind === 'story') {
+      const st = STORIES.find(x => x.id === from.id);
+      if (st) {
+        const i = st.chapters.findIndex(c => c.pid === route.id);
+        storyCtx = i >= 0 ? { story: st, idx: i, pid: route.id } : { story: st };
+        pathCtx = null;
+      }
+      rememberFrom(from);
+    }
     const p = byId(route.id);
     if (p) openPainting(p, { noRoute: true });
     else showScreen('galerie');
@@ -1300,8 +1368,16 @@ function applyRoute(route){
   }
 }
 function bootRoute(){
-  const r = parseHash();
-  if (r.kind !== 'tab') {
+  let r = parseHash();
+  if (r.kind === 'paint' && !r.from) {
+    const inferred = storedFrom();
+    if (inferred && (inferred.kind === 'path' || inferred.kind === 'story')) r = Object.assign({}, r, { from: inferred });
+  }
+  if (r.kind === 'paint' && r.from && (r.from.kind === 'path' || r.from.kind === 'story')) {
+    history.replaceState({ masilano: 1, home: true }, '', '#wege');
+    history.pushState({ masilano: 1 }, '', hashFor(r.from));
+    history.pushState({ masilano: 1 }, '', hashFor(r));
+  } else if (r.kind !== 'tab') {
     const tab = r.kind === 'albumView' ? 'album' : (r.kind === 'paint' ? storedTab() : ((r.kind === 'faces' || r.kind === 'rankings') ? 'trophies' : 'wege'));
     history.replaceState({ masilano: 1, home: true }, '', '#' + tab);
     history.pushState({ masilano: 1 }, '', hashFor(r));
@@ -1453,7 +1529,10 @@ function renderStoryEntry(){
 let ctoastT = 0;
 function ctoast(msg){ const t = $('#ctoast'); t.textContent = msg; t.classList.add('show'); clearTimeout(ctoastT); ctoastT = setTimeout(() => t.classList.remove('show'), 1800); }
 function showChapters(st, opts){
-  if (!opts || !opts.noRoute) navigate({ kind: 'story', id: st.id });
+  if (!opts || !opts.noRoute) {
+    rememberFrom({ kind: 'story', id: st.id });
+    navigate({ kind: 'story', id: st.id }, { replace: opts && opts.replace });
+  }
   S = null; showScreen('chapters');
   const N = st.chapters.length, n = chDoneCount(st), seen = storyState(st).seen;
   $('#chHead').innerHTML = `<div class="cv" style="background-image:url(data/${st.cover}-orig.jpg)"></div>
@@ -1540,7 +1619,7 @@ $('#dNext').onclick = () => {
   if (i < st.chapters.length - 1) { showChapters(st); showChapter(st, i + 1); }
   else showChapters(st);
 };
-$('#dList').onclick = () => { hideSheets(); if (pathCtx && pathCtx.path) showPath(pathCtx.path, { noRoute: true }); else if (storyCtx && storyCtx.story) showChapters(storyCtx.story, { noRoute: true }); else { S = null; navigate({ kind: 'tab', tab: 'wege' }); showScreen('wege'); } };
+$('#dList').onclick = () => { hideSheets(); if (pathCtx && pathCtx.path) showPath(pathCtx.path, { replace: true }); else if (storyCtx && storyCtx.story) showChapters(storyCtx.story, { replace: true }); else { S = null; navigate({ kind: 'tab', tab: 'wege' }, { replace: true }); showScreen('wege'); } };
 $('#dLook').onclick = () => { $('#chDone').classList.add('hidden'); toast(t('hintAgain')); };
 $('#chBack').onclick = () => { const st = storyCtx && storyCtx.story; storyCtx = null; hideSheets(); if (swReload) { location.reload(); return; } backOr({ kind: 'tab', tab: 'wege' }); };
 
@@ -1558,10 +1637,16 @@ function pathWorkUnlocked(path, idx){ return idx === 0 || isDone(pathSteps(path)
 function stationDone(st){ return st.works.every(w => isDone(w.pid)); }
 function showPath(path, opts){
   if (path && I.ensurePathPack && !I.pathPackReady(path.id)) {
-    if (!opts || !opts.noRoute) navigate({ kind: 'path', id: path.id });
+    if (!opts || !opts.noRoute) {
+      rememberFrom({ kind: 'path', id: path.id });
+      navigate({ kind: 'path', id: path.id }, { replace: opts && opts.replace });
+    }
     return withPathPack(path, p => showPath(p, Object.assign({}, opts || {}, { noRoute: true })));
   }
-  if (!opts || !opts.noRoute) navigate({ kind: 'path', id: path.id });
+  if (!opts || !opts.noRoute) {
+    rememberFrom({ kind: 'path', id: path.id });
+    navigate({ kind: 'path', id: path.id }, { replace: opts && opts.replace });
+  }
   S = null; showScreen('path');
   markPathOpened(path);
   const steps = pathSteps(path), n = pathDoneCount(path), N = steps.length;
