@@ -1,6 +1,6 @@
 (function () {
   // Leave empty until the Worker is deployed. Empty = the section shows «Bald».
-  var API = '';
+  var API = 'https://masilano-rangliste.masilano.workers.dev';
   var CRED_KEY = 'masilano.lb.cred.v1';
   var START_PFX = 'masilano.lb.start.';
   var PAINTER_IDS = ['vangogh','monet','hokusai','klimt','anker','hodler','cezanne','hiroshige','renoir','pissarro','turner','rembrandt','sisley','friedrich'];
