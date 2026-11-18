@@ -73,7 +73,7 @@ h1{font-family:Georgia,"Times New Roman",serif;font-weight:normal;font-size:32px
 .chip.done{opacity:.55}
 .sheet{position:fixed;inset:0;background:rgba(30,25,20,.35);display:flex;align-items:flex-end;justify-content:center;z-index:10;transition:opacity .3s}
 .sheet.hidden{opacity:0;pointer-events:none}
-.sheet .card{background:#fffdf9;width:100%;max-width:560px;max-height:88vh;overflow-y:auto;border-radius:22px 22px 0 0;padding:22px 20px calc(env(safe-area-inset-bottom) + 18px);transform:translateY(0);transition:transform .4s cubic-bezier(.2,.9,.3,1)}
+.sheet .card{background:#fffdf9;color:#2b2722;width:100%;max-width:560px;max-height:88vh;overflow-y:auto;border-radius:22px 22px 0 0;padding:22px 20px calc(env(safe-area-inset-bottom) + 18px);transform:translateY(0);transition:transform .4s cubic-bezier(.2,.9,.3,1)}
 .sheet.hidden .card{transform:translateY(100%)}
 .done{color:#c79a4e;font-weight:700;font-size:14px;letter-spacing:.04em}
 .sheet h2{font-family:Georgia,serif;font-weight:normal;font-size:24px;margin:6px 0 2px}
@@ -2158,6 +2158,9 @@ body.calm .contcard .cv,body.calm .dailycard .cv{ --cv-w: 68px; }
 .zf-reward .btns{margin-top:6px}
 .zf-reward .btn.ghost{background:rgba(255,255,255,.08);color:#f6e4a8;box-shadow:inset 0 0 0 1px rgba(232,197,107,.45)}
 .pfin-body .zf-reward p{color:#e3d6bd}
+
+.zf-reward-soon{padding:20px 18px 18px}
+.zf-reward-soon .zf-rlead{margin-top:2px}
 
 /* face certificate in the trophies vitrine */
 .trophy[data-ach^="face:"] .trophy-img{-webkit-mask-image:none !important;mask-image:none !important}
