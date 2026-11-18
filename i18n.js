@@ -15,7 +15,7 @@
       searchClear: 'Suche löschen',
       sourcesBtn: 'Bildquellen & Hinweise',
       privacyLink: 'Datenschutz',
-      version: 'Testversion 10.27',
+      version: 'Testversion 10.28',
       byline: 'von Masilano',
       back: 'Zurück',
       backGallery: 'Zurück zur Galerie',
@@ -46,7 +46,7 @@
       tabGalerie: 'Galerie',
       tabAlbum: 'Album',
       tabTrophies: 'Trophäen',
-      tabFaces: 'Saal',
+      tabFaces: 'Ehre',
       tabRankings: 'Rangliste',
       filterPainter: 'Maler',
       filterPainterAria: 'Nach Maler filtern',
@@ -265,7 +265,7 @@
       searchClear: 'Clear search',
       sourcesBtn: 'Picture sources & notes',
       privacyLink: 'Privacy',
-      version: 'Test version 10.27',
+      version: 'Test version 10.28',
       byline: 'by Masilano',
       back: 'Back',
       backGallery: 'Back to the gallery',
@@ -296,7 +296,7 @@
       tabGalerie: 'Gallery',
       tabAlbum: 'Collection',
       tabTrophies: 'Trophies',
-      tabFaces: 'Hall',
+      tabFaces: 'Honour',
       tabRankings: 'Ranks',
       filterPainter: 'Painter',
       filterPainterAria: 'Filter by painter',
@@ -515,7 +515,7 @@
       searchClear: "Borrar búsqueda",
       sourcesBtn: "Fuentes e indicaciones",
       privacyLink: "Privacidad",
-      version: "Versión de prueba 10.27",
+      version: "Versión de prueba 10.28",
       byline: "de Masilano",
       back: "Atrás",
       backGallery: "Volver a la galería",
@@ -546,7 +546,7 @@
       tabGalerie: "Galería",
       tabAlbum: "Álbum",
       tabTrophies: "Trofeos",
-      tabFaces: "Salón",
+      tabFaces: "Honor",
       tabRankings: "Lista",
       filterPainter: "Pintor",
       filterPainterAria: "Filtrar por pintor",
@@ -765,7 +765,7 @@
       searchClear: "Effacer la recherche",
       sourcesBtn: "Sources et notes",
       privacyLink: "Confidentialité",
-      version: "Version d’essai 10.27",
+      version: "Version d’essai 10.28",
       byline: "par Masilano",
       back: "Retour",
       backGallery: "Retour à la galerie",
@@ -796,7 +796,7 @@
       tabGalerie: "Galerie",
       tabAlbum: "Album",
       tabTrophies: "Trophées",
-      tabFaces: "Salon",
+      tabFaces: "Honneur",
       tabRankings: "Rangs",
       filterPainter: "Peintre",
       filterPainterAria: "Filtrer par peintre",
@@ -1015,7 +1015,7 @@
       searchClear: "Cancella la ricerca",
       sourcesBtn: "Fonti e note",
       privacyLink: "Privacy",
-      version: "Versione di prova 10.27",
+      version: "Versione di prova 10.28",
       byline: "di Masilano",
       back: "Indietro",
       backGallery: "Torna alla galleria",
@@ -1046,7 +1046,7 @@
       tabGalerie: "Galleria",
       tabAlbum: "Album",
       tabTrophies: "Trofei",
-      tabFaces: "Sala",
+      tabFaces: "Onore",
       tabRankings: "Podio",
       filterPainter: "Pittore",
       filterPainterAria: "Filtra per pittore",
@@ -1513,11 +1513,22 @@
   }
 
 
-  function t(key, vars) {
+  function lookup(key) {
     const pack = dict[lang] || dict.de;
-    let s = (pack[key] != null ? pack[key] : (dict.de[key] != null ? dict.de[key] : key));
+    if (pack && pack[key] != null) return pack[key];
+    if (dict.de && dict.de[key] != null) return dict.de[key];
+    return null;
+  }
+
+  function t(key, vars) {
+    let s = lookup(key);
+    if (s == null) s = key;
     if (vars) s = s.replace(/\{(\w+)\}/g, function (_, k) { return vars[k] != null ? vars[k] : ''; });
     return s;
+  }
+
+  function hasKey(key) {
+    return lookup(key) != null;
   }
 
   function contentPack(which) {
@@ -1855,6 +1866,8 @@
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const k = el.getAttribute('data-i18n');
       if (!k) return;
+      const val = lookup(k);
+      if (val == null) return; // keep markup fallback; never paint a raw key
       if (k === 'appSubtitle') {
         let n = 1953;
         try {
@@ -1866,19 +1879,22 @@
         el.textContent = t(k, { n: n });
         return;
       }
-      el.textContent = t(k);
+      el.textContent = val;
     });
     document.querySelectorAll('[data-i18n-html]').forEach(el => {
       const k = el.getAttribute('data-i18n-html');
-      if (k) el.innerHTML = t(k);
+      const val = k && lookup(k);
+      if (val != null) el.innerHTML = val;
     });
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
       const k = el.getAttribute('data-i18n-placeholder');
-      if (k) el.setAttribute('placeholder', t(k));
+      const val = k && lookup(k);
+      if (val != null) el.setAttribute('placeholder', val);
     });
     document.querySelectorAll('[data-i18n-aria]').forEach(el => {
       const k = el.getAttribute('data-i18n-aria');
-      if (k) el.setAttribute('aria-label', t(k));
+      const val = k && lookup(k);
+      if (val != null) el.setAttribute('aria-label', val);
     });
     syncLangMenus();
     bindLangMenus();
@@ -2045,7 +2061,7 @@
     names: LANG_NAMES,
     get lang() { return lang; },
     t, loc, locStation, locPathWork, locChapter, sourceLine, citeEn, citeLoc, whenEn, whenLoc,
-    applyStatic, setLang, detect, dict, contentPack, closeLangMenus,
+    applyStatic, hasKey, lookup, setLang, detect, dict, contentPack, closeLangMenus,
     ensurePathTexts, pathTextsReady, PATHTEXT_FILES, ensurePathPack, pathPackReady, pathPackFiles, loadScriptOnce
   };
 

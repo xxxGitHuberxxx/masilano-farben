@@ -82,7 +82,7 @@
   const TX = {
     de: {
       room:'Saal der Vollendung', title:'Zifferblätter', motto:'Normal unbezahlbar, nur für Vollender',
-      lead:'Museums-Zifferblätter für Wear-OS-Uhren, jedes im eigenen Goldrahmen. Normal unbezahlbar. Wer den Lebensweg eines Malers vollendet, erhält dessen Zifferblatt mit einem persönlichen Code als Belohnung. Für die Apple Watch gibt es das Gemälde für das Zifferblatt «Fotos».',
+      lead:'Museums-Zifferblätter für Wear-OS-Uhren, jedes in seinem eigenen Goldrahmen. Normalerweise unbezahlbar: Wer den Lebensweg eines Malers vollendet, erhält dessen Zifferblatt als Belohnung, mit einem persönlichen Code. Für die Apple Watch gibt es das Gemälde für das Zifferblatt «Fotos».',
       entryK:'Exklusiv', entryS:'Fünfundzwanzig Meisterwerke am Handgelenk',
       earned:'Verliehen', claimed:'Angefordert', soon:'Bald', prog:'{n} von {N} Bildern',
       onPath:'Lohn für {path}', soonLong:'Der Lebensweg von {artist} ist in Vorbereitung. Bis dahin bleibt dieses Zifferblatt hinter Glas.',
@@ -100,7 +100,7 @@
     },
     en: {
       room:'Hall of Completion', title:'Watch Faces', motto:'Normally priceless, only for those who finish',
-      lead:'Museum watch faces for Wear OS watches, each in its own gilded frame. Normally priceless. Anyone who completes a painter\u2019s life path receives that painter\u2019s watch face, with a personal code, as a reward. Apple Watch owners receive the painting for the Photos face.',
+      lead:'Museum watch faces for Wear OS watches, each in its own gilded frame. Normally priceless: anyone who completes a painter\u2019s life path receives that painter\u2019s watch face as a reward, with a personal code. For the Apple Watch, the painting is provided for the Photos watch face.',
       entryK:'Exclusive', entryS:'Twenty-five masterpieces on your wrist',
       earned:'Awarded', claimed:'Requested', soon:'Soon', prog:'{n} of {N} pictures',
       onPath:'Reward for {path}', soonLong:'{artist}\u2019s life path is in preparation. Until then this watch face stays behind glass.',
@@ -118,7 +118,7 @@
     },
     fr: {
       room:'Salle de l\u2019accomplissement', title:'Cadrans', motto:'D\u2019ordinaire inestimables, réservés à qui va jusqu\u2019au bout',
-      lead:'Des cadrans de musée pour montres Wear OS, chacun dans son cadre doré. D\u2019ordinaire inestimables. Qui achève le parcours de vie d\u2019un peintre reçoit son cadran, avec un code personnel, en récompense. Sur Apple Watch, le tableau est offert pour le cadran « Photos ».',
+      lead:'Des cadrans de musée pour montres Wear OS, chacun dans son propre cadre doré. Normalement inestimables : qui achève le parcours de vie d\u2019un peintre reçoit son cadran en récompense, avec un code personnel. Pour l\u2019Apple Watch, le tableau est prévu pour le cadran « Photos ».',
       entryK:'Exclusif', entryS:'Vingt-cinq chefs-d\u2019œuvre au poignet',
       earned:'Décerné', claimed:'Demandé', soon:'Bientôt', prog:'{n} sur {N} tableaux',
       onPath:'Récompense de {path}', soonLong:'Le parcours de vie de {artist} est en préparation. D\u2019ici là, ce cadran reste sous vitrine.',
@@ -136,7 +136,7 @@
     },
     it: {
       room:'Sala del compimento', title:'Quadranti', motto:'Di norma impagabili, solo per chi arriva in fondo',
-      lead:'Quadranti da museo per orologi Wear OS, ciascuno nella sua cornice dorata. Di norma impagabili. Chi completa il percorso di vita di un pittore riceve il suo quadrante, con un codice personale, come premio. Su Apple Watch il dipinto è disponibile per il quadrante «Foto».',
+      lead:'Quadranti da museo per orologi Wear OS, ciascuno nella propria cornice dorata. Di norma impagabili: chi completa il percorso di vita di un pittore riceve il suo quadrante come premio, con un codice personale. Per l\u2019Apple Watch c\u2019è il dipinto per il quadrante «Foto».',
       entryK:'Esclusivo', entryS:'Venticinque capolavori al polso',
       earned:'Conferito', claimed:'Richiesto', soon:'Presto', prog:'{n} di {N} quadri',
       onPath:'Premio per {path}', soonLong:'Il percorso di vita di {artist} è in preparazione. Fino ad allora questo quadrante resta dietro il vetro.',
@@ -154,7 +154,7 @@
     },
     es: {
       room:'Sala de la culminación', title:'Esferas', motto:'Normalmente impagables, solo para quien llega al final',
-      lead:'Esferas de museo para relojes Wear OS, cada una en su marco dorado. Normalmente impagables. Quien completa el camino de vida de un pintor recibe su esfera, con un código personal, como recompensa. En Apple Watch, la pintura se ofrece para la esfera «Fotos».',
+      lead:'Esferas de museo para relojes Wear OS, cada una en su propio marco dorado. Normalmente impagables: quien completa el camino de vida de un pintor recibe su esfera como recompensa, con un código personal. Para el Apple Watch, la pintura se ofrece para la esfera «Fotos».',
       entryK:'Exclusivo', entryS:'Veinticinco obras maestras en la muñeca',
       earned:'Concedida', claimed:'Solicitada', soon:'Pronto', prog:'{n} de {N} cuadros',
       onPath:'Premio por {path}', soonLong:'El camino de vida de {artist} está en preparación. Hasta entonces, esta esfera permanece tras el cristal.',

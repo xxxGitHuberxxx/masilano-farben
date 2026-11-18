@@ -2387,3 +2387,8 @@ body.calm .contcard .cv,body.calm .dailycard .cv{ --cv-w: 68px; }
 @media (min-width: 700px){
   #gallery .galgrid{grid-template-columns:repeat(auto-fill, minmax(180px, 1fr));gap:18px}
 }
+
+
+/* v10.28: trophies header is title-only (no Ehrenvitrine kicker); keep flourish clearance, shrink the fixed block. */
+#trophies .albumhead{padding-top:20px;padding-bottom:2px}
+#trophies .albumhead h1{padding-top:8px;margin-top:0;margin-bottom:2px}

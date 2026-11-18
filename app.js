@@ -3278,10 +3278,14 @@ async function shareCertificate(path){
 let swReload = false;
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
   const hadCtrl = !!navigator.serviceWorker.controller;
-  navigator.serviceWorker.register('./sw.js', { scope: './' }).catch(e => console.warn('SW', e));
-  navigator.serviceWorker.addEventListener('controllerchange', () => {
+  navigator.serviceWorker.register('./sw.js?v=1028', { scope: './' }).catch(e => console.warn('SW', e));
+  function requestSwReload(){
     if (!hadCtrl) return;           // first install: nothing to reload
     if (S) swReload = true; else location.reload();
+  }
+  navigator.serviceWorker.addEventListener('controllerchange', requestSwReload);
+  navigator.serviceWorker.addEventListener('message', ev => {
+    if (ev && ev.data && ev.data.type === 'masilano-sw-updated') requestSwReload();
   });
 }
 function refreshLang(){

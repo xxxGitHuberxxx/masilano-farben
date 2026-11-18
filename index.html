@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#f6f3ee">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>Meisterwerke – Malen nach Zahlen</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=1028">
 <link rel="preload" href="fonts/GreatVibes.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="icons/icon-192.png" type="image/png">
 <link rel="manifest" href="manifest.webmanifest">
@@ -60,7 +60,7 @@
     <footer class="gfoot">
       <button id="srcBtn" class="linkbtn" data-i18n-html="sourcesBtn">Bildquellen &amp; Hinweise</button>
       <a class="linkbtn" href="privacy.html" data-i18n="privacyLink">Datenschutz</a>
-      <div class="credit"><span class="byline" data-i18n="byline">von Masilano</span><span class="ver" data-i18n="version">Testversion 10.27</span></div>
+      <div class="credit"><span class="byline" data-i18n="byline">von Masilano</span><span class="ver" data-i18n="version">Testversion 10.28</span></div>
     </footer>
   </div>
 </section>
@@ -138,7 +138,6 @@
 
 <section id="trophies" class="tab-screen">
   <header class="ghead albumhead">
-    <p class="roomlab" data-i18n="roomTrophies">Ehrenvitrine</p>
     <h1 data-i18n="trophiesTitle">Trophäen</h1>
     <div class="orn" aria-hidden="true"></div>
   </header>
@@ -181,7 +180,7 @@
     <span class="ticon ticon-faces" aria-hidden="true">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.2" fill="#e8f0fa" stroke="#152a5c" stroke-width="1.5"/><circle cx="12" cy="12" r="6.35" fill="none" stroke="#c79a4e" stroke-width="1.35"/><path d="M12 8.1v4.15l2.55 1.55" fill="none" stroke="#152a5c" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="1.05" fill="#c79a4e"/></svg>
     </span>
-    <span data-i18n="tabFaces">Saal</span>
+    <span data-i18n="tabFaces">Ehre</span>
   </button>
   <button type="button" class="tab" role="tab" data-tab="rankings" aria-selected="false" aria-controls="rankings" id="tab-rankings">
     <span class="ticon ticon-rankings" aria-hidden="true">
@@ -479,9 +478,9 @@
   </div>
 </div>
 
-<script src="paintings.js"></script>
-<script src="story.js"></script>
-<script src="path-index.js"></script>
+<script src="paintings.js?v=1028"></script>
+<script src="story.js?v=1028"></script>
+<script src="path-index.js?v=1028"></script>
 <script data-src="path-vangogh.js"></script>
 <script data-src="music-vangogh.js"></script>
 <script data-src="path-monet.js"></script>
@@ -573,11 +572,49 @@
 <script data-src="es-content.js"></script>
 <script data-src="fr-content.js"></script>
 <script data-src="it-content.js"></script>
-<script src="i18n.js"></script>
-<script src="levels.js"></script>
-<script src="music.js"></script>
-<script src="zifferblaetter.js"></script>
-<script src="rankings.js"></script>
-<script src="app.js"></script>
+<script src="i18n.js?v=1028"></script>
+<script src="levels.js?v=1028"></script>
+<script src="music.js?v=1028"></script>
+<script src="zifferblaetter.js?v=1028"></script>
+<script src="rankings.js?v=1028"></script>
+<script src="app.js?v=1028"></script>
+<script>
+/* v10.28: if a mixed cache leaves raw i18n keys in the UI, restore markup fallbacks. */
+(function(){
+  function scrub(){
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var k = el.getAttribute('data-i18n');
+      if (!k) return;
+      var txt = (el.textContent || '').replace(/\s+/g, '');
+      var raw = txt === k || (k && (txt === k.replace(/s$/, '') || k.indexOf(txt) === 0))
+                || /^[a-z]+[A-Z][A-Za-z0-9]+$/.test(txt);
+      if (raw) {
+        var fb = el.getAttribute('data-fb');
+        if (!fb) {
+          var html = el.getAttribute('data-i18n-fb') || '';
+          fb = html;
+        }
+        if (!fb) {
+          /* last resort: common tab labels from this page's markup language (de) */
+          var map = {tabFaces:'Ehre', tabRankings:'Rangliste', tabTrophies:'Trophäen',
+                     tabHeute:'Heute', tabWege:'Wege', tabGalerie:'Galerie', tabAlbum:'Album'};
+          fb = map[k] || '';
+        }
+        if (fb) el.textContent = fb;
+      }
+    });
+  }
+  function wrap(){
+    if (!window.I18N || typeof window.I18N.applyStatic !== 'function' || window.I18N.applyStatic.__keySafe) return;
+    var orig = window.I18N.applyStatic.bind(window.I18N);
+    window.I18N.applyStatic = function(){ orig(); scrub(); };
+    window.I18N.applyStatic.__keySafe = true;
+  }
+  window.__i18nKeySafe = scrub;
+  wrap();
+  scrub();
+  setTimeout(function(){ wrap(); scrub(); }, 0);
+})();
+</script>
 </body>
 </html>
