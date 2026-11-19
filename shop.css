@@ -1,0 +1,185 @@
+/* v10.29 print shop — navy room (matches Galerie/Saal). Text and fills are paired
+   so they cannot fall back to gold-on-cream if the sheet card is light. WCAG AA. */
+#shopSheet{z-index:80;background:rgba(7,13,29,.55)}
+#shopSheet.sheet .shop-card.card,
+#shopSheet .shop-card{
+  --shop-night:#101c38;
+  --shop-night-hi:#24365f;
+  --shop-night-lo:#070d1d;
+  --shop-ink:#f7f1e4;
+  --shop-ink-soft:#e8d7ae;
+  --shop-label:#e8c56b;
+  --shop-muted:#d4c4a0;
+  --shop-pill:#1a2744;
+  --shop-on:#e8d7ae;
+  --shop-on-ink:#152a5c;
+  --shop-line:#c79a4e;
+  --shop-off:#161d2c;
+  --shop-off-ink:#c5c0b4;
+  padding:18px 16px 28px;max-width:520px;margin:0 auto;
+  background:radial-gradient(ellipse at 50% 0,var(--shop-night-hi) 0%,var(--shop-night) 55%,var(--shop-night-lo) 100%);
+  color:var(--shop-ink);
+  box-shadow:inset 0 0 0 1px rgba(232,197,107,.45);
+}
+.shop-kicker{
+  font-family:"Great Vibes",Georgia,cursive;font-weight:400;font-size:26px;
+  color:var(--shop-label);text-align:center;margin:2px 0 0;letter-spacing:normal;text-transform:none;
+}
+#shopSheet.sheet h2,
+#shopSheet h2{
+  font-family:"Great Vibes",Georgia,cursive;font-weight:400;font-size:34px;line-height:1.2;
+  text-align:center;color:#f6e4a8;margin:0 0 8px;text-transform:none;letter-spacing:0;
+}
+.shop-work{text-align:center;margin:0 0 12px}
+.shop-work .t{font-size:15px;color:var(--shop-ink);font-weight:600}
+.shop-work .m{font-size:13px;color:var(--shop-ink-soft);margin-top:2px}
+.shop-orn{width:48px;height:10px;margin:4px auto 12px;background:
+  radial-gradient(circle at 50% 50%,#e8c56b 0 2px,transparent 2.5px);
+  opacity:.9}
+
+/* Wall mockup — light plaster, independent of the navy card */
+.shop-wall{
+  position:relative;border-radius:14px;overflow:hidden;margin:0 0 16px;
+  background:
+    linear-gradient(180deg,rgba(20,16,12,.08),rgba(20,16,12,.2)),
+    linear-gradient(90deg,#d8cbb6 0%,#efe6d4 45%,#d3c4aa 100%);
+  min-height:210px;display:flex;align-items:center;justify-content:center;
+  box-shadow:inset 0 0 0 1px rgba(80,50,20,.15);
+}
+.shop-wall::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.35;
+  background:repeating-linear-gradient(-18deg,transparent 0 7px,rgba(80,50,20,.04) 7px 8px);
+}
+.shop-hang{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;
+  width:62%;max-width:240px;filter:drop-shadow(0 10px 18px rgba(40,24,8,.35));
+  transform:translateY(4px)}
+.shop-wall[data-ori="land"] .shop-hang{width:74%;max-width:280px}
+.shop-frame{position:relative;width:100%;background:#1a1208;padding:0;box-sizing:border-box}
+.shop-frame img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:cover;background:#111}
+.shop-wall[data-product="poster"] .shop-frame{padding:4px;background:#f3efe6;box-shadow:0 1px 0 #fff8,0 8px 16px rgba(40,24,8,.25)}
+.shop-wall[data-product="fineart"] .shop-frame{padding:10px 10px 18px;background:#f7f3ea;box-shadow:0 8px 18px rgba(40,24,8,.28)}
+.shop-wall[data-product="canvas"] .shop-frame{padding:0;background:#2a2014;
+  box-shadow:6px 6px 0 #1a120c, 0 10px 20px rgba(40,24,8,.3)}
+.shop-wall[data-product="framed"][data-frame="natural"] .shop-frame{
+  padding:11px;background:linear-gradient(135deg,#e8d3a8,#c9a56a 40%,#e8d3a8 70%,#b08948);
+  box-shadow:0 10px 22px rgba(40,24,8,.35)}
+.shop-wall[data-product="framed"][data-frame="walnut"] .shop-frame{
+  padding:11px;background:linear-gradient(135deg,#5a3a22,#3a2416 45%,#6a4428);
+  box-shadow:0 10px 22px rgba(40,24,8,.35)}
+.shop-wall[data-product="framed"][data-frame="black"] .shop-frame{
+  padding:11px;background:linear-gradient(135deg,#2a2a2a,#111 50%,#333);
+  box-shadow:0 10px 22px rgba(40,24,8,.35)}
+.shop-wall[data-product="framed"][data-frame="gold"] .shop-frame,
+.shop-wall[data-product="framed"][data-frame="gold"] .shop-mat{padding:0;background:transparent}
+.shop-wall[data-product="framed"][data-frame="gold"] .shop-frame{padding:0;background:transparent}
+.shop-goldwrap{position:relative}
+.shop-wall[data-product="framed"][data-frame="gold"] .shop-mat{margin:11% 9%;box-shadow:none}
+.shop-frame.goldlike{padding:0;background:transparent}
+.shop-frame.goldlike .shop-mat{margin:11.2% 9.1% 11.5%}
+.shop-frame.goldlike::after{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+  background:url("img/frame-baroque-gold.webp") center/100% 100% no-repeat;
+}
+.shop-sec{margin:14px 0}
+.shop-sec .lbl{
+  font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--shop-label);margin:0 0 8px;font-weight:600;
+}
+.shop-pills{display:grid;gap:8px}
+#shopProducts.shop-pills,#shopTpl.shop-pills{grid-template-columns:1fr 1fr}
+#shopSizes.shop-pills,#shopFrames.shop-pills{grid-template-columns:1fr 1fr}
+
+/* Unselected: clearly available (lighter navy, cream type, gold hairline). */
+.shop-pill{
+  appearance:none;border:1px solid rgba(232,197,107,.55);background:var(--shop-pill);
+  color:var(--shop-ink);border-radius:10px;padding:10px 10px 8px;text-align:left;cursor:pointer;
+  font:inherit;line-height:1.3;
+}
+.shop-pill .n{display:block;font-weight:650;font-size:14px;color:var(--shop-ink)}
+.shop-pill .s{display:block;font-size:11px;color:var(--shop-ink-soft);margin-top:3px}
+.shop-pill .soon{display:block;font-size:10px;color:var(--shop-label);margin-top:3px;font-style:italic}
+
+/* Selected: gold fill + navy type + gold border. */
+.shop-pill.on{
+  border:2px solid var(--shop-line);
+  background:var(--shop-on);
+  color:var(--shop-on-ink);
+  box-shadow:inset 0 0 0 1px rgba(21,42,92,.12),0 1px 0 rgba(255,255,255,.25);
+  padding:9px 9px 7px;
+}
+.shop-pill.on .n{color:var(--shop-on-ink)}
+.shop-pill.on .s{color:#3a2a12}
+.shop-pill.on .soon{color:#5c3d0e}
+
+/* Real disabled only (bemaltes Bild). Not the same as unselected. */
+.shop-pill:disabled,
+.shop-pill.off,
+.shop-pill[aria-disabled="true"]{
+  background:var(--shop-off);
+  border:1px dashed rgba(197,192,180,.4);
+  color:var(--shop-off-ink);
+  opacity:1;
+  cursor:not-allowed;
+  box-shadow:none;
+  padding:10px 10px 8px;
+}
+.shop-pill:disabled .n,
+.shop-pill.off .n,
+.shop-pill[aria-disabled="true"] .n{color:var(--shop-off-ink);font-weight:600}
+.shop-pill:disabled .s,
+.shop-pill.off .s,
+.shop-pill[aria-disabled="true"] .s{color:#a8a396}
+.shop-pill:disabled .soon,
+.shop-pill.off .soon,
+.shop-pill[aria-disabled="true"] .soon{color:#c5b48a}
+
+.shop-note,.shop-fine,#shopSoonLead,#shopShip{font-size:12px;line-height:1.45;color:var(--shop-muted);margin:8px 2px 0}
+.shop-empty{font-size:14px;color:var(--shop-ink-soft);line-height:1.45;margin:0}
+.shop-price{text-align:center;margin:16px 0 10px}
+.shop-price .amt{font-size:28px;color:#f6e4a8;font-weight:650;letter-spacing:.02em}
+.shop-price .inc{font-size:13px;color:var(--shop-ink-soft);margin-top:2px}
+.shop-price .ex{font-size:11px;color:var(--shop-muted);margin-top:4px}
+
+#shopSheet #shopBuy[disabled],
+#shopSheet #shopBuy.btn[disabled],
+#shopSheet #shopBuy.goldcta[disabled]{
+  opacity:1;cursor:default;
+  background:#152a5c;
+  color:#f6e4a8;
+  box-shadow:inset 0 0 0 1.5px var(--shop-line);
+  background-image:none;
+}
+#shopSheet #shopBuy[disabled]::before,
+#shopSheet #shopBuy[disabled]::after{border-color:#f6e4a8}
+
+#shopSheet .btn.ghost{
+  background:rgba(255,255,255,.08);
+  color:#f6e4a8;
+  box-shadow:inset 0 0 0 1px rgba(232,197,107,.5);
+}
+#shopSheet #shopWish.on{
+  background:var(--shop-on);
+  color:var(--shop-on-ink);
+  box-shadow:inset 0 0 0 1.5px var(--shop-line);
+}
+
+/* Entry buttons live on light sheets (album/story) and on this navy card; goldish stays navy-on-gold. */
+.shop-entry,.btn.shop-entry{
+  width:100%;margin-top:8px;background:transparent;color:#152a5c;
+  border:1px solid #8a6a22;font-size:14px;
+}
+.btn.shop-entry.goldish,.shop-entry.goldish{
+  background:linear-gradient(180deg,#e8d48a,#c79a4e);color:#152a5c;border:0;font-weight:650;
+}
+.shop-mini{
+  display:block;width:100%;margin:6px 0 0;padding:4px 0 0;border:0;background:none;
+  color:#e8d48a;font:inherit;font-size:11px;letter-spacing:.04em;text-align:center;cursor:pointer;
+}
+.pcwrap{display:flex;flex-direction:column;min-width:0}
+.shop-close-row{display:flex;justify-content:center;margin-bottom:4px}
+
+@media (min-width:700px){
+  #shopSheet .shop-card{padding:24px 28px 36px}
+  .shop-hang{max-width:300px}
+  #shopSheet h2{font-size:42px}
+}

@@ -2392,3 +2392,18 @@ body.calm .contcard .cv,body.calm .dailycard .cv{ --cv-w: 68px; }
 /* v10.28: trophies header is title-only (no Ehrenvitrine kicker); keep flourish clearance, shrink the fixed block. */
 #trophies .albumhead{padding-top:20px;padding-bottom:2px}
 #trophies .albumhead h1{padding-top:8px;margin-top:0;margin-bottom:2px}
+
+
+/* v10.29 shop entry (light rules; full shop.css is lazy-loaded) */
+.shop-entry,.btn.shop-entry{
+  width:100%;margin-top:8px;background:transparent;color:#e8d7ae;
+  border:1px solid rgba(199,154,78,.55);font-size:14px;
+}
+.btn.shop-entry.goldish{
+  background:linear-gradient(180deg,#e8d48a,#c79a4e);color:#152a5c;border:0;font-weight:650;
+}
+.shop-mini{
+  display:block;width:100%;margin:4px 0 0;padding:2px 0 0;border:0;background:none;
+  color:#c79a4e;font:inherit;font-size:11px;letter-spacing:.04em;text-align:center;cursor:pointer;
+}
+#gallery .galgrid .pcwrap{min-width:0;width:100%;display:flex;flex-direction:column}

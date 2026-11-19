@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#f6f3ee">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>Meisterwerke – Malen nach Zahlen</title>
-<link rel="stylesheet" href="style.css?v=1028">
+<link rel="stylesheet" href="style.css?v=1029">
 <link rel="preload" href="fonts/GreatVibes.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="icons/icon-192.png" type="image/png">
 <link rel="manifest" href="manifest.webmanifest">
@@ -60,7 +60,7 @@
     <footer class="gfoot">
       <button id="srcBtn" class="linkbtn" data-i18n-html="sourcesBtn">Bildquellen &amp; Hinweise</button>
       <a class="linkbtn" href="privacy.html" data-i18n="privacyLink">Datenschutz</a>
-      <div class="credit"><span class="byline" data-i18n="byline">von Masilano</span><span class="ver" data-i18n="version">Testversion 10.28</span></div>
+      <div class="credit"><span class="byline" data-i18n="byline">von Masilano</span><span class="ver" data-i18n="version">Testversion 10.29</span></div>
     </footer>
   </div>
 </section>
@@ -273,6 +273,57 @@
   </div>
 </div>
 
+
+<div id="shopSheet" class="sheet shop-sheet hidden" role="dialog" aria-modal="true" aria-labelledby="shopHeadTitle">
+  <div class="card shop-card">
+    <p class="shop-kicker" id="shopKicker">An deine Wand</p>
+    <h2 id="shopHeadTitle">Dieses Bild an deine Wand</h2>
+    <div class="shop-orn" aria-hidden="true"></div>
+    <div class="shop-work">
+      <div class="t" id="shopWorkTitle"></div>
+      <div class="m" id="shopWorkMeta"></div>
+    </div>
+    <div class="shop-wall" id="shopMock" data-product="fineart" data-frame="none" data-ori="land">
+      <div class="shop-hang">
+        <div class="shop-frame" id="shopFrameBox">
+          <div class="shop-mat"><img id="shopPrevImg" alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div id="shopBody">
+      <div class="shop-sec">
+        <div class="lbl" id="shopLblTpl">Vorlage</div>
+        <div class="shop-pills" id="shopTpl"></div>
+        <p class="shop-note" id="shopTplNote"></p>
+      </div>
+      <div class="shop-sec">
+        <div class="lbl" id="shopLblProd">Produkt</div>
+        <div class="shop-pills" id="shopProducts"></div>
+      </div>
+      <div class="shop-sec">
+        <div class="lbl" id="shopLblSize">Format</div>
+        <div class="shop-pills" id="shopSizes"></div>
+      </div>
+      <div class="shop-sec" id="shopFrameSec" hidden>
+        <div class="lbl" id="shopLblFrame">Rahmen</div>
+        <div class="shop-pills" id="shopFrames"></div>
+      </div>
+    </div>
+    <div class="shop-price" id="shopPrice"></div>
+    <div class="btns">
+      <button type="button" id="shopBuy" class="btn goldcta" disabled aria-disabled="true">Bald erhältlich</button>
+    </div>
+    <p class="shop-fine" id="shopSoonLead">Bestellen wird möglich, sobald Druck und Zahlung eingerichtet sind. Zuerst liefern wir in die Schweiz. Niemand nimmt hier eine Zahlung entgegen.</p>
+    <div class="btns">
+      <button type="button" id="shopWish" class="btn ghost">Merken</button>
+    </div>
+    <p class="shop-fine" id="shopShip">Versand vorerst nur in die Schweiz.</p>
+    <div class="btns shop-close-row">
+      <button type="button" id="shopClose" class="btn ghost">Schliessen</button>
+    </div>
+  </div>
+</div>
+
 <div id="albumView" class="sheet aview hidden" role="dialog" aria-modal="true" aria-labelledby="avTitle">
   <div class="card">
     <div id="avImg" class="avimg"></div>
@@ -282,6 +333,9 @@
     <p id="avLangFallback" class="langfallback hidden" hidden></p>
     <div id="avFactWrap" class="hidden"><div class="lbl" data-i18n="didYouKnow">Wusstest du?</div><p id="avFact"></p><p id="avFactFallback" class="langfallback hidden" hidden></p></div>
     <div id="avMuseum" class="museum"></div>
+    <div class="btns">
+      <button type="button" id="avShop" class="btn shop-entry goldish" data-i18n="shopEntry">Dieses Bild an deine Wand</button>
+    </div>
     <div class="btns">
       <button type="button" id="avShare" class="btn sharebtn" data-i18n="share">Bild teilen</button>
       <button type="button" id="avClose" class="btn" data-i18n="close">Schliessen</button>
@@ -346,6 +400,9 @@
       <button type="button" id="cNarrate" class="btn ghost narrate-btn" data-speak="chapter" data-i18n="narrate" data-i18n-aria="narrateAria" aria-pressed="false">Vorlesen</button>
     </div>
     <div class="btns">
+      <button type="button" id="cShop" class="btn shop-entry goldish" data-i18n="shopEntry">Dieses Bild an deine Wand</button>
+    </div>
+    <div class="btns">
       <button id="cBack" class="btn ghost" data-i18n="back">Zurück</button>
       <button id="cGo" class="btn goldcta" data-i18n="paint">Bild malen</button>
     </div>
@@ -361,6 +418,9 @@
     <p id="dLangFallback" class="langfallback hidden" hidden></p>
     <div id="dEpiWrap" class="hidden"><div class="lbl" data-i18n="whatNext">Wie es weitergeht</div><p id="dEpi"></p></div>
     <div id="dMuseum" class="museum"></div>
+    <div class="btns">
+      <button type="button" id="dShop" class="btn shop-entry goldish" data-i18n="shopEntry">Dieses Bild an deine Wand</button>
+    </div>
     <div class="btns">
       <button id="dShare" class="btn sharebtn" data-i18n="share">Bild teilen</button>
       <button id="dNext" class="btn goldcta" data-i18n="next">Weiter</button>
@@ -412,6 +472,9 @@
     <div class="lbl" data-i18n="technique">Technik</div><p id="sTech"></p>
     <div class="lbl" data-i18n="didYouKnow">Wusstest du?</div><ul id="sFacts"></ul>
     <div id="sMuseum" class="museum"></div>
+    <div class="btns">
+      <button type="button" id="sShop" class="btn shop-entry goldish" data-i18n="shopEntry">Dieses Bild an deine Wand</button>
+    </div>
     <div class="btns">
       <button id="sShare" class="btn sharebtn" data-i18n="share">Bild teilen</button>
       <button id="sGallery" class="btn" data-i18n="toGallery">Zur Galerie</button>
@@ -478,9 +541,9 @@
   </div>
 </div>
 
-<script src="paintings.js?v=1028"></script>
-<script src="story.js?v=1028"></script>
-<script src="path-index.js?v=1028"></script>
+<script src="paintings.js?v=1029"></script>
+<script src="story.js?v=1029"></script>
+<script src="path-index.js?v=1029"></script>
 <script data-src="path-vangogh.js"></script>
 <script data-src="music-vangogh.js"></script>
 <script data-src="path-monet.js"></script>
@@ -572,12 +635,12 @@
 <script data-src="es-content.js"></script>
 <script data-src="fr-content.js"></script>
 <script data-src="it-content.js"></script>
-<script src="i18n.js?v=1028"></script>
-<script src="levels.js?v=1028"></script>
-<script src="music.js?v=1028"></script>
-<script src="zifferblaetter.js?v=1028"></script>
-<script src="rankings.js?v=1028"></script>
-<script src="app.js?v=1028"></script>
+<script src="i18n.js?v=1029"></script>
+<script src="levels.js?v=1029"></script>
+<script src="music.js?v=1029"></script>
+<script src="zifferblaetter.js?v=1029"></script>
+<script src="rankings.js?v=1029"></script>
+<script src="app.js?v=1029"></script>
 <script>
 /* v10.28: if a mixed cache leaves raw i18n keys in the UI, restore markup fallbacks. */
 (function(){

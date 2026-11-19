@@ -746,6 +746,18 @@ function galImHtml(p, s, extra){
   const bar = started && !done ? `<div class="imbar"><div style="width:${Math.max(2, pct)}%"></div></div>` : '';
   return `<div class="im ${cls}"><img src="data/${p.id}-thumb.jpg" alt="" loading="lazy" decoding="async" width="240" height="180">${extra || ''}${badge}${bar}</div>`;
 }
+function wrapGalShop(b, pid){
+  const wrap = document.createElement('div');
+  wrap.className = 'pcwrap';
+  wrap.appendChild(b);
+  const shop = document.createElement('button');
+  shop.type = 'button';
+  shop.className = 'shop-mini';
+  shop.textContent = t('shopEntryShort');
+  shop.addEventListener('click', ev => { ev.preventDefault(); ev.stopPropagation(); openShop(pid); });
+  wrap.appendChild(shop);
+  return wrap;
+}
 function paintGalCard(item){
   const p = item.p;
   const s = loadSave(p.id);
@@ -756,12 +768,14 @@ function paintGalCard(item){
       <div class="tx"><div class="plaque"><div class="t">${L(p,'title')}</div><div class="a">${L(p,'artist')}, ${p.year}</div></div>
       <div class="hint">${t('inStory', { name: item.st.name })}</div></div>`;
     b.onclick = () => openStoryHit(item.st, p);
+    return wrapGalShop(b, p.id);
   } else if (item.kind === 'path') {
     b.className = 'pc storyc';
     b.innerHTML = `${galImHtml(p, s, `<div class="tags"><span class="lv path">${t('pathTag')}</span></div>`)}
       <div class="tx"><div class="plaque"><div class="t">${L(p,'title')}</div><div class="a">${L(p,'artist')}, ${p.year}</div></div>
       <div class="hint">${t('inPath', { name: item.path.name })}</div></div>`;
     b.onclick = () => openPathHit(item.path, p);
+    return wrapGalShop(b, p.id);
   } else {
     const lv = levelOf(p);
     const onPath = !!pathOwning(p.id);
@@ -775,6 +789,7 @@ function paintGalCard(item){
       <div class="tx"><div class="plaque"><div class="t">${L(p,'title')}</div><div class="a">${L(p,'artist')}, ${p.year}</div></div>
       ${txBar}</div>`;
     b.onclick = () => openPainting(p);
+    return wrapGalShop(b, p.id);
   }
   return b;
 }
@@ -1248,6 +1263,7 @@ function parseHash(){
     return { kind: 'story', id: b };
   }
   if ((a === 'bild' || a === 'paint') && b) return { kind: 'paint', id: b };
+  if ((a === 'wand' || a === 'shop') && b) return { kind: 'shop', id: b };
   return { kind: 'tab', tab: storedTab() };
 }
 function hashFor(route){
@@ -1268,6 +1284,7 @@ function hashFor(route){
     return '#bild/' + route.id;
   }
   if (route.kind === 'albumView') return '#album/' + route.id;
+  if (route.kind === 'shop') return '#wand/' + route.id;
   return '#heute';
 }
 const FROM_KEY = 'masilano.from.v1';
@@ -1369,6 +1386,11 @@ function applyRoute(route){
   if (route.kind === 'albumView') {
     showScreen('album');
     showAlbumView(route.id, { noRoute: true });
+    return;
+  }
+  if (route.kind === 'shop') {
+    openShop(route.id, { noRoute: true });
+    return;
   }
 }
 function bootRoute(){
@@ -1474,7 +1496,7 @@ function goGallery(){
   if (storyCtx && storyCtx.story) { backOr({ kind: 'story', id: storyCtx.story.id }); return; }
   backOr({ kind: 'tab', tab: currentTab || 'heute' });
 }
-function hideSheets(){ if (window.MASILANO_MUSIC) window.MASILANO_MUSIC.stopSpeak(); ['#story', '#chapter', '#chDone', '#pathFin', '#installHow', '#settings', '#albumView', '#sources', '#filterSheet', '#catSheet', '#certView', '#faceView', '#achView', '#lbJoin'].forEach(q => $(q) && $(q).classList.add('hidden')); }
+function hideSheets(){ if (window.MASILANO_MUSIC) window.MASILANO_MUSIC.stopSpeak(); ['#story', '#chapter', '#chDone', '#pathFin', '#installHow', '#settings', '#albumView', '#sources', '#filterSheet', '#catSheet', '#certView', '#faceView', '#achView', '#lbJoin', '#shopSheet'].forEach(q => $(q) && $(q).classList.add('hidden')); }
 $('#backBtn').onclick = goGallery;
 let galT = 0;
 function onViewport(){ if (S) resize(); else { clearTimeout(galT); galT = setTimeout(() => { placeFilterPanel(); }, 120); } }
@@ -3273,12 +3295,92 @@ async function shareCertificate(path){
   }
 }
 
+
+// ---------- print shop (lazy) ----------
+let shopMod = null, shopLoading = null;
+function loadShop(){
+  if (shopMod) return Promise.resolve(shopMod);
+  if (shopLoading) return shopLoading;
+  shopLoading = new Promise((resolve, reject) => {
+    if (!document.querySelector('link[data-shop-css]')) {
+      const l = document.createElement('link');
+      l.rel = 'stylesheet';
+      l.href = 'shop.css?v=1029';
+      l.setAttribute('data-shop-css', '1');
+      document.head.appendChild(l);
+    }
+    const need = [];
+    if (!window.MASILANO_SHOP_CONFIG) need.push('shop-config.js?v=1029');
+    if (!window.MASILANO_SHOP_RES) need.push('shop-res.js?v=1029');
+    need.push('shop.js?v=1029');
+    let i = 0;
+    const next = () => {
+      if (i >= need.length) {
+        shopMod = window.MASILANO_SHOP;
+        if (shopMod && shopMod.init) shopMod.init(shopHost());
+        resolve(shopMod);
+        return;
+      }
+      const s = document.createElement('script');
+      s.src = need[i++];
+      s.onload = next;
+      s.onerror = reject;
+      document.body.appendChild(s);
+    };
+    next();
+  });
+  return shopLoading;
+}
+function shopHost(){
+  return {
+    byId, L, t, toast,
+    get lang(){ return I.lang; },
+    onOpen(pid){ if (!parseHash() || parseHash().kind !== 'shop') navigate({ kind: 'shop', id: pid }); },
+    onClose(){
+      const sh = document.getElementById('shopSheet');
+      if (sh) sh.classList.add('hidden');
+      if ((location.hash || '').indexOf('#wand/') === 0 || (location.hash || '').indexOf('#shop/') === 0) {
+        backOr({ kind: 'tab', tab: currentTab || 'galerie' });
+      }
+    }
+  };
+}
+function currentShopPid(){
+  if (albumViewId) return albumViewId;
+  if (S && S.p) return S.p.id;
+  if (pathCtx && pathCtx.pid) return pathCtx.pid;
+  if (storyCtx && storyCtx.pid) return storyCtx.pid;
+  return null;
+}
+function openShop(pid, opts){
+  const id = pid || currentShopPid();
+  if (!id) return;
+  loadShop().then(mod => {
+    if (!mod) return;
+    mod.open(id, opts);
+    if (!opts || !opts.noRoute) navigate({ kind: 'shop', id });
+  }).catch(e => console.warn('SHOP', e));
+}
+function bindShopEntries(){
+  [['#avShop', () => albumViewId],
+   ['#cShop', () => (pathCtx && pathCtx.pid) || (storyCtx && storyCtx.pid)],
+   ['#dShop', () => (pathCtx && pathCtx.pid) || (storyCtx && storyCtx.pid) || (S && S.p && S.p.id)],
+   ['#sShop', () => (S && S.p && S.p.id) || currentShopPid()]
+  ].forEach(([sel, pidFn]) => {
+    const b = $(sel);
+    if (!b || b.__shopBound) return;
+    b.__shopBound = true;
+    b.addEventListener('click', ev => { ev.preventDefault(); ev.stopPropagation(); openShop(pidFn()); });
+  });
+}
+bindShopEntries();
+
 // ---------- PWA: service worker ----------
 
 let swReload = false;
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
   const hadCtrl = !!navigator.serviceWorker.controller;
-  navigator.serviceWorker.register('./sw.js?v=1028', { scope: './' }).catch(e => console.warn('SW', e));
+  navigator.serviceWorker.register('./sw.js?v=1029', { scope: './' }).catch(e => console.warn('SW', e));
   function requestSwReload(){
     if (!hadCtrl) return;           // first install: nothing to reload
     if (S) swReload = true; else location.reload();
@@ -3318,6 +3420,7 @@ function refreshLang(){
   if ($('#album') && $('#album').classList.contains('active')) renderAlbum();
   if ($('#trophies') && $('#trophies').classList.contains('active')) renderTrophies();
   if (window.MASILANO_FACES) window.MASILANO_FACES.refresh();
+  if (window.MASILANO_SHOP) window.MASILANO_SHOP.refresh();
   if ($('#faceView') && !$('#faceView').classList.contains('hidden') && window.MASILANO_FACES) {
     const fv = $('#faceView .zf-big');
     if (fv && fv.dataset.face) window.MASILANO_FACES.openFace(fv.dataset.face);
