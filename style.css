@@ -2232,7 +2232,12 @@ body.calm .contcard .cv,body.calm .dailycard .cv{ --cv-w: 68px; }
 .rl-row:last-child{border-bottom:0}
 .rl-row.is-me{background:rgba(199,154,78,.18);border-radius:10px;box-shadow:inset 0 0 0 1px rgba(199,154,78,.45)}
 .rl-rank{font-family:Georgia,serif;font-weight:700;color:#8a6a22;font-size:18px;text-align:center}
-.rl-nick{display:block;font-weight:700;color:#152a5c;font-size:15px}
+.rl-who{min-width:0;overflow:hidden}
+.rl-nick{
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;
+  overflow:hidden;overflow-wrap:anywhere;word-break:break-word;
+  font-weight:700;color:#152a5c;font-size:15px;line-height:1.25;max-height:2.6em
+}
 .rl-nick em{font-style:normal;font-weight:600;color:#8a6a22;font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin-left:6px}
 .rl-land{display:block;font-size:12px;color:#5a4a28;font-style:italic}
 .rl-score{font-size:13px;color:#152a5c;font-weight:600;white-space:nowrap}
@@ -2407,3 +2412,80 @@ body.calm .contcard .cv,body.calm .dailycard .cv{ --cv-w: 68px; }
   color:#c79a4e;font:inherit;font-size:11px;letter-spacing:.04em;text-align:center;cursor:pointer;
 }
 #gallery .galgrid .pcwrap{min-width:0;width:100%;display:flex;flex-direction:column}
+
+/* v10.33 held: standalone first-start name welcome (full screen, before the game) */
+.lb-welcome{
+  position:fixed;inset:0;z-index:40;
+  display:flex;align-items:center;justify-content:center;
+  padding:calc(env(safe-area-inset-top,0px) + 20px) 22px calc(env(safe-area-inset-bottom,0px) + 20px);
+  background-color:var(--night,#101c34);
+  background-image:
+    radial-gradient(ellipse at 50% -12%,rgba(42,95,120,.55) 0%,transparent 58%),
+    radial-gradient(ellipse at 100% 0,rgba(199,154,78,.16) 0%,transparent 42%),
+    radial-gradient(ellipse at 0 80%,rgba(22,50,77,.8) 0%,transparent 50%),
+    linear-gradient(180deg,#0c162c 0%,#101c34 42%,#16324d 100%);
+  color:var(--text-on-night,#f0e6d4);
+  overflow:auto;
+  -webkit-overflow-scrolling:touch;
+}
+.lb-welcome.hidden{display:none}
+body.lb-welcome .apphead,
+body.lb-welcome .tabbar,
+body.lb-welcome .tab-screen,
+body.lb-welcome #onboard{visibility:hidden}
+.lbw-inner{width:100%;max-width:400px;margin:auto;text-align:center}
+.lbw-logo{display:block;margin:0 auto 10px;width:72px;height:72px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.35))}
+.lbw-wordmark{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:13px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--gold-hi,#f6e4a8);margin:0 0 18px;
+}
+.lbw-hello{
+  margin:0 0 14px;font-size:15px;line-height:1.4;letter-spacing:.04em;
+  color:var(--gold,#e8c56b);
+}
+.lbw-lead{
+  font-family:Georgia,"Times New Roman",serif;font-style:italic;
+  font-size:16px;line-height:1.45;margin:0 0 10px;color:var(--muted-on-night,#d2c4a8);
+}
+.lb-welcome h1{
+  font-family:Georgia,"Times New Roman",serif;font-weight:normal;
+  font-size:26px;line-height:1.28;margin:0 0 18px;color:var(--gold-hi,#f6e4a8);
+}
+.lb-welcome .rl-lab{color:var(--gold,#e8c56b);text-align:left;margin:0 0 8px}
+.lbw-namerow{display:flex;flex-direction:column;align-items:center;gap:12px;margin:0 0 16px;text-align:center}
+.lbw-name{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:26px;line-height:1.25;margin:0;min-height:1.3em;
+  color:var(--gold-hi,#f6e4a8);word-break:break-word;
+}
+.lbw-dice{
+  flex:none;min-width:148px;min-height:48px;border:0;border-radius:10px;cursor:pointer;
+  background:rgba(255,255,255,.08);color:var(--gold-hi,#f6e4a8);
+  box-shadow:inset 0 0 0 1px rgba(232,197,107,.65);
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:10px 18px;font-size:16px;font-weight:600;
+}
+.lbw-dice:focus-visible{outline:2.5px solid var(--gold,#e8c56b);outline-offset:2px}
+#lbJoinCard .lbw-namerow{align-items:flex-start;text-align:left}
+#lbJoinCard .lbw-name{font-size:22px}
+.lb-welcome .rl-hint{
+  margin:4px 0 6px;color:var(--gold-hi,#f6e4a8);font-size:14px;line-height:1.4;font-weight:500;
+}
+.lb-welcome .zf-fine{color:var(--muted-on-night,#d2c4a8);margin:0 0 8px;font-size:13px;line-height:1.45}
+.lbw-btns{display:flex;flex-direction:column;align-items:stretch;gap:10px;margin-top:16px}
+.lbw-btns .btn.goldcta{width:100%;max-width:none;flex:none;margin:0;font-size:17px;min-height:48px}
+.lbw-skip{
+  width:auto;max-width:none;margin:0 auto;flex:none;
+  font-size:13px;min-height:40px;padding:8px 14px;
+  background:transparent;color:var(--muted-on-night,#d2c4a8);
+  box-shadow:none;text-decoration:underline;text-underline-offset:3px;font-weight:500;
+}
+.lbw-skip:focus-visible{outline:2px solid var(--gold,#e8c56b);outline-offset:2px}
+@media (max-height:560px){
+  .lbw-logo{width:52px;height:52px;margin-bottom:4px}
+  .lbw-wordmark{margin-bottom:8px}
+  .lb-welcome h1{font-size:22px;margin-bottom:10px}
+  .lbw-lead{font-size:15px;margin-bottom:8px}
+  .lbw-btns{margin-top:10px}
+}

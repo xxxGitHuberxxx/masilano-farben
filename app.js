@@ -2520,7 +2520,8 @@ function lbHost(){
     get lang(){ return I.lang; },
     pathOwning, pathSteps, isDone, L, mtoast, revealSheet,
     closeSheet: () => closeTopSheet(),
-    showRankings: () => showRankings()
+    showRankings: () => showRankings(),
+    maybeStartOnboard
   };
 }
 function initRankings(){
@@ -2867,6 +2868,8 @@ function completeOnboard(){
   renderGallery();
 }
 function maybeStartOnboard(){
+  if (document.body.classList.contains('lb-welcome')) return false;
+  if (window.MASILANO_LB && window.MASILANO_LB.needsPrompt && window.MASILANO_LB.needsPrompt()) return false;
   if (onboardIsDone()) return false;
   if (hasAnyProgress()) { markOnboardDone(); return false; }
   showOnboard();
@@ -3305,14 +3308,14 @@ function loadShop(){
     if (!document.querySelector('link[data-shop-css]')) {
       const l = document.createElement('link');
       l.rel = 'stylesheet';
-      l.href = 'shop.css?v=1033';
+      l.href = 'shop.css?v=1034';
       l.setAttribute('data-shop-css', '1');
       document.head.appendChild(l);
     }
     const need = [];
-    if (!window.MASILANO_SHOP_CONFIG) need.push('shop-config.js?v=1033');
-    if (!window.MASILANO_SHOP_RES) need.push('shop-res.js?v=1033');
-    need.push('shop.js?v=1033');
+    if (!window.MASILANO_SHOP_CONFIG) need.push('shop-config.js?v=1034');
+    if (!window.MASILANO_SHOP_RES) need.push('shop-res.js?v=1034');
+    need.push('shop.js?v=1034');
     let i = 0;
     const next = () => {
       if (i >= need.length) {
@@ -3380,7 +3383,7 @@ bindShopEntries();
 let swReload = false;
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
   const hadCtrl = !!navigator.serviceWorker.controller;
-  navigator.serviceWorker.register('./sw.js?v=1033', { scope: './' }).catch(e => console.warn('SW', e));
+  navigator.serviceWorker.register('./sw.js?v=1034', { scope: './' }).catch(e => console.warn('SW', e));
   function requestSwReload(){
     if (!hadCtrl) return;           // first install: nothing to reload
     if (S) swReload = true; else location.reload();
@@ -3469,4 +3472,8 @@ function startUi(){
 }
 if (I.ensurePathTexts) I.ensurePathTexts().then(startUi, function (err) { console.error(err); startUi(); });
 else startUi();
+
+  pathSteps, showHall, showRankings, completeOnboard, maybeStartOnboard,
+  ensurePathPack: (id, code) => I.ensurePathPack(id, code).then(() => { ingestPathData(); return livePath(id); })
+};
 })();
