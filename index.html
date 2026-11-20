@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#f6f3ee">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>Meisterwerke – Malen nach Zahlen</title>
-<link rel="stylesheet" href="style.css?v=1034">
+<link rel="stylesheet" href="style.css?v=1035">
 <link rel="preload" href="fonts/GreatVibes.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" href="icons/icon-192.png" type="image/png">
 <link rel="manifest" href="manifest.webmanifest">
@@ -60,7 +60,7 @@
     <footer class="gfoot">
       <button id="srcBtn" class="linkbtn" data-i18n-html="sourcesBtn">Bildquellen &amp; Hinweise</button>
       <a class="linkbtn" href="privacy.html" data-i18n="privacyLink">Datenschutz</a>
-      <div class="credit"><span class="byline" data-i18n="byline">von Masilano</span><span class="ver" data-i18n="version">Testversion 10.33</span></div>
+      <div class="credit"><span class="byline" data-i18n="byline">von Masilano</span><span class="ver" data-i18n="version">Testversion 10.35</span></div>
     </footer>
   </div>
 </section>
@@ -128,8 +128,11 @@
 
 <section id="album" class="tab-screen">
   <header class="ghead albumhead">
-    <p class="roomlab" data-i18n="roomAlbum">Meine Galerie</p>
-    <h1 data-i18n="albumTitle">Sammelalbum</h1>
+    <div id="albumArtistBar" class="backrow hidden" hidden>
+      <button type="button" id="albumArtistBack" class="iconbtn" data-i18n-aria="back" aria-label="Zurück">‹</button>
+    </div>
+    <p class="roomlab" id="albumRoom" data-i18n="roomAlbum">Meine Galerie</p>
+    <h1 id="albumTitle" data-i18n="albumTitle">Sammelalbum</h1>
     <div class="orn" aria-hidden="true"></div>
   </header>
   <div id="albumBody" class="albumscroll"></div>
@@ -343,6 +346,10 @@
   </div>
 </div>
 
+<div id="titlePick" class="sheet zf-sheet hidden" role="dialog" aria-modal="true" aria-labelledby="tpTitle">
+  <div class="card"></div>
+</div>
+
 <div id="catSheet" class="sheet hidden" role="dialog" aria-modal="true" aria-labelledby="catSheetTitle">
   <div class="card">
     <h2 id="catSheetTitle" data-i18n="catAllTitle">Alle Kategorien</h2>
@@ -543,9 +550,9 @@
   </div>
 </div>
 
-<script src="paintings.js?v=1034"></script>
-<script src="story.js?v=1034"></script>
-<script src="path-index.js?v=1034"></script>
+<script src="paintings.js?v=1035"></script>
+<script src="story.js?v=1035"></script>
+<script src="path-index.js?v=1035"></script>
 <script data-src="path-vangogh.js"></script>
 <script data-src="music-vangogh.js"></script>
 <script data-src="path-monet.js"></script>
@@ -590,6 +597,34 @@
 <script data-src="path-schindler.js"></script>
 <script data-src="path-egner.js"></script>
 <script data-src="path-wisinger.js"></script>
+<script data-src="path-marc.js"></script>
+<script data-src="path-durer.js"></script>
+<script data-src="path-macke.js"></script>
+<script data-src="path-morisot.js"></script>
+<script data-src="path-velazquez.js"></script>
+<script data-src="path-degas.js"></script>
+<script data-src="path-manet.js"></script>
+<script data-src="path-munch.js"></script>
+<script data-src="path-delacroix.js"></script>
+<script data-src="path-goya.js"></script>
+<script data-src="path-seurat.js"></script>
+<script data-src="path-canaletto.js"></script>
+<script data-src="path-wood.js"></script>
+<script data-src="path-rousseau.js"></script>
+<script data-src="path-whistler.js"></script>
+<script data-src="path-vaneyck.js"></script>
+<script data-src="path-millet.js"></script>
+<script data-src="path-vermeer.js"></script>
+<script data-src="path-constable.js"></script>
+<script data-src="path-waterhouse.js"></script>
+<script data-src="path-leonardo.js"></script>
+<script data-src="path-cassatt.js"></script>
+<script data-src="path-gauguin.js"></script>
+<script data-src="path-klee.js"></script>
+<script data-src="path-mondrian.js"></script>
+<script data-src="path-bruegel.js"></script>
+<script data-src="path-raffael.js"></script>
+<script data-src="path-botticelli.js"></script>
 <script data-src="en-content.js"></script>
 <script data-src="en-path-index.js"></script>
 <script data-src="en-monet.js"></script>
@@ -634,16 +669,44 @@
 <script data-src="en-schindler.js"></script>
 <script data-src="en-egner.js"></script>
 <script data-src="en-wisinger.js"></script>
+<script data-src="en-marc.js"></script>
+<script data-src="en-durer.js"></script>
+<script data-src="en-macke.js"></script>
+<script data-src="en-morisot.js"></script>
+<script data-src="en-velazquez.js"></script>
+<script data-src="en-degas.js"></script>
+<script data-src="en-manet.js"></script>
+<script data-src="en-munch.js"></script>
+<script data-src="en-delacroix.js"></script>
+<script data-src="en-goya.js"></script>
+<script data-src="en-seurat.js"></script>
+<script data-src="en-canaletto.js"></script>
+<script data-src="en-wood.js"></script>
+<script data-src="en-rousseau.js"></script>
+<script data-src="en-whistler.js"></script>
+<script data-src="en-vaneyck.js"></script>
+<script data-src="en-millet.js"></script>
+<script data-src="en-vermeer.js"></script>
+<script data-src="en-constable.js"></script>
+<script data-src="en-waterhouse.js"></script>
+<script data-src="en-leonardo.js"></script>
+<script data-src="en-cassatt.js"></script>
+<script data-src="en-gauguin.js"></script>
+<script data-src="en-klee.js"></script>
+<script data-src="en-mondrian.js"></script>
+<script data-src="en-bruegel.js"></script>
+<script data-src="en-raffael.js"></script>
+<script data-src="en-botticelli.js"></script>
 <script data-src="es-content.js"></script>
 <script data-src="fr-content.js"></script>
 <script data-src="it-content.js"></script>
-<script src="i18n.js?v=1034"></script>
-<script src="levels.js?v=1034"></script>
-<script src="music.js?v=1034"></script>
-<script src="zifferblaetter.js?v=1034"></script>
-<script src="nameparts.js?v=1034"></script>
-<script src="rankings.js?v=1034"></script>
-<script src="app.js?v=1034"></script>
+<script src="i18n.js?v=1035"></script>
+<script src="levels.js?v=1035"></script>
+<script src="music.js?v=1035"></script>
+<script src="zifferblaetter.js?v=1035"></script>
+<script src="nameparts.js?v=1035"></script>
+<script src="rankings.js?v=1035"></script>
+<script src="app.js?v=1035"></script>
 <script>
 /* v10.28: if a mixed cache leaves raw i18n keys in the UI, restore markup fallbacks. */
 (function(){

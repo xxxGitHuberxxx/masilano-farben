@@ -15,7 +15,7 @@
       searchClear: 'Suche löschen',
       sourcesBtn: 'Bildquellen & Hinweise',
       privacyLink: 'Datenschutz',
-      version: 'Testversion 10.33',
+      version: 'Testversion 10.35',
       byline: 'von Masilano',
       back: 'Zurück',
       backGallery: 'Zurück zur Galerie',
@@ -244,6 +244,7 @@
       albumGroup: '{n}/{N}',
       albumEmpty: 'Dein Album ist noch leer. Jedes fertige Bild findet hier seinen Platz.',
       albumViewAria: 'Fertiges Bild: {title}',
+
       mileFirst: 'Dein erstes Bild ist fertig. Schön, dass du da bist.',
       mile10: 'Zehn Bilder. Du machst das in deinem Tempo.',
       mile50: 'Fünfzig Bilder in deinem Album.',
@@ -267,7 +268,7 @@
       searchClear: 'Clear search',
       sourcesBtn: 'Picture sources & notes',
       privacyLink: 'Privacy',
-      version: 'Test version 10.33',
+      version: 'Test version 10.35',
       byline: 'by Masilano',
       back: 'Back',
       backGallery: 'Back to the gallery',
@@ -496,6 +497,7 @@
       albumGroup: '{n}/{N}',
       albumEmpty: 'Your collection is still empty. Every finished picture will find its place here.',
       albumViewAria: 'Finished picture: {title}',
+
       mileFirst: 'Your first picture is finished. How lovely that you are here.',
       mile10: 'Ten pictures. You are doing this at your own pace.',
       mile50: 'Fifty pictures in your collection.',
@@ -519,7 +521,7 @@
       searchClear: "Borrar búsqueda",
       sourcesBtn: "Fuentes e indicaciones",
       privacyLink: "Privacidad",
-      version: "Versión de prueba 10.33",
+      version: "Versión de prueba 10.35",
       byline: "de Masilano",
       back: "Atrás",
       backGallery: "Volver a la galería",
@@ -755,6 +757,7 @@
       albumGroup: "{n}/{N}",
       albumEmpty: "Tu álbum aún está vacío. Cada cuadro terminado encontrará aquí su lugar.",
       albumViewAria: "Cuadro terminado: {title}",
+
       mileFirst: "Tu primer cuadro está terminado. Qué bien que estés aquí.",
       mile10: "Diez cuadros. Lo haces a tu ritmo.",
       mile50: "Cincuenta cuadros en tu álbum.",
@@ -771,7 +774,7 @@
       searchClear: "Effacer la recherche",
       sourcesBtn: "Sources et notes",
       privacyLink: "Confidentialité",
-      version: "Version d’essai 10.33",
+      version: "Version d’essai 10.35",
       byline: "par Masilano",
       back: "Retour",
       backGallery: "Retour à la galerie",
@@ -1007,6 +1010,7 @@
       albumGroup: "{n}/{N}",
       albumEmpty: "Ton album est encore vide. Chaque tableau terminé y trouvera sa place.",
       albumViewAria: "Tableau terminé : {title}",
+
       mileFirst: "Ton premier tableau est terminé. Quel plaisir que tu sois là.",
       mile10: "Dix tableaux. Tu fais cela à ton rythme.",
       mile50: "Cinquante tableaux dans ton album.",
@@ -1023,7 +1027,7 @@
       searchClear: "Cancella la ricerca",
       sourcesBtn: "Fonti e note",
       privacyLink: "Privacy",
-      version: "Versione di prova 10.33",
+      version: "Versione di prova 10.35",
       byline: "di Masilano",
       back: "Indietro",
       backGallery: "Torna alla galleria",
@@ -1259,6 +1263,7 @@
       albumGroup: "{n}/{N}",
       albumEmpty: "Il tuo album è ancora vuoto. Ogni quadro finito troverà qui il suo posto.",
       albumViewAria: "Quadro finito: {title}",
+
       mileFirst: "Il tuo primo quadro è finito. Che bello che tu sia qui.",
       mile10: "Dieci quadri. Lo fai al tuo ritmo.",
       mile50: "Cinquanta quadri nel tuo album.",
@@ -1325,9 +1330,9 @@
   let lang = detect();
 
   const PATHTEXT_FILES = {
-    es: ['es-content.js', 'es-path-index.js', 'es-path-vangogh.js', 'es-path-monet.js', 'es-path-hokusai.js', 'es-path-klimt.js', 'es-path-klimt-p2.js', 'es-path-anker.js', 'es-path-anker-p2.js', 'es-path-hodler.js', 'es-path-hodler-p2.js', 'es-path-cezanne.js', 'es-path-cezanne-p2.js', 'es-path-hiroshige.js', 'es-path-hiroshige-p2.js', 'es-path-renoir.js', 'es-path-renoir-p2.js', 'es-path-pissarro.js', 'es-path-pissarro-p2.js', 'es-path-turner.js', 'es-path-turner-p2.js', 'es-path-rembrandt.js', 'es-path-rembrandt-p2.js', 'es-path-sisley.js', 'es-path-sisley-p2.js', 'es-path-friedrich.js', 'es-path-friedrich-p2.js', 'es-path-segantini.js', 'es-path-vallotton.js', 'es-path-giacometti.js', 'es-path-spitzweg.js', 'es-path-moser.js', 'es-path-zuend.js', 'es-path-calame.js', 'es-path-wolf.js', 'es-path-ancher.js', 'es-path-blau.js', 'es-path-koller.js', 'es-path-diday.js', 'es-path-schindler.js', 'es-path-egner.js', 'es-path-wisinger.js'],
-    fr: ['fr-content.js', 'fr-path-index.js', 'fr-path-vangogh.js', 'fr-path-monet.js', 'fr-path-hokusai.js', 'fr-path-klimt.js', 'fr-path-klimt-p2.js', 'fr-path-anker.js', 'fr-path-anker-p2.js', 'fr-path-hodler.js', 'fr-path-hodler-p2.js', 'fr-path-cezanne.js', 'fr-path-cezanne-p2.js', 'fr-path-hiroshige.js', 'fr-path-hiroshige-p2.js', 'fr-path-renoir.js', 'fr-path-renoir-p2.js', 'fr-path-pissarro.js', 'fr-path-pissarro-p2.js', 'fr-path-turner.js', 'fr-path-turner-p2.js', 'fr-path-rembrandt.js', 'fr-path-rembrandt-p2.js', 'fr-path-sisley.js', 'fr-path-sisley-p2.js', 'fr-path-friedrich.js', 'fr-path-friedrich-p2.js', 'fr-path-segantini.js', 'fr-path-vallotton.js', 'fr-path-giacometti.js', 'fr-path-spitzweg.js', 'fr-path-moser.js', 'fr-path-zuend.js', 'fr-path-calame.js', 'fr-path-wolf.js', 'fr-path-ancher.js', 'fr-path-blau.js', 'fr-path-koller.js', 'fr-path-diday.js', 'fr-path-schindler.js', 'fr-path-egner.js', 'fr-path-wisinger.js'],
-    it: ['it-content.js', 'it-path-index.js', 'it-path-vangogh.js', 'it-path-monet.js', 'it-path-hokusai.js', 'it-path-klimt.js', 'it-path-klimt-p2.js', 'it-path-anker.js', 'it-path-anker-p2.js', 'it-path-hodler.js', 'it-path-hodler-p2.js', 'it-path-cezanne.js', 'it-path-cezanne-p2.js', 'it-path-hiroshige.js', 'it-path-hiroshige-p2.js', 'it-path-renoir.js', 'it-path-renoir-p2.js', 'it-path-pissarro.js', 'it-path-pissarro-p2.js', 'it-path-turner.js', 'it-path-turner-p2.js', 'it-path-rembrandt.js', 'it-path-rembrandt-p2.js', 'it-path-sisley.js', 'it-path-sisley-p2.js', 'it-path-friedrich.js', 'it-path-friedrich-p2.js', 'it-path-segantini.js', 'it-path-vallotton.js', 'it-path-giacometti.js', 'it-path-spitzweg.js', 'it-path-moser.js', 'it-path-zuend.js', 'it-path-calame.js', 'it-path-wolf.js', 'it-path-ancher.js', 'it-path-blau.js', 'it-path-koller.js', 'it-path-diday.js', 'it-path-schindler.js', 'it-path-egner.js', 'it-path-wisinger.js']
+    es: ['es-content.js', 'es-path-index.js', 'es-path-vangogh.js', 'es-path-monet.js', 'es-path-hokusai.js', 'es-path-klimt.js', 'es-path-klimt-p2.js', 'es-path-anker.js', 'es-path-anker-p2.js', 'es-path-hodler.js', 'es-path-hodler-p2.js', 'es-path-cezanne.js', 'es-path-cezanne-p2.js', 'es-path-hiroshige.js', 'es-path-hiroshige-p2.js', 'es-path-renoir.js', 'es-path-renoir-p2.js', 'es-path-pissarro.js', 'es-path-pissarro-p2.js', 'es-path-turner.js', 'es-path-turner-p2.js', 'es-path-rembrandt.js', 'es-path-rembrandt-p2.js', 'es-path-sisley.js', 'es-path-sisley-p2.js', 'es-path-friedrich.js', 'es-path-friedrich-p2.js', 'es-path-segantini.js', 'es-path-vallotton.js', 'es-path-giacometti.js', 'es-path-spitzweg.js', 'es-path-moser.js', 'es-path-zuend.js', 'es-path-calame.js', 'es-path-wolf.js', 'es-path-ancher.js', 'es-path-blau.js', 'es-path-koller.js', 'es-path-diday.js', 'es-path-schindler.js', 'es-path-egner.js', 'es-path-wisinger.js', 'es-path-marc.js', 'es-path-durer.js', 'es-path-macke.js', 'es-path-morisot.js', 'es-path-velazquez.js', 'es-path-degas.js', 'es-path-manet.js', 'es-path-munch.js', 'es-path-delacroix.js', 'es-path-goya.js', 'es-path-seurat.js', 'es-path-canaletto.js', 'es-path-wood.js', 'es-path-rousseau.js', 'es-path-whistler.js', 'es-path-vaneyck.js', 'es-path-millet.js', 'es-path-vermeer.js', 'es-path-constable.js', 'es-path-waterhouse.js', 'es-path-leonardo.js', 'es-path-cassatt.js', 'es-path-gauguin.js', 'es-path-klee.js', 'es-path-mondrian.js', 'es-path-bruegel.js', 'es-path-raffael.js', 'es-path-botticelli.js'],
+    fr: ['fr-content.js', 'fr-path-index.js', 'fr-path-vangogh.js', 'fr-path-monet.js', 'fr-path-hokusai.js', 'fr-path-klimt.js', 'fr-path-klimt-p2.js', 'fr-path-anker.js', 'fr-path-anker-p2.js', 'fr-path-hodler.js', 'fr-path-hodler-p2.js', 'fr-path-cezanne.js', 'fr-path-cezanne-p2.js', 'fr-path-hiroshige.js', 'fr-path-hiroshige-p2.js', 'fr-path-renoir.js', 'fr-path-renoir-p2.js', 'fr-path-pissarro.js', 'fr-path-pissarro-p2.js', 'fr-path-turner.js', 'fr-path-turner-p2.js', 'fr-path-rembrandt.js', 'fr-path-rembrandt-p2.js', 'fr-path-sisley.js', 'fr-path-sisley-p2.js', 'fr-path-friedrich.js', 'fr-path-friedrich-p2.js', 'fr-path-segantini.js', 'fr-path-vallotton.js', 'fr-path-giacometti.js', 'fr-path-spitzweg.js', 'fr-path-moser.js', 'fr-path-zuend.js', 'fr-path-calame.js', 'fr-path-wolf.js', 'fr-path-ancher.js', 'fr-path-blau.js', 'fr-path-koller.js', 'fr-path-diday.js', 'fr-path-schindler.js', 'fr-path-egner.js', 'fr-path-wisinger.js', 'fr-path-marc.js', 'fr-path-durer.js', 'fr-path-macke.js', 'fr-path-morisot.js', 'fr-path-velazquez.js', 'fr-path-degas.js', 'fr-path-manet.js', 'fr-path-munch.js', 'fr-path-delacroix.js', 'fr-path-goya.js', 'fr-path-seurat.js', 'fr-path-canaletto.js', 'fr-path-wood.js', 'fr-path-rousseau.js', 'fr-path-whistler.js', 'fr-path-vaneyck.js', 'fr-path-millet.js', 'fr-path-vermeer.js', 'fr-path-constable.js', 'fr-path-waterhouse.js', 'fr-path-leonardo.js', 'fr-path-cassatt.js', 'fr-path-gauguin.js', 'fr-path-klee.js', 'fr-path-mondrian.js', 'fr-path-bruegel.js', 'fr-path-raffael.js', 'fr-path-botticelli.js'],
+    it: ['it-content.js', 'it-path-index.js', 'it-path-vangogh.js', 'it-path-monet.js', 'it-path-hokusai.js', 'it-path-klimt.js', 'it-path-klimt-p2.js', 'it-path-anker.js', 'it-path-anker-p2.js', 'it-path-hodler.js', 'it-path-hodler-p2.js', 'it-path-cezanne.js', 'it-path-cezanne-p2.js', 'it-path-hiroshige.js', 'it-path-hiroshige-p2.js', 'it-path-renoir.js', 'it-path-renoir-p2.js', 'it-path-pissarro.js', 'it-path-pissarro-p2.js', 'it-path-turner.js', 'it-path-turner-p2.js', 'it-path-rembrandt.js', 'it-path-rembrandt-p2.js', 'it-path-sisley.js', 'it-path-sisley-p2.js', 'it-path-friedrich.js', 'it-path-friedrich-p2.js', 'it-path-segantini.js', 'it-path-vallotton.js', 'it-path-giacometti.js', 'it-path-spitzweg.js', 'it-path-moser.js', 'it-path-zuend.js', 'it-path-calame.js', 'it-path-wolf.js', 'it-path-ancher.js', 'it-path-blau.js', 'it-path-koller.js', 'it-path-diday.js', 'it-path-schindler.js', 'it-path-egner.js', 'it-path-wisinger.js', 'it-path-marc.js', 'it-path-durer.js', 'it-path-macke.js', 'it-path-morisot.js', 'it-path-velazquez.js', 'it-path-degas.js', 'it-path-manet.js', 'it-path-munch.js', 'it-path-delacroix.js', 'it-path-goya.js', 'it-path-seurat.js', 'it-path-canaletto.js', 'it-path-wood.js', 'it-path-rousseau.js', 'it-path-whistler.js', 'it-path-vaneyck.js', 'it-path-millet.js', 'it-path-vermeer.js', 'it-path-constable.js', 'it-path-waterhouse.js', 'it-path-leonardo.js', 'it-path-cassatt.js', 'it-path-gauguin.js', 'it-path-klee.js', 'it-path-mondrian.js', 'it-path-bruegel.js', 'it-path-raffael.js', 'it-path-botticelli.js']
   };
   const _scriptProm = {};
   const _pathTextProm = {};

@@ -11,6 +11,7 @@ const ALL = P.concat((window.STORY_WORKS || []).filter(w => !P.some(p => p.id ==
   .concat((window.PATH_WORKS || []).filter(w => !knownIds.has(w.id)));
 const byId = id => ALL.find(p => p.id === id);
 function ingestPathData(){
+  invalidateAlbumIndex();
   const src = window.PATHS || [];
   if (src !== PATHS) {
     const seen = new Map();
@@ -72,9 +73,42 @@ function withPathPack(path, fn){
 const PLAYER_NAME_KEY = 'masilano.playerName.v1';
 const CERT_DATE_KEY = id => 'masilano.certDate.v1.' + id;
 let albumViewId = null;
+let albumArtistId = null;
+let albumIndexCache = null;
 let certCtx = null;
 const I = window.I18N;
 const t = (k, v) => I.t(k, v);
+let titlesLoading = null;
+function loadTitles(){
+  if (window.MASILANO_TITLES) {
+    if (window.MASILANO_TITLES.attachI18n) window.MASILANO_TITLES.attachI18n();
+    return Promise.resolve(window.MASILANO_TITLES);
+  }
+  if (titlesLoading) return titlesLoading;
+  const src = 'titles.js?v=1035';
+  const boot = (I && I.loadScriptOnce) ? I.loadScriptOnce(src) : new Promise((res, rej) => {
+    const s = document.createElement('script');
+    s.src = src; s.onload = res; s.onerror = rej; document.head.appendChild(s);
+  });
+  titlesLoading = boot.then(() => {
+    if (window.MASILANO_TITLES && window.MASILANO_TITLES.attachI18n) window.MASILANO_TITLES.attachI18n();
+    return window.MASILANO_TITLES;
+  });
+  return titlesLoading;
+}
+function formatStreakRank(id){
+  const TT = window.MASILANO_TITLES;
+  if (TT && TT.formatTitle) return TT.formatTitle(id);
+  const table = {
+    1:{de:'Lehrling',en:'Apprentice',es:'Aprendiz',fr:'Apprenti',it:'Apprendista'},
+    2:{de:'Geselle',en:'Journeyman',es:'Oficial',fr:'Compagnon',it:'Garzone'},
+    3:{de:'Malermeister',en:'Master Painter',es:'Maestro pintor',fr:'Maître peintre',it:'Maestro pittore'},
+    4:{de:'Hofmaler',en:'Court Painter',es:'Pintor de corte',fr:'Peintre de cour',it:'Pittore di corte'},
+    5:{de:'Grossmeister der Palette',en:'Grand Master of the Palette',es:'Gran maestro de la paleta',fr:'Grand maître de la palette',it:'Gran maestro della tavolozza'}
+  };
+  const row = table[id];
+  return row ? (row[I.lang] || row.de) : '';
+}
 const L = (obj, field) => I.loc(obj, field);
 
 window.__masilanoWorkCount = () => (ALL && ALL.length) || 1953;
@@ -102,7 +136,8 @@ const LAST_KEY = 'masilano.last.v1';
 const ONBOARD_KEY = 'masilano.onboard.v1';
 const INSTALL_KEY = 'masilano.installHint.v1';
 const CALM_KEY = 'masilano.calm.v1';
-const STREAK_KEY = 'masilano.streak.v1';
+const STREAK_V1_KEY = 'masilano.streak.v1';
+const STREAK_KEY = 'masilano.streak.v2';
 const MILES_KEY = 'masilano.miles.v1';
 const TAB_KEY = 'masilano.tab.v1';
 const FILTER_KEY = 'masilano.galFilter.v1';
@@ -1249,6 +1284,7 @@ function parseHash(){
   const c = parts[2] ? decodeURIComponent(parts[2]) : '';
   const d = parts[3] ? decodeURIComponent(parts[3]) : '';
   if (TABS.includes(a)) {
+    if (a === 'album' && b === 'k' && c) return { kind: 'albumArtist', id: c };
     if (a === 'album' && b) return { kind: 'albumView', id: b };
     return { kind: 'tab', tab: a };
   }
@@ -1283,6 +1319,7 @@ function hashFor(route){
     if (from && from.kind === 'story' && from.id) return '#geschichte/' + from.id + '/bild/' + route.id;
     return '#bild/' + route.id;
   }
+  if (route.kind === 'albumArtist') return '#album/k/' + route.id;
   if (route.kind === 'albumView') return '#album/' + route.id;
   if (route.kind === 'shop') return '#wand/' + route.id;
   return '#heute';
@@ -1383,8 +1420,15 @@ function applyRoute(route){
   }
   if (route.kind === 'faces') { S = null; pathCtx = null; storyCtx = null; showHall({ noRoute: true }); return; }
   if (route.kind === 'rankings') { S = null; pathCtx = null; storyCtx = null; showRankings({ noRoute: true }); return; }
+  if (route.kind === 'albumArtist') {
+    showAlbumArtist(route.id, { noRoute: true });
+    return;
+  }
   if (route.kind === 'albumView') {
+    const from = route.from;
+    if (from && from.kind === 'albumArtist' && from.id) albumArtistId = from.id;
     showScreen('album');
+    if (albumArtistId) renderAlbum();
     showAlbumView(route.id, { noRoute: true });
     return;
   }
@@ -1404,7 +1448,7 @@ function bootRoute(){
     history.pushState({ masilano: 1 }, '', hashFor(r.from));
     history.pushState({ masilano: 1 }, '', hashFor(r));
   } else if (r.kind !== 'tab') {
-    const tab = r.kind === 'albumView' ? 'album' : (r.kind === 'paint' ? storedTab() : ((r.kind === 'faces' || r.kind === 'rankings') ? 'trophies' : 'wege'));
+    const tab = (r.kind === 'albumView' || r.kind === 'albumArtist') ? 'album' : (r.kind === 'paint' ? storedTab() : ((r.kind === 'faces' || r.kind === 'rankings') ? 'trophies' : 'wege'));
     history.replaceState({ masilano: 1, home: true }, '', '#' + tab);
     history.pushState({ masilano: 1 }, '', hashFor(r));
   } else {
@@ -1496,7 +1540,7 @@ function goGallery(){
   if (storyCtx && storyCtx.story) { backOr({ kind: 'story', id: storyCtx.story.id }); return; }
   backOr({ kind: 'tab', tab: currentTab || 'heute' });
 }
-function hideSheets(){ if (window.MASILANO_MUSIC) window.MASILANO_MUSIC.stopSpeak(); ['#story', '#chapter', '#chDone', '#pathFin', '#installHow', '#settings', '#albumView', '#sources', '#filterSheet', '#catSheet', '#certView', '#faceView', '#achView', '#lbJoin', '#shopSheet'].forEach(q => $(q) && $(q).classList.add('hidden')); }
+function hideSheets(){ if (window.MASILANO_MUSIC) window.MASILANO_MUSIC.stopSpeak(); ['#story', '#chapter', '#chDone', '#pathFin', '#installHow', '#settings', '#albumView', '#sources', '#filterSheet', '#catSheet', '#certView', '#faceView', '#achView', '#lbJoin', '#shopSheet', '#titlePick'].forEach(q => $(q) && $(q).classList.add('hidden')); }
 $('#backBtn').onclick = goGallery;
 let galT = 0;
 function onViewport(){ if (S) resize(); else { clearTimeout(galT); galT = setTimeout(() => { placeFilterPanel(); }, 120); } }
@@ -1771,7 +1815,7 @@ function showPath(path, opts){
   if (rw) {
     rw.innerHTML = '';
     const F = window.MASILANO_FACES;
-    const el = F && F.rewardEl(path, n === N);
+    const el = F && F.rewardEl(path, faceUnlocked(path));
     if (el) rw.appendChild(el);
   }
   renderStoryEntry();
@@ -1981,34 +2025,98 @@ function pickDaily(dateStr){
   if (!pool.length) return null;
   return pool[fnv1a('masilano.daily.v1|' + key) % pool.length];
 }
+function daysBetween(a, b){
+  const da = new Date(a + 'T12:00:00'), db = new Date(b + 'T12:00:00');
+  return Math.round((db - da) / 86400000);
+}
+function ranksFromCount(n){
+  const out = [];
+  const TT = window.MASILANO_TITLES;
+  const list = (TT && TT.RANKS) || [{id:1,n:3},{id:2,n:7},{id:3,n:14},{id:4,n:21},{id:5,n:28}];
+  list.forEach(r => { if (n >= r.n) out.push(r.id); });
+  return out;
+}
 function loadStreak(){
   try {
-    const o = JSON.parse(localStorage.getItem(STREAK_KEY) || 'null') || {};
-    return { n: +o.n || 0, last: o.last || '' };
-  } catch (e) { return { n: 0, last: '' }; }
+    let o = JSON.parse(localStorage.getItem(STREAK_KEY) || 'null');
+    if (!o) {
+      const v1 = JSON.parse(localStorage.getItem(STREAK_V1_KEY) || 'null');
+      if (v1 && (v1.n || v1.last)) {
+        o = { n: +v1.n || 0, last: v1.last || '', best: +v1.n || 0, ranks: ranksFromCount(+v1.n || 0), pauses: [] };
+        saveStreak(o);
+      }
+    }
+    o = o || {};
+    const ranks = Array.isArray(o.ranks) ? o.ranks.filter(id => id >= 1 && id <= 5) : ranksFromCount(Math.max(+o.n || 0, +o.best || 0));
+    return { n: +o.n || 0, last: o.last || '', best: Math.max(+o.best || 0, +o.n || 0), ranks: ranks, pauses: Array.isArray(o.pauses) ? o.pauses.slice() : [] };
+  } catch (e) { return { n: 0, last: '', best: 0, ranks: [], pauses: [] }; }
 }
 function saveStreak(o){
-  try { localStorage.setItem(STREAK_KEY, JSON.stringify({ n: o.n || 0, last: o.last || '' })); } catch (e) {}
+  try {
+    localStorage.setItem(STREAK_KEY, JSON.stringify({
+      n: o.n || 0, last: o.last || '', best: o.best || 0,
+      ranks: o.ranks || [], pauses: o.pauses || []
+    }));
+  } catch (e) {}
+}
+function pauseAllowed(st, missed){
+  const pauses = (st && st.pauses) || [];
+  return !pauses.some(p => Math.abs(daysBetween(p, missed)) < 7);
+}
+function effectiveStreak(st, day){
+  const d = day || todayKey();
+  if (!st || !st.n || !st.last) return { n: 0, kind: null, grace: false, best: (st && st.best) || 0, ranks: (st && st.ranks) || [] };
+  if (st.last === d) return { n: st.n, kind: 'today', grace: false, best: st.best, ranks: st.ranks };
+  if (st.last === shiftDate(d, -1)) return { n: st.n, kind: 'active', grace: false, best: st.best, ranks: st.ranks };
+  if (st.last === shiftDate(d, -2)) {
+    const missed = shiftDate(d, -1);
+    const used = (st.pauses || []).indexOf(missed) >= 0;
+    if (used || pauseAllowed(st, missed)) return { n: st.n, kind: 'active', grace: !used, best: st.best, ranks: st.ranks };
+  }
+  return { n: 0, kind: null, grace: false, best: st.best || 0, ranks: st.ranks || [] };
 }
 function streakKind(st, day){
-  if (!st || !st.n) return null;
-  if (st.last === day) return 'today';
-  if (st.last === shiftDate(day, -1)) return 'active';
-  return 'paused';
+  return effectiveStreak(st, day).kind;
 }
 function streakText(st, day){
-  const kind = streakKind(st, day);
-  if (!kind) return '';
-  if (st.n === 1) return t(kind === 'today' ? 'streakToday1' : kind === 'active' ? 'streakActive1' : 'streakPaused1');
-  return t(kind === 'today' ? 'streakToday' : kind === 'active' ? 'streakActive' : 'streakPaused', { n: st.n });
+  const ev = effectiveStreak(st, day);
+  if (!ev.kind || !ev.n) return '';
+  if (ev.n === 1) return t(ev.kind === 'today' ? 'streakToday1' : 'streakActive1');
+  return t(ev.kind === 'today' ? 'streakToday' : 'streakActive', { n: ev.n });
+}
+function highestRank(st){
+  const ev = st && st.ranks ? st : loadStreak();
+  const ids = ev.ranks || [];
+  if (!ids.length) return null;
+  const max = Math.max.apply(null, ids);
+  return formatStreakRank(max) || '';
 }
 function bumpStreak(day){
   const d = day || todayKey();
   const st = loadStreak();
   if (st.last === d) return st;
-  st.n = (st.n || 0) + 1;
+  const prevRanks = (st.ranks || []).slice();
+  if (st.last === shiftDate(d, -1)) {
+    st.n = (st.n || 0) + 1;
+  } else if (st.last === shiftDate(d, -2) && pauseAllowed(st, shiftDate(d, -1))) {
+    st.pauses = (st.pauses || []).concat([shiftDate(d, -1)]);
+    if (st.pauses.length > 24) st.pauses = st.pauses.slice(-24);
+    st.n = (st.n || 0) + 1;
+  } else {
+    st.n = 1;
+  }
   st.last = d;
+  st.best = Math.max(st.best || 0, st.n);
+  const have = new Set(st.ranks || []);
+  ranksFromCount(Math.max(st.n, st.best)).forEach(id => have.add(id));
+  st.ranks = Array.from(have).sort((a, b) => a - b);
   saveStreak(st);
+  const fresh = st.ranks.filter(id => prevRanks.indexOf(id) < 0);
+  if (fresh.length) {
+    const TT = window.MASILANO_TITLES;
+    const name = TT && TT.formatTitle(fresh[fresh.length - 1]);
+    if (name) mtoast(t('rankEarned', { title: name }));
+  }
   return st;
 }
 function openHomeWork(p){
@@ -2040,6 +2148,14 @@ function teaserMeta(p){
   return { text: out, fallback: !!meta.fallback };
 }
 function storyTeaser(p){ return teaserMeta(p).text; }
+function dailyHonorLine(){
+  const ev = effectiveStreak(loadStreak());
+  const title = highestRank(ev);
+  if (!title && !ev.n) return '';
+  if (title && ev.n) return `<div class="st-rank">${esc(title)}</div>`;
+  if (title) return `<div class="st-rank">${esc(title)}</div>`;
+  return '';
+}
 function renderDaily(){
   const wrap = $('#dailyWrap'); if (!wrap) return;
   const day = todayKey();
@@ -2060,7 +2176,7 @@ function renderDaily(){
     ${teaser.text ? `<p class="teaser">${esc(teaser.text)}</p>` : ''}
     ${teaser.fallback && teaser.text ? `<p class="langfallback">${esc(t('langFallback'))}</p>` : ''}
     <button type="button" class="cta goldcta" id="dailyCta">${esc(cta)}</button>
-    ${streak ? `<div class="st">${esc(streak)}</div>` : ''}</div>`;
+    ${streak ? `<div class="st">${esc(streak)}</div>` : ''}${dailyHonorLine()}</div>`;
   const go = () => { if (isDone(p.id)) bumpStreak(day); openHomeWork(p); };
   card.querySelector('#dailyHeroIm').onclick = go;
   card.querySelector('#dailyCta').onclick = go;
@@ -2351,31 +2467,106 @@ function artistLabel(artist){
   if (I.lang === 'en') return enField({ artist }, 'artist') || artist;
   return artist;
 }
-function albumGroups(){
+const ARTIST_ALIASES = {
+  'Rembrandt': 'rembrandt', 'Rembrandt van Rijn': 'rembrandt',
+  'Friedrich': 'friedrich', 'Caspar David Friedrich': 'friedrich',
+  'Sisley': 'sisley', 'Alfred Sisley': 'sisley',
+  'William Turner': 'turner', 'J. M. W. Turner': 'turner'
+};
+const CANON_ARTIST = {
+  rembrandt: 'Rembrandt van Rijn',
+  friedrich: 'Caspar David Friedrich',
+  sisley: 'Alfred Sisley',
+  turner: 'J. M. W. Turner'
+};
+function albumArtistName(pathId){
+  if (CANON_ARTIST[pathId]) return CANON_ARTIST[pathId];
+  const TT = window.MASILANO_TITLES;
+  if (TT && TT.artistName) return TT.artistName(pathId, I.lang);
+  const path = PATHS.find(p => p.id === pathId);
+  return (path && (L(path, 'name') || path.name)) || artistLabel(pathId);
+}
+function pathIdForArtistName(name){
+  if (ARTIST_ALIASES[name]) return ARTIST_ALIASES[name];
+  const TT = window.MASILANO_TITLES;
+  if (TT && TT.aliasPathId) {
+    const id = TT.aliasPathId(name);
+    if (id) return id;
+  }
+  const path = PATHS.find(p => p && p.name === name);
+  return path ? path.id : null;
+}
+function buildAlbumIndex(){
+  const byPath = {};
+  PATHS.forEach(path => { byPath[path.id] = []; });
   const claimed = new Set();
-  const groups = [];
   PATHS.forEach(path => {
-    const ids = [];
-    pathSteps(path).forEach(s => { if (!claimed.has(s.pid) && byId(s.pid)) { claimed.add(s.pid); ids.push(s.pid); } });
-    // include duplicates? count unique only. Reused gallery works belong to the path group.
-    groups.push({ kind: 'path', id: path.id, title: L(path, 'title'), ids });
+    pathSteps(path).forEach(s => {
+      if (s.pid && byId(s.pid) && !claimed.has(s.pid)) {
+        claimed.add(s.pid);
+        byPath[path.id].push(s.pid);
+      }
+    });
   });
-  // Fix: works already claimed wrongly skipped if they appeared in an earlier path — VG/Monet/Hokusai don't overlap.
-  STORIES.forEach(st => {
-    const ids = [];
-    st.chapters.forEach(ch => { if (!claimed.has(ch.pid) && byId(ch.pid)) { claimed.add(ch.pid); ids.push(ch.pid); } });
-    if (ids.length) groups.push({ kind: 'story', id: st.id, title: st.name, ids });
-  });
-  const rest = {};
   ALL.forEach(p => {
-    if (claimed.has(p.id)) return;
-    const art = p.artist || '';
-    (rest[art] || (rest[art] = [])).push(p.id);
+    if (!p || claimed.has(p.id)) return;
+    const key = pathIdForArtistName(p.artist || '');
+    if (key && byPath[key]) { claimed.add(p.id); byPath[key].push(p.id); }
   });
-  Object.keys(rest).sort((a, b) => artistLabel(a).localeCompare(artistLabel(b), I.lang === 'de' ? 'de-CH' : 'en')).forEach(art => {
-    groups.push({ kind: 'artist', id: art, title: artistLabel(art), ids: rest[art] });
-  });
-  return groups;
+  albumIndexCache = byPath;
+  return byPath;
+}
+function albumIndex(){ return albumIndexCache || buildAlbumIndex(); }
+function invalidateAlbumIndex(){ albumIndexCache = null; }
+function albumOf(pathId){
+  const path = PATHS.find(p => p.id === pathId);
+  const ids = (albumIndex()[pathId] || []).filter(id => byId(id));
+  const n = ids.filter(id => isDone(id)).length;
+  const faces = (window.MASILANO_FACES && window.MASILANO_FACES.facesFor) ? window.MASILANO_FACES.facesFor(pathId) : [];
+  const coverId = ids.find(id => isDone(id)) || (path && path.cover) || ids[0] || '';
+  return {
+    id: pathId,
+    path: path || null,
+    title: albumArtistName(pathId),
+    life: path ? (L(path, 'life') || path.life || '') : '',
+    cover: coverId,
+    ids, n, N: ids.length,
+    faces: faces || [],
+    complete: ids.length > 0 && n >= ids.length,
+    pathComplete: !!(path && pathIsComplete(path))
+  };
+}
+function allAlbums(){
+  const TT = window.MASILANO_TITLES;
+  const ids = (TT && TT.PATH_IDS && TT.PATH_IDS.length) ? TT.PATH_IDS.slice() : PATHS.map(p => p.id);
+  return ids.map(albumOf).filter(a => a.N > 0);
+}
+function albumComplete(pathId){
+  const a = albumOf(pathId);
+  return !!(a && a.complete);
+}
+function faceUnlocked(path){
+  const id = path && (path.id || path);
+  if (!id) return false;
+  const a = albumOf(id);
+  if (a.complete || a.pathComplete) return true;
+  const F = window.MASILANO_FACES;
+  if (F && F.facesFor && F.claimOf) {
+    return (F.facesFor(id) || []).some(f => !!F.claimOf(f.id));
+  }
+  return false;
+}
+function albumGroups(){
+  return allAlbums().map(a => ({ kind: 'artist', id: a.id, title: a.title, ids: a.ids, album: a }));
+}
+function albumFaceState(album){
+  if (!album.faces.length) return 'soon';
+  if (faceUnlocked(album.id)) {
+    const F = window.MASILANO_FACES;
+    const claimed = F && album.faces.some(f => F.claimOf(f.id));
+    return claimed ? 'claimed' : 'earned';
+  }
+  return 'locked';
 }
 function workLoreMeta(p){
   const story = L(p, 'story');
@@ -2433,33 +2624,115 @@ function renderAlbumEntry(){
 function showAlbum(){
   hideSheets();
   S = null;
+  albumArtistId = null;
   navigate({ kind: 'tab', tab: 'album' });
   showScreen('album');
+  loadTitles().then(() => renderAlbum());
+}
+function showAlbumArtist(id, opts){
+  const album = albumOf(id);
+  if (!album || !album.N) return;
+  hideSheets();
+  S = null;
+  albumArtistId = id;
+  if (!opts || !opts.noRoute) navigate({ kind: 'albumArtist', id });
+  showScreen('album');
+  loadTitles().then(() => renderAlbum());
+}
+function bindAlbumHeader(){
+  const bar = $('#albumArtistBar');
+  const back = $('#albumArtistBack');
+  const room = $('#albumRoom');
+  const title = $('#albumTitle');
+  const onDetail = !!albumArtistId;
+  if (bar) { bar.classList.toggle('hidden', !onDetail); bar.hidden = !onDetail; }
+  if (back && !back.__bound) {
+    back.__bound = true;
+    back.onclick = () => { albumArtistId = null; navigate({ kind: 'tab', tab: 'album' }); renderAlbum(); };
+  }
+  if (onDetail) {
+    const album = albumOf(albumArtistId);
+    if (room) room.textContent = t('albumArtistRoom');
+    if (title) title.textContent = album.title;
+  } else {
+    if (room) room.textContent = t('roomAlbum');
+    if (title) title.textContent = t('albumTitle');
+  }
+}
+function albumBadgeHtml(album){
+  const st = albumFaceState(album);
+  const cls = st === 'earned' || st === 'claimed' ? 'earned' : (st === 'soon' ? 'soon' : 'locked');
+  const key = st === 'earned' ? 'albumFaceEarned' : st === 'claimed' ? 'albumFaceClaimed' : st === 'soon' ? 'albumFaceSoon' : 'albumFaceLocked';
+  return `<span class="alb-badge ${cls}">${esc(t(key))}</span>`;
+}
+function albumRewardHtml(album){
+  const remain = Math.max(0, album.N - album.n);
+  if (!album.faces.length) {
+    return `<section class="albreward soon"><div class="rk">${esc(t('albumFaceSoon'))}</div><p class="rlead">${esc(t('albumRewardSoonLead'))}</p></section>`;
+  }
+  const unlocked = faceUnlocked(album.id);
+  const faces = album.faces.map(f => {
+    const F = window.MASILANO_FACES;
+    const loc = (f.n && (f.n[I.lang] || f.n.de)) || f.id;
+    return `<button type="button" class="albrface" data-face="${esc(f.id)}"><img src="img/faces/${esc(f.id)}.webp?v=1035" alt="" width="72" height="72" loading="lazy" decoding="async"><span><span class="fn">${esc(loc)}</span><span class="fa">${esc(unlocked ? t(albumFaceState(album) === 'claimed' ? 'albumFaceClaimed' : 'albumFaceReady') : t('albumFaceRemain', { n: remain }))}</span></span></button>`;
+  }).join('');
+  return `<section class="albreward${unlocked ? ' done' : ''}"><div class="rk">${esc(unlocked ? t('albumRewardDoneK') : t('albumRewardK'))}</div><p class="rlead">${esc(unlocked ? t('albumRewardDoneLead') : t('albumRewardLead', { N: album.N }))}</p><div class="albrfaces">${faces}</div></section>`;
+}
+function renderAlbumOverview(box){
+  const albums = allAlbums().slice().sort((a, b) => (b.n - a.n) || a.title.localeCompare(b.title, I.lang === 'de' ? 'de-CH' : I.lang));
+  const n = doneCount(), N = ALL.length, k = albums.length;
+  let html = `<div class="albumsum">${t('albumSum', { n, N, k })}</div>`;
+  albums.forEach(a => {
+    const pct = a.N ? Math.round(100 * a.n / a.N) : 0;
+    const thumb = a.cover ? `background-image:url(data/${esc(a.cover)}-thumb.jpg)` : '';
+    html += `<button type="button" class="albcard${a.complete ? ' done' : ''}" data-album="${esc(a.id)}" aria-label="${esc(a.title + ', ' + t('albumCount', { n: a.n, N: a.N }))}">` +
+      `<div class="cv" style="${thumb}"></div><div class="tx"><div class="n">${esc(a.title)}</div>` +
+      `<div class="s">${esc(t('albumCount', { n: a.n, N: a.N }))}</div>` +
+      `<div class="bar" aria-hidden="true"><div style="width:${pct}%"></div></div>` +
+      albumBadgeHtml(a) + `</div><div class="go">›</div></button>`;
+  });
+  box.innerHTML = html;
+  box.querySelectorAll('.albcard').forEach(b => {
+    b.onclick = () => showAlbumArtist(b.getAttribute('data-album'));
+  });
+}
+function renderAlbumDetail(box){
+  const album = albumOf(albumArtistId);
+  if (!album || !album.N) { albumArtistId = null; renderAlbumOverview(box); return; }
+  const pct = album.N ? Math.round(100 * album.n / album.N) : 0;
+  let html = '';
+  if (album.life) html += `<div class="alblife">${esc(t('albumLife', { life: album.life, N: album.N }))}</div>`;
+  html += `<div class="albprog">${esc(t('albumProg', { n: album.n, N: album.N }))}<div class="bar"><div style="width:${pct}%"></div></div></div>`;
+  html += '<div class="aslotwall">';
+  album.ids.forEach(id => {
+    const p = byId(id); if (!p) return;
+    const done = isDone(id);
+    const title = L(p, 'title');
+    if (done) {
+      html += `<button type="button" class="aslot done" data-id="${esc(id)}" aria-label="${esc(t('albumViewAria', { title }))}">` +
+        `<span class="th"><img src="data/${esc(id)}-thumb.jpg" alt="" loading="lazy" width="200" height="200"></span>` +
+        `<span class="cap">${esc(title)}</span></button>`;
+    } else {
+      html += `<div class="aslot empty" aria-label="${esc(t('albumSlotAria', { title }))}">` +
+        `<span class="th"></span><span class="cap">${esc(title)}</span></div>`;
+    }
+  });
+  html += '</div>' + albumRewardHtml(album);
+  box.innerHTML = html;
+  box.querySelectorAll('.aslot.done').forEach(b => {
+    b.onclick = () => showAlbumView(b.getAttribute('data-id'));
+  });
+  box.querySelectorAll('.albrface').forEach(b => {
+    b.onclick = () => { const F = window.MASILANO_FACES; if (F && F.openFace) F.openFace(b.getAttribute('data-face')); };
+  });
 }
 function renderAlbum(){
   const box = $('#albumBody'); if (!box) return;
-  const groups = albumGroups();
-  const n = doneCount(), N = ALL.length;
-  let html = `<div class="albumsum">${t('albumCount', { n, N })}</div>`;
-  if (!n) {
-    html += `<div class="albumempty">${t('albumEmpty')}</div>`;
-    box.innerHTML = html;
-    return;
-  }
-  groups.forEach(g => {
-    const doneIds = g.ids.filter(id => isDone(id));
-    if (!doneIds.length) return;
-    html += `<section class="agroup" data-group="${esc(g.id)}"><h2><span class="agtitle">${esc(g.title)}</span><span class="cnt">${t('albumGroup', { n: doneIds.length, N: g.ids.length })}</span></h2><div class="awall">`;
-    doneIds.forEach(id => {
-      const p = byId(id); if (!p) return;
-      html += `<button type="button" class="atile" data-id="${esc(id)}" aria-label="${esc(t('albumViewAria', { title: L(p, 'title') }))}"><img src="data/${esc(id)}-thumb.jpg" alt="" loading="lazy" width="200" height="200"></button>`;
-    });
-    html += `</div></section>`;
-  });
-  box.innerHTML = html;
-  box.querySelectorAll('.atile').forEach(b => {
-    b.onclick = () => showAlbumView(b.getAttribute('data-id'));
-  });
+  if (!window.MASILANO_TITLES) { loadTitles().then(() => renderAlbum()); return; }
+  invalidateAlbumIndex();
+  bindAlbumHeader();
+  if (albumArtistId) renderAlbumDetail(box);
+  else renderAlbumOverview(box);
 }
 // ---------- v10.18: Saal der Zifferblaetter ----------
 let facesParent = null, rankingsParent = null;
@@ -2497,6 +2770,7 @@ function showHall(opts){
   syncOverlayBack();
 }
 function showRankings(opts){
+  loadTitles();
   hideSheets();
   S = null;
   if (!opts || !opts.noRoute) {
@@ -2518,7 +2792,8 @@ function lbHost(){
   return {
     get PATHS(){ return PATHS; },
     get lang(){ return I.lang; },
-    pathOwning, pathSteps, isDone, L, mtoast, revealSheet,
+    pathOwning, pathSteps, isDone, L, mtoast, revealSheet, t,
+    earnedTitleIds, openTitlePicker,
     closeSheet: () => closeTopSheet(),
     showRankings: () => showRankings(),
     maybeStartOnboard
@@ -2533,12 +2808,14 @@ function facesHost(){
     get PATHS(){ return PATHS; },
     get lang(){ return I.lang; },
     pathSteps, isDone, L, todayKey, revealSheet,
+    albumStats: (pathId) => albumOf(pathId),
+    faceUnlocked,
     showHall: () => showHall(),
     onClaim: () => {
       const rw = $('#pathReward');
       if (rw && pathCtx && pathCtx.path && $('#path').classList.contains('active')) {
         const F = window.MASILANO_FACES, steps = pathSteps(pathCtx.path);
-        const el = F && F.rewardEl(pathCtx.path, steps.length > 0 && steps.every(s => isDone(s.pid)));
+        const el = F && F.rewardEl(pathCtx.path, faceUnlocked(pathCtx.path));
         rw.innerHTML = ''; if (el) rw.appendChild(el);
       }
     },
@@ -2562,16 +2839,92 @@ function showTrophies(){
   navigate({ kind: 'tab', tab: 'trophies' });
   showScreen('trophies');
 }
+function honorStripHtml(){
+  const ev = effectiveStreak(loadStreak());
+  const TT = window.MASILANO_TITLES;
+  const ranks = (ev.ranks || []).map(id => TT && TT.formatTitle(id)).filter(Boolean);
+  const chosen = TT && TT.loadChosen();
+  const chosenTx = (chosen && earnedTitleIds().indexOf(chosen) >= 0) ? TT.formatTitle(chosen) : '';
+  let html = '<section class="honorstrip">';
+  html += `<h2 class="honor-h">${esc(t('honorTitle'))}</h2>`;
+  if (ev.n) html += `<p class="honor-st">${esc(t('honorCurrent', { n: ev.n }))}</p>`;
+  else if (ev.best) html += `<p class="honor-st">${esc(t('honorBest', { n: ev.best }))}</p>`;
+  if (ranks.length) html += `<p class="honor-ranks">${esc(ranks.join(' · '))}</p>`;
+  if (chosenTx) html += `<p class="honor-chosen">${esc(t('titleCurrent') + ': ' + chosenTx)}</p>`;
+  html += `<button type="button" class="btn ghost honor-pick" data-act="title-pick">${esc(t('titlePick'))}</button>`;
+  html += '</section>';
+  return html;
+}
 function renderTrophies(){
   const box = $('#trophiesBody'); if (!box) return;
+  if (!window.MASILANO_TITLES) { loadTitles().then(() => renderTrophies()); return; }
   if (window.MASILANO_FACES) window.MASILANO_FACES.refresh();
   if (window.MASILANO_LB) window.MASILANO_LB.refresh();
-  loadAchievements().then(A => { if (A && box) { A.sync({ toast: false }); A.render(box); } }).catch(() => {});
+  box.innerHTML = honorStripHtml();
+  const pick = box.querySelector('[data-act=title-pick]');
+  if (pick) pick.onclick = () => openTitlePicker();
+  loadAchievements().then(A => {
+    if (!A || !box) return;
+    A.sync({ toast: false });
+    const hold = document.createElement('div');
+    A.render(hold);
+    while (hold.firstChild) box.appendChild(hold.firstChild);
+  }).catch(() => {});
+}
+function openTitlePicker(){
+  if (!window.MASILANO_TITLES) { loadTitles().then(() => openTitlePicker()); return; }
+  const sh = $('#titlePick'); if (!sh) return;
+  const TT = window.MASILANO_TITLES;
+  const earned = earnedTitleIds();
+  const chosen = TT && TT.loadChosen();
+  const P = {
+    title: t('titlePick'),
+    lead: t('titlePickLead'),
+    none: t('titleNone'),
+    empty: t('titleEmpty'),
+    save: t('titleSave'),
+    close: t('close')
+  };
+  let html = `<p class="zf-kick">${esc(P.lead)}</p><h2 id="tpTitle">${esc(P.title)}</h2><div class="zf-body">`;
+  if (!earned.length) html += `<p>${esc(P.empty)}</p>`;
+  else {
+    html += `<label class="tp-opt"><input type="radio" name="tpTitleId" value="" ${chosen ? '' : 'checked'}> <span>${esc(P.none)}</span></label>`;
+    earned.forEach(id => {
+      const lab = TT.formatTitle(id);
+      html += `<label class="tp-opt"><input type="radio" name="tpTitleId" value="${id}" ${chosen === id ? 'checked' : ''}> <span>${esc(lab)}</span></label>`;
+    });
+  }
+  html += `</div><p class="rl-form-err" hidden></p><div class="btns">` +
+    (earned.length ? `<button type="button" class="btn goldcta" data-act="tp-save">${esc(P.save)}</button>` : '') +
+    `<button type="button" class="btn ghost" data-act="tp-close">${esc(P.close)}</button></div>`;
+  const card = sh.querySelector('.card') || sh;
+  card.innerHTML = html;
+  card.querySelectorAll('[data-act]').forEach(b => {
+    b.onclick = () => {
+      if (b.getAttribute('data-act') === 'tp-close') { closeTopSheet(); return; }
+      if (b.getAttribute('data-act') === 'tp-save') {
+        const sel = card.querySelector('input[name=tpTitleId]:checked');
+        const raw = sel ? sel.value : '';
+        const id = raw === '' ? null : +raw;
+        if (TT) TT.saveChosen(id);
+        if (window.MASILANO_LB && window.MASILANO_LB.syncTitle) window.MASILANO_LB.syncTitle(id);
+        closeTopSheet();
+        if ($('#trophies') && $('#trophies').classList.contains('active')) renderTrophies();
+        if (window.MASILANO_LB && window.MASILANO_LB.refresh) window.MASILANO_LB.refresh();
+      }
+    };
+  });
+  if (typeof revealSheet === 'function') revealSheet('#titlePick');
+  else sh.classList.remove('hidden');
 }
 function showAlbumView(id, opts){
   const p = byId(id); if (!p) return;
   albumViewId = id;
-  if (!opts || !opts.noRoute) navigate({ kind: 'albumView', id });
+  if (!opts || !opts.noRoute) {
+    const route = { kind: 'albumView', id };
+    if (albumArtistId) route.from = { kind: 'albumArtist', id: albumArtistId };
+    navigate(route);
+  }
   const title = L(p, 'title');
   $('#avTitle').textContent = title;
   $('#avMeta').textContent = `${L(p, 'artist')} · ${p.year}`;
@@ -2599,7 +2952,10 @@ function showAlbumView(id, opts){
 function closeAlbumView(){
   albumViewId = null;
   $('#albumView').classList.add('hidden');
-  if ((location.hash || '').indexOf('#album/') === 0) backOr({ kind: 'tab', tab: 'album' });
+  if ((location.hash || '').indexOf('#album/') === 0) {
+    if (albumArtistId) backOr({ kind: 'albumArtist', id: albumArtistId });
+    else backOr({ kind: 'tab', tab: 'album' });
+  }
 }
 
 function loadMiles(){
@@ -2665,8 +3021,45 @@ function afterFinish(pid){
   const pick = pickDaily();
   if (pick && pick.id === pid) bumpStreak();
   maybeMilestones(pid);
-  PATHS.forEach(path => { if (pathIsComplete(path) && pathSteps(path).some(s => s.pid === pid)) recordCertDate(path); });
+  invalidateAlbumIndex();
+  const TT = window.MASILANO_TITLES;
+  PATHS.forEach(path => {
+    if (!pathSteps(path).some(s => s.pid === pid) && !(albumIndex()[path.id] || []).includes(pid)) return;
+    if (pathIsComplete(path)) {
+      recordCertDate(path);
+      if (TT) maybeHonorToast(TT.pathTitleId(path.id), 'honorPathEarned');
+    }
+    if (albumComplete(path.id)) {
+      maybeHonorToast(TT && TT.albumTitleId(path.id), 'honorAlbumEarned');
+      if (window.MASILANO_FACES) window.MASILANO_FACES.refresh();
+    }
+  });
   if (window.MASILANO_LB && window.MASILANO_LB.reportComplete) window.MASILANO_LB.reportComplete(pid);
+}
+function maybeHonorToast(titleId, key){
+  if (!titleId) return;
+  if (!window.MASILANO_TITLES) { loadTitles().then(() => maybeHonorToast(titleId, key)); return; }
+  try {
+    const k = 'masilano.honorToast.v1.' + titleId;
+    if (localStorage.getItem(k) === '1') return;
+    localStorage.setItem(k, '1');
+  } catch (e) {}
+  const TT = window.MASILANO_TITLES;
+  const name = TT && TT.formatTitle(titleId);
+  if (name) mtoast(t(key, { title: name }));
+}
+function earnedTitleIds(){
+  const ids = [];
+  const st = loadStreak();
+  (st.ranks || []).forEach(id => ids.push(id));
+  const TT = window.MASILANO_TITLES;
+  if (!TT) return ids;
+  TT.PATH_IDS.forEach(pid => {
+    const path = PATHS.find(p => p.id === pid);
+    if (path && pathIsComplete(path)) ids.push(TT.pathTitleId(pid));
+    if (albumComplete(pid)) ids.push(TT.albumTitleId(pid));
+  });
+  return ids.filter(TT.isValidTitleId);
 }
 function celebrateIfNeeded(){
   if (!S || !S.justFinished) return;
@@ -3308,14 +3701,14 @@ function loadShop(){
     if (!document.querySelector('link[data-shop-css]')) {
       const l = document.createElement('link');
       l.rel = 'stylesheet';
-      l.href = 'shop.css?v=1034';
+      l.href = 'shop.css?v=1035';
       l.setAttribute('data-shop-css', '1');
       document.head.appendChild(l);
     }
     const need = [];
-    if (!window.MASILANO_SHOP_CONFIG) need.push('shop-config.js?v=1034');
-    if (!window.MASILANO_SHOP_RES) need.push('shop-res.js?v=1034');
-    need.push('shop.js?v=1034');
+    if (!window.MASILANO_SHOP_CONFIG) need.push('shop-config.js?v=1035');
+    if (!window.MASILANO_SHOP_RES) need.push('shop-res.js?v=1035');
+    need.push('shop.js?v=1035');
     let i = 0;
     const next = () => {
       if (i >= need.length) {
@@ -3383,7 +3776,7 @@ bindShopEntries();
 let swReload = false;
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
   const hadCtrl = !!navigator.serviceWorker.controller;
-  navigator.serviceWorker.register('./sw.js?v=1034', { scope: './' }).catch(e => console.warn('SW', e));
+  navigator.serviceWorker.register('./sw.js?v=1035', { scope: './' }).catch(e => console.warn('SW', e));
   function requestSwReload(){
     if (!hadCtrl) return;           // first install: nothing to reload
     if (S) swReload = true; else location.reload();
@@ -3448,7 +3841,7 @@ function paintStartShell(){
     const r = parseHash();
     let tab = 'heute';
     if (r.kind === 'tab') tab = r.tab || 'heute';
-    else if (r.kind === 'albumView') tab = 'album';
+    else if (r.kind === 'albumView' || r.kind === 'albumArtist') tab = 'album';
     else if (r.kind === 'paint') tab = storedTab();
     document.body.classList.remove('tabless');
     const elId = tab === 'galerie' ? 'gallery' : tab;
@@ -3472,8 +3865,4 @@ function startUi(){
 }
 if (I.ensurePathTexts) I.ensurePathTexts().then(startUi, function (err) { console.error(err); startUi(); });
 else startUi();
-
-  pathSteps, showHall, showRankings, completeOnboard, maybeStartOnboard,
-  ensurePathPack: (id, code) => I.ensurePathPack(id, code).then(() => { ingestPathData(); return livePath(id); })
-};
 })();

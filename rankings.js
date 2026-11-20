@@ -287,17 +287,58 @@
     pendingParts = rollParts();
     return pendingParts;
   }
+  function chosenTitleId(){
+    var TT = window.MASILANO_TITLES;
+    if (!TT) return null;
+    var id = TT.loadChosen();
+    if (id == null) return null;
+    if (host && host.earnedTitleIds && host.earnedTitleIds().indexOf(id) < 0) return null;
+    return id;
+  }
+  function titleLabel(id, fallbackLang){
+    var TT = window.MASILANO_TITLES;
+    return (id != null && TT) ? (TT.formatTitle(id, fallbackLang || lang()) || '') : '';
+  }
   function namePayload(p, extra){
     p = partsOf(p);
     var o = { kind:p.kind, gender:p.gender, a:p.a, b:p.b, suffix:p.suffix || 0 };
+    var tid = chosenTitleId();
+    if (tid != null) o.title_id = tid;
     if (extra) for (var k in extra) if (Object.prototype.hasOwnProperty.call(extra, k)) o[k] = extra[k];
     return o;
+  }
+  function syncTitle(id){
+    var TT = window.MASILANO_TITLES;
+    if (TT) TT.saveChosen(id == null ? null : id);
+    var cred = loadCred();
+    if (cred) {
+      if (id == null) delete cred.title_id;
+      else cred.title_id = id;
+      saveCred(cred);
+    }
+    if (!cred || !cred.token || mockOn()) { renderHall(); return Promise.resolve(); }
+    var body = { token: cred.token, title_id: id == null ? null : id };
+    return call('/me/rename', { method: 'POST', headers: headers(), body: JSON.stringify(body) })
+      .then(function (r){
+        if (r && r.body && r.body.ok) {
+          if (r.body.title_id == null) delete cred.title_id;
+          else cred.title_id = r.body.title_id;
+          saveCred(cred);
+        }
+        renderHall();
+        loadBoard();
+      }).catch(function (){ renderHall(); });
   }
   function credWithParts(cred, src, country){
     cred = cred || {};
     var p = partsOf(src) || partsOf(cred);
     if (p) { cred.kind = p.kind; cred.gender = p.gender; cred.a = p.a; cred.b = p.b; cred.suffix = p.suffix || 0; }
     if (country) cred.country = country;
+    if (src && Object.prototype.hasOwnProperty.call(src, 'title_id')) {
+      cred.title_id = src.title_id == null ? null : src.title_id;
+      var TT = window.MASILANO_TITLES;
+      if (TT) TT.saveChosen(cred.title_id);
+    }
     if ('nickname' in cred) delete cred.nickname;
     return cred;
   }
@@ -507,9 +548,9 @@
 
   var MOCK = {
     world: [
-      { rank:1, pid:'00000000-0000-4000-8000-000000000001', kind:0, gender:1, a:0, b:0, suffix:1, country:'CH', total:42 },
-      { rank:2, pid:'00000000-0000-4000-8000-000000000002', kind:0, gender:1, a:0, b:109, suffix:58, country:'AT', total:37 },
-      { rank:3, kind:0, gender:0, a:2, b:109, suffix:21, country:'DE', total:33 },
+      { rank:1, pid:'00000000-0000-4000-8000-000000000001', kind:0, gender:1, a:0, b:0, suffix:1, country:'CH', total:42, title_id:5 },
+      { rank:2, pid:'00000000-0000-4000-8000-000000000002', kind:0, gender:1, a:0, b:109, suffix:58, country:'AT', total:37, title_id:200 },
+      { rank:3, kind:0, gender:0, a:2, b:109, suffix:21, country:'DE', total:33, title_id:100 },
       { rank:4, kind:1, gender:0, a:1, b:1, suffix:0, country:'CH', total:28 },
       { rank:5, kind:1, gender:1, a:0, b:2, suffix:0, country:'CH', total:21 },
       { rank:6, kind:0, gender:1, a:0, b:126, suffix:49, country:'DE', total:18 },
@@ -668,9 +709,11 @@
       var mine = cred && r.pid && r.pid === cred.player_id;
       var n = (state.scope === 'painter') ? r.count : r.total;
       var shown = formatParts(r) || '';
+      var titleTx = titleLabel(r.title_id);
       html += '<li class="rl-row' + (mine ? ' is-me' : '') + '">' +
         '<span class="rl-rank">' + esc(r.rank) + '</span>' +
         '<span class="rl-who"><span class="rl-nick">' + esc(shown) + (mine ? ' <em>' + esc(P.you) + '</em>' : '') + '</span>' +
+        (titleTx ? '<span class="rl-title">' + esc(titleTx) + '</span>' : '') +
         '<span class="rl-land">' + esc(countryLabel(r.country)) + '</span></span>' +
         '<span class="rl-score">' + esc(pics(n)) + '</span></li>';
     });
@@ -693,10 +736,15 @@
         '<button type="button" class="rl-link" data-rl="restore">' + esc(P.haveCode) + '</button></div>';
     }
     var rankTx = (me && me.rank) ? fill(P.meRank, { n: me.rank }) : (AUTO ? '' : P.meNone);
+    var myTitle = titleLabel((cred && cred.title_id) != null ? cred.title_id : chosenTitleId());
+    var pickLabel = (host && host.t) ? host.t('titlePick') : 'Titel wählen';
+    var currentLabel = (host && host.t) ? host.t('titleCurrent') : 'Angezeigter Titel';
     return '<div class="rl-account">' +
       '<p class="rl-you">' + esc(fill(P.joinedAs, { n: formatParts(cred) || playerName() })) + '</p>' +
+      (myTitle ? '<p class="rl-mytitle">' + esc(currentLabel + ': ' + myTitle) + '</p>' : '') +
       (rankTx ? '<p class="rl-myrank">' + esc(rankTx) + '</p>' : '') +
       '<button type="button" class="btn goldcta" data-rl="name">' + esc(P.rename) + '</button>' +
+      '<button type="button" class="btn ghost" data-rl="title">' + esc(pickLabel) + '</button>' +
       '<button type="button" class="btn ghost" data-rl="code">' + esc(P.codeTitle) + '</button>' +
       '<button type="button" class="btn ghost rl-remove" data-rl="hide">' + esc(P.hide) + '</button></div>';
   }
@@ -734,6 +782,7 @@
         if (a === 'name') openJoin('name');
         if (a === 'hide') openJoin('hide');
         if (a === 'restore') openJoin('restore');
+        if (a === 'title') { if (host && host.openTitlePicker) host.openTitlePicker(); }
         if (a === 'unhide') { ls(HIDE_KEY, null); ls(BACKFILL_KEY, null); ensureEnrolled().then(function (){ loadBoard(); }); renderHall(); }
       };
     });
@@ -971,7 +1020,7 @@
     return api;
   }
 
-  var api = { init: init, refresh: refresh, showPage: showPage, markStart: markStart, reportComplete: reportComplete, enabled: enabled, openJoin: openJoin, loadBoard: loadBoard, painterOf: painterOf, ensureEnrolled: ensureEnrolled, formatParts: formatParts, rollParts: rollParts, readParts: readParts, pendingParts: function (){ return pendingParts; }, guessCountry: guessCountry, maybePrompt: maybePrompt, needsPrompt: needsPrompt, isCountry: isCountry, countryName: countryName };
+  var api = { init: init, refresh: refresh, showPage: showPage, markStart: markStart, reportComplete: reportComplete, enabled: enabled, openJoin: openJoin, loadBoard: loadBoard, painterOf: painterOf, ensureEnrolled: ensureEnrolled, formatParts: formatParts, rollParts: rollParts, readParts: readParts, pendingParts: function (){ return pendingParts; }, guessCountry: guessCountry, maybePrompt: maybePrompt, needsPrompt: needsPrompt, isCountry: isCountry, countryName: countryName, syncTitle: syncTitle, chosenTitleId: chosenTitleId };
   window.MASILANO_LB = api;
   if (AUTO && document.body) maybePrompt();
   else if (AUTO) document.addEventListener('DOMContentLoaded', function (){ maybePrompt(); });
