@@ -2179,7 +2179,7 @@ body.calm .contcard .cv,body.calm .dailycard .cv{ --cv-w: 68px; }
 .zf-choose .zf-opt-h{font-size:13px;line-height:1.4;color:#d9ccb2;margin:6px auto 14px;max-width:26em}
 .zf-apple{margin:4px auto 8px}
 .zf-apple.hidden{display:none}
-.zf-apple img{display:block;width:124px;height:auto;aspect-ratio:416 / 496;margin:0 auto 10px;border-radius:22px;box-shadow:0 0 0 2px #e8c56b,0 8px 18px rgba(0,0,0,.45);object-fit:cover;background:#0c162c}
+.zf-apple img{display:block;width:124px;height:auto;aspect-ratio:422 / 514;margin:0 auto 10px;border-radius:22px;box-shadow:0 0 0 2px #e8c56b,0 8px 18px rgba(0,0,0,.45);object-fit:cover;background:#0c162c}
 .zf-apple-how{font-size:13px;line-height:1.45;color:#efe4cf;margin:0 auto 12px;max-width:26em}
 .zf-apple .btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
 
