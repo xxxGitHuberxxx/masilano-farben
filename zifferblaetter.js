@@ -3,9 +3,10 @@
   'use strict';
   const CLAIM_KEY = 'masilano.faceClaims.v1';
   const FACES = [
-    { id:'monet', path:'monet', artist:'Claude Monet', year:'1906',
+    { id:'monet', path:'monet', artist:'Claude Monet', year:'1904',
+      m:{ de:'Denver Art Museum', en:'Denver Art Museum', fr:'Denver Art Museum', it:'Denver Art Museum', es:'Denver Art Museum' },
       n:{ de:'Seerosen', en:'Water Lilies', fr:'Nymphéas', it:'Ninfee', es:'Nenúfares' },
-      w:{ de:'Seerosen', en:'Water Lilies', fr:'Nymphéas', it:'Ninfee', es:'Nenúfares' } },
+      w:{ de:'Der Seerosenteich', en:'The Water Lily Pond', fr:'Le Bassin aux nymphéas', it:'Lo stagno delle ninfee', es:'El estanque de nenúfares' } },
     { id:'lilybridge', path:'monet', artist:'Claude Monet', year:'1899',
       n:{ de:'Seerosenbrücke', en:'Water Lily Bridge', fr:'Le Pont japonais', it:'Il ponte giapponese', es:'El puente japonés' },
       w:{ de:'Seerosen und japanische Brücke', en:'Water Lilies and Japanese Bridge', fr:'Nymphéas et pont japonais', it:'Ninfee e ponte giapponese', es:'Nenúfares y puente japonés' } },
@@ -281,7 +282,7 @@
     return '<div class="zf-big' + (st.done ? ' is-earned' : '') + '" data-face="' + f.id + '"><img src="' + img(f) + '" alt="" width="440" height="440"></div>' +
       '<p class="zf-kick">' + esc(st.soon ? P.soon : (st.done ? P.rewardKDone : fill(P.onPath, { path: pt }))) + '</p>' +
       '<h2 id="zfTitle">' + esc(loc(f.n)) + '</h2>' +
-      '<p class="zf-meta">' + esc(f.artist) + ' · ' + esc(loc(f.w)) + ', ' + esc(f.year) + '</p>' +
+      '<p class="zf-meta">' + esc(f.artist) + ' · ' + esc(loc(f.w)) + ', ' + esc(f.year) + (f.m ? ' · ' + esc(loc(f.m)) : '') + '</p>' +
       '<div class="zf-body">' + body + '</div><div class="btns zf-btns">' + btns + '</div><p class="zf-fine">' + esc(P.fine) + '</p>';
   }
   function openFace(id){

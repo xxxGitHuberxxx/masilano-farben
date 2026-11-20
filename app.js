@@ -3305,14 +3305,14 @@ function loadShop(){
     if (!document.querySelector('link[data-shop-css]')) {
       const l = document.createElement('link');
       l.rel = 'stylesheet';
-      l.href = 'shop.css?v=1029';
+      l.href = 'shop.css?v=1030';
       l.setAttribute('data-shop-css', '1');
       document.head.appendChild(l);
     }
     const need = [];
-    if (!window.MASILANO_SHOP_CONFIG) need.push('shop-config.js?v=1029');
-    if (!window.MASILANO_SHOP_RES) need.push('shop-res.js?v=1029');
-    need.push('shop.js?v=1029');
+    if (!window.MASILANO_SHOP_CONFIG) need.push('shop-config.js?v=1030');
+    if (!window.MASILANO_SHOP_RES) need.push('shop-res.js?v=1030');
+    need.push('shop.js?v=1030');
     let i = 0;
     const next = () => {
       if (i >= need.length) {
@@ -3380,7 +3380,7 @@ bindShopEntries();
 let swReload = false;
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
   const hadCtrl = !!navigator.serviceWorker.controller;
-  navigator.serviceWorker.register('./sw.js?v=1029', { scope: './' }).catch(e => console.warn('SW', e));
+  navigator.serviceWorker.register('./sw.js?v=1030', { scope: './' }).catch(e => console.warn('SW', e));
   function requestSwReload(){
     if (!hadCtrl) return;           // first install: nothing to reload
     if (S) swReload = true; else location.reload();
