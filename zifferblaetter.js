@@ -3,10 +3,10 @@
   'use strict';
   const CLAIM_KEY = 'masilano.faceClaims.v1';
   const FACES = [
-    { id:'monet', path:'monet', artist:'Claude Monet', year:'1904',
-      m:{ de:'Denver Art Museum', en:'Denver Art Museum', fr:'Denver Art Museum', it:'Denver Art Museum', es:'Denver Art Museum' },
-      n:{ de:'Seerosen', en:'Water Lilies', fr:'Nymphéas', it:'Ninfee', es:'Nenúfares' },
-      w:{ de:'Der Seerosenteich', en:'The Water Lily Pond', fr:'Le Bassin aux nymphéas', it:'Lo stagno delle ninfee', es:'El estanque de nenúfares' } },
+    { id:'monet', path:'monet', artist:'Claude Monet', year:'1875',
+      m:{ de:'National Gallery of Art, Washington', en:'National Gallery of Art, Washington', fr:'National Gallery of Art, Washington', it:'National Gallery of Art, Washington', es:'National Gallery of Art, Washington' },
+      n:{ de:'Frau mit Sonnenschirm', en:'Woman with a Parasol', fr:'La Femme à l’ombrelle', it:'Donna con parasole', es:'Mujer con sombrilla' },
+      w:{ de:'Frau mit Sonnenschirm – Madame Monet und ihr Sohn', en:'Woman with a Parasol – Madame Monet and Her Son', fr:'La Femme à l’ombrelle – Madame Monet et son fils', it:'Donna con parasole – Madame Monet e suo figlio', es:'Mujer con sombrilla – Madame Monet y su hijo' } },
     { id:'lilybridge', path:'monet', artist:'Claude Monet', year:'1899',
       n:{ de:'Seerosenbrücke', en:'Water Lily Bridge', fr:'Le Pont japonais', it:'Il ponte giapponese', es:'El puente japonés' },
       w:{ de:'Seerosen und japanische Brücke', en:'Water Lilies and Japanese Bridge', fr:'Nymphéas et pont japonais', it:'Ninfee e ponte giapponese', es:'Nenúfares y puente japonés' } },
