@@ -179,7 +179,7 @@
   function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]); }
   function loc(o){ return (o && (o[lang()] || o.de)) || ''; }
   function face(id){ return FACES.find(f => f.id === id) || null; }
-  var IMGV = '?v=1035';
+  var IMGV = '?v=1036';
   function img(f){ return 'img/faces/' + f.id + '.webp' + IMGV; }
   function appleImg(f){ return 'img/watch-apple/' + f.id + '.jpg' + IMGV; }
   function appleFile(f){ return 'Masilano-' + f.id + '.jpg'; }

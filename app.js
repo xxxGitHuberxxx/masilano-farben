@@ -85,7 +85,7 @@ function loadTitles(){
     return Promise.resolve(window.MASILANO_TITLES);
   }
   if (titlesLoading) return titlesLoading;
-  const src = 'titles.js?v=1035';
+  const src = 'titles.js?v=1036';
   const boot = (I && I.loadScriptOnce) ? I.loadScriptOnce(src) : new Promise((res, rej) => {
     const s = document.createElement('script');
     s.src = src; s.onload = res; s.onerror = rej; document.head.appendChild(s);
@@ -96,6 +96,67 @@ function loadTitles(){
   });
   return titlesLoading;
 }
+function assetPin(src){
+  return src.indexOf('?') >= 0 ? src : src + '?v=1036';
+}
+function loadOnce(src){
+  const url = assetPin(src);
+  if (I && I.loadScriptOnce) return I.loadScriptOnce(url);
+  return new Promise((res, rej) => {
+    const s = document.createElement('script');
+    s.src = url; s.async = true; s.onload = res; s.onerror = rej;
+    document.head.appendChild(s);
+  });
+}
+let lbLoading = null, facesLoading = null, musicLoading = null;
+function ensureLb(){
+  if (window.MASILANO_LB && window.MASILANO_NAMES) {
+    initRankings();
+    return Promise.resolve(window.MASILANO_LB);
+  }
+  if (lbLoading) return lbLoading;
+  lbLoading = loadOnce('nameparts.js').then(() => loadOnce('rankings.js')).then(() => {
+    initRankings();
+    return window.MASILANO_LB;
+  });
+  return lbLoading;
+}
+function ensureFaces(){
+  if (window.MASILANO_FACES) {
+    initFaces();
+    return Promise.resolve(window.MASILANO_FACES);
+  }
+  if (facesLoading) return facesLoading;
+  facesLoading = loadOnce('zifferblaetter.js').then(() => {
+    initFaces();
+    return window.MASILANO_FACES;
+  });
+  return facesLoading;
+}
+function ensureMusic(){
+  if (window.MASILANO_MUSIC) return Promise.resolve(window.MASILANO_MUSIC);
+  if (musicLoading) return musicLoading;
+  musicLoading = loadOnce('music.js').then(() => {
+    if (window.MASILANO_MUSIC && window.MASILANO_MUSIC.bind) window.MASILANO_MUSIC.bind();
+    return window.MASILANO_MUSIC;
+  });
+  return musicLoading;
+}
+function withMusic(fn){
+  const M = window.MASILANO_MUSIC;
+  if (M) { fn(M); return; }
+  ensureMusic().then(m => { if (m) fn(m); });
+}
+function lbWelcomeLikely(){
+  try {
+    if (localStorage.getItem('masilano.lb.hidden.v1') === '1') return false;
+    const raw = localStorage.getItem('masilano.lb.name.v1');
+    if (!raw) return true;
+    const o = JSON.parse(raw);
+    return !(o && isFinite(+o.kind) && isFinite(+o.gender) && isFinite(+o.a) && isFinite(+o.b));
+  } catch (e) { return true; }
+}
+function heroUrl(id){ return 'data/' + id + '-hero.webp'; }
 function formatStreakRank(id){
   const TT = window.MASILANO_TITLES;
   if (TT && TT.formatTitle) return TT.formatTitle(id);
@@ -1819,10 +1880,10 @@ function showPath(path, opts){
     if (el) rw.appendChild(el);
   }
   renderStoryEntry();
-  if (window.MASILANO_MUSIC) {
+  {
     const sts = path.stations || [];
     const next = sts.find(st => !stationDone(st)) || sts[sts.length - 1] || sts[0];
-    window.MASILANO_MUSIC.attachPath(path, next && next.id);
+    withMusic(M => M.attachPath(path, next && next.id));
   }
 }
 function renderPathMap(path){
@@ -1924,10 +1985,10 @@ function showPathWork(path, step){
   $('#cGo').textContent = paintBtn(done, pct);
   $('#chapter .card').scrollTop = 0;
   revealSheet('#chapter');
-  if (window.MASILANO_MUSIC) {
-    window.MASILANO_MUSIC.setStation(path, step.st && step.st.id);
-    window.MASILANO_MUSIC.refresh();
-  }
+  withMusic(M => {
+    M.setStation(path, step.st && step.st.id);
+    M.refresh();
+  });
 }
 function showPathDone(){
   celebrateIfNeeded();
@@ -2167,9 +2228,9 @@ function renderDaily(){
   const card = document.createElement('article');
   card.id = 'dailyCard';
   card.className = 'dailyhero' + (done ? ' done' : '');
-  const img = 'orig.jpg';
+  const img = heroUrl(p.id);
   const cta = done ? t('dailyCtaView') : t('dailyCta');
-  card.innerHTML = `<div class="frame-baroque"><button type="button" class="heroim" id="dailyHeroIm" style="background-image:url(data/${p.id}-${img})" aria-label="${esc(t('dailyAria', { title: L(p, 'title') }))}"></button></div>
+  card.innerHTML = `<div class="frame-baroque"><button type="button" class="heroim" id="dailyHeroIm" style="background-image:url(${img})" aria-label="${esc(t('dailyAria', { title: L(p, 'title') }))}"></button></div>
     <div class="tx"><div class="roomlab">${t('roomDaily')}</div>
     <div class="plaque"><div class="n">${esc(L(p,'title'))}</div>
     <div class="a">${esc(L(p,'artist') || p.artist)}${p.year ? ' · ' + esc(p.year) : ''}</div></div>
@@ -2627,7 +2688,7 @@ function showAlbum(){
   albumArtistId = null;
   navigate({ kind: 'tab', tab: 'album' });
   showScreen('album');
-  loadTitles().then(() => renderAlbum());
+  Promise.all([loadTitles(), ensureFaces()]).then(() => renderAlbum());
 }
 function showAlbumArtist(id, opts){
   const album = albumOf(id);
@@ -2637,7 +2698,7 @@ function showAlbumArtist(id, opts){
   albumArtistId = id;
   if (!opts || !opts.noRoute) navigate({ kind: 'albumArtist', id });
   showScreen('album');
-  loadTitles().then(() => renderAlbum());
+  Promise.all([loadTitles(), ensureFaces()]).then(() => renderAlbum());
 }
 function bindAlbumHeader(){
   const bar = $('#albumArtistBar');
@@ -2674,7 +2735,7 @@ function albumRewardHtml(album){
   const faces = album.faces.map(f => {
     const F = window.MASILANO_FACES;
     const loc = (f.n && (f.n[I.lang] || f.n.de)) || f.id;
-    return `<button type="button" class="albrface" data-face="${esc(f.id)}"><img src="img/faces/${esc(f.id)}.webp?v=1035" alt="" width="72" height="72" loading="lazy" decoding="async"><span><span class="fn">${esc(loc)}</span><span class="fa">${esc(unlocked ? t(albumFaceState(album) === 'claimed' ? 'albumFaceClaimed' : 'albumFaceReady') : t('albumFaceRemain', { n: remain }))}</span></span></button>`;
+    return `<button type="button" class="albrface" data-face="${esc(f.id)}"><img src="img/faces/${esc(f.id)}.webp?v=1036" alt="" width="72" height="72" loading="lazy" decoding="async"><span><span class="fn">${esc(loc)}</span><span class="fa">${esc(unlocked ? t(albumFaceState(album) === 'claimed' ? 'albumFaceClaimed' : 'albumFaceReady') : t('albumFaceRemain', { n: remain }))}</span></span></button>`;
   }).join('');
   return `<section class="albreward${unlocked ? ' done' : ''}"><div class="rk">${esc(unlocked ? t('albumRewardDoneK') : t('albumRewardK'))}</div><p class="rlead">${esc(unlocked ? t('albumRewardDoneLead') : t('albumRewardLead', { N: album.N }))}</p><div class="albrfaces">${faces}</div></section>`;
 }
@@ -2729,6 +2790,7 @@ function renderAlbumDetail(box){
 function renderAlbum(){
   const box = $('#albumBody'); if (!box) return;
   if (!window.MASILANO_TITLES) { loadTitles().then(() => renderAlbum()); return; }
+  if (!window.MASILANO_FACES) { ensureFaces().then(() => renderAlbum()); return; }
   invalidateAlbumIndex();
   bindAlbumHeader();
   if (albumArtistId) renderAlbumDetail(box);
@@ -2758,29 +2820,35 @@ function syncOverlayBack(){
   setBtn('#lbBack', rankingsParent);
 }
 function showHall(opts){
-  hideSheets();
-  S = null;
-  if (!opts || !opts.noRoute) {
-    rememberOverlayParent('faces');
-    navigate({ kind: 'tab', tab: 'faces' });
-  }
-  showScreen('faces');
-  const sc = document.querySelector('#faces .chscroll');
-  if (sc) sc.scrollTop = 0;
-  syncOverlayBack();
+  return ensureFaces().then(() => {
+    hideSheets();
+    S = null;
+    if (!opts || !opts.noRoute) {
+      rememberOverlayParent('faces');
+      navigate({ kind: 'tab', tab: 'faces' });
+    }
+    showScreen('faces');
+    const sc = document.querySelector('#faces .chscroll');
+    if (sc) sc.scrollTop = 0;
+    syncOverlayBack();
+    if (window.MASILANO_FACES && window.MASILANO_FACES.refresh) window.MASILANO_FACES.refresh();
+  });
 }
 function showRankings(opts){
   loadTitles();
-  hideSheets();
-  S = null;
-  if (!opts || !opts.noRoute) {
-    rememberOverlayParent('rankings');
-    navigate({ kind: 'tab', tab: 'rankings' });
-  }
-  showScreen('rankings');
-  const sc = document.querySelector('#rankings .chscroll');
-  if (sc) sc.scrollTop = 0;
-  syncOverlayBack();
+  return ensureLb().then(() => {
+    hideSheets();
+    S = null;
+    if (!opts || !opts.noRoute) {
+      rememberOverlayParent('rankings');
+      navigate({ kind: 'tab', tab: 'rankings' });
+    }
+    showScreen('rankings');
+    const sc = document.querySelector('#rankings .chscroll');
+    if (sc) sc.scrollTop = 0;
+    syncOverlayBack();
+    if (window.MASILANO_LB && window.MASILANO_LB.refresh) window.MASILANO_LB.refresh();
+  });
 }
 if ($('#lbBack')) $('#lbBack').onclick = () => {
   hideSheets();
@@ -3701,14 +3769,14 @@ function loadShop(){
     if (!document.querySelector('link[data-shop-css]')) {
       const l = document.createElement('link');
       l.rel = 'stylesheet';
-      l.href = 'shop.css?v=1035';
+      l.href = 'shop.css?v=1036';
       l.setAttribute('data-shop-css', '1');
       document.head.appendChild(l);
     }
     const need = [];
-    if (!window.MASILANO_SHOP_CONFIG) need.push('shop-config.js?v=1035');
-    if (!window.MASILANO_SHOP_RES) need.push('shop-res.js?v=1035');
-    need.push('shop.js?v=1035');
+    if (!window.MASILANO_SHOP_CONFIG) need.push('shop-config.js?v=1036');
+    if (!window.MASILANO_SHOP_RES) need.push('shop-res.js?v=1036');
+    need.push('shop.js?v=1036');
     let i = 0;
     const next = () => {
       if (i >= need.length) {
@@ -3776,7 +3844,7 @@ bindShopEntries();
 let swReload = false;
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
   const hadCtrl = !!navigator.serviceWorker.controller;
-  navigator.serviceWorker.register('./sw.js?v=1035', { scope: './' }).catch(e => console.warn('SW', e));
+  navigator.serviceWorker.register('./sw.js?v=1036', { scope: './' }).catch(e => console.warn('SW', e));
   function requestSwReload(){
     if (!hadCtrl) return;           // first install: nothing to reload
     if (S) swReload = true; else location.reload();
@@ -3856,12 +3924,11 @@ function startUi(){
   ingestPathData();
   syncAppSubtitle();
   window.__pathTextsReady = !!(window.__pathIndexReady || PATHS.length >= 14);
-  initFaces();
-  initRankings();
   bootRoute();
   maybeShowInstallHint();
   if ((currentTab || 'heute') === 'heute') renderHeute();
   if ((currentTab || 'heute') === 'wege') renderStoryEntry();
+  if (lbWelcomeLikely()) ensureLb();
 }
 if (I.ensurePathTexts) I.ensurePathTexts().then(startUi, function (err) { console.error(err); startUi(); });
 else startUi();
