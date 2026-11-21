@@ -163,13 +163,69 @@
     { id:'haywain', path:'constable', artist:'John Constable', year:'1821',
       m:{ de:'The National Gallery, London', en:'The National Gallery, London', fr:'The National Gallery, Londres', it:'The National Gallery, Londra', es:'The National Gallery, Londres' },
       n:{ de:'Der Heuwagen', en:'The Hay Wain', fr:'La Charrette de foin', it:'Il carro di fieno', es:'La carreta de heno' },
-      w:{ de:'Der Heuwagen', en:'The Hay Wain', fr:'La Charrette de foin', it:'Il carro di fieno', es:'La carreta de heno' } }
+      w:{ de:'Der Heuwagen', en:'The Hay Wain', fr:'La Charrette de foin', it:'Il carro di fieno', es:'La carreta de heno' } },
+    { id:'macke', path:'macke', artist:'August Macke', year:'1913',
+      m:{ de:'Museum Ludwig, Köln', en:'Museum Ludwig, Cologne', fr:'Museum Ludwig, Cologne', it:'Museum Ludwig, Colonia', es:'Museum Ludwig, Colonia' },
+      n:{ de:'Dame in grüner Jacke', en:'Woman in a Green Jacket', fr:'Femme à la veste verte', it:'Donna in giacca verde', es:'Mujer con chaqueta verde' },
+      w:{ de:'Dame in grüner Jacke', en:'Woman in a Green Jacket', fr:'Femme à la veste verte', it:'Donna in giacca verde', es:'Mujer con chaqueta verde' } },
+    { id:'cradle', path:'morisot', artist:'Berthe Morisot', year:'1872',
+      m:{ de:'Musée d’Orsay, Paris', en:'Musée d’Orsay, Paris', fr:'Musée d’Orsay, Paris', it:'Musée d’Orsay, Parigi', es:'Musée d’Orsay, París' },
+      n:{ de:'Die Wiege', en:'The Cradle', fr:'Le Berceau', it:'La culla', es:'La cuna' },
+      w:{ de:'Die Wiege', en:'The Cradle', fr:'Le Berceau', it:'La culla', es:'La cuna' } },
+    { id:'meninas', path:'velazquez', artist:'Diego Velázquez', year:'1656',
+      m:{ de:'Museo del Prado, Madrid', en:'Museo del Prado, Madrid', fr:'Musée du Prado, Madrid', it:'Museo del Prado, Madrid', es:'Museo del Prado, Madrid' },
+      n:{ de:'Las Meninas', en:'Las Meninas', fr:'Les Ménines', it:'Las Meninas', es:'Las Meninas' },
+      w:{ de:'Las Meninas', en:'Las Meninas', fr:'Les Ménines', it:'Las Meninas', es:'Las Meninas' } },
+    { id:'etoile', path:'degas', artist:'Edgar Degas', year:'um 1876–1877',
+      m:{ de:'Musée d’Orsay, Paris', en:'Musée d’Orsay, Paris', fr:'Musée d’Orsay, Paris', it:'Musée d’Orsay, Parigi', es:'Musée d’Orsay, París' },
+      n:{ de:'Der Stern', en:'The Star', fr:'L’Étoile', it:'La stella', es:'La estrella' },
+      w:{ de:'Der Stern', en:'The Star', fr:'L’Étoile', it:'La stella', es:'La estrella' } },
+    { id:'quitasol', path:'goya', artist:'Francisco de Goya', year:'1777',
+      m:{ de:'Museo del Prado, Madrid', en:'Museo del Prado, Madrid', fr:'Musée du Prado, Madrid', it:'Museo del Prado, Madrid', es:'Museo del Prado, Madrid' },
+      n:{ de:'Der Sonnenschirm', en:'The Parasol', fr:'L’Ombrelle', it:'Il parasole', es:'El quitasol' },
+      w:{ de:'Der Sonnenschirm', en:'The Parasol', fr:'L’Ombrelle', it:'Il parasole', es:'El quitasol' } },
+    { id:'canaletto', path:'canaletto', artist:'Giovanni Antonio Canal (Canaletto)', year:'um 1730',
+      m:{ de:'Museum of Fine Arts, Houston', en:'Museum of Fine Arts, Houston', fr:'Museum of Fine Arts, Houston', it:'Museum of Fine Arts, Houston', es:'Museum of Fine Arts, Houston' },
+      n:{ de:'Canal Grande', en:'Grand Canal', fr:'Grand Canal', it:'Canal Grande', es:'Canal Grande' },
+      w:{ de:'Einfahrt in den Canal Grande', en:'Entrance to the Grand Canal', fr:'Entrée du Grand Canal', it:'Ingresso al Canal Grande', es:'Entrada al Canal Grande' } },
+    { id:'gothic', path:'wood', artist:'Grant Wood', year:'1930',
+      m:{ de:'The Art Institute of Chicago', en:'The Art Institute of Chicago', fr:'The Art Institute of Chicago', it:'The Art Institute of Chicago', es:'The Art Institute of Chicago' },
+      n:{ de:'American Gothic', en:'American Gothic', fr:'American Gothic', it:'American Gothic', es:'American Gothic' },
+      w:{ de:'American Gothic', en:'American Gothic', fr:'American Gothic', it:'American Gothic', es:'American Gothic' } },
+    { id:'angelus', path:'millet', artist:'Jean-François Millet', year:'1857–1859',
+      m:{ de:'Musée d’Orsay, Paris', en:'Musée d’Orsay, Paris', fr:'Musée d’Orsay, Paris', it:'Musée d’Orsay, Parigi', es:'Musée d’Orsay, París' },
+      n:{ de:'Das Angelusläuten', en:'The Angelus', fr:'L’Angélus', it:'L’Angelus', es:'El Ángelus' },
+      w:{ de:'Das Angelusläuten', en:'The Angelus', fr:'L’Angélus', it:'L’Angelus', es:'El Ángelus' } },
+    { id:'shalott', path:'waterhouse', artist:'John William Waterhouse', year:'1888',
+      m:{ de:'Tate Britain, London', en:'Tate Britain, London', fr:'Tate Britain, Londres', it:'Tate Britain, Londra', es:'Tate Britain, Londres' },
+      n:{ de:'The Lady of Shalott', en:'The Lady of Shalott', fr:'The Lady of Shalott', it:'The Lady of Shalott', es:'The Lady of Shalott' },
+      w:{ de:'The Lady of Shalott', en:'The Lady of Shalott', fr:'The Lady of Shalott', it:'The Lady of Shalott', es:'The Lady of Shalott' } },
+    { id:'bath', path:'cassatt', artist:'Mary Cassatt', year:'1893',
+      m:{ de:'The Art Institute of Chicago', en:'The Art Institute of Chicago', fr:'The Art Institute of Chicago', it:'The Art Institute of Chicago', es:'The Art Institute of Chicago' },
+      n:{ de:'Das Kinderbad', en:'The Child’s Bath', fr:'Le Bain de l’enfant', it:'Il bagno del bambino', es:'El baño del niño' },
+      w:{ de:'Das Kinderbad', en:'The Child’s Bath', fr:'Le Bain de l’enfant', it:'Il bagno del bambino', es:'El baño del niño' } },
+    { id:'arearea', path:'gauguin', artist:'Paul Gauguin', year:'1892',
+      m:{ de:'Musée d’Orsay, Paris', en:'Musée d’Orsay, Paris', fr:'Musée d’Orsay, Paris', it:'Musée d’Orsay, Parigi', es:'Musée d’Orsay, París' },
+      n:{ de:'Arearea', en:'Arearea', fr:'Arearea', it:'Arearea', es:'Arearea' },
+      w:{ de:'Arearea (Fröhlichkeit)', en:'Arearea (Joyfulness)', fr:'Arearea (Joie)', it:'Arearea (Allegria)', es:'Arearea (Alegría)' } },
+    { id:'senecio', path:'klee', artist:'Paul Klee', year:'1922',
+      m:{ de:'Kunstmuseum Basel', en:'Kunstmuseum Basel', fr:'Kunstmuseum Basel', it:'Kunstmuseum Basel', es:'Kunstmuseum Basel' },
+      n:{ de:'Senecio', en:'Senecio', fr:'Senecio', it:'Senecio', es:'Senecio' },
+      w:{ de:'Senecio', en:'Senecio', fr:'Senecio', it:'Senecio', es:'Senecio' } },
+    { id:'mondrian', path:'mondrian', artist:'Piet Mondrian', year:'1930',
+      m:{ de:'Kunsthaus Zürich', en:'Kunsthaus Zürich', fr:'Kunsthaus Zürich', it:'Kunsthaus Zürich', es:'Kunsthaus Zürich' },
+      n:{ de:'Rot, Blau und Gelb', en:'Red, Blue and Yellow', fr:'Rouge, bleu et jaune', it:'Rosso, blu e giallo', es:'Rojo, azul y amarillo' },
+      w:{ de:'Komposition mit Rot, Blau und Gelb', en:'Composition with Red, Blue and Yellow', fr:'Composition avec rouge, bleu et jaune', it:'Composizione con rosso, blu e giallo', es:'Composición con rojo, azul y amarillo' } },
+    { id:'bluehorse', path:'marc', artist:'Franz Marc', year:'1911',
+      m:{ de:'Städtische Galerie im Lenbachhaus, München', en:'Lenbachhaus, Munich', fr:'Lenbachhaus, Munich', it:'Lenbachhaus, Monaco', es:'Lenbachhaus, Múnich' },
+      n:{ de:'Blaues Pferd I', en:'Blue Horse I', fr:'Cheval bleu I', it:'Cavallo blu I', es:'Caballo azul I' },
+      w:{ de:'Blaues Pferd I', en:'Blue Horse I', fr:'Cheval bleu I', it:'Cavallo blu I', es:'Caballo azul I' } }
   ];
   const TX = {
     de: {
       room:'Saal der Vollendung', title:'Zifferblätter', motto:'Normal unbezahlbar, nur für Vollender',
       lead:'Museums-Zifferblätter für Wear-OS-Uhren, jedes in seinem eigenen Goldrahmen. Normalerweise unbezahlbar: Wer den Lebensweg eines Malers vollendet, erhält dessen Zifferblatt als Belohnung, mit einem persönlichen Code. Für die Apple Watch gibt es das Gemälde für das Zifferblatt «Fotos».',
-      entryK:'Exklusiv', entryS:'Sechsundvierzig Meisterwerke am Handgelenk',
+      entryK:'Exklusiv', entryS:'Sechzig Meisterwerke am Handgelenk',
       earned:'Verliehen', claimed:'Angefordert', soon:'In Arbeit', prog:'{n} von {N} Bildern',
       onPath:'Lohn für {path}', soonLong:'Der Lebensweg von {artist} ist in Vorbereitung. Bis dahin bleibt dieses Zifferblatt hinter Glas.',
       lockedLong:'Dieses Zifferblatt erhält, wer das Sammelalbum vollendet. Wer den Lebensweg schon vollendet hat, behält es.',
@@ -187,7 +243,7 @@
     en: {
       room:'Hall of Completion', title:'Watch Faces', motto:'Normally priceless, only for those who finish',
       lead:'Museum watch faces for Wear OS watches, each in its own gilded frame. Normally priceless: anyone who completes a painter\u2019s life path receives that painter\u2019s watch face as a reward, with a personal code. For the Apple Watch, the painting is provided for the Photos watch face.',
-      entryK:'Exclusive', entryS:'Forty-six masterpieces on your wrist',
+      entryK:'Exclusive', entryS:'Sixty masterpieces on your wrist',
       earned:'Awarded', claimed:'Requested', soon:'In progress', prog:'{n} of {N} pictures',
       onPath:'Reward for {path}', soonLong:'{artist}\u2019s life path is in preparation. Until then this watch face stays behind glass.',
       lockedLong:'This watch face is for those who complete the collection album. Anyone who has already finished the life path keeps it.',
@@ -205,7 +261,7 @@
     fr: {
       room:'Salle de l\u2019accomplissement', title:'Cadrans', motto:'D\u2019ordinaire inestimables, réservés à qui va jusqu\u2019au bout',
       lead:'Des cadrans de musée pour montres Wear OS, chacun dans son propre cadre doré. Normalement inestimables : qui achève le parcours de vie d\u2019un peintre reçoit son cadran en récompense, avec un code personnel. Pour l\u2019Apple Watch, le tableau est prévu pour le cadran « Photos ».',
-      entryK:'Exclusif', entryS:'Quarante-six chefs-d\u2019œuvre au poignet',
+      entryK:'Exclusif', entryS:'Soixante chefs-d\u2019œuvre au poignet',
       earned:'Décerné', claimed:'Demandé', soon:'En préparation', prog:'{n} sur {N} tableaux',
       onPath:'Récompense de {path}', soonLong:'Le parcours de vie de {artist} est en préparation. D\u2019ici là, ce cadran reste sous vitrine.',
       lockedLong:'Ce cadran revient à qui complète l’album. Quiconque a déjà achevé le parcours le conserve.',
@@ -223,7 +279,7 @@
     it: {
       room:'Sala del compimento', title:'Quadranti', motto:'Di norma impagabili, solo per chi arriva in fondo',
       lead:'Quadranti da museo per orologi Wear OS, ciascuno nella propria cornice dorata. Di norma impagabili: chi completa il percorso di vita di un pittore riceve il suo quadrante come premio, con un codice personale. Per l\u2019Apple Watch c\u2019è il dipinto per il quadrante «Foto».',
-      entryK:'Esclusivo', entryS:'Quarantasei capolavori al polso',
+      entryK:'Esclusivo', entryS:'Sessanta capolavori al polso',
       earned:'Conferito', claimed:'Richiesto', soon:'In lavorazione', prog:'{n} di {N} quadri',
       onPath:'Premio per {path}', soonLong:'Il percorso di vita di {artist} è in preparazione. Fino ad allora questo quadrante resta dietro il vetro.',
       lockedLong:'Questo quadrante è per chi completa l’album. Chi ha già finito il percorso lo conserva.',
@@ -241,7 +297,7 @@
     es: {
       room:'Sala de la culminación', title:'Esferas', motto:'Normalmente impagables, solo para quien llega al final',
       lead:'Esferas de museo para relojes Wear OS, cada una en su propio marco dorado. Normalmente impagables: quien completa el camino de vida de un pintor recibe su esfera como recompensa, con un código personal. Para el Apple Watch, la pintura se ofrece para la esfera «Fotos».',
-      entryK:'Exclusivo', entryS:'Cuarenta y seis obras maestras en la muñeca',
+      entryK:'Exclusivo', entryS:'Sesenta obras maestras en la muñeca',
       earned:'Concedida', claimed:'Solicitada', soon:'En preparación', prog:'{n} de {N} cuadros',
       onPath:'Premio por {path}', soonLong:'El camino de vida de {artist} está en preparación. Hasta entonces, esta esfera permanece tras el cristal.',
       lockedLong:'Esta esfera es para quien completa el álbum. Quien ya ha terminado el camino la conserva.',
@@ -264,7 +320,7 @@
   function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]); }
   function loc(o){ return (o && (o[lang()] || o.de)) || ''; }
   function face(id){ return FACES.find(f => f.id === id) || null; }
-  var IMGV = '?v=1038';
+  var IMGV = '?v=1039';
   function img(f){ return 'img/faces/' + f.id + '.webp' + IMGV; }
   function appleImg(f){ return 'img/watch-apple/' + f.id + '.jpg' + IMGV; }
   function appleFile(f){ return 'Masilano-' + f.id + '.jpg'; }
