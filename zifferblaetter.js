@@ -78,13 +78,41 @@
       w:{ de:'In der Pergola', en:'In the Pergola', fr:'Sous la pergola', it:'Sotto il pergolato', es:'En la pérgola' } },
     { id:'mohn', path:'wisinger', artist:'Olga Wisinger-Florian', year:'um 1895',
       n:{ de:'Blühender Mohn', en:'Poppies in Bloom', fr:'Coquelicots en fleurs', it:'Papaveri in fiore', es:'Amapolas en flor' },
-      w:{ de:'Blühender Mohn', en:'Poppies in Bloom', fr:'Coquelicots en fleurs', it:'Papaveri in fiore', es:'Amapolas en flor' } }
+      w:{ de:'Blühender Mohn', en:'Poppies in Bloom', fr:'Coquelicots en fleurs', it:'Papaveri in fiore', es:'Amapolas en flor' } },
+    { id:'schulexamen', path:'anker', artist:'Albert Anker', year:'1862',
+      m:{ de:'Privatbesitz (Foto: SIK-ISEA)', en:'Private collection (photo: SIK-ISEA)', fr:'Collection privée (photo : SIK-ISEA)', it:'Collezione privata (foto: SIK-ISEA)', es:'Colección privada (foto: SIK-ISEA)' },
+      n:{ de:'Das Schulexamen', en:'The School Exam', fr:'L’Examen à l’école', it:'L’esame a scuola', es:'El examen escolar' },
+      w:{ de:'Das Schulexamen', en:'The School Exam', fr:'L’Examen à l’école', it:'L’esame a scuola', es:'El examen escolar' } },
+    { id:'nightwatch', path:'rembrandt', artist:'Rembrandt van Rijn', year:'1642',
+      m:{ de:'Rijksmuseum, Amsterdam', en:'Rijksmuseum, Amsterdam', fr:'Rijksmuseum, Amsterdam', it:'Rijksmuseum, Amsterdam', es:'Rijksmuseum, Ámsterdam' },
+      n:{ de:'Die Nachtwache', en:'The Night Watch', fr:'La Ronde de nuit', it:'La ronda di notte', es:'La ronda de noche' },
+      w:{ de:'Die Nachtwache', en:'The Night Watch', fr:'La Ronde de nuit', it:'La ronda di notte', es:'La ronda de noche' } },
+    { id:'sisters', path:'renoir', artist:'Pierre-Auguste Renoir', year:'1881',
+      m:{ de:'The Art Institute of Chicago', en:'The Art Institute of Chicago', fr:'The Art Institute of Chicago', it:'The Art Institute of Chicago', es:'The Art Institute of Chicago' },
+      n:{ de:'Zwei Schwestern', en:'Two Sisters', fr:'Les Deux Sœurs', it:'Le due sorelle', es:'Las dos hermanas' },
+      w:{ de:'Zwei Schwestern (Auf der Terrasse)', en:'Two Sisters (On the Terrace)', fr:'Les Deux Sœurs (Sur la terrasse)', it:'Le due sorelle (Sulla terrazza)', es:'Las dos hermanas (En la terraza)' } },
+    { id:'cardplayers', path:'cezanne', artist:'Paul Cézanne', year:'1890–1892',
+      m:{ de:'The Metropolitan Museum of Art, New York', en:'The Metropolitan Museum of Art, New York', fr:'The Metropolitan Museum of Art, New York', it:'The Metropolitan Museum of Art, New York', es:'The Metropolitan Museum of Art, Nueva York' },
+      n:{ de:'Die Kartenspieler', en:'The Card Players', fr:'Les Joueurs de cartes', it:'I giocatori di carte', es:'Los jugadores de cartas' },
+      w:{ de:'Die Kartenspieler', en:'The Card Players', fr:'Les Joueurs de cartes', it:'I giocatori di carte', es:'Los jugadores de cartas' } },
+    { id:'temeraire', path:'turner', artist:'J. M. W. Turner', year:'1839',
+      m:{ de:'The National Gallery, London', en:'The National Gallery, London', fr:'The National Gallery, Londres', it:'The National Gallery, Londra', es:'The National Gallery, Londres' },
+      n:{ de:'Die Temeraire', en:'The Fighting Temeraire', fr:'Le Téméraire', it:'Il Temeraire', es:'El Temeraire' },
+      w:{ de:'Die letzte Fahrt der Temeraire', en:'The Fighting Temeraire', fr:'Le Dernier Voyage du Téméraire', it:'L’ultimo viaggio del Temeraire', es:'El último viaje del Temeraire' } },
+    { id:'montmartre', path:'pissarro', artist:'Camille Pissarro', year:'1897',
+      m:{ de:'The Metropolitan Museum of Art, New York', en:'The Metropolitan Museum of Art, New York', fr:'The Metropolitan Museum of Art, New York', it:'The Metropolitan Museum of Art, New York', es:'The Metropolitan Museum of Art, Nueva York' },
+      n:{ de:'Boulevard Montmartre', en:'Boulevard Montmartre', fr:'Boulevard Montmartre', it:'Boulevard Montmartre', es:'Bulevar Montmartre' },
+      w:{ de:'Der Boulevard Montmartre an einem Wintermorgen', en:'The Boulevard Montmartre on a Winter Morning', fr:'Le Boulevard Montmartre, matin d’hiver', it:'Il Boulevard Montmartre in un mattino d’inverno', es:'El bulevar Montmartre en una mañana de invierno' } },
+    { id:'villeneuve', path:'sisley', artist:'Alfred Sisley', year:'1872',
+      m:{ de:'The Metropolitan Museum of Art, New York', en:'The Metropolitan Museum of Art, New York', fr:'The Metropolitan Museum of Art, New York', it:'The Metropolitan Museum of Art, New York', es:'The Metropolitan Museum of Art, Nueva York' },
+      n:{ de:'Brücke von Villeneuve', en:'Bridge at Villeneuve', fr:'Le Pont de Villeneuve', it:'Il ponte di Villeneuve', es:'El puente de Villeneuve' },
+      w:{ de:'Die Brücke von Villeneuve-la-Garenne', en:'The Bridge at Villeneuve-la-Garenne', fr:'Le Pont à Villeneuve-la-Garenne', it:'Il ponte di Villeneuve-la-Garenne', es:'El puente de Villeneuve-la-Garenne' } }
   ];
   const TX = {
     de: {
       room:'Saal der Vollendung', title:'Zifferblätter', motto:'Normal unbezahlbar, nur für Vollender',
       lead:'Museums-Zifferblätter für Wear-OS-Uhren, jedes in seinem eigenen Goldrahmen. Normalerweise unbezahlbar: Wer den Lebensweg eines Malers vollendet, erhält dessen Zifferblatt als Belohnung, mit einem persönlichen Code. Für die Apple Watch gibt es das Gemälde für das Zifferblatt «Fotos».',
-      entryK:'Exklusiv', entryS:'Fünfundzwanzig Meisterwerke am Handgelenk',
+      entryK:'Exklusiv', entryS:'Zweiunddreissig Meisterwerke am Handgelenk',
       earned:'Verliehen', claimed:'Angefordert', soon:'In Arbeit', prog:'{n} von {N} Bildern',
       onPath:'Lohn für {path}', soonLong:'Der Lebensweg von {artist} ist in Vorbereitung. Bis dahin bleibt dieses Zifferblatt hinter Glas.',
       lockedLong:'Dieses Zifferblatt erhält, wer das Sammelalbum vollendet. Wer den Lebensweg schon vollendet hat, behält es.',
@@ -102,7 +130,7 @@
     en: {
       room:'Hall of Completion', title:'Watch Faces', motto:'Normally priceless, only for those who finish',
       lead:'Museum watch faces for Wear OS watches, each in its own gilded frame. Normally priceless: anyone who completes a painter\u2019s life path receives that painter\u2019s watch face as a reward, with a personal code. For the Apple Watch, the painting is provided for the Photos watch face.',
-      entryK:'Exclusive', entryS:'Twenty-five masterpieces on your wrist',
+      entryK:'Exclusive', entryS:'Thirty-two masterpieces on your wrist',
       earned:'Awarded', claimed:'Requested', soon:'In progress', prog:'{n} of {N} pictures',
       onPath:'Reward for {path}', soonLong:'{artist}\u2019s life path is in preparation. Until then this watch face stays behind glass.',
       lockedLong:'This watch face is for those who complete the collection album. Anyone who has already finished the life path keeps it.',
@@ -120,7 +148,7 @@
     fr: {
       room:'Salle de l\u2019accomplissement', title:'Cadrans', motto:'D\u2019ordinaire inestimables, réservés à qui va jusqu\u2019au bout',
       lead:'Des cadrans de musée pour montres Wear OS, chacun dans son propre cadre doré. Normalement inestimables : qui achève le parcours de vie d\u2019un peintre reçoit son cadran en récompense, avec un code personnel. Pour l\u2019Apple Watch, le tableau est prévu pour le cadran « Photos ».',
-      entryK:'Exclusif', entryS:'Vingt-cinq chefs-d\u2019œuvre au poignet',
+      entryK:'Exclusif', entryS:'Trente-deux chefs-d\u2019œuvre au poignet',
       earned:'Décerné', claimed:'Demandé', soon:'En préparation', prog:'{n} sur {N} tableaux',
       onPath:'Récompense de {path}', soonLong:'Le parcours de vie de {artist} est en préparation. D\u2019ici là, ce cadran reste sous vitrine.',
       lockedLong:'Ce cadran revient à qui complète l’album. Quiconque a déjà achevé le parcours le conserve.',
@@ -138,7 +166,7 @@
     it: {
       room:'Sala del compimento', title:'Quadranti', motto:'Di norma impagabili, solo per chi arriva in fondo',
       lead:'Quadranti da museo per orologi Wear OS, ciascuno nella propria cornice dorata. Di norma impagabili: chi completa il percorso di vita di un pittore riceve il suo quadrante come premio, con un codice personale. Per l\u2019Apple Watch c\u2019è il dipinto per il quadrante «Foto».',
-      entryK:'Esclusivo', entryS:'Venticinque capolavori al polso',
+      entryK:'Esclusivo', entryS:'Trentadue capolavori al polso',
       earned:'Conferito', claimed:'Richiesto', soon:'In lavorazione', prog:'{n} di {N} quadri',
       onPath:'Premio per {path}', soonLong:'Il percorso di vita di {artist} è in preparazione. Fino ad allora questo quadrante resta dietro il vetro.',
       lockedLong:'Questo quadrante è per chi completa l’album. Chi ha già finito il percorso lo conserva.',
@@ -156,7 +184,7 @@
     es: {
       room:'Sala de la culminación', title:'Esferas', motto:'Normalmente impagables, solo para quien llega al final',
       lead:'Esferas de museo para relojes Wear OS, cada una en su propio marco dorado. Normalmente impagables: quien completa el camino de vida de un pintor recibe su esfera como recompensa, con un código personal. Para el Apple Watch, la pintura se ofrece para la esfera «Fotos».',
-      entryK:'Exclusivo', entryS:'Veinticinco obras maestras en la muñeca',
+      entryK:'Exclusivo', entryS:'Treinta y dos obras maestras en la muñeca',
       earned:'Concedida', claimed:'Solicitada', soon:'En preparación', prog:'{n} de {N} cuadros',
       onPath:'Premio por {path}', soonLong:'El camino de vida de {artist} está en preparación. Hasta entonces, esta esfera permanece tras el cristal.',
       lockedLong:'Esta esfera es para quien completa el álbum. Quien ya ha terminado el camino la conserva.',
@@ -179,7 +207,7 @@
   function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]); }
   function loc(o){ return (o && (o[lang()] || o.de)) || ''; }
   function face(id){ return FACES.find(f => f.id === id) || null; }
-  var IMGV = '?v=1036';
+  var IMGV = '?v=1037';
   function img(f){ return 'img/faces/' + f.id + '.webp' + IMGV; }
   function appleImg(f){ return 'img/watch-apple/' + f.id + '.jpg' + IMGV; }
   function appleFile(f){ return 'Masilano-' + f.id + '.jpg'; }
