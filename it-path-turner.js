@@ -215,15 +215,15 @@
   P.paths = P.paths || {};
   P.paths.turner = {
   "title": "Il percorso di vita di J. M. W. Turner",
-  "part": "Parte 1 · 1775–1819",
-  "subtitle": "Da Covent Garden, attraverso le Alpi, fino al Reno",
-  "intro": "Joseph Mallord William Turner nasce il 23 aprile 1775 al numero 21 di Maiden Lane, a Covent Garden, figlio di un barbiere, e viene battezzato il 14 maggio nella chiesa di St Paul a Covent Garden. Questa prima parte lo segue dalle Royal Academy Schools e dai primi acquerelli, attraverso il primo olio del 1796, l’elezione alla Royal Academy nel 1802 e il primo viaggio sul continente, fino alla soglia del viaggio in Italia nel 1819.",
+  "life": "1775–1851",
+  "part": "Parti 1–2 · 1775–1851",
+  "subtitle": "Da Covent Garden, per Venezia e il Rigi, a Chelsea",
+  "intro": "Viaggia con J. M. W. Turner per tutta la sua vita: dalla nascita a Covent Garden nel 1775, attraverso la Royal Academy, il Galles, le Alpi e il Reno, fino ai viaggi in Italia, a Petworth, all’incendio del Parlamento, a Venezia, alla Fighting Temeraire, agli acquerelli svizzeri e a Pioggia, vapore e velocità, fino alla sua morte il 19 dicembre 1851 a Chelsea.",
   "ending": [
-    "Nell’agosto 1819 Turner parte per il suo primo viaggio in Italia.",
-    "Nella parte successiva arrivano Venezia, Pioggia, vapore e velocità, la Fighting Temeraire e la sua morte il 19 dicembre 1851 a Chelsea."
+    "J. M. W. Turner muore a Chelsea il 19 dicembre 1851, a settantasei anni. È sepolto nella cattedrale di St Paul a Londra.",
+    "Lascia i suoi dipinti alla nazione. Con il Turner Bequest restano insieme centinaia di dipinti e migliaia di disegni e acquerelli, dalle prime vedute del Galles fino alla luce, al vapore e alla nebbia degli ultimi anni."
   ],
-  "epilogue": "Nella parte successiva arrivano Venezia, Pioggia, vapore e velocità, la Fighting Temeraire e la sua morte il 19 dicembre 1851 a Chelsea.",
-  "life": "1775–1851"
+  "epilogue": "J. M. W. Turner muore a Chelsea il 19 dicembre 1851. È sepolto nella cattedrale di St Paul a Londra."
 };
   P.stations = Object.assign(P.stations || {}, {
   "tucovent": {

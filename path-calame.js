@@ -128,10 +128,10 @@
   "cover": "acthun",
   "intro": "Reise mit Alexandre Calame, dem Genfer Maler der Alpen: von den ersten Berglandschaften über Grimsel, Rosenlaui und das Wetterhorn bis zu den stillen Seen von Thun, Genf und Luzern. Kurze Stationen und Bilder zum Ausmalen. Dieser erste Teil folgt ihm durch die Schweizer Berge.",
   "ending": [
-    "Alexandre Calame stirbt am 17. März 1864 in Menton, dreiundfünfzig Jahre alt. Seine Alpenbilder haben die Sicht auf die Schweizer Berge in ganz Europa geprägt.",
+    "Alexandre Calame stirbt am 19. März 1864 in Menton, dreiundfünfzig Jahre alt. Seine Alpenbilder haben die Sicht auf die Schweizer Berge in ganz Europa geprägt.",
     "Der Weg kann weiterwachsen. Lithografien, Italienbilder und weitere Gebirge können in einem späteren Teil folgen."
   ],
-  "epilogue": "Am 17. März 1864 stirbt Calame in Menton. Ein späterer Teil kann Lithografien und weitere Gebirge nachtragen.",
+  "epilogue": "Am 19. März 1864 stirbt Calame in Menton. Ein späterer Teil kann Lithografien und weitere Gebirge nachtragen.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [

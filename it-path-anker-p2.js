@@ -78,7 +78,7 @@
   },
   "dorfschule": {
     "title": "La scuola di villaggio del 1848",
-    "museum": "Kunstmuseum Bern"
+    "museum": "Kunstmuseum Basel"
   },
   "zaeslin": {
     "title": "I fratelli Zaeslin",
@@ -476,7 +476,7 @@
       "In un’aula scura sono seduti bambini di tutte le età; il maestro è al centro.",
       "Anker dipinge il quadro nel 1896 e ricorda così l’anno 1848, in cui nasce lo Stato federale moderno."
     ],
-    "fact": "1896. Kunstmuseum Bern."
+    "fact": "1896. Kunstmuseum Basel."
   },
   "zaeslin": {
     "text": [

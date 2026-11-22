@@ -52,10 +52,10 @@
   },
   "ettenchurch": {
     "text": [
-      "Le presbytère et l’église d’Etten : le village où vivent les parents, et la charge du père, à laquelle Vincent aspira lui-même un jour. Il dessine le presbytère avec calme et objectivité, encore sans querelle dans l’image.",
+      "Le presbytère et l’église d’Etten : le village où vivent les parents, et la charge du père, à laquelle Vincent aspira lui-même un jour. Il avait déjà dessiné le presbytère en avril 1876, lors d’une visite, avec calme et objectivité, des années avant la querelle avec son père.",
       "Dans la maison même, l’atmosphère s’alourdit. Kee loge par moments chez la famille, et les sentiments de Vincent se heurtent à un mur."
     ],
-    "fact": "Le dessin appartient au Van Gogh Museum d’Amsterdam. On voit le presbytère à gauche et le clocher à droite – la maison parentale de Vincent cette année-là."
+    "fact": "Le dessin appartient au Van Gogh Museum d’Amsterdam. On voit le presbytère à gauche et le clocher à droite – la maison parentale de Vincent depuis 1875."
   },
   "schevwoman": {
     "text": [
@@ -349,7 +349,7 @@
       "Le jardin du presbytère en hiver, comme un grand dessin à la plume de roseau : un arbre noueux, des branches nues, la tour au loin, des allées sous un ciel de plomb. Vincent dessine le jardin comme si l’arbre était un être avec des veines et des articulations.",
       "C’est l’hiver 1884/85, l’hiver des nombreuses études de têtes et de mains qui entrent plus tard dans Les Mangeurs de pommes de terre. La maison des parents se tient tout contre ce jardin."
     ],
-    "fact": "Le dessin appartient au Van Gogh Museum. Vincent a aussi peint à l’huile le jardin hivernal du presbytère ; cette feuille montre particulièrement clairement comment il construit les arbres « de l’intérieur »."
+    "fact": "Le dessin appartient au Musée des Beaux-Arts de Budapest. Vincent a aussi peint à l’huile le jardin hivernal du presbytère ; cette feuille montre particulièrement clairement comment il construit les arbres « de l’intérieur »."
   },
   "congreg": {
     "text": [
@@ -645,7 +645,7 @@
       "À l’intérieur d’un restaurant, les tables sont prêtes, des nappes à carreaux, des fleurs, une pièce chaude, vert-jaune. Personne n’est assis, et pourtant la salle est pleine de couleur.",
       "Vincent exerce ici l’intérieur et le motif – en préparation des tableaux de chambre plus tardifs. Le plan est déjà posé rythmiquement, presque comme une étoffe."
     ],
-    "fact": "Le tableau appartient à l’Indianapolis Museum of Art. C’est un intérieur parisien, non la chambre plus tardive d’Arles ; mais l’amour apparenté pour une pièce à motifs se sent déjà."
+    "fact": "Le tableau appartient au Kröller-Müller Museum d’Otterlo. C’est un intérieur parisien, non la chambre plus tardive d’Arles ; mais l’amour apparenté pour une pièce à motifs se sent déjà."
   },
   "parkcouples": {
     "text": [
@@ -751,10 +751,10 @@
   },
   "selforsay": {
     "text": [
-      "Contre un fond turquoise, la tête se tient libre, le regard est éveillé, les traits sont courts et colorés. Cet autoportrait est aujourd’hui accroché à Paris, dans la ville où il est né.",
+      "Contre un fond turquoise, la tête se tient libre, le regard est éveillé, les traits sont courts et colorés. Cet autoportrait est né à Paris et se trouve aujourd’hui à Chicago.",
       "Ici la transformation est presque achevée : du peintre des Mangeurs de pommes de terre est venu quelqu’un qui peut se tenir dans la couleur pure."
     ],
-    "fact": "Le tableau est accroché au Musée d’Orsay à Paris. Il appartient aux autoportraits les plus clairs de l’année 1887 et montre la couleur parisienne de Vincent à son sommet avant Arles."
+    "fact": "Le tableau est accroché à l’Art Institute of Chicago. Il appartient aux autoportraits les plus clairs de l’année 1887 et montre la couleur parisienne de Vincent à son sommet avant Arles."
   },
   "selfartist": {
     "text": [
@@ -937,7 +937,7 @@
       "Des rochers et un chêne, plus frais que les champs de blé, le vert plus vigoureux. À Montmajour, Vincent ne peint pas seulement le lointain, mais aussi la pierre.",
       "Après des semaines dans la plaine, c’est un autre motif : massif, proche, avec une lumière dure sur les surfaces."
     ],
-    "fact": "Le tableau appartient au Kröller-Müller Museum et naît en juillet 1888."
+    "fact": "Le tableau appartient au Museum of Fine Arts de Houston et naît en juillet 1888."
   },
   "flowergarden": {
     "text": [
@@ -1060,7 +1060,7 @@
       "Patience Escalier, un jardinier et ancien berger, dans un chapeau d’un jaune paille, les mains croisées, le fond vigoureux. Vincent ne cherche pas ici un type urbain, mais un homme de la Crau.",
       "Dans une lettre, il parle de l’« homme terrible » qu’il a dû peindre dans l’éclat de la moisson, à midi : un orange brûlant, des tons d’or vieux dans l’obscurité."
     ],
-    "fact": "Le tableau appartient au Kunsthaus Zürich et naît en août 1888."
+    "fact": "Le tableau se trouve dans une collection particulière et naît en août 1888."
   },
   "boch": {
     "text": [
@@ -1713,10 +1713,10 @@
   },
   "wheatcorn": {
     "text": [
-      "Un champ de blé, parsemé de bleuets, sous un ciel agité. Le tableau est accroché aujourd’hui dans la Sammlung E.G. Bührle à Zurich.",
+      "Un champ de blé, parsemé de bleuets, sous un ciel agité. Le tableau est accroché aujourd’hui dans la Fondation Beyeler à Riehen.",
       "Comme les autres champs tardifs, il est étiré en largeur : en bas les épis, en haut les nuages, entre eux à peine un village."
     ],
-    "fact": "Le tableau appartient à la Sammlung E.G. Bührle à Zurich et naît en juillet 1890."
+    "fact": "Le tableau appartient à la Fondation Beyeler à Riehen et naît en juillet 1890."
   },
   "farmsauvers": {
     "text": [

@@ -280,7 +280,7 @@
     "title": "San Giorgio Maggiore in der Dämmerung",
     "artist": "Claude Monet",
     "year": "1908",
-    "museum": "Fondation Beyeler, Riehen",
+    "museum": "National Museum Cardiff",
     "source": "Wikimedia Commons: «Claude Monet, Saint-Georges majeur au crépuscule.jpg», gemeinfrei (Public Domain)"
   },
   {
@@ -320,7 +320,7 @@
     "title": "Der Canal Grande",
     "artist": "Claude Monet",
     "year": "1908",
-    "museum": "Fondation Beyeler, Riehen",
+    "museum": "Museum of Fine Arts, Boston",
     "source": "Wikimedia Commons: «Claude Monet, Le Grand Canal.jpg», gemeinfrei (Public Domain)"
   },
   {
@@ -872,7 +872,7 @@
           "In der Dämmerung brennt der Himmel hinter San Giorgio, die Kirche wird zur Silhouette, das Wasser nimmt das Orange auf.",
           "An Geffroy schreibt Monet, das Licht Venedigs sei einzigartig – und er sei traurig, es zu verlassen."
         ],
-        "fact": "Das Bild von 1908 hängt in der Fondation Beyeler in Riehen.",
+        "fact": "Das Bild von 1908 hängt im National Museum Cardiff.",
         "quote": {
           "text": "Sie wird Ihnen von meiner Begeisterung für Venedig erzählt haben. Nun, sie ist nur noch gewachsen, und da der Augenblick näher rückt, dieses einzigartige Licht zu verlassen, bin ich traurig darüber. Es ist so schön.",
           "cite": "Brief an Gustave Geffroy, Venedig, 7. Dezember 1908"
@@ -916,7 +916,7 @@
           "Santa Maria della Salute steht am Ende des Canal Grande, Stangen im Vordergrund teilen die Fläche, das Wasser ist türkis und violett.",
           "Im Dezember 1908 verlassen Monet und Alice Venedig. Die Bilder arbeitet er später in Giverny weiter aus."
         ],
-        "fact": "Das Bild von 1908 hängt in der Fondation Beyeler in Riehen."
+        "fact": "Das Bild von 1908 hängt im Museum of Fine Arts in Boston."
       }
     ]
   },

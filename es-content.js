@@ -224,7 +224,7 @@ window.ES = {
       "story": "Una terraza de café iluminada en Arlés, con el cielo estrellado encima. Van Gogh pintó el cuadro en septiembre de 1888, al aire libre y de noche.",
       "facts": [
         "Es uno de los primeros cuadros en los que Van Gogh pintó un cielo estrellado. La Noche estrellada vendría casi un año después.",
-        "El café existía de verdad: se llamaba Café Terrace y estaba en la Place du Forum de Arlés."
+        "A su hermana le escribió con orgullo sobre un cuadro nocturno sin nada de negro, solo con azul, violeta y verde."
       ]
     },
     "jatte": {
@@ -244,7 +244,7 @@ window.ES = {
       "story": "Un baile popular al aire libre en Montmartre, entonces aún un barrio en el borde de París. Renoir pintó a amigos y vecinos, en un domingo por la tarde a la luz del sol entre los árboles.",
       "facts": [
         "El Moulin de la Galette era un verdadero baile, con molino y jardín. Allí se servían galettes, unas tortas planas, de ahí el nombre.",
-        "Renoir pintó una segunda versión, más pequeña, que hoy cuelga en el Orangerie de París."
+        "Muchos de los invitados del cuadro son amigos de Renoir, por ejemplo pintores y escritores."
       ]
     },
     "wanderer": {
@@ -441,7 +441,7 @@ window.ES = {
       "title": "Arearea (Alegría)",
       "museum": "Musée d’Orsay, Paris",
       "technique": "Óleo sobre lienzo, con colores intensos y planos y contornos claros, lejos del impresionismo europeo.",
-      "story": "Dos mujeres tahitianas están sentadas en un prado; delante, un perro rojo. Al fondo alguien toca una flauta ante una figura de un dios. «Arearea» en tahitiano significa algo así como alegría o placer.",
+      "story": "Dos mujeres tahitianas están sentadas en un prado; delante, un perro rojo. Una de ellas toca la flauta; al fondo, unas mujeres veneran la figura de un dios. «Arearea» en tahitiano significa algo así como alegría o placer.",
       "facts": [
         "Gauguin viajó a Tahití en 1891, en busca de una vida lejos del mundo europeo moderno.",
         "Muchos motivos los tomó de la vida cotidiana, de tallas y de su propia imaginación. El cuadro cuelga en el Musée d’Orsay."
@@ -603,7 +603,7 @@ window.ES = {
       "technique": "Óleo sobre lienzo. Segantini aplicó el color en trazos finos, unos junto a otros.",
       "story": "Un pastor y una mujer se deslizan en la barca por un lago de montaña en calma, la oveja en la proa, el cielo ya de atardecer. En ese instante juntan las manos para el Ave Maria.",
       "facts": [
-        "Segantini pintó el motivo dos veces. Esta segunda versión de 1886 le valió una medalla de oro en París.",
+        "Segantini pintó el motivo dos veces. La primera versión, de 1882, obtuvo una medalla de oro en la Exposición Universal de Ámsterdam de 1883; en esta segunda, de 1886, usó por primera vez la técnica del divisionismo.",
         "Vivía en lo alto del Engadina y pintó la vida campesina de los Alpes con gran calma y precisión."
       ]
     },
@@ -823,7 +823,7 @@ window.ES = {
       "technique": "Óleo sobre lienzo. Monet pinta la contraluz, el viento y la hierba en movimiento con trazos rápidos y claros.",
       "story": "Camille, la mujer de Monet, está de pie en un altozano, la sombrilla contra el sol, el pequeño Jean a su lado. Vista desde abajo, ante el cielo que ondea, parece casi sin peso.",
       "facts": [
-        "Monet repitió más tarde el motivo una vez más con otra mujer, su segunda esposa Alice.",
+        "En 1886 Monet retomó el motivo dos veces más, con Suzanne Hoschedé, hija de la que luego sería su segunda esposa, Alice.",
         "El cuadro es una obra clave del impresionismo: no está posado, sino que es un paseo ventoso, fijado en la luz."
       ]
     },
@@ -859,9 +859,9 @@ window.ES = {
     },
     "dorfschule": {
       "title": "La escuela del pueblo de 1848",
-      "museum": "Kunstmuseum Bern",
+      "museum": "Kunstmuseum Basel",
       "technique": "Óleo sobre lienzo. Anker llena toda la estancia de niños, bancos de madera y pizarras, sin desorden.",
-      "story": "En una aula oscura están sentados niños de todas las edades; el maestro está en el centro. Anker pintó la escena en 1896, pero evocaba el año 1848, cuando en Suiza nació el Estado federal moderno — y con él la escuela pública.",
+      "story": "En una aula oscura están sentados niños de todas las edades; el maestro está en el centro. Anker pintó la escena en 1896 como una mirada atrás al año 1848, cuando se fundó el Estado federal suizo moderno.",
       "facts": [
         "El propio Anker fue durante mucho tiempo miembro del Gran Consejo del cantón de Berna y se ocupó de las escuelas y la cultura.",
         "Cada niño tiene un rostro propio. Quien mira más rato encuentra al soñador, al aplicado y al que en ese momento está en otra parte."
@@ -874,7 +874,7 @@ window.ES = {
       "story": "En el jardín del asilo de Saint-Rémy florecían los lirios, y Van Gogh los pintó en un solo impulso intenso. Delante, un acento casi blanco; por lo demás, un mar de azul, verde y el rojo cálido de la tierra.",
       "facts": [
         "Pintó los lirios en el primer mes después de su llegada a Saint-Rémy, todavía antes de La noche estrellada.",
-        "El cuadro quedó sin restaurar y sin barniz, por eso los colores parecen hasta hoy especialmente frescos."
+        "Las flores eran originalmente más violetas: un pigmento rojo de la pintura se ha desvanecido con el tiempo, por eso muchos lirios parecen hoy más azules que en la época de Van Gogh."
       ]
     },
     "gotthard": {
@@ -914,7 +914,7 @@ window.ES = {
       "story": "En un bosquecillo umbrío danzan y avanzan nueve figuras de la primavera: Mercurio a la izquierda, las tres Gracias, Venus en el centro, el viento primaveral Céfiro a la derecha, que persigue a la ninfa Cloris. Por encima de todos flota Amor.",
       "facts": [
         "El cuadro nació probablemente para la familia Médici en Florencia y es uno de los más famosos del primer Renacimiento.",
-        "Botticelli pintó cientos de flores distintas con tanta precisión que muchas de ellas se pueden identificar."
+        "Botticelli pintó unas 500 plantas individuales, muchas con tanta precisión que los botánicos aún hoy pueden identificarlas."
       ]
     },
     "terrace": {
@@ -1153,7 +1153,7 @@ window.ES = {
     },
     "wintergarden": {
       "title": "El jardín de la casa parroquial de Nuenen en invierno",
-      "museum": "Van Gogh Museum, Amsterdam"
+      "museum": "Museo de Bellas Artes, Budapest"
     },
     "congreg": {
       "title": "Salida de la iglesia reformada de Nuenen",
@@ -1301,7 +1301,7 @@ window.ES = {
     },
     "restint": {
       "title": "Interior de un restaurante",
-      "museum": "Indianapolis Museum of Art"
+      "museum": "Kröller-Müller Museum, Otterlo"
     },
     "undergrowth": {
       "title": "Árboles y sotobosque",
@@ -1353,7 +1353,7 @@ window.ES = {
     },
     "selforsay": {
       "title": "Autorretrato, 1887",
-      "museum": "Musée d’Orsay, Paris"
+      "museum": "Art Institute of Chicago"
     },
     "selfartist": {
       "title": "Autorretrato como pintor",
@@ -1437,7 +1437,7 @@ window.ES = {
     },
     "rocks88": {
       "title": "Rocas con un roble",
-      "museum": "Kröller-Müller Museum, Otterlo"
+      "museum": "Museum of Fine Arts, Houston"
     },
     "flowergarden": {
       "title": "Jardín en flor",
@@ -1481,7 +1481,7 @@ window.ES = {
     },
     "escalier": {
       "title": "Patience Escalier",
-      "museum": "Kunsthaus Zürich"
+      "museum": "Colección particular"
     },
     "boch": {
       "title": "Retrato de Eugène Boch (El poeta)",
@@ -1765,7 +1765,7 @@ window.ES = {
     },
     "wheatcorn": {
       "title": "Campo de trigo con acianos",
-      "museum": "Colección E.G. Bührle, Zürich"
+      "museum": "Fondation Beyeler, Riehen"
     },
     "farmsauvers": {
       "title": "Granjas cerca de Auvers",
@@ -2313,7 +2313,7 @@ window.ES = {
     },
     "sangiodusk": {
       "title": "San Giorgio Maggiore al crepúsculo",
-      "museum": "Fondation Beyeler, Riehen"
+      "museum": "National Museum Cardiff"
     },
     "dogepalace": {
       "title": "El Palacio Ducal",
@@ -2333,7 +2333,7 @@ window.ES = {
     },
     "grandcanal2": {
       "title": "El Canal Grande",
-      "museum": "Fondation Beyeler, Riehen"
+      "museum": "Museum of Fine Arts, Boston"
     },
     "pathiris": {
       "title": "El sendero entre los lirios",

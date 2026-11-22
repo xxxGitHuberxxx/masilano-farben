@@ -215,15 +215,15 @@
   P.paths = P.paths || {};
   P.paths.turner = {
   "title": "Le parcours de vie de J. M. W. Turner",
-  "part": "Partie 1 · 1775–1819",
-  "subtitle": "De Covent Garden, par les Alpes, jusqu’au Rhin",
-  "intro": "Joseph Mallord William Turner naît le 23 avril 1775 au 21 Maiden Lane, à Covent Garden, fils d’un barbier, et il est baptisé le 14 mai en l’église St Paul de Covent Garden. Cette première partie le suit des Royal Academy Schools et des premières aquarelles, par la première huile de 1796, son élection à la Royal Academy en 1802 et le premier voyage sur le continent, jusqu’au seuil du voyage en Italie en 1819.",
+  "life": "1775–1851",
+  "part": "Parties 1–2 · 1775–1851",
+  "subtitle": "De Covent Garden, par Venise et le Rigi, à Chelsea",
+  "intro": "Voyage avec J. M. W. Turner à travers toute sa vie : de sa naissance à Covent Garden en 1775, en passant par la Royal Academy, le pays de Galles, les Alpes et le Rhin, jusqu’aux voyages en Italie, à Petworth, à l’incendie du Parlement, à Venise, au Fighting Temeraire, aux aquarelles suisses et à Pluie, vapeur et vitesse, jusqu’à sa mort le 19 décembre 1851 à Chelsea.",
   "ending": [
-    "En août 1819 Turner part pour son premier voyage en Italie.",
-    "Dans la partie suivante viennent Venise, Pluie, vapeur et vitesse, le Fighting Temeraire et sa mort le 19 décembre 1851 à Chelsea."
+    "J. M. W. Turner meurt à Chelsea le 19 décembre 1851, à soixante-seize ans. Il est enterré à la cathédrale Saint-Paul de Londres.",
+    "Il lègue ses tableaux à la nation. Avec le Turner Bequest, des centaines de peintures et des milliers de dessins et d’aquarelles restent réunis, des premières vues du pays de Galles jusqu’à la lumière, la vapeur et la brume des dernières années."
   ],
-  "epilogue": "Dans la partie suivante viennent Venise, Pluie, vapeur et vitesse, le Fighting Temeraire et sa mort le 19 décembre 1851 à Chelsea.",
-  "life": "1775–1851"
+  "epilogue": "J. M. W. Turner meurt à Chelsea le 19 décembre 1851. Il est enterré à la cathédrale Saint-Paul de Londres."
 };
   P.stations = Object.assign(P.stations || {}, {
   "tucovent": {

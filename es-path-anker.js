@@ -151,7 +151,7 @@
   },
   "schulmaedchen": {
     "title": "Escolar con pizarra y cesto de costura",
-    "museum": "Musée d’art et d’histoire, Neuchâtel"
+    "museum": "Kunstmuseum Bern"
   },
   "cecile78": {
     "title": "Cécile Anker en la silla alta",
@@ -218,14 +218,14 @@
   P.paths.anker = {
   "title": "El camino de vida de Albert Anker",
   "life": "1831–1910",
-  "part": "Parte 1 · Hasta la década de 1880",
+  "part": "Partes 1–2 · 1831–1910",
   "subtitle": "De Ins a París y de vuelta a Ins",
-  "intro": "Viaja con Albert Anker por la primera mitad de su camino: desde la infancia en Ins y los años de escuela en Neuchâtel, pasando por los estudios de teología en Berna y Halle, la formación con Charles Gleyre en París, la boda, la medalla de oro de 1866, las fayenzas para Théodore Deck y los años en el Gran Consejo, hasta los cuadros de niños y de vida de pueblo de la década de 1880. Estaciones breves, cuadros para pintar y dos voces documentadas: una carta a su amigo de escuela Auguste Bachelin y una nota a su esposa desde Murten. Esta primera parte llega hasta 1888 aproximadamente.",
+  "intro": "Viaja con Albert Anker a lo largo de toda su vida: desde la infancia en Ins y los años de escuela en Neuchâtel, pasando por los estudios de teología, la formación con Charles Gleyre en París, la familia y los años en el Gran Consejo, hasta las ilustraciones de Gotthelf, las acuarelas tras el ataque cerebral de 1901 y la muerte en Ins el 16 de julio de 1910. Estaciones breves, cuadros para pintar y voces documentadas de cartas y de un diario.",
   "ending": [
-    "En 1885 Anker pinta la «Niña tejiendo junto a la cuna», en 1888 «Los primeros pasos». En 1878 lo han nombrado caballero de la Legión de Honor francesa; la familia pasa todavía el invierno en París y el verano en Ins.",
-    "El camino continúa. En 1890 Anker deja su residencia de París. Siguen los grandes cuadros de la década de 1890 –entre ellos «La escuela de pueblo de 1848»– y más tarde las ilustraciones de Gotthelf. A finales de septiembre de 1901 sufre un ataque cerebral. El 16 de julio de 1910 muere en Ins. De eso trata la próxima parte."
+    "A finales de septiembre de 1901 Anker sufre un ataque cerebral. Su mano derecha queda afectada y abandona en gran parte la pintura al óleo; hasta el final pinta acuarelas, sentado, con la hoja sobre las rodillas.",
+    "El 16 de julio de 1910 Albert Anker muere en Ins, a los setenta y nueve años. Recibe un gran funeral de Estado; en noviembre de 1910 Neuchâtel y en enero de 1911 Berna le dedican exposiciones de homenaje. Su casa con el taller es hoy el Centre Albert Anker."
   ],
-  "epilogue": "En 1885 nace la «Niña tejiendo junto a la cuna», en 1888 «Los primeros pasos». En 1890 Anker deja su residencia de París. La década de 1890, la escuela de pueblo, el ataque de 1901 y la muerte en Ins en 1910 pertenecen a la próxima parte."
+  "epilogue": "Albert Anker muere en Ins el 16 de julio de 1910. Quedan unas 800 pinturas al óleo y otras tantas acuarelas, las ilustraciones de Gotthelf, más de 3000 cartas… y la casa de Ins donde nació y trabajó."
 };
   P.stations = Object.assign(P.stations || {}, {
   "ankerins": {
@@ -561,9 +561,9 @@
   "schulmaedchen": {
     "text": [
       "Una niña con vestido marrón rojizo está de pie con una pizarra y un cesto de costura. Su mirada sale tranquila del cuadro.",
-      "El cuadro de 1878 cuelga en el Musée d’art et d’histoire de Neuchâtel. Escribir y coser están aquí con igual derecho en las manos de la niña."
+      "El cuadro de 1878 cuelga en el Kunstmuseum Bern. Escribir y coser están aquí con igual derecho en las manos de la niña."
     ],
-    "fact": "Óleo sobre lienzo, 1878. Musée d’art et d’histoire, Neuchâtel."
+    "fact": "Óleo sobre lienzo, 1878. Kunstmuseum Bern."
   },
   "cecile78": {
     "text": [

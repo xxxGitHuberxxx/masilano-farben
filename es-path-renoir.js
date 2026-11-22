@@ -215,14 +215,14 @@
   P.paths = P.paths || {};
   P.paths.renoir = {
   "title": "El camino de vida de Pierre-Auguste Renoir",
-  "part": "Parte 1 · 1841–1881",
-  "subtitle": "De Limoges al Almuerzo de los remeros",
-  "intro": "Pierre-Auguste Renoir nace en Limoges el 25 de febrero de 1841. La familia se traslada a París, él aprende el oficio de pintor de porcelana y en el taller de Gleyre conoce a Monet, Bazille y Sisley. Esta primera parte lo acompaña hasta el Almuerzo de los remeros, hacia 1881.",
+  "part": "Partes 1–2 · 1841–1919",
+  "subtitle": "De Limoges, por Chatou, Argelia e Italia, a Cagnes-sur-Mer",
+  "intro": "Viaja con Pierre-Auguste Renoir por toda su vida: desde su nacimiento en Limoges en 1841 y su aprendizaje como pintor de porcelana, pasando por el taller de Gleyre, la amistad con Monet, Bazille y Sisley, La Grenouillère y las exposiciones impresionistas hasta el Almuerzo de los remeros; después Argelia e Italia, la boda con Aline Charigot, los hijos Pierre, Jean y Claude, Essoyes y Les Collettes en Cagnes-sur-Mer, hasta su muerte el 3 de diciembre de 1919.",
   "ending": [
-    "La primera parte del camino de Renoir termina con los remeros a orillas del Sena.",
-    "La segunda parte sigue con el viaje a Argelia e Italia, el encuentro con el arte antiguo y los últimos años en Cagnes-sur-Mer."
+    "Pierre-Auguste Renoir muere en Cagnes-sur-Mer el 3 de diciembre de 1919, a los setenta y ocho años. Su tumba está en Essoyes, el pueblo de Aline.",
+    "Quedan miles de cuadros: bailes y remeros, niños y retratos, flores, frutas y los paisajes del sur."
   ],
-  "epilogue": "La segunda parte sigue con el viaje a Argelia e Italia, el encuentro con el arte antiguo y los últimos años en Cagnes-sur-Mer.",
+  "epilogue": "Pierre-Auguste Renoir muere en Cagnes-sur-Mer el 3 de diciembre de 1919. Su tumba está en Essoyes.",
   "life": "1841–1919"
 };
   P.stations = Object.assign(P.stations || {}, {

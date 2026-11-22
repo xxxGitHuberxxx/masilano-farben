@@ -14,7 +14,7 @@
   "life": "1599–1660",
   "part": "Un court chemin · Madrid",
   "subtitle": "Les Ménines",
-  "intro": "Velázquez est peintre de cour à Madrid. « Les Ménines » montre l’infante, les suivantes et le peintre lui-même dans le miroir de l’atelier – l’une des images les plus pensées sur le regard.",
+  "intro": "Velázquez est peintre de cour à Madrid. « Les Ménines » montre l’infante, les suivantes, le peintre lui-même devant sa toile et, dans le miroir, le couple royal – l’une des images les plus pensées sur le regard.",
   "ending": [
     "Velázquez meurt à Madrid en 1660. Une partie ultérieure pourra ajouter d’autres portraits de cour."
   ],
@@ -26,7 +26,7 @@
     "when": null,
     "mapLabel": "Madrid",
     "intro": [
-      "Velázquez est peintre de cour à Madrid. « Les Ménines » montre l’infante, les suivantes et le peintre lui-même dans le miroir de l’atelier – l’une des images les plus pensées sur le regard."
+      "Velázquez est peintre de cour à Madrid. « Les Ménines » montre l’infante, les suivantes, le peintre lui-même devant sa toile et, dans le miroir, le couple royal – l’une des images les plus pensées sur le regard."
     ]
   }
 });

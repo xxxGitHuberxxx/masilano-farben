@@ -75,10 +75,10 @@
   "subtitle": "Orage, rocher et lacs paisibles",
   "intro": "Voyage avec Alexandre Calame, le peintre genevois des Alpes : des premiers paysages de montagne au Grimsel, à Rosenlaui et au Wetterhorn, jusqu’aux lacs paisibles de Thoune, de Genève et de Lucerne. De courtes étapes et des tableaux à colorier. Cette première partie le suit à travers les montagnes suisses.",
   "ending": [
-    "Alexandre Calame meurt à Menton le 17 mars 1864, à cinquante-trois ans. Ses tableaux des Alpes ont façonné le regard de toute l’Europe sur les montagnes suisses.",
+    "Alexandre Calame meurt à Menton le 19 mars 1864, à cinquante-trois ans. Ses tableaux des Alpes ont façonné le regard de toute l’Europe sur les montagnes suisses.",
     "Le chemin peut encore s’allonger. Des lithographies, des vues d’Italie et d’autres montagnes pourront suivre dans une partie ultérieure."
   ],
-  "epilogue": "Le 17 mars 1864, Calame meurt à Menton. Une partie ultérieure pourra ajouter des lithographies et d’autres montagnes."
+  "epilogue": "Le 19 mars 1864, Calame meurt à Menton. Une partie ultérieure pourra ajouter des lithographies et d’autres montagnes."
 };
   P.stations = Object.assign(P.stations || {}, {
   "acgenf": {

@@ -213,14 +213,14 @@
   EN.paths.cezanne = {
   "title": "Paul Cézanne’s Life Journey",
   "life": "1839–1906",
-  "part": "Part 1 · 1839–1886",
-  "subtitle": "From Aix to Paris, to Pissarro and back to Provence",
-  "intro": "Travel with Paul Cézanne through the first half of his path: from childhood in Aix-en-Provence and the friendship with Émile Zola, through the law studies, the Académie Suisse in Paris, the dark “couillarde” period, the turn with Camille Pissarro in Pontoise and Auvers, the exhibitions of 1874 and 1877, L’Estaque, Hortense Fiquet and their son Paul, the Jas de Bouffan, to the year 1886 – the novel L’Œuvre, the marriage and the death of the father. Short stations and pictures to colour. The bathers and violent early scenes are left aside. This first part runs to 1886.",
+  "part": "Parts 1–2 · 1839–1906",
+  "subtitle": "From Aix to Paris and back to Provence, as far as the studio at Les Lauves",
+  "intro": "Travel with Paul Cézanne through his whole life: from childhood in Aix-en-Provence and the friendship with Émile Zola, through the law studies, the Académie Suisse in Paris, the dark “couillarde” period, the turn with Camille Pissarro in Pontoise and Auvers, the exhibitions of 1874 and 1877, L’Estaque, Hortense Fiquet and their son Paul, the Jas de Bouffan and the year 1886 – to Montagne Sainte-Victoire, the card players, the apples and still lifes, the exhibition at Ambroise Vollard’s in 1895, the studio at Les Lauves and Cézanne’s death in Aix on 22 October 1906. Short stations, pictures to colour and voices from letters to Émile Bernard and to his son Paul. The bathers and violent early scenes are left aside.",
   "ending": [
-    "In 1886 Cézanne marries Hortense Fiquet in Aix, their son Paul is legitimized, and the father dies in October. The letter of thanks for Zola’s novel L’Œuvre is brief and formal; contact becomes rarer afterwards.",
-    "The path continues. There follow Montagne Sainte-Victoire, the card players, the apples and still lifes, the exhibition at Ambroise Vollard’s in 1895, the studio at Les Lauves, and Cézanne’s death in Aix on 22 October 1906. That story belongs to the next part."
+    "On 15 October 1906, while painting out of doors, Cézanne is caught in a storm. He collapses; a carter brings him home. The next day he tries to go on working and collapses again.",
+    "On 22 October 1906 Paul Cézanne dies in Aix-en-Provence, aged sixty-seven. What remain are the landscapes of Provence, the still lifes, the portraits – and a body of work that holds the visible world in firm, coloured forms."
   ],
-  "epilogue": "This first part ends in 1886: with the marriage in Aix, the death of the father, and contact with Zola becoming rarer after L’Œuvre. Montagne Sainte-Victoire, the card players, the apples, Vollard in 1895, Les Lauves and the death on 22 October 1906 belong to the next part."
+  "epilogue": "Paul Cézanne dies in Aix-en-Provence on 22 October 1906. A few days earlier he had collapsed in a storm while painting out of doors. What remain are Montagne Sainte-Victoire, the card players, the apples, the quarries of Bibémus, the Château Noir, the studio at Les Lauves and the late portraits of the gardener Vallier."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "cezanneaix": {

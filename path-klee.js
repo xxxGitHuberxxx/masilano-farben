@@ -21,7 +21,7 @@
   "cover": "senecio",
   "intro": "Klee sucht in der Fläche das Zeichen und das Gesicht. «Senecio» von 1922 ist aus Vierecken gebaut, ein Kopf wie ein stilles Spiel.",
   "ending": [
-    "Klee stirbt 1940 in Locarno. Ein späterer Teil kann weitere Bauhaus- und Berner Bilder nachtragen."
+    "Klee stirbt 1940 in Muralto bei Locarno. Ein späterer Teil kann weitere Bauhaus- und Berner Bilder nachtragen."
   ],
   "epilogue": "Ein späterer Teil kann weitere Bilder nachtragen.",
   "map": {

@@ -224,7 +224,7 @@ window.IT = {
       "story": "Una terrazza di caffè illuminata ad Arles, con il cielo stellato sopra. Van Gogh dipinse il quadro nel settembre 1888, all’aperto e di notte.",
       "facts": [
         "È uno dei primi quadri in cui Van Gogh dipinse un cielo stellato. Notte stellata sarebbe arrivata quasi un anno dopo.",
-        "Il caffè esisteva davvero: si chiamava Café Terrace e si trovava sulla Place du Forum di Arles."
+        "Alla sorella scrisse con orgoglio di un quadro notturno senza alcun nero, solo con blu, viola e verde."
       ]
     },
     "jatte": {
@@ -244,7 +244,7 @@ window.IT = {
       "story": "Un ballo popolare all’aperto a Montmartre, allora ancora un quartiere ai margini di Parigi. Renoir dipinse amici e vicini, in una domenica pomeriggio alla luce del sole tra gli alberi.",
       "facts": [
         "Il Moulin de la Galette era un vero ballo, con mulino e giardino. Vi si servivano delle galettes, schiacciate, da cui il nome.",
-        "Renoir dipinse una seconda versione, più piccola, che oggi è appesa all’Orangerie di Parigi."
+        "Molti degli ospiti nel quadro sono amici di Renoir, per esempio pittori e scrittori."
       ]
     },
     "wanderer": {
@@ -441,7 +441,7 @@ window.IT = {
       "title": "Arearea (Allegria)",
       "museum": "Musée d’Orsay, Paris",
       "technique": "Olio su tela, con colori intensi e piatti e contorni chiari, lontano dall’impressionismo europeo.",
-      "story": "Due donne tahitiane sono sedute su un prato; davanti, un cane rosso. Sullo sfondo qualcuno suona un flauto davanti a una figura di dio. «Arearea» in tahitiano significa all’incirca gioia o piacere.",
+      "story": "Due donne tahitiane sono sedute su un prato; davanti, un cane rosso. Una di loro suona il flauto; sullo sfondo alcune donne venerano una figura di dio. «Arearea» in tahitiano significa all’incirca gioia o piacere.",
       "facts": [
         "Gauguin partì per Tahiti nel 1891, in cerca di una vita lontana dal mondo europeo moderno.",
         "Molti motivi li trasse dalla vita quotidiana, da intagli e dalla propria immaginazione. Il quadro è appeso al Musée d’Orsay."
@@ -603,7 +603,7 @@ window.IT = {
       "technique": "Olio su tela. Segantini pose il colore in tratti fini, uno accanto all’altro.",
       "story": "Un pastore e una donna scivolano nella barca su un lago di montagna silenzioso, la pecora a prua, il cielo già serale. In quell’istante congiungono le mani per l’Ave Maria.",
       "facts": [
-        "Segantini dipinse il motivo due volte. Questa seconda versione del 1886 gli valse una medaglia d’oro a Parigi.",
+        "Segantini dipinse il motivo due volte. La prima versione, del 1882, ottenne una medaglia d’oro all’Esposizione universale di Amsterdam del 1883; in questa seconda versione del 1886 usò per la prima volta la tecnica divisionista.",
         "Viveva in alto in Engadina e dipinse la vita contadina nelle Alpi con grande calma e precisione."
       ]
     },
@@ -823,7 +823,7 @@ window.IT = {
       "technique": "Olio su tela. Monet dipinge il controluce, il vento e l’erba in movimento con tratti rapidi e chiari.",
       "story": "Camille, la moglie di Monet, sta su un’altura, l’ombrellino contro il sole, il piccolo Jean accanto a lei. Vista dal basso, davanti al cielo che soffia, sembra quasi senza peso.",
       "facts": [
-        "Monet ripeté più tardi il motivo ancora una volta con un’altra donna, la sua seconda moglie Alice.",
+        "Nel 1886 Monet riprese il motivo altre due volte, con Suzanne Hoschedé, figlia della sua futura seconda moglie Alice.",
         "Il quadro è un’opera chiave dell’impressionismo: non è posato, ma una passeggiata ventosa, fissata nella luce."
       ]
     },
@@ -859,9 +859,9 @@ window.IT = {
     },
     "dorfschule": {
       "title": "La scuola del villaggio del 1848",
-      "museum": "Kunstmuseum Bern",
+      "museum": "Kunstmuseum Basel",
       "technique": "Olio su tela. Anker riempie tutta la stanza di bambini, panche di legno e lavagnette, senza disordine.",
-      "story": "In un’aula scura sono seduti bambini di tutte le età; il maestro sta in mezzo. Anker dipinse la scena nel 1896, ma rievocava l’anno 1848, quando in Svizzera nacque lo Stato federale moderno — e con esso la scuola pubblica.",
+      "story": "In un’aula scura sono seduti bambini di tutte le età; il maestro sta in mezzo. Anker dipinse la scena nel 1896 come sguardo all’indietro all’anno 1848, quando fu fondato il moderno Stato federale svizzero.",
       "facts": [
         "Anker stesso fu a lungo membro del Gran Consiglio del Canton Berna e si occupò di scuole e cultura.",
         "Ogni bambino ha un viso proprio. Chi guarda più a lungo trova il sognatore, lo zelante e quello che in quel momento è altrove."
@@ -874,7 +874,7 @@ window.IT = {
       "story": "Nel giardino dell’asilo di Saint-Rémy fiorivano gli iris, e Van Gogh li dipinse in un solo slancio intenso. Davanti, un accento quasi bianco; altrimenti, un mare di blu, verde e del rosso caldo della terra.",
       "facts": [
         "Dipinse gli iris nel primo mese dopo il suo arrivo a Saint-Rémy, ancora prima di Notte stellata.",
-        "Il quadro restò senza restauro e senza vernice, per questo i colori appaiono fino a oggi particolarmente freschi."
+        "In origine i fiori erano più viola: un pigmento rosso del colore è sbiadito col tempo, per questo molti iris oggi appaiono più blu che ai tempi di Van Gogh."
       ]
     },
     "gotthard": {
@@ -914,7 +914,7 @@ window.IT = {
       "story": "In un boschetto ombroso danzano e avanzano nove figure della primavera: Mercurio a sinistra, le tre Grazie, Venere al centro, il vento primaverile Zefiro a destra, che insegue la ninfa Clori. Sopra tutti aleggia Amore.",
       "facts": [
         "Il quadro nacque probabilmente per la famiglia Medici a Firenze ed è uno dei più famosi del primo Rinascimento.",
-        "Botticelli dipinse centinaia di fiori diversi con tanta precisione che molti di essi si possono identificare."
+        "Botticelli dipinse circa 500 singole piante, molte con tanta precisione che i botanici ancora oggi possono identificarle."
       ]
     },
     "terrace": {
@@ -1153,7 +1153,7 @@ window.IT = {
     },
     "wintergarden": {
       "title": "Il giardino della canonica di Nuenen in inverno",
-      "museum": "Van Gogh Museum, Amsterdam"
+      "museum": "Museo di Belle Arti, Budapest"
     },
     "congreg": {
       "title": "Uscita dalla chiesa riformata di Nuenen",
@@ -1301,7 +1301,7 @@ window.IT = {
     },
     "restint": {
       "title": "Interno di un ristorante",
-      "museum": "Indianapolis Museum of Art"
+      "museum": "Kröller-Müller Museum, Otterlo"
     },
     "undergrowth": {
       "title": "Alberi e sottobosco",
@@ -1353,7 +1353,7 @@ window.IT = {
     },
     "selforsay": {
       "title": "Autoritratto, 1887",
-      "museum": "Musée d’Orsay, Paris"
+      "museum": "Art Institute of Chicago"
     },
     "selfartist": {
       "title": "Autoritratto come pittore",
@@ -1437,7 +1437,7 @@ window.IT = {
     },
     "rocks88": {
       "title": "Scogli con una quercia",
-      "museum": "Kröller-Müller Museum, Otterlo"
+      "museum": "Museum of Fine Arts, Houston"
     },
     "flowergarden": {
       "title": "Giardino in fiore",
@@ -1481,7 +1481,7 @@ window.IT = {
     },
     "escalier": {
       "title": "Patience Escalier",
-      "museum": "Kunsthaus Zürich"
+      "museum": "Collezione privata"
     },
     "boch": {
       "title": "Ritratto di Eugène Boch (Il poeta)",
@@ -1765,7 +1765,7 @@ window.IT = {
     },
     "wheatcorn": {
       "title": "Campo di grano con fiordalisi",
-      "museum": "collezione E.G. Bührle, Zürich"
+      "museum": "Fondation Beyeler, Riehen"
     },
     "farmsauvers": {
       "title": "Fattorie presso Auvers",
@@ -2313,7 +2313,7 @@ window.IT = {
     },
     "sangiodusk": {
       "title": "San Giorgio Maggiore al crepuscolo",
-      "museum": "Fondation Beyeler, Riehen"
+      "museum": "National Museum Cardiff"
     },
     "dogepalace": {
       "title": "Palazzo Ducale",
@@ -2333,7 +2333,7 @@ window.IT = {
     },
     "grandcanal2": {
       "title": "Il Canal Grande, Venezia",
-      "museum": "Fondation Beyeler, Riehen"
+      "museum": "Museum of Fine Arts, Boston"
     },
     "pathiris": {
       "title": "Il sentiero tra gli iris",

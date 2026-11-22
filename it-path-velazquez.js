@@ -14,7 +14,7 @@
   "life": "1599–1660",
   "part": "Un breve percorso · Madrid",
   "subtitle": "Las Meninas",
-  "intro": "Velázquez è pittore di corte a Madrid. «Las Meninas» mostra l’infanta, le dame e il pittore stesso nello specchio dello studio: uno dei dipinti più pensati sullo sguardo.",
+  "intro": "Velázquez è pittore di corte a Madrid. «Las Meninas» mostra l’infanta, le dame, il pittore stesso davanti alla tela e, nello specchio, la coppia reale: uno dei dipinti più pensati sullo sguardo.",
   "ending": [
     "Velázquez muore a Madrid nel 1660. Una parte successiva potrà aggiungere altri ritratti di corte."
   ],
@@ -26,7 +26,7 @@
     "when": null,
     "mapLabel": "Madrid",
     "intro": [
-      "Velázquez è pittore di corte a Madrid. «Las Meninas» mostra l’infanta, le dame e il pittore stesso nello specchio dello studio: uno dei dipinti più pensati sullo sguardo."
+      "Velázquez è pittore di corte a Madrid. «Las Meninas» mostra l’infanta, le dame, il pittore stesso davanti alla tela e, nello specchio, la coppia reale: uno dei dipinti più pensati sullo sguardo."
     ]
   }
 });

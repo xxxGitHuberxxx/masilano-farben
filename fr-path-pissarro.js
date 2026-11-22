@@ -220,14 +220,14 @@
   P.paths = P.paths || {};
   P.paths.pissarro = {
   "title": "Le chemin de vie de Camille Pissarro",
-  "part": "Partie 1 · 1830–1884",
-  "subtitle": "De Saint-Thomas aux expositions impressionnistes",
-  "intro": "Camille Pissarro naît le 10 juillet 1830 à Charlotte Amalie, sur l’île de Saint-Thomas, alors aux Antilles danoises. Avec Fritz Melbye, il part pour le Venezuela, puis gagne Paris en 1855. Cette première partie le suit à Louveciennes, pendant les années de Londres et à Pontoise, jusqu’au seuil d’Éragny, vers 1884.",
+  "part": "Parties 1–2 · 1830–1903",
+  "subtitle": "De Saint-Thomas à Pontoise et Éragny jusqu’aux boulevards de Paris",
+  "intro": "Voyage avec Camille Pissarro tout au long de sa vie : de sa naissance à Saint-Thomas en 1830, par le Venezuela, Paris, Louveciennes, Londres et Pontoise et les huit expositions impressionnistes, jusqu’à Éragny, au néo-impressionnisme avec Seurat et Signac puis au retour, aux vues de ville peintes depuis les fenêtres de Paris, de Rouen, de Dieppe et du Havre, jusqu’à sa mort le 13 novembre 1903.",
   "ending": [
-    "La première partie du chemin de Pissarro s’achève lorsqu’il s’installe à Éragny-sur-Epte en 1884.",
-    "La deuxième partie suit les années d’Éragny, la rencontre avec le néo-impressionnisme, les vues de Paris, de Rouen et du Havre, et sa mort en 1903."
+    "Camille Pissarro meurt à Paris le 13 novembre 1903, à l’âge de soixante-treize ans. Il est enterré au cimetière du Père-Lachaise.",
+    "Il reste les champs et les jardins de Pontoise et d’Éragny, les boulevards, les ponts et les ports de ses dernières années, et le souvenir du seul peintre qui prit part aux huit expositions impressionnistes."
   ],
-  "epilogue": "La deuxième partie suit les années d’Éragny, la rencontre avec le néo-impressionnisme, les vues de Paris, de Rouen et du Havre, et sa mort en 1903.",
+  "epilogue": "Camille Pissarro meurt à Paris le 13 novembre 1903. Il est enterré au cimetière du Père-Lachaise.",
   "life": "1830–1903"
 };
   P.stations = Object.assign(P.stations || {}, {

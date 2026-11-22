@@ -151,7 +151,7 @@
   },
   "schulmaedchen": {
     "title": "Écolière avec ardoise et panier à ouvrage",
-    "museum": "Musée d’art et d’histoire, Neuchâtel"
+    "museum": "Kunstmuseum Bern"
   },
   "cecile78": {
     "title": "Cécile Anker dans sa chaise haute",
@@ -216,16 +216,16 @@
 });
   P.paths = P.paths || {};
   P.paths.anker = {
-  "title": "Le parcours de vie d’Albert Anker",
+  "title": "Le chemin de vie d’Albert Anker",
   "life": "1831–1910",
-  "part": "Partie 1 · Jusqu’aux années 1880",
-  "subtitle": "D’Anet à Paris et retour à Anet",
-  "intro": "Voyage avec Albert Anker à travers la première moitié de son chemin : de l’enfance à Anet (Ins) et des années d’école à Neuchâtel, en passant par les études de théologie à Berne et à Halle, la formation chez Charles Gleyre à Paris, le mariage, la médaille d’or de 1866, les faïences pour Théodore Deck et les années au Grand Conseil, jusqu’aux tableaux d’enfants et de vie villageoise des années 1880. De courtes étapes, des tableaux à colorier et deux voix documentées : une lettre à son ami d’école Auguste Bachelin et un mot à sa femme depuis Morat. Cette première partie va jusque vers 1888.",
+  "part": "Parties 1–2 · 1831–1910",
+  "subtitle": "D’Ins à Paris et de retour à Ins",
+  "intro": "Parcours toute la vie d’Albert Anker : l’enfance à Ins et les années d’école à Neuchâtel, les études de théologie, la formation chez Charles Gleyre à Paris, la famille et les années au Grand Conseil, jusqu’aux illustrations de Gotthelf, aux aquarelles après l’attaque cérébrale de 1901 et à la mort à Ins le 16 juillet 1910. Des stations brèves, des tableaux à colorier et des voix documentées, tirées de lettres et d’un journal.",
   "ending": [
-    "En 1885 Anker peint la « Fillette tricotant près du berceau », en 1888 « Les premiers pas ». En 1878 il a été fait chevalier de la Légion d’honneur ; la famille passe encore l’hiver à Paris et l’été à Anet.",
-    "Le chemin continue. En 1890 Anker renonce à son domicile parisien. Suivent les grands tableaux des années 1890 – parmi eux « L’école de village en 1848 » – puis les illustrations de Gotthelf. À la fin de septembre 1901, il est frappé d’une attaque cérébrale. Le 16 juillet 1910, il meurt à Anet. C’est le sujet de la prochaine partie."
+    "Fin septembre 1901, Anker est victime d’une attaque cérébrale. Sa main droite est atteinte ; il abandonne en grande partie la peinture à l’huile. Jusqu’à la fin, il peint des aquarelles, assis, la feuille sur les genoux.",
+    "Le 16 juillet 1910, Albert Anker meurt à Ins, à l’âge de soixante-dix-neuf ans. Il reçoit de grandes funérailles d’État ; en novembre 1910, Neuchâtel, et en janvier 1911, Berne lui consacrent des expositions d’hommage. Sa maison avec l’atelier est aujourd’hui le Centre Albert Anker."
   ],
-  "epilogue": "En 1885 naît la « Fillette tricotant près du berceau », en 1888 « Les premiers pas ». En 1890 Anker renonce à son domicile parisien. Les années 1890, l’école de village, l’attaque de 1901 et la mort à Anet en 1910 appartiennent à la prochaine partie."
+  "epilogue": "Albert Anker meurt à Ins le 16 juillet 1910. Il reste environ 800 peintures à l’huile et autant d’aquarelles, les illustrations de Gotthelf, plus de 3000 lettres… et la maison d’Ins où il est né et a travaillé."
 };
   P.stations = Object.assign(P.stations || {}, {
   "ankerins": {
@@ -561,9 +561,9 @@
   "schulmaedchen": {
     "text": [
       "Une fillette en robe brun-rouge se tient debout avec une ardoise et un panier à ouvrage. Son regard sort calmement du tableau.",
-      "Le tableau de 1878 est accroché au Musée d’art et d’histoire de Neuchâtel. Écrire et coudre sont ici à égalité dans les mains de l’enfant."
+      "Le tableau de 1878 est accroché au Kunstmuseum Bern. Écrire et coudre sont ici à égalité dans les mains de l’enfant."
     ],
-    "fact": "Huile sur toile, 1878. Musée d’art et d’histoire, Neuchâtel."
+    "fact": "Huile sur toile, 1878. Kunstmuseum Bern."
   },
   "cecile78": {
     "text": [

@@ -1080,7 +1080,7 @@
       "Al crepuscolo il cielo brucia dietro San Giorgio, la chiesa diventa silhouette, l’acqua accoglie l’arancio.",
       "A Geffroy Monet scrive che la luce di Venezia è unica – e che è triste a lasciarla."
     ],
-    "fact": "Il quadro del 1908 è appeso nella Fondation Beyeler di Riehen.",
+    "fact": "Il quadro del 1908 è appeso al National Museum Cardiff.",
     "quote": {
       "text": "Ella Le avrà raccontato del mio entusiasmo per Venezia. Ebbene, è soltanto cresciuto, e ora che si avvicina il momento di lasciare questa luce unica, ne sono triste. È così bella.",
       "cite": "Lettera a Gustave Geffroy, Venedig, 7 dicembre 1908"
@@ -1119,7 +1119,7 @@
       "Santa Maria della Salute sta in fondo al Canal Grande, pali in primo piano dividono la superficie, l’acqua è turchese e violetta.",
       "Nel dicembre 1908 Monet e Alice lasciano Venezia. I quadri li elabora più tardi a Giverny."
     ],
-    "fact": "Il quadro del 1908 è appeso nella Fondation Beyeler di Riehen."
+    "fact": "Il quadro del 1908 è appeso al Museum of Fine Arts di Boston."
   },
   "pathiris": {
     "text": [

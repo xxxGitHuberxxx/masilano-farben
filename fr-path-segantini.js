@@ -144,7 +144,7 @@
   "avemaria": {
     "text": [
       "Un berger et une femme glissent en barque sur un lac calme, le mouton à la proue. En cet instant, ils joignent les mains pour l’Ave Maria.",
-      "Segantini a peint le motif deux fois. Cette version de 1886, déjà réalisée dans les montagnes, lui valut une médaille d’or à Paris."
+      "Segantini a peint le motif deux fois. Cette version de 1886 a déjà été réalisée dans les montagnes ; la médaille d’or d’Amsterdam, en 1883, avait récompensé la première version, de 1882."
     ],
     "fact": "1886. Musée Segantini, Saint-Moritz."
   },

@@ -14,7 +14,7 @@
   "life": "1599–1660",
   "part": "A short path · Madrid",
   "subtitle": "Las Meninas",
-  "intro": "Velázquez is court painter in Madrid. “Las Meninas” shows the infanta, the ladies-in-waiting and the painter himself in the mirror of the studio – one of the most thoughtful pictures about seeing.",
+  "intro": "Velázquez is court painter in Madrid. “Las Meninas” shows the infanta, the ladies-in-waiting, the painter himself at his easel and, in the mirror, the king and queen – one of the most thoughtful pictures about seeing.",
   "ending": [
     "Velázquez dies in Madrid in 1660. A later part can add further court portraits."
   ],
@@ -26,7 +26,7 @@
     "when": null,
     "mapLabel": "Madrid",
     "intro": [
-      "Velázquez is court painter in Madrid. “Las Meninas” shows the infanta, the ladies-in-waiting and the painter himself in the mirror of the studio – one of the most thoughtful pictures about seeing."
+      "Velázquez is court painter in Madrid. “Las Meninas” shows the infanta, the ladies-in-waiting, the painter himself at his easel and, in the mirror, the king and queen – one of the most thoughtful pictures about seeing."
     ]
   }
 });

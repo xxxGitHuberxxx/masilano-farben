@@ -190,7 +190,7 @@
           "pid": "avemaria",
           "text": [
             "Ein Hirt und eine Frau gleiten im Kahn über einen stillen See, das Schaf im Bug. In diesem Augenblick falten sie die Hände zum Ave Maria.",
-            "Segantini malte das Motiv zweimal. Diese Fassung von 1886, bereits in den Bergen entstanden, brachte ihm in Paris eine Goldmedaille ein."
+            "Segantini malte das Motiv zweimal. Diese Fassung von 1886 entstand bereits in den Bergen; die Goldmedaille in Amsterdam 1883 hatte noch die erste Fassung von 1882 erhalten."
           ],
           "fact": "1886. Segantini Museum, St. Moritz."
         },

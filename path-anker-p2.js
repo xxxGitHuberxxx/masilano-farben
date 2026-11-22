@@ -677,7 +677,7 @@
           "In einer dunklen Schulstube sitzen Kinder aller Alter, der Lehrer steht in der Mitte.",
           "Anker malt das Bild 1896 und erinnert damit an das Jahr 1848, als der moderne Bundesstaat entsteht."
         ],
-        "fact": "1896. Kunstmuseum Bern."
+        "fact": "1896. Kunstmuseum Basel."
       },
       {
         "pid": "zaeslin",

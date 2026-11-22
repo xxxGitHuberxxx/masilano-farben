@@ -221,14 +221,14 @@
   P.paths = P.paths || {};
   P.paths.pissarro = {
   "title": "El camino de vida de Camille Pissarro",
-  "part": "Parte 1 · 1830–1884",
-  "subtitle": "De St. Thomas a las exposiciones impresionistas",
-  "intro": "Camille Pissarro nace el 10 de julio de 1830 en Charlotte Amalie, en la isla de St. Thomas, entonces parte de las Indias Occidentales Danesas. Con Fritz Melbye viaja a Venezuela y en 1855 llega a París. Esta primera parte lo acompaña por Louveciennes, los años de Londres y Pontoise hasta el umbral de Éragny, hacia 1884.",
+  "part": "Partes 1–2 · 1830–1903",
+  "subtitle": "De St. Thomas, por Pontoise y Éragny, a los bulevares de París",
+  "intro": "Viaja con Camille Pissarro por toda su vida: desde su nacimiento en St. Thomas en 1830, pasando por Venezuela, París, Louveciennes, Londres y Pontoise y las ocho exposiciones impresionistas, hasta Éragny, el neoimpresionismo con Seurat y Signac y el retorno, las vistas de ciudad pintadas desde las ventanas de París, Ruan, Dieppe y El Havre, hasta su muerte el 13 de noviembre de 1903.",
   "ending": [
-    "La primera parte del camino de Pissarro termina cuando se instala en Éragny-sur-Epte en 1884.",
-    "La segunda parte sigue con los años en Éragny, el encuentro con el neoimpresionismo, las vistas de París, Ruan y El Havre y su muerte en 1903."
+    "Camille Pissarro muere en París el 13 de noviembre de 1903, a los setenta y tres años. Está enterrado en el cementerio de Père-Lachaise.",
+    "Quedan los campos y jardines de Pontoise y Éragny, los bulevares, puentes y puertos de sus últimos años, y el recuerdo del único pintor que participó en las ocho exposiciones impresionistas."
   ],
-  "epilogue": "La segunda parte sigue con los años en Éragny, el encuentro con el neoimpresionismo, las vistas de París, Ruan y El Havre y su muerte en 1903.",
+  "epilogue": "Camille Pissarro muere en París el 13 de noviembre de 1903. Está enterrado en el cementerio de Père-Lachaise.",
   "life": "1830–1903"
 };
   P.stations = Object.assign(P.stations || {}, {

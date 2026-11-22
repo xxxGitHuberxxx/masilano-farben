@@ -216,15 +216,15 @@
   P.paths = P.paths || {};
   P.paths.turner = {
   "title": "El camino de vida de J. M. W. Turner",
-  "part": "Parte 1 · 1775–1819",
-  "subtitle": "De Covent Garden, por los Alpes, al Rin",
-  "intro": "Joseph Mallord William Turner nace el 23 de abril de 1775 en el número 21 de Maiden Lane, en Covent Garden, hijo de un barbero, y es bautizado el 14 de mayo en la iglesia de St. Paul de Covent Garden. Esta primera parte lo sigue desde las Royal Academy Schools y las primeras acuarelas, pasando por el primer óleo de 1796, su ingreso en la Royal Academy en 1802 y el primer viaje al continente, hasta el umbral del viaje a Italia en 1819.",
+  "life": "1775–1851",
+  "part": "Partes 1–2 · 1775–1851",
+  "subtitle": "De Covent Garden, por Venecia y el Rigi, a Chelsea",
+  "intro": "Viaja con J. M. W. Turner por toda su vida: desde su nacimiento en Covent Garden en 1775, pasando por la Royal Academy, Gales, los Alpes y el Rin, hasta los viajes a Italia, a Petworth, al incendio del Parlamento, a Venecia, a la Fighting Temeraire, a las acuarelas suizas y a Lluvia, vapor y velocidad, hasta su muerte el 19 de diciembre de 1851 en Chelsea.",
   "ending": [
-    "En agosto de 1819 Turner parte hacia su primer viaje a Italia.",
-    "En la parte siguiente llegan Venecia, Lluvia, vapor y velocidad, la Fighting Temeraire y su muerte el 19 de diciembre de 1851 en Chelsea."
+    "J. M. W. Turner muere en Chelsea el 19 de diciembre de 1851, a los setenta y seis años. Está enterrado en la catedral de St. Paul de Londres.",
+    "Legó sus cuadros a la nación. Con el Turner Bequest permanecen juntos cientos de pinturas y miles de dibujos y acuarelas, desde las primeras vistas de Gales hasta la luz, el vapor y la niebla de los últimos años."
   ],
-  "epilogue": "En la parte siguiente llegan Venecia, Lluvia, vapor y velocidad, la Fighting Temeraire y su muerte el 19 de diciembre de 1851 en Chelsea.",
-  "life": "1775–1851"
+  "epilogue": "J. M. W. Turner muere en Chelsea el 19 de diciembre de 1851. Está enterrado en la catedral de St. Paul de Londres."
 };
   P.stations = Object.assign(P.stations || {}, {
   "tucovent": {

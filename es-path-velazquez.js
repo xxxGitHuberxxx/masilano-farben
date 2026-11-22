@@ -14,7 +14,7 @@
   "life": "1599–1660",
   "part": "Un camino breve · Madrid",
   "subtitle": "Las Meninas",
-  "intro": "Velázquez es pintor de corte en Madrid. «Las Meninas» muestra a la infanta, las meninas y al propio pintor en el espejo del taller: uno de los cuadros más pensados sobre el acto de mirar.",
+  "intro": "Velázquez es pintor de corte en Madrid. «Las Meninas» muestra a la infanta, las meninas, al propio pintor ante el lienzo y, en el espejo, a los reyes: uno de los cuadros más pensados sobre el acto de mirar.",
   "ending": [
     "Velázquez muere en Madrid en 1660. Una parte posterior puede añadir más retratos de corte."
   ],
@@ -26,7 +26,7 @@
     "when": null,
     "mapLabel": "Madrid",
     "intro": [
-      "Velázquez es pintor de corte en Madrid. «Las Meninas» muestra a la infanta, las meninas y al propio pintor en el espejo del taller: uno de los cuadros más pensados sobre el acto de mirar."
+      "Velázquez es pintor de corte en Madrid. «Las Meninas» muestra a la infanta, las meninas, al propio pintor ante el lienzo y, en el espejo, a los reyes: uno de los cuadros más pensados sobre el acto de mirar."
     ]
   }
 });

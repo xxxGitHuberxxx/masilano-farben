@@ -262,10 +262,10 @@
   "subtitle": "De Berne à Genève, vers les lacs et jusqu’au mont Blanc",
   "intro": "Voyage avec Ferdinand Hodler à travers toute sa vie : de l’enfance à Berne et de la perte précoce de sa famille, en passant par l’apprentissage chez Ferdinand Sommer à Thoune, la formation chez Barthélemy Menn à Genève, le voyage à Madrid, le réalisme des années 1880 et le tournant symboliste autour de « La Nuit » – que nous mentionnons seulement dans le récit de l’étape – jusqu’aux paysages parallélistes du lac de Thoune et du Léman, aux peintures murales de Iéna et de Hanovre et aux derniers regards depuis le Quai du Mont-Blanc. De courtes étapes, des tableaux à colorier et une voix tirée d’une lettre de 1907. Hodler meurt à Genève le 19 mai 1918.",
   "ending": [
-    "Au printemps 1918, depuis le balcon et la fenêtre de son appartement au Quai du Mont-Blanc 26, Hodler peint encore et encore le Léman avec le mont Blanc, à différentes heures du jour. La ville de Genève le nomme bourgeois d’honneur.",
+    "Au printemps 1918, depuis le balcon et la fenêtre de son appartement au Quai du Mont-Blanc 29, Hodler peint encore et encore le Léman avec le mont Blanc, à différentes heures du jour. La ville de Genève le nomme bourgeois d’honneur.",
     "Le 19 mai 1918, Ferdinand Hodler meurt à Genève, à soixante-cinq ans, dans ce même appartement. Il reste les paysages des lacs et des montagnes, les portraits, les peintures murales – et une œuvre qui a fait du parallélisme son principe."
   ],
-  "epilogue": "Ferdinand Hodler meurt à Genève le 19 mai 1918, dans son appartement du Quai du Mont-Blanc 26. Peu auparavant, il avait été nommé bourgeois d’honneur de la ville. Il reste les paysages parallélistes du lac de Thoune et du Léman, les sommets au-dessus de la mer de brouillard, les peintures murales de Iéna et de Hanovre et les derniers regards sur le mont Blanc."
+  "epilogue": "Ferdinand Hodler meurt à Genève le 19 mai 1918, dans son appartement du Quai du Mont-Blanc 29. Peu auparavant, il avait été nommé bourgeois d’honneur de la ville. Il reste les paysages parallélistes du lac de Thoune et du Léman, les sommets au-dessus de la mer de brouillard, les peintures murales de Iéna et de Hanovre et les derniers regards sur le mont Blanc."
 };
   P.stations = Object.assign(P.stations || {}, {
   "hodlerwien": {
@@ -336,7 +336,7 @@
     "when": "1911–1917",
     "mapLabel": "Portraits",
     "intro": [
-      "À côté des paysages naissent en ces années de nombreux portraits : le critique Mathias Morhardt, la collectionneuse Gertrud Müller, le fils Hector, des autoportraits, en 1916 le général Ulrich Wille. En 1913 naît la fille Pauline-Valentine, de la liaison avec Valentine Godé-Darel. À l’automne de la même année, Hodler est au Salon d’Automne à Paris, rencontre Auguste Rodin et devient officier de la Légion d’honneur. La famille s’installe au Quai du Mont-Blanc 26 ; l’appartement reçoit des meubles de Josef Hoffmann.",
+      "À côté des paysages naissent en ces années de nombreux portraits : le critique Mathias Morhardt, la collectionneuse Gertrud Müller, le fils Hector, des autoportraits, en 1916 le général Ulrich Wille. En 1913 naît la fille Pauline-Valentine, de la liaison avec Valentine Godé-Darel. À l’automne de la même année, Hodler est au Salon d’Automne à Paris, rencontre Auguste Rodin et devient officier de la Légion d’honneur. La famille s’installe au Quai du Mont-Blanc 29 ; l’appartement reçoit des meubles de Josef Hoffmann.",
       "En 1914, Hodler signe la protestation contre le bombardement de la cathédrale de Reims ; les associations d’artistes allemandes l’en excluent. Le 25 janvier 1915, Valentine Godé-Darel meurt à Vevey. En 1916 et 1917, Hodler enseigne une classe de peinture à l’École des Beaux-Arts de Genève. En 1917, le Kunsthaus Zürich lui consacre une grande rétrospective ; la même année, il est atteint d’un œdème pulmonaire."
     ]
   },
@@ -354,7 +354,7 @@
     "when": "1918",
     "mapLabel": "1918",
     "intro": [
-      "Au printemps 1918, depuis la fenêtre et le balcon de son appartement au Quai du Mont-Blanc 26, Hodler peint le Léman avec le mont Blanc, à l’aube, dans l’aurore, à la lumière du matin, l’après-midi, avant le lever du soleil. La ville de Genève le nomme bourgeois d’honneur.",
+      "Au printemps 1918, depuis la fenêtre et le balcon de son appartement au Quai du Mont-Blanc 29, Hodler peint le Léman avec le mont Blanc, à l’aube, dans l’aurore, à la lumière du matin, l’après-midi, avant le lever du soleil. La ville de Genève le nomme bourgeois d’honneur.",
       "Il naît aussi un portrait de sa femme Berthe. Le 19 mai 1918, Ferdinand Hodler meurt à Genève, dans ce même appartement, à soixante-cinq ans."
     ]
   }
@@ -739,7 +739,7 @@
   "hmbdawn": {
     "text": [
       "À l’aube, le mont Blanc s’étend au-dessus du Léman, les formes douces, la lumière encore pâle.",
-      "En 1918, Hodler peint encore et encore la vue depuis son appartement du Quai du Mont-Blanc 26, à différentes heures du jour."
+      "En 1918, Hodler peint encore et encore la vue depuis son appartement du Quai du Mont-Blanc 29, à différentes heures du jour."
     ],
     "fact": "1918. Collection non déterminée."
   },

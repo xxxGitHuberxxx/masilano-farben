@@ -1080,7 +1080,7 @@
       "Au crépuscule, le ciel brûle derrière San Giorgio, l’église devient silhouette, l’eau accueille l’orangé.",
       "À Geffroy, Monet écrit que la lumière de Venise est unique – et qu’il est triste de la quitter."
     ],
-    "fact": "Le tableau de 1908 est accroché à la Fondation Beyeler à Riehen.",
+    "fact": "Le tableau de 1908 est accroché au National Museum Cardiff.",
     "quote": {
       "text": "Elle vous aura parlé de mon enthousiasme pour Venise. Eh bien, il n’a fait que grandir, et à mesure que le moment d’abandonner cette lumière unique approche, j’en suis triste. C’est si beau.",
       "cite": "Lettre à Gustave Geffroy, Venedig, 7 décembre 1908"
@@ -1119,7 +1119,7 @@
       "Santa Maria della Salute se tient au bout du Grand Canal, des perches au premier plan partagent la surface, l’eau est turquoise et violette.",
       "En décembre 1908, Monet et Alice quittent Venise. Il élabore les tableaux plus tard à Giverny."
     ],
-    "fact": "Le tableau de 1908 est accroché à la Fondation Beyeler à Riehen."
+    "fact": "Le tableau de 1908 est accroché au Museum of Fine Arts de Boston."
   },
   "pathiris": {
     "text": [

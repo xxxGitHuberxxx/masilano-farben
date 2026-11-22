@@ -19,7 +19,7 @@
   "part": "Ein kurzer Weg · Madrid",
   "subtitle": "Las Meninas",
   "cover": "meninas",
-  "intro": "Velázquez ist Hofmaler in Madrid. «Las Meninas» zeigt die Infantin, die Hofdamen und den Maler selbst im Spiegel des Ateliers – eines der nachdenklichsten Bilder über das Sehen.",
+  "intro": "Velázquez ist Hofmaler in Madrid. «Las Meninas» zeigt die Infantin, die Hofdamen, den Maler selbst an der Staffelei und im Spiegel das Königspaar – eines der nachdenklichsten Bilder über das Sehen.",
   "ending": [
     "Velázquez stirbt 1660 in Madrid. Ein späterer Teil kann weitere Hofbildnisse nachtragen."
   ],
@@ -41,7 +41,7 @@
       },
       "mapLabel": "Madrid",
       "intro": [
-        "Velázquez ist Hofmaler in Madrid. «Las Meninas» zeigt die Infantin, die Hofdamen und den Maler selbst im Spiegel des Ateliers – eines der nachdenklichsten Bilder über das Sehen."
+        "Velázquez ist Hofmaler in Madrid. «Las Meninas» zeigt die Infantin, die Hofdamen, den Maler selbst an der Staffelei und im Spiegel das Königspaar – eines der nachdenklichsten Bilder über das Sehen."
       ],
       "works": [
         {

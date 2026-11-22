@@ -215,14 +215,14 @@
   P.paths.hodler = {
   "title": "Le parcours de vie de Ferdinand Hodler",
   "life": "1853–1918",
-  "part": "Partie 1 · Jusqu’aux environs de 1900",
-  "subtitle": "De Berne à Genève, à Madrid et jusqu’à la reconnaissance",
-  "intro": "Voyage avec Ferdinand Hodler à travers la première moitié de son chemin : de l’enfance à Berne et de la perte précoce de sa famille, en passant par l’apprentissage chez Ferdinand Sommer à Thoune, la formation chez Barthélemy Menn à Genève, le voyage à Madrid, le réalisme des années 1880 et le tournant symboliste autour de « La Nuit » – que nous mentionnons seulement dans le récit de l’étape – jusqu’à la reconnaissance vers 1900. De courtes étapes et des tableaux à colorier. Cette première partie va jusqu’aux environs de 1900.",
+  "part": "Parties 1–2 · 1853–1918",
+  "subtitle": "De Berne à Genève, vers les lacs et jusqu’au mont Blanc",
+  "intro": "Voyage avec Ferdinand Hodler à travers toute sa vie : de l’enfance à Berne et de la perte précoce de sa famille, en passant par l’apprentissage chez Ferdinand Sommer à Thoune, la formation chez Barthélemy Menn à Genève, le voyage à Madrid, le réalisme des années 1880 et le tournant symboliste autour de « La Nuit » – que nous mentionnons seulement dans le récit de l’étape – jusqu’aux paysages parallélistes du lac de Thoune et du Léman, aux peintures murales de Iéna et de Hanovre et aux derniers regards depuis le Quai du Mont-Blanc. De courtes étapes, des tableaux à colorier et une voix tirée d’une lettre de 1907. Hodler meurt à Genève le 19 mai 1918.",
   "ending": [
-    "En 1900, Hodler reçoit une médaille d’or à l’Exposition universelle de Paris, entre autres pour « La Nuit », « Le Jour » et « Eurythmie ». Il rejoint les Sécessions de Vienne et de Berlin.",
-    "Le chemin continue. Suivent les paysages parallélistes du lac de Thoune et du Léman, de l’Eiger, du Mönch et de la Jungfrau, les peintures murales de Iéna et de Hanovre, les années avec Valentine Godé-Darel et la mort de Hodler à Genève le 19 mai 1918. C’est le sujet de la prochaine partie."
+    "Au printemps 1918, depuis le balcon et la fenêtre de son appartement au Quai du Mont-Blanc 29, Hodler peint encore et encore le Léman avec le mont Blanc, à différentes heures du jour. La ville de Genève le nomme bourgeois d’honneur.",
+    "Le 19 mai 1918, Ferdinand Hodler meurt à Genève, à soixante-cinq ans, dans ce même appartement. Il reste les paysages des lacs et des montagnes, les portraits, les peintures murales – et une œuvre qui a fait du parallélisme son principe."
   ],
-  "epilogue": "En 1900, Hodler reçoit une médaille d’or à Paris et rejoint les Sécessions de Vienne et de Berlin. Les grands tableaux de lacs et de montagnes, les peintures murales, Valentine Godé-Darel et la mort à Genève le 19 mai 1918 appartiennent à la prochaine partie."
+  "epilogue": "Ferdinand Hodler meurt à Genève le 19 mai 1918, dans son appartement du Quai du Mont-Blanc 29. Peu auparavant, il avait été nommé bourgeois d’honneur de la ville. Il reste les paysages parallélistes du lac de Thoune et du Léman, les sommets au-dessus de la mer de brouillard, les peintures murales de Iéna et de Hanovre et les derniers regards sur le mont Blanc."
 };
   P.stations = Object.assign(P.stations || {}, {
   "hodlerbern": {

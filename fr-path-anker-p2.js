@@ -78,7 +78,7 @@
   },
   "dorfschule": {
     "title": "L’école de village de 1848",
-    "museum": "Kunstmuseum Bern"
+    "museum": "Kunstmuseum Basel"
   },
   "zaeslin": {
     "title": "Les frères et sœurs Zaeslin",
@@ -476,7 +476,7 @@
       "Dans une salle de classe sombre, des enfants de tous âges sont assis ; le maître est au centre.",
       "Anker peint le tableau en 1896 et rappelle ainsi l’année 1848, où naît l’État fédéral moderne."
     ],
-    "fact": "1896. Kunstmuseum Bern."
+    "fact": "1896. Kunstmuseum Basel."
   },
   "zaeslin": {
     "text": [

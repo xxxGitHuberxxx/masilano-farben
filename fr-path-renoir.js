@@ -213,14 +213,14 @@
   P.paths = P.paths || {};
   P.paths.renoir = {
   "title": "Le chemin de vie de Pierre-Auguste Renoir",
-  "part": "Partie 1 · 1841–1881",
-  "subtitle": "De Limoges au Déjeuner des canotiers",
-  "intro": "Pierre-Auguste Renoir naît à Limoges le 25 février 1841. La famille s’installe à Paris, il apprend le métier de peintre sur porcelaine et, dans l’atelier de Gleyre, il rencontre Monet, Bazille et Sisley. Cette première partie le suit jusqu’au « Déjeuner des canotiers », vers 1881.",
+  "part": "Parties 1–2 · 1841–1919",
+  "subtitle": "De Limoges à Cagnes-sur-Mer, par Chatou, l’Algérie et l’Italie",
+  "intro": "Voyage avec Pierre-Auguste Renoir à travers toute sa vie : de sa naissance à Limoges en 1841 et de son apprentissage de peintre sur porcelaine, par l’atelier de Gleyre, l’amitié avec Monet, Bazille et Sisley, la Grenouillère et les expositions impressionnistes, jusqu’au « Déjeuner des canotiers » ; puis l’Algérie et l’Italie, le mariage avec Aline Charigot, les fils Pierre, Jean et Claude, Essoyes et Les Collettes à Cagnes-sur-Mer, jusqu’à sa mort le 3 décembre 1919.",
   "ending": [
-    "La première partie du chemin de Renoir s’achève avec les canotiers au bord de la Seine.",
-    "La deuxième partie suit le voyage en Algérie et en Italie, la rencontre avec l’art ancien et les dernières années à Cagnes-sur-Mer."
+    "Pierre-Auguste Renoir meurt à Cagnes-sur-Mer le 3 décembre 1919, à soixante-dix-huit ans. Sa tombe se trouve à Essoyes, le village d’Aline.",
+    "Il laisse des milliers de tableaux : danses et canotiers, enfants et portraits, fleurs, fruits et paysages du Midi."
   ],
-  "epilogue": "La deuxième partie suit le voyage en Algérie et en Italie, la rencontre avec l’art ancien et les dernières années à Cagnes-sur-Mer.",
+  "epilogue": "Pierre-Auguste Renoir meurt à Cagnes-sur-Mer le 3 décembre 1919. Sa tombe se trouve à Essoyes.",
   "life": "1841–1919"
 };
   P.stations = Object.assign(P.stations || {}, {

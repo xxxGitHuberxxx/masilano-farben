@@ -151,7 +151,7 @@
   },
   "schulmaedchen": {
     "title": "Scolara con lavagna e cestino da lavoro",
-    "museum": "Musée d’art et d’histoire, Neuchâtel"
+    "museum": "Kunstmuseum Bern"
   },
   "cecile78": {
     "title": "Cécile Anker nel seggiolone",
@@ -216,16 +216,16 @@
 });
   P.paths = P.paths || {};
   P.paths.anker = {
-  "title": "Il percorso di vita di Albert Anker",
+  "title": "Il cammino di vita di Albert Anker",
   "life": "1831–1910",
-  "part": "Parte 1 · Fino agli anni Ottanta dell’Ottocento",
+  "part": "Parti 1–2 · 1831–1910",
   "subtitle": "Da Ins a Parigi e di nuovo a Ins",
-  "intro": "Viaggia con Albert Anker attraverso la prima metà del suo cammino: dall’infanzia a Ins e dagli anni di scuola a Neuchâtel, passando per gli studi di teologia a Berna e a Halle, la formazione presso Charles Gleyre a Parigi, il matrimonio, la medaglia d’oro del 1866, le faenze per Théodore Deck e gli anni nel Gran Consiglio, fino ai dipinti di bambini e di vita di villaggio degli anni Ottanta. Tappe brevi, quadri da colorare e due voci documentate: una lettera all’amico di scuola Auguste Bachelin e un biglietto alla moglie da Murten. Questa prima parte arriva fino al 1888 circa.",
+  "intro": "Percorri tutta la vita di Albert Anker: l’infanzia a Ins e gli anni di scuola a Neuchâtel, gli studi di teologia, la formazione presso Charles Gleyre a Parigi, la famiglia e gli anni nel Gran Consiglio, fino alle illustrazioni di Gotthelf, agli acquerelli dopo l’ictus del 1901 e alla morte a Ins il 16 luglio 1910. Stazioni brevi, quadri da colorare e voci documentate, tratte da lettere e da un diario.",
   "ending": [
-    "Nel 1885 Anker dipinge la «Bambina che lavora a maglia accanto alla culla», nel 1888 «I primi passi». Nel 1878 è stato nominato cavaliere della Legione d’onore; la famiglia passa ancora l’inverno a Parigi e l’estate a Ins.",
-    "Il cammino continua. Nel 1890 Anker rinuncia alla residenza parigina. Seguono i grandi dipinti degli anni Novanta – tra cui «La scuola di villaggio del 1848» – e poi le illustrazioni di Gotthelf. Alla fine di settembre del 1901 è colpito da un ictus. Il 16 luglio 1910 muore a Ins. Di questo tratta la prossima parte."
+    "Alla fine di settembre del 1901 Anker è colpito da un ictus. La mano destra ne risente ed egli abbandona in gran parte la pittura a olio; fino alla fine dipinge acquerelli, seduto, con il foglio sulle ginocchia.",
+    "Il 16 luglio 1910 Albert Anker muore a Ins, a settantanove anni. Riceve un grande funerale di Stato; nel novembre 1910 Neuchâtel e nel gennaio 1911 Berna gli dedicano mostre commemorative. La sua casa con lo studio è oggi il Centre Albert Anker."
   ],
-  "epilogue": "Nel 1885 nasce la «Bambina che lavora a maglia accanto alla culla», nel 1888 «I primi passi». Nel 1890 Anker rinuncia alla residenza parigina. Gli anni Novanta, la scuola di villaggio, l’ictus del 1901 e la morte a Ins nel 1910 appartengono alla prossima parte."
+  "epilogue": "Albert Anker muore a Ins il 16 luglio 1910. Restano circa 800 dipinti a olio e altrettanti acquerelli, le illustrazioni di Gotthelf, più di 3000 lettere… e la casa di Ins dove è nato e ha lavorato."
 };
   P.stations = Object.assign(P.stations || {}, {
   "ankerins": {
@@ -561,9 +561,9 @@
   "schulmaedchen": {
     "text": [
       "Una bambina in abito bruno-rosso sta in piedi con una lavagna e un cestino da lavoro. Il suo sguardo esce con calma dal quadro.",
-      "Il dipinto del 1878 è esposto al Musée d’art et d’histoire di Neuchâtel. Scrivere e cucire sono qui alla pari, nelle mani della bambina."
+      "Il dipinto del 1878 è esposto al Kunstmuseum Bern. Scrivere e cucire sono qui alla pari, nelle mani della bambina."
     ],
-    "fact": "Olio su tela, 1878. Musée d’art et d’histoire, Neuchâtel."
+    "fact": "Olio su tela, 1878. Kunstmuseum Bern."
   },
   "cecile78": {
     "text": [

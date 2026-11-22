@@ -221,15 +221,15 @@
   EN.paths = EN.paths || {};
   EN.paths.monet = {
   "title": "Monet’s Life Journey",
-  "part": "Part 1 · 1856–1874",
-  "subtitle": "From Le Havre to the first Impressionist exhibition",
-  "intro": "Travel with Claude Monet through the years in which he becomes an Impressionist: from the caricatures in Le Havre and the first landscapes with Boudin, by way of Paris, Fontainebleau and Camille, the Seine with Renoir, the exile in London and the mills of Zaandam, to Argenteuil – to the sunrise in the harbour and the first Impressionist exhibition of 1874. Short stations, pictures to colour, and voices from his letters to Bazille and Pissarro. This first part covers 1856 to 1874.",
+  "part": "Parts 1–3 · 1856–1926",
+  "subtitle": "From Le Havre to the water lilies of the Orangerie",
+  "intro": "Travel with Claude Monet through his whole life as a painter: from the caricatures in Le Havre, by way of Camille, London, Zaandam and Argenteuil, the Gare Saint-Lazare, Vétheuil, the coast, the Riviera, Belle-Île and the Creuse, to Giverny – to the haystacks and poplars, Rouen Cathedral, Norway, the Thames and Venice, and finally to the water garden and the great water-lily decorations. Short stations, pictures to colour, and voices from his letters.",
   "ending": [
-    "In April 1874 Monet and his friends exhibit independently, in Nadar’s studio on the Boulevard des Capucines. Louis Leroy mocks “Impression, Sunrise” in Le Charivari and calls the group “Impressionnistes”. The mocking name sticks and becomes the name of a new painting.",
-    "At Argenteuil money is often short. Durand-Ruel buys what he can; it is not always enough. Camille and Jean are the centre of the house, and Monet goes on painting the river, the sky, the light.",
-    "The path leads on. At Vétheuil Camille falls ill and dies in 1879. The Hoschedé family, first collectors, then companions, enter his life. Giverny, the garden and the water lilies still lie ahead – in the next parts of this life journey."
+    "On 5 December 1926 Claude Monet dies at Giverny, aged 86. His friend Georges Clemenceau has helped to see the gift of the great water-lily panels through to the State.",
+    "In May 1927 the Orangerie in Paris opens the two oval rooms with the Grandes Décorations. The water garden Monet himself created hangs there as a circular horizon.",
+    "The life journey ends here: from the caricatures in Le Havre to the water lilies of the Orangerie."
   ],
-  "epilogue": "In April 1874 Monet and his friends exhibit independently. A critic names them “Impressionnistes” after “Impression, Sunrise” – and the name sticks. Camille later falls ill at Vétheuil; the Hoschedé family and Giverny follow in the next parts."
+  "epilogue": "Claude Monet dies on 5 December 1926 at Giverny. In May 1927 the Orangerie in Paris opens the rooms with the Grandes Décorations – the great water-lily panels he left to the State."
 };
   EN.stations = Object.assign(EN.stations || {},
     {

@@ -256,10 +256,10 @@
   "subtitle": "From Bern to Geneva, to the lakes and to Mont Blanc",
   "intro": "Travel with Ferdinand Hodler through his whole life: from childhood in Bern and the early loss of his family, through the apprenticeship with Ferdinand Sommer in Thun, the training with Barthélemy Menn in Geneva, the journey to Madrid, the realism of the 1880s and the Symbolist breakthrough around “The Night” – which we mention only in the station story – to the parallelist landscapes of Lake Thun and Lake Geneva, the murals in Jena and Hanover, and the last views from the Quai du Mont-Blanc. Short stations, pictures to colour and a voice from a letter of 1907. Hodler dies in Geneva on 19 May 1918.",
   "ending": [
-    "In the spring of 1918, from the balcony and the window of his apartment at Quai du Mont-Blanc 26, Hodler paints Lake Geneva with Mont Blanc again and again, at different hours of the day. The city of Geneva makes him an honorary citizen.",
+    "In the spring of 1918, from the balcony and the window of his apartment at Quai du Mont-Blanc 29, Hodler paints Lake Geneva with Mont Blanc again and again, at different hours of the day. The city of Geneva makes him an honorary citizen.",
     "On 19 May 1918 Ferdinand Hodler dies in Geneva, aged sixty-five, in this same apartment. What remain are the landscapes of the lakes and mountains, the portraits, the murals – and a body of work that made parallelism its principle."
   ],
-  "epilogue": "Ferdinand Hodler dies in Geneva on 19 May 1918, in his apartment at Quai du Mont-Blanc 26. Shortly before, he had been made an honorary citizen of the city. What remain are the parallelist landscapes of Lake Thun and Lake Geneva, the summits above a sea of fog, the murals of Jena and Hanover, and the last views of Mont Blanc."
+  "epilogue": "Ferdinand Hodler dies in Geneva on 19 May 1918, in his apartment at Quai du Mont-Blanc 29. Shortly before, he had been made an honorary citizen of the city. What remain are the parallelist landscapes of Lake Thun and Lake Geneva, the summits above a sea of fog, the murals of Jena and Hanover, and the last views of Mont Blanc."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "hodlerwien": {
@@ -330,7 +330,7 @@
     "when": "1911–1917",
     "mapLabel": "Portraits",
     "intro": [
-      "Besides the landscapes, many portraits are made in these years: the critic Mathias Morhardt, the collector Gertrud Müller, his son Hector, self-portraits, and in 1916 General Ulrich Wille. In 1913 the daughter Pauline-Valentine is born, from the relationship with Valentine Godé-Darel. In the autumn of the same year Hodler is at the Paris Salon d’Automne, meets Auguste Rodin and is made an officer of the Légion d’honneur. The family moves to Quai du Mont-Blanc 26; the apartment is furnished by Josef Hoffmann.",
+      "Besides the landscapes, many portraits are made in these years: the critic Mathias Morhardt, the collector Gertrud Müller, his son Hector, self-portraits, and in 1916 General Ulrich Wille. In 1913 the daughter Pauline-Valentine is born, from the relationship with Valentine Godé-Darel. In the autumn of the same year Hodler is at the Paris Salon d’Automne, meets Auguste Rodin and is made an officer of the Légion d’honneur. The family moves to Quai du Mont-Blanc 29; the apartment is furnished by Josef Hoffmann.",
       "In 1914 Hodler signs the protest against the bombardment of Reims Cathedral; German artists’ associations then exclude him. On 25 January 1915 Valentine Godé-Darel dies in Vevey. In 1916 and 1917 Hodler teaches a painting class at the École des Beaux-Arts in Geneva. In 1917 the Kunsthaus Zürich mounts a large retrospective; in the same year he suffers a pulmonary oedema."
     ]
   },
@@ -348,7 +348,7 @@
     "when": "1918",
     "mapLabel": "1918",
     "intro": [
-      "In the spring of 1918, from the window and the balcony of his apartment at Quai du Mont-Blanc 26, Hodler paints Lake Geneva with Mont Blanc, at dawn, in the red of dawn, in morning light, in the afternoon, before sunrise. The city of Geneva makes him an honorary citizen.",
+      "In the spring of 1918, from the window and the balcony of his apartment at Quai du Mont-Blanc 29, Hodler paints Lake Geneva with Mont Blanc, at dawn, in the red of dawn, in morning light, in the afternoon, before sunrise. The city of Geneva makes him an honorary citizen.",
       "A portrait of his wife Berthe is also made. On 19 May 1918 Ferdinand Hodler dies in Geneva, in this same apartment, aged sixty-five."
     ]
   }
@@ -732,7 +732,7 @@
   "hmbdawn": {
     "text": [
       "At dawn Mont Blanc lies above Lake Geneva, the forms soft, the light still pale.",
-      "In 1918 Hodler paints the view from his apartment at Quai du Mont-Blanc 26 again and again, at different hours of the day."
+      "In 1918 Hodler paints the view from his apartment at Quai du Mont-Blanc 29 again and again, at different hours of the day."
     ],
     "fact": "1918. Collection not established."
   },

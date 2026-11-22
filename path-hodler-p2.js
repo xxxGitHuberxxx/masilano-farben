@@ -461,10 +461,10 @@
   path.subtitle = "Von Bern nach Genf, zu den Seen und zum Mont Blanc";
   path.intro = "Reise mit Ferdinand Hodler durch sein ganzes Leben: von der Kindheit in Bern und dem frühen Verlust der Familie über die Lehre bei Ferdinand Sommer in Thun, die Ausbildung bei Barthélemy Menn in Genf, die Reise nach Madrid, den Realismus der 1880er Jahre und den symbolistischen Durchbruch um «Die Nacht» – die wir nur in der Stationsgeschichte erwähnen – bis zu den parallelistischen Landschaften vom Thuner- und vom Genfersee, den Wandbildern in Jena und Hannover und den letzten Blicken vom Quai du Mont-Blanc. Kurze Stationen, Bilder zum Ausmalen und eine Stimme aus einem Brief von 1907. Hodler stirbt am 19. Mai 1918 in Genf.";
   path.ending = [
-  "Im Frühjahr 1918 malt Hodler vom Balkon und vom Fenster seiner Wohnung am Quai du Mont-Blanc 26 immer wieder den Genfersee mit dem Mont Blanc, zu verschiedenen Stunden des Tages. Die Stadt Genf ernennt ihn zum Ehrenbürger.",
+  "Im Frühjahr 1918 malt Hodler vom Balkon und vom Fenster seiner Wohnung am Quai du Mont-Blanc 29 immer wieder den Genfersee mit dem Mont Blanc, zu verschiedenen Stunden des Tages. Die Stadt Genf ernennt ihn zum Ehrenbürger.",
   "Am 19. Mai 1918 stirbt Ferdinand Hodler in Genf, fünfundsechzig Jahre alt, in eben dieser Wohnung. Zurück bleiben die Landschaften der Seen und Berge, die Bildnisse, die Wandbilder – und ein Werk, das den Parallelismus zum Prinzip gemacht hat."
 ];
-  path.epilogue = "Ferdinand Hodler stirbt am 19. Mai 1918 in Genf, in seiner Wohnung am Quai du Mont-Blanc 26. Kurz zuvor ist er Ehrenbürger der Stadt geworden. Zurück bleiben die parallelistischen Landschaften vom Thuner- und vom Genfersee, die Gipfel über dem Nebelmeer, die Wandbilder von Jena und Hannover und die letzten Blicke auf den Mont Blanc.";
+  path.epilogue = "Ferdinand Hodler stirbt am 19. Mai 1918 in Genf, in seiner Wohnung am Quai du Mont-Blanc 29. Kurz zuvor ist er Ehrenbürger der Stadt geworden. Zurück bleiben die parallelistischen Landschaften vom Thuner- und vom Genfersee, die Gipfel über dem Nebelmeer, die Wandbilder von Jena und Hannover und die letzten Blicke auf den Mont Blanc.";
   var stations = [
   {
     "id": "hodlerwien",
@@ -888,7 +888,7 @@
     },
     "mapLabel": "Bildnisse",
     "intro": [
-      "Neben den Landschaften entstehen in diesen Jahren viele Bildnisse: der Kritiker Mathias Morhardt, die Sammlerin Gertrud Müller, der Sohn Hector, Selbstbildnisse, 1916 General Ulrich Wille. 1913 wird die Tochter Pauline-Valentine geboren, aus der Verbindung mit Valentine Godé-Darel. Im Herbst desselben Jahres ist Hodler im Pariser Salon d’Automne, begegnet Auguste Rodin und wird Offizier der Ehrenlegion. Die Familie zieht an den Quai du Mont-Blanc 26; die Wohnung erhält Möbel von Josef Hoffmann.",
+      "Neben den Landschaften entstehen in diesen Jahren viele Bildnisse: der Kritiker Mathias Morhardt, die Sammlerin Gertrud Müller, der Sohn Hector, Selbstbildnisse, 1916 General Ulrich Wille. 1913 wird die Tochter Pauline-Valentine geboren, aus der Verbindung mit Valentine Godé-Darel. Im Herbst desselben Jahres ist Hodler im Pariser Salon d’Automne, begegnet Auguste Rodin und wird Offizier der Ehrenlegion. Die Familie zieht an den Quai du Mont-Blanc 29; die Wohnung erhält Möbel von Josef Hoffmann.",
       "1914 unterzeichnet Hodler den Protest gegen die Beschiessung der Kathedrale von Reims; deutsche Künstlerverbände schliessen ihn daraufhin aus. Am 25. Januar 1915 stirbt Valentine Godé-Darel in Vevey. 1916 und 1917 unterrichtet Hodler eine Malklasse an der École des Beaux-Arts in Genf. 1917 zeigt das Kunsthaus Zürich eine grosse Retrospektive; im selben Jahr erleidet er ein Lungenödem."
     ],
     "works": [
@@ -1048,7 +1048,7 @@
     },
     "mapLabel": "1918",
     "intro": [
-      "Im Frühjahr 1918 malt Hodler vom Fenster und vom Balkon seiner Wohnung am Quai du Mont-Blanc 26 den Genfersee mit dem Mont Blanc, in der Morgendämmerung, im Morgenrot, bei Morgenlicht, am Nachmittag, vor Sonnenaufgang. Die Stadt Genf ernennt ihn zum Ehrenbürger.",
+      "Im Frühjahr 1918 malt Hodler vom Fenster und vom Balkon seiner Wohnung am Quai du Mont-Blanc 29 den Genfersee mit dem Mont Blanc, in der Morgendämmerung, im Morgenrot, bei Morgenlicht, am Nachmittag, vor Sonnenaufgang. Die Stadt Genf ernennt ihn zum Ehrenbürger.",
       "Es entsteht auch ein Bildnis seiner Frau Berthe. Am 19. Mai 1918 stirbt Ferdinand Hodler in Genf, in eben dieser Wohnung, fünfundsechzig Jahre alt."
     ],
     "works": [
@@ -1056,7 +1056,7 @@
         "pid": "hmbdawn",
         "text": [
           "In der Morgendämmerung liegt der Mont Blanc über dem Genfersee, die Formen weich, das Licht noch blass.",
-          "1918 malt Hodler den Blick von seiner Wohnung am Quai du Mont-Blanc 26 immer wieder, zu verschiedenen Stunden des Tages."
+          "1918 malt Hodler den Blick von seiner Wohnung am Quai du Mont-Blanc 29 immer wieder, zu verschiedenen Stunden des Tages."
         ],
         "fact": "1918. Sammlung nicht ermittelt."
       },

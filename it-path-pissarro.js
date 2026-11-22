@@ -220,14 +220,14 @@
   P.paths = P.paths || {};
   P.paths.pissarro = {
   "title": "Il cammino di vita di Camille Pissarro",
-  "part": "Parte 1 · 1830–1884",
-  "subtitle": "Da St. Thomas alle mostre impressioniste",
-  "intro": "Camille Pissarro nasce il 10 luglio 1830 a Charlotte Amalie, sull’isola di St. Thomas, allora nelle Indie Occidentali Danesi. Con Fritz Melbye va in Venezuela e nel 1855 arriva a Parigi. Questa prima parte lo segue a Louveciennes, negli anni di Londra e a Pontoise, fino alla soglia di Éragny, verso il 1884.",
+  "part": "Parti 1–2 · 1830–1903",
+  "subtitle": "Da St. Thomas, attraverso Pontoise ed Éragny, ai viali di Parigi",
+  "intro": "Viaggia con Camille Pissarro per tutta la sua vita: dalla nascita a St. Thomas nel 1830, attraverso il Venezuela, Parigi, Louveciennes, Londra e Pontoise e le otto mostre impressioniste, fino a Éragny, al neoimpressionismo con Seurat e Signac e al ritorno, alle vedute di città dipinte dalle finestre di Parigi, Rouen, Dieppe e Le Havre, fino alla morte il 13 novembre 1903.",
   "ending": [
-    "La prima parte del cammino di Pissarro finisce quando, nel 1884, si stabilisce a Éragny-sur-Epte.",
-    "La seconda parte segue gli anni di Éragny, l’incontro con il neoimpressionismo, le vedute di Parigi, Rouen e Le Havre e la sua morte nel 1903."
+    "Camille Pissarro muore a Parigi il 13 novembre 1903, a settantatré anni. È sepolto nel cimitero di Père-Lachaise.",
+    "Restano i campi e i giardini di Pontoise e di Éragny, i viali, i ponti e i porti dei suoi ultimi anni, e il ricordo dell’unico pittore che partecipò a tutte e otto le mostre impressioniste."
   ],
-  "epilogue": "La seconda parte segue gli anni di Éragny, l’incontro con il neoimpressionismo, le vedute di Parigi, Rouen e Le Havre e la sua morte nel 1903.",
+  "epilogue": "Camille Pissarro muore a Parigi il 13 novembre 1903. È sepolto nel cimitero di Père-Lachaise.",
   "life": "1830–1903"
 };
   P.stations = Object.assign(P.stations || {}, {

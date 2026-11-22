@@ -213,14 +213,14 @@
   EN.paths.rembrandt = {
   "title": "The Life of Rembrandt",
   "life": "1606–1669",
-  "part": "Part 1 · 1606–1642",
-  "subtitle": "From the mill in Leiden to the Night Watch",
-  "intro": "Rembrandt Harmenszoon van Rijn was born in Leiden on 15 July 1606, the son of a miller. This first part follows him from the Latin School and his training with Swanenburgh and Lastman through the studio with Jan Lievens and the early self-portraits, the move to Amsterdam and his marriage to Saskia, to the house in the Breestraat and the Night Watch of 1642.",
+  "part": "Parts 1–2 · 1606–1669",
+  "subtitle": "From the mill in Leiden to the Westerkerk",
+  "intro": "Travel with Rembrandt Harmenszoon van Rijn through his whole life: from his birth in Leiden in 1606, through his training, his success in Amsterdam, Saskia and the Night Watch, to Titus, Hendrickje, the insolvency, the Rozengracht, the Syndics, the late self-portraits and his death in 1669.",
   "ending": [
-    "In 1642 Rembrandt completed the Night Watch. In June of the same year Saskia died, only 29 years old; Rembrandt was left with little Titus.",
-    "The next part follows Hendrickje Stoffels, the hard years of debt and bankruptcy, the late self-portraits and his death in Amsterdam on 4 October 1669."
+    "Rembrandt died in Amsterdam on 4 October 1669, aged sixty-three. He was buried in the Westerkerk on 8 October.",
+    "His self-portraits, etchings and great pictures make him one of the most famous painters in the world."
   ],
-  "epilogue": "The next part follows Hendrickje Stoffels, the hard years of debt and bankruptcy, the late self-portraits and his death in Amsterdam on 4 October 1669."
+  "epilogue": "Rembrandt died in Amsterdam on 4 October 1669 and was buried in the Westerkerk."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "rbleiden": {

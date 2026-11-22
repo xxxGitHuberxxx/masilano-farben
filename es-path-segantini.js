@@ -144,7 +144,7 @@
   "avemaria": {
     "text": [
       "Un pastor y una mujer deslizan la barca por un lago quieto, con la oveja a proa. En ese instante juntan las manos para el Ave Maria.",
-      "Segantini pintó el motivo dos veces. Esta versión de 1886, ya hecha en las montañas, le valió una medalla de oro en París."
+      "Segantini pintó el motivo dos veces. Esta versión de 1886 ya se hizo en las montañas; la medalla de oro de Ámsterdam en 1883 la había recibido la primera versión, de 1882."
     ],
     "fact": "1886. Museo Segantini, St. Moritz."
   },

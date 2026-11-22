@@ -17,7 +17,7 @@ window.PATH_WORKS = (window.PATH_WORKS || []).concat([
  { id:'sower81', title:'Der Sämann, nach Millet', artist:'Vincent van Gogh', year:'1881',
    museum:'Privatbesitz',
    source:'Wikimedia Commons: «Vincent van Gogh - The Sower (Facing Right) - F858 JH18.jpg», gemeinfrei (Public Domain)' },
- { id:'ettenchurch', title:'Pastorei und Kirche in Etten', artist:'Vincent van Gogh', year:'1881',
+ { id:'ettenchurch', title:'Pastorei und Kirche in Etten', artist:'Vincent van Gogh', year:'1876',
    museum:'Van Gogh Museum, Amsterdam',
    source:'Wikimedia Commons: «Pastorie en kerk te Etten.jpg», gemeinfrei (Public Domain)' },
  { id:'schevwoman', title:'Scheveningerin', artist:'Vincent van Gogh', year:'1881',
@@ -132,7 +132,7 @@ window.PATH_WORKS = (window.PATH_WORKS || []).concat([
    museum:'Neue Pinakothek, München',
    source:'Wikimedia Commons: «Van Gogh - Weber vor offenem Fenster mit Blick auf den Turm von Nuenen.jpeg», gemeinfrei (Public Domain)' },
  { id:'wintergarden', title:'Der Pfarrgarten in Nuenen im Winter', artist:'Vincent van Gogh', year:'1884',
-   museum:'Van Gogh Museum, Amsterdam',
+   museum:'Szépművészeti Múzeum, Budapest',
    source:'Wikimedia Commons: «Vincent van Gogh - The Parsonage Garden at Nuenen in Winter - Google Art Project.jpg», gemeinfrei (Public Domain)' },
  { id:'congreg', title:'Ausgang aus der reformierten Kirche in Nuenen', artist:'Vincent van Gogh', year:'1884–1885',
    museum:'Van Gogh Museum, Amsterdam',
@@ -243,7 +243,7 @@ window.PATH_WORKS = (window.PATH_WORKS || []).concat([
    museum:'Van Gogh Museum, Amsterdam',
    source:'Wikimedia Commons: «Voor een restaurant te Asnières - s0134V1962 - Van Gogh Museum.jpg», gemeinfrei (Public Domain)' },
  { id:'restint', title:'Restaurant-Innenraum', artist:'Vincent van Gogh', year:'1887',
-   museum:'Indianapolis Museum of Art',
+   museum:'Kröller-Müller Museum, Otterlo',
    source:'Wikimedia Commons: «Van Gogh - Interieur eines Restaurants.jpeg», gemeinfrei (Public Domain)' },
  { id:'undergrowth', title:'Bäume und Unterholz', artist:'Vincent van Gogh', year:'1887',
    museum:'Van Gogh Museum, Amsterdam',
@@ -282,7 +282,7 @@ window.PATH_WORKS = (window.PATH_WORKS || []).concat([
    museum:'Van Gogh Museum, Amsterdam',
    source:'Wikimedia Commons: «Vincent van Gogh - Self-portrait with straw hat - Google Art Project.jpg», gemeinfrei (Public Domain)' },
  { id:'selforsay', title:'Selbstbildnis, 1887', artist:'Vincent van Gogh', year:'1887',
-   museum:'Musée d’Orsay, Paris',
+   museum:'Art Institute of Chicago',
    source:'Wikimedia Commons: «Vincent van Gogh, Self-portrait, 1887 (Google Arts & Culture).jpg», gemeinfrei (Public Domain)' },
  { id:'selfartist', title:'Selbstbildnis als Maler', artist:'Vincent van Gogh', year:'1888',
    museum:'Van Gogh Museum, Amsterdam',
@@ -347,7 +347,7 @@ window.PATH_WORKS = (window.PATH_WORKS || []).concat([
    museum:'Kunstmuseum Winterthur',
    source:'Wikimedia Commons: «Van Gogh - Weizenfeld bei Sonnenuntergang.jpeg», gemeinfrei (Public Domain)' },
  { id:'rocks88', title:'Felsen mit Eiche', artist:'Vincent van Gogh', year:'1888',
-   museum:'Kröller-Müller Museum, Otterlo',
+   museum:'Museum of Fine Arts, Houston',
    source:'Wikimedia Commons: «Vincent van Gogh - The Rocks - Google Art Project.jpg», gemeinfrei (Public Domain)' },
  { id:'flowergarden', title:'Blühender Garten', artist:'Vincent van Gogh', year:'1888',
    museum:'Kunstmuseum Den Haag, Den Haag',
@@ -380,7 +380,7 @@ window.PATH_WORKS = (window.PATH_WORKS || []).concat([
    museum:'Detroit Institute of Arts',
    source:'Wikimedia Commons: «Vincent van Gogh - Portrait of Postman Roulin - 1996.25 - Detroit Institute of Arts.jpg», gemeinfrei (Public Domain)' },
  { id:'escalier', title:'Patience Escalier', artist:'Vincent van Gogh', year:'1888',
-   museum:'Kunsthaus Zürich',
+   museum:'Privatsammlung',
    source:'Wikimedia Commons: «Van Gogh - Bildnis Patience Escalier2.jpeg», gemeinfrei (Public Domain)' },
  { id:'boch', title:'Bildnis Eugène Boch (Der Dichter)', artist:'Vincent van Gogh', year:'1888',
    museum:'Musée d’Orsay, Paris',
@@ -594,7 +594,7 @@ window.PATH_WORKS = (window.PATH_WORKS || []).concat([
    museum:'Dallas Museum of Art',
    source:'Wikimedia Commons: «Vincent van Gogh - Sheaves of Wheat, 1890.jpg», gemeinfrei (Public Domain)' },
  { id:'wheatcorn', title:'Weizenfeld mit Kornblumen', artist:'Vincent van Gogh', year:'1890',
-   museum:'Sammlung E.G. Bührle, Zürich',
+   museum:'Fondation Beyeler, Riehen',
    source:'Wikimedia Commons: «Vincent Van Gogh - Wheatfield With Cornflowers - Google Art Project.jpg», gemeinfrei (Public Domain)' },
  { id:'farmsauvers', title:'Höfe bei Auvers', artist:'Vincent van Gogh', year:'1890',
    museum:'Tate, London',
@@ -673,10 +673,10 @@ window.PATHS = (window.PATHS || []).concat([
        fact: 'Vincent hat Millet nie persönlich getroffen, aber seine Drucke und Reproduktionen studiert er immer wieder. Den Sämann nimmt er später Dutzende Male auf.' },
      { pid:'ettenchurch',
        text: [
-         'Die Pastorei und die Kirche von Etten: das Dorf, in dem die Eltern leben, und das Amt des Vaters, das Vincent selbst einmal anstrebte. Er zeichnet das Pfarrhaus ruhig und sachlich, noch ohne Streit im Bild.',
+         'Die Pastorei und die Kirche von Etten: das Dorf, in dem die Eltern leben, und das Amt des Vaters, das Vincent selbst einmal anstrebte. Das Pfarrhaus hat er schon im April 1876 bei einem Besuch gezeichnet, ruhig und sachlich, Jahre vor dem Streit mit dem Vater.',
          'Im Haus selbst wird die Stimmung schwerer. Kee wohnt zeitweise bei der Familie, und Vincents Gefühle stossen auf eine Mauer.',
        ],
-       fact: 'Die Zeichnung gehört dem Van Gogh Museum in Amsterdam. Man sieht das Pfarrhaus links und den Kirchturm rechts – Vincents Elternhaus in diesem Jahr.' },
+       fact: 'Die Zeichnung gehört dem Van Gogh Museum in Amsterdam. Man sieht das Pfarrhaus links und den Kirchturm rechts – seit 1875 das Elternhaus Vincents.' },
      { pid:'schevwoman',
        text: [
          'Schon in Etten zeichnet Vincent eine Frau in der Tracht von Scheveningen, dem Fischerdorf bei Den Haag. Vielleicht hat er sie auf einem Ausflug gesehen, vielleicht nach einem Vorbild gezeichnet.',
@@ -955,7 +955,7 @@ window.PATHS = (window.PATHS || []).concat([
          'Der Pfarrgarten im Winter, als grosse Rohrfederzeichnung: ein knorriger Baum, kahle Zweige, der Turm in der Ferne, Wege unter einem bleiernen Himmel. Vincent zeichnet den Garten, als wäre der Baum ein Wesen mit Adern und Gelenken.',
          'Es ist der Winter 1884/85, der Winter der vielen Kopf- und Handstudien, die später in die Kartoffelesser eingehen. Das Haus der Eltern steht dicht neben diesem Garten.',
        ],
-       fact: 'Die Zeichnung gehört dem Van Gogh Museum. Vincent hat den winterlichen Pfarrgarten auch in Öl gemalt; dieses Blatt zeigt besonders deutlich, wie er Bäume «von innen» konstruiert.' },
+       fact: 'Die Zeichnung gehört dem Szépművészeti Múzeum, dem Museum der Schönen Künste in Budapest. Vincent hat den winterlichen Pfarrgarten auch in Öl gemalt; dieses Blatt zeigt besonders deutlich, wie er Bäume «von innen» konstruiert.' },
      { pid:'congreg',
        text: [
          'Menschen verlassen die reformierte Kirche von Nuenen, kleine Figuren vor dem Bau, kahle Bäume ringsum. Vincent hatte das Bild 1884 begonnen und arbeitet 1885, nach dem Tod des Vaters, daran weiter.',
@@ -1231,7 +1231,7 @@ window.PATHS = (window.PATHS || []).concat([
          'Im Inneren eines Restaurants stehen die Tische bereit, karierte Tücher, Blumen, ein warmer, gelbgrüner Raum. Niemand sitzt, und doch ist der Saal voller Farbe.',
          'Vincent übt hier Innenraum und Muster – vorbereitend auf spätere Zimmerbilder. Die Fläche ist bereits rhythmisch gesetzt, fast wie ein Stoff.'
        ],
-       fact: 'Das Bild gehört dem Indianapolis Museum of Art. Es ist ein Pariser Innenraum, nicht das spätere Schlafzimmer von Arles; die verwandte Liebe zum gemusterten Raum ist aber schon zu spüren.' },
+       fact: 'Das Bild gehört dem Kröller-Müller Museum in Otterlo. Es ist ein Pariser Innenraum, nicht das spätere Schlafzimmer von Arles; die verwandte Liebe zum gemusterten Raum ist aber schon zu spüren.' },
      { pid:'parkcouples',
        text: [
          'Im Park Voyer d’Argenson in Asnières gehen Paare unter Bäumen, das Gras ist gelbgrün, der Weg hell. Ein Sonntagsbild ohne Starre.',
@@ -1330,10 +1330,10 @@ window.PATHS = (window.PATHS || []).concat([
        fact: 'Das Bild gehört dem Van Gogh Museum. Es ist dasselbe Werk wie in der kurzen Van-Gogh-Geschichte; Fortschritte im Ausmalen gelten an beiden Orten.' },
      { pid:'selforsay',
        text: [
-         'Vor einem türkisfarbenen Grund steht der Kopf frei, der Blick ist wach, die Striche kurz und farbig. Dieses Selbstbildnis hängt heute in Paris, in der Stadt, in der es entstand.',
+         'Vor einem türkisfarbenen Grund steht der Kopf frei, der Blick ist wach, die Striche kurz und farbig. Dieses Selbstbildnis entstand in Paris und hängt heute in Chicago.',
          'Hier ist die Verwandlung fast abgeschlossen: aus dem Maler der Kartoffelesser ist jemand geworden, der sich in reiner Farbe behaupten kann.'
        ],
-       fact: 'Das Bild hängt im Musée d’Orsay in Paris. Es gehört zu den klarsten Selbstbildnissen des Jahres 1887 und zeigt Vincents pariserische Farbe auf ihrem Höhepunkt vor Arles.' },
+       fact: 'Das Bild hängt im Art Institute of Chicago. Es gehört zu den klarsten Selbstbildnissen des Jahres 1887 und zeigt Vincents pariserische Farbe auf ihrem Höhepunkt vor Arles.' },
      { pid:'selfartist',
        text: [
          'Vincent als Maler, die Palette in der Hand, die Leinwand neben ihm, der Blick fest auf uns. Das Bild entsteht Anfang 1888, noch in Paris, und ist ein bewusster Schlussakkord.',
@@ -1499,7 +1499,7 @@ window.PATHS = (window.PATHS || []).concat([
           'Felsen und eine Eiche, kühler als die Getreidefelder, das Grün kräftiger. Vincent malt bei Montmajour nicht nur die Ferne, sondern auch den Stein.',
           'Nach Wochen in der Ebene ist dies ein anderes Motiv: massiv, nah, mit hartem Licht auf den Flächen.'
         ],
-        fact: 'Das Bild gehört dem Kröller-Müller Museum und entsteht im Juli 1888.' },
+        fact: 'Das Bild gehört dem Museum of Fine Arts in Houston und entsteht im Juli 1888.' },
       { pid:'flowergarden',
         text: [
           'Ein blühender Garten mit einem Weg, dicht, bunt, voller Beete. Neben der goldenen Ernte steht hier das nahe Grün und Rot der Blumen.',
@@ -1605,7 +1605,7 @@ window.PATHS = (window.PATHS || []).concat([
           'Patience Escalier, ein Gärtner und früherer Hirte, in einem strohgelben Hut, die Hände gekreuzt, der Grund kräftig. Vincent sucht hier keinen städtischen Typ, sondern einen Menschen der Crau.',
           'In einem Brief spricht er vom «schrecklichen Menschen», den er in der Glut der Ernte, am Mittag, habe malen müssen: glühendes Orange, altgoldene Töne in der Dunkelheit.'
         ],
-        fact: 'Das Bild gehört dem Kunsthaus Zürich und entsteht im August 1888.' },
+        fact: 'Das Bild ist in Privatbesitz und entsteht im August 1888.' },
       { pid:'boch',
         text: [
           'Der belgische Maler Eugène Boch, den feinen Kopf vor einem tiefen Ultramarin, in dem Sterne stehen. Vincent malt ihn bewusst als Dichter.',
@@ -2231,10 +2231,10 @@ window.PATHS = (window.PATHS || []).concat([
         fact: 'Das Bild gehört dem Dallas Museum of Art und entsteht im Juli 1890.' },
       { pid:'wheatcorn',
         text: [
-          'Ein Weizenfeld, durchsetzt mit Kornblumen, unter einem bewegten Himmel. Das Bild hängt heute in der Sammlung E.G. Bührle in Zürich.',
+          'Ein Weizenfeld, durchsetzt mit Kornblumen, unter einem bewegten Himmel. Das Bild hängt heute in der Fondation Beyeler in Riehen.',
           'Wie die anderen späten Felder ist es in die Breite gezogen: unten die Ähren, oben die Wolken, dazwischen kaum ein Dorf.'
         ],
-        fact: 'Das Bild gehört der Sammlung E.G. Bührle in Zürich und entsteht im Juli 1890.' },
+        fact: 'Das Bild gehört der Fondation Beyeler in Riehen und entsteht im Juli 1890.' },
       { pid:'farmsauvers',
         text: [
           'Höfe und Strohdächer am Hang, in einem sehr breiten Format, unter einem hellen Himmel. Vincent bleibt bei den alten Chaumes, die ihm gleich in der ersten Woche aufgefallen waren.',

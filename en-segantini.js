@@ -138,7 +138,7 @@
   "avemaria": {
     "text": [
       "A shepherd and a woman glide across a still lake in a boat, the sheep in the bow. In this moment they fold their hands for the Ave Maria.",
-      "Segantini painted the subject twice. This 1886 version, already made in the mountains, won him a gold medal in Paris."
+      "Segantini painted the subject twice. This 1886 version was already made in the mountains; the gold medal in Amsterdam in 1883 had gone to the first version of 1882."
     ],
     "fact": "1886. Segantini Museum, St. Moritz."
   },

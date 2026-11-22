@@ -281,7 +281,7 @@
     "title": "Schulmädchen mit Schiefertafel und Nähkörbchen",
     "artist": "Albert Anker",
     "year": "1878",
-    "museum": "Musée d’art et d’histoire, Neuchâtel",
+    "museum": "Kunstmuseum Bern",
     "source": "Wikimedia Commons: «Albert Anker-Schulmädchen mit Schiefertafel und Nähkörbchen, 1878.jpg», gemeinfrei (Public Domain)"
   },
   {
@@ -830,9 +830,9 @@
           "pid": "schulmaedchen",
           "text": [
             "Ein Mädchen in rot-braunem Kleid steht mit einer Schiefertafel und einem Nähkörbchen. Der Blick geht ruhig aus dem Bild.",
-            "Das Bild von 1878 hängt im Musée d’art et d’histoire in Neuchâtel. Schreiben und Nähen liegen hier gleichberechtigt in den Händen des Kindes."
+            "Das Bild von 1878 hängt im Kunstmuseum Bern. Schreiben und Nähen liegen hier gleichberechtigt in den Händen des Kindes."
           ],
-          "fact": "Öl auf Leinwand, 1878. Musée d’art et d’histoire, Neuchâtel."
+          "fact": "Öl auf Leinwand, 1878. Kunstmuseum Bern."
         },
         {
           "pid": "cecile78",

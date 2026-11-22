@@ -242,15 +242,15 @@
   P.paths = P.paths || {};
   P.paths.sisley = {
   "title": "El camino de vida de Alfred Sisley",
-  "part": "Parte 1 · 1839–1880",
-  "subtitle": "De París a Veneux-Nadon",
-  "intro": "Alfred Sisley nace en París el 30 de octubre de 1839, hijo de padres británicos. Esta primera parte lo sigue desde la formación comercial en Londres y el taller de Gleyre con Monet, Renoir y Bazille, pasando por las primeras obras en Fontainebleau y Marlotte, la familia con Eugénie, la guerra de 1870-71 y los años en Louveciennes y Marly, hasta la crecida de 1876 y el traslado al Loing en 1880.",
+  "part": "Partes 1–2 · 1839–1899",
+  "subtitle": "De París a Moret-sur-Loing",
+  "intro": "Acompaña a Alfred Sisley a lo largo de toda su vida: desde su nacimiento en París en 1839, pasando por el taller de Gleyre, Louveciennes, Marly y la inundación de 1876, hasta los años junto al Sena y el Loing cerca de Moret, la iglesia de Moret, el viaje a Gales en 1897 y su muerte en 1899.",
   "ending": [
-    "A principios de 1880, Sisley se instala con Eugénie y los niños en Veneux-Nadon, cerca de Moret-sur-Loing. Allí encuentra el paisaje al que permanecerá fiel.",
-    "En la parte siguiente vienen los años en Moret-sur-Loing, la pobreza, Eugénie, el tardío intento de nacionalización y la muerte de Sisley en 1899."
+    "Sisley muere en Moret-sur-Loing el 29 de enero de 1899, pocos meses después de Eugénie. El 1 de febrero es enterrado en el cementerio de Moret.",
+    "Por iniciativa de Monet, el 1 de mayo de 1899 la galería Georges Petit subasta cuadros de su taller y obras donadas por sus amigos. Lo recaudado es para sus hijos Pierre y Jeanne-Adèle."
   ],
-  "epilogue": "En la parte siguiente vienen los años en Moret-sur-Loing, la pobreza, Eugénie, el tardío intento de nacionalización y la muerte de Sisley en 1899.",
-  "life": "1606–1669"
+  "epilogue": "Alfred Sisley muere el 29 de enero de 1899 en Moret-sur-Loing, junto al río que pintó durante veinte años.",
+  "life": "1839–1899"
 };
   P.stations = Object.assign(P.stations || {}, {
   "syparis": {

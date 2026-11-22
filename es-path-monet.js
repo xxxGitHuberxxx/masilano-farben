@@ -1080,7 +1080,7 @@
       "En el crepúsculo, el cielo arde detrás de San Giorgio, la iglesia se convierte en silueta, el agua recoge el naranja.",
       "A Geffroy, Monet le escribe que la luz de Venecia es única – y que le entristece dejarla."
     ],
-    "fact": "El cuadro de 1908 cuelga en la Fondation Beyeler de Riehen.",
+    "fact": "El cuadro de 1908 cuelga en el National Museum Cardiff.",
     "quote": {
       "text": "Ella le habrá contado a usted mi entusiasmo por Venecia. Pues bien, no ha hecho más que crecer, y ahora que se acerca el momento de dejar esta luz única, me entristece. Es tan bella.",
       "cite": "Carta a Gustave Geffroy, Venedig, 7 de diciembre de 1908"
@@ -1119,7 +1119,7 @@
       "Santa Maria della Salute se alza al final del Canal Grande, palos en el primer plano dividen la superficie, el agua es turquesa y violeta.",
       "En diciembre de 1908, Monet y Alice dejan Venecia. Los cuadros los elabora más tarde en Giverny."
     ],
-    "fact": "El cuadro de 1908 cuelga en la Fondation Beyeler de Riehen."
+    "fact": "El cuadro de 1908 cuelga en el Museum of Fine Arts de Boston."
   },
   "pathiris": {
     "text": [

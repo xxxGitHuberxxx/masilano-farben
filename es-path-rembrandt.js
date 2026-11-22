@@ -229,14 +229,14 @@
   P.paths = P.paths || {};
   P.paths.rembrandt = {
   "title": "El camino de vida de Rembrandt",
-  "part": "Parte 1 · 1606–1642",
-  "subtitle": "Del molino de Leiden a la Ronda de noche",
-  "intro": "Rembrandt Harmenszoon van Rijn nace en Leiden el 15 de julio de 1606, hijo de un molinero. Esta primera parte lo sigue desde la escuela latina y el aprendizaje con Swanenburgh y Lastman, pasando por el taller con Jan Lievens y los primeros autorretratos, el traslado a Ámsterdam y la boda con Saskia, hasta la casa de la Breestraat y la Ronda de noche de 1642.",
+  "part": "Partes 1–2 · 1606–1669",
+  "subtitle": "Del molino de Leiden a la Westerkerk",
+  "intro": "Acompaña a Rembrandt Harmenszoon van Rijn a lo largo de toda su vida: desde su nacimiento en Leiden en 1606, pasando por los años de aprendizaje, el éxito en Ámsterdam, Saskia y la Ronda de noche, hasta Titus, Hendrickje, la quiebra, la Rozengracht, los síndicos, los últimos autorretratos y su muerte en 1669.",
   "ending": [
-    "En 1642 Rembrandt termina la Ronda de noche. En junio de ese mismo año muere Saskia, con solo 29 años; Rembrandt se queda con el pequeño Titus.",
-    "En la parte siguiente llegan Hendrickje Stoffels, los años difíciles de las deudas y la quiebra, los últimos autorretratos y su muerte en Ámsterdam el 4 de octubre de 1669."
+    "Rembrandt muere en Ámsterdam el 4 de octubre de 1669, a los sesenta y tres años. Es enterrado el 8 de octubre en la Westerkerk.",
+    "Sus autorretratos, aguafuertes y grandes cuadros lo convierten en uno de los pintores más famosos del mundo."
   ],
-  "epilogue": "En la parte siguiente llegan Hendrickje Stoffels, los años difíciles de las deudas y la quiebra, los últimos autorretratos y su muerte en Ámsterdam el 4 de octubre de 1669.",
+  "epilogue": "Rembrandt muere en Ámsterdam el 4 de octubre de 1669 y es enterrado en la Westerkerk.",
   "life": "1606–1669"
 };
   P.stations = Object.assign(P.stations || {}, {

@@ -221,14 +221,14 @@
   EN.paths.sisley = {
   "title": "The Life of Alfred Sisley",
   "life": "1839–1899",
-  "part": "Part 1 · 1839–1880",
-  "subtitle": "From Paris to Veneux-Nadon",
-  "intro": "Alfred Sisley was born in Paris on 30 October 1839, the son of British parents. This first part follows him from his commercial training in London and Gleyre’s studio with Monet, Renoir and Bazille, through the early pictures at Fontainebleau and Marlotte, the family with Eugénie, the war of 1870–71 and the years in Louveciennes and Marly, to the flood of 1876 and the move to the Loing in 1880.",
+  "part": "Parts 1–2 · 1839–1899",
+  "subtitle": "From Paris to Moret-sur-Loing",
+  "intro": "Travel with Alfred Sisley through his whole life: from his birth in Paris in 1839, through Gleyre’s studio, Louveciennes, Marly and the flood of 1876, to the years on the Seine and the Loing near Moret, the church at Moret, the journey to Wales in 1897 and his death in 1899.",
   "ending": [
-    "Early in 1880 Sisley settled with Eugénie and the children at Veneux-Nadon, near Moret-sur-Loing. There he found the landscape he would stay with.",
-    "The next part follows the years at Moret-sur-Loing, the poverty, Eugénie, the late attempt at naturalisation and Sisley’s death in 1899."
+    "Sisley died at Moret-sur-Loing on 29 January 1899, a few months after Eugénie. He was buried in the cemetery at Moret on 1 February.",
+    "At Monet’s suggestion, on 1 May 1899 the Galerie Georges Petit auctioned pictures from his studio together with works given by his friends. The proceeds were for his children Pierre and Jeanne-Adèle."
   ],
-  "epilogue": "The next part follows the years at Moret-sur-Loing, the poverty, Eugénie, the late attempt at naturalisation and Sisley’s death in 1899."
+  "epilogue": "Alfred Sisley died at Moret-sur-Loing on 29 January 1899, beside the river he had painted for twenty years."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "syparis": {

@@ -232,14 +232,14 @@
   P.paths.cezanne = {
   "title": "El camino de vida de Paul Cézanne",
   "life": "1839–1906",
-  "part": "Parte 1 · 1839–1886",
-  "subtitle": "De Aix a París, hacia Pissarro y de vuelta a la Provenza",
-  "intro": "Viaja con Paul Cézanne por la primera mitad de su camino: desde la infancia en Aix-en-Provence y la amistad con Émile Zola, pasando por los estudios de derecho, la Académie Suisse en París, el período oscuro «couillarde», el giro con Camille Pissarro en Pontoise y Auvers, las exposiciones de 1874 y 1877, L’Estaque, Hortense Fiquet y el hijo Paul, el Jas de Bouffan, hasta el año 1886 – la novela «L’Œuvre», el matrimonio y la muerte del padre. Estaciones breves y cuadros para pintar. Dejamos a un lado a los bañistas y las escenas violentas de juventud. Esta primera parte llega hasta 1886.",
+  "part": "Partes 1–2 · 1839–1906",
+  "subtitle": "De Aix a París y de vuelta a la Provenza, hasta el estudio de Les Lauves",
+  "intro": "Viaja con Paul Cézanne por toda su vida: desde la infancia en Aix-en-Provence y la amistad con Émile Zola, pasando por los estudios de derecho, la Académie Suisse en París, el período oscuro «couillarde», el giro con Camille Pissarro en Pontoise y Auvers, las exposiciones de 1874 y 1877, L’Estaque, Hortense Fiquet y el hijo Paul, el Jas de Bouffan y el año 1886 – hasta la montaña Sainte-Victoire, los jugadores de cartas, las manzanas y los bodegones, la exposición en casa de Ambroise Vollard en 1895, el estudio de Les Lauves y la muerte de Cézanne en Aix el 22 de octubre de 1906. Estaciones breves, cuadros para pintar y voces de cartas a Émile Bernard y al hijo Paul. Dejamos a un lado a los bañistas y las escenas violentas de juventud.",
   "ending": [
-    "En 1886 Cézanne se casa con Hortense Fiquet en Aix, el hijo Paul queda legitimado y el padre muere en octubre. El agradecimiento por carta por la novela «L’Œuvre» de Zola es breve y formal; el contacto se hace después más raro.",
-    "El camino sigue. Vienen la montaña Sainte-Victoire, los jugadores de cartas, las manzanas y los bodegones, la exposición en casa de Ambroise Vollard en 1895, el estudio de Les Lauves y la muerte de Cézanne en Aix el 22 de octubre de 1906. De eso habla la parte siguiente."
+    "El 15 de octubre de 1906, mientras pinta al aire libre, a Cézanne le sorprende una tormenta. Se derrumba; un carretero lo lleva a casa. Al día siguiente intenta seguir trabajando y se derrumba de nuevo.",
+    "El 22 de octubre de 1906 muere Paul Cézanne en Aix-en-Provence, a los sesenta y siete años. Quedan los paisajes de la Provenza, los bodegones, los retratos – y una obra que recoge el mundo visible en formas firmes y coloreadas."
   ],
-  "epilogue": "Esta primera parte termina en 1886: con el matrimonio en Aix, la muerte del padre y un contacto con Zola que se hace más raro después de «L’Œuvre». La montaña Sainte-Victoire, los jugadores de cartas, las manzanas, Vollard en 1895, Les Lauves y la muerte el 22 de octubre de 1906 pertenecen a la parte siguiente."
+  "epilogue": "Paul Cézanne muere el 22 de octubre de 1906 en Aix-en-Provence. Pocos días antes se había derrumbado, mientras pintaba al aire libre, en una tormenta. Quedan la montaña Sainte-Victoire, los jugadores de cartas, las manzanas, las canteras de Bibémus, el Château Noir, el estudio de Les Lauves y los retratos tardíos del jardinero Vallier."
 };
   P.stations = Object.assign(P.stations || {}, {
   "cezanneaix": {

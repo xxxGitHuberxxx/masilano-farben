@@ -16,7 +16,7 @@
   "subtitle": "Senecio",
   "intro": "Klee cherche dans le plan le signe et le visage. « Senecio » de 1922 est construit de rectangles, une tête comme un jeu calme.",
   "ending": [
-    "Klee meurt à Locarno en 1940. Une partie ultérieure pourra ajouter d’autres tableaux du Bauhaus et de Berne."
+    "Klee meurt à Muralto, près de Locarno, en 1940. Une partie ultérieure pourra ajouter d’autres tableaux du Bauhaus et de Berne."
   ],
   "epilogue": "Une partie ultérieure pourra ajouter d’autres tableaux."
 };

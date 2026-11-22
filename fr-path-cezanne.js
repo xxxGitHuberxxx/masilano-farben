@@ -232,14 +232,14 @@
   P.paths.cezanne = {
   "title": "Le parcours de vie de Paul Cézanne",
   "life": "1839–1906",
-  "part": "Partie 1 · 1839–1886",
-  "subtitle": "D’Aix à Paris, chez Pissarro et retour en Provence",
-  "intro": "Voyage avec Paul Cézanne à travers la première moitié de son chemin : de l’enfance à Aix-en-Provence et de l’amitié avec Émile Zola, en passant par les études de droit, l’Académie Suisse à Paris, la période sombre dite « couillarde », le tournant avec Camille Pissarro à Pontoise et à Auvers, les expositions de 1874 et de 1877, L’Estaque, Hortense Fiquet et le fils Paul, le Jas de Bouffan, jusqu’à l’année 1886 – le roman « L’Œuvre », le mariage et la mort du père. De courtes stations et des tableaux à colorier. Les baigneurs et les scènes violentes de jeunesse sont laissés de côté. Cette première partie va jusqu’en 1886.",
+  "part": "Parties 1–2 · 1839–1906",
+  "subtitle": "D’Aix à Paris et retour en Provence, jusqu’à l’atelier des Lauves",
+  "intro": "Voyage avec Paul Cézanne à travers toute sa vie : de l’enfance à Aix-en-Provence et de l’amitié avec Émile Zola, en passant par les études de droit, l’Académie Suisse à Paris, la période sombre dite « couillarde », le tournant avec Camille Pissarro à Pontoise et à Auvers, les expositions de 1874 et de 1877, L’Estaque, Hortense Fiquet et le fils Paul, le Jas de Bouffan et l’année 1886 – jusqu’à la montagne Sainte-Victoire, aux joueurs de cartes, aux pommes et aux natures mortes, à l’exposition chez Ambroise Vollard en 1895, à l’atelier des Lauves et à la mort de Cézanne à Aix le 22 octobre 1906. De brèves stations, des tableaux à colorier et des voix tirées de lettres à Émile Bernard et au fils Paul. Les baigneurs et les scènes violentes de jeunesse sont laissés de côté.",
   "ending": [
-    "En 1886, Cézanne épouse Hortense Fiquet à Aix, le fils Paul est légitimé, le père meurt en octobre. Le remerciement par lettre pour le roman « L’Œuvre » de Zola est bref et formel ; le contact se raréfie ensuite.",
-    "Le chemin continue. Suivent la montagne Sainte-Victoire, les joueurs de cartes, les pommes et les natures mortes, l’exposition chez Ambroise Vollard en 1895, l’atelier des Lauves et la mort de Cézanne à Aix le 22 octobre 1906. C’est le sujet de la partie suivante."
+    "Le 15 octobre 1906, alors qu’il peint en plein air, Cézanne est surpris par un orage. Il s’effondre ; un charretier le ramène chez lui. Le lendemain, il tente de reprendre le travail et s’effondre de nouveau.",
+    "Le 22 octobre 1906, Paul Cézanne meurt à Aix-en-Provence, à soixante-sept ans. Il reste les paysages de Provence, les natures mortes, les portraits – et une œuvre qui tient le monde visible en formes fermes et colorées."
   ],
-  "epilogue": "Cette première partie s’achève en 1886 : avec le mariage à Aix, la mort du père et un contact avec Zola qui se raréfie après « L’Œuvre ». La montagne Sainte-Victoire, les joueurs de cartes, les pommes, Vollard en 1895, Les Lauves et la mort le 22 octobre 1906 appartiennent à la partie suivante."
+  "epilogue": "Paul Cézanne meurt le 22 octobre 1906 à Aix-en-Provence. Quelques jours plus tôt, il s’était effondré, en peignant en plein air, dans un orage. Il reste la montagne Sainte-Victoire, les joueurs de cartes, les pommes, les carrières de Bibémus, le Château Noir, l’atelier des Lauves et les portraits tardifs du jardinier Vallier."
 };
   P.stations = Object.assign(P.stations || {}, {
   "cezanneaix": {

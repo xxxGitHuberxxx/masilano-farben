@@ -229,14 +229,14 @@
   P.paths = P.paths || {};
   P.paths.rembrandt = {
   "title": "Il percorso di vita di Rembrandt",
-  "part": "Parte 1 · 1606–1642",
-  "subtitle": "Dal mulino di Leida alla Ronda di notte",
-  "intro": "Rembrandt Harmenszoon van Rijn nasce a Leida il 15 luglio 1606, figlio di un mugnaio. Questa prima parte lo segue dalla scuola latina e dall’apprendistato presso Swanenburgh e Lastman, passando per la bottega con Jan Lievens e i primi autoritratti, il trasferimento ad Amsterdam e il matrimonio con Saskia, fino alla casa sulla Breestraat e alla Ronda di notte del 1642.",
+  "part": "Parti 1–2 · 1606–1669",
+  "subtitle": "Dal mulino di Leida alla Westerkerk",
+  "intro": "Accompagna Rembrandt Harmenszoon van Rijn per tutta la sua vita: dalla nascita a Leida nel 1606, attraverso gli anni di apprendistato, il successo ad Amsterdam, Saskia e la Ronda di notte, fino a Titus, Hendrickje, il fallimento, la Rozengracht, i sindaci, gli ultimi autoritratti e la sua morte nel 1669.",
   "ending": [
-    "Nel 1642 Rembrandt termina la Ronda di notte. Nel giugno dello stesso anno muore Saskia, a soli 29 anni; Rembrandt resta con il piccolo Titus.",
-    "Nella parte successiva arrivano Hendrickje Stoffels, gli anni difficili dei debiti e del fallimento, gli ultimi autoritratti e la sua morte ad Amsterdam il 4 ottobre 1669."
+    "Rembrandt muore ad Amsterdam il 4 ottobre 1669, a sessantatré anni. È sepolto l’8 ottobre nella Westerkerk.",
+    "I suoi autoritratti, le sue acqueforti e i suoi grandi quadri ne fanno uno dei pittori più famosi al mondo."
   ],
-  "epilogue": "Nella parte successiva arrivano Hendrickje Stoffels, gli anni difficili dei debiti e del fallimento, gli ultimi autoritratti e la sua morte ad Amsterdam il 4 ottobre 1669.",
+  "epilogue": "Rembrandt muore ad Amsterdam il 4 ottobre 1669 ed è sepolto nella Westerkerk.",
   "life": "1606–1669"
 };
   P.stations = Object.assign(P.stations || {}, {

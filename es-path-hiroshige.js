@@ -215,14 +215,14 @@
   P.paths.hiroshige = {
   "title": "El camino de vida de Utagawa Hiroshige",
   "life": "1797–1858",
-  "part": "Parte 1 · 1797–1835",
-  "subtitle": "De Edo por el Tōkaidō, a las 53 estaciones y a Ōmi",
-  "intro": "Viaja con Utagawa Hiroshige por la primera mitad de su camino: desde la infancia en el cuerpo de bomberos de Yayosu en Edo, pasando por el aprendizaje con Toyohiro, las primeras vistas de la capital oriental en la serie «Tōto meisho», el viaje al Tōkaidō según la tradición de 1832 y la serie Hōeidō de las 53 estaciones, hasta las ocho vistas de Ōmi a mediados de la década de 1830. Estaciones breves y xilografías para pintar. Esta primera parte llega hasta hacia 1835.",
+  "part": "Partes 1–2 · 1797–1858",
+  "subtitle": "De Edo por el Tōkaidō y la Kisokaidō, a las provincias y las Cien vistas de Edo",
+  "intro": "Viaja con Utagawa Hiroshige por toda su vida: desde la infancia en el cuerpo de bomberos de Yayosu en Edo, pasando por el aprendizaje con Toyohiro, las primeras vistas de la capital oriental, el viaje al Tōkaidō de 1832 según la tradición y la serie Hōeidō de las 53 estaciones, las ocho vistas de Ōmi, la Kisokaidō desde hacia 1835, los lugares famosos de las más de sesenta provincias y las Cien vistas famosas de Edo, hasta la muerte de Hiroshige en Edo el 12 de octubre de 1858. Estaciones breves y xilografías para pintar.",
   "ending": [
-    "Hacia 1834–1835 aparecen las ocho vistas de Ōmi en el lago Biwa. Junto con el Tōkaidō de Hōeidō han establecido con firmeza a Hiroshige como maestro del paisaje de la capital oriental. Esta primera parte termina a mediados de la década de 1830.",
-    "El camino sigue. Vienen la Kisokaidō, las Cien vistas famosas de Edo y la muerte de Hiroshige en 1858. De eso habla la parte siguiente."
+    "El 12 de octubre de 1858 muere Utagawa Hiroshige en Edo, a los sesenta y un años. La tradición da como causa de la muerte el cólera; ese año hay una epidemia en la ciudad. Es enterrado en el cementerio del templo Tōgaku-ji en Asakusa. Su alumno e hijo adoptivo Suzuki Shigenobu continúa el nombre como Hiroshige II.",
+    "Quedan las estaciones del Tōkaidō y de la Kisokaidō, las vistas de las provincias y las Cien vistas famosas de Edo: una obra que ha fijado la lluvia, la nieve, la luna y las calles de la capital oriental."
   ],
-  "epilogue": "Esta primera parte termina a mediados de la década de 1830: con la serie Hōeidō de las 53 estaciones del Tōkaidō y las ocho vistas de Ōmi. La Kisokaidō, las Cien vistas famosas de Edo y la muerte en 1858 pertenecen a la parte siguiente."
+  "epilogue": "Utagawa Hiroshige muere el 12 de octubre de 1858 en Edo. Es enterrado en el templo Tōgaku-ji en Asakusa. Quedan las 53 estaciones del Tōkaidō, la Kisokaidō, los lugares famosos de las más de sesenta provincias y las Cien vistas famosas de Edo."
 };
   P.stations = Object.assign(P.stations || {}, {
   "hiroshigeyayosu": {

@@ -214,13 +214,14 @@
   EN.paths.pissarro = {
   "title": "The Life of Camille Pissarro",
   "life": "1830–1903",
-  "part": "Part 1 · 1830–1884",
-  "subtitle": "From St. Thomas to the Impressionist exhibitions",
-  "intro": "Camille Pissarro was born on 10 July 1830 in Charlotte Amalie on St. Thomas, then in the Danish West Indies. With Fritz Melbye he went to Venezuela, and in 1855 to Paris. This first part follows him through Louveciennes, the London years and Pontoise as far as the threshold of Éragny, around 1884.",
+  "part": "Parts 1–2 · 1830–1903",
+  "subtitle": "From St. Thomas via Pontoise and Éragny to the Paris boulevards",
+  "intro": "Travel with Camille Pissarro through his whole life: from his birth on St. Thomas in 1830 through Venezuela, Paris, Louveciennes, London and Pontoise and the eight Impressionist exhibitions to Éragny, to Neo-Impressionism with Seurat and Signac and back, to the city views from windows in Paris, Rouen, Dieppe and Le Havre, until his death on 13 November 1903.",
   "ending": [
-    "The first part of Pissarro’s path ends as he moves to Éragny-sur-Epte in 1884. Part two follows the years at Éragny, his encounter with Neo-Impressionism, the city pictures of Paris, Rouen and Le Havre, and his death in 1903."
+    "Camille Pissarro died in Paris on 13 November 1903, aged seventy-three. He is buried in the Père-Lachaise cemetery.",
+    "He left the fields and gardens of Pontoise and Éragny, the boulevards, bridges and harbours of his last years, and the memory of the only painter who took part in all eight Impressionist exhibitions."
   ],
-  "epilogue": "The first part of Pissarro’s path ends as he moves to Éragny-sur-Epte in 1884. Part two follows the years at Éragny, his encounter with Neo-Impressionism, the city pictures of Paris, Rouen and Le Havre, and his death in 1903."
+  "epilogue": "Camille Pissarro died in Paris on 13 November 1903. He is buried in the Père-Lachaise cemetery."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "pxstthomas": {

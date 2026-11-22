@@ -16,7 +16,7 @@
   "subtitle": "Senecio",
   "intro": "Klee looks in the plane for the sign and the face. “Senecio” of 1922 is built from rectangles, a head like a quiet game.",
   "ending": [
-    "Klee dies in Locarno in 1940. A later part can add further Bauhaus and Bern pictures."
+    "Klee dies in Muralto near Locarno in 1940. A later part can add further Bauhaus and Bern pictures."
   ],
   "epilogue": "A later part can add further pictures."
 };

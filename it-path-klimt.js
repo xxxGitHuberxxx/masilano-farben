@@ -236,15 +236,15 @@
   P.paths.klimt = {
   "title": "Il percorso di vita di Klimt",
   "life": "1862–1918",
-  "part": "Parte 1 · Fino al Fregio di Beethoven",
-  "subtitle": "Da Baumgarten alla Secessione",
-  "intro": "Viaggia con Gustav Klimt attraverso la prima metà del suo percorso: dall’infanzia a Baumgarten e dalla Scuola di arti applicate alla Künstler-Compagnie con il fratello Ernst e Franz Matsch, alle pitture del Burgtheater e del Kunsthistorisches Museum, alla morte del padre e del fratello nel 1892, alla fondazione della Secessione e ai primi paesaggi, fino al Fregio di Beethoven del 1902. Brevi tappe, quadri da colorare e due voci documentate: una cartolina a Emilie Flöge e il «Commento a un autoritratto inesistente». Questa prima parte arriva fino a circa il 1902.",
+  "part": "Parti 1–2 · 1862–1918",
+  "subtitle": "Da Baumgarten agli ultimi quadri",
+  "intro": "Viaggia con Gustav Klimt attraverso tutta la sua vita: dall’infanzia a Baumgarten e dalla Scuola di arti applicate alla Künstler-Compagnie, al Burgtheater e al Kunsthistorisches Museum, alla morte del padre e del fratello nel 1892, alla Secessione e al Fregio di Beethoven, fino agli anni d’oro, alla Kunstschau del 1908, al fregio Stoclet, a Emilie Flöge, ai paesaggi dell’Attersee e del lago di Garda, ai ritratti colorati tardi e a «Morte e vita». Stazioni brevi, quadri da colorare e voci documentate: cartoline e una lettera ad Emilie Flöge, e il discorso della Kunstschau. Klimt muore a Vienna il 6 febbraio 1918.",
   "ending": [
-    "Nel 1902 la Secessione organizza la mostra Beethoven intorno alla statua di Beethoven di Max Klinger. Klimt dipinge il fregio su tre pareti: dal desiderio di felicità fino a «Questo bacio al mondo intero». Nello stesso anno nascono il ritratto a figura intera di Emilie Flöge e il «Bosco di faggi I».",
-    "In un dattiloscritto non datato che la Wienbibliothek im Rathaus conserva con il titolo «Commento a un autoritratto inesistente», Klimt scrive: «Non esiste nessun autoritratto mio. La mia persona non m’interessa come “soggetto di un quadro”, piuttosto gli altri esseri, soprattutto le donne, e ancora di più altre apparenze. Chi vuole sapere qualcosa di me – come artista, l’unica cosa che merita attenzione – deve soltanto osservare con attenzione i miei quadri e cercare di riconoscerci chi sono e cosa voglio.»",
-    "Il percorso continua. Seguono gli anni d’oro dopo il 1902, nuovi ritratti e paesaggi. Klimt muore a Vienna nel 1918 – la prossima parte lo racconterà."
+    "Negli ultimi anni nascono ritratti e paesaggi colorati, accanto a ritratti incompiuti come Johanna Staude, Amalie Zuckerkandl e la «Dama in bianco». Nel 1916 Klimt trascorre l’ultima estate condivisa con Emilie Flöge all’Attersee. Il 30 dicembre 1917 le scrive da Winkelsdorf: «…un saluto uscito dal più intimo e [ti] auguro un anno nuovo il più, il più felice. – come ne abbiamo entrambi così urgentemente bisogno.»",
+    "L’11 gennaio 1918 Klimt è colpito da un ictus a Vienna. Muore il 6 febbraio 1918 all’Ospedale generale di Vienna, a cinquantasei anni.",
+    "Restano, fra le altre opere, «Il bacio» al Belvedere, il ritratto dorato di Adele Bloch-Bauer, i cartoni del fregio Stoclet al MAK, i paesaggi dell’Attersee e del lago di Garda e i ritratti tardi. Di lui stesso, aveva scritto, non esiste nessun autoritratto: si devono guardare i suoi quadri."
   ],
-  "epilogue": "Nel 1902 Klimt dipinge il Fregio di Beethoven per la Secessione e il ritratto a figura intera di Emilie Flöge; nello stesso anno nasce il «Bosco di faggi I». In un dattiloscritto non datato della Wienbibliothek scrive che non esiste nessun autoritratto suo: bisogna guardare i suoi quadri. Gli anni d’oro dopo il 1902 seguono nella prossima parte."
+  "epilogue": "L’11 gennaio 1918 Gustav Klimt è colpito da un ictus a Vienna. Muore il 6 febbraio 1918 all’Ospedale generale, a cinquantasei anni. Restano «Il bacio», i ritratti dorati, il fregio Stoclet, i paesaggi e i ritratti tardi – e le voci delle cartoline e delle lettere ad Emilie Flöge."
 };
   P.stations = Object.assign(P.stations || {}, {
   "klimtbaum": {

@@ -144,7 +144,7 @@
   "avemaria": {
     "text": [
       "Un pastore e una donna scivolano in barca su un lago fermo, la pecora a prua. In questo momento congiungono le mani per l’Ave Maria.",
-      "Segantini dipinse il soggetto due volte. Questa versione del 1886, già nata in montagna, gli valse una medaglia d’oro a Parigi."
+      "Segantini dipinse il soggetto due volte. Questa versione del 1886 nacque già in montagna; la medaglia d’oro di Amsterdam del 1883 era andata alla prima versione, del 1882."
     ],
     "fact": "1886. Museo Segantini, St. Moritz."
   },

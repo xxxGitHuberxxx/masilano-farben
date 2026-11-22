@@ -236,15 +236,15 @@
   P.paths.klimt = {
   "title": "El camino de vida de Klimt",
   "life": "1862–1918",
-  "part": "Parte 1 · Hasta el friso de Beethoven",
-  "subtitle": "De Baumgarten a la Secesión",
-  "intro": "Viaja con Gustav Klimt por la primera mitad de su camino: desde la infancia en Baumgarten y la Escuela de Artes Aplicadas, pasando por la Künstler-Compagnie con su hermano Ernst y Franz Matsch, las pinturas del Burgtheater y del Kunsthistorisches Museum, la muerte de su padre y de su hermano en 1892, la fundación de la Secesión y los primeros paisajes, hasta el friso de Beethoven de 1902. Estaciones breves, cuadros para pintar y dos voces documentadas: una postal a Emilie Flöge y el «Comentario sobre un autorretrato inexistente». Esta primera parte llega hasta 1902 aproximadamente.",
+  "part": "Partes 1–2 · 1862–1918",
+  "subtitle": "De Baumgarten a los últimos cuadros",
+  "intro": "Viaja con Gustav Klimt por toda su vida: desde la infancia en Baumgarten y la Escuela de Artes Aplicadas, pasando por la Künstler-Compagnie, el Burgtheater y el Kunsthistorisches Museum, la muerte de su padre y de su hermano en 1892, la Secesión y el friso de Beethoven, hasta la época dorada, la Kunstschau de 1908, el friso Stoclet, Emilie Flöge, los paisajes del Attersee y del lago de Garda, los retratos coloridos tardíos y «Muerte y vida». Estaciones breves, cuadros para pintar y voces documentadas: postales y una carta a Emilie Flöge, y el discurso de la Kunstschau. Klimt muere en Viena el 6 de febrero de 1918.",
   "ending": [
-    "En 1902 la Secesión organiza la exposición de Beethoven en torno a la estatua de Beethoven de Max Klinger. Klimt pinta el friso en tres paredes: del anhelo de felicidad a «Este beso al mundo entero». Ese mismo año nacen el retrato de pie de Emilie Flöge y el «Hayedo I».",
-    "En un mecanoscrito sin fecha que la Wienbibliothek im Rathaus conserva como «Comentario sobre un autorretrato inexistente», Klimt escribe: «No existe ningún autorretrato mío. No me interesa mi propia persona como “objeto de un cuadro”, sino más bien otras personas, sobre todo mujeres, y aún más otras apariencias. Quien quiera saber algo de mí –como artista, lo único digno de atención– que mire atentamente mis cuadros e intente reconocer en ellos lo que soy y lo que quiero».",
-    "El camino continúa. Siguen los años dorados después de 1902, nuevos retratos y paisajes. Klimt muere en Viena en 1918; de eso trata la próxima parte."
+    "En los últimos años nacen retratos y paisajes coloridos, junto a retratos inacabados como Johanna Staude, Amalie Zuckerkandl y la «Dama de blanco». En 1916 Klimt pasa el último verano compartido con Emilie Flöge en el Attersee. El 30 de diciembre de 1917 le escribe desde Winkelsdorf: «…un saludo salido de lo más íntimo y [te] deseo un año nuevo de lo más, más feliz. – como los dos lo necesitamos con tanta urgencia.»",
+    "El 11 de enero de 1918 Klimt sufre un derrame cerebral en Viena. Muere el 6 de febrero de 1918 en el Hospital General de Viena, a los cincuenta y seis años.",
+    "Quedan, entre otras obras, «El beso» en el Belvedere, el retrato dorado de Adele Bloch-Bauer, las plantillas del friso Stoclet en el MAK, los paisajes del Attersee y del lago de Garda y los retratos tardíos. De él mismo, había escrito, no hay autorretrato: hay que mirar sus cuadros."
   ],
-  "epilogue": "En 1902 Klimt pinta el friso de Beethoven para la Secesión y el retrato de pie de Emilie Flöge; ese mismo año nace el «Hayedo I». En un mecanoscrito sin fecha de la Wienbibliothek escribe que no existe ningún autorretrato suyo: hay que mirar sus cuadros. Los años dorados después de 1902 siguen en la próxima parte."
+  "epilogue": "El 11 de enero de 1918 Gustav Klimt sufre un derrame cerebral en Viena. Muere el 6 de febrero de 1918 en el Hospital General, a los cincuenta y seis años. Quedan «El beso», los retratos dorados, el friso Stoclet, los paisajes y los retratos tardíos – y las voces de las tarjetas y cartas a Emilie Flöge."
 };
   P.stations = Object.assign(P.stations || {}, {
   "klimtbaum": {

@@ -224,7 +224,7 @@ window.FR = {
       "story": "Une terrasse de café éclairée à Arles, avec le ciel étoilé au-dessus. Van Gogh peignit le tableau en septembre 1888, en plein air et de nuit.",
       "facts": [
         "C’est l’un des premiers tableaux où Van Gogh peignit un ciel étoilé. La Nuit étoilée viendrait presque un an plus tard.",
-        "Le café existait vraiment : il s’appelait Café Terrace et se trouvait sur la place du Forum à Arles."
+        "À sa sœur, il écrivit avec fierté qu’il avait peint un tableau de nuit sans aucun noir, rien qu’avec du bleu, du violet et du vert."
       ]
     },
     "jatte": {
@@ -244,7 +244,7 @@ window.FR = {
       "story": "Un bal populaire en plein air à Montmartre, alors encore un quartier à la lisière de Paris. Renoir peignit des amis et des voisins, un dimanche après-midi à la lumière du soleil entre les arbres.",
       "facts": [
         "Le Moulin de la Galette était un vrai bal, avec un moulin et un jardin. On y servait des galettes, d’où le nom.",
-        "Renoir peignit une seconde version, plus petite, qui est aujourd’hui accrochée à l’Orangerie de Paris."
+        "Beaucoup des personnes du tableau sont des amis de Renoir, par exemple des peintres et des écrivains."
       ]
     },
     "wanderer": {
@@ -441,7 +441,7 @@ window.FR = {
       "title": "Arearea (Joie)",
       "museum": "Musée d’Orsay, Paris",
       "technique": "Huile sur toile, avec des couleurs intenses et planes et des contours clairs, loin de l’impressionnisme européen.",
-      "story": "Deux femmes tahitiennes sont assises dans une prairie ; devant elles, un chien rouge. À l’arrière-plan, quelqu’un joue de la flûte devant une figure de dieu. « Arearea » en tahitien signifie à peu près joie ou plaisir.",
+      "story": "Deux femmes tahitiennes sont assises dans une prairie ; devant elles, un chien rouge. L’une d’elles joue de la flûte ; à l’arrière-plan, des femmes vénèrent une figure de dieu. « Arearea » en tahitien signifie à peu près joie ou plaisir.",
       "facts": [
         "Gauguin partit pour Tahiti en 1891, en quête d’une vie loin du monde européen moderne.",
         "Il tira de nombreux motifs de la vie quotidienne, de sculptures et de sa propre imagination. Le tableau est accroché au Musée d’Orsay."
@@ -603,7 +603,7 @@ window.FR = {
       "technique": "Huile sur toile. Segantini posa la couleur en traits fins, côte à côte.",
       "story": "Un berger et une femme glissent dans la barque sur un lac de montagne silencieux, la brebis à la proue, le ciel déjà du soir. En cet instant ils joignent les mains pour l’Ave Maria.",
       "facts": [
-        "Segantini peignit le motif deux fois. Cette seconde version de 1886 lui valut une médaille d’or à Paris.",
+        "Segantini peignit le motif deux fois. La première version, de 1882, obtint une médaille d’or à l’Exposition universelle d’Amsterdam en 1883 ; dans cette seconde version de 1886, il employa pour la première fois la technique divisionniste.",
         "Il vivait tout en haut en Engadine et peignit la vie paysanne dans les Alpes avec un grand calme et une grande précision."
       ]
     },
@@ -823,7 +823,7 @@ window.FR = {
       "technique": "Huile sur toile. Monet peint le contre-jour, le vent et l’herbe en mouvement par de rapides touches claires.",
       "story": "Camille, la femme de Monet, se tient sur une élévation, l’ombrelle contre le soleil, le petit Jean à ses côtés. Vue d’en bas, devant le ciel qui souffle, elle paraît presque sans poids.",
       "facts": [
-        "Monet répéta plus tard le motif une fois encore avec une autre femme, sa seconde épouse Alice.",
+        "En 1886, Monet reprit le motif deux fois encore, avec Suzanne Hoschedé, la fille de sa future seconde épouse Alice.",
         "Le tableau est une œuvre clé de l’impressionnisme : il n’est pas posé, mais une promenade venteuse, saisie dans la lumière."
       ]
     },
@@ -859,9 +859,9 @@ window.FR = {
     },
     "dorfschule": {
       "title": "L’École du village de 1848",
-      "museum": "Kunstmuseum Bern",
+      "museum": "Kunstmuseum Basel",
       "technique": "Huile sur toile. Anker remplit toute la pièce d’enfants, de bancs de bois et d’ardoises, sans désordre.",
-      "story": "Dans une salle d’école sombre sont assis des enfants de tous âges ; le maître se tient au milieu. Anker peignit la scène en 1896, mais évoquait l’année 1848, lorsque naquit en Suisse l’État fédéral moderne — et avec lui l’école publique.",
+      "story": "Dans une salle d’école sombre sont assis des enfants de tous âges ; le maître se tient au milieu. Anker peignit la scène en 1896, en regard rétrospectif sur l’année 1848, où fut fondé l’État fédéral suisse moderne.",
       "facts": [
         "Anker lui-même fut longtemps membre du Grand Conseil du canton de Berne et s’occupa des écoles et de la culture.",
         "Chaque enfant a un visage propre. Qui regarde plus longtemps trouve le rêveur, l’empressé et celui dont l’esprit est ailleurs."
@@ -874,7 +874,7 @@ window.FR = {
       "story": "Dans le jardin de l’asile de Saint-Rémy fleurissaient les iris, et Van Gogh les peignit d’un seul élan intense. Devant, un accent presque blanc ; sinon, une mer de bleu, de vert et du rouge chaud de la terre.",
       "facts": [
         "Il peignit les iris dès le premier mois après son arrivée à Saint-Rémy, encore avant La Nuit étoilée.",
-        "Le tableau resta sans restauration et sans vernis, c’est pourquoi les couleurs paraissent jusqu’à aujourd’hui particulièrement fraîches."
+        "À l’origine, les fleurs étaient plus violettes : un pigment rouge de la peinture a pâli avec le temps, c’est pourquoi beaucoup d’iris paraissent aujourd’hui plus bleus qu’à l’époque de Van Gogh."
       ]
     },
     "gotthard": {
@@ -914,7 +914,7 @@ window.FR = {
       "story": "Dans un bosquet ombragé, neuf figures du printemps dansent et s’avancent : Mercure à gauche, les trois Grâces, Vénus au milieu, le vent de printemps Zéphyr à droite, qui poursuit la nymphe Chloris. Au-dessus de tous plane l’Amour.",
       "facts": [
         "Le tableau naquit probablement pour la famille Médicis à Florence et est l’un des plus célèbres du début de la Renaissance.",
-        "Botticelli peignit des centaines de fleurs différentes avec une telle précision que beaucoup d’entre elles peuvent être identifiées."
+        "Botticelli peignit quelque 500 plantes individuelles, beaucoup avec une telle précision que les botanistes peuvent encore les identifier aujourd’hui."
       ]
     },
     "terrace": {
@@ -1153,7 +1153,7 @@ window.FR = {
     },
     "wintergarden": {
       "title": "Le Jardin du presbytère à Nuenen en hiver",
-      "museum": "Van Gogh Museum, Amsterdam"
+      "museum": "Musée des Beaux-Arts, Budapest"
     },
     "congreg": {
       "title": "Sortie de l’église réformée à Nuenen",
@@ -1301,7 +1301,7 @@ window.FR = {
     },
     "restint": {
       "title": "Intérieur d’un restaurant",
-      "museum": "Indianapolis Museum of Art"
+      "museum": "Kröller-Müller Museum, Otterlo"
     },
     "undergrowth": {
       "title": "Arbres et sous-bois",
@@ -1353,7 +1353,7 @@ window.FR = {
     },
     "selforsay": {
       "title": "Autoportrait, 1887",
-      "museum": "Musée d’Orsay, Paris"
+      "museum": "Art Institute of Chicago"
     },
     "selfartist": {
       "title": "Autoportrait en peintre",
@@ -1437,7 +1437,7 @@ window.FR = {
     },
     "rocks88": {
       "title": "Rochers avec un chêne",
-      "museum": "Kröller-Müller Museum, Otterlo"
+      "museum": "Museum of Fine Arts, Houston"
     },
     "flowergarden": {
       "title": "Jardin en fleurs",
@@ -1481,7 +1481,7 @@ window.FR = {
     },
     "escalier": {
       "title": "Patience Escalier",
-      "museum": "Kunsthaus Zürich"
+      "museum": "Collection particulière"
     },
     "boch": {
       "title": "Portrait d’Eugène Boch (Le Poète)",
@@ -1765,7 +1765,7 @@ window.FR = {
     },
     "wheatcorn": {
       "title": "Champ de blé aux bleuets",
-      "museum": "collection E.G. Bührle, Zürich"
+      "museum": "Fondation Beyeler, Riehen"
     },
     "farmsauvers": {
       "title": "Fermes près d’Auvers",
@@ -2313,7 +2313,7 @@ window.FR = {
     },
     "sangiodusk": {
       "title": "San Giorgio Maggiore au crépuscule",
-      "museum": "Fondation Beyeler, Riehen"
+      "museum": "National Museum Cardiff"
     },
     "dogepalace": {
       "title": "Le Palais des Doges",
@@ -2333,7 +2333,7 @@ window.FR = {
     },
     "grandcanal2": {
       "title": "Le Grand Canal, Venise",
-      "museum": "Fondation Beyeler, Riehen"
+      "museum": "Museum of Fine Arts, Boston"
     },
     "pathiris": {
       "title": "Le Sentier à travers les iris",

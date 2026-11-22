@@ -232,15 +232,15 @@
   EN.paths.klimt = {
   "title": "Klimt’s Life Journey",
   "life": "1862–1918",
-  "part": "Part 1 · Up to the Beethoven Frieze",
-  "subtitle": "From Baumgarten to the Secession",
-  "intro": "Travel with Gustav Klimt through the first half of his path: from childhood in Baumgarten and the Kunstgewerbeschule, through the Künstler-Compagnie with his brother Ernst and Franz Matsch, the paintings in the Burgtheater and the Kunsthistorisches Museum, the deaths of his father and brother in 1892, the founding of the Secession and the first landscapes, to the Beethoven Frieze of 1902. Short stations, pictures to colour, and two documented voices: a postcard to Emilie Flöge and the “Commentary on a nonexistent self-portrait”. This first part runs to about 1902.",
+  "part": "Parts 1–2 · 1862–1918",
+  "subtitle": "From Baumgarten to the last pictures",
+  "intro": "Travel with Gustav Klimt through his whole life: from childhood in Baumgarten and the Kunstgewerbeschule, through the Künstler-Compagnie, the Burgtheater and the Kunsthistorisches Museum, the deaths of his father and brother in 1892, the Secession and the Beethoven Frieze, to the golden years, the Kunstschau of 1908, the Stoclet Frieze, Emilie Flöge, the landscapes at the Attersee and Lake Garda, the late colourful portraits and “Death and Life”. Short stations, pictures to colour, and documented voices: postcards and a letter to Emilie Flöge, and the address at the Kunstschau. Klimt dies in Vienna on 6 February 1918.",
   "ending": [
-    "In 1902 the Secession mounts the Beethoven exhibition around Max Klinger’s statue of Beethoven. Klimt paints the frieze on three walls: from the yearning for happiness to “This Kiss to the Whole World”. In the same year the standing portrait of Emilie Flöge and “Beech Grove I” appear.",
-    "In an undated typescript, which the Wienbibliothek im Rathaus preserves as “Commentary on a nonexistent self-portrait”, Klimt writes: “There is no self-portrait of me. I am not interested in my own person as the ‘subject of a picture’, but rather in other people, especially women, and still more in other appearances. Anyone who wants to know something about me – as an artist, who alone is worth considering – should look attentively at my pictures and try to recognise from them what I am and what I want.”",
-    "The path continues. There follow the golden years after 1902, new portraits and landscapes. Klimt dies in Vienna in 1918 – that story belongs to the next part."
+    "In the last years colourful portraits and landscapes appear, together with unfinished portraits such as Johanna Staude, Amalie Zuckerkandl and the “Lady in White”. In 1916 Klimt spends his last shared summer with Emilie Flöge at the Attersee. On 30 December 1917 he writes to her from Winkelsdorf: “…a greeting from the innermost heart, and [I] wish you a most, most happy New Year – as we both so urgently need it.”",
+    "On 11 January 1918 Klimt suffers a stroke in Vienna. He dies on 6 February 1918 in the General Hospital in Vienna, at the age of fifty-six.",
+    "What remains includes “The Kiss” at the Belvedere, the golden portrait of Adele Bloch-Bauer, the working designs for the Stoclet Frieze at the MAK, the landscapes from the Attersee and Lake Garda, and the late portraits. Of himself, he had written, there was no self-portrait: one should look at his pictures."
   ],
-  "epilogue": "In 1902 Klimt paints the Beethoven Frieze for the Secession and the standing portrait of Emilie Flöge; in the same year “Beech Grove I” appears. In an undated typescript at the Wienbibliothek he writes that there is no self-portrait of him: one should look at his pictures. The golden years after 1902 follow in the next part."
+  "epilogue": "On 11 January 1918 Gustav Klimt suffers a stroke in Vienna. He dies on 6 February 1918 in the General Hospital, at the age of fifty-six. What remains are “The Kiss”, the golden portraits, the Stoclet Frieze, the landscapes and the late portraits – and the voices from cards and letters to Emilie Flöge."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "klimtbaum": {

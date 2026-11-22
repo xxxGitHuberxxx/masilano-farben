@@ -75,10 +75,10 @@
   "subtitle": "Tempesta, roccia e laghi quieti",
   "intro": "Viaggia con Alexandre Calame, il pittore ginevrino delle Alpi: dai primi paesaggi di montagna, attraverso il Grimsel, Rosenlaui e il Wetterhorn, fino ai laghi quieti di Thun, Ginevra e Lucerna. Brevi tappe e quadri da colorare. Questa prima parte lo segue tra le montagne svizzere.",
   "ending": [
-    "Alexandre Calame muore a Mentone il 17 marzo 1864, a cinquantatré anni. I suoi quadri alpini hanno segnato lo sguardo di tutta l’Europa sulle montagne svizzere.",
+    "Alexandre Calame muore a Mentone il 19 marzo 1864, a cinquantatré anni. I suoi quadri alpini hanno segnato lo sguardo di tutta l’Europa sulle montagne svizzere.",
     "Il percorso può ancora crescere. Litografie, quadri italiani e altre montagne potranno seguire in una parte successiva."
   ],
-  "epilogue": "Il 17 marzo 1864 Calame muore a Mentone. Una parte successiva potrà aggiungere litografie e altre montagne."
+  "epilogue": "Il 19 marzo 1864 Calame muore a Mentone. Una parte successiva potrà aggiungere litografie e altre montagne."
 };
   P.stations = Object.assign(P.stations || {}, {
   "acgenf": {

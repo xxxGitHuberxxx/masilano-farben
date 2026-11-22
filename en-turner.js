@@ -211,14 +211,14 @@
   EN.paths.turner = {
   "title": "The Life of J. M. W. Turner",
   "life": "1775–1851",
-  "part": "Part 1 · 1775–1819",
-  "subtitle": "From Covent Garden over the Alps to the Rhine",
-  "intro": "Joseph Mallord William Turner was born on 23 April 1775 at 21 Maiden Lane, Covent Garden, the son of a barber, and was baptised on 14 May at St Paul’s Church, Covent Garden. This first part follows him from the Royal Academy Schools and the early watercolours through the first oil of 1796, his election as a Royal Academician in 1802 and the first continental tour, up to the threshold of the journey to Italy in 1819.",
+  "part": "Parts 1–2 · 1775–1851",
+  "subtitle": "From Covent Garden via Venice and the Rigi to Chelsea",
+  "intro": "Travel with J. M. W. Turner through his whole life: from his birth in Covent Garden in 1775 through the Royal Academy, Wales, the Alps and the Rhine to the journeys to Italy, to Petworth, the burning of Parliament, Venice, the Fighting Temeraire, the Swiss watercolours and Rain, Steam and Speed, until his death in Chelsea on 19 December 1851.",
   "ending": [
-    "In August 1819 Turner set out on his first journey to Italy.",
-    "The next part follows Venice, Rain, Steam and Speed, the Fighting Temeraire, and his death in Chelsea on 19 December 1851."
+    "J. M. W. Turner died in Chelsea on 19 December 1851, aged seventy-six. He is buried in St Paul’s Cathedral, London.",
+    "He left his pictures to the nation. With the Turner Bequest hundreds of paintings and thousands of drawings and watercolours stay together, from the early views of Wales to the light, steam and mist of the late years."
   ],
-  "epilogue": "The next part follows Venice, Rain, Steam and Speed, the Fighting Temeraire, and his death in Chelsea on 19 December 1851."
+  "epilogue": "J. M. W. Turner died in Chelsea on 19 December 1851. He is buried in St Paul’s Cathedral, London."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "tucovent": {

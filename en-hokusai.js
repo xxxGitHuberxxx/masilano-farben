@@ -223,15 +223,15 @@
   EN.paths.hokusai = {
   "title": "Hokusai’s Life Journey",
   "life": "1760–1849",
-  "part": "Part 1 · Up to the 36 Views",
-  "subtitle": "From Edo to the Great Wave",
-  "intro": "Travel with Katsushika Hokusai through the first half of his path: from childhood in Edo and his apprenticeship with Katsukawa Shunshō, through new names, surimono and early views of the city, to the “Thirty-six Views of Mount Fuji” – to the Great Wave and Red Fuji. Short stations, pictures to colour, and a voice from his own postscript. This first part runs to about 1832.",
+  "part": "Parts 1–2 · 1760–1849",
+  "subtitle": "From Edo to the last pictures in Obuse",
+  "intro": "Travel with Katsushika Hokusai through his whole life: from childhood in Edo and his apprenticeship with Katsukawa Shunshō, through new names, surimono and the “Thirty-six Views of Mount Fuji”, to the waterfalls and bridges of the provinces, to birds and flowers, to the “One Hundred Views of Mount Fuji”, to the poet pictures and finally to the late paintings in Obuse. Short stations, pictures to colour, and a voice from his postscript of 1834. Hokusai dies in 1849 in Edo.",
   "ending": [
-    "The “Thirty-six Views of Mount Fuji” appear about 1830 to 1832, published by Nishimuraya Yohachi. From thirty-six sheets, with ten more, the series becomes forty-six. Prussian blue and the mountain seen again and again give the set its character.",
-    "Two years later, in 1834, Hokusai writes in the postscript to the first volume of “One Hundred Views of Mount Fuji” (Fugaku Hyakkei): “From my sixth year I have had the habit of copying the shapes of things. From the age of fifty I have often published pictures, yet nothing I drew before the age of seventy is really worth keeping. At seventy-three I began to grasp a little the structure of birds, animals, insects and fish, and the way plants grow. So at eighty-six I mean to go further still; at ninety I will understand it more deeply; at a hundred I should reach something truly wondrous; and at a hundred and ten, every dot and every stroke should be alive. May gentlemen who live long see that these words of mine are not empty boasting.”",
-    "The path continues. There follow the waterfalls of the provinces, the bridges, the hundred views of Fuji and the late years in Edo. Hokusai dies in 1849 – that story belongs to the next part."
+    "In 1839 a fire in Edo destroys his house and many drawings. In the 1840s he stays several times in Obuse, with Takai Kōzan. In 1847 comes the Thunder God; in 1849, the tiger in the snow.",
+    "Hokusai dies in Edo on the 18th day of the fourth month of the second year of Kaei – 10 May 1849. By the count of the time he is ninety years old.",
+    "Fifteen years earlier, in 1834, he had written in the postscript to “One Hundred Views of Mount Fuji”: “From my sixth year I have had the habit of copying the shapes of things. From the age of fifty I have often published pictures, yet nothing I drew before the age of seventy is really worth keeping. At seventy-three I began to grasp a little the structure of birds, animals, insects and fish, and the way plants grow. So at eighty-six I mean to go further still; at ninety I will understand it more deeply; at a hundred I should reach something truly wondrous; and at a hundred and ten, every dot and every stroke should be alive. May gentlemen who live long see that these words of mine are not empty boasting.” The wish to reach a hundred and ten remains unfulfilled. The sheets and the late paintings remain."
   ],
-  "epilogue": "Around 1830 to 1832 the “Thirty-six Views of Mount Fuji” appear with Nishimuraya Yohachi; with ten further sheets they become forty-six. In 1834, in the postscript to “One Hundred Views of Mount Fuji”, Hokusai writes of a life that seems to begin only at seventy. Waterfalls, bridges and the late years follow in the next part."
+  "epilogue": "Katsushika Hokusai dies on 10 May 1849 in Edo, at the age of ninety by the count of the time. The “Thirty-six Views”, the “One Hundred Views of Mount Fuji”, the waterfalls, the bridges and the late paintings from Obuse remain."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "edo": {

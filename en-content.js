@@ -412,7 +412,7 @@ window.EN = {
       "title": "Arearea (Joyfulness)",
       "museum": "Musée d’Orsay, Paris",
       "technique": "Oil on canvas, with strong, flat colours and clear outlines, far from European Impressionism.",
-      "story": "Two Tahitian women sit on a meadow, in front of them a red dog. In the background someone plays a flute before a figure of a god. “Arearea” in Tahitian means something like joy or pleasure.",
+      "story": "Two Tahitian women sit on a meadow, in front of them a red dog. One of them plays a flute; in the background women worship the figure of a god. “Arearea” in Tahitian means something like joy or pleasure.",
       "facts": [
         "Gauguin travelled to Tahiti in 1891, in search of a life away from the modern European world.",
         "He took many motifs from everyday life, from carvings and from his own imagination. The picture hangs in the Musée d’Orsay."
@@ -574,7 +574,7 @@ window.EN = {
       "technique": "Oil on canvas. Segantini set the colour in fine strokes lying side by side.",
       "story": "A shepherd and a woman glide in a boat across a still mountain lake, the sheep in the bow, the sky already evening. In this moment they fold their hands for the Ave Maria.",
       "facts": [
-        "Segantini painted the motif twice. This second version of 1886 won him a gold medal in Paris.",
+        "Segantini painted the motif twice. The first version of 1882 won a gold medal at the 1883 world’s fair in Amsterdam; in this second version of 1886 he used the Divisionist technique for the first time.",
         "He lived high up in the Engadine and painted peasant life in the Alps with great calm and precision."
       ]
     },
@@ -794,7 +794,7 @@ window.EN = {
       "technique": "Oil on canvas. Monet paints backlight, wind and moving grass in rapid, light strokes.",
       "story": "Camille, Monet’s wife, stands on a rise, the parasol against the sun, little Jean beside her. Seen from below, against the blowing sky, she looks almost weightless.",
       "facts": [
-        "Monet later repeated the motif once more with another woman, his second wife Alice.",
+        "In 1886 Monet took up the motif twice more, with Suzanne Hoschedé, the daughter of his later second wife Alice.",
         "The picture is a key work of Impressionism: not posed, but a windy walk, held in the light."
       ]
     },
@@ -830,9 +830,9 @@ window.EN = {
     },
     "dorfschule": {
       "title": "The Village School of 1848",
-      "museum": "Kunstmuseum Bern",
+      "museum": "Kunstmuseum Basel",
       "technique": "Oil on canvas. Anker fills the whole parlour with children, wooden benches and slate boards, without disorder.",
-      "story": "In a dark schoolroom sit children of all ages, the teacher standing in the middle. Anker painted the scene in 1896, but recalled the year 1848, when the modern federal state was formed in Switzerland – and with it the public school.",
+      "story": "In a dark schoolroom sit children of all ages, the teacher standing in the middle. Anker painted the scene in 1896 as a look back at the year 1848, when the modern Swiss federal state was founded.",
       "facts": [
         "Anker himself was long a member of the Grand Council in the canton of Bern and concerned himself with schools and culture.",
         "Each child has a face of its own. Anyone who looks longer finds the dreamer, the eager one and the one whose mind is elsewhere."
@@ -845,7 +845,7 @@ window.EN = {
       "story": "In the garden of the asylum of Saint-Rémy the irises were in bloom, and Van Gogh painted them in a single, intense burst. In front an almost white accent, otherwise a sea of blue, green and the warm red of the earth.",
       "facts": [
         "He painted the irises in the first month after his arrival in Saint-Rémy, still before The Starry Night.",
-        "The picture was left unrestored and without varnish, which is why the colours still look especially fresh today."
+        "The flowers were originally more violet: a red pigment in the paint has faded over time, which is why many irises look bluer today than in Van Gogh’s day."
       ]
     },
     "gotthard": {
@@ -885,7 +885,7 @@ window.EN = {
       "story": "In a shady grove nine figures of spring dance and walk: Mercury on the left, the three Graces, Venus in the middle, the spring wind Zephyr on the right, pursuing the nymph Chloris. Above them all hovers Cupid.",
       "facts": [
         "The picture was probably made for the Medici family in Florence and is one of the most famous of the Early Renaissance.",
-        "Botticelli painted hundreds of different blossoms so precisely that many of them can be identified."
+        "Botticelli painted around 500 individual plants, many so precisely that botanists can still identify them today."
       ]
     },
     "terrace": {
@@ -1124,7 +1124,7 @@ window.EN = {
     },
     "wintergarden": {
       "title": "The Parsonage Garden at Nuenen in Winter",
-      "museum": "Van Gogh Museum, Amsterdam"
+      "museum": "Museum of Fine Arts, Budapest"
     },
     "congreg": {
       "title": "Congregation Leaving the Reformed Church in Nuenen",
@@ -1272,7 +1272,7 @@ window.EN = {
     },
     "restint": {
       "title": "Interior of a Restaurant",
-      "museum": "Indianapolis Museum of Art"
+      "museum": "Kröller-Müller Museum, Otterlo"
     },
     "undergrowth": {
       "title": "Trees and Undergrowth",
@@ -1324,7 +1324,7 @@ window.EN = {
     },
     "selforsay": {
       "title": "Self-Portrait, 1887",
-      "museum": "Musée d’Orsay, Paris"
+      "museum": "Art Institute of Chicago"
     },
     "selfartist": {
       "title": "Self-Portrait as a Painter",
@@ -1408,7 +1408,7 @@ window.EN = {
     },
     "rocks88": {
       "title": "Rocks with Oak Tree",
-      "museum": "Kröller-Müller Museum, Otterlo"
+      "museum": "Museum of Fine Arts, Houston"
     },
     "flowergarden": {
       "title": "Flowering Garden",
@@ -1452,7 +1452,7 @@ window.EN = {
     },
     "escalier": {
       "title": "Patience Escalier",
-      "museum": "Kunsthaus Zürich"
+      "museum": "Private collection"
     },
     "boch": {
       "title": "Portrait of Eugène Boch (The Poet)",
@@ -1736,7 +1736,7 @@ window.EN = {
     },
     "wheatcorn": {
       "title": "Wheatfield with Cornflowers",
-      "museum": "E.G. Bührle Collection, Zürich"
+      "museum": "Fondation Beyeler, Riehen"
     },
     "farmsauvers": {
       "title": "Farms near Auvers",
@@ -2360,7 +2360,7 @@ window.EN = {
         "Inside a restaurant the tables stand ready, checked cloths, flowers, a warm yellow-green room. No one is sitting, and yet the room is full of colour.",
         "Here Vincent practises interior and pattern – in preparation for later room pictures. The plane is already set rhythmically, almost like a cloth."
       ],
-      "fact": "The picture belongs to the Indianapolis Museum of Art. It is a Paris interior, not the later bedroom of Arles; but the related love of a patterned room can already be felt."
+      "fact": "The picture belongs to the Kröller-Müller Museum in Otterlo. It is a Paris interior, not the later bedroom of Arles; but the related love of a patterned room can already be felt."
     },
     "parkcouples": {
       "text": [
@@ -2768,10 +2768,10 @@ window.EN = {
     },
     "wheatcorn": {
       "text": [
-        "A wheat field, interspersed with cornflowers, under a moving sky. The picture hangs today in the E.G. Bührle Collection in Zürich.",
+        "A wheat field, interspersed with cornflowers, under a moving sky. The picture hangs today in the Fondation Beyeler in Riehen.",
         "Like the other late fields it is stretched in width: below the ears, above the clouds, between them hardly a village."
       ],
-      "fact": "The picture belongs to the E.G. Bührle Collection in Zürich and is made in July 1890."
+      "fact": "The picture belongs to the Fondation Beyeler in Riehen and is made in July 1890."
     },
     "farmsauvers": {
       "text": [
@@ -2863,7 +2863,7 @@ window.EN = {
         "Patience Escalier, a gardener and former shepherd, in a straw-yellow hat, the hands crossed, the ground strong. Here Vincent seeks no urban type, but a man of the Crau.",
         "In a letter he speaks of the “terrible man” he had had to paint in the glow of the harvest, at midday: burning orange, old-gold tones in the dark."
       ],
-      "fact": "The picture belongs to the Kunsthaus Zürich and is made in August 1888."
+      "fact": "The picture is in a private collection and is made in August 1888."
     },
     "boch": {
       "text": [
@@ -3188,10 +3188,10 @@ window.EN = {
     },
     "ettenchurch": {
       "text": [
-        "The parsonage and the church of Etten: the village where his parents live, and the office of his father, which Vincent once sought himself. He draws the parsonage calmly and matter-of-factly, still without quarrel in the picture.",
+        "The parsonage and the church of Etten: the village where his parents live, and the office of his father, which Vincent once sought himself. He had already drawn the parsonage in April 1876 on a visit, calmly and matter-of-factly, years before the quarrel with his father.",
         "In the house itself the mood grows heavier. Kee stays with the family for a time, and Vincent’s feelings meet a wall."
       ],
-      "fact": "The drawing belongs to the Van Gogh Museum in Amsterdam. One sees the parsonage on the left and the church tower on the right – Vincent’s parental home in this year."
+      "fact": "The drawing belongs to the Van Gogh Museum in Amsterdam. One sees the parsonage on the left and the church tower on the right – Vincent’s parents’ home from 1875."
     },
     "schevwoman": {
       "text": [
@@ -3478,7 +3478,7 @@ window.EN = {
         "The parsonage garden in winter, as a large reed-pen drawing: a gnarled tree, bare branches, the tower in the distance, paths under a leaden sky. Vincent draws the garden as if the tree were a being with veins and joints.",
         "It is the winter of 1884/85, the winter of the many studies of heads and hands that later go into the Potato Eaters. His parents’ house stands close beside this garden."
       ],
-      "fact": "The drawing belongs to the Van Gogh Museum. Vincent also painted the wintry parsonage garden in oil; this sheet shows especially clearly how he constructs trees “from within”."
+      "fact": "The drawing belongs to the Museum of Fine Arts in Budapest. Vincent also painted the wintry parsonage garden in oil; this sheet shows especially clearly how he constructs trees “from within”."
     },
     "congreg": {
       "text": [
@@ -3648,10 +3648,10 @@ window.EN = {
     },
     "selforsay": {
       "text": [
-        "Against a turquoise ground the head stands free, the gaze is alert, the strokes short and colourful. This self-portrait hangs today in Paris, in the city where it was made.",
+        "Against a turquoise ground the head stands free, the gaze is alert, the strokes short and colourful. This self-portrait was made in Paris and hangs today in Chicago.",
         "Here the transformation is almost complete: from the painter of the Potato Eaters someone has come who can hold his own in pure colour."
       ],
-      "fact": "The picture hangs in the Musée d’Orsay in Paris. It belongs to the clearest self-portraits of the year 1887 and shows Vincent’s Parisian colour at its height before Arles."
+      "fact": "The picture hangs in the Art Institute of Chicago. It belongs to the clearest self-portraits of the year 1887 and shows Vincent’s Parisian colour at its height before Arles."
     },
     "selfartist": {
       "text": [
@@ -3825,7 +3825,7 @@ window.EN = {
         "Rocks and an oak, cooler than the grain fields, the green stronger. At Montmajour Vincent paints not only the distance, but also the stone.",
         "After weeks in the plain this is another motif: massive, close, with hard light on the planes."
       ],
-      "fact": "The picture belongs to the Kröller-Müller Museum and is made in July 1888."
+      "fact": "The picture belongs to the Museum of Fine Arts in Houston and is made in July 1888."
     },
     "flowergarden": {
       "text": [

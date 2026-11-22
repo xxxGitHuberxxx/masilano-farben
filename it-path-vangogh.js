@@ -52,10 +52,10 @@
   },
   "ettenchurch": {
     "text": [
-      "La canonica e la chiesa di Etten: il villaggio in cui vivono i genitori, e l’ufficio del padre, a cui Vincent aspirò egli stesso un tempo. Disegna la canonica con calma e oggettività, ancora senza lite nell’immagine.",
+      "La canonica e la chiesa di Etten: il villaggio in cui vivono i genitori, e l’ufficio del padre, a cui Vincent aspirò egli stesso un tempo. Aveva già disegnato la canonica nell’aprile 1876, durante una visita, con calma e oggettività, anni prima della lite con il padre.",
       "Nella casa stessa l’atmosfera si fa più pesante. Kee abita a tratti presso la famiglia, e i sentimenti di Vincent urtano contro un muro."
     ],
-    "fact": "Il disegno appartiene al Van Gogh Museum di Amsterdam. Si vede la canonica a sinistra e il campanile a destra – la casa paterna di Vincent in quell’anno."
+    "fact": "Il disegno appartiene al Van Gogh Museum di Amsterdam. Si vede la canonica a sinistra e il campanile a destra – la casa paterna di Vincent dal 1875."
   },
   "schevwoman": {
     "text": [
@@ -349,7 +349,7 @@
       "Il giardino della canonica in inverno, come un grande disegno a penna di canna: un albero nodoso, rami spogli, la torre in lontananza, sentieri sotto un cielo plumbeo. Vincent disegna il giardino come se l’albero fosse un essere con vene e articolazioni.",
       "È l’inverno 1884/85, l’inverno dei molti studi di teste e di mani che più tardi entrano in I mangiatori di patate. La casa dei genitori sta accanto a questo giardino."
     ],
-    "fact": "Il disegno appartiene al Van Gogh Museum. Vincent ha dipinto a olio anche il giardino invernale della canonica; questo foglio mostra con particolare chiarezza come costruisca gli alberi «dall’interno»."
+    "fact": "Il disegno appartiene al Museo di Belle Arti di Budapest. Vincent ha dipinto a olio anche il giardino invernale della canonica; questo foglio mostra con particolare chiarezza come costruisca gli alberi «dall’interno»."
   },
   "congreg": {
     "text": [
@@ -645,7 +645,7 @@
       "All’interno di un ristorante i tavoli sono pronti, tovaglie a scacchi, fiori, una stanza calda, giallo-verde. Nessuno siede, eppure la sala è piena di colore.",
       "Vincent esercita qui l’interno e il motivo – in preparazione di successivi quadri di stanze. Il piano è già posto con ritmo, quasi come una stoffa."
     ],
-    "fact": "Il quadro appartiene all’Indianapolis Museum of Art. È un interno parigino, non la camera da letto più tarda di Arles; ma già si sente l’amore affine per una stanza a motivi."
+    "fact": "Il quadro appartiene al Kröller-Müller Museum di Otterlo. È un interno parigino, non la camera da letto più tarda di Arles; ma già si sente l’amore affine per una stanza a motivi."
   },
   "parkcouples": {
     "text": [
@@ -751,10 +751,10 @@
   },
   "selforsay": {
     "text": [
-      "Davanti a un fondo turchese la testa sta libera, lo sguardo è desto, i tratti sono corti e colorati. Questo autoritratto è appeso oggi a Parigi, nella città in cui nacque.",
+      "Davanti a un fondo turchese la testa sta libera, lo sguardo è desto, i tratti sono corti e colorati. Questo autoritratto nacque a Parigi e oggi è appeso a Chicago.",
       "Qui la trasformazione è quasi compiuta: dal pittore de I mangiatori di patate è venuto qualcuno che può tenersi nel colore puro."
     ],
-    "fact": "Il quadro è appeso nel Musée d’Orsay di Parigi. Appartiene agli autoritratti più chiari dell’anno 1887 e mostra il colore parigino di Vincent al suo apice prima di Arles."
+    "fact": "Il quadro è appeso all’Art Institute of Chicago. Appartiene agli autoritratti più chiari dell’anno 1887 e mostra il colore parigino di Vincent al suo apice prima di Arles."
   },
   "selfartist": {
     "text": [
@@ -937,7 +937,7 @@
       "Rocce e una quercia, più fredde dei campi di grano, il verde più vigoroso. A Montmajour Vincent non dipinge soltanto la lontananza, ma anche la pietra.",
       "Dopo settimane nella pianura, questo è un altro motivo: massiccio, vicino, con una luce dura sulle superfici."
     ],
-    "fact": "Il quadro appartiene al Kröller-Müller Museum e nasce nel luglio 1888."
+    "fact": "Il quadro appartiene al Museum of Fine Arts di Houston e nasce nel luglio 1888."
   },
   "flowergarden": {
     "text": [
@@ -1060,7 +1060,7 @@
       "Patience Escalier, un giardiniere e antico pastore, in un cappello di un giallo di paglia, le mani incrociate, il fondo vigoroso. Vincent non cerca qui un tipo urbano, ma un uomo della Crau.",
       "In una lettera parla dell’«uomo terribile» che ha dovuto dipingere nel bagliore del raccolto, a mezzogiorno: un arancio ardente, toni d’oro vecchio nell’oscurità."
     ],
-    "fact": "Il quadro appartiene al Kunsthaus Zürich e nasce nell’agosto 1888."
+    "fact": "Il quadro si trova in una collezione privata e nasce nell’agosto 1888."
   },
   "boch": {
     "text": [
@@ -1713,10 +1713,10 @@
   },
   "wheatcorn": {
     "text": [
-      "Un campo di grano, inframmezzato di fiordalisi, sotto un cielo mosso. Il quadro è appeso oggi nella Sammlung E.G. Bührle di Zurigo.",
+      "Un campo di grano, inframmezzato di fiordalisi, sotto un cielo mosso. Il quadro è appeso oggi nella Fondation Beyeler di Riehen.",
       "Come gli altri campi tardivi è teso in larghezza: in basso le spighe, in alto le nubi, tra di esse appena un villaggio."
     ],
-    "fact": "Il quadro appartiene alla Sammlung E.G. Bührle di Zurigo e nasce nel luglio 1890."
+    "fact": "Il quadro appartiene alla Fondation Beyeler di Riehen e nasce nel luglio 1890."
   },
   "farmsauvers": {
     "text": [

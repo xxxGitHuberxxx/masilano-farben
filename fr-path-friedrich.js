@@ -240,14 +240,14 @@
   P.paths = P.paths || {};
   P.paths.friedrich = {
   "title": "Le parcours de vie de Caspar David Friedrich",
-  "part": "Partie 1 · 1774–1817",
+  "part": "Parties 1–2 · 1774–1840",
   "subtitle": "De Greifswald à Dresde",
-  "intro": "Caspar David Friedrich naît à Greifswald le 5 septembre 1774. Cette première partie le suit de l’enfance au bord de la Baltique et de l’académie de Copenhague, par Dresde, les marches sur Rügen et dans le Harz, les dessins à la sépia et le prix de Weimar de 1805, l’autel de Tetschen et Le Moine au bord de la mer, jusqu’aux tableaux des guerres de libération vers 1817.",
+  "intro": "Caspar David Friedrich naît à Greifswald le 5 septembre 1774. Le parcours le suit de l’enfance au bord de la Baltique et de l’académie de Copenhague jusqu’à Dresde, Rügen, l’autel de Tetschen et Le Moine au bord de la mer. Il continue ensuite avec le mariage avec Caroline en 1818, les enfants, le Voyageur, La Mer de glace, les contemplateurs de la lune et les monts des Géants, jusqu’aux calmes dernières années et à sa mort à Dresde en 1840.",
   "ending": [
-    "En 1817, Friedrich peint Deux hommes au bord de la mer et voit Greifswald au clair de lune. Il est membre de l’académie de Dresde et reste dans la ville devenue le centre de sa vie.",
-    "Dans la partie suivante viennent le mariage avec Caroline en 1818, les Falaises de craie sur Rügen, Le Voyageur contemplant une mer de nuages, La Mer de glace, l’attaque de 1835, sa mort en 1840 et la redécouverte tardive."
+    "Caspar David Friedrich meurt à Dresde le 7 mai 1840 et il est enterré au cimetière de la Trinité. Après sa mort, il tombe presque dans l’oubli pendant des décennies.",
+    "En 1906, l’Exposition du centenaire de l’art allemand, à la Nationalgalerie de Berlin, montre beaucoup de ses tableaux, et Friedrich est redécouvert. Aujourd’hui, Le Moine au bord de la mer, Le Voyageur contemplant une mer de nuages, les Falaises de craie sur Rügen et La Mer de glace comptent parmi les tableaux les plus connus du romantisme. Ici s’achève le parcours."
   ],
-  "epilogue": "Dans la partie suivante viennent le mariage avec Caroline en 1818, les Falaises de craie sur Rügen, Le Voyageur contemplant une mer de nuages, La Mer de glace, l’attaque de 1835, sa mort en 1840 et la redécouverte tardive.",
+  "epilogue": "De la côte baltique près de Greifswald aux calmes tableaux de lune de Dresde, Friedrich a peint des paysages où les personnes regardent, attendent et s’émerveillent.",
   "life": "1774–1840"
 };
   P.stations = Object.assign(P.stations || {}, {

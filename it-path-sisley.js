@@ -242,15 +242,15 @@
   P.paths = P.paths || {};
   P.paths.sisley = {
   "title": "Il percorso di vita di Alfred Sisley",
-  "part": "Parte 1 · 1839–1880",
-  "subtitle": "Da Parigi a Veneux-Nadon",
-  "intro": "Alfred Sisley nasce a Parigi il 30 ottobre 1839, figlio di genitori britannici. Questa prima parte lo segue dalla formazione commerciale a Londra e dallo studio di Gleyre con Monet, Renoir e Bazille, attraverso i primi quadri a Fontainebleau e Marlotte, la famiglia con Eugénie, la guerra del 1870-71 e gli anni a Louveciennes e Marly, fino alla piena del 1876 e al trasferimento sul Loing nel 1880.",
+  "part": "Parti 1–2 · 1839–1899",
+  "subtitle": "Da Parigi a Moret-sur-Loing",
+  "intro": "Accompagna Alfred Sisley lungo tutta la sua vita: dalla nascita a Parigi nel 1839, attraverso l’atelier di Gleyre, Louveciennes, Marly e l’inondazione del 1876, fino agli anni lungo la Senna e il Loing vicino a Moret, alla chiesa di Moret, al viaggio in Galles nel 1897 e alla sua morte nel 1899.",
   "ending": [
-    "All’inizio del 1880 Sisley si stabilisce con Eugénie e i bambini a Veneux-Nadon, vicino a Moret-sur-Loing. Lì trova il paesaggio al quale resterà fedele.",
-    "Nella parte successiva vengono gli anni a Moret-sur-Loing, la povertà, Eugénie, il tardivo tentativo di naturalizzazione e la morte di Sisley nel 1899."
+    "Sisley muore a Moret-sur-Loing il 29 gennaio 1899, pochi mesi dopo Eugénie. Il 1° febbraio viene sepolto nel cimitero di Moret.",
+    "Su iniziativa di Monet, il 1° maggio 1899 la galleria Georges Petit mette all’asta quadri del suo atelier e opere donate dagli amici. Il ricavato va ai figli Pierre e Jeanne-Adèle."
   ],
-  "epilogue": "Nella parte successiva vengono gli anni a Moret-sur-Loing, la povertà, Eugénie, il tardivo tentativo di naturalizzazione e la morte di Sisley nel 1899.",
-  "life": "1606–1669"
+  "epilogue": "Alfred Sisley muore il 29 gennaio 1899 a Moret-sur-Loing, accanto al fiume che ha dipinto per vent’anni.",
+  "life": "1839–1899"
 };
   P.stations = Object.assign(P.stations || {}, {
   "syparis": {

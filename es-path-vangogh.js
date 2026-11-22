@@ -52,10 +52,10 @@
   },
   "ettenchurch": {
     "text": [
-      "La casa parroquial y la iglesia de Etten: el pueblo donde viven los padres, y el oficio del padre, al que Vincent aspiró él mismo un día. Dibuja la casa parroquial con calma y objetividad, todavía sin disputa en la imagen.",
+      "La casa parroquial y la iglesia de Etten: el pueblo donde viven los padres, y el oficio del padre, al que Vincent aspiró él mismo un día. Ya había dibujado la casa parroquial en abril de 1876, durante una visita, con calma y objetividad, años antes de la disputa con su padre.",
       "En la casa misma el ánimo se hace más pesado. Kee vive a ratos con la familia, y los sentimientos de Vincent chocan contra un muro."
     ],
-    "fact": "El dibujo pertenece al Van Gogh Museum de Ámsterdam. Se ve la casa parroquial a la izquierda y el campanario a la derecha – la casa paterna de Vincent en este año."
+    "fact": "El dibujo pertenece al Van Gogh Museum de Ámsterdam. Se ve la casa parroquial a la izquierda y el campanario a la derecha – la casa paterna de Vincent desde 1875."
   },
   "schevwoman": {
     "text": [
@@ -349,7 +349,7 @@
       "El jardín parroquial en invierno, como un gran dibujo a pluma de caña: un árbol nudoso, ramas desnudas, la torre a lo lejos, caminos bajo un cielo plomizo. Vincent dibuja el jardín como si el árbol fuera un ser con venas y articulaciones.",
       "Es el invierno de 1884/85, el invierno de los muchos estudios de cabezas y manos que más tarde entran en Los comedores de patatas. La casa de los padres está junto a este jardín."
     ],
-    "fact": "El dibujo pertenece al Van Gogh Museum. Vincent también pintó al óleo el jardín parroquial invernal; esta hoja muestra con particular claridad cómo construye los árboles «desde dentro»."
+    "fact": "El dibujo pertenece al Museo de Bellas Artes de Budapest. Vincent también pintó al óleo el jardín parroquial invernal; esta hoja muestra con particular claridad cómo construye los árboles «desde dentro»."
   },
   "congreg": {
     "text": [
@@ -645,7 +645,7 @@
       "En el interior de un restaurante las mesas están listas, manteles de cuadros, flores, una habitación cálida, verde-amarilla. Nadie está sentado, y sin embargo el salón está lleno de color.",
       "Vincent ejercita aquí el interior y el motivo – como preparación para cuadros de habitación posteriores. La superficie ya está puesta con ritmo, casi como una tela."
     ],
-    "fact": "El cuadro pertenece al Indianapolis Museum of Art. Es un interior parisino, no el dormitorio posterior de Arles; pero ya se siente el amor emparentado por una habitación con motivos."
+    "fact": "El cuadro pertenece al Kröller-Müller Museum de Otterlo. Es un interior parisino, no el dormitorio posterior de Arles; pero ya se siente el amor emparentado por una habitación con motivos."
   },
   "parkcouples": {
     "text": [
@@ -751,10 +751,10 @@
   },
   "selforsay": {
     "text": [
-      "Ante un fondo turquesa la cabeza se alza libre, la mirada está despierta, los trazos son cortos y de color. Este autorretrato cuelga hoy en París, en la ciudad en la que nació.",
+      "Ante un fondo turquesa la cabeza se alza libre, la mirada está despierta, los trazos son cortos y de color. Este autorretrato nació en París y hoy cuelga en Chicago.",
       "Aquí la transformación está casi concluida: del pintor de Los comedores de patatas ha surgido alguien que puede afirmarse en el color puro."
     ],
-    "fact": "El cuadro cuelga en el Musée d’Orsay de París. Pertenece a los autorretratos más claros del año 1887 y muestra el color parisino de Vincent en su punto más alto antes de Arles."
+    "fact": "El cuadro cuelga en el Art Institute of Chicago. Pertenece a los autorretratos más claros del año 1887 y muestra el color parisino de Vincent en su punto más alto antes de Arles."
   },
   "selfartist": {
     "text": [
@@ -937,7 +937,7 @@
       "Rocas y una encina, más frías que los campos de cereal, el verde más vigoroso. En Montmajour Vincent no pinta solo la lejanía, sino también la piedra.",
       "Después de semanas en la llanura, este es otro motivo: macizo, cercano, con una luz dura sobre las superficies."
     ],
-    "fact": "El cuadro pertenece al Kröller-Müller Museum y nace en julio de 1888."
+    "fact": "El cuadro pertenece al Museum of Fine Arts de Houston y nace en julio de 1888."
   },
   "flowergarden": {
     "text": [
@@ -1060,7 +1060,7 @@
       "Patience Escalier, un jardinero y antiguo pastor, con un sombrero de un amarillo de paja, las manos cruzadas, el fondo vigoroso. Vincent no busca aquí un tipo urbano, sino a un hombre de la Crau.",
       "En una carta habla del «hombre terrible» al que ha tenido que pintar en el resplandor de la cosecha, al mediodía: un naranja abrasador, tonos de oro viejo en la oscuridad."
     ],
-    "fact": "El cuadro pertenece al Kunsthaus Zürich y nace en agosto de 1888."
+    "fact": "El cuadro está en una colección particular y nace en agosto de 1888."
   },
   "boch": {
     "text": [
@@ -1713,10 +1713,10 @@
   },
   "wheatcorn": {
     "text": [
-      "Un campo de trigo, entreverado de acianos, bajo un cielo movido. El cuadro cuelga hoy en la Sammlung E.G. Bührle de Zúrich.",
+      "Un campo de trigo, entreverado de acianos, bajo un cielo movido. El cuadro cuelga hoy en la Fondation Beyeler de Riehen.",
       "Como los demás campos tardíos, está tendido a lo ancho: abajo las espigas, arriba las nubes, entre ellas apenas un pueblo."
     ],
-    "fact": "El cuadro pertenece a la Sammlung E.G. Bührle de Zúrich y nace en julio de 1890."
+    "fact": "El cuadro pertenece a la Fondation Beyeler de Riehen y nace en julio de 1890."
   },
   "farmsauvers": {
     "text": [

@@ -236,15 +236,15 @@
   P.paths.klimt = {
   "title": "Le parcours de vie de Klimt",
   "life": "1862–1918",
-  "part": "Partie 1 · Jusqu’à la frise Beethoven",
-  "subtitle": "De Baumgarten à la Sécession",
-  "intro": "Voyage avec Gustav Klimt à travers la première moitié de son parcours : de l’enfance à Baumgarten et de l’École des arts appliqués à la Künstler-Compagnie avec son frère Ernst et Franz Matsch, aux peintures du Burgtheater et du Kunsthistorisches Museum, à la mort de son père et de son frère en 1892, à la fondation de la Sécession et aux premiers paysages, jusqu’à la frise Beethoven de 1902. De courtes stations, des tableaux à colorier et deux voix documentées : une carte postale à Emilie Flöge et le « Commentaire sur un autoportrait inexistant ». Cette première partie va jusque vers 1902.",
+  "part": "Parties 1–2 · 1862–1918",
+  "subtitle": "De Baumgarten aux derniers tableaux",
+  "intro": "Voyage avec Gustav Klimt à travers toute sa vie : de l’enfance à Baumgarten et de l’École des arts appliqués à la Künstler-Compagnie, au Burgtheater et au Kunsthistorisches Museum, à la mort de son père et de son frère en 1892, à la Sécession et à la frise Beethoven, jusqu’aux années d’or, à la Kunstschau de 1908, à la frise Stoclet, à Emilie Flöge, aux paysages de l’Attersee et du lac de Garde, aux portraits colorés tardifs et à « Mort et Vie ». De courtes stations, des tableaux à colorier et des voix documentées : des cartes postales et une lettre à Emilie Flöge, ainsi que le discours de la Kunstschau. Klimt meurt à Vienne le 6 février 1918.",
   "ending": [
-    "En 1902, la Sécession organise l’exposition Beethoven autour de la statue de Beethoven de Max Klinger. Klimt peint la frise sur trois murs : de l’aspiration au bonheur jusqu’à « Ce baiser au monde entier ». La même année naissent le portrait en pied d’Emilie Flöge et le « Bosquet de hêtres I ».",
-    "Dans un tapuscrit non daté que la Wienbibliothek im Rathaus conserve sous le titre « Commentaire sur un autoportrait inexistant », Klimt écrit : « Il n’existe aucun autoportrait de moi. Ma propre personne ne m’intéresse pas comme “sujet d’un tableau”, plutôt les autres êtres, surtout les femmes, et plus encore d’autres apparences. Qui veut savoir quelque chose de moi – en tant qu’artiste, ce qui seul mérite l’attention – n’a qu’à regarder attentivement mes tableaux et chercher à y reconnaître ce que je suis et ce que je veux. »",
-    "Le parcours continue. Suivent les années d’or après 1902, de nouveaux portraits et paysages. Klimt meurt à Vienne en 1918 – la prochaine partie le racontera."
+    "Dans les dernières années naissent des portraits et des paysages colorés, à côté de portraits inachevés comme Johanna Staude, Amalie Zuckerkandl et la « Dame en blanc ». En 1916, Klimt passe le dernier été partagé avec Emilie Flöge à l’Attersee. Le 30 décembre 1917, il lui écrit de Winkelsdorf : « …une salutation sortie du plus intime, et [je] te souhaite une année nouvelle des plus, des plus heureuses. – comme nous en avons tous deux si urgemment besoin. »",
+    "Le 11 janvier 1918, Klimt est frappé d’une attaque à Vienne. Il meurt le 6 février 1918 à l’Hôpital général de Vienne, à l’âge de cinquante-six ans.",
+    "Il reste, entre autres, « Le Baiser » au Belvedere, le portrait doré d’Adele Bloch-Bauer, les cartons de la frise Stoclet au MAK, les paysages de l’Attersee et du lac de Garde et les portraits tardifs. De lui-même, avait-il écrit, il n’existe aucun autoportrait : il faut regarder ses tableaux."
   ],
-  "epilogue": "En 1902, Klimt peint la frise Beethoven pour la Sécession et le portrait en pied d’Emilie Flöge ; la même année naît le « Bosquet de hêtres I ». Dans un tapuscrit non daté de la Wienbibliothek, il écrit qu’il n’existe aucun autoportrait de lui : il faut regarder ses tableaux. Les années d’or après 1902 suivent dans la prochaine partie."
+  "epilogue": "Le 11 janvier 1918, Gustav Klimt est frappé d’une attaque à Vienne. Il meurt le 6 février 1918 à l’Hôpital général, à l’âge de cinquante-six ans. Il reste « Le Baiser », les portraits dorés, la frise Stoclet, les paysages et les portraits tardifs – et les voix des cartes et des lettres à Emilie Flöge."
 };
   P.stations = Object.assign(P.stations || {}, {
   "klimtbaum": {

@@ -15,7 +15,7 @@
       searchClear: 'Suche löschen',
       sourcesBtn: 'Bildquellen & Hinweise',
       privacyLink: 'Datenschutz',
-      version: 'Testversion 10.40',
+      version: 'Testversion 10.41',
       byline: 'von Masilano',
       back: 'Zurück',
       backGallery: 'Zurück zur Galerie',
@@ -268,7 +268,7 @@
       searchClear: 'Clear search',
       sourcesBtn: 'Picture sources & notes',
       privacyLink: 'Privacy',
-      version: 'Test version 10.40',
+      version: 'Test version 10.41',
       byline: 'by Masilano',
       back: 'Back',
       backGallery: 'Back to the gallery',
@@ -521,7 +521,7 @@
       searchClear: "Borrar búsqueda",
       sourcesBtn: "Fuentes e indicaciones",
       privacyLink: "Privacidad",
-      version: "Versión de prueba 10.40",
+      version: "Versión de prueba 10.41",
       byline: "de Masilano",
       back: "Atrás",
       backGallery: "Volver a la galería",
@@ -774,7 +774,7 @@
       searchClear: "Effacer la recherche",
       sourcesBtn: "Sources et notes",
       privacyLink: "Confidentialité",
-      version: "Version d’essai 10.40",
+      version: "Version d’essai 10.41",
       byline: "par Masilano",
       back: "Retour",
       backGallery: "Retour à la galerie",
@@ -1027,7 +1027,7 @@
       searchClear: "Cancella la ricerca",
       sourcesBtn: "Fonti e note",
       privacyLink: "Privacy",
-      version: "Versione di prova 10.40",
+      version: "Versione di prova 10.41",
       byline: "di Masilano",
       back: "Indietro",
       backGallery: "Torna alla galleria",
@@ -1338,13 +1338,66 @@
   const _pathTextProm = {};
   let _pathDataProm = null;
 
+  // v10.41: language packs (xx-content.js, xx-path-index.js, xx-path-*.js, en-*.js) write
+  // into window.EN/ES/FR/IT with shallow Object.assign or whole-object assignment, so a
+  // later pack replaced a whole works/paths/stations entry and dropped fields an earlier
+  // pack had set (e.g. the gallery story/facts/technique from xx-content.js were lost as
+  // soon as xx-path-index.js or a path pack listed the same work with title/museum only).
+  // After every language script we merge back what the previous state had: entries the
+  // new script did not touch stay, and fields it did not set are restored. Fields the new
+  // script sets still win.
+  const LANG_GLOBS = { en: 'EN', es: 'ES', fr: 'FR', it: 'IT' };
+  const MERGE_BUCKETS = ['works', 'paths', 'stations', 'pathTexts', 'stories', 'paintings', 'museums', 'artists'];
+  const _packSnap = {};
+  function langGlobOf(src) {
+    const m = /^(en|es|fr|it)-[^/]*\.js(?:\?.*)?$/.exec(String(src).replace(/^.*\//, ''));
+    return m ? LANG_GLOBS[m[1]] : null;
+  }
+  function snapPack(g) {
+    const P = window[g];
+    if (!P || typeof P !== 'object') return null;
+    const snap = { obj: P, buckets: {} };
+    for (let i = 0; i < MERGE_BUCKETS.length; i++) {
+      const b = MERGE_BUCKETS[i];
+      if (P[b] && typeof P[b] === 'object') snap.buckets[b] = Object.assign({}, P[b]);
+    }
+    return snap;
+  }
+  function isPlain(o) { return !!o && typeof o === 'object' && !Array.isArray(o); }
+  function mergeBack(g, snap) {
+    if (!snap) return;
+    let P = window[g];
+    if (!P || typeof P !== 'object') { window[g] = snap.obj; return; }
+    if (P !== snap.obj) {
+      for (const k in snap.obj) if (P[k] === undefined) P[k] = snap.obj[k];
+    }
+    for (const b in snap.buckets) {
+      const old = snap.buckets[b];
+      if (!isPlain(P[b])) P[b] = {};
+      const cur = P[b];
+      for (const id in old) {
+        const o = old[id], c = cur[id];
+        if (c === undefined) { cur[id] = o; continue; }
+        if (c === o || !isPlain(o) || !isPlain(c)) continue;
+        for (const k in o) if (c[k] === undefined) c[k] = o[k];
+      }
+    }
+  }
+  function mergePackCopies(g) {
+    if (!g) return;
+    mergeBack(g, _packSnap[g]);
+    _packSnap[g] = snapPack(g);
+  }
+
   function loadScriptOnce(src) {
     if (_scriptProm[src]) return _scriptProm[src];
+    const g = langGlobOf(src);
+    if (g && !_packSnap[g]) _packSnap[g] = snapPack(g);
     _scriptProm[src] = new Promise((resolve, reject) => {
       const s = document.createElement('script');
       s.src = src;
       s.async = true;
-      s.onload = () => resolve(src);
+      s.onload = () => { try { mergePackCopies(g); } catch (e) {} resolve(src); };
       s.onerror = () => reject(new Error('Failed to load ' + src));
       document.head.appendChild(s);
     });

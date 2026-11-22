@@ -48,7 +48,7 @@
           "pid": "arearea",
           "text": [
             "Zwei tahitianische Frauen sitzen auf einer Wiese, davor ein roter Hund.",
-            "Im Hintergrund spielt jemand auf einer Flöte vor einer Götterfigur."
+            "Eine von ihnen spielt Flöte; im Hintergrund verehren Frauen eine Götterfigur."
           ],
           "fact": "Gauguin reiste 1891 nach Tahiti, auf der Suche nach einem Leben abseits der modernen europäischen Welt."
         }

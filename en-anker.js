@@ -146,7 +146,7 @@
   },
   "schulmaedchen": {
     "title": "Schoolgirl with Slate and Sewing Basket",
-    "museum": "Musée d’art et d’histoire, Neuchâtel"
+    "museum": "Kunstmuseum Bern"
   },
   "cecile78": {
     "title": "Cécile Anker in a High Chair",
@@ -214,14 +214,14 @@
   EN.paths.anker = {
   "title": "Albert Anker’s Life Journey",
   "life": "1831–1910",
-  "part": "Part 1 · Into the 1880s",
+  "part": "Parts 1–2 · 1831–1910",
   "subtitle": "From Ins to Paris and back to Ins",
-  "intro": "Travel with Albert Anker through the first half of his path: from childhood in Ins and the school years in Neuchâtel, through the study of theology in Bern and Halle, the training with Charles Gleyre in Paris, marriage, the gold medal of 1866, the faience designs for Théodore Deck and the years on the Grand Council, to the pictures of children and village life in the 1880s. Short stations, pictures to colour, and two documented voices: a letter to his school friend Auguste Bachelin and a note to his wife from Murten. This first part runs to about 1888.",
+  "intro": "Travel with Albert Anker through his whole life: from childhood in Ins and school years in Neuchâtel, through theology studies, training with Charles Gleyre in Paris, family and the years on the Grand Council, to the Gotthelf illustrations, the watercolours after the stroke of 1901 and his death in Ins on 16 July 1910. Short stations, pictures to colour and documented voices from letters and a diary.",
   "ending": [
-    "In 1885 Anker paints “Knitting Girl Watching the Toddler in a Cradle”, in 1888 “The First Steps”. In 1878 he has been made a knight of the French Legion of Honour; the family still spends the winter in Paris and the summer in Ins.",
-    "The path continues. In 1890 Anker gives up the Paris residence. There follow the large pictures of the 1890s – among them “The Village School of 1848” – and later the Gotthelf illustrations. At the end of September 1901 he suffers a stroke. On 16 July 1910 he dies in Ins. That story belongs to the next part."
+    "At the end of September 1901 Anker suffers a stroke. His right hand remains impaired and he largely gives up oil painting; to the end he paints watercolours, seated, with the sheet on his knees.",
+    "On 16 July 1910 Albert Anker dies in Ins, aged seventy-nine. He is given a large state funeral; memorial exhibitions follow in Neuchâtel in November 1910 and in Bern in January 1911. His house with the studio is today the Centre Albert Anker."
   ],
-  "epilogue": "In 1885 “Knitting Girl Watching the Toddler in a Cradle” appears, in 1888 “The First Steps”. In 1890 Anker gives up the Paris residence. The 1890s, the village school, the stroke of 1901 and his death in Ins in 1910 belong to the next part."
+  "epilogue": "Albert Anker dies in Ins on 16 July 1910. What remains are some 800 oil paintings and as many watercolours, the Gotthelf illustrations, more than 3,000 letters – and the house in Ins where he was born and worked."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "ankerins": {
@@ -556,9 +556,9 @@
   "schulmaedchen": {
     "text": [
       "A girl in a red-brown dress stands with a slate and a sewing basket. Her gaze looks calmly out of the picture.",
-      "The picture of 1878 hangs in the Musée d’art et d’histoire in Neuchâtel. Writing and sewing lie here with equal right in the child’s hands."
+      "The picture of 1878 hangs in the Kunstmuseum Bern. Writing and sewing lie here with equal right in the child’s hands."
     ],
-    "fact": "Oil on canvas, 1878. Musée d’art et d’histoire, Neuchâtel."
+    "fact": "Oil on canvas, 1878. Kunstmuseum Bern."
   },
   "cecile78": {
     "text": [

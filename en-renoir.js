@@ -208,14 +208,14 @@
   EN.paths.renoir = {
   "title": "The Life of Pierre-Auguste Renoir",
   "life": "1841–1919",
-  "part": "Part 1 · 1841–1881",
-  "subtitle": "From Limoges to the Luncheon of the Boating Party",
-  "intro": "Pierre-Auguste Renoir was born in Limoges on 25 February 1841. The family moved to Paris, he trained as a porcelain painter, and at Gleyre’s studio he met Monet, Bazille and Sisley. This first part follows him as far as the Luncheon of the Boating Party, around 1881.",
+  "part": "Parts 1–2 · 1841–1919",
+  "subtitle": "From Limoges via Chatou, Algeria and Italy to Cagnes-sur-Mer",
+  "intro": "Travel with Pierre-Auguste Renoir through his whole life: from his birth in Limoges in 1841 and his training as a porcelain painter, through Gleyre’s studio, the friendship with Monet, Bazille and Sisley, La Grenouillère and the Impressionist exhibitions to the Luncheon of the Boating Party, then to Algeria and Italy, his marriage to Aline Charigot, his sons Pierre, Jean and Claude, Essoyes and Les Collettes at Cagnes-sur-Mer, until Renoir’s death on 3 December 1919.",
   "ending": [
-    "The first part of Renoir’s path ends with the boaters on the Seine.",
-    "Part two follows the journey to Algeria and Italy, his encounter with older art, and the later years at Cagnes-sur-Mer."
+    "Pierre-Auguste Renoir died at Cagnes-sur-Mer on 3 December 1919, aged seventy-eight. His grave is at Essoyes, Aline’s village.",
+    "He left thousands of pictures: dances and boating parties, children and portraits, flowers, fruit and the landscapes of the south."
   ],
-  "epilogue": "Part two follows the journey to Algeria and Italy, his encounter with older art, and the later years at Cagnes-sur-Mer."
+  "epilogue": "Pierre-Auguste Renoir died at Cagnes-sur-Mer on 3 December 1919. His grave is at Essoyes."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "renoirlimoges": {

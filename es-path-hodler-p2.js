@@ -262,10 +262,10 @@
   "subtitle": "De Berna a Ginebra, a los lagos y hasta el Mont Blanc",
   "intro": "Viaja con Ferdinand Hodler por toda su vida: desde la infancia en Berna y la pérdida temprana de la familia, pasando por el aprendizaje con Ferdinand Sommer en Thun, la formación con Barthélemy Menn en Ginebra, el viaje a Madrid, el realismo de la década de 1880 y el giro simbolista en torno a «La noche» –que mencionamos solo en la historia de la estación– hasta los paisajes paralelistas del lago de Thun y del lago Lemán, los murales de Jena y Hannover y las últimas miradas desde el Quai du Mont-Blanc. Estaciones breves, cuadros para pintar y una voz de una carta de 1907. Hodler muere en Ginebra el 19 de mayo de 1918.",
   "ending": [
-    "En la primavera de 1918, desde el balcón y la ventana de su piso en el Quai du Mont-Blanc 26, Hodler pinta una y otra vez el lago Lemán con el Mont Blanc, a distintas horas del día. La ciudad de Ginebra lo nombra ciudadano de honor.",
+    "En la primavera de 1918, desde el balcón y la ventana de su piso en el Quai du Mont-Blanc 29, Hodler pinta una y otra vez el lago Lemán con el Mont Blanc, a distintas horas del día. La ciudad de Ginebra lo nombra ciudadano de honor.",
     "El 19 de mayo de 1918 muere Ferdinand Hodler en Ginebra, a los sesenta y cinco años, en ese mismo piso. Quedan los paisajes de los lagos y las montañas, los retratos, los murales – y una obra que hizo del paralelismo su principio."
   ],
-  "epilogue": "Ferdinand Hodler muere en Ginebra el 19 de mayo de 1918, en su piso del Quai du Mont-Blanc 26. Poco antes había sido nombrado ciudadano de honor de la ciudad. Quedan los paisajes paralelistas del lago de Thun y del lago Lemán, las cumbres sobre el mar de niebla, los murales de Jena y Hannover y las últimas miradas al Mont Blanc."
+  "epilogue": "Ferdinand Hodler muere en Ginebra el 19 de mayo de 1918, en su piso del Quai du Mont-Blanc 29. Poco antes había sido nombrado ciudadano de honor de la ciudad. Quedan los paisajes paralelistas del lago de Thun y del lago Lemán, las cumbres sobre el mar de niebla, los murales de Jena y Hannover y las últimas miradas al Mont Blanc."
 };
   P.stations = Object.assign(P.stations || {}, {
   "hodlerwien": {
@@ -336,7 +336,7 @@
     "when": "1911–1917",
     "mapLabel": "Retratos",
     "intro": [
-      "Además de los paisajes, en estos años nacen muchos retratos: el crítico Mathias Morhardt, la coleccionista Gertrud Müller, el hijo Hector, autorretratos, en 1916 el general Ulrich Wille. En 1913 nace la hija Pauline-Valentine, de la relación con Valentine Godé-Darel. En el otoño del mismo año Hodler está en el Salon d’Automne de París, conoce a Auguste Rodin y es nombrado oficial de la Legión de Honor. La familia se muda al Quai du Mont-Blanc 26; el piso recibe muebles de Josef Hoffmann.",
+      "Además de los paisajes, en estos años nacen muchos retratos: el crítico Mathias Morhardt, la coleccionista Gertrud Müller, el hijo Hector, autorretratos, en 1916 el general Ulrich Wille. En 1913 nace la hija Pauline-Valentine, de la relación con Valentine Godé-Darel. En el otoño del mismo año Hodler está en el Salon d’Automne de París, conoce a Auguste Rodin y es nombrado oficial de la Legión de Honor. La familia se muda al Quai du Mont-Blanc 29; el piso recibe muebles de Josef Hoffmann.",
       "En 1914 Hodler firma la protesta contra el bombardeo de la catedral de Reims; las asociaciones de artistas alemanas lo excluyen entonces. El 25 de enero de 1915 muere Valentine Godé-Darel en Vevey. En 1916 y 1917 Hodler imparte una clase de pintura en la École des Beaux-Arts de Ginebra. En 1917 el Kunsthaus Zürich le dedica una gran retrospectiva; el mismo año sufre un edema pulmonar."
     ]
   },
@@ -354,7 +354,7 @@
     "when": "1918",
     "mapLabel": "1918",
     "intro": [
-      "En la primavera de 1918, desde la ventana y el balcón de su piso en el Quai du Mont-Blanc 26, Hodler pinta el lago Lemán con el Mont Blanc, al amanecer, en el rosicler, a la luz de la mañana, por la tarde, antes de la salida del sol. La ciudad de Ginebra lo nombra ciudadano de honor.",
+      "En la primavera de 1918, desde la ventana y el balcón de su piso en el Quai du Mont-Blanc 29, Hodler pinta el lago Lemán con el Mont Blanc, al amanecer, en el rosicler, a la luz de la mañana, por la tarde, antes de la salida del sol. La ciudad de Ginebra lo nombra ciudadano de honor.",
       "Nace también un retrato de su mujer Berthe. El 19 de mayo de 1918 muere Ferdinand Hodler en Ginebra, en ese mismo piso, a los sesenta y cinco años."
     ]
   }
@@ -739,7 +739,7 @@
   "hmbdawn": {
     "text": [
       "Al amanecer, el Mont Blanc se extiende sobre el lago Lemán, las formas suaves, la luz aún pálida.",
-      "En 1918 Hodler pinta una y otra vez la vista desde su piso del Quai du Mont-Blanc 26, a distintas horas del día."
+      "En 1918 Hodler pinta una y otra vez la vista desde su piso del Quai du Mont-Blanc 29, a distintas horas del día."
     ],
     "fact": "1918. Colección no determinada."
   },

@@ -242,15 +242,15 @@
   P.paths = P.paths || {};
   P.paths.sisley = {
   "title": "Le parcours de vie d’Alfred Sisley",
-  "part": "Partie 1 · 1839–1880",
-  "subtitle": "De Paris à Veneux-Nadon",
-  "intro": "Alfred Sisley naît à Paris le 30 octobre 1839, fils de parents britanniques. Cette première partie le suit depuis l’apprentissage commercial à Londres et l’atelier Gleyre avec Monet, Renoir et Bazille, en passant par les premières toiles à Fontainebleau et Marlotte, la famille avec Eugénie, la guerre de 1870-1871 et les années à Louveciennes et Marly, jusqu’à la crue de 1876 et l’installation au bord du Loing en 1880.",
+  "part": "Parties 1–2 · 1839–1899",
+  "subtitle": "De Paris à Moret-sur-Loing",
+  "intro": "Accompagne Alfred Sisley tout au long de sa vie : de sa naissance à Paris en 1839, par l’atelier Gleyre, Louveciennes, Marly et l’inondation de 1876, jusqu’aux années au bord de la Seine et du Loing près de Moret, à l’église de Moret, au voyage au pays de Galles en 1897 et à sa mort en 1899.",
   "ending": [
-    "Au début de 1880, Sisley s’installe avec Eugénie et les enfants à Veneux-Nadon, près de Moret-sur-Loing. Il y trouve le paysage auquel il restera fidèle.",
-    "Dans la partie suivante viennent les années à Moret-sur-Loing, la pauvreté, Eugénie, la tardive tentative de naturalisation et la mort de Sisley en 1899."
+    "Sisley meurt à Moret-sur-Loing le 29 janvier 1899, quelques mois après Eugénie. Il est inhumé le 1er février au cimetière de Moret.",
+    "À l’initiative de Monet, la galerie Georges Petit vend aux enchères le 1er mai 1899 des tableaux de son atelier et des œuvres offertes par ses amis. Le produit de la vente revient à ses enfants Pierre et Jeanne-Adèle."
   ],
-  "epilogue": "Dans la partie suivante viennent les années à Moret-sur-Loing, la pauvreté, Eugénie, la tardive tentative de naturalisation et la mort de Sisley en 1899.",
-  "life": "1606–1669"
+  "epilogue": "Alfred Sisley meurt le 29 janvier 1899 à Moret-sur-Loing, au bord de la rivière qu’il a peinte pendant vingt ans.",
+  "life": "1839–1899"
 };
   P.stations = Object.assign(P.stations || {}, {
   "syparis": {

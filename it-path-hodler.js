@@ -215,14 +215,14 @@
   P.paths.hodler = {
   "title": "Il percorso di vita di Ferdinand Hodler",
   "life": "1853–1918",
-  "part": "Parte 1 · Fino a circa il 1900",
-  "subtitle": "Da Berna a Ginevra, a Madrid e al riconoscimento",
-  "intro": "Viaggia con Ferdinand Hodler attraverso la prima metà del suo cammino: dall’infanzia a Berna e dalla perdita precoce della famiglia, passando per l’apprendistato presso Ferdinand Sommer a Thun, la formazione con Barthélemy Menn a Ginevra, il viaggio a Madrid, il realismo degli anni Ottanta e la svolta simbolista intorno a «La notte» – che ricordiamo solo nel racconto della tappa – fino al riconoscimento intorno al 1900. Tappe brevi e quadri da colorare. Questa prima parte arriva fino a circa il 1900.",
+  "part": "Parti 1–2 · 1853–1918",
+  "subtitle": "Da Berna a Ginevra, ai laghi e fino al Monte Bianco",
+  "intro": "Viaggia con Ferdinand Hodler attraverso tutta la sua vita: dall’infanzia a Berna e dalla perdita precoce della famiglia, passando per l’apprendistato presso Ferdinand Sommer a Thun, la formazione con Barthélemy Menn a Ginevra, il viaggio a Madrid, il realismo degli anni Ottanta e la svolta simbolista intorno a «La notte» – che ricordiamo solo nel racconto della tappa – fino ai paesaggi parallelisti del lago di Thun e del Lago Lemano, agli affreschi di Jena e di Hannover e agli ultimi sguardi dal Quai du Mont-Blanc. Tappe brevi, quadri da colorare e una voce da una lettera del 1907. Hodler muore a Ginevra il 19 maggio 1918.",
   "ending": [
-    "Nel 1900 Hodler riceve una medaglia d’oro all’Esposizione universale di Parigi, tra le altre opere per «La notte», «Il giorno» e «Eurhythmie». Entra nelle Secessioni di Vienna e di Berlino.",
-    "Il cammino continua. Seguono i paesaggi parallelisti del lago di Thun e del Lago Lemano, dell’Eiger, del Mönch e della Jungfrau, gli affreschi di Jena e di Hannover, gli anni con Valentine Godé-Darel e la morte di Hodler a Ginevra il 19 maggio 1918. Di questo parla la prossima parte."
+    "Nella primavera del 1918, dal balcone e dalla finestra del suo appartamento al Quai du Mont-Blanc 29, Hodler dipinge ancora e ancora il Lago Lemano con il Monte Bianco, a diverse ore del giorno. La città di Ginevra lo nomina cittadino onorario.",
+    "Il 19 maggio 1918 Ferdinand Hodler muore a Ginevra, a sessantacinque anni, in quello stesso appartamento. Restano i paesaggi dei laghi e delle montagne, i ritratti, gli affreschi – e un’opera che ha fatto del parallelismo il proprio principio."
   ],
-  "epilogue": "Nel 1900 Hodler riceve una medaglia d’oro a Parigi e entra nelle Secessioni di Vienna e di Berlino. I grandi quadri di laghi e montagne, le pitture murali, Valentine Godé-Darel e la morte a Ginevra il 19 maggio 1918 appartengono alla prossima parte."
+  "epilogue": "Ferdinand Hodler muore a Ginevra il 19 maggio 1918, nel suo appartamento al Quai du Mont-Blanc 29. Poco prima era stato nominato cittadino onorario della città. Restano i paesaggi parallelisti del lago di Thun e del Lago Lemano, le vette sopra il mare di nebbia, gli affreschi di Jena e di Hannover e gli ultimi sguardi sul Monte Bianco."
 };
   P.stations = Object.assign(P.stations || {}, {
   "hodlerbern": {

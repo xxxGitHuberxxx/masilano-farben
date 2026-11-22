@@ -72,10 +72,10 @@
   "subtitle": "Storm, rock and quiet lakes",
   "intro": "Travel with Alexandre Calame, the Geneva painter of the Alps: from the first mountain landscapes, via the Grimsel, Rosenlaui and the Wetterhorn, to the quiet lakes of Thun, Geneva and Lucerne. Short stations and pictures to colour. This first part follows him through the Swiss mountains.",
   "ending": [
-    "Alexandre Calame dies in Menton on 17 March 1864, aged fifty-three. His Alpine pictures shaped how all of Europe saw the Swiss mountains.",
+    "Alexandre Calame dies in Menton on 19 March 1864, aged fifty-three. His Alpine pictures shaped how all of Europe saw the Swiss mountains.",
     "The path can grow further. Lithographs, Italian pictures and further mountains may follow in a later part."
   ],
-  "epilogue": "On 17 March 1864 Calame dies in Menton. A later part can add lithographs and further mountains."
+  "epilogue": "On 19 March 1864 Calame dies in Menton. A later part can add lithographs and further mountains."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "acgenf": {

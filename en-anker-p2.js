@@ -72,7 +72,7 @@
   },
   "dorfschule": {
     "title": "The Village School of 1848",
-    "museum": "Kunstmuseum Bern"
+    "museum": "Kunstmuseum Basel"
   },
   "zaeslin": {
     "title": "The Zaeslin Siblings",
@@ -469,7 +469,7 @@
       "In a dark schoolroom children of all ages sit, the teacher stands in the middle.",
       "Anker paints the picture in 1896, recalling the year 1848, when the modern federal state was founded."
     ],
-    "fact": "1896. Kunstmuseum Bern."
+    "fact": "1896. Kunstmuseum Basel."
   },
   "zaeslin": {
     "text": [

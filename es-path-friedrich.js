@@ -240,14 +240,14 @@
   P.paths = P.paths || {};
   P.paths.friedrich = {
   "title": "El camino de vida de Caspar David Friedrich",
-  "part": "Parte 1 · 1774–1817",
+  "part": "Partes 1–2 · 1774–1840",
   "subtitle": "De Greifswald a Dresde",
-  "intro": "Caspar David Friedrich nace en Greifswald el 5 de septiembre de 1774. Esta primera parte lo sigue desde la infancia en el Báltico y la academia de Copenhague, pasando por Dresde, las caminatas en Rügen y en el Harz, los dibujos a la sepia y el premio de Weimar de 1805, el altar de Tetschen y El monje junto al mar, hasta los cuadros de las guerras de liberación hacia 1817.",
+  "intro": "Caspar David Friedrich nace en Greifswald el 5 de septiembre de 1774. El camino lo sigue desde la infancia en el Báltico y la academia de Copenhague hasta Dresde, Rügen, el altar de Tetschen y El monje junto al mar. Después continúa con el matrimonio con Caroline en 1818, los hijos, El caminante, El mar de hielo, los contempladores de la luna y los Montes de los Gigantes, hasta los tranquilos últimos años y su muerte en Dresde en 1840.",
   "ending": [
-    "En 1817 Friedrich pinta Dos hombres junto al mar y ve Greifswald a la luz de la luna. Es miembro de la Academia de Dresde y permanece en la ciudad que se ha convertido en el centro de su vida.",
-    "En la parte siguiente llegan el matrimonio con Caroline en 1818, los Acantilados de tiza en Rügen, El caminante sobre el mar de nubes, El mar de hielo, el ataque de 1835, su muerte en 1840 y el tardío redescubrimiento."
+    "Caspar David Friedrich muere en Dresde el 7 de mayo de 1840 y es enterrado en el cementerio de la Trinidad. Tras su muerte queda casi olvidado durante décadas.",
+    "En 1906 la Exposición del Centenario del arte alemán en la Nationalgalerie de Berlín muestra muchos de sus cuadros, y Friedrich es redescubierto. Hoy El monje junto al mar, El caminante sobre el mar de nubes, los Acantilados de tiza en Rügen y El mar de hielo están entre los cuadros más conocidos del Romanticismo. Aquí termina el camino."
   ],
-  "epilogue": "En la parte siguiente llegan el matrimonio con Caroline en 1818, los Acantilados de tiza en Rügen, El caminante sobre el mar de nubes, El mar de hielo, el ataque de 1835, su muerte en 1840 y el tardío redescubrimiento.",
+  "epilogue": "De la costa báltica junto a Greifswald a los tranquilos cuadros de luna de Dresde: Friedrich pintó paisajes en los que las personas miran, esperan y se asombran.",
   "life": "1774–1840"
 };
   P.stations = Object.assign(P.stations || {}, {

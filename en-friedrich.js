@@ -229,14 +229,14 @@
   EN.paths.friedrich = {
   "title": "The Life of Caspar David Friedrich",
   "life": "1774–1840",
-  "part": "Part 1 · 1774–1817",
+  "part": "Parts 1–2 · 1774–1840",
   "subtitle": "From Greifswald to Dresden",
-  "intro": "Caspar David Friedrich was born in Greifswald on 5 September 1774. This first part follows him from his childhood on the Baltic and the academy in Copenhagen, through Dresden, the walks on Rügen and in the Harz, the sepia drawings and the Weimar prize of 1805, the Tetschen Altar and Monk by the Sea, to the pictures of the Wars of Liberation around 1817.",
+  "intro": "Caspar David Friedrich was born in Greifswald on 5 September 1774. The journey follows him from his childhood on the Baltic and the academy in Copenhagen to Dresden, Rügen, the Tetschen Altar and Monk by the Sea. It then continues with his marriage to Caroline in 1818, the children, the Wanderer, the Sea of Ice, the moon watchers and the Giant Mountains, to the quiet late years and his death in Dresden in 1840.",
   "ending": [
-    "In 1817 Friedrich painted Two Men by the Sea and saw Greifswald in moonlight. He was a member of the Dresden Academy and remained in the city that had become the centre of his life.",
-    "The next part follows his marriage to Caroline in 1818, the Chalk Cliffs on Rügen, the Wanderer above the Sea of Fog, the Sea of Ice, the stroke of 1835, his death in 1840 and the late rediscovery."
+    "Caspar David Friedrich died in Dresden on 7 May 1840 and was buried in the Trinitatis cemetery. After his death he was almost forgotten for decades.",
+    "In 1906 the Centenary Exhibition of German Art at the Nationalgalerie in Berlin showed many of his pictures, and Friedrich was rediscovered. Today Monk by the Sea, Wanderer above the Sea of Fog, the Chalk Cliffs on Rügen and the Sea of Ice are among the best-known pictures of Romanticism. This is where the journey ends."
   ],
-  "epilogue": "The next part follows his marriage to Caroline in 1818, the Chalk Cliffs on Rügen, the Wanderer above the Sea of Fog, the Sea of Ice, the stroke of 1835, his death in 1840 and the late rediscovery."
+  "epilogue": "From the Baltic coast near Greifswald to the quiet moonlit pictures of Dresden: Friedrich painted landscapes in which people look, wait and wonder."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "cfgreifswald": {

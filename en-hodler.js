@@ -215,14 +215,14 @@
   EN.paths.hodler = {
   "title": "Ferdinand Hodler’s Life Journey",
   "life": "1853–1918",
-  "part": "Part 1 · Up to around 1900",
-  "subtitle": "From Bern to Geneva, to Madrid and to the breakthrough",
-  "intro": "Travel with Ferdinand Hodler through the first half of his path: from childhood in Bern and the early loss of his family, through the apprenticeship with Ferdinand Sommer in Thun, the training with Barthélemy Menn in Geneva, the journey to Madrid, the realism of the 1880s and the Symbolist breakthrough around “The Night” – which we mention only in the station story – to recognition around 1900. Short stations and pictures to colour. This first part runs to about 1900.",
+  "part": "Parts 1–2 · 1853–1918",
+  "subtitle": "From Bern to Geneva, to the lakes and to Mont Blanc",
+  "intro": "Travel with Ferdinand Hodler through his whole life: from childhood in Bern and the early loss of his family, through the apprenticeship with Ferdinand Sommer in Thun, the training with Barthélemy Menn in Geneva, the journey to Madrid, the realism of the 1880s and the Symbolist breakthrough around “The Night” – which we mention only in the station story – to the parallelist landscapes of Lake Thun and Lake Geneva, the murals in Jena and Hanover, and the last views from the Quai du Mont-Blanc. Short stations, pictures to colour and a voice from a letter of 1907. Hodler dies in Geneva on 19 May 1918.",
   "ending": [
-    "In 1900 Hodler receives a gold medal at the World’s Fair in Paris, among other works for “The Night”, “The Day” and “Eurythmy”. He joins the Secessions in Vienna and Berlin.",
-    "The path continues. There follow the parallelist landscapes of Lake Thun and Lake Geneva, of the Eiger, Mönch and Jungfrau, the murals in Jena and Hanover, the years with Valentine Godé-Darel, and Hodler’s death in Geneva on 19 May 1918. That story belongs to the next part."
+    "In the spring of 1918, from the balcony and the window of his apartment at Quai du Mont-Blanc 29, Hodler paints Lake Geneva with Mont Blanc again and again, at different hours of the day. The city of Geneva makes him an honorary citizen.",
+    "On 19 May 1918 Ferdinand Hodler dies in Geneva, aged sixty-five, in this same apartment. What remain are the landscapes of the lakes and mountains, the portraits, the murals – and a body of work that made parallelism its principle."
   ],
-  "epilogue": "In 1900 Hodler receives a gold medal in Paris and joins the Secessions in Vienna and Berlin. The large pictures of lakes and mountains, the murals, Valentine Godé-Darel and his death in Geneva on 19 May 1918 belong to the next part."
+  "epilogue": "Ferdinand Hodler dies in Geneva on 19 May 1918, in his apartment at Quai du Mont-Blanc 29. Shortly before, he had been made an honorary citizen of the city. What remain are the parallelist landscapes of Lake Thun and Lake Geneva, the summits above a sea of fog, the murals of Jena and Hanover, and the last views of Mont Blanc."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "hodlerbern": {

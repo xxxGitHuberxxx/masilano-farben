@@ -150,7 +150,7 @@
   },
   "sangiodusk": {
     "title": "San Giorgio Maggiore at Twilight",
-    "museum": "Fondation Beyeler, Riehen"
+    "museum": "National Museum Cardiff"
   },
   "dogepalace": {
     "title": "The Doge’s Palace",
@@ -170,7 +170,7 @@
   },
   "grandcanal2": {
     "title": "The Grand Canal, Venice",
-    "museum": "Fondation Beyeler, Riehen"
+    "museum": "Museum of Fine Arts, Boston"
   },
   "pathiris": {
     "title": "The Path through the Irises",
@@ -580,7 +580,7 @@
       "At twilight the sky burns behind San Giorgio, the church becomes a silhouette, the water takes up the orange.",
       "Monet writes to Geffroy that the light of Venice is unique – and that he is saddened to leave it."
     ],
-    "fact": "The picture of 1908 hangs in the Fondation Beyeler in Riehen.",
+    "fact": "The picture of 1908 hangs in National Museum Cardiff.",
     "quote": {
       "text": "She must have told you of my enthusiasm for Venice. Well, it has only grown, and as the moment to leave this unique light draws near, I am saddened by it. It is so beautiful.",
       "cite": "Letter to Gustave Geffroy, Venice, 7 December 1908"
@@ -619,7 +619,7 @@
       "Santa Maria della Salute stands at the end of the Grand Canal, poles in the foreground divide the surface, the water is turquoise and violet.",
       "In December 1908 Monet and Alice leave Venice. He works the pictures up later at Giverny."
     ],
-    "fact": "The picture of 1908 hangs in the Fondation Beyeler in Riehen."
+    "fact": "The picture of 1908 hangs in the Museum of Fine Arts in Boston."
   },
   "pathiris": {
     "text": [

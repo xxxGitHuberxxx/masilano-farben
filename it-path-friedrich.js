@@ -240,14 +240,14 @@
   P.paths = P.paths || {};
   P.paths.friedrich = {
   "title": "Il percorso di vita di Caspar David Friedrich",
-  "part": "Parte 1 · 1774–1817",
+  "part": "Parti 1–2 · 1774–1840",
   "subtitle": "Da Greifswald a Dresda",
-  "intro": "Caspar David Friedrich nasce a Greifswald il 5 settembre 1774. Questa prima parte lo segue dall’infanzia sul Baltico e dall’accademia di Copenaghen, attraverso Dresda, le camminate sull’isola di Rügen e nel Harz, i disegni a seppia e il premio di Weimar del 1805, l’altare di Tetschen e Il monaco in riva al mare, fino ai quadri delle guerre di liberazione verso il 1817.",
+  "intro": "Caspar David Friedrich nasce a Greifswald il 5 settembre 1774. Il percorso lo segue dall’infanzia sul Baltico e dall’accademia di Copenaghen fino a Dresda, Rügen, l’altare di Tetschen e Il monaco in riva al mare. Poi prosegue con il matrimonio con Caroline nel 1818, i figli, il Viandante, Il mare di ghiaccio, i contemplatori della luna e i Monti dei Giganti, fino ai quieti ultimi anni e alla sua morte a Dresda nel 1840.",
   "ending": [
-    "Nel 1817 Friedrich dipinge Due uomini in riva al mare e vede Greifswald al chiaro di luna. È membro dell’accademia di Dresda e resta nella città diventata il centro della sua vita.",
-    "Nella parte successiva arrivano il matrimonio con Caroline nel 1818, le Bianche scogliere di Rügen, Il viandante sul mare di nebbia, Il mare di ghiaccio, l’attacco del 1835, la sua morte nel 1840 e la tarda riscoperta."
+    "Caspar David Friedrich muore a Dresda il 7 maggio 1840 e viene sepolto nel cimitero della Trinità. Dopo la sua morte cade quasi nell’oblio per decenni.",
+    "Nel 1906 la Mostra del centenario dell’arte tedesca alla Nationalgalerie di Berlino espone molti suoi quadri, e Friedrich viene riscoperto. Oggi Il monaco in riva al mare, Il viandante sul mare di nebbia, le Bianche scogliere di Rügen e Il mare di ghiaccio sono tra i quadri più noti del Romanticismo. Qui finisce il percorso."
   ],
-  "epilogue": "Nella parte successiva arrivano il matrimonio con Caroline nel 1818, le Bianche scogliere di Rügen, Il viandante sul mare di nebbia, Il mare di ghiaccio, l’attacco del 1835, la sua morte nel 1840 e la tarda riscoperta.",
+  "epilogue": "Dalla costa baltica vicino a Greifswald ai quieti quadri di luna di Dresda: Friedrich ha dipinto paesaggi in cui le persone guardano, aspettano e si meravigliano.",
   "life": "1774–1840"
 };
   P.stations = Object.assign(P.stations || {}, {
