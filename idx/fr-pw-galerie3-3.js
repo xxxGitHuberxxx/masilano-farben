@@ -1,0 +1,6 @@
+// Work titles (fr) of path galerie3-3 (v10.43b), part of fr-path-works-late.js.
+(function () {
+  var P = window.FR = window.FR || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqlbstudyplan":{"title":"Étude d’une plante, peut-être un chardon","museum":"Musée d’art de Cleveland"},"gqsrcountryro":{"title":"Une route de campagne","museum":"Metropolitan Museum of Art, New York"},"gqsrferrygori":{"title":"Bac près de Gorinchem","museum":"Metropolitan Museum of Art, New York"},"gqsrriverland":{"title":"Paysage fluvial avec bac","museum":"National Gallery of Art, Washington"},"gqsfstudyred":{"title":"Étude d’un lychnis rouge (Lychnis hirsuta)","museum":"Metropolitan Museum of Art, New York"},"gqwggulfsaler":{"title":"Le Golfe de Salerne","museum":"Art Institute of Chicago"},"gqbtkynance":{"title":"Kynance","museum":"Metropolitan Museum of Art, New York"},"gqwhlandscape":{"title":"Paysage avec charrette de foin","museum":"Musée d’art de Cleveland"},"gqdjthreepear":{"title":"Trois poires et une pomme","museum":"National Gallery of Art, Washington"},"gqbcquietday":{"title":"Une journée calme près de Manchester","museum":"National Gallery of Art, Washington"}});
+})();

@@ -1,0 +1,6 @@
+// Work titles (en) of path galerie3-7 (v10.43b), part of en-path-works-late.js.
+(function () {
+  var P = window.EN = window.EN || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqcobeirut":{"title":"View of Beirut","museum":"Metropolitan Museum of Art, New York"},"gqcobozenpain":{"title":"View of Bozen with a Painter","museum":"National Gallery of Art, Washington"},"gqcaboatyard":{"title":"The Boatyard","museum":"Cleveland Museum of Art"},"gqmurialtobri":{"title":"The Rialto Bridge, Venice","museum":"National Gallery of Art, Washington"},"gqlilandscape":{"title":"Landscape, Italy","museum":"Cleveland Museum of Art"},"gqslshipfavor":{"title":"The Ship “Favorite” Maneuvering off Greenock","museum":"National Gallery of Art, Washington"},"gqslbostonhar":{"title":"Boston Harbor","museum":"National Gallery of Art, Washington"},"gqdetravelers":{"title":"Travelers in a Broad Valley","museum":"National Gallery of Art, Washington"},"gqlamarinapic":{"title":"View of Marina Piccola, Capri: Afternoon Light","museum":"SMK – National Gallery of Denmark, Copenhagen"},"gqjlformiddag":{"title":"Morning by the Garonne. Montréjeau","museum":"SMK – National Gallery of Denmark, Copenhagen"}});
+})();

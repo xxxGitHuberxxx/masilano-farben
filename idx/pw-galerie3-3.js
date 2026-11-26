@@ -1,0 +1,13 @@
+// Work metadata of path galerie3-3 (v10.43b), part of path-works-late.js, for single works at start.
+(function () {
+  var M = ["Cleveland Museum of Art","Metropolitan Museum of Art, New York","National Gallery of Art, Washington","Art Institute of Chicago"];
+  var G = [["Léon Bonvin",[["gqlbstudyplan","Pflanzenstudie, vermutlich Distel","1862",0,"Cleveland Museum of Art, 1980.236: https://clevelandart.org/art/1980.236, CC0 (gemeinfrei)"]]],["Salomon van Ruysdael",[["gqsrcountryro","Eine Landstrasse","1648",1,"Metropolitan Museum of Art, New York, 06.1201: https://www.metmuseum.org/art/collection/search/437586, CC0 (gemeinfrei)"],["gqsrferrygori","Fähre bei Gorinchem","1646",1,"Metropolitan Museum of Art, New York, 15.30.4: https://www.metmuseum.org/art/collection/search/437589, CC0 (gemeinfrei)"],["gqsrriverland","Flusslandschaft mit Fähre","1649",2,"National Gallery of Art, Washington, 2007.116.1: https://www.nga.gov/collection/art-object-page.139458.html, CC0 (gemeinfrei)"]]],["Herman Saftleven der Jüngere",[["gqsfstudyred","Studie einer Roten Lichtnelke (Lychnis hirsuta)","1680",1,"Metropolitan Museum of Art, New York, 2008.46: https://www.metmuseum.org/art/collection/search/376665, CC0 (gemeinfrei)"]]],["Joseph Wright of Derby",[["gqwggulfsaler","Der Golf von Salerno","1783–1785",3,"Art Institute of Chicago, 2003.46: https://www.artic.edu/artworks/180711, CC0 (gemeinfrei)"]]],["John Brett",[["gqbtkynance","Kynance","1888",1,"Metropolitan Museum of Art, New York, 1974.289.2: https://www.metmuseum.org/art/collection/search/435775, CC0 (gemeinfrei)"]]],["Worthington Whittredge",[["gqwhlandscape","Landschaft mit Heuwagen","1861",0,"Cleveland Museum of Art, 1975.20: https://clevelandart.org/art/1975.20, CC0 (gemeinfrei)"]]],["David Johnson",[["gqdjthreepear","Drei Birnen und ein Apfel","1857",2,"National Gallery of Art, Washington, 2003.152.1: https://www.nga.gov/collection/art-object-page.129358.html, CC0 (gemeinfrei)"]]],["Alfred Thompson Bricher",[["gqbcquietday","Ein ruhiger Tag bei Manchester","1873",2,"National Gallery of Art, Washington, 2008.66.1: https://www.nga.gov/collection/art-object-page.140908.html, CC0 (gemeinfrei)"]]]];
+  var have = {}; (window.PATH_WORKS || []).forEach(function (w) { have[w.id] = 1; });
+  var W = [];
+  for (var i = 0; i < G.length; i++) for (var j = 0; j < G[i][1].length; j++) {
+    var r = G[i][1][j]; if (have[r[0]]) continue;
+    var o = { id: r[0], title: r[1], artist: G[i][0], year: r[2] }; if (r.length > 3 && r[3] != null) o.museum = M[r[3]]; if (r.length > 4) o.source = r[4]; W.push(o);
+  }
+  window.PATH_WORKS = (window.PATH_WORKS || []).concat(W);
+  (window.__pwChunks = window.__pwChunks || {})["galerie3-3"] = true;
+})();

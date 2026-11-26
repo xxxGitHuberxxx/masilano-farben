@@ -1,0 +1,6 @@
+// Work titles (es) of path galerie3-1 (v10.43b), part of es-path-works-late.js.
+(function () {
+  var P = window.ES = window.ES || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqhsnaturalar":{"title":"Arco natural en Capri","museum":"National Gallery of Art, Washington"},"gqhsnortheast":{"title":"Northeast Harbor, Maine","museum":"National Gallery of Art, Washington"},"gqhsnarragans":{"title":"La bahía de Narragansett","museum":"National Gallery of Art, Washington"},"gqhaoberlahns":{"title":"Oberlahnstein junto al Rin","museum":"National Gallery of Art, Washington"},"gqdtdescentin":{"title":"Descenso a la vega de Granada","museum":"Museo de Arte de Cleveland"},"gqdteldeir":{"title":"El Deir, Petra","museum":"Museo de Arte de Cleveland"},"gqhmpoppiesis":{"title":"Amapolas, Isles of Shoals","museum":"National Gallery of Art, Washington"},"gqamfrenchriv":{"title":"Paisaje fluvial francés con un puente","museum":"Statens Museum for Kunst, Copenhague"},"gqcfnorwegian":{"title":"Una costa noruega","museum":"Statens Museum for Kunst, Copenhague"},"gqneskibeunde":{"title":"Barcos junto a la costa tras un chubasco","museum":"Statens Museum for Kunst, Copenhague"}});
+})();

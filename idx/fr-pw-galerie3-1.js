@@ -1,0 +1,6 @@
+// Work titles (fr) of path galerie3-1 (v10.43b), part of fr-path-works-late.js.
+(function () {
+  var P = window.FR = window.FR || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqhsnaturalar":{"title":"Arche naturelle à Capri","museum":"National Gallery of Art, Washington"},"gqhsnortheast":{"title":"Northeast Harbor, Maine","museum":"National Gallery of Art, Washington"},"gqhsnarragans":{"title":"La Baie de Narragansett","museum":"National Gallery of Art, Washington"},"gqhaoberlahns":{"title":"Oberlahnstein sur le Rhin","museum":"National Gallery of Art, Washington"},"gqdtdescentin":{"title":"Descente dans la plaine de Grenade","museum":"Musée d’art de Cleveland"},"gqdteldeir":{"title":"El Deir, Pétra","museum":"Musée d’art de Cleveland"},"gqhmpoppiesis":{"title":"Coquelicots, Isles of Shoals","museum":"National Gallery of Art, Washington"},"gqamfrenchriv":{"title":"Paysage fluvial français avec un pont","museum":"Statens Museum for Kunst, Copenhague"},"gqcfnorwegian":{"title":"Une côte norvégienne","museum":"Statens Museum for Kunst, Copenhague"},"gqneskibeunde":{"title":"Navires près de la côte après une averse","museum":"Statens Museum for Kunst, Copenhague"}});
+})();

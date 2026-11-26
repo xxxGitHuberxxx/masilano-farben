@@ -1,0 +1,6 @@
+// Work titles (it) of path galerie3-1 (v10.43b), part of it-path-works-late.js.
+(function () {
+  var P = window.IT = window.IT || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqhsnaturalar":{"title":"Arco naturale a Capri","museum":"National Gallery of Art, Washington"},"gqhsnortheast":{"title":"Northeast Harbor, Maine","museum":"National Gallery of Art, Washington"},"gqhsnarragans":{"title":"La baia di Narragansett","museum":"National Gallery of Art, Washington"},"gqhaoberlahns":{"title":"Oberlahnstein sul Reno","museum":"National Gallery of Art, Washington"},"gqdtdescentin":{"title":"Discesa nella piana di Granada","museum":"Cleveland Museum of Art"},"gqdteldeir":{"title":"El Deir, Petra","museum":"Cleveland Museum of Art"},"gqhmpoppiesis":{"title":"Papaveri, Isles of Shoals","museum":"National Gallery of Art, Washington"},"gqamfrenchriv":{"title":"Paesaggio fluviale francese con un ponte","museum":"Statens Museum for Kunst, Copenaghen"},"gqcfnorwegian":{"title":"Una costa norvegese","museum":"Statens Museum for Kunst, Copenaghen"},"gqneskibeunde":{"title":"Navi sotto costa dopo un acquazzone","museum":"Statens Museum for Kunst, Copenaghen"}});
+})();

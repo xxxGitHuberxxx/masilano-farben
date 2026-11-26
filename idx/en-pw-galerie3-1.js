@@ -1,0 +1,6 @@
+// Work titles (en) of path galerie3-1 (v10.43b), part of en-path-works-late.js.
+(function () {
+  var P = window.EN = window.EN || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqhsnaturalar":{"title":"Natural Arch at Capri","museum":"National Gallery of Art, Washington"},"gqhsnortheast":{"title":"Northeast Harbor, Maine","museum":"National Gallery of Art, Washington"},"gqhsnarragans":{"title":"Narragansett Bay","museum":"National Gallery of Art, Washington"},"gqhaoberlahns":{"title":"Oberlahnstein on the Rhine","museum":"National Gallery of Art, Washington"},"gqdtdescentin":{"title":"Descent into the Plain of Granada","museum":"Cleveland Museum of Art"},"gqdteldeir":{"title":"El Deir, Petra","museum":"Cleveland Museum of Art"},"gqhmpoppiesis":{"title":"Poppies, Isles of Shoals","museum":"National Gallery of Art, Washington"},"gqamfrenchriv":{"title":"French River Landscape with a Bridge","museum":"SMK – National Gallery of Denmark, Copenhagen"},"gqcfnorwegian":{"title":"A Norwegian Coastline","museum":"SMK – National Gallery of Denmark, Copenhagen"},"gqneskibeunde":{"title":"Ships near the Coast after a Shower","museum":"SMK – National Gallery of Denmark, Copenhagen"}});
+})();

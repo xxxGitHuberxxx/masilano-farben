@@ -1,0 +1,6 @@
+// Work titles (es) of path galerie3-0 (v10.43b), part of es-path-works-late.js.
+(function () {
+  var P = window.ES = window.ES || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqehfruitarra":{"title":"Composición de frutas: melocotones y ciruelas sobre una losa de mármol","museum":"Museo de Arte de Cleveland"},"gqthtempleflo":{"title":"El templo de Flora: un grupo de aurículas","museum":"Museo de Arte de Cleveland"},"gqjwstilllife":{"title":"Bodegón de frutas: manzanas, peras y uvas en el suelo","museum":"National Gallery of Art, Washington"},"gqgzstilllife":{"title":"Bodegón con pájaros y frutas","museum":"Museo de Arte de Cleveland"},"gqdswaterfall":{"title":"Las cascadas de Tívoli","museum":"National Gallery of Art, Washington"},"gqbibalaklava":{"title":"Balaklava","museum":"National Gallery of Art, Washington"},"gqrtepidauros":{"title":"Epidauro","museum":"Museo de Arte de Cleveland"},"gqmgclumptree":{"title":"Grupo de árboles junto a un arroyo rocoso en Ramsau","museum":"National Gallery of Art, Washington"},"gqhscapri":{"title":"Capri","museum":"Museo de Arte de Cleveland"},"gqhsmarinapic":{"title":"Marina Piccola, Capri","museum":"National Gallery of Art, Washington"}});
+})();

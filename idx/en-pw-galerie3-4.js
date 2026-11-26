@@ -1,0 +1,6 @@
+// Work titles (en) of path galerie3-4 (v10.43b), part of en-path-works-late.js.
+(function () {
+  var P = window.EN = window.EN || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqbacoastlabr":{"title":"The Coast of Labrador","museum":"Art Institute of Chicago"},"gqjfwatermelo":{"title":"Watermelon and Grapes","museum":"National Gallery of Art, Washington"},"gqbebluemorni":{"title":"Blue Morning","museum":"National Gallery of Art, Washington"},"gqdcdragonorc":{"title":"Dragon and Orchard","museum":"Cleveland Museum of Art"},"gqdclongroad":{"title":"The Long Road or Argilla Road","museum":"Cleveland Museum of Art"},"gqhdseine":{"title":"On the Seine","museum":"Art Institute of Chicago"},"gqhdwildcoast":{"title":"Wild Coast, Newport","museum":"Cleveland Museum of Art"},"gqhdlandscape":{"title":"Landscape","museum":"Cleveland Museum of Art"},"gqwypeacefulv":{"title":"Peaceful Valley","museum":"National Gallery of Art, Washington"},"gqdofancifull":{"title":"Fanciful Landscape","museum":"National Gallery of Art, Washington"}});
+})();

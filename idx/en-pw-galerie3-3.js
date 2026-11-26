@@ -1,0 +1,6 @@
+// Work titles (en) of path galerie3-3 (v10.43b), part of en-path-works-late.js.
+(function () {
+  var P = window.EN = window.EN || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqlbstudyplan":{"title":"Study of a Plant, Possibly Thistle","museum":"Cleveland Museum of Art"},"gqsrcountryro":{"title":"A Country Road","museum":"Metropolitan Museum of Art, New York"},"gqsrferrygori":{"title":"Ferry near Gorinchem","museum":"Metropolitan Museum of Art, New York"},"gqsrriverland":{"title":"River Landscape with Ferry","museum":"National Gallery of Art, Washington"},"gqsfstudyred":{"title":"Study of a Red Catchfly (Lychnis hirsuta)","museum":"Metropolitan Museum of Art, New York"},"gqwggulfsaler":{"title":"The Gulf of Salerno","museum":"Art Institute of Chicago"},"gqbtkynance":{"title":"Kynance","museum":"Metropolitan Museum of Art, New York"},"gqwhlandscape":{"title":"Landscape with Haywain","museum":"Cleveland Museum of Art"},"gqdjthreepear":{"title":"Three Pears and an Apple","museum":"National Gallery of Art, Washington"},"gqbcquietday":{"title":"A Quiet Day near Manchester","museum":"National Gallery of Art, Washington"}});
+})();

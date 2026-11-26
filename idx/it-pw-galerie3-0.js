@@ -1,0 +1,6 @@
+// Work titles (it) of path galerie3-0 (v10.43b), part of it-path-works-late.js.
+(function () {
+  var P = window.IT = window.IT || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqehfruitarra":{"title":"Composizione di frutta: pesche e prugne su una lastra di marmo","museum":"Cleveland Museum of Art"},"gqthtempleflo":{"title":"Il tempio di Flora: un gruppo di auricole","museum":"Cleveland Museum of Art"},"gqjwstilllife":{"title":"Natura morta di frutta: mele, pere e uva sul terreno","museum":"National Gallery of Art, Washington"},"gqgzstilllife":{"title":"Natura morta con uccelli e frutta","museum":"Cleveland Museum of Art"},"gqdswaterfall":{"title":"Le cascate di Tivoli","museum":"National Gallery of Art, Washington"},"gqbibalaklava":{"title":"Balaklava","museum":"National Gallery of Art, Washington"},"gqrtepidauros":{"title":"Epidauro","museum":"Cleveland Museum of Art"},"gqmgclumptree":{"title":"Gruppo di alberi presso un torrente roccioso nella Ramsau","museum":"National Gallery of Art, Washington"},"gqhscapri":{"title":"Capri","museum":"Cleveland Museum of Art"},"gqhsmarinapic":{"title":"Marina Piccola, Capri","museum":"National Gallery of Art, Washington"}});
+})();

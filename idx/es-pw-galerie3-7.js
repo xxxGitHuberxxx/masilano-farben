@@ -1,0 +1,6 @@
+// Work titles (es) of path galerie3-7 (v10.43b), part of es-path-works-late.js.
+(function () {
+  var P = window.ES = window.ES || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqcobeirut":{"title":"Vista de Beirut","museum":"Metropolitan Museum of Art, Nueva York"},"gqcobozenpain":{"title":"Vista de Bolzano con un pintor","museum":"National Gallery of Art, Washington"},"gqcaboatyard":{"title":"El astillero","museum":"Museo de Arte de Cleveland"},"gqmurialtobri":{"title":"El puente de Rialto, Venecia","museum":"National Gallery of Art, Washington"},"gqlilandscape":{"title":"Paisaje, Italia","museum":"Museo de Arte de Cleveland"},"gqslshipfavor":{"title":"El barco «Favorite» maniobrando frente a Greenock","museum":"National Gallery of Art, Washington"},"gqslbostonhar":{"title":"El puerto de Boston","museum":"National Gallery of Art, Washington"},"gqdetravelers":{"title":"Viajeros en un amplio valle","museum":"National Gallery of Art, Washington"},"gqlamarinapic":{"title":"Vista de Marina Piccola, Capri: luz de la tarde","museum":"Statens Museum for Kunst, Copenhague"},"gqjlformiddag":{"title":"Mañana junto al Garona. Montréjeau","museum":"Statens Museum for Kunst, Copenhague"}});
+})();

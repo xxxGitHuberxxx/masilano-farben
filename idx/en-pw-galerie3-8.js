@@ -1,0 +1,6 @@
+// Work titles (en) of path galerie3-8 (v10.43b), part of en-path-works-late.js.
+(function () {
+  var P = window.EN = window.EN || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqjlgardensvi":{"title":"The Gardens of the Villa d’Este, Tivoli","museum":"SMK – National Gallery of Denmark, Copenhagen"},"gqcngardensvi":{"title":"In the Gardens of the Villa Albani, Rome","museum":"SMK – National Gallery of Denmark, Copenhagen"},"gqcnkronborgc":{"title":"Kronborg Castle","museum":"SMK – National Gallery of Denmark, Copenhagen"},"gqcnpiazzadel":{"title":"Piazza della Bocca della Verità with the So-called Temple of Vesta in Rome","museum":"SMK – National Gallery of Denmark, Copenhagen"},"gqpnbygevejrk":{"title":"Showery Weather. Katterød Rev","museum":"SMK – National Gallery of Denmark, Copenhagen"},"gqpnrugtraver":{"title":"Rye in Stooks. Katterød Rev, Bjørnø in the Background","museum":"SMK – National Gallery of Denmark, Copenhagen"},"gqnssprucetre":{"title":"Spruce Tree in a Summer Pasture. Norway","museum":"SMK – National Gallery of Denmark, Copenhagen"}});
+})();

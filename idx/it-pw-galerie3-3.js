@@ -1,0 +1,6 @@
+// Work titles (it) of path galerie3-3 (v10.43b), part of it-path-works-late.js.
+(function () {
+  var P = window.IT = window.IT || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqlbstudyplan":{"title":"Studio di una pianta, forse un cardo","museum":"Cleveland Museum of Art"},"gqsrcountryro":{"title":"Una strada di campagna","museum":"Metropolitan Museum of Art, New York"},"gqsrferrygori":{"title":"Traghetto presso Gorinchem","museum":"Metropolitan Museum of Art, New York"},"gqsrriverland":{"title":"Paesaggio fluviale con traghetto","museum":"National Gallery of Art, Washington"},"gqsfstudyred":{"title":"Studio di una licnide rossa (Lychnis hirsuta)","museum":"Metropolitan Museum of Art, New York"},"gqwggulfsaler":{"title":"Il golfo di Salerno","museum":"Art Institute of Chicago"},"gqbtkynance":{"title":"Kynance","museum":"Metropolitan Museum of Art, New York"},"gqwhlandscape":{"title":"Paesaggio con carro di fieno","museum":"Cleveland Museum of Art"},"gqdjthreepear":{"title":"Tre pere e una mela","museum":"National Gallery of Art, Washington"},"gqbcquietday":{"title":"Una giornata tranquilla presso Manchester","museum":"National Gallery of Art, Washington"}});
+})();

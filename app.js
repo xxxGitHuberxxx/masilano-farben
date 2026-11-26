@@ -110,7 +110,7 @@ function loadTitles(){
     return Promise.resolve(window.MASILANO_TITLES);
   }
   if (titlesLoading) return titlesLoading;
-  const src = 'titles.js?v=1044';
+  const src = 'titles.js?v=1045';
   const boot = (I && I.loadScriptOnce) ? I.loadScriptOnce(src) : new Promise((res, rej) => {
     const s = document.createElement('script');
     s.src = src; s.onload = res; s.onerror = rej; document.head.appendChild(s);
@@ -122,7 +122,7 @@ function loadTitles(){
   return titlesLoading;
 }
 function assetPin(src){
-  return src.indexOf('?') >= 0 ? src : src + '?v=1044';
+  return src.indexOf('?') >= 0 ? src : src + '?v=1045';
 }
 function loadOnce(src){
   const url = assetPin(src);
@@ -2803,7 +2803,7 @@ function albumRewardHtml(album){
   const faces = album.faces.map(f => {
     const F = window.MASILANO_FACES;
     const loc = (f.n && (f.n[I.lang] || f.n.de)) || f.id;
-    return `<button type="button" class="albrface" data-face="${esc(f.id)}"><img src="img/faces/${esc(f.id)}.webp?v=1044" alt="" width="72" height="72" loading="lazy" decoding="async"><span><span class="fn">${esc(loc)}</span><span class="fa">${esc(unlocked ? t(albumFaceState(album) === 'claimed' ? 'albumFaceClaimed' : 'albumFaceReady') : t('albumFaceRemain', { n: remain }))}</span></span></button>`;
+    return `<button type="button" class="albrface" data-face="${esc(f.id)}"><img src="img/faces/${esc(f.id)}.webp?v=1045" alt="" width="72" height="72" loading="lazy" decoding="async"><span><span class="fn">${esc(loc)}</span><span class="fa">${esc(unlocked ? t(albumFaceState(album) === 'claimed' ? 'albumFaceClaimed' : 'albumFaceReady') : t('albumFaceRemain', { n: remain }))}</span></span></button>`;
   }).join('');
   return `<section class="albreward${unlocked ? ' done' : ''}"><div class="rk">${esc(unlocked ? t('albumRewardDoneK') : t('albumRewardK'))}</div><p class="rlead">${esc(unlocked ? t('albumRewardDoneLead') : t('albumRewardLead', { N: album.N }))}</p><div class="albrfaces">${faces}</div></section>`;
 }
@@ -3837,14 +3837,14 @@ function loadShop(){
     if (!document.querySelector('link[data-shop-css]')) {
       const l = document.createElement('link');
       l.rel = 'stylesheet';
-      l.href = 'shop.css?v=1044';
+      l.href = 'shop.css?v=1045';
       l.setAttribute('data-shop-css', '1');
       document.head.appendChild(l);
     }
     const need = [];
-    if (!window.MASILANO_SHOP_CONFIG) need.push('shop-config.js?v=1044');
-    if (!window.MASILANO_SHOP_RES) need.push('shop-res.js?v=1044');
-    need.push('shop.js?v=1044');
+    if (!window.MASILANO_SHOP_CONFIG) need.push('shop-config.js?v=1045');
+    if (!window.MASILANO_SHOP_RES) need.push('shop-res.js?v=1045');
+    need.push('shop.js?v=1045');
     let i = 0;
     const next = () => {
       if (i >= need.length) {
@@ -3913,7 +3913,7 @@ bindShopEntries();
 let swReload = false;
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
   const hadCtrl = !!navigator.serviceWorker.controller;
-  navigator.serviceWorker.register('./sw.js?v=1044', { scope: './' }).catch(e => console.warn('SW', e));
+  navigator.serviceWorker.register('./sw.js?v=1045', { scope: './' }).catch(e => console.warn('SW', e));
   function requestSwReload(){
     if (!hadCtrl) return;           // first install: nothing to reload
     if (S) swReload = true; else location.reload();

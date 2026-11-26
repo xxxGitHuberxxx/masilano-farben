@@ -1,0 +1,13 @@
+// Work metadata of path galerie3-0 (v10.43b), part of path-works-late.js, for single works at start.
+(function () {
+  var M = ["Cleveland Museum of Art","National Gallery of Art, Washington"];
+  var G = [["Georg Dionysius Ehret",[["gqehfruitarra","Früchtearrangement: Pfirsiche und Pflaumen auf einer Marmorplatte","1742",0,"Cleveland Museum of Art, 1962.187: https://clevelandart.org/art/1962.187, CC0 (gemeinfrei)"]]],["Robert John Thornton",[["gqthtempleflo","Der Tempel der Flora: Eine Gruppe Aurikeln","1803",0,"Cleveland Museum of Art, 1949.415: https://clevelandart.org/art/1949.415, CC0 (gemeinfrei)"]]],["John William Hill",[["gqjwstilllife","Früchtestillleben: Äpfel, Birnen und Trauben am Boden","1874",1,"National Gallery of Art, Washington, 2004.165.8: https://www.nga.gov/collection/art-object-page.134163.html, CC0 (gemeinfrei)"]]],["Giovanna Garzoni",[["gqgzstilllife","Stillleben mit Vögeln und Früchten","um 1650",0,"Cleveland Museum of Art, 1955.140: https://clevelandart.org/art/1955.140, CC0 (gemeinfrei)"]]],["Abraham-Louis-Rodolphe Ducros",[["gqdswaterfall","Die Wasserfälle von Tivoli","um 1790",1,"National Gallery of Art, Washington, 2002.68.1: https://www.nga.gov/collection/art-object-page.124613.html, CC0 (gemeinfrei)"]]],["Carlo Bossoli",[["gqbibalaklava","Balaklawa","1857",1,"National Gallery of Art, Washington, 2011.141.1: https://www.nga.gov/collection/art-object-page.156414.html, CC0 (gemeinfrei)"]]],["Carl Rottmann",[["gqrtepidauros","Epidauros","um 1843",0,"Cleveland Museum of Art, 1984.60: https://clevelandart.org/art/1984.60, CC0 (gemeinfrei)"]]],["Carl Morgenstern",[["gqmgclumptree","Baumgruppe an einem felsigen Bach in der Ramsau","1832–1833",1,"National Gallery of Art, Washington, 2005.59.1: https://www.nga.gov/collection/art-object-page.132095.html, CC0 (gemeinfrei)"]]],["William Stanley Haseltine",[["gqhscapri","Capri","1869",0,"Cleveland Museum of Art, 1975.4: https://clevelandart.org/art/1975.4, CC0 (gemeinfrei)"],["gqhsmarinapic","Marina Piccola, Capri","um 1858",1,"National Gallery of Art, Washington, 1953.10.1: https://www.nga.gov/collection/art-object-page.42853.html, CC0 (gemeinfrei)"]]]];
+  var have = {}; (window.PATH_WORKS || []).forEach(function (w) { have[w.id] = 1; });
+  var W = [];
+  for (var i = 0; i < G.length; i++) for (var j = 0; j < G[i][1].length; j++) {
+    var r = G[i][1][j]; if (have[r[0]]) continue;
+    var o = { id: r[0], title: r[1], artist: G[i][0], year: r[2] }; if (r.length > 3 && r[3] != null) o.museum = M[r[3]]; if (r.length > 4) o.source = r[4]; W.push(o);
+  }
+  window.PATH_WORKS = (window.PATH_WORKS || []).concat(W);
+  (window.__pwChunks = window.__pwChunks || {})["galerie3-0"] = true;
+})();
