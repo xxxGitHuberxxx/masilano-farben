@@ -1,0 +1,6 @@
+// Work titles (en) of path galerie4-3 (v10.43b), part of en-path-works-late.js.
+(function () {
+  var P = window.EN = window.EN || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqwawoodcutte":{"title":"Woodcutters at Park Place, Henley, the River Thames Beyond","museum":"Metropolitan Museum of Art, New York"},"gqbbpalmerriv":{"title":"Palmer River","museum":"National Gallery of Art, Washington"},"gqctfarmbuild":{"title":"Farm Building by a Pond","museum":"Metropolitan Museum of Art, New York"},"gqebbeneathbi":{"title":"Beneath the Birches. Motif from Mälaren","museum":"SMK – National Gallery of Denmark, Copenhagen"},"gqjhplum":{"title":"Plum","museum":"National Gallery of Art, Washington"},"gqjhtreesprof":{"title":"Trees Profiled against the Sky","museum":"National Gallery of Art, Washington"},"gqmicountryla":{"title":"A Country Lane","museum":"National Gallery of Art, Washington"},"gqralonesenti":{"title":"The Lone Sentinel","museum":"Cleveland Museum of Art"},"gqrabrooklynb":{"title":"Brooklyn Bridge","museum":"Art Institute of Chicago"},"gqraspringwoo":{"title":"Spring Woods","museum":"National Gallery of Art, Washington"}});
+})();

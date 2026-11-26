@@ -1,0 +1,6 @@
+// Work titles (it) of path galerie4-0 (v10.43b), part of it-path-works-late.js.
+(function () {
+  var P = window.IT = window.IT || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqaiedgewood":{"title":"Margine del bosco","museum":"Metropolitan Museum of Art, New York"},"gqbdautumnlan":{"title":"Paesaggio autunnale con una miniera di carbone","museum":"Metropolitan Museum of Art, New York"},"gqcilakegeorg":{"title":"Veduta del lago George","museum":"National Gallery of Art, Washington"},"gqcmharborsev":{"title":"Il porto di Siviglia","museum":"National Gallery of Art, Washington"},"gqcmhalfdome":{"title":"Half Dome e Royal Arches, Yosemite, da Glacier Point","museum":"National Gallery of Art, Washington"},"gqcccastlegon":{"title":"Castel Gandolfo, lago Albano, Italia","museum":"National Gallery of Art, Washington"},"gqcbscenelodo":{"title":"Scena presso Lodore, Cumberland","museum":"Art Institute of Chicago"},"gqddvalekashm":{"title":"La valle del Kashmir","museum":"Cleveland Museum of Art"},"gqdfpastorals":{"title":"Scena pastorale","museum":"National Gallery of Art, Washington"},"gqdfpastorall":{"title":"Paesaggio pastorale","museum":"National Gallery of Art, Washington"}});
+})();

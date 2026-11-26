@@ -1,0 +1,13 @@
+// Work metadata of path galerie4-3 (v10.43b), part of path-works-late.js, for single works at start.
+(function () {
+  var M = ["Metropolitan Museum of Art, New York","National Gallery of Art, Washington","Statens Museum for Kunst, Kopenhagen","Cleveland Museum of Art","Art Institute of Chicago"];
+  var G = [["William Havell",[["gqwawoodcutte","Holzfäller in Park Place, Henley, dahinter die Themse","um 1826",0,"Metropolitan Museum of Art, New York, 2012.48: https://www.metmuseum.org/art/collection/search/399141, CC0 (gemeinfrei)"]]],["Edward Mitchell Bannister",[["gqbbpalmerriv","Palmer River","1885",1,"National Gallery of Art, Washington, 2021.11.1: https://www.nga.gov/collection/art-object-page.204911.html, CC0 (gemeinfrei)"]]],["John Sell Cotman",[["gqctfarmbuild","Bauernhaus an einem Teich","wahrscheinlich um 1808–1811",0,"Metropolitan Museum of Art, New York, 06.1051.5: https://www.metmuseum.org/art/collection/search/341086, CC0 (gemeinfrei)"]]],["Edvard Bergh",[["gqebbeneathbi","Unter den Birken. Motiv vom Mälaren","1870",2,"Statens Museum for Kunst, Kopenhagen, KMS869: https://open.smk.dk/artwork/image/KMS869, Public Domain (SMK Open, Public Domain Mark 1.0) (gemeinfrei)"]]],["John Henry Hill",[["gqjhplum","Pflaume","1903",1,"National Gallery of Art, Washington, 2004.165.7: https://www.nga.gov/collection/art-object-page.134160.html, CC0 (gemeinfrei)"],["gqjhtreesprof","Bäume vor dem Himmel","um 1865",1,"National Gallery of Art, Washington, 1982.3.1: https://www.nga.gov/collection/art-object-page.61094.html, CC0 (gemeinfrei)"]]],["John Middleton",[["gqmicountryla","Ein Feldweg","um 1850",1,"National Gallery of Art, Washington, 2016.98.1: https://www.nga.gov/collection/art-object-page.207065.html, CC0 (gemeinfrei)"]]],["Henry Ward Ranger",[["gqralonesenti","Der einsame Wächter","1895",3,"Cleveland Museum of Art, 1942.121: https://clevelandart.org/art/1942.121, CC0 (gemeinfrei)"],["gqrabrooklynb","Brooklyn Bridge","1899",4,"Art Institute of Chicago, 1925.720: https://www.artic.edu/artworks/16545, CC0 (gemeinfrei)"],["gqraspringwoo","Frühlingswald","um 1910",1,"National Gallery of Art, Washington, 1963.10.202: https://www.nga.gov/collection/art-object-page.46677.html, CC0 (gemeinfrei)"]]]];
+  var have = {}; (window.PATH_WORKS || []).forEach(function (w) { have[w.id] = 1; });
+  var W = [];
+  for (var i = 0; i < G.length; i++) for (var j = 0; j < G[i][1].length; j++) {
+    var r = G[i][1][j]; if (have[r[0]]) continue;
+    var o = { id: r[0], title: r[1], artist: G[i][0], year: r[2] }; if (r.length > 3 && r[3] != null) o.museum = M[r[3]]; if (r.length > 4) o.source = r[4]; W.push(o);
+  }
+  window.PATH_WORKS = (window.PATH_WORKS || []).concat(W);
+  (window.__pwChunks = window.__pwChunks || {})["galerie4-3"] = true;
+})();

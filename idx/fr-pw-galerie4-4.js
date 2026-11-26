@@ -1,0 +1,6 @@
+// Work titles (fr) of path galerie4-4 (v10.43b), part of fr-path-works-late.js.
+(function () {
+  var P = window.FR = window.FR || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqtcmounttom":{"title":"Le mont Tom","museum":"National Gallery of Art, Washington"},"gqcdlandscape":{"title":"Paysage, village au loin","museum":"National Gallery of Art, Washington"},"gqdxdoverpier":{"title":"La jetée de Douvres, Kent","museum":"Metropolitan Museum of Art, New York"},"gqdxjourneyho":{"title":"Le retour","museum":"Metropolitan Museum of Art, New York"},"gqdxriverland":{"title":"Paysage fluvial au pays de Galles","museum":"Metropolitan Museum of Art, New York"},"gqdnriverside":{"title":"Scène au bord de la rivière (vieux moulin)","museum":"Metropolitan Museum of Art, New York"},"gqdnharrowing":{"title":"Hersage – vue près des Cross Fells","museum":"National Gallery of Art, Washington"},"gqgtboatyardm":{"title":"Chantier naval à l’embouchure d’un estuaire","museum":"Art Institute of Chicago"},"gqgllandscape":{"title":"Paysage","museum":"National Gallery of Art, Washington"},"gqhrlandscape":{"title":"Paysage d’Auvergne","museum":"National Gallery of Art, Washington"}});
+})();

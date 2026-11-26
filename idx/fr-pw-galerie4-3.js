@@ -1,0 +1,6 @@
+// Work titles (fr) of path galerie4-3 (v10.43b), part of fr-path-works-late.js.
+(function () {
+  var P = window.FR = window.FR || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqwawoodcutte":{"title":"Bûcherons à Park Place, Henley, la Tamise au-delà","museum":"Metropolitan Museum of Art, New York"},"gqbbpalmerriv":{"title":"La rivière Palmer","museum":"National Gallery of Art, Washington"},"gqctfarmbuild":{"title":"Bâtiment de ferme au bord d’un étang","museum":"Metropolitan Museum of Art, New York"},"gqebbeneathbi":{"title":"Sous les bouleaux. Motif du lac Mälar","museum":"Statens Museum for Kunst, Copenhague"},"gqjhplum":{"title":"Prune","museum":"National Gallery of Art, Washington"},"gqjhtreesprof":{"title":"Arbres se découpant sur le ciel","museum":"National Gallery of Art, Washington"},"gqmicountryla":{"title":"Un chemin de campagne","museum":"National Gallery of Art, Washington"},"gqralonesenti":{"title":"La sentinelle solitaire","museum":"Musée d’art de Cleveland"},"gqrabrooklynb":{"title":"Le pont de Brooklyn","museum":"Art Institute of Chicago"},"gqraspringwoo":{"title":"Bois au printemps","museum":"National Gallery of Art, Washington"}});
+})();

@@ -1,0 +1,6 @@
+// Work titles (es) of path galerie4-3 (v10.43b), part of es-path-works-late.js.
+(function () {
+  var P = window.ES = window.ES || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqwawoodcutte":{"title":"Leñadores en Park Place, Henley, con el Támesis al fondo","museum":"Metropolitan Museum of Art, Nueva York"},"gqbbpalmerriv":{"title":"Río Palmer","museum":"National Gallery of Art, Washington"},"gqctfarmbuild":{"title":"Edificio de granja junto a un estanque","museum":"Metropolitan Museum of Art, Nueva York"},"gqebbeneathbi":{"title":"Bajo los abedules. Motivo del lago Mälaren","museum":"Statens Museum for Kunst, Copenhague"},"gqjhplum":{"title":"Ciruela","museum":"National Gallery of Art, Washington"},"gqjhtreesprof":{"title":"Árboles recortados contra el cielo","museum":"National Gallery of Art, Washington"},"gqmicountryla":{"title":"Un camino rural","museum":"National Gallery of Art, Washington"},"gqralonesenti":{"title":"El centinela solitario","museum":"Museo de Arte de Cleveland"},"gqrabrooklynb":{"title":"El puente de Brooklyn","museum":"Art Institute of Chicago"},"gqraspringwoo":{"title":"Bosque en primavera","museum":"National Gallery of Art, Washington"}});
+})();
