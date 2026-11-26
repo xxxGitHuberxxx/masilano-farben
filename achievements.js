@@ -7,7 +7,7 @@
     fuji: ['amiura','ashishiro','chinowa','fujimi','fujimitsui','fujinibon','fujisundai','fujisuri','fujitsukuda','futomi','gotenyama','kanaya','mikiri','minobu','murasame','oigawafuji','redfuji','sankifuji','thunder','wave'],
     sunflowers: ['sunflowers','sunflowermunich']
   };
-  const PATH_IDS = ['vangogh','monet','hokusai','klimt','anker','hodler','cezanne','hiroshige','renoir','pissarro','turner','rembrandt','sisley','friedrich','segantini','vallotton','spitzweg','moser','zuend','calame','wolf','blau','koller','diday','schindler','wisinger','church','degas','manet','goya','gauguin','velazquez','whistler','delacroix','morisot','seurat','constable','cassatt','millet','canaletto','rousseau','homer','moran','bierstadt','kobke','kroyer','cole','harunobu','eckersberg','lundbye','caillebotte','inness','heade','sargent','corot','boudin','redon','courbet','modigliani'];
+  const PATH_IDS = ['vangogh','monet','hokusai','klimt','anker','hodler','cezanne','hiroshige','renoir','pissarro','turner','rembrandt','sisley','friedrich','segantini','vallotton','spitzweg','moser','zuend','calame','wolf','blau','koller','diday','schindler','wisinger','church','degas','manet','goya','gauguin','velazquez','whistler','delacroix','morisot','seurat','constable','cassatt','millet','canaletto','rousseau','homer','moran','bierstadt','kobke','kroyer','cole','harunobu','eckersberg','lundbye','caillebotte','inness','heade','sargent','corot','boudin','redon','courbet','modigliani','eisen'];
   const CATS = ['flowers','landscapes','water','animals','portraits','city'];
   const TROPHY = {
     first:'cup', n10:'cup', n50:'cup',
