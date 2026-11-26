@@ -102,6 +102,7 @@
       { id: 'path_modigliani', paths: ['modigliani'] },
       { id: 'path_eisen', paths: ['eisen'] },
       { id: 'path_skovgaard', paths: ['skovgaard'] },
+      { id: 'path_hiroshigeii', paths: ['hiroshigeii'] },
       { id: 'bundle_kleine_wege', kind: 'small',
         paths: ['segantini', 'vallotton', 'spitzweg', 'moser', 'zuend', 'calame', 'wolf',
                 'blau', 'koller', 'diday', 'schindler', 'wisinger', 'marc',
