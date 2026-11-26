@@ -33,10 +33,6 @@
     "title": "La lección de escritura III",
     "museum": "Colección privada"
   },
-  "imwald": {
-    "title": "Muchacha dormida en el bosque",
-    "museum": "Colección no determinada"
-  },
   "huehner": {
     "title": "Niña dando de comer a las gallinas",
     "museum": "Musée d’art et d’histoire, Neuchâtel"
@@ -306,7 +302,7 @@
     "mapLabel": "Años 1880",
     "intro": [
       "En la década de 1880 los niños, las hermanas, los cuentos y la sala siguen siendo los temas fijos: las dos hermanas, Caperucita Roja, una lectora de Gotthelf, Mariette con fresas, la niña tejiendo junto a la cuna, los primeros pasos.",
-      "La familia pasa todavía el invierno en París y el verano en Ins. En 1890 Anker dejará su residencia de París. Los grandes cuadros de la década de 1890, y lo que viene después, pertenecen a la próxima parte."
+      "La familia pasa todavía el invierno en París y el verano en Ins. En 1890 Anker dejará su residencia de París. Después vienen los grandes cuadros de la década de 1890."
     ]
   }
 });
@@ -317,11 +313,7 @@
       "Un joven con levita oscura, la frente despejada, la mirada al frente. El dibujo lleva la inscripción «Sept. 1852»: Albert Anker tiene veintiún años.",
       "Ese año estudia teología, primero en Berna y después en Halle. El dibujo lo conserva el Centre Albert Anker de Ins."
     ],
-    "fact": "Dibujo, septiembre de 1852. Centre Albert Anker, Ins.",
-    "quote": {
-      "text": "¿Qué es el arte? En primer lugar, el arte no consiste en la imitación, sino en dos puntos: primero hay que formarse un ideal en las propias ideas; segundo hay que presentar este ideal a los ojos de los semejantes, darle una forma que se vuelva accesible a nuestro ver y oír.",
-      "cite": "Carta a Auguste Bachelin, 9 de junio de 1849. Centre Albert Anker, Ins."
-    }
+    "fact": "Dibujo, septiembre de 1852. Centre Albert Anker, Ins."
   },
   "sonntag": {
     "text": [
@@ -350,13 +342,6 @@
       "El cuadro pertenece a las pinturas de la lección de escritura de 1865. Por «La lección de escritura» y «Muchacha dormida en el bosque» Anker recibe en 1866 una medalla de oro en el Salón de París."
     ],
     "fact": "Óleo sobre lienzo, 1865. Colección privada."
-  },
-  "imwald": {
-    "text": [
-      "Una muchacha duerme al pie de un árbol, con el brazo contra un haz de leña. Su vestido es sencillo, los pies descalzos, el bosque a su alrededor oscuro y silencioso.",
-      "El cuadro de 1865 es una de las dos obras por las que Anker recibe en 1866 una medalla de oro en el Salón de París."
-    ],
-    "fact": "Óleo sobre lienzo, 1865. Colección no determinada."
   },
   "huehner": {
     "text": [
@@ -545,11 +530,7 @@
       "En una plaza ante casas y árboles hay muchos niños y adultos de pie y caminando. A algunos los reciben; otros miran.",
       "El cuadro de 1876 cuelga en el Musée d’art et d’histoire de Neuchâtel. Lleva también un título francés que recuerda a huérfanos de Unterwalden en Murten; la escena en sí es una acogida compuesta, no un relato de 1798."
     ],
-    "fact": "Óleo sobre lienzo, 1876. Musée d’art et d’histoire, Neuchâtel.",
-    "quote": {
-      "text": "Acabo de hacer un boceto en una farmacia. Puede que no salga nada de ello, pero uno hace lo que puede...",
-      "cite": "A la señora Anker, Murten, 11 de julio de 1876. Centre Albert Anker, Ins."
-    }
+    "fact": "Óleo sobre lienzo, 1876. Musée d’art et d’histoire, Neuchâtel."
   },
   "pelzmuetze": {
     "text": [
@@ -666,7 +647,7 @@
   "ersteschritte": {
     "text": [
       "Un niño mayor sujeta a uno más pequeño que intenta dar sus primeros pasos. Uno va descalzo, el pequeño lleva zapatos; detrás hay una estufa de azulejos.",
-      "El cuadro de 1888 cierra esta primera parte: la vida diaria en una sala, recogida poco antes de que Anker, en la década de 1890, vuelva a emprender grandes cuadros de escuela y de pueblo."
+      "El cuadro de 1888 muestra la vida diaria en una sala, recogida poco antes de que Anker, en la década de 1890, vuelva a emprender grandes cuadros de escuela y de pueblo."
     ],
     "fact": "Óleo sobre lienzo, 1888. Colección privada."
   }

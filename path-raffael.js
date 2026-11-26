@@ -21,9 +21,9 @@
   "cover": "sistine",
   "intro": "Raffael malt in Rom für die Kirche und den Hof. Die Sixtinische Madonna tritt auf Wolken hervor, die beiden Engel am unteren Rand sind später weit bekannt geworden.",
   "ending": [
-    "Raffael stirbt 1520 in Rom, erst 37 Jahre alt. Ein späterer Teil kann weitere Madonnen und Stanzen nachtragen."
+    "Raffael stirbt 1520 in Rom, erst 37 Jahre alt. Die Sixtinische Madonna hängt heute in der Gemäldegalerie Alte Meister in Dresden."
   ],
-  "epilogue": "Ein späterer Teil kann weitere Bilder nachtragen.",
+  "epilogue": "Raffael stirbt 1520 in Rom, erst 37 Jahre alt. Die Sixtinische Madonna hängt heute in der Gemäldegalerie Alte Meister in Dresden.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [

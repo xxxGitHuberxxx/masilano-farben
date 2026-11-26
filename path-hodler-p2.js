@@ -218,7 +218,7 @@
     "title": "Der Holzfäller",
     "artist": "Ferdinand Hodler",
     "year": "1910",
-    "museum": "Sammlung nicht ermittelt",
+    "museum": "Von der Heydt-Museum, Wuppertal",
     "source": "Wikimedia Commons: «Hodler - Der Holzfäller - 1910.jpeg», gemeinfrei (Public Domain)"
   },
   {
@@ -250,7 +250,7 @@
     "title": "Thunersee mit Stockhornkette",
     "artist": "Ferdinand Hodler",
     "year": "1910",
-    "museum": "Sammlung nicht ermittelt",
+    "museum": "Von der Heydt-Museum, Wuppertal",
     "source": "Wikimedia Commons: «Hodler - Thunersee mit Stockhornkette - 1910-11.jpeg», gemeinfrei (Public Domain)"
   },
   {
@@ -260,14 +260,6 @@
     "year": "um 1912",
     "museum": "Sammlung nicht ermittelt",
     "source": "Wikimedia Commons: «Hodler - Thunersee mit Stockhornkette am Abend - ca1912.jpeg», gemeinfrei (Public Domain)"
-  },
-  {
-    "id": "hwinter13",
-    "title": "Stockhornkette und Thunersee im Winter",
-    "artist": "Ferdinand Hodler",
-    "year": "1913",
-    "museum": "Sammlung nicht ermittelt",
-    "source": "Wikimedia Commons: «Stockhornkette und Thunersee im Winter (1913) - Ferdinand Hodler.jpg», gemeinfrei (Public Domain)"
   },
   {
     "id": "hmorhardt",
@@ -284,14 +276,6 @@
     "year": "um 1912",
     "museum": "Sammlung nicht ermittelt",
     "source": "Wikimedia Commons: «Hodler - Bildnis Gertrud Müller - ca1912.jpeg», gemeinfrei (Public Domain)"
-  },
-  {
-    "id": "hhector12",
-    "title": "Bildnis Hector Hodler",
-    "artist": "Ferdinand Hodler",
-    "year": "um 1912",
-    "museum": "Kunsthaus Zürich",
-    "source": "Wikimedia Commons: «Portrait of Hector Hodler (ca. 1912) - Ferdinand Hodler (Kunsthaus Zürich).jpg», gemeinfrei (Public Domain)"
   },
   {
     "id": "hself12",
@@ -794,7 +778,7 @@
           "Ein Holzfäller holt mit der Axt aus, die Beine fest gespreizt, der Schlag als klare, grosse Bewegung.",
           "Wie der Mäher gehört der Holzfäller zu Hodlers Figuren der Arbeit. 1910 entstehen diese strengen, plakativen Fassungen."
         ],
-        "fact": "1910. Sammlung nicht ermittelt."
+        "fact": "1910. Von der Heydt-Museum, Wuppertal."
       },
       {
         "pid": "heinamut",
@@ -858,7 +842,7 @@
           "Im Novemberlicht liegt die Stockhornkette über dem See, die Formen fest, die Farben kühler.",
           "Das Bild ist auf November 1910 datiert. 1910 richtet Hodler ein zweites Atelier in den Acacias in Genf ein und erhält die Ehrendoktorwürde der Universität Basel."
         ],
-        "fact": "1910. Sammlung nicht ermittelt."
+        "fact": "1910. Von der Heydt-Museum, Wuppertal."
       },
       {
         "pid": "hthunabend12",
@@ -867,14 +851,6 @@
           "Um 1912 entsteht diese Abendfassung. Hodler hält dasselbe Motiv zu einer anderen Stunde fest."
         ],
         "fact": "um 1912. Sammlung nicht ermittelt."
-      },
-      {
-        "pid": "hwinter13",
-        "text": [
-          "Im Winter liegt Schnee an den Hängen und am Ufer; die Stockhornkette steht kahl und hell über dem See.",
-          "Das Bild ist 1913 datiert. Auch die kalte Jahreszeit gehört in die lange Reihe der Thunersee-Bilder."
-        ],
-        "fact": "1913. Sammlung nicht ermittelt."
       }
     ]
   },
@@ -907,14 +883,6 @@
           "Die Sammlerin aus Solothurn gehört zu Hodlers wichtigen Auftraggeberinnen. Das Bildnis entsteht um 1912."
         ],
         "fact": "um 1912. Sammlung nicht ermittelt."
-      },
-      {
-        "pid": "hhector12",
-        "text": [
-          "Hector, Hodlers Sohn, erscheint als junger Mann, der Blick fest, das Gesicht nah an uns herangerückt.",
-          "Hector wurde 1887 als Sohn von Hodler und Augustine Dupin geboren. Das Bildnis um 1912 hängt im Kunsthaus Zürich."
-        ],
-        "fact": "um 1912. Kunsthaus Zürich."
       },
       {
         "pid": "hself12",

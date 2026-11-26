@@ -10,10 +10,6 @@
     "title": "The Older Sister",
     "museum": "Collection not established"
   },
-  "aself91": {
-    "title": "Self-Portrait in Profile, Facing Left",
-    "museum": "Collection not established"
-  },
   "knab91": {
     "title": "Portrait of a Boy",
     "museum": "Collection not established"
@@ -28,7 +24,7 @@
   },
   "dorfschneider": {
     "title": "The Village Tailor",
-    "museum": "Collection not established"
+    "museum": "Kunstmuseum Solothurn"
   },
   "krippe94": {
     "title": "The Crèche II",
@@ -86,10 +82,6 @@
     "title": "Boy Having His Snack",
     "museum": "Collection not established"
   },
-  "strickkorb": {
-    "title": "Knitting Girl with a Basket",
-    "museum": "Collection not established"
-  },
   "berthagugger": {
     "title": "Bertha Gugger with Her Daughter",
     "museum": "Collection not established"
@@ -104,7 +96,7 @@
   },
   "kirchenfeld": {
     "title": "Infant School on the Kirchenfeld Bridge",
-    "museum": "Collection not established"
+    "museum": "Kunstmuseum Bern"
   },
   "znueni01": {
     "title": "Old Man Having His Snack",
@@ -168,10 +160,6 @@
   },
   "flicken05": {
     "title": "Seated Grandmother Mending",
-    "museum": "Collection not established"
-  },
-  "gvaterzeitung": {
-    "title": "Grandfather with Newspaper",
     "museum": "Collection not established"
   },
   "drehhaspel": {
@@ -349,14 +337,7 @@
       "In a living room a girl looks after a smaller child. A tiled stove and wooden furniture frame the scene.",
       "Older children looking after younger ones are a frequent theme for Anker. In 1889 he is elected to the Federal Art Commission."
     ],
-    "fact": "um 1889. Collection not established."
-  },
-  "aself91": {
-    "text": [
-      "Anker shows himself from the side: beard, high forehead, his gaze directed to the left.",
-      "The portrait is dated March 1891. The year before, he gave up his residence in Paris and now lives entirely in Ins."
-    ],
-    "fact": "März 1891. Collection not established."
+    "fact": "c. 1889. Collection not established."
   },
   "knab91": {
     "text": [
@@ -373,7 +354,7 @@
     "fact": "1891. Collection not established.",
     "quote": {
       "text": "At times I am very sorry not to have trained with a landscape painter.",
-      "cite": "Letter to Auguste Bachelin, 1888. Centre Albert Anker, Ins."
+      "cite": "Letter to Auguste Bachelin, 1888. Translated from the German version published by the Centre Albert Anker, Ins."
     }
   },
   "wassereimer": {
@@ -388,10 +369,10 @@
       "An old man sits bent over his sewing, glasses on his nose, the thread in his hand.",
       "In 1891 Anker signs the contract with the publisher Frédéric Zahn for the deluxe edition of Gotthelf’s stories. He delivers more than 220 illustrations, but he finds the work laborious."
     ],
-    "fact": "1894. Collection not established.",
+    "fact": "1894. Kunstmuseum Solothurn.",
     "quote": {
-      "text": "This dreadful Zahn has me in his teeth. He will squeeze me like a lemon.",
-      "cite": "Letter to Albert de Meuron, 4 January 1897. Centre Albert Anker, Ins."
+      "text": "This dreadful Zahn [the publisher; “Zahn” is German for “tooth”] has me in his teeth. He will squeeze me like a lemon.",
+      "cite": "Letter to Albert de Meuron, 4 January 1897. Translated from the German version published by the Centre Albert Anker, Ins."
     }
   },
   "krippe94": {
@@ -406,7 +387,7 @@
       "An old man sits at the table holding a cup. He looks tired, but composed.",
       "Old people in everyday life become an important theme for Anker in the 1890s."
     ],
-    "fact": "um 1895. Collection not established."
+    "fact": "c. 1895. Collection not established."
   },
   "anker": {
     "text": [
@@ -420,7 +401,7 @@
       "A glass carafe of pale wine, a glass and bread lie on a table.",
       "Anker continues to paint still lifes with simple things from kitchen and cellar."
     ],
-    "fact": "um 1890. Collection not established."
+    "fact": "c. 1890. Collection not established."
   },
   "weinbrot": {
     "text": [
@@ -490,14 +471,7 @@
       "A boy sits at the table eating his “Znüni”, the mid-morning snack.",
       "Anker often shows children and old people eating, very close up and without distraction."
     ],
-    "fact": "um 1897. Collection not established."
-  },
-  "strickkorb": {
-    "text": [
-      "A girl in an apron is knitting, a basket beside her.",
-      "For Anker knitting belongs to girls and grandmothers, often combined with watching over someone or waiting."
-    ],
-    "fact": "um 1897. Collection not established."
+    "fact": "c. 1897. Collection not established."
   },
   "berthagugger": {
     "text": [
@@ -525,7 +499,7 @@
       "A group of small children crosses a bridge in Bern with a handcart. A woman accompanies them; a lamp stands at the railing.",
       "In 1900 Anker receives an honorary doctorate from the University of Bern. At the turn of the century he also notes political worries in his diary."
     ],
-    "fact": "1900. Collection not established.",
+    "fact": "1900. Kunstmuseum Bern.",
     "quote": {
       "text": "I harbour three kinds of fears: 1. The unheard-of, undemocratic union of power and influence in a few hands, the total contamination of political principles by questions of material interest. 2. The debt of billions and its dangers for the independence of the fatherland. 3. The dangerous position of the state as the largest employer in a time of tempestuous social ferment.",
       "cite": "Diary at the turn of the century, 1899/1900. Centre Albert Anker, Ins."
@@ -550,21 +524,21 @@
       "A girl with pale blonde hair and a white collar against a dark ground.",
       "Portraits of children make up a large part of Anker’s work."
     ],
-    "fact": "um 1901. Collection not established."
+    "fact": "c. 1901. Collection not established."
   },
   "abrief": {
     "text": [
       "A young woman sits at the table writing, her head slightly bowed.",
       "For Anker writing and reading belong to everyday life in the countryside."
     ],
-    "fact": "um 1901. Collection not established."
+    "fact": "c. 1901. Collection not established."
   },
   "kueche01": {
     "text": [
       "A kitchen in blue tones: women and children at the stove and at the table.",
       "The scene is painted loosely and sketchily, like a moment quickly captured."
     ],
-    "fact": "um 1901. Collection not established."
+    "fact": "c. 1901. Collection not established."
   },
   "botengaenger": {
     "text": [
@@ -647,13 +621,6 @@
     ],
     "fact": "1905. Collection not established."
   },
-  "gvaterzeitung": {
-    "text": [
-      "An old man sits at the table reading a large newspaper.",
-      "In 1906 the sculptor Jakob August Heer makes a bust of Anker."
-    ],
-    "fact": "1906. Collection not established."
-  },
   "drehhaspel": {
     "text": [
       "A farmer’s wife sits at a reel winding yarn.",
@@ -722,14 +689,14 @@
       "A boy rests his head in his hand and writes in a notebook.",
       "Anker has been painting children writing since the writing lessons of the 1860s."
     ],
-    "fact": "um 1908. Collection not established."
+    "fact": "c. 1908. Collection not established."
   },
   "aself08": {
     "text": [
       "An old man with a white beard looks gravely out of the picture.",
       "Around 1908 Anker paints himself once more, at about seventy-seven years old."
     ],
-    "fact": "um 1908. Collection not established."
+    "fact": "c. 1908. Collection not established."
   },
   "naeherin": {
     "text": [

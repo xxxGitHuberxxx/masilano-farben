@@ -24,7 +24,7 @@
   "ending": [
     "Dürer muere en Núremberg en 1528. Ambas hojas están entre los estudios naturales más precisos de su tiempo."
   ],
-  "epilogue": "Una parte posterior puede añadir más grabados y retratos."
+  "epilogue": "Dürer muere en Núremberg en 1528. Ambas hojas están entre los estudios naturales más precisos de su tiempo."
 };
   P.stations = Object.assign(P.stations || {}, {
   "durer1": {
@@ -36,4 +36,21 @@
     ]
   }
 });
+  // v10.42 pathTexts: work texts of the short path (were German fallback before).
+  P.pathTexts = Object.assign(P.pathTexts || {}, {
+    "hare": {
+      "text": [
+        "La liebre está sentada muy quieta, las orejas atentas, visible cada pelo del pelaje.",
+        "Durero la observó de tan cerca y con tanta precisión que casi se puede sentir el pelaje suave."
+      ],
+      "fact": "La hoja mide solo unos 25 centímetros de alto y es, aun así, una de las imágenes de animales más famosas del mundo."
+    },
+    "wing": {
+      "text": [
+        "Durero pintó el ala de un pájaro de colores con tanta precisión que aún podría estar delante de nosotros sobre la mesa.",
+        "Cada pluma está puesta por separado, desde las remeras fuertes hasta las coberteras suaves y claras."
+      ],
+      "fact": "La carraca europea es un ave meridional con turquesa, azul y un pardo cálido en el plumaje. Durero la fijó como un naturalista."
+    }
+  });
 })();

@@ -139,10 +139,6 @@
     "title": "The Suspension Bridge on the Border of Hida and Etchū Provinces",
     "museum": "Metropolitan Museum of Art, New York"
   },
-  "sanobashi": {
-    "title": "Old View of the Boat-bridge at Sano in Kōzuke Province",
-    "museum": "Musée Guimet, Paris"
-  },
   "tenpozan": {
     "title": "Tenpōzan at the Mouth of the Aji River in Settsu Province",
     "museum": "Metropolitan Museum of Art, New York"
@@ -215,14 +211,6 @@
     "title": "Fuji in Deep Mountain Vapour",
     "museum": "Library of Congress, Washington"
   },
-  "artistsfuji": {
-    "title": "Artists Preparing to Draw Mount Fuji",
-    "museum": "Musée Guimet, Paris"
-  },
-  "fujitotomi": {
-    "title": "Mount Fuji in the Mountains of Tōtomi",
-    "museum": "Musée Guimet, Paris"
-  },
   "choshisea": {
     "title": "Chōshi in Shimōsa Province",
     "museum": "Wikimedia Commons"
@@ -246,10 +234,6 @@
   "libai": {
     "title": "Li Bai Viewing a Waterfall",
     "museum": "Metropolitan Museum of Art, New York"
-  },
-  "sudongpo": {
-    "title": "Su Dongpo in the Snow",
-    "museum": "Musée Guimet, Paris"
   },
   "ministoru": {
     "title": "The Minister Tōru by a Lake beneath a Crescent Moon",
@@ -296,7 +280,7 @@
   "ending": [
     "In 1839 a fire in Edo destroys his house and many drawings. In the 1840s he stays several times in Obuse, with Takai Kōzan. In 1847 comes the Thunder God; in 1849, the tiger in the snow.",
     "Hokusai dies in Edo on the 18th day of the fourth month of the second year of Kaei – 10 May 1849. By the count of the time he is ninety years old.",
-    "Fifteen years earlier, in 1834, he had written in the postscript to “One Hundred Views of Mount Fuji”: “From my sixth year I have had the habit of copying the shapes of things. From the age of fifty I have often published pictures, yet nothing I drew before the age of seventy is really worth keeping. At seventy-three I began to grasp a little the structure of birds, animals, insects and fish, and the way plants grow. So at eighty-six I mean to go further still; at ninety I will understand it more deeply; at a hundred I should reach something truly wondrous; and at a hundred and ten, every dot and every stroke should be alive. May gentlemen who live long see that these words of mine are not empty boasting.” The wish to reach a hundred and ten remains unfulfilled. The sheets and the late paintings remain."
+    "Fifteen years earlier, in 1834, he had written in the postscript to “One Hundred Views of Mount Fuji”: “… So at eighty-six I mean to go further still; at ninety I will understand it more deeply; at a hundred I should reach something truly wondrous; and at a hundred and ten, every dot and every stroke should be alive.” The wish to reach a hundred and ten remains unfulfilled. The sheets and the late paintings remain."
   ],
   "epilogue": "Katsushika Hokusai dies on 10 May 1849 in Edo, at the age of ninety by the count of the time. The “Thirty-six Views”, the “One Hundred Views of Mount Fuji”, the waterfalls, the bridges and the late paintings from Obuse remain."
 });
@@ -353,7 +337,7 @@
     "mapLabel": "Hyakkei",
     "intro": [
       "In 1834 the first volume of “One Hundred Views of Mount Fuji” (Fugaku Hyakkei) appears, first with Eirakuya Tōshirō in Nagoya. Three volumes follow, in black, grey and often a touch of flesh pink.",
-      "In the postscript to the first volume Hokusai writes, under the name Gakyō Rōjin Manji – “the old man mad about painting, Manji”: “From my sixth year I have had the habit of copying the shapes of things. From the age of fifty I have often published pictures, yet nothing I drew before the age of seventy is really worth keeping. At seventy-three I began to grasp a little the structure of birds, animals, insects and fish, and the way plants grow. So at eighty-six I mean to go further still; at ninety I will understand it more deeply; at a hundred I should reach something truly wondrous; and at a hundred and ten, every dot and every stroke should be alive. May gentlemen who live long see that these words of mine are not empty boasting.”",
+      "In the postscript to the first volume Hokusai writes, under the name Gakyō Rōjin Manji – “the old man mad about painting, Manji”: “… So at eighty-six I mean to go further still; at ninety I will understand it more deeply; at a hundred I should reach something truly wondrous; and at a hundred and ten, every dot and every stroke should be alive.”",
       "The book pages show the mountain behind a net, through a sacred ring, in the rain, at a ford – seen anew each time."
     ]
   },
@@ -589,13 +573,6 @@
     ],
     "fact": "“The Suspension Bridge on the Border of Hida and Etchū Provinces”, Metropolitan Museum of Art, New York."
   },
-  "sanobashi": {
-    "text": [
-      "Boats lashed together form a bridge across the river; houses and trees stand on the bank.",
-      "The “old view” of the boat-bridge at Sano in Kōzuke Province belongs to the bridges series of about 1834. This impression is in the Musée Guimet, Paris (inventory EO 993)."
-    ],
-    "fact": "“Old View of the Boat-bridge at Sano”, Musée Guimet, Paris."
-  },
   "tenpozan": {
     "text": [
       "A small artificial hill and a landing stand at the mouth of the Aji River; ships fill the water.",
@@ -757,33 +734,12 @@
     ],
     "fact": "“Fuji in Deep Mountain Vapour”, Library of Congress, Washington."
   },
-  "artistsfuji": {
-    "text": [
-      "In a meadow men set up desks and brushes; Fuji stands behind a pine and a field.",
-      "The sheet comes from “One Hundred Views of Mount Fuji”. This impression is held at the Musée Guimet in Paris (EO 1455)."
-    ],
-    "fact": "“Artists Preparing to Draw Mount Fuji”, Musée Guimet, Paris."
-  },
-  "fujitotomi": {
-    "text": [
-      "Through the branches of a tree and over a roof one sees Fuji; the mountains of Tōtomi lie in front.",
-      "This sheet of the “One Hundred Views” too is in the Musée Guimet, Paris (MA 7065)."
-    ],
-    "fact": "“Mount Fuji in the Mountains of Tōtomi”, Musée Guimet, Paris."
-  },
   "libai": {
     "text": [
       "The Chinese poet Li Bai stands with a companion on a rock ledge and looks up at a tall waterfall.",
       "The sheet belongs to “A True Mirror of Chinese and Japanese Poetry” (Shiika shashin kyō), published about 1833 to 1834. Impression in the Metropolitan Museum of Art."
     ],
     "fact": "“Li Bai Viewing a Waterfall”, Metropolitan Museum of Art, New York."
-  },
-  "sudongpo": {
-    "text": [
-      "A rider with a large round hat travels through the snow; a servant walks beside the horse, and the sky is full of flakes.",
-      "The Musée Guimet in Paris identifies the figure as the Chinese poet Su Dongpo. The sheet belongs to the poets series of about 1833 to 1834 (inventory EO 1704)."
-    ],
-    "fact": "“Su Dongpo in the Snow”, Musée Guimet, Paris."
   },
   "ministoru": {
     "text": [

@@ -26,10 +26,6 @@
     "title": "Il campo e il grande noce in inverno, Éragny",
     "museum": "Philadelphia Museum of Art"
   },
-  "pxdeafhouse": {
-    "title": "La casa della donna sorda e il campanile di Éragny",
-    "museum": "Indianapolis Museum of Art"
-  },
   "pxpick86": {
     "title": "La raccolta delle mele",
     "museum": "Ohara Museum of Art, Kurashiki"
@@ -376,12 +372,6 @@
       "Un noce senza foglie s’innalza nel campo invernale di fronte a Éragny. Pissarro dipinge l’albero più volte in questi anni. Il quadro è al Philadelphia Museum of Art."
     ],
     "fact": "1885. Philadelphia Museum of Art."
-  },
-  "pxdeafhouse": {
-    "text": [
-      "Prato, alberi, una casa e il campanile: lo sguardo sul villaggio nel 1886. Il quadro è all’Indianapolis Museum of Art."
-    ],
-    "fact": "1886. Indianapolis Museum of Art."
   },
   "pxpick86": {
     "text": [

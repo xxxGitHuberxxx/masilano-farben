@@ -37,14 +37,6 @@
     "source": "Wikimedia Commons: «Félix Vallotton, 1898 - Le mensonge.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "fvpiano",
-    "title": "Madame Vallotton am Klavier",
-    "artist": "Félix Vallotton",
-    "year": "1899",
-    "museum": "Musée Toulouse-Lautrec, Albi",
-    "source": "Wikimedia Commons: «(Albi) Mme Vallotton au piano (1899) Félix Vallotton MTL.inv.423.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "ballon",
     "title": "Der Ball",
     "artist": "Félix Vallotton",
@@ -99,15 +91,15 @@
   "name": "Félix Vallotton",
   "title": "Félix Vallottons Lebensweg",
   "life": "1865–1925",
-  "part": "Teil 1 · Von Lausanne nach Honfleur",
+  "part": "Von Lausanne nach Honfleur",
   "subtitle": "Die Nabis, die Interieurs und das Licht der Normandie",
   "cover": "ballon",
-  "intro": "Reise mit Félix Vallotton, dem Lausanner, der in Paris zu den Nabis gehört: von den frühen Bildnissen über die klaren Interieurs und «Der Ball» bis zu den Landschaften von Honfleur. Kurze Stationen und Bilder zum Ausmalen. Dieser erste Teil reicht bis in die späten Jahre.",
+  "intro": "Reise mit Félix Vallotton, dem Lausanner, der in Paris zu den Nabis gehört: von den frühen Bildnissen über die klaren Interieurs und «Der Ball» bis zu den Landschaften von Honfleur. Kurze Stationen und Bilder zum Ausmalen. Dieser Weg reicht bis in die späten Jahre.",
   "ending": [
     "Vallotton stirbt am 29. Dezember 1925 in Neuilly-sur-Seine, einen Tag nach seinem sechzigsten Geburtstag. Er bleibt dem Waadtland und Frankreich gleichermassen verbunden.",
-    "Der Weg kann weiterwachsen. Holzschnitte, weitere Stillleben und die späten südlichen Landschaften können in einem späteren Teil folgen."
+    "Der Weg führt von Lausanne über die Nabis in Paris und die stillen Interieurs bis an die Küste der Normandie."
   ],
-  "epilogue": "Am 29. Dezember 1925 stirbt Vallotton in Neuilly-sur-Seine, sechzig Jahre alt. Ein späterer Teil kann Holzschnitte und weitere Stillleben nachtragen.",
+  "epilogue": "Vallotton stirbt am 29. Dezember 1925 in Neuilly-sur-Seine, einen Tag nach seinem sechzigsten Geburtstag. Er bleibt dem Waadtland und Frankreich gleichermassen verbunden. Der Weg führt von Lausanne über die Nabis in Paris und die stillen Interieurs bis an die Küste der Normandie.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [
@@ -177,14 +169,6 @@
             "Das Bild von 1898 gehört zu den Interieurs, in denen er Nähe und Abstand zugleich zeigt. Nichts ist zufällig gelassen."
           ],
           "fact": "1898. Baltimore Museum of Art."
-        },
-        {
-          "pid": "fvpiano",
-          "text": [
-            "Gabrielle sitzt am Klavier, der Rücken leicht gebeugt, der Raum in ruhigen Farbflächen. Vallotton heiratet sie 1899, im selben Jahr entsteht das Bild.",
-            "Durch sie ist er mit der Galerie Bernheim-Jeune verbunden. Das Interieur bleibt kühl und aufmerksam, ohne privates Pathos."
-          ],
-          "fact": "1899. Musée Toulouse-Lautrec, Albi."
         },
         {
           "pid": "ballon",

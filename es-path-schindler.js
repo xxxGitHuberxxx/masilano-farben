@@ -70,14 +70,14 @@
   P.paths.schindler = {
   "title": "El camino de vida de Emil Jakob Schindler",
   "life": "1842–1892",
-  "part": "Parte 1 · Atmósferas de Viena a Sylt",
+  "part": "Atmósferas de Viena a Sylt",
   "subtitle": "Sotos, molinos y mar",
-  "intro": "Viaja con Emil Jakob Schindler, el paisajista vienés de las atmósferas serenas: desde los arroyos de montaña de la Ramsau, por los sotos del Danubio y el Prater, hasta Plankenberg, el Adriático y el mar de Sylt. Estaciones breves y cuadros para colorear. Esta primera parte sigue su luz.",
+  "intro": "Viaja con Emil Jakob Schindler, el paisajista vienés de las atmósferas serenas: desde los arroyos de montaña de la Ramsau, por los sotos del Danubio y el Prater, hasta Plankenberg, el Adriático y el mar de Sylt. Estaciones breves y cuadros para colorear. Este camino sigue su luz.",
   "ending": [
     "Emil Jakob Schindler muere en Westerland, en Sylt, el 9 de agosto de 1892. Sus alumnas Marie Egner y Olga Wisinger-Florian continúan su pintura.",
-    "El camino puede seguir creciendo. Más sotos y costas pueden seguir en una parte posterior."
+    "El camino va de los arroyos de montaña de sus años de aprendizaje, pasando por el Prater, los prados ribereños y Plankenberg, hasta la costa del mar del Norte en Sylt."
   ],
-  "epilogue": "El 9 de agosto de 1892 Schindler muere en Sylt. Una parte posterior puede añadir más paisajes de atmósfera."
+  "epilogue": "Emil Jakob Schindler muere en Westerland, en Sylt, el 9 de agosto de 1892. Sus alumnas Marie Egner y Olga Wisinger-Florian continúan su pintura. El camino va de los arroyos de montaña de sus años de aprendizaje, pasando por el Prater, los prados ribereños y Plankenberg, hasta la costa del mar del Norte en Sylt."
 };
   P.stations = Object.assign(P.stations || {}, {
   "sjjung": {

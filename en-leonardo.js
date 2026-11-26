@@ -22,9 +22,9 @@
   "subtitle": "Two portraits",
   "intro": "In Florence and Milan, Leonardo looks for the quiet light on faces. The Lady with an Ermine and the Mona Lisa are among the best-known portraits in the world.",
   "ending": [
-    "Leonardo dies in Amboise in 1519. A later part can add further studies and pictures."
+    "Leonardo dies in Amboise in 1519. The two portraits on this path hang today in Kraków and in Paris."
   ],
-  "epilogue": "A later part can add further studies."
+  "epilogue": "Leonardo dies in Amboise in 1519. The two portraits on this path hang today in Kraków and in Paris."
 };
   P.stations = Object.assign(P.stations || {}, {
   "leonardo1": {
@@ -36,4 +36,21 @@
     ]
   }
 });
+  // v10.42 pathTexts: work texts of the short path (were German fallback before).
+  P.pathTexts = Object.assign(P.pathTexts || {}, {
+    "ermine": {
+      "text": [
+        "The young woman is Cecilia Gallerani, a cultivated lady at the court of Milan.",
+        "The ermine on her arm was a symbol of purity – and a play on her name."
+      ],
+      "fact": "Leonardo was then working for Duke Ludovico Sforza in Milan. Cecilia was one of the cleverest women at that court."
+    },
+    "monalisa": {
+      "text": [
+        "A woman sits before a wide, somewhat mysterious landscape and looks at us.",
+        "Her slight smile has made the picture world-famous."
+      ],
+      "fact": "Leonardo took the picture with him to France when he went to the court of King Francis I. That is why it hangs today in the Louvre and not in Italy."
+    }
+  });
 })();

@@ -126,10 +126,6 @@
     "title": "La place du Chenil à Marly, effet de neige",
     "museum": "Musée des Beaux-Arts, Rouen"
   },
-  "syroadlouv": {
-    "title": "La route de Louveciennes",
-    "museum": "Musées royaux des Beaux-Arts, Bruxelles"
-  },
   "syaqueduct": {
     "title": "L’aqueduc de Marly",
     "museum": "Toledo Museum of Art"
@@ -468,12 +464,6 @@
       "La petite place de Marly est sous la neige ; les maisons l’entourent solidement. Sisley peint le lieu où la famille s’installe à l’hiver 1874. Le tableau est au musée des Beaux-Arts de Rouen."
     ],
     "fact": "1874. Musée des Beaux-Arts, Rouen."
-  },
-  "syroadlouv": {
-    "text": [
-      "Un chemin de sable passe le long des murs et des arbres, vers le lointain. Sisley montre la route de tous les jours, sans événement. Le tableau est aux Musées royaux des Beaux-Arts, à Bruxelles."
-    ],
-    "fact": "1874. Musées royaux des Beaux-Arts, Bruxelles."
   },
   "syaqueduct": {
     "text": [

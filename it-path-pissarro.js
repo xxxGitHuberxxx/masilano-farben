@@ -52,10 +52,6 @@
     "title": "Autoritratto",
     "museum": "Statens Museum for Kunst, Copenaghen"
   },
-  "pxfabrique": {
-    "title": "La piccola fabbrica",
-    "museum": "Musée d’art moderne et contemporain, Strasburgo"
-  },
   "pxmarne": {
     "title": "La Marna a Chennevières",
     "museum": "National Galleries of Scotland, Edimburgo"
@@ -136,10 +132,6 @@
     "title": "Il Crystal Palace",
     "museum": "Art Institute of Chicago"
   },
-  "pxdulwich": {
-    "title": "Dulwich College",
-    "museum": "Fondation Bemberg, Toulouse"
-  },
   "pxsydenham": {
     "title": "Vicino a Sydenham Hill",
     "museum": "Kimbell Art Museum, Fort Worth"
@@ -156,10 +148,6 @@
     "title": "Natura morta con mele e brocca",
     "museum": "Metropolitan Museum of Art, New York"
   },
-  "pxpoulies": {
-    "title": "Ruelle des Poulies, Pontoise",
-    "museum": "Musée d’Orsay, Parigi"
-  },
   "pxboulevard": {
     "title": "Il Boulevard des Fossés, Pontoise",
     "museum": "Norton Simon Museum, Pasadena"
@@ -167,10 +155,6 @@
   "pxchestnut72": {
     "title": "Bosco di castagni a Louveciennes",
     "museum": "Nelson-Atkins Museum of Art, Kansas City"
-  },
-  "pxgelee": {
-    "title": "Brina, la vecchia strada di Ennery, Pontoise",
-    "museum": "Musée d’Orsay, Parigi"
   },
   "pxtroofs": {
     "title": "I tetti rossi, angolo di villaggio, inverno",
@@ -402,13 +386,6 @@
     ],
     "fact": "1857–1858. Statens Museum for Kunst, Copenaghen."
   },
-  "pxfabrique": {
-    "text": [
-      "Verso il 1862–65 Pissarro dipinge una piccola fabbrica nella campagna vicino a Parigi, con figure sul sentiero.",
-      "Il quadro si allontana dal paesaggio ideale classico ed è oggi al Musée d’art moderne et contemporain di Strasburgo."
-    ],
-    "fact": "verso il 1862–1865. Musée d’art moderne et contemporain, Strasburgo."
-  },
   "pxmarne": {
     "text": [
       "Sulla Marna, a Chennevières, a sud-est di Parigi, Pissarro dipinge nel 1864–65 un’ampia veduta del fiume.",
@@ -553,13 +530,6 @@
     ],
     "fact": "1871. Art Institute of Chicago."
   },
-  "pxdulwich": {
-    "text": [
-      "Nel 1871 Pissarro dipinge anche il collegio di Dulwich, vicino a Lordship Lane.",
-      "Il quadro è alla Fondation Bemberg di Tolosa."
-    ],
-    "fact": "1871. Fondation Bemberg, Toulouse."
-  },
   "pxsydenham": {
     "text": [
       "Da un’altura, nel 1871, Pissarro guarda campi e alberi vicino a Sydenham Hill.",
@@ -588,13 +558,6 @@
     ],
     "fact": "1872. Metropolitan Museum of Art, New York."
   },
-  "pxpoulies": {
-    "text": [
-      "La Ruelle des Poulies a Pontoise, nel 1872: un vicolo, case, un cielo chiaro.",
-      "Pissarro è di nuovo nella città dove presto lavorerà anche Cézanne. Il quadro è al Musée d’Orsay."
-    ],
-    "fact": "1872. Musée d’Orsay, Parigi."
-  },
   "pxboulevard": {
     "text": [
       "Il Boulevard des Fossés a Pontoise, nel 1872, con alberi e passanti.",
@@ -608,13 +571,6 @@
       "Il quadro è al Nelson-Atkins Museum of Art di Kansas City."
     ],
     "fact": "1872. Nelson-Atkins Museum of Art, Kansas City."
-  },
-  "pxgelee": {
-    "text": [
-      "La «Brina» del 1873 mostra la vecchia strada di Ennery vicino a Pontoise, con la brina sui campi.",
-      "Pissarro espone il quadro alla prima mostra impressionista del 1874. È al Musée d’Orsay."
-    ],
-    "fact": "1873. Musée d’Orsay, Parigi."
   },
   "pxtroofs": {
     "text": [

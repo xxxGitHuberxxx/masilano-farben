@@ -60,12 +60,12 @@
   "schevwoman": {
     "text": [
       "Déjà à Etten, Vincent dessine une femme dans le costume de Scheveningen, le village de pêcheurs près de La Haye. Peut-être l’a-t-il vue lors d’une sortie, peut-être dessinée d’après un modèle.",
-      "À l’automne 1881, il demande Kee en mariage. Il lui dit qu’il l’aime comme lui-même. Il transcrit sa réponse exactement pour Theo – en néerlandais, en trois mots qui ne laissent aucun doute."
+      "À l’été 1881, il tombe amoureux de Kee et le lui avoue : c’est comme si elle était son prochain, et lui le sien. En novembre, il le raconte à Theo. Il résume le refus de Kee en trois mots néerlandais : « nooit neen nimmer » – jamais, non, plus jamais."
     ],
     "fact": "Kee Vos-Stricker était la fille d’un oncle de Vincent, pasteur à Amsterdam, et déjà veuve. Elle ne voulait pas de la demande, et la famille se rangea derrière elle.",
     "quote": {
-      "text": "Et alors elle dit : jamais, non, plus jamais.",
-      "cite": "Lettre 180, Etten, 7 novembre 1881, à Theo"
+      "text": "Mais quand je le lui ai dit, elle m’a répondu que son passé et son avenir ne faisaient qu’un pour elle et qu’elle ne pourrait donc jamais répondre à mes sentiments.",
+      "cite": "Lettre 179, Etten, 3 novembre 1881, à Theo"
     }
   },
   "beermug": {
@@ -185,17 +185,6 @@
     ],
     "fact": "Le bureau de la loterie d’État était un motif connu de la peinture sociale. Vincent montre ceux qui attendent comme un groupe, non comme des « types » isolés dont on rirait."
   },
-  "laundry": {
-    "text": [
-      "Une femme étend du linge sur un pré. Le quotidien, se baisser, des draps mouillés, un ciel vaste. Vincent reste auprès du travail des femmes qu’il a sous les yeux en Sien et en ses voisines.",
-      "En juillet, il écrit à Theo que la formalité d’un mariage ne fait pas de Sien sa femme. Le lien existe déjà : ils s’aiment, se comprennent et s’aident."
-    ],
-    "fact": "En juillet 1882, Sien mit au monde le fils Willem. Vincent espéra un temps que les parents finiraient par accepter l’union. Cela n’arriva pas.",
-    "quote": {
-      "text": "Je ne peux dire autrement que : je l’ai prise pour femme – car ce n’est pas la formalité de se marier qui en fait ma femme, mais un lien qui existe déjà : un sentiment que nous nous aimons, nous comprenons et nous aidons de part et d’autre.",
-      "cite": "Lettre 244, Den Haag, 6 juillet 1882, à Theo"
-    }
-  },
   "bulbfields": {
     "text": [
       "Soudain la Hollande s’illumine : des plates-bandes de tulipes et de jacinthes en bandes droites, rose, jaune, bleu, blanc, devant de basses maisons sous un ciel vaste. Vincent peint les champs des horticulteurs – l’un des tableaux les plus colorés de ses années néerlandaises.",
@@ -248,17 +237,6 @@
       "La solitude ronge. Il se demande si Sien pourrait le rejoindre, et lâche à nouveau la pensée. La vie à deux, telle qu’elle était à La Haye, ne lui paraît plus possible ici."
     ],
     "fact": "« Chaumières » a été fait en 1883 dans le Drenthe et appartient au Van Gogh Museum. La ligne basse de l’horizon laisse le ciel occuper presque la moitié du tableau."
-  },
-  "twilightch": {
-    "text": [
-      "Une église au crépuscule, un ciel vaste, peu plus que de l’ombre et de la lumière. L’une des feuilles les plus silencieuses du voyage.",
-      "Vincent sent qu’il ne peut pas longtemps continuer à vivre seul ainsi. En décembre, il marche dans la tempête, la pluie et la neige à travers la lande jusqu’à Hoogeveen – et poursuit le voyage vers les parents."
-    ],
-    "fact": "Le tableau saisit l’humeur du Drenthe à la fin de l’automne : peu de couleur, beaucoup de ciel, un paysage qui peut vous remplir tout entier ou vous laisser tout à fait vide.",
-    "quote": {
-      "text": "Le Drenthe est magnifique, mais tenir ici dépend de bien des choses – de ce que l’on ait l’argent pour cela, et de ce que l’on tienne bon face à la solitude.",
-      "cite": "Lettre 409, Nuenen, vers le 6 décembre 1883, à Theo"
-    }
   },
   "drawbridge": {
     "text": [
@@ -366,7 +344,7 @@
     "text": [
       "Les Mangeurs de pommes de terre sont le but de tout ce premier tronçon du parcours. Cinq personnes sont assises sous une lampe autour d’un plat, les visages sont rudes, les mains lourdes, la couleur est celle de la terre et des peaux de pomme de terre.",
       "Tout l’hiver, Vincent a étudié les têtes et les mains des paysans de Nuenen. Il ne veut pas une jolie idylle de famille. Il veut que l’on voie qui sont ces êtres – et avec quoi ils ont gagné leur nourriture.",
-      "Avec ce tableau se clôt la 1re partie. Devant Vincent se trouvent Anvers, Paris, Arles, Saint-Rémy et Auvers. La couleur deviendra plus claire. Mais l’attitude qui commence ici, il ne la lâche jamais tout à fait."
+      "Ici s’achèvent les années néerlandaises. Devant Vincent se trouvent Anvers, Paris, Arles, Saint-Rémy et Auvers. La couleur deviendra plus claire. Mais l’attitude qui commence ici, il ne la lâche jamais tout à fait."
     ],
     "fact": "Début mai 1885, Vincent envoie le tableau à Theo à Paris. Il reste son plus important tableau de figures des années néerlandaises – et le commencement de tout ce qui vient ensuite.",
     "quote": {
@@ -1398,10 +1376,10 @@
   },
   "olivepick": {
     "text": [
-      "Trois femmes cueillent des olives sous les arbres, les couronnes comme des nuages jaunes et verts. Vincent reprend la figure qui lui manque souvent à l’asile.",
+      "Trois femmes cueillent des olives sous les arbres, l’une d’elles debout sur une échelle ; les couronnes sont vertes et bleutées, le ciel rose pâle. Vincent reprend la figure qui lui manque souvent à l’asile.",
       "Il écrit à Bernard que l’argent sur un sol orange ou violet sous le grand ciel bleu n’a encore presque pas été fait – contrairement aux pommiers ou aux saules."
     ],
-    "fact": "Le tableau appartient au Metropolitan Museum of Art à New York et naît en décembre 1889.",
+    "fact": "Cette version de 1889 appartient à la National Gallery of Art de Washington. Une autre version du motif est conservée au Metropolitan Museum of Art de New York.",
     "quote": {
       "text": "Les oliviers d’ici, mon cher, ce serait quelque chose pour vous. […] C’est de l’argent sur un sol orange ou violet sous le grand ciel bleu.",
       "cite": "Lettre 809, Saint-Rémy, vers le 8 octobre 1889, à Emile Bernard"

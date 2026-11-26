@@ -27,10 +27,6 @@
     "title": "Le Mensonge",
     "museum": "Baltimore Museum of Art"
   },
-  "fvpiano": {
-    "title": "Madame Vallotton au piano",
-    "museum": "Musée Toulouse-Lautrec, Albi"
-  },
   "ballon": {
     "title": "Le Ballon",
     "museum": "Musée d’Orsay, Paris"
@@ -60,14 +56,14 @@
   P.paths.vallotton = {
   "title": "Le parcours de vie de Félix Vallotton",
   "life": "1865–1925",
-  "part": "Partie 1 · De Lausanne à Honfleur",
+  "part": "De Lausanne à Honfleur",
   "subtitle": "Les Nabis, les intérieurs et la lumière de Normandie",
-  "intro": "Voyage avec Félix Vallotton, le Lausannois qui à Paris rejoint les Nabis : des portraits de jeunesse aux intérieurs nets et à « Le Ballon », jusqu’aux paysages d’Honfleur. De courtes étapes et des tableaux à colorier. Cette première partie va jusqu’aux années tardives.",
+  "intro": "Voyage avec Félix Vallotton, le Lausannois qui à Paris rejoint les Nabis : des portraits de jeunesse aux intérieurs nets et à « Le Ballon », jusqu’aux paysages d’Honfleur. De courtes étapes et des tableaux à colorier. Ce chemin va jusqu’aux années tardives.",
   "ending": [
     "Vallotton meurt à Neuilly-sur-Seine le 29 décembre 1925, le lendemain de son soixantième anniversaire. Il reste attaché autant au canton de Vaud qu’à la France.",
-    "Le chemin peut encore s’allonger. Gravures sur bois, autres natures mortes et les paysages tardifs du Midi pourront suivre dans une partie ultérieure."
+    "Le chemin mène de Lausanne, par les nabis à Paris et les intérieurs silencieux, jusqu’à la côte normande."
   ],
-  "epilogue": "Le 29 décembre 1925, Vallotton meurt à Neuilly-sur-Seine, à soixante ans. Une partie ultérieure pourra ajouter des gravures sur bois et d’autres natures mortes."
+  "epilogue": "Vallotton meurt à Neuilly-sur-Seine le 29 décembre 1925, le lendemain de son soixantième anniversaire. Il reste attaché autant au canton de Vaud qu’à la France. Le chemin mène de Lausanne, par les nabis à Paris et les intérieurs silencieux, jusqu’à la côte normande."
 };
   P.stations = Object.assign(P.stations || {}, {
   "fvlausanne": {
@@ -136,13 +132,6 @@
       "Le tableau de 1898 appartient aux intérieurs où il montre à la fois la proximité et la distance. Rien n’est laissé au hasard."
     ],
     "fact": "1898. Baltimore Museum of Art."
-  },
-  "fvpiano": {
-    "text": [
-      "Gabrielle est assise au piano, le dos légèrement penché, la pièce en plans de couleur calmes. Vallotton l’épouse en 1899, l’année même du tableau.",
-      "Par elle, il est lié à la galerie Bernheim-Jeune. L’intérieur reste froid et attentif, sans pathos privé."
-    ],
-    "fact": "1899. Musée Toulouse-Lautrec, Albi."
   },
   "ballon": {
     "text": [

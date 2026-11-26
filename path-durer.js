@@ -31,7 +31,7 @@
   "ending": [
     "Dürer stirbt 1528 in Nürnberg. Die beiden Blätter gehören zu den genauesten Naturstudien ihrer Zeit."
   ],
-  "epilogue": "Ein späterer Teil kann weitere Grafiken und Bildnisse nachtragen.",
+  "epilogue": "Dürer stirbt 1528 in Nürnberg. Die beiden Blätter gehören zu den genauesten Naturstudien ihrer Zeit.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [

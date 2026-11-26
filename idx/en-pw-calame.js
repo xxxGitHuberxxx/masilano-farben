@@ -1,0 +1,6 @@
+// Work titles (en) of path calame (v10.43b), part of en-path-works-late.js.
+(function () {
+  var P = window.EN = window.EN || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"acswiss":{"title":"Swiss Landscape","museum":"National Gallery of Art, Washington"},"acpaysage":{"title":"Mountain Landscape","museum":"Location not recorded"},"acvalais":{"title":"Mill in the Valais","museum":"Private collection"},"aceboul":{"title":"The Landslide after the Storm","museum":"Kunsthaus Zürich"},"acgrimsel":{"title":"The Grimsel Road","museum":"Private collection"},"acchenes":{"title":"Oaks by Lake Thun","museum":"Private collection"},"actorrent":{"title":"Mountain Torrent in a Storm","museum":"Private collection"},"acrosenlaui":{"title":"Souvenir of Rosenlaui","museum":"Private collection"},"acleman":{"title":"View of Lake Geneva","museum":"Villa Vauban, Luxembourg"},"acthun":{"title":"The Lake of Thun","museum":"National Gallery, London"},"acbrunnen":{"title":"Lake Lucerne near Brunnen","museum":"Kunsthaus Zürich"},"acrigi":{"title":"Chalets on the Rigi","museum":"National Gallery, London"},"acmontreux":{"title":"The Head of Lake Geneva near Montreux","museum":"Private collection"}});
+})();

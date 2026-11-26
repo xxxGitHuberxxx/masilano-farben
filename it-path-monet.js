@@ -199,7 +199,7 @@
     ],
     "fact": "Chailly-en-Bière sta al bordo della foresta, a sud di Parigi. Monet torna più tardi spesso nella natura davanti alle porte della città.",
     "quote": {
-      "text": "Vieni dunque in fretta a raggiungermi, la foresta è deliziosa.",
+      "text": "Venite dunque presto a raggiungermi, la foresta è deliziosa.",
       "cite": "Lettera a Frédéric Bazille, Chailly, 28 aprile 1865"
     }
   },
@@ -237,13 +237,6 @@
       "Al Salon del 1865 il quadro viene notato. Il giovane pittore di Le Havre conta all’improvviso come una speranza."
     ],
     "fact": "Honfleur sta di fronte alla città natale, dall’altra parte della foce. Monet torna di nuovo e di nuovo a quest’acqua."
-  },
-  "greendress": {
-    "text": [
-      "Camille Doncieux indossa un lungo abito verde e guarda oltre la spalla. Nel 1866 il quadro ha successo al Salon – sotto il titolo «Camille».",
-      "La famiglia a Le Havre non vuole saperne della relazione. Camille è modella, compagna e presto la madre di suo figlio."
-    ],
-    "fact": "Monet ha 25 anni, Camille 19. L’abito verde diventa uno dei quadri noti dei loro primi anni insieme."
   },
   "womengarden": {
     "text": [
@@ -453,13 +446,6 @@
       "Monet dipinge la casa non soltanto dall’esterno, ma le aiuole in cui la famiglia passa l’estate."
     ],
     "fact": "Il quadro è appeso nella National Gallery of Art di Washington. Il giardino diventa in questi anni uno dei suoi motivi più importanti."
-  },
-  "hobbyhorse": {
-    "text": [
-      "Il piccolo Jean, nel 1872 di circa cinque anni, siede fiero su un cavallo a bastone nel giardino. Dietro di lui le aiuole e la siepe.",
-      "Monet dipinge il figlio senza posa, come parte della vita quotidiana ad Argenteuil. È un quadro chiaro, quasi privato."
-    ],
-    "fact": "Jean Monet nasce nel 1867. Più tardi, a Giverny, lui e i suoi fratellastri tengono con il padre la casa."
   },
   "autumneff": {
     "text": [
@@ -747,13 +733,6 @@
     ],
     "fact": "Il quadro del 1889 si trova in collezione privata."
   },
-  "ravincreuse": {
-    "text": [
-      "Le gole della Creuse conducono lo sguardo in profondità, il fiume splende come un nastro. La valle pare chiusa, quasi severa.",
-      "A Reims è appesa una delle versioni più chiare di questo motivo."
-    ],
-    "fact": "Il quadro del 1889 è appeso nel Musée des Beaux-Arts di Reims."
-  },
   "creusegrey": {
     "text": [
       "Con tempo grigio le case sulla Creuse giacciono smorzate sul pendio, il colore indietreggia, la forma resta.",
@@ -956,7 +935,7 @@
     "fact": "Il quadro del 1899 è appeso nella National Gallery of Art di Washington.",
     "quote": {
       "text": "È un bacino d’acqua che ho allestito io stesso circa quindici anni fa; questo bacino di circa 200 metri di perimetro è alimentato da un braccio del fiume Epte; è orlato di iris e di diverse piante acquatiche, in una cornice di alberi diversi, in cui però predominano i pioppi e i salici, tra cui parecchi salici piangenti. Proprio in questo luogo ho già dipinto le ninfee con un ponte in stile giapponese.",
-      "cite": "Lettera a Roger Marx, Giverny, 1 giugno 1909"
+      "cite": "Lettera a Roger Marx, Giverny, 1º giugno 1909 (Wildenstein, lettera 1893); Marx utilizzò la risposta per il suo saggio nella Gazette des Beaux-Arts, giugno 1909"
     }
   },
   "lilybridge": {
@@ -993,13 +972,6 @@
       "Nel 1900 Monet non dipinge soltanto il giardino d’acqua, ma anche questo cammino attraverso i fiori – il giardino che ha piantato egli stesso."
     ],
     "fact": "Il quadro del 1900 è appeso nella Yale University Art Gallery di New Haven."
-  },
-  "grandeallee": {
-    "text": [
-      "Il grande viale conduce verso la casa, il sentiero di ghiaia giace all’ombra degli alberi, al bordo fioriscono fiori.",
-      "Lo stesso asse che i visitatori percorrono ancora oggi Monet lo dipinge verso il 1900 come un quadro d’estate silenzioso."
-    ],
-    "fact": "Il quadro del 1900 è appeso nel Musée des Beaux-Arts di Montreal."
   },
   "lilywl": {
     "text": [
@@ -1236,17 +1208,6 @@
       "Tali pannelli degli anni Dieci mostrano lo stagno senza ponte e senza cielo – soltanto acqua e piante."
     ],
     "fact": "Il quadro appartiene alla serie delle ninfee degli anni Dieci."
-  },
-  "lilybs": {
-    "text": [
-      "Un riflesso chiaro cade di sbieco attraverso lo stagno, le ninfee giacciono sul bordo della luce, la riva resta fuori.",
-      "Nel 1921 Monet scrive ad Arsène Alexandre che la galleria dell’Orangerie ospiterà per sempre i suoi tentativi decorativi. Nel maggio 1927, dopo la sua morte, le sale si aprono."
-    ],
-    "fact": "Il quadro è appeso nell’Artizon Museum di Tokyo, la precedente collezione Bridgestone.",
-    "quote": {
-      "text": "Sarà la galleria dell’Orangerie a ospitare per sempre i miei tentativi decorativi.",
-      "cite": "Lettera a Arsène Alexandre, Giverny, 13 novembre 1921"
-    }
   }
 };
   for (var k in add) if (Object.prototype.hasOwnProperty.call(add, k)) pt[k] = add[k];

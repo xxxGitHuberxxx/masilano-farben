@@ -37,9 +37,9 @@
   "cover": "hunters",
   "intro": "Bruegel der Ältere sieht in Brabant die Arbeit, den Winter und die alten Erzählungen. Drei Bilder führen vom Turmbau zu Babel über die Kornernte zu den Jägern im Schnee.",
   "ending": [
-    "Bruegel stirbt 1569 in Brüssel. Ein späterer Teil kann weitere Jahreszeiten und Sprichwörter nachtragen."
+    "Bruegel stirbt 1569 in Brüssel. Zwei der drei Bilder dieses Weges, der Turmbau und die Jäger im Schnee, hängen heute im Kunsthistorischen Museum in Wien."
   ],
-  "epilogue": "Ein späterer Teil kann weitere Bilder nachtragen.",
+  "epilogue": "Bruegel stirbt 1569 in Brüssel. Zwei der drei Bilder dieses Weges, der Turmbau und die Jäger im Schnee, hängen heute im Kunsthistorischen Museum in Wien.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [

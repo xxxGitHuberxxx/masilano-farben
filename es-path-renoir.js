@@ -15,17 +15,9 @@
   "National Museum Cardiff": "National Museum Cardiff, Cardiff"
 });
   P.works = Object.assign(P.works || {}, {
-  "rnmother": {
-    "title": "Retrato de la madre del artista",
-    "museum": "Colección privada"
-  },
   "rnfather": {
     "title": "Léonard Renoir, el padre del artista",
     "museum": "Saint Louis Art Museum"
-  },
-  "rnspringbouq": {
-    "title": "Ramo de primavera",
-    "museum": "Harvard Art Museums, Cambridge"
   },
   "rnvase66": {
     "title": "Flores en un jarrón",
@@ -316,26 +308,12 @@
 });
   var pt = P.pathTexts = P.pathTexts || {};
   var add = {
-  "rnmother": {
-    "text": [
-      "Marguerite Renoir, de soltera Merlet, era costurera.",
-      "El retrato se pinta solo hacia 1860, años después del traslado de Limoges a París, con colores oscuros y tranquilos de taller."
-    ],
-    "fact": "hacia 1860. Colección privada."
-  },
   "rnfather": {
     "text": [
       "Léonard Renoir era sastre.",
       "Este retrato de 1869 se pinta cuando el hijo ya trabaja por su cuenta. El padre aparece de perfil, firmemente modelado y sin la luz clara de los cuadros posteriores al aire libre."
     ],
     "fact": "1869. Saint Louis Art Museum."
-  },
-  "rnspringbouq": {
-    "text": [
-      "Este cuadro de flores de 1866 muestra con qué cuidado el joven Renoir ya colocaba telas y flores.",
-      "Bodegones así formaban parte del aprendizaje que había empezado como pintor de porcelana y en el taller."
-    ],
-    "fact": "1866. Harvard Art Museums, Cambridge."
   },
   "rnvase66": {
     "text": [
@@ -641,7 +619,7 @@
   "rncanotiers": {
     "text": [
       "En 1880–81 Renoir reúne a sus amigos en la terraza de la Maison Fournaise en Chatou.",
-      "El «Almuerzo de los remeros» es el gran cuadro final de esta primera parte y está en la Phillips Collection de Washington."
+      "El «Almuerzo de los remeros» es el gran cuadro de estos años y está en la Phillips Collection de Washington."
     ],
     "fact": "1880–1881. The Phillips Collection, Washington."
   },

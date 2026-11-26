@@ -199,7 +199,7 @@
     ],
     "fact": "Chailly-en-Bière se trouve au bord de la forêt, au sud de Paris. Monet revient plus tard souvent dans la nature aux portes de la ville.",
     "quote": {
-      "text": "Viens donc vite me rejoindre, la forêt est délicieuse.",
+      "text": "Venez donc vite me rejoindre, la forêt est délicieuse.",
       "cite": "Lettre à Frédéric Bazille, Chailly, 28 avril 1865"
     }
   },
@@ -237,13 +237,6 @@
       "Au Salon de 1865, le tableau est remarqué. Le jeune peintre du Havre compte soudain comme un espoir."
     ],
     "fact": "Honfleur se trouve en face de la ville natale, de l’autre côté de l’embouchure. Monet revient encore et encore à cette eau."
-  },
-  "greendress": {
-    "text": [
-      "Camille Doncieux porte une longue robe verte et regarde par-dessus l’épaule. En 1866, le tableau a du succès au Salon – sous le titre « Camille ».",
-      "La famille au Havre ne veut rien savoir de la liaison. Camille est modèle, compagne et bientôt la mère de son enfant."
-    ],
-    "fact": "Monet a 25 ans, Camille 19. La robe verte devient l’un des tableaux connus de leurs premières années ensemble."
   },
   "womengarden": {
     "text": [
@@ -453,13 +446,6 @@
       "Monet peint la maison non seulement de l’extérieur, mais les plates-bandes dans lesquelles la famille passe l’été."
     ],
     "fact": "Le tableau est accroché à la National Gallery of Art à Washington. Le jardin devient en ces années l’un de ses motifs les plus importants."
-  },
-  "hobbyhorse": {
-    "text": [
-      "Le petit Jean, en 1872 d’environ cinq ans, est assis fièrement sur un cheval bâton dans le jardin. Derrière lui, les plates-bandes et la haie.",
-      "Monet peint le fils sans pose, comme une part du quotidien à Argenteuil. C’est un tableau clair, presque privé."
-    ],
-    "fact": "Jean Monet vient au monde en 1867. Plus tard, à Giverny, lui et ses demi-frères et sœurs tiennent avec le père le ménage."
   },
   "autumneff": {
     "text": [
@@ -747,13 +733,6 @@
     ],
     "fact": "Le tableau de 1889 se trouve en collection privée."
   },
-  "ravincreuse": {
-    "text": [
-      "Les gorges de la Creuse conduisent le regard dans la profondeur, le fleuve brille comme un ruban. La vallée paraît fermée, presque sévère.",
-      "À Reims est accrochée l’une des versions les plus nettes de ce motif."
-    ],
-    "fact": "Le tableau de 1889 est accroché au Musée des Beaux-Arts à Reims."
-  },
   "creusegrey": {
     "text": [
       "Par temps gris, les maisons sur la Creuse gisent atténuées dans le coteau, la couleur recule, la forme demeure.",
@@ -956,7 +935,7 @@
     "fact": "Le tableau de 1899 est accroché à la National Gallery of Art à Washington.",
     "quote": {
       "text": "C’est un bassin d’eau que j’ai aménagé moi-même il y a une quinzaine d’années ; ce bassin d’environ 200 mètres de tour est alimenté par un bras de la rivière Epte ; il est bordé d’iris et de diverses plantes aquatiques, dans un cadre d’arbres différents, où toutefois les peupliers et les saules prédominent, dont plusieurs saules pleureurs. C’est précisément en ce lieu que j’ai déjà peint les nénuphars avec un pont de style japonais.",
-      "cite": "Lettre à Roger Marx, Giverny, 1 juin 1909"
+      "cite": "Lettre à Roger Marx, Giverny, 1er juin 1909 (Wildenstein, lettre 1893) ; Marx utilisa la réponse pour son article de la Gazette des Beaux-Arts, juin 1909"
     }
   },
   "lilybridge": {
@@ -993,13 +972,6 @@
       "En 1900, Monet ne peint pas seulement le jardin d’eau, mais aussi ce chemin à travers les fleurs – le jardin qu’il a lui-même planté."
     ],
     "fact": "Le tableau de 1900 est accroché à la Yale University Art Gallery à New Haven."
-  },
-  "grandeallee": {
-    "text": [
-      "La grande allée mène vers la maison, le chemin de gravier gît à l’ombre des arbres, au bord des fleurs s’épanouissent.",
-      "Le même axe que les visiteurs parcourent encore aujourd’hui, Monet le peint vers 1900 comme un tableau d’été silencieux."
-    ],
-    "fact": "Le tableau de 1900 est accroché au Musée des Beaux-Arts à Montréal."
   },
   "lilywl": {
     "text": [
@@ -1236,17 +1208,6 @@
       "De tels panneaux des années 1910 montrent l’étang sans pont et sans ciel – seulement de l’eau et des plantes."
     ],
     "fact": "Le tableau appartient à la série des nénuphars des années 1910."
-  },
-  "lilybs": {
-    "text": [
-      "Un reflet clair tombe en biais à travers l’étang, les nénuphars gisent au bord de la lumière, la rive reste dehors.",
-      "En 1921, Monet écrit à Arsène Alexandre que la galerie de l’Orangerie abritera pour toujours ses essais décoratifs. En mai 1927, après sa mort, les salles s’ouvrent."
-    ],
-    "fact": "Le tableau est accroché à l’Artizon Museum à Tokyo, l’ancienne collection Bridgestone.",
-    "quote": {
-      "text": "Ce sera la galerie de l’Orangerie qui abritera pour toujours mes essais décoratifs.",
-      "cite": "Lettre à Arsène Alexandre, Giverny, 13 novembre 1921"
-    }
   }
 };
   for (var k in add) if (Object.prototype.hasOwnProperty.call(add, k)) pt[k] = add[k];

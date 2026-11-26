@@ -87,10 +87,6 @@
     "title": "Ritratto di Emilie Flöge",
     "museum": "Collezione non determinata"
   },
-  "oleander": {
-    "title": "Due fanciulle all’oleandro",
-    "museum": "Legion of Honor, Fine Arts Museums of San Francisco"
-  },
   "hanswurst": {
     "title": "Hanswurst sul palcoscenico improvvisato di Rothenburg",
     "museum": "Collezione non determinata"
@@ -198,10 +194,6 @@
   "musik1901": {
     "title": "La Musica",
     "museum": "Collezione non determinata"
-  },
-  "hygieia": {
-    "title": "Igea (dettaglio della «Medicina»)",
-    "museum": "Fotografia storica; l’originale bruciò nel 1945 al castello di Immendorf"
   },
   "jurysketch": {
     "title": "Schizzo per la Giurisprudenza",
@@ -450,13 +442,6 @@
     ],
     "fact": "Olio, 1891. Collezione non determinata."
   },
-  "oleander": {
-    "text": [
-      "Due giovani donne stanno davanti a un oleandro, vicine l’una all’altra, in abiti scuri, lo sguardo sui fiori.",
-      "Il quadro risale a circa il 1890–1892. È esposto alla Legion of Honor, Fine Arts Museums of San Francisco."
-    ],
-    "fact": "Olio su tela, circa 1890–1892. Legion of Honor, San Francisco."
-  },
   "hanswurst": {
     "text": [
       "Su una piazza aperta il personaggio di Hanswurst recita davanti a una folla fitta: un teatro improvvisato all’aperto, con costumi e bandiere.",
@@ -653,13 +638,6 @@
       "L’opera risale al 1901, l’anno in cui la «Medicina» viene mostrata alla Secessione. Fa parte del lavoro ripetuto di Klimt sul tema della musica."
     ],
     "fact": "1901. Collezione non determinata."
-  },
-  "hygieia": {
-    "text": [
-      "Igea, dea della salute, sta in un abito rosso ornato d’oro, il serpente di Asclepio intorno al braccio, una coppa in mano. Lo sguardo esce calmo dal quadro.",
-      "Il dettaglio proviene dal quadro di facoltà «La Medicina», mostrato alla Secessione nel 1901 e accolto da una viva opposizione. L’originale brucia nel 1945 al castello di Immendorf, in Bassa Austria. Restano tra l’altro questa fotografia storica a colori."
-    ],
-    "fact": "Dettaglio de «La Medicina», 1900–1901. Fotografia storica; l’originale bruciò nel 1945 al castello di Immendorf."
   },
   "jurysketch": {
     "text": [

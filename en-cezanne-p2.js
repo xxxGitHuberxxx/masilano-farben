@@ -38,7 +38,7 @@
   },
   "czsvviaduct": {
     "title": "Montagne Sainte-Victoire and the Viaduct of the Arc River Valley",
-    "museum": "Collection not established"
+    "museum": "The Metropolitan Museum of Art, New York"
   },
   "czsvvalcros": {
     "title": "Montagne Sainte-Victoire and Viaduct from Valcros",
@@ -162,7 +162,7 @@
   },
   "czbibfolk": {
     "title": "The Bibémus Quarry",
-    "museum": "Collection not established"
+    "museum": "Museum Folkwang, Essen"
   },
   "czbibnelson": {
     "title": "Quarry at Bibémus",
@@ -224,10 +224,6 @@
     "title": "The Terrace at the Garden at Les Lauves",
     "museum": "Collection not established"
   },
-  "czcabanon": {
-    "title": "The Cabanon de Jourdan",
-    "museum": "Galleria Nazionale d’Arte Moderna, Rome"
-  },
   "czvallier": {
     "title": "The Gardener Vallier",
     "museum": "National Gallery of Art, Washington"
@@ -271,10 +267,10 @@
   },
   "cezannesv": {
     "place": "Montagne Sainte-Victoire",
-    "when": "1885–1897",
+    "when": "1882–1897",
     "mapLabel": "Sainte-Victoire",
     "intro": [
-      "East of Aix rises Montagne Sainte-Victoire. From the mid-1880s the mountain becomes a central motif for Cézanne: with the large pine in the foreground, with the viaduct in the Arc valley, from Valcros.",
+      "East of Aix rises Montagne Sainte-Victoire. From the 1880s on, the mountain becomes a central motif for Cézanne: with the large pine in the foreground, with the viaduct in the Arc valley, from Valcros.",
       "There are also views of the house at Bellevue with its pigeon tower, which belongs to his sister Rose and her husband Maxime Conil, and later the large pine over red earth.",
       "Cézanne returns to this mountain over two decades. Each version seeks the same form in a new order of colour and plane."
     ]
@@ -373,7 +369,7 @@
       "Trees stand close to the water; the bank, the foliage and the reflection are built in calm, firmly joined fields of colour.",
       "Around 1888 Cézanne works on the Marne, east of Paris. The picture now belongs to the Hermitage in St Petersburg."
     ],
-    "fact": "um 1888. The Hermitage, St Petersburg."
+    "fact": "c. 1888. The Hermitage, St Petersburg."
   },
   "czcreteil": {
     "text": [
@@ -394,21 +390,21 @@
       "Cézanne stands with the palette before the canvas, his gaze firm, the form of the head and shoulder in a few clear planes.",
       "The self-portrait dates from around 1890. It belongs to the E. G. Bührle Collection and hangs in the Kunsthaus Zürich."
     ],
-    "fact": "um 1890. E. G. Bührle Collection, Kunsthaus Zürich."
+    "fact": "c. 1890. E. G. Bührle Collection, Kunsthaus Zürich."
   },
   "czsvpine": {
     "text": [
       "In the foreground stands a large pine; beyond it Montagne Sainte-Victoire rises as a clear, calm form above the plain.",
       "Around 1887 the mountain east of Aix becomes a recurring motif. This version hangs in the Courtauld Gallery in London."
     ],
-    "fact": "um 1887. Courtauld Gallery, London."
+    "fact": "c. 1887. Courtauld Gallery, London."
   },
   "czsvviaduct": {
     "text": [
       "The viaduct of the Arc valley runs across the plain; above it Montagne Sainte-Victoire stands firm and light.",
-      "The picture dates from 1885–1887. Cézanne arranges plain, viaduct and mountain into a calm, built landscape."
+      "The picture dates from 1882–1885. Cézanne arranges plain, viaduct and mountain into a calm, built landscape."
     ],
-    "fact": "1885–1887. Collection not established."
+    "fact": "1882–1885. The Metropolitan Museum of Art, New York."
   },
   "czsvvalcros": {
     "text": [
@@ -422,7 +418,7 @@
       "The house and the round pigeon tower stand firm in the landscape; walls, roof and green are set in a few clear planes.",
       "Around 1890 Cézanne paints Bellevue, an estate west of Aix that belongs to his sister Rose and her husband Maxime Conil. The picture hangs in the Museum Folkwang in Essen."
     ],
-    "fact": "um 1890. Museum Folkwang, Essen."
+    "fact": "c. 1890. Museum Folkwang, Essen."
   },
   "czgrandpin": {
     "text": [
@@ -436,7 +432,7 @@
       "Two men sit at a small table and play cards, without either looking at the other. The figures and the table are built from calm, firm fields of colour.",
       "This version with two players dates from around 1894–1895. Farm workers from the family estate serve as models. The picture hangs in the Musée d’Orsay in Paris."
     ],
-    "fact": "um 1894–1895. Musée d’Orsay, Paris."
+    "fact": "c. 1894–1895. Musée d’Orsay, Paris."
   },
   "czcardmet": {
     "text": [
@@ -464,21 +460,21 @@
       "A peasant sits with folded arms, his gaze lowered, jacket and trousers in muted, firm tones.",
       "Around 1892 Cézanne paints this seated peasant. The picture hangs in the Metropolitan Museum of Art in New York."
     ],
-    "fact": "um 1892. Metropolitan Museum of Art, New York."
+    "fact": "c. 1892. Metropolitan Museum of Art, New York."
   },
   "czcoffee": {
     "text": [
       "A woman sits upright at the table, a coffeepot and a cup beside her; the pose is strict, the objects clear and firm.",
       "This portrait, probably of a domestic servant in Aix, dates from around 1895. It hangs in the Musée d’Orsay in Paris."
     ],
-    "fact": "um 1895. Musée d’Orsay, Paris."
+    "fact": "c. 1895. Musée d’Orsay, Paris."
   },
   "czmadred": {
     "text": [
       "Hortense sits in a red dress, her torso slightly turned, her gaze calm; the red stands firm against the built space.",
       "Around 1888–1890 Cézanne paints his wife in this red dress. The picture hangs in the Metropolitan Museum of Art in New York."
     ],
-    "fact": "um 1888–1890. Metropolitan Museum of Art, New York."
+    "fact": "c. 1888–1890. Metropolitan Museum of Art, New York."
   },
   "czconserv": {
     "text": [
@@ -499,7 +495,7 @@
       "Hortense wears a blue dress; the body is set firmly in the space, the background divided into calm bands.",
       "Cézanne paints this portrait around 1888–1890. It hangs in the Museum of Fine Arts, Houston."
     ],
-    "fact": "um 1888–1890. Museum of Fine Arts, Houston."
+    "fact": "c. 1888–1890. Museum of Fine Arts, Houston."
   },
   "czmadhat": {
     "text": [
@@ -513,7 +509,7 @@
       "Apples, a bottle, a pastry and a folded tablecloth: Cézanne sets everyday things so that they feel like a small, stable world.",
       "This basket of apples dates from around 1893. The slight tilt of the table is deliberate. The picture hangs in the Art Institute of Chicago."
     ],
-    "fact": "um 1893. Art Institute of Chicago."
+    "fact": "c. 1893. Art Institute of Chicago."
   },
   "czginger": {
     "text": [
@@ -534,7 +530,7 @@
       "Behind fruit, jug and cloth a patterned curtain falls; the fabric brings movement into the firmly built arrangement.",
       "This still life dates from around 1898. It belongs to the Hermitage in St Petersburg."
     ],
-    "fact": "um 1898. The Hermitage, St Petersburg."
+    "fact": "c. 1898. The Hermitage, St Petersburg."
   },
   "czonions": {
     "text": [
@@ -555,14 +551,14 @@
       "Four peaches lie on a plate; the round fruit and the simple dish are built with a few clear tones.",
       "This small still life dates from around 1890–1894. It belongs to the Barnes Foundation in Philadelphia."
     ],
-    "fact": "um 1890–1894. Barnes Foundation, Philadelphia."
+    "fact": "c. 1890–1894. Barnes Foundation, Philadelphia."
   },
   "czapplpeach": {
     "text": [
       "Apples and peaches lie in front of a jug and a cloth; the forms are ample, the colour glows calmly and densely.",
       "This still life dates from around 1905, in the last years. It hangs in the National Gallery of Art in Washington."
     ],
-    "fact": "um 1905. National Gallery of Art, Washington."
+    "fact": "c. 1905. National Gallery of Art, Washington."
   },
   "czgeffroy": {
     "text": [
@@ -590,7 +586,7 @@
       "A young woman leans at the table, her head resting on her hand; the fabric of the dress and the calm pose carry the picture.",
       "This portrait dates from around 1895–1900. It belongs to the J. Paul Getty Museum in Los Angeles."
     ],
-    "fact": "um 1895–1900. J. Paul Getty Museum, Los Angeles."
+    "fact": "c. 1895–1900. J. Paul Getty Museum, Los Angeles."
   },
   "czannecy": {
     "text": [
@@ -618,14 +614,14 @@
       "From the quarry the mountain appears above rocks and pines; the ochre edges lead the eye to the distant silhouette.",
       "Around 1897 Cézanne joins the Bibémus quarry with the Sainte-Victoire. The picture hangs in the Baltimore Museum of Art."
     ],
-    "fact": "um 1897. Baltimore Museum of Art."
+    "fact": "c. 1897. Baltimore Museum of Art."
   },
   "czbibfolk": {
     "text": [
       "High, yellowish rock faces open like an interior; above, the green of the trees closes the view.",
       "This view of the quarry dates from around 1895. In these years Cézanne keeps returning to Bibémus."
     ],
-    "fact": "um 1895. Collection not established."
+    "fact": "c. 1895. Museum Folkwang, Essen."
   },
   "czbibnelson": {
     "text": [
@@ -653,7 +649,7 @@
       "In the foreground stands a simple house; beyond it the Château Noir appears among trees; the path leads into the depth.",
       "This view dates from around 1895. The picture hangs in the Kimbell Art Museum in Fort Worth."
     ],
-    "fact": "um 1895. Kimbell Art Museum, Fort Worth."
+    "fact": "c. 1895. Kimbell Art Museum, Fort Worth."
   },
   "czcnmill": {
     "text": [
@@ -674,21 +670,21 @@
       "Among trunks and rocks lies the cistern; the darkness of the park and the light masonry hold one another in balance.",
       "This view into the park dates from around 1900. The picture belongs to the Princeton University Art Museum."
     ],
-    "fact": "um 1900. Princeton University Art Museum."
+    "fact": "c. 1900. Princeton University Art Museum."
   },
   "czcnview": {
     "text": [
       "The house appears among trees on the rise; the façade is light, the surroundings dense and green.",
       "Around 1887–1890, in an early version, Cézanne records the Château Noir. He will return to the place over many years."
     ],
-    "fact": "um 1887–1890. Collection not established."
+    "fact": "c. 1887–1890. Collection not established."
   },
   "czsvnoir": {
     "text": [
       "The Château Noir lies before the plain; above it stands the Sainte-Victoire; both forms are set sparely and firmly.",
       "Around 1890–1895 Cézanne joins the house with the mountain. The standpoint remains the country east of Aix."
     ],
-    "fact": "um 1890–1895. Collection not established."
+    "fact": "c. 1890–1895. Collection not established."
   },
   "czforestpath": {
     "text": [
@@ -713,14 +709,14 @@
       "From Les Lauves the mountain lies open above the plain; sky and slope pass into one another in broad, cool and warm bands.",
       "This late view dates from around 1904–1906. It hangs in the Pushkin Museum in Moscow."
     ],
-    "fact": "um 1904–1906. Pushkin Museum, Moscow."
+    "fact": "c. 1904–1906. Pushkin Museum, Moscow."
   },
   "czlvgarden": {
     "text": [
       "In the garden, trees and shrubs stand in open, luminous patches of colour; the space remains airy and not fully closed.",
       "Around 1906, in one of the last years, Cézanne paints the garden at the studio. The picture belongs to the Phillips Collection in Washington."
     ],
-    "fact": "um 1906. The Phillips Collection, Washington.",
+    "fact": "c. 1906. The Phillips Collection, Washington.",
     "quote": {
       "text": "Finally I will tell you that, as a painter, I am becoming more lucid in front of nature, but that for me the realization of my sensations is always very laborious. I cannot attain the intensity that unfolds to my senses; I do not have that magnificent richness of colour which animates nature.",
       "cite": "Letter to his son Paul, 8 September 1906."
@@ -739,13 +735,6 @@
       "In 1902–1906 Cézanne paints the terrace at the new studio he has had built north of Aix."
     ],
     "fact": "1902–1906. Collection not established."
-  },
-  "czcabanon": {
-    "text": [
-      "A small house stands under trees, the walls light, the roof firm, the foliage around it in open patches.",
-      "In 1906, in his last year, Cézanne paints the Cabanon de Jourdan on the edge of Aix. The picture hangs in the Galleria Nazionale d’Arte Moderna in Rome."
-    ],
-    "fact": "1906. Galleria Nazionale d’Arte Moderna, Rome."
   },
   "czvallier": {
     "text": [

@@ -1,0 +1,6 @@
+// Work titles (en) of path wolf (v10.43b), part of en-path-works-late.js.
+(function () {
+  var P = window.EN = window.EN || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"cwruine":{"title":"Rocky Landscape with Hunter and Castle Ruin","museum":"Private collection"},"cwbauernhof":{"title":"Landscape with Farmhouse","museum":"Location not recorded"},"cwgletscher":{"title":"The Lower Grindelwald Glacier","museum":"Kunst Museum Winterthur"},"cwsteg":{"title":"Wooden Bridge over the Lütschine","museum":"Kunst Museum Winterthur"},"cwlauteraar":{"title":"The Lauteraar Glacier","museum":"Kunstmuseum Basel"},"cwhoehle":{"title":"Rock Cave with Waterfall","museum":"Kunsthaus Zürich"},"cwseelisberg":{"title":"View from Seelisberg over Lake Uri","museum":"Private collection"},"cwmuota":{"title":"Bridge over the Muota near Schwyz","museum":"Private collection"},"cwrhone":{"title":"The Rhône near Gletsch","museum":"Private collection"},"cwgelten":{"title":"The Geltenschuss in the Lauenen Valley","museum":"National Gallery, London"},"cwseeberg":{"title":"View across Lake Seeberg","museum":"Private collection"},"cwbechburg":{"title":"Neu-Bechburg Castle near Oensingen","museum":"Private collection"}});
+})();

@@ -33,10 +33,6 @@
     "title": "El caballero dorado",
     "museum": "Museo Prefectural de Aichi, Nagoya"
   },
-  "goldapple": {
-    "title": "Manzano dorado",
-    "museum": "Fotografía histórica; el original se quemó en 1945 en el palacio de Immendorf"
-  },
   "birkforest": {
     "title": "Bosque de abedules",
     "museum": "Colección privada"
@@ -169,17 +165,9 @@
     "title": "Manzano II",
     "museum": "Colección no determinada"
   },
-  "malcesine": {
-    "title": "Malcesine en el lago de Garda",
-    "museum": "Fotografía histórica; el original se quemó en 1945 en el palacio de Immendorf"
-  },
   "cassone": {
     "title": "Iglesia de Cassone",
     "museum": "Colección privada"
-  },
-  "italygarden": {
-    "title": "Paisaje de jardín italiano",
-    "museum": "Kunsthaus Zug"
   },
   "unterach": {
     "title": "Casas en Unterach am Attersee",
@@ -229,10 +217,6 @@
     "title": "La bailarina",
     "museum": "Neue Galerie, Nueva York"
   },
-  "riamunk3": {
-    "title": "Retrato de Ria Munk III",
-    "museum": "Colección privada"
-  },
   "deathfig": {
     "title": "Muerte y vida (recorte: la Muerte)",
     "museum": "Leopold Museum, Viena"
@@ -256,10 +240,6 @@
   "ladyhead": {
     "title": "Cabeza de mujer",
     "museum": "LENTOS Kunstmuseum Linz"
-  },
-  "ladypiacenza": {
-    "title": "Retrato de una dama",
-    "museum": "Galleria d’Arte Moderna Ricci Oddi, Piacenza"
   },
   "ladywhite": {
     "title": "Dama de blanco",
@@ -314,7 +294,7 @@
     "mapLabel": "Flöge",
     "intro": [
       "El 1 de julio de 1904 Emilie, Helene y Pauline Flöge fundan el salón de moda «Schwestern Flöge» en la Casa Piccola de la Mariahilfer Strasse. Los espacios los diseñan Josef Hoffmann y Koloman Moser.",
-      "Los veranos Klimt sigue pasándolos con la familia Flöge en el Attersee. En 1909 viaja a España y escribe desde Toledo: «¡El Greco es magnífico!» En 1915 nace el retrato de Barbara, la madre de Emilie Flöge."
+      "Los veranos Klimt sigue pasándolos con la familia Flöge en el Attersee. En 1909 viaja a España y escribe desde Toledo: «¡También el Greco es magnífico!» En 1915 nace el retrato de Barbara, la madre de Emilie Flöge."
     ]
   },
   "klimtkammer": {
@@ -380,13 +360,6 @@
       "Cuelga en el Museo Prefectural de Aichi en Nagoya. La superficie dorada y la armadura ornamental pertenecen ya a la época posterior al viaje a Rávena."
     ],
     "fact": "Óleo, témpera y pan de oro sobre lienzo, 1903. Museo Prefectural de Aichi, Nagoya."
-  },
-  "goldapple": {
-    "text": [
-      "Un manzano se alza como un denso ornamento atravesado de oro sobre un fondo oscuro, los frutos como signos en forma de disco. El cuadro nace en 1903.",
-      "El original se quema en 1945 en el palacio de Immendorf, en Baja Austria, donde había sido evacuado. Se conserva, entre otras cosas, esta fotografía histórica."
-    ],
-    "fact": "Óleo y oro sobre lienzo, 1903. Fotografía histórica; el original se quemó en 1945 en el palacio de Immendorf."
   },
   "birkforest": {
     "text": [
@@ -550,12 +523,12 @@
   "featherboa": {
     "text": [
       "Una mujer con un gran sombrero y una boa de plumas mira de lado hacia fuera del cuadro, el rostro cercano y claro sobre un fondo oscuro. El retrato nace en 1909.",
-      "Se encuentra en colección privada. En el mismo año Klimt viaja a España y escribe desde Toledo a Emilie Flöge: «¡El Greco es magnífico!»"
+      "Se encuentra en colección privada. En el mismo año Klimt viaja a España y escribe desde Toledo a Emilie Flöge: «¡También el Greco es magnífico!»"
     ],
     "fact": "Óleo sobre lienzo, 1909. Colección privada.",
     "quote": {
-      "text": "¡El Greco es magnífico!",
-      "cite": "Postal a Emilie Flöge, Toledo, 1909"
+      "text": "He pensado en ti vivísimamente – estarías encantada conmigo. ¡También el Greco es magnífico!",
+      "cite": "Tarjeta a Emilie Flöge, Toledo, otoño de 1909"
     }
   },
   "barbarafloege": {
@@ -635,26 +608,12 @@
     ],
     "fact": "Óleo sobre lienzo, hacia 1916. Colección no determinada."
   },
-  "malcesine": {
-    "text": [
-      "El pueblo de Malcesine se alza en la orilla escarpada del lago de Garda, casas y cipreses sobre el agua, las montañas detrás. El cuadro nace en 1913, en un viaje al lago.",
-      "El original se quema en 1945 en el palacio de Immendorf, en Baja Austria. Se conserva, entre otras cosas, esta fotografía histórica."
-    ],
-    "fact": "Óleo sobre lienzo, 1913. Fotografía histórica; el original se quemó en 1945 en el palacio de Immendorf."
-  },
   "cassone": {
     "text": [
       "La iglesia de Cassone se alza sobre el lago de Garda, las casas del pueblo apretadas en torno a ella, el agua y las laderas en claros campos de color. El cuadro nace en 1913.",
       "Cassone está en la orilla este del lago, no lejos de Malcesine. El cuadro se encuentra en colección privada."
     ],
     "fact": "Óleo sobre lienzo, 1913. Colección privada."
-  },
-  "italygarden": {
-    "text": [
-      "Un jardín italiano aparece en densos arbustos, flores y caminos, sin una vista amplia. El cuadro nace en 1913, el año del viaje al lago de Garda.",
-      "Pertenece al Kunsthaus Zug. Como las piezas de jardín del Attersee, la vegetación se convierte en una alfombra ornamental."
-    ],
-    "fact": "Óleo sobre lienzo, 1913. Kunsthaus Zug."
   },
   "unterach": {
     "text": [
@@ -740,13 +699,6 @@
     ],
     "fact": "Óleo sobre lienzo, hacia 1916–1917. Neue Galerie, Nueva York."
   },
-  "riamunk3": {
-    "text": [
-      "Ria Munk aparece con un vestido florido ante un fondo denso y colorido; el retrato de 1917 queda inacabado. Maria («Ria») Munk muere en 1911, aún joven.",
-      "Después de su muerte Klimt pinta varios retratos, entre ellos este tardío e inacabado. Se encuentra en colección privada."
-    ],
-    "fact": "Óleo sobre lienzo, 1917, inacabado. Colección privada."
-  },
   "deathfig": {
     "text": [
       "La Muerte se alza como una figura delgada y oscura, con calavera y un patrón de cruces, la mirada dirigida a la otra mitad del cuadro. El recorte muestra solo esta figura de «Muerte y vida».",
@@ -789,13 +741,6 @@
     ],
     "fact": "Óleo sobre lienzo, 1917. LENTOS Kunstmuseum Linz."
   },
-  "ladypiacenza": {
-    "text": [
-      "Una dama con sombrero mira desde el cuadro, el rostro sereno, el fondo en tonos claros y quebrados. El retrato nace en 1917.",
-      "Pertenece a la Galleria d’Arte Moderna Ricci Oddi de Piacenza."
-    ],
-    "fact": "Óleo sobre lienzo, 1917. Galleria d’Arte Moderna Ricci Oddi, Piacenza."
-  },
   "ladywhite": {
     "text": [
       "Una mujer con un vestido blanco está sentada vuelta hacia el espectador, gran parte de la superficie permanece abierta. El retrato de los años 1917 a 1918 queda inacabado.",
@@ -804,7 +749,7 @@
     "fact": "Óleo sobre lienzo, hacia 1917–1918, inacabado. Österreichische Galerie Belvedere, Viena.",
     "quote": {
       "text": "…un saludo salido de lo más íntimo y [te] deseo un año nuevo de lo más, más feliz. – como los dos lo necesitamos con tanta urgencia.",
-      "cite": "Carta a Emilie Flöge, Winkelsdorf, 30 de diciembre de 1917"
+      "cite": "Tarjeta postal a Emilie Flöge, Winkelsdorf, 30 de diciembre de 1917"
     }
   }
 };

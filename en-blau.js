@@ -72,14 +72,14 @@
   EN.paths.blau = {
   "title": "Tina Blau’s Life Journey",
   "life": "1845–1916",
-  "part": "Part 1 · Spring in the Prater",
+  "part": "Spring in the Prater",
   "subtitle": "Vienna, Holland, Italy and light in the open air",
-  "intro": "Travel with Tina Blau, the Viennese landscape painter who worked in the open air when that was barely possible for women: from the first farmhouses, via Holland and Rome, to spring in the Prater and her studio in the Rotunde. Short stations and pictures to colour. This first part follows her through the light.",
+  "intro": "Travel with Tina Blau, the Viennese landscape painter who worked in the open air when that was barely possible for women: from the first farmhouses, via Holland and Rome, to spring in the Prater and her studio in the Rotunde. Short stations and pictures to colour. This path follows her through the light.",
   "ending": [
     "Tina Blau dies in Vienna on 31 October 1916. She brought the bright light of the open air to Viennese landscape painting.",
-    "The path can grow further. More journeys, gardens and town views may follow in a later part."
+    "From her years of training in Vienna, by way of Holland, Rome and Paris, the path keeps returning to the Prater, where she also has her studio."
   ],
-  "epilogue": "On 31 October 1916 Tina Blau dies in Vienna. A later part can add further journeys and gardens."
+  "epilogue": "Tina Blau dies in Vienna on 31 October 1916. She brought the bright light of the open air to Viennese landscape painting. From her years of training in Vienna, by way of Holland, Rome and Paris, the path keeps returning to the Prater, where she also has her studio."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "tbwien": {

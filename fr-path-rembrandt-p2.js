@@ -24,10 +24,6 @@
   "Eremitage, Sankt Petersburg": "Ermitage, Saint-Pétersbourg"
 });
   P.works = Object.assign(P.works || {}, {
-  "rbselfflat": {
-    "title": "Autoportrait au bonnet plat",
-    "museum": "Royal Collection, Londres"
-  },
   "rbadultery": {
     "title": "Le Christ et la femme adultère",
     "museum": "National Gallery, Londres"
@@ -224,10 +220,6 @@
     "title": "Frederick Rihel à cheval",
     "museum": "National Gallery, Londres"
   },
-  "rbjewishbr": {
-    "title": "La Fiancée juive",
-    "museum": "Rijksmuseum, Amsterdam"
-  },
   "rbfamily": {
     "title": "Portrait de famille",
     "museum": "Herzog Anton Ulrich-Museum, Brunswick"
@@ -381,12 +373,6 @@
 });
   var pt = P.pathTexts = P.pathTexts || {};
   var add = {
-  "rbselfflat": {
-    "text": [
-      "Rembrandt porte un bonnet plat et un vêtement brodé. Il se peint l’année de la Ronde de nuit. Le tableau est à la Royal Collection de Londres."
-    ],
-    "fact": "1642. Royal Collection, Londres."
-  },
   "rbadultery": {
     "text": [
       "Dans un immense temple doré, un petit groupe se tient dans la lumière devant le Christ. Rembrandt peint la scène avec une grande finesse. Le tableau est à la National Gallery de Londres."
@@ -680,12 +666,6 @@
       "Le marchand Frederick Rihel, en habit somptueux, monte un cheval blanc. C’est le seul grand portrait équestre de Rembrandt. Le tableau est à la National Gallery de Londres."
     ],
     "fact": "vers 1663. National Gallery, Londres."
-  },
-  "rbjewishbr": {
-    "text": [
-      "Un couple vêtu de rouge et d’or lumineux s’enlace avec tendresse. La peinture est si épaisse que les manches semblent presque sculptées. Le tableau est au Rijksmuseum d’Amsterdam ; la galerie le contient également."
-    ],
-    "fact": "vers 1665–1669. Rijksmuseum, Amsterdam."
   },
   "rbfamily": {
     "text": [

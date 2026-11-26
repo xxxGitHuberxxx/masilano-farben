@@ -13,17 +13,9 @@
   "Museu de Arte de São Paulo": "Museu de Arte de São Paulo, São Paulo"
 });
   P.works = Object.assign(P.works || {}, {
-  "rnmother": {
-    "title": "Portrait de la mère de l’artiste",
-    "museum": "Collection particulière"
-  },
   "rnfather": {
     "title": "Léonard Renoir, le père de l’artiste",
     "museum": "Saint Louis Art Museum"
-  },
-  "rnspringbouq": {
-    "title": "Bouquet de printemps",
-    "museum": "Harvard Art Museums, Cambridge"
   },
   "rnvase66": {
     "title": "Fleurs dans un vase",
@@ -314,26 +306,12 @@
 });
   var pt = P.pathTexts = P.pathTexts || {};
   var add = {
-  "rnmother": {
-    "text": [
-      "Marguerite Renoir, née Merlet, était couturière.",
-      "Le portrait n’est peint que vers 1860, des années après le départ de Limoges pour Paris, dans des couleurs d’atelier sombres et calmes."
-    ],
-    "fact": "vers 1860. Collection particulière."
-  },
   "rnfather": {
     "text": [
       "Léonard Renoir était tailleur.",
       "Ce portrait de 1869 est peint quand le fils travaille déjà seul. Le père est de profil, fermement modelé, sans la lumière claire des tableaux de plein air à venir."
     ],
     "fact": "1869. Saint Louis Art Museum."
-  },
-  "rnspringbouq": {
-    "text": [
-      "Ce tableau de fleurs de 1866 montre avec quel soin le jeune Renoir pose déjà étoffes et fleurs.",
-      "Ces natures mortes faisaient partie de l’apprentissage commencé comme peintre sur porcelaine et à l’atelier."
-    ],
-    "fact": "1866. Harvard Art Museums, Cambridge."
   },
   "rnvase66": {
     "text": [
@@ -639,7 +617,7 @@
   "rncanotiers": {
     "text": [
       "En 1880–81, Renoir réunit des amis sur la terrasse de la Maison Fournaise à Chatou.",
-      "Le « Déjeuner des canotiers » est le grand tableau final de cette première partie et se trouve à la Phillips Collection de Washington."
+      "Le « Déjeuner des canotiers » est le grand tableau de ces années et se trouve à la Phillips Collection de Washington."
     ],
     "fact": "1880–1881. The Phillips Collection, Washington."
   },

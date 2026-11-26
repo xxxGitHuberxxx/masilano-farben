@@ -60,12 +60,12 @@
   "schevwoman": {
     "text": [
       "Ya en Etten, Vincent dibuja a una mujer con el traje de Scheveningen, el pueblo de pescadores cerca de La Haya. Quizá la vio en una excursión, quizá la dibujó a partir de un modelo.",
-      "En el otoño de 1881 le pide matrimonio a Kee. Le dice que la quiere como a sí mismo. Su respuesta se la escribe a Theo con exactitud – en neerlandés, en tres palabras que no dejan duda."
+      "En el verano de 1881 se enamora de Kee y se lo confiesa: es como si ella fuera su prójimo y él el suyo. En noviembre se lo cuenta a Theo. Resume la negativa de Kee en tres palabras neerlandesas: «nooit neen nimmer» – nunca, no, jamás."
     ],
     "fact": "Kee Vos-Stricker era hija de un tío de Vincent, pastor en Ámsterdam, y ya viuda. No quiso la pretensión, y la familia se puso de su parte.",
     "quote": {
-      "text": "Y entonces ella dijo: nunca, no, jamás.",
-      "cite": "Carta 180, Etten, 7 de noviembre de 1881, a Theo"
+      "text": "Pero cuando se lo dije, me respondió que su pasado y su futuro seguían siendo uno para ella y que, por tanto, nunca podría corresponder a mis sentimientos.",
+      "cite": "Carta 179, Etten, 3 de noviembre de 1881, a Theo"
     }
   },
   "beermug": {
@@ -185,17 +185,6 @@
     ],
     "fact": "La oficina de la lotería del Estado era un motivo conocido de la pintura social. Vincent representa a los que esperan como grupo, no como «tipos» sueltos para reírse de ellos."
   },
-  "laundry": {
-    "text": [
-      "Una mujer extiende la ropa en un prado. Vida cotidiana, inclinarse, paños mojados, cielo amplio. Vincent permanece junto al trabajo de las mujeres que tiene ante los ojos en Sien y en sus vecinas.",
-      "En julio escribe a Theo que la formalidad de un matrimonio no hace de Sien su mujer. El vínculo ya existe: se aman, se entienden y se ayudan."
-    ],
-    "fact": "En julio de 1882 Sien dio a luz al hijo Willem. Vincent esperó un tiempo que los padres acabaran por aceptar la unión. Eso no ocurrió.",
-    "quote": {
-      "text": "No puedo decir otra cosa que: la he tomado por mujer – porque no es la formalidad de casarse lo que la hace mi mujer, sino un vínculo que ya existe: un sentimiento de que nos amamos, nos entendemos y nos ayudamos de una parte y de la otra.",
-      "cite": "Carta 244, Den Haag, 6 de julio de 1882, a Theo"
-    }
-  },
   "bulbfields": {
     "text": [
       "De pronto Holanda resplandece: cuadros de tulipanes y jacintos en bandas rectas, rosa, amarillo, azul, blanco, ante casas bajas bajo un cielo amplio. Vincent pinta los campos de los cultivadores de flores – uno de los cuadros más coloridos de sus años neerlandeses.",
@@ -248,17 +237,6 @@
       "La soledad roe. Se pregunta si Sien podría seguirlo, y suelta de nuevo el pensamiento. La vida en pareja, tal como era en La Haya, ya no le parece posible aquí."
     ],
     "fact": "«Cabañas» nació en 1883 en el Drenthe y pertenece al Van Gogh Museum. La línea baja del horizonte deja que el cielo ocupe casi la mitad del cuadro."
-  },
-  "twilightch": {
-    "text": [
-      "Una iglesia en el crepúsculo, un cielo amplio, poco más que sombra y luz. Una de las hojas más calladas del viaje.",
-      "Vincent siente que no puede seguir viviendo solo así por mucho tiempo. En diciembre camina bajo tormenta, lluvia y nieve por el brezal hasta Hoogeveen – y sigue viaje hacia los padres."
-    ],
-    "fact": "El cuadro capta el ánimo del Drenthe a finales de otoño: poco color, mucho cielo, un paisaje que puede llenarte por completo o dejarte del todo vacío.",
-    "quote": {
-      "text": "El Drenthe es grandioso, pero aguantar aquí depende de muchas cosas – de si se tiene el dinero para ello, y de si se resiste a la soledad.",
-      "cite": "Carta 409, Nuenen, hacia el 6 de diciembre de 1883, a Theo"
-    }
   },
   "drawbridge": {
     "text": [
@@ -366,7 +344,7 @@
     "text": [
       "Los comedores de patatas son la meta de todo este primer tramo del camino. Cinco personas se sientan bajo una lámpara en torno a un plato, los rostros son toscos, las manos pesadas, el color es el de la tierra y de las cáscaras de patata.",
       "Vincent ha estudiado todo el invierno las cabezas y las manos de los campesinos de Nuenen. No quiere un bello idilio familiar. Quiere que se vea quiénes son estas personas – y con qué han ganado su comida.",
-      "Con este cuadro se cierra la parte 1. Ante Vincent quedan Amberes, París, Arles, Saint-Rémy y Auvers. El color se hará más claro. Pero la actitud que aquí comienza no la suelta nunca del todo."
+      "Aquí terminan los años neerlandeses. Ante Vincent quedan Amberes, París, Arles, Saint-Rémy y Auvers. El color se hará más claro. Pero la actitud que aquí comienza no la suelta nunca del todo."
     ],
     "fact": "A principios de mayo de 1885 Vincent envía el cuadro a Theo a París. Sigue siendo su cuadro de figuras más importante de los años neerlandeses – y el comienzo de todo lo que viene después.",
     "quote": {
@@ -1398,10 +1376,10 @@
   },
   "olivepick": {
     "text": [
-      "Tres mujeres recogen aceitunas bajo los árboles, las copas como nubes amarillas y verdes. Vincent retoma la figura que a menudo le falta en el asilo.",
+      "Tres mujeres recogen aceitunas bajo los árboles, una de ellas subida a una escalera; las copas son verdes y azuladas, el cielo rosa pálido. Vincent retoma la figura que a menudo le falta en el asilo.",
       "A Bernard le escribe que la plata sobre un suelo naranja o violeta bajo el gran cielo azul apenas se ha hecho todavía – a diferencia de los manzanos o los sauces."
     ],
-    "fact": "El cuadro pertenece al Metropolitan Museum of Art de Nueva York y nace en diciembre de 1889.",
+    "fact": "Esta versión de 1889 pertenece a la National Gallery of Art de Washington. Otra versión del motivo se conserva en el Metropolitan Museum of Art de Nueva York.",
     "quote": {
       "text": "Los olivos de aquí, querido mío, eso sería algo para vosotros. […] Es plata sobre un suelo naranja o violeta bajo el gran cielo azul.",
       "cite": "Carta 809, Saint-Rémy, hacia el 8 de octubre de 1889, a Emile Bernard"

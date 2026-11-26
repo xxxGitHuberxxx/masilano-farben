@@ -83,15 +83,15 @@
   "name": "Koloman Moser",
   "title": "Koloman Mosers Lebensweg",
   "life": "1868–1918",
-  "part": "Teil 1 · Von der Secession zum Malen",
+  "part": "Von der Secession zum Malen",
   "subtitle": "Wien, Bildnisse, Blumen und der Wanderer",
   "cover": "kmwanderer",
-  "intro": "Reise mit Koloman Moser, dem Wiener der Secession und der Wiener Werkstätte, der sich später fest der Malerei zuwendet: von frühen Selbstbildnissen und Freundesporträts über Blumenstücke bis zu den Landschaften und «Der Wanderer». Kurze Stationen und Bilder zum Ausmalen. Dieser erste Teil folgt dem Maler Moser.",
+  "intro": "Reise mit Koloman Moser, dem Wiener der Secession und der Wiener Werkstätte, der sich später fest der Malerei zuwendet: von frühen Selbstbildnissen und Freundesporträts über Blumenstücke bis zu den Landschaften und «Der Wanderer». Kurze Stationen und Bilder zum Ausmalen. Dieser Weg folgt dem Maler Moser.",
   "ending": [
     "Koloman Moser stirbt am 18. Oktober 1918 in Wien, fünfzig Jahre alt. Hinter ihm liegen die Secession, die Wiener Werkstätte und ein eigenes malerisches Spätwerk.",
-    "Der Weg kann weiterwachsen. Weitere Entwürfe, angewandte Kunst und Landschaften können in einem späteren Teil folgen."
+    "Dieser Weg zeigt vor allem den Maler: Bildnisse, Blumen, Landschaften und den Wanderer seiner letzten Jahre."
   ],
-  "epilogue": "Am 18. Oktober 1918 stirbt Moser in Wien, fünfzig Jahre alt. Ein späterer Teil kann Entwürfe und weitere Landschaften nachtragen.",
+  "epilogue": "Koloman Moser stirbt am 18. Oktober 1918 in Wien, fünfzig Jahre alt. Hinter ihm liegen die Secession, die Wiener Werkstätte und ein eigenes malerisches Spätwerk. Dieser Weg zeigt vor allem den Maler: Bildnisse, Blumen, Landschaften und den Wanderer seiner letzten Jahre.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [
@@ -215,7 +215,7 @@
       "mapLabel": "Alpen",
       "intro": [
         "In den 1910er Jahren hält sich Moser wiederholt in der Westschweiz auf und malt Berge wie die Dents du Midi. «Der Wanderer» gibt der Figur den Ernst einer modernen Ikone.",
-        "Am 18. Oktober 1918 stirbt er in Wien, fünfzig Jahre alt. Ein späterer Teil kann Entwürfe und weitere Landschaften nachtragen."
+        "Am 18. Oktober 1918 stirbt er in Wien, fünfzig Jahre alt."
       ],
       "works": [
         {

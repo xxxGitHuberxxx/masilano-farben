@@ -15,7 +15,7 @@
       searchClear: 'Suche löschen',
       sourcesBtn: 'Bildquellen & Hinweise',
       privacyLink: 'Datenschutz',
-      version: 'Testversion 10.41',
+      version: 'Testversion 10.42',
       byline: 'von Masilano',
       back: 'Zurück',
       backGallery: 'Zurück zur Galerie',
@@ -76,7 +76,7 @@
       toGallery: 'Zur Galerie',
       resetPaint: 'Nochmals von vorne malen',
       sourcesTitle: 'Bildquellen',
-      sourcesBody: 'Alle Bilder stammen von Wikimedia Commons und sind gemeinfrei. Sie wurden für das Spiel automatisch in Farbfelder umgewandelt. Die Zitate aus Van Goghs Briefen hat Masilano selbst aus dem niederländischen oder französischen Original übersetzt (Nummer und Datum nach der Briefausgabe von 2009). Die Zitate aus Monets Briefen hat Masilano selbst aus dem französischen Original übersetzt (Empfänger und Datum nach Wildenstein). Dein Fortschritt wird nur auf diesem Gerät gespeichert.',
+      sourcesBody: "Die Bildvorlagen sind Reproduktionen von Gemälden und Drucken, deren Urheberrecht abgelaufen ist. Sie stammen von Wikimedia Commons oder direkt aus den Open-Access-Sammlungen der Museen; Herkunft und Lizenz jeder einzelnen Vorlage stehen in der Liste unten. Für das Spiel wurden sie automatisch in Farbfelder umgewandelt. Die Zitate aus Briefen sind eigene Übersetzungen aus dem Original (Van Gogh: Nummer und Datum nach der Briefausgabe von 2009; Monet: Empfänger und Datum nach Wildenstein). Dein Fortschritt wird auf diesem Gerät gespeichert. Nur wenn du freiwillig bei den Ranglisten mitmachst, werden zusätzlich die in der Datenschutzerklärung genannten Angaben übertragen.",
       close: 'Schliessen',
       easy: 'Leicht',
       medium: 'Mittel',
@@ -155,6 +155,7 @@
       mapAria: 'Karte der Stationen von Van Goghs Lebensweg',
       mapAriaPath: 'Karte der Stationen: {title}',
       allDone: 'Du hast alle {N} Bilder gemalt.',
+      pathLoadFail: 'Dieser Lebensweg konnte gerade nicht vollständig geladen werden. Bitte Verbindung prüfen und noch einmal öffnen.',
       museumWord: 'Museum',
       pathAria: 'Lebensweg: {title}',
       storyAria: 'Geschichten: {name}',
@@ -223,10 +224,6 @@
       musicVolAria: 'Lautstärke der Hintergrundmusik',
       musicSetTitle: 'Hintergrundmusik',
       musicSetBody: 'Leise Musik zum Lebensweg, wenn du sie einschaltest. Sie startet erst nach deiner Wahl und bleibt auf diesem Gerät gespeichert.',
-      narrate: 'Vorlesen',
-      narrateStop: 'Vorlesen beenden',
-      narrateAria: 'Text vorlesen',
-      narrateStationAria: 'Text dieser Station vorlesen',
       dailyKicker: 'Bild des Tages',
       dailyAria: 'Bild des Tages: {title}',
       dailyDone: 'Schon gemalt',
@@ -268,7 +265,7 @@
       searchClear: 'Clear search',
       sourcesBtn: 'Picture sources & notes',
       privacyLink: 'Privacy',
-      version: 'Test version 10.41',
+      version: 'Test version 10.42',
       byline: 'by Masilano',
       back: 'Back',
       backGallery: 'Back to the gallery',
@@ -329,7 +326,7 @@
       toGallery: 'To the gallery',
       resetPaint: 'Start this picture again',
       sourcesTitle: 'Picture sources',
-      sourcesBody: 'All pictures come from Wikimedia Commons and are in the public domain. They were automatically turned into colour fields for the game. Masilano translated the quotations from Van Gogh’s letters from the original Dutch or French (letter numbers and dates follow the 2009 edition). Masilano translated the quotations from Monet’s letters from the original French (recipient and date follow Wildenstein). Your progress is stored only on this device.',
+      sourcesBody: "The picture templates are reproductions of paintings and prints whose copyright has expired. They come from Wikimedia Commons or directly from museums’ open-access collections; the origin and licence of each template are listed below. They were automatically turned into colour fields for the game. Quotations from letters are our own translations from the original (Van Gogh: numbers and dates follow the 2009 edition of the letters; Monet: recipient and date follow Wildenstein). Your progress is stored on this device. Only if you choose to join the leaderboards is the information named in the privacy policy also transmitted.",
       close: 'Close',
       easy: 'Easy',
       medium: 'Medium',
@@ -408,6 +405,7 @@
       mapAria: 'Map of the stations in Van Gogh’s life journey',
       mapAriaPath: 'Map of the stations: {title}',
       allDone: 'You have coloured all {N} pictures.',
+      pathLoadFail: 'This life path could not be fully loaded just now. Please check your connection and open it again.',
       museumWord: 'Museum',
       pathAria: 'Life journey: {title}',
       storyAria: 'Stories: {name}',
@@ -476,10 +474,6 @@
       musicVolAria: 'Background music volume',
       musicSetTitle: 'Background music',
       musicSetBody: 'Soft music for the life path, if you turn it on. It starts only after you choose it, and the setting stays on this device.',
-      narrate: 'Read aloud',
-      narrateStop: 'Stop reading',
-      narrateAria: 'Read the text aloud',
-      narrateStationAria: 'Read this station’s text aloud',
       dailyKicker: 'Painting of the Day',
       dailyAria: 'Painting of the Day: {title}',
       dailyDone: 'Already coloured',
@@ -521,7 +515,7 @@
       searchClear: "Borrar búsqueda",
       sourcesBtn: "Fuentes e indicaciones",
       privacyLink: "Privacidad",
-      version: "Versión de prueba 10.41",
+      version: "Versión de prueba 10.42",
       byline: "de Masilano",
       back: "Atrás",
       backGallery: "Volver a la galería",
@@ -582,7 +576,7 @@
       toGallery: "A la galería",
       resetPaint: "Pintar de nuevo desde el principio",
       sourcesTitle: "Fuentes de las imágenes",
-      sourcesBody: "Todas las imágenes proceden de Wikimedia Commons y son de dominio público. Se convirtieron automáticamente en campos de color para el juego. Las citas de las cartas de Van Gogh las tradujo Masilano del original neerlandés o francés (números y fechas según la edición de las cartas de 2009). Las citas de las cartas de Monet las tradujo Masilano del original francés (destinatario y fecha según Wildenstein). Tu progreso se guarda solo en este dispositivo.",
+      sourcesBody: "Las plantillas son reproducciones de pinturas y grabados cuyos derechos de autor han expirado. Proceden de Wikimedia Commons o directamente de las colecciones de acceso abierto de los museos; el origen y la licencia de cada plantilla figuran en la lista de abajo. Para el juego se convirtieron automáticamente en campos de color. Las citas de cartas son traducciones propias del original (Van Gogh: números y fechas según la edición de las cartas de 2009; Monet: destinatario y fecha según Wildenstein). Tu progreso se guarda en este dispositivo. Solo si participas voluntariamente en las clasificaciones se transmiten además los datos indicados en la política de privacidad.",
       close: "Cerrar",
       easy: "Fácil",
       medium: "Medio",
@@ -661,6 +655,7 @@
       mapAria: "Mapa de las estaciones del camino de vida de Van Gogh",
       mapAriaPath: "Mapa de las estaciones: {title}",
       allDone: "Has pintado los {N} cuadros.",
+      pathLoadFail: "Este recorrido vital no se ha podido cargar por completo. Comprueba la conexión y vuelve a abrirlo.",
       museumWord: "Museo",
       pathAria: "Camino de vida: {title}",
       storyAria: "Historias: {name}",
@@ -736,10 +731,6 @@
       musicVolAria: 'Volumen de la música de fondo',
       musicSetTitle: 'Música de fondo',
       musicSetBody: 'Música suave para el itinerario, si la activas. Empieza solo cuando tú lo decides, y la elección se guarda en este dispositivo.',
-      narrate: 'Leer en voz alta',
-      narrateStop: 'Dejar de leer',
-      narrateAria: 'Leer el texto en voz alta',
-      narrateStationAria: 'Leer el texto de esta estación',
       dailyKicker: "Cuadro del día",
       dailyAria: "Cuadro del día: {title}",
       dailyDone: "Ya pintado",
@@ -774,7 +765,7 @@
       searchClear: "Effacer la recherche",
       sourcesBtn: "Sources et notes",
       privacyLink: "Confidentialité",
-      version: "Version d’essai 10.41",
+      version: "Version d’essai 10.42",
       byline: "par Masilano",
       back: "Retour",
       backGallery: "Retour à la galerie",
@@ -835,7 +826,7 @@
       toGallery: "Vers la galerie",
       resetPaint: "Recommencer ce tableau",
       sourcesTitle: "Sources des images",
-      sourcesBody: "Toutes les images proviennent de Wikimedia Commons et sont dans le domaine public. Elles ont été automatiquement transformées en cases de couleur pour le jeu. Masilano a traduit les citations des lettres de Van Gogh depuis l’original néerlandais ou français (numéros et dates selon l’édition des lettres de 2009). Masilano a traduit les citations des lettres de Monet depuis l’original français (destinataire et date selon Wildenstein). Tes progrès sont enregistrés uniquement sur cet appareil.",
+      sourcesBody: "Les modèles sont des reproductions de peintures et d’estampes dont les droits d’auteur ont expiré. Ils proviennent de Wikimedia Commons ou directement des collections en libre accès des musées ; l’origine et la licence de chaque modèle figurent dans la liste ci-dessous. Pour le jeu, ils ont été automatiquement transformés en cases de couleur. Les citations de lettres sont nos propres traductions de l’original (Van Gogh : numéros et dates selon l’édition des lettres de 2009 ; Monet : destinataire et date selon Wildenstein). Tes progrès sont enregistrés sur cet appareil. Seulement si tu participes volontairement aux classements, les données indiquées dans la politique de confidentialité sont aussi transmises.",
       close: "Fermer",
       easy: "Facile",
       medium: "Moyen",
@@ -914,6 +905,7 @@
       mapAria: "Carte des stations du parcours de vie de Van Gogh",
       mapAriaPath: "Carte des stations : {title}",
       allDone: "Tu as peint les {N} tableaux.",
+      pathLoadFail: "Ce parcours de vie n’a pas pu être entièrement chargé. Vérifie la connexion et ouvre-le à nouveau.",
       museumWord: "Musée",
       pathAria: "Parcours de vie : {title}",
       storyAria: "Récits : {name}",
@@ -989,10 +981,6 @@
       musicVolAria: 'Volume de la musique de fond',
       musicSetTitle: 'Musique de fond',
       musicSetBody: 'Une musique douce pour le parcours, si tu l’allumes. Elle ne démarre qu’après ton choix, et le réglage reste sur cet appareil.',
-      narrate: 'Lire à haute voix',
-      narrateStop: 'Arrêter la lecture',
-      narrateAria: 'Lire le texte à haute voix',
-      narrateStationAria: 'Lire le texte de cette station',
       dailyKicker: "Tableau du jour",
       dailyAria: "Tableau du jour : {title}",
       dailyDone: "Déjà peint",
@@ -1027,7 +1015,7 @@
       searchClear: "Cancella la ricerca",
       sourcesBtn: "Fonti e note",
       privacyLink: "Privacy",
-      version: "Versione di prova 10.41",
+      version: "Versione di prova 10.42",
       byline: "di Masilano",
       back: "Indietro",
       backGallery: "Torna alla galleria",
@@ -1088,7 +1076,7 @@
       toGallery: "Alla galleria",
       resetPaint: "Dipingere di nuovo da capo",
       sourcesTitle: "Fonti delle immagini",
-      sourcesBody: "Tutte le immagini provengono da Wikimedia Commons e sono di pubblico dominio. Sono state trasformate automaticamente in campi di colore per il gioco. Le citazioni dalle lettere di Van Gogh le ha tradotte Masilano dall’originale olandese o francese (numeri e date secondo l’edizione delle lettere del 2009). Le citazioni dalle lettere di Monet le ha tradotte Masilano dall’originale francese (destinatario e data secondo Wildenstein). I tuoi progressi sono salvati solo su questo dispositivo.",
+      sourcesBody: "I modelli sono riproduzioni di dipinti e stampe il cui diritto d’autore è scaduto. Provengono da Wikimedia Commons o direttamente dalle collezioni ad accesso aperto dei musei; l’origine e la licenza di ogni modello sono indicate nell’elenco qui sotto. Per il gioco sono stati trasformati automaticamente in campi di colore. Le citazioni dalle lettere sono traduzioni nostre dall’originale (Van Gogh: numeri e date secondo l’edizione delle lettere del 2009; Monet: destinatario e data secondo Wildenstein). I tuoi progressi sono salvati su questo dispositivo. Solo se partecipi volontariamente alle classifiche vengono trasmessi anche i dati indicati nell’informativa sulla privacy.",
       close: "Chiudi",
       easy: "Facile",
       medium: "Medio",
@@ -1167,6 +1155,7 @@
       mapAria: "Mappa delle stazioni del percorso di vita di Van Gogh",
       mapAriaPath: "Mappa delle stazioni: {title}",
       allDone: "Hai dipinto tutti i {N} quadri.",
+      pathLoadFail: "Questo percorso di vita non è stato caricato del tutto. Controlla la connessione e riaprilo.",
       museumWord: "Museo",
       pathAria: "Percorso di vita: {title}",
       storyAria: "Storie: {name}",
@@ -1242,10 +1231,6 @@
       musicVolAria: 'Volume della musica di sottofondo',
       musicSetTitle: 'Musica di sottofondo',
       musicSetBody: 'Musica lieve per il percorso, se la accendi. Parte solo dopo la tua scelta e resta salvata su questo dispositivo.',
-      narrate: 'Leggi ad alta voce',
-      narrateStop: 'Interrompi la lettura',
-      narrateAria: 'Leggi il testo ad alta voce',
-      narrateStationAria: 'Leggi il testo di questa stazione',
       dailyKicker: "Quadro del giorno",
       dailyAria: "Quadro del giorno: {title}",
       dailyDone: "Già dipinto",
@@ -1330,9 +1315,9 @@
   let lang = detect();
 
   const PATHTEXT_FILES = {
-    es: ['es-content.js', 'es-path-index.js', 'es-path-vangogh.js', 'es-path-monet.js', 'es-path-hokusai.js', 'es-path-klimt.js', 'es-path-klimt-p2.js', 'es-path-anker.js', 'es-path-anker-p2.js', 'es-path-hodler.js', 'es-path-hodler-p2.js', 'es-path-cezanne.js', 'es-path-cezanne-p2.js', 'es-path-hiroshige.js', 'es-path-hiroshige-p2.js', 'es-path-renoir.js', 'es-path-renoir-p2.js', 'es-path-pissarro.js', 'es-path-pissarro-p2.js', 'es-path-turner.js', 'es-path-turner-p2.js', 'es-path-rembrandt.js', 'es-path-rembrandt-p2.js', 'es-path-sisley.js', 'es-path-sisley-p2.js', 'es-path-friedrich.js', 'es-path-friedrich-p2.js', 'es-path-segantini.js', 'es-path-vallotton.js', 'es-path-giacometti.js', 'es-path-spitzweg.js', 'es-path-moser.js', 'es-path-zuend.js', 'es-path-calame.js', 'es-path-wolf.js', 'es-path-ancher.js', 'es-path-blau.js', 'es-path-koller.js', 'es-path-diday.js', 'es-path-schindler.js', 'es-path-egner.js', 'es-path-wisinger.js', 'es-path-marc.js', 'es-path-durer.js', 'es-path-macke.js', 'es-path-morisot.js', 'es-path-velazquez.js', 'es-path-degas.js', 'es-path-manet.js', 'es-path-munch.js', 'es-path-delacroix.js', 'es-path-goya.js', 'es-path-seurat.js', 'es-path-canaletto.js', 'es-path-wood.js', 'es-path-rousseau.js', 'es-path-whistler.js', 'es-path-vaneyck.js', 'es-path-millet.js', 'es-path-vermeer.js', 'es-path-constable.js', 'es-path-waterhouse.js', 'es-path-leonardo.js', 'es-path-cassatt.js', 'es-path-gauguin.js', 'es-path-klee.js', 'es-path-mondrian.js', 'es-path-bruegel.js', 'es-path-raffael.js', 'es-path-botticelli.js'],
-    fr: ['fr-content.js', 'fr-path-index.js', 'fr-path-vangogh.js', 'fr-path-monet.js', 'fr-path-hokusai.js', 'fr-path-klimt.js', 'fr-path-klimt-p2.js', 'fr-path-anker.js', 'fr-path-anker-p2.js', 'fr-path-hodler.js', 'fr-path-hodler-p2.js', 'fr-path-cezanne.js', 'fr-path-cezanne-p2.js', 'fr-path-hiroshige.js', 'fr-path-hiroshige-p2.js', 'fr-path-renoir.js', 'fr-path-renoir-p2.js', 'fr-path-pissarro.js', 'fr-path-pissarro-p2.js', 'fr-path-turner.js', 'fr-path-turner-p2.js', 'fr-path-rembrandt.js', 'fr-path-rembrandt-p2.js', 'fr-path-sisley.js', 'fr-path-sisley-p2.js', 'fr-path-friedrich.js', 'fr-path-friedrich-p2.js', 'fr-path-segantini.js', 'fr-path-vallotton.js', 'fr-path-giacometti.js', 'fr-path-spitzweg.js', 'fr-path-moser.js', 'fr-path-zuend.js', 'fr-path-calame.js', 'fr-path-wolf.js', 'fr-path-ancher.js', 'fr-path-blau.js', 'fr-path-koller.js', 'fr-path-diday.js', 'fr-path-schindler.js', 'fr-path-egner.js', 'fr-path-wisinger.js', 'fr-path-marc.js', 'fr-path-durer.js', 'fr-path-macke.js', 'fr-path-morisot.js', 'fr-path-velazquez.js', 'fr-path-degas.js', 'fr-path-manet.js', 'fr-path-munch.js', 'fr-path-delacroix.js', 'fr-path-goya.js', 'fr-path-seurat.js', 'fr-path-canaletto.js', 'fr-path-wood.js', 'fr-path-rousseau.js', 'fr-path-whistler.js', 'fr-path-vaneyck.js', 'fr-path-millet.js', 'fr-path-vermeer.js', 'fr-path-constable.js', 'fr-path-waterhouse.js', 'fr-path-leonardo.js', 'fr-path-cassatt.js', 'fr-path-gauguin.js', 'fr-path-klee.js', 'fr-path-mondrian.js', 'fr-path-bruegel.js', 'fr-path-raffael.js', 'fr-path-botticelli.js'],
-    it: ['it-content.js', 'it-path-index.js', 'it-path-vangogh.js', 'it-path-monet.js', 'it-path-hokusai.js', 'it-path-klimt.js', 'it-path-klimt-p2.js', 'it-path-anker.js', 'it-path-anker-p2.js', 'it-path-hodler.js', 'it-path-hodler-p2.js', 'it-path-cezanne.js', 'it-path-cezanne-p2.js', 'it-path-hiroshige.js', 'it-path-hiroshige-p2.js', 'it-path-renoir.js', 'it-path-renoir-p2.js', 'it-path-pissarro.js', 'it-path-pissarro-p2.js', 'it-path-turner.js', 'it-path-turner-p2.js', 'it-path-rembrandt.js', 'it-path-rembrandt-p2.js', 'it-path-sisley.js', 'it-path-sisley-p2.js', 'it-path-friedrich.js', 'it-path-friedrich-p2.js', 'it-path-segantini.js', 'it-path-vallotton.js', 'it-path-giacometti.js', 'it-path-spitzweg.js', 'it-path-moser.js', 'it-path-zuend.js', 'it-path-calame.js', 'it-path-wolf.js', 'it-path-ancher.js', 'it-path-blau.js', 'it-path-koller.js', 'it-path-diday.js', 'it-path-schindler.js', 'it-path-egner.js', 'it-path-wisinger.js', 'it-path-marc.js', 'it-path-durer.js', 'it-path-macke.js', 'it-path-morisot.js', 'it-path-velazquez.js', 'it-path-degas.js', 'it-path-manet.js', 'it-path-munch.js', 'it-path-delacroix.js', 'it-path-goya.js', 'it-path-seurat.js', 'it-path-canaletto.js', 'it-path-wood.js', 'it-path-rousseau.js', 'it-path-whistler.js', 'it-path-vaneyck.js', 'it-path-millet.js', 'it-path-vermeer.js', 'it-path-constable.js', 'it-path-waterhouse.js', 'it-path-leonardo.js', 'it-path-cassatt.js', 'it-path-gauguin.js', 'it-path-klee.js', 'it-path-mondrian.js', 'it-path-bruegel.js', 'it-path-raffael.js', 'it-path-botticelli.js']
+    es: ['es-content.js', 'es-path-index.js', 'es-path-vangogh.js', 'es-path-monet.js', 'es-path-hokusai.js', 'es-path-klimt.js', 'es-path-klimt-p2.js', 'es-path-anker.js', 'es-path-anker-p2.js', 'es-path-hodler.js', 'es-path-hodler-p2.js', 'es-path-cezanne.js', 'es-path-cezanne-p2.js', 'es-path-hiroshige.js', 'es-path-hiroshige-p2.js', 'es-path-renoir.js', 'es-path-renoir-p2.js', 'es-path-pissarro.js', 'es-path-pissarro-p2.js', 'es-path-turner.js', 'es-path-turner-p2.js', 'es-path-rembrandt.js', 'es-path-rembrandt-p2.js', 'es-path-sisley.js', 'es-path-sisley-p2.js', 'es-path-friedrich.js', 'es-path-friedrich-p2.js', 'es-path-segantini.js', 'es-path-vallotton.js', 'es-path-spitzweg.js', 'es-path-moser.js', 'es-path-zuend.js', 'es-path-calame.js', 'es-path-wolf.js', 'es-path-blau.js', 'es-path-koller.js', 'es-path-diday.js', 'es-path-schindler.js', 'es-path-wisinger.js', 'es-path-marc.js', 'es-path-durer.js', 'es-path-macke.js', 'es-path-morisot.js', 'es-path-velazquez.js', 'es-path-degas.js', 'es-path-manet.js', 'es-path-delacroix.js', 'es-path-goya.js', 'es-path-seurat.js', 'es-path-canaletto.js', 'es-path-rousseau.js', 'es-path-whistler.js', 'es-path-vaneyck.js', 'es-path-millet.js', 'es-path-vermeer.js', 'es-path-constable.js', 'es-path-waterhouse.js', 'es-path-leonardo.js', 'es-path-cassatt.js', 'es-path-gauguin.js', 'es-path-bruegel.js', 'es-path-raffael.js', 'es-path-church.js', 'es-path-homer.js', 'es-path-moran.js', 'es-path-bierstadt.js', 'es-path-kobke.js', 'es-path-kroyer.js', 'es-path-cole.js', 'es-path-harunobu.js', 'es-path-eckersberg.js', 'es-path-lundbye.js', 'es-path-caillebotte.js', 'es-path-inness.js', 'es-path-heade.js', 'es-path-sargent.js', 'es-path-corot.js', 'es-path-boudin.js', 'es-path-redon.js', 'es-path-courbet.js'],
+    fr: ['fr-content.js', 'fr-path-index.js', 'fr-path-vangogh.js', 'fr-path-monet.js', 'fr-path-hokusai.js', 'fr-path-klimt.js', 'fr-path-klimt-p2.js', 'fr-path-anker.js', 'fr-path-anker-p2.js', 'fr-path-hodler.js', 'fr-path-hodler-p2.js', 'fr-path-cezanne.js', 'fr-path-cezanne-p2.js', 'fr-path-hiroshige.js', 'fr-path-hiroshige-p2.js', 'fr-path-renoir.js', 'fr-path-renoir-p2.js', 'fr-path-pissarro.js', 'fr-path-pissarro-p2.js', 'fr-path-turner.js', 'fr-path-turner-p2.js', 'fr-path-rembrandt.js', 'fr-path-rembrandt-p2.js', 'fr-path-sisley.js', 'fr-path-sisley-p2.js', 'fr-path-friedrich.js', 'fr-path-friedrich-p2.js', 'fr-path-segantini.js', 'fr-path-vallotton.js', 'fr-path-spitzweg.js', 'fr-path-moser.js', 'fr-path-zuend.js', 'fr-path-calame.js', 'fr-path-wolf.js', 'fr-path-blau.js', 'fr-path-koller.js', 'fr-path-diday.js', 'fr-path-schindler.js', 'fr-path-wisinger.js', 'fr-path-marc.js', 'fr-path-durer.js', 'fr-path-macke.js', 'fr-path-morisot.js', 'fr-path-velazquez.js', 'fr-path-degas.js', 'fr-path-manet.js', 'fr-path-delacroix.js', 'fr-path-goya.js', 'fr-path-seurat.js', 'fr-path-canaletto.js', 'fr-path-rousseau.js', 'fr-path-whistler.js', 'fr-path-vaneyck.js', 'fr-path-millet.js', 'fr-path-vermeer.js', 'fr-path-constable.js', 'fr-path-waterhouse.js', 'fr-path-leonardo.js', 'fr-path-cassatt.js', 'fr-path-gauguin.js', 'fr-path-bruegel.js', 'fr-path-raffael.js', 'fr-path-church.js', 'fr-path-homer.js', 'fr-path-moran.js', 'fr-path-bierstadt.js', 'fr-path-kobke.js', 'fr-path-kroyer.js', 'fr-path-cole.js', 'fr-path-harunobu.js', 'fr-path-eckersberg.js', 'fr-path-lundbye.js', 'fr-path-caillebotte.js', 'fr-path-inness.js', 'fr-path-heade.js', 'fr-path-sargent.js', 'fr-path-corot.js', 'fr-path-boudin.js', 'fr-path-redon.js', 'fr-path-courbet.js'],
+    it: ['it-content.js', 'it-path-index.js', 'it-path-vangogh.js', 'it-path-monet.js', 'it-path-hokusai.js', 'it-path-klimt.js', 'it-path-klimt-p2.js', 'it-path-anker.js', 'it-path-anker-p2.js', 'it-path-hodler.js', 'it-path-hodler-p2.js', 'it-path-cezanne.js', 'it-path-cezanne-p2.js', 'it-path-hiroshige.js', 'it-path-hiroshige-p2.js', 'it-path-renoir.js', 'it-path-renoir-p2.js', 'it-path-pissarro.js', 'it-path-pissarro-p2.js', 'it-path-turner.js', 'it-path-turner-p2.js', 'it-path-rembrandt.js', 'it-path-rembrandt-p2.js', 'it-path-sisley.js', 'it-path-sisley-p2.js', 'it-path-friedrich.js', 'it-path-friedrich-p2.js', 'it-path-segantini.js', 'it-path-vallotton.js', 'it-path-spitzweg.js', 'it-path-moser.js', 'it-path-zuend.js', 'it-path-calame.js', 'it-path-wolf.js', 'it-path-blau.js', 'it-path-koller.js', 'it-path-diday.js', 'it-path-schindler.js', 'it-path-wisinger.js', 'it-path-marc.js', 'it-path-durer.js', 'it-path-macke.js', 'it-path-morisot.js', 'it-path-velazquez.js', 'it-path-degas.js', 'it-path-manet.js', 'it-path-delacroix.js', 'it-path-goya.js', 'it-path-seurat.js', 'it-path-canaletto.js', 'it-path-rousseau.js', 'it-path-whistler.js', 'it-path-vaneyck.js', 'it-path-millet.js', 'it-path-vermeer.js', 'it-path-constable.js', 'it-path-waterhouse.js', 'it-path-leonardo.js', 'it-path-cassatt.js', 'it-path-gauguin.js', 'it-path-bruegel.js', 'it-path-raffael.js', 'it-path-church.js', 'it-path-homer.js', 'it-path-moran.js', 'it-path-bierstadt.js', 'it-path-kobke.js', 'it-path-kroyer.js', 'it-path-cole.js', 'it-path-harunobu.js', 'it-path-eckersberg.js', 'it-path-lundbye.js', 'it-path-caillebotte.js', 'it-path-inness.js', 'it-path-heade.js', 'it-path-sargent.js', 'it-path-corot.js', 'it-path-boudin.js', 'it-path-redon.js', 'it-path-courbet.js']
   };
   const _scriptProm = {};
   const _pathTextProm = {};
@@ -1398,7 +1383,7 @@
       s.src = src;
       s.async = true;
       s.onload = () => { try { mergePackCopies(g); } catch (e) {} resolve(src); };
-      s.onerror = () => reject(new Error('Failed to load ' + src));
+      s.onerror = () => { delete _scriptProm[src]; try { s.remove(); } catch (e) {} reject(new Error('Failed to load ' + src)); };
       document.head.appendChild(s);
     });
     return _scriptProm[src];
@@ -1435,6 +1420,52 @@
       if (!pathDataReady()) throw new Error('Path data failed to load');
     }).catch(function (err) { _pathDataProm = null; throw err; });
     return _pathDataProm;
+  }
+
+  // v10.43: works of paths flagged lazyIndex are not in the eager index. Their metadata
+  // (and the titles of the current language) load here: for gallery, album, search and
+  // once after the first paint. Resolves immediately when there are no such works.
+  const _lateProm = {};
+  function ensureLateWorks(code) {
+    code = code || lang;
+    if (!(window.__lateWorkCount > 0)) return Promise.resolve(false);
+    const files = ['path-works-late.js'];
+    if (code !== 'de' && LANG_GLOBS[code]) files.push(code + '-path-works-late.js');
+    const key = files.join('|');
+    if (_lateProm[key]) return _lateProm[key];
+    _lateProm[key] = loadInOrder(files).then(function () { return true; })
+      .catch(function (err) { delete _lateProm[key]; throw err; });
+    return _lateProm[key];
+  }
+  // v10.43b: metadata for a few works (today's picture, the last painted work) without the whole
+  // late file: loads the per-path chunks idx/pw-<path>.js (+ idx/<lang>-pw-<path>.js) of their paths.
+  function ensureWorksFor(ids, code) {
+    code = code || lang;
+    if (!(window.__lateWorkCount > 0) || !ids || !ids.length) return Promise.resolve(false);
+    const have = {};
+    (window.PATH_WORKS || []).forEach(function (w) { if (w && w.id) have[w.id] = 1; });
+    const want = {};
+    ids.forEach(function (id) { if (id && !have[id]) want[id] = 1; });
+    const owners = [];
+    (window.PATHS || []).forEach(function (p) {
+      (p.stations || []).forEach(function (st) {
+        (st.works || []).forEach(function (w) {
+          if (want[w.pid]) { delete want[w.pid]; if (owners.indexOf(p.id) < 0) owners.push(p.id); }
+        });
+      });
+    });
+    const langLate = code !== 'de' && LANG_GLOBS[code] && _lateProm[['path-works-late.js', code + '-path-works-late.js'].join('|')];
+    const files = [];
+    owners.forEach(function (pid) {
+      if (!/^[a-z0-9_-]+$/i.test(pid)) return;
+      if (!window.__lateWorksReady) files.push('idx/pw-' + pid + '.js');
+      if (code !== 'de' && LANG_GLOBS[code] && !langLate) files.push('idx/' + code + '-pw-' + pid + '.js');
+    });
+    if (!files.length) return Promise.resolve(false);
+    return Promise.all(files.map(loadScriptOnce)).then(function () { return true; });
+  }
+  function lateWorksPending() {
+    return window.__lateWorkCount > 0 && !window.__lateWorksReady;
   }
 
   function enReady() {
@@ -1519,6 +1550,22 @@
 
   const _pathPackProm = {};
   const _pathPackReady = {};
+  const LABEL_FIELDS = ['title', 'part', 'subtitle', 'life'];
+  const _pathStub = {};
+  const _pathPartial = {};
+
+  function findPath(id) {
+    const list = window.PATHS || [];
+    for (let i = 0; i < list.length; i++) if (list[i] && list[i].id === id) return list[i];
+    return null;
+  }
+
+  // Replace the PATHS entry for id by obj (or append obj if there is none).
+  function swapPath(id, obj) {
+    evictPath(id);
+    if (!window.PATHS) window.PATHS = [];
+    window.PATHS.push(obj);
+  }
 
   function pathPackReady(id, code) {
     if (!id) return false;
@@ -1558,23 +1605,53 @@
       if (_pathPackReady[deKey]) return Promise.resolve(id);
       if (_pathPackProm[deKey]) return _pathPackProm[deKey];
       const order = (window.PATHS || []).map(function (p) { return p && p.id; });
-      evictPath(id);
+      // v10.42: if an earlier attempt failed half-way, continue with its partial pack (already-run
+      // scripts are not executed again); otherwise remember the index entry before evicting it.
+      if (_pathPartial[id]) swapPath(id, _pathPartial[id]);
+      else {
+        const cur = findPath(id);
+        if (cur && !_pathStub[id]) _pathStub[id] = cur;
+        evictPath(id);
+      }
       const files = pathPackFiles(id);
       _pathPackProm[deKey] = loadInOrder(files).then(function () {
+        delete _pathPartial[id];
         restoreOrder(order);
         markPackFull(id);
         _pathPackReady[deKey] = true;
         return id;
-      }).catch(function (err) { delete _pathPackProm[deKey]; throw err; });
+      }).catch(function (err) {
+        delete _pathPackProm[deKey];
+        // v10.42: never leave a half-loaded path (part-1 labels, «Dieser erste Teil …») in the menu:
+        // show the whole-life index entry again and keep the partial pack aside for the retry.
+        const partial = findPath(id);
+        if (partial && partial !== _pathStub[id]) _pathPartial[id] = partial;
+        if (_pathStub[id]) swapPath(id, _pathStub[id]);
+        restoreOrder(order);
+        throw err;
+      });
       return _pathPackProm[deKey];
     }
 
     _pathPackProm[langKey] = loadDe().then(function () {
       if (code === 'de') return id;
       const files = langPackFiles(id, code);
+      // v10.42: remember the menu label fields (from the language index: whole life path) so that a
+      // failed later pack never leaves a partial label such as «Parts 1–2 · 1856–1890» in the menu.
+      const LG = LANG_GLOBS[code];
+      const P0 = LG && window[LG] && window[LG].paths;
+      const before = {};
+      LABEL_FIELDS.forEach(function (k) { if (P0 && P0[id] && P0[id][k] !== undefined) before[k] = P0[id][k]; });
       return loadInOrder(files).then(function () {
         _pathPackReady[langKey] = true;
         return id;
+      }, function (err) {
+        const P = LG && window[LG] && window[LG].paths;
+        const c = P && P[id];
+        if (c && typeof c === 'object') {
+          LABEL_FIELDS.forEach(function (k) { if (before[k] !== undefined) c[k] = before[k]; else delete c[k]; });
+        }
+        throw err;
       });
     }).catch(function (err) { delete _pathPackProm[langKey]; throw err; });
     return _pathPackProm[langKey];
@@ -1752,8 +1829,16 @@
     return (P && P[bucket] && P[bucket][id]) || null;
   }
 
+  // v10.42: visible artist credit for works with two painters. The raw artist field stays
+  // unchanged (album, gallery filter and path assignment keep using it).
+  const WORK_ARTIST_CREDIT = {
+  };
   function loc(obj, field) {
     if (!obj) return '';
+    if (field === 'artist' && obj.id && WORK_ARTIST_CREDIT[obj.id] && obj.artist) {
+      const c = WORK_ARTIST_CREDIT[obj.id];
+      return c[lang] || c.de;
+    }
     if (lang !== 'de') {
       const P = contentPack();
       if (P && obj.id) {
@@ -1937,14 +2022,14 @@
       const val = lookup(k);
       if (val == null) return; // keep markup fallback; never paint a raw key
       if (k === 'appSubtitle') {
-        let n = 1953;
+        let n = 0;
         try {
           if (typeof window.__masilanoWorkCount === 'function') {
             const c = window.__masilanoWorkCount();
             if (c) n = c;
           }
         } catch (e) {}
-        el.textContent = t(k, { n: n });
+        if (n) el.textContent = t(k, { n: n }); // no count yet: keep the number-free markup text
         return;
       }
       el.textContent = val;
@@ -2130,7 +2215,8 @@
     get lang() { return lang; },
     t, loc, locStation, locPathWork, locChapter, sourceLine, citeEn, citeLoc, whenEn, whenLoc,
     applyStatic, hasKey, lookup, setLang, detect, dict, contentPack, closeLangMenus,
-    ensurePathTexts, pathTextsReady, PATHTEXT_FILES, ensurePathPack, pathPackReady, pathPackFiles, loadScriptOnce
+    ensurePathTexts, pathTextsReady, PATHTEXT_FILES, ensurePathPack, pathPackReady, pathPackFiles, loadScriptOnce,
+    ensureLateWorks, ensureWorksFor, lateWorksPending
   };
 
   if (document.readyState === 'loading') {

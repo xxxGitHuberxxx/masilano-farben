@@ -71,14 +71,14 @@
   P.paths.wisinger = {
   "title": "Il percorso di vita di Olga Wisinger-Florian",
   "life": "1844–1926",
-  "part": "Parte 1 · Fiori, viali e giardini",
+  "part": "Fiori, viali e giardini",
   "subtitle": "Da pianista a pittrice",
-  "intro": "Viaggia con Olga Wisinger-Florian, la pittrice viennese di fiori e giardini: dai primi quadri nel Salzkammergut, attraverso campi di papaveri e viali del Prater, fino a Venezia, Karlsbad ed Euxinograd sul mar Nero. Brevi tappe e quadri da colorare. Questa prima parte segue i suoi colori.",
+  "intro": "Viaggia con Olga Wisinger-Florian, la pittrice viennese di fiori e giardini: dai primi quadri nel Salzkammergut, attraverso campi di papaveri e viali del Prater, fino a Venezia, Karlsbad ed Euxinograd sul mar Nero. Brevi tappe e quadri da colorare. Questo percorso segue i suoi colori.",
   "ending": [
     "Olga Wisinger-Florian muore a Grafenegg, in Bassa Austria, il 27 febbraio 1926. La pianista è diventata una delle pittrici più note dell’Austria.",
-    "Il percorso può ancora crescere. Altri fiori e giardini potranno seguire in una parte successiva."
+    "Il percorso va dal bosco autunnale dei suoi inizi, attraverso cortili, viaggi e viali, fino ai meli in fiore del 1906."
   ],
-  "epilogue": "Il 27 febbraio 1926 Wisinger-Florian muore a Grafenegg. Una parte successiva potrà aggiungere altri quadri di fiori."
+  "epilogue": "Olga Wisinger-Florian muore a Grafenegg, in Bassa Austria, il 27 febbraio 1926. La pianista è diventata una delle pittrici più note dell’Austria. Il percorso va dal bosco autunnale dei suoi inizi, attraverso cortili, viaggi e viali, fino ai meli in fiore del 1906."
 };
   P.stations = Object.assign(P.stations || {}, {
   "owjung": {

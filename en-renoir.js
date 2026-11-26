@@ -7,17 +7,9 @@
   "Wallraf-Richartz-Museum, Köln": "Wallraf-Richartz-Museum, Cologne"
 });
   EN.works = Object.assign(EN.works || {}, {
-  "rnmother": {
-    "title": "Portrait of the Artist’s Mother",
-    "museum": "Private collection"
-  },
   "rnfather": {
     "title": "Léonard Renoir, the Artist’s Father",
     "museum": "Saint Louis Art Museum"
-  },
-  "rnspringbouq": {
-    "title": "Spring Bouquet",
-    "museum": "Harvard Art Museums, Cambridge"
   },
   "rnvase66": {
     "title": "Flowers in a Vase",
@@ -307,13 +299,6 @@
   }
 });
   EN.pathTexts = Object.assign(EN.pathTexts || {}, {
-  "rnmother": {
-    "text": [
-      "Marguerite Renoir, née Merlet, was a seamstress.",
-      "The portrait was painted only around 1860, years after the move from Limoges to Paris, in a dark, quiet studio palette."
-    ],
-    "fact": "c. 1860. Private collection."
-  },
   "rnfather": {
     "text": [
       "Léonard Renoir was a tailor.",
@@ -321,13 +306,6 @@
       "The father sits in profile, firmly modelled and without the bright light of the later outdoor pictures."
     ],
     "fact": "1869. Saint Louis Art Museum."
-  },
-  "rnspringbouq": {
-    "text": [
-      "This flower piece of 1866 shows how carefully the young Renoir already placed fabrics and blossoms.",
-      "Still lifes of this kind belonged to the training he had begun as a porcelain painter and in the studio."
-    ],
-    "fact": "1866. Harvard Art Museums, Cambridge."
   },
   "rnvase66": {
     "text": [
@@ -634,7 +612,7 @@
   "rncanotiers": {
     "text": [
       "In 1880–81 Renoir gathered friends on the terrace of the Maison Fournaise at Chatou.",
-      "The Luncheon of the Boating Party is the great closing picture of this first part and hangs in the Phillips Collection in Washington."
+      "The Luncheon of the Boating Party is the great picture of these years and hangs in the Phillips Collection in Washington."
     ],
     "fact": "1880–1881. The Phillips Collection, Washington."
   },

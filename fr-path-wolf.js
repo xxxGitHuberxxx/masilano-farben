@@ -26,10 +26,6 @@
     "title": "Passerelle sur la Lütschine",
     "museum": "Kunst Museum Winterthur"
   },
-  "cwstaubbach": {
-    "title": "La deuxième chute du Staubbach en hiver",
-    "museum": "Lieu non indiqué"
-  },
   "cwlauteraar": {
     "title": "Le glacier de l’Aar",
     "museum": "Kunstmuseum de Bâle"
@@ -67,14 +63,14 @@
   P.paths.wolf = {
   "title": "Le parcours de vie de Caspar Wolf",
   "life": "1735–1783",
-  "part": "Partie 1 · Le premier peintre des hautes Alpes",
+  "part": "Le premier peintre des hautes Alpes",
   "subtitle": "Glaciers, grottes et cascades",
-  "intro": "Voyage avec Caspar Wolf, de Muri en Argovie, l’un des premiers à peindre les hautes Alpes sur place : des premiers paysages aux glaciers de Grindelwald, aux grottes et aux cascades, jusqu’à la vallée de Lauenen. De courtes étapes et des tableaux à colorier. Cette première partie le suit dans la montagne.",
+  "intro": "Voyage avec Caspar Wolf, de Muri en Argovie, l’un des premiers à peindre les hautes Alpes sur place : des premiers paysages aux glaciers de Grindelwald, aux grottes et aux cascades, jusqu’à la vallée de Lauenen. De courtes étapes et des tableaux à colorier. Ce chemin le suit dans la montagne.",
   "ending": [
     "Caspar Wolf meurt à Heidelberg le 6 octobre 1783, à quarante-huit ans. Ses tableaux des hautes Alpes étaient très en avance sur leur temps.",
-    "Le chemin peut encore s’allonger. D’autres glaciers, ponts et vues pourront suivre dans une partie ultérieure."
+    "Le chemin mène de Muri, par Grindelwald et les glaciers des hautes Alpes, jusqu’au vallon de Lauenen et au Jura."
   ],
-  "epilogue": "Le 6 octobre 1783, Wolf meurt à Heidelberg. Une partie ultérieure pourra ajouter d’autres tableaux des Alpes."
+  "epilogue": "Caspar Wolf meurt à Heidelberg le 6 octobre 1783, à quarante-huit ans. Ses tableaux des hautes Alpes étaient très en avance sur leur temps. Le chemin mène de Muri, par Grindelwald et les glaciers des hautes Alpes, jusqu’au vallon de Lauenen et au Jura."
 };
   P.stations = Object.assign(P.stations || {}, {
   "cwmuri": {
@@ -152,13 +148,6 @@
       "Le voyage dans l’Oberland bernois offre à Wolf de nombreux motifs nouveaux."
     ],
     "fact": "1774. Kunst Museum Winterthur."
-  },
-  "cwstaubbach": {
-    "text": [
-      "Une cascade tombe d’une paroi rocheuse, entourée de glace et de neige. Wolf peint la vallée de Lauterbrunnen en hiver.",
-      "Presque aucun peintre avant lui n’avait montré les Alpes en cette saison."
-    ],
-    "fact": "vers 1775. Lieu non indiqué."
   },
   "cwlauteraar": {
     "text": [

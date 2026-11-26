@@ -210,10 +210,6 @@
     "title": "Flowers",
     "museum": "Dallas Museum of Art"
   },
-  "rnstraw": {
-    "title": "Still Life with Strawberries",
-    "museum": "Brooklyn Museum, New York"
-  },
   "rnanemones": {
     "title": "Anemones",
     "museum": "Barnes Foundation, Philadelphia"
@@ -721,13 +717,6 @@
       "The picture is in the Dallas Museum of Art."
     ],
     "fact": "c. 1915. Dallas Museum of Art."
-  },
-  "rnstraw": {
-    "text": [
-      "Strawberries on a cloth, painted quickly and warmly.",
-      "The picture is in the Brooklyn Museum."
-    ],
-    "fact": "1914. Brooklyn Museum, New York."
   },
   "rnanemones": {
     "text": [

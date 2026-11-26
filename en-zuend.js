@@ -62,14 +62,14 @@
   EN.paths.zuend = {
   "title": "Robert Zünd’s Life Journey",
   "life": "1827–1909",
-  "part": "Part 1 · Lucerne and the light of the fields",
+  "part": "Lucerne and the light of the fields",
   "subtitle": "Lakes, fields and oak woods",
-  "intro": "Travel with Robert Zünd, the landscape painter of Lucerne: from his years of study in Geneva, through the fields and lakes of central Switzerland, to the great oak and beech woods. Short stations and pictures to colour. This first part follows his path through the landscape.",
+  "intro": "Travel with Robert Zünd, the landscape painter of Lucerne: from his years of study in Geneva, through the fields and lakes of central Switzerland, to the great oak and beech woods. Short stations and pictures to colour. This path leads through the landscape.",
   "ending": [
     "Robert Zünd dies in Lucerne on 15 January 1909. All his life he painted the landscape of his home with great patience.",
-    "The path can grow further. More fields, woods and biblical landscapes may follow in a later part."
+    "The path leads from Mount Pilatus and Lake Lucerne through fields and great forests to the Reuss at Rathausen."
   ],
-  "epilogue": "On 15 January 1909 Zünd dies in Lucerne. A later part can add further woods and fields."
+  "epilogue": "Robert Zünd dies in Lucerne on 15 January 1909. All his life he painted the landscape of his home with great patience. The path leads from Mount Pilatus and Lake Lucerne through fields and great forests to the Reuss at Rathausen."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "rzjung": {

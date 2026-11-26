@@ -22,9 +22,9 @@
   "subtitle": "Dos retratos",
   "intro": "En Florencia y Milán, Leonardo busca la luz suave en los rostros. La dama del armiño y la Mona Lisa están entre los retratos más conocidos del mundo.",
   "ending": [
-    "Leonardo muere en Amboise en 1519. Una parte posterior puede añadir más estudios y cuadros."
+    "Leonardo muere en Amboise en 1519. Los dos retratos de este camino cuelgan hoy en Cracovia y en París."
   ],
-  "epilogue": "Una parte posterior puede añadir más estudios."
+  "epilogue": "Leonardo muere en Amboise en 1519. Los dos retratos de este camino cuelgan hoy en Cracovia y en París."
 };
   P.stations = Object.assign(P.stations || {}, {
   "leonardo1": {
@@ -36,4 +36,21 @@
     ]
   }
 });
+  // v10.42 pathTexts: work texts of the short path (were German fallback before).
+  P.pathTexts = Object.assign(P.pathTexts || {}, {
+    "ermine": {
+      "text": [
+        "La joven es Cecilia Gallerani, una dama culta de la corte de Milán.",
+        "El armiño en su brazo era un símbolo de pureza — y un juego de palabras con su nombre."
+      ],
+      "fact": "Leonardo trabajaba entonces para el duque Ludovico Sforza en Milán. Cecilia era una de las mujeres más inteligentes de aquella corte."
+    },
+    "monalisa": {
+      "text": [
+        "Una mujer está sentada ante un paisaje amplio, un tanto misterioso, y nos mira.",
+        "Su ligera sonrisa ha hecho famoso el cuadro en el mundo entero."
+      ],
+      "fact": "Leonardo se llevó el cuadro a Francia cuando fue a la corte del rey Francisco I. Por eso cuelga hoy en el Louvre y no en Italia."
+    }
+  });
 })();

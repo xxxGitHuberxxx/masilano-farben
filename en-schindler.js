@@ -70,14 +70,14 @@
   EN.paths.schindler = {
   "title": "Emil Jakob Schindler’s Life Journey",
   "life": "1842–1892",
-  "part": "Part 1 · Moods from Vienna to Sylt",
+  "part": "Moods from Vienna to Sylt",
   "subtitle": "Water meadows, mills and sea",
-  "intro": "Travel with Emil Jakob Schindler, the Viennese landscape painter of quiet moods: from the mountain streams of the Ramsau, through the Danube meadows and the Prater, to Plankenberg, the Adriatic and the sea at Sylt. Short stations and pictures to colour. This first part follows his light.",
+  "intro": "Travel with Emil Jakob Schindler, the Viennese landscape painter of quiet moods: from the mountain streams of the Ramsau, through the Danube meadows and the Prater, to Plankenberg, the Adriatic and the sea at Sylt. Short stations and pictures to colour. This path follows his light.",
   "ending": [
     "Emil Jakob Schindler dies in Westerland on Sylt on 9 August 1892. His pupils Marie Egner and Olga Wisinger-Florian carry his painting forward.",
-    "The path can grow further. More meadows and coasts may follow in a later part."
+    "The path leads from the mountain streams of his training years through the Prater, the river meadows and Plankenberg to the North Sea coast of Sylt."
   ],
-  "epilogue": "On 9 August 1892 Schindler dies on Sylt. A later part can add further mood pictures."
+  "epilogue": "Emil Jakob Schindler dies in Westerland on Sylt on 9 August 1892. His pupils Marie Egner and Olga Wisinger-Florian carry his painting forward. The path leads from the mountain streams of his training years through the Prater, the river meadows and Plankenberg to the North Sea coast of Sylt."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "sjjung": {

@@ -43,10 +43,6 @@
     "title": "Newcastle upon Tyne",
     "museum": "Tate, Londra"
   },
-  "turamsgate": {
-    "title": "Ramsgate",
-    "museum": "Tate, Londra"
-  },
   "tucologne": {
     "title": "Colonia, arrivo di un battello postale la sera",
     "museum": "Frick Collection, New York"
@@ -202,10 +198,6 @@
   "tulucerne": {
     "title": "Lucerna dal lago",
     "museum": "Morgan Library & Museum, New York"
-  },
-  "tuzurich": {
-    "title": "Un giorno di festa a Zurigo, all’alba, studio campione",
-    "museum": "Tate, Londra"
   },
   "turhinefall": {
     "title": "Le cascate del Reno a Sciaffusa",
@@ -379,12 +371,6 @@
       "Newcastle sorge sul Tyne, con campanili, fumo e navi. L’acquerello data da verso il 1823, per una serie di incisioni di porti inglesi. È alla Tate di Londra."
     ],
     "fact": "verso il 1823. Tate, Londra."
-  },
-  "turamsgate": {
-    "text": [
-      "Un veliero si fa strada nella tempesta verso il porto di Ramsgate; sulla riva sta il faro. L’acquerello data da verso il 1824, per la serie dei porti inglesi. È alla Tate di Londra."
-    ],
-    "fact": "verso il 1824. Tate, Londra."
   },
   "tucologne": {
     "text": [
@@ -619,12 +605,6 @@
       "Lucerna si stende alla luce della sera sul lago, con torri, mura e barche. L’acquerello data dal 1845. È alla Morgan Library & Museum di New York."
     ],
     "fact": "1845. Morgan Library & Museum, New York."
-  },
-  "tuzurich": {
-    "text": [
-      "All’alba la gente si affolla sulla riva della Limmat, a Zurigo; le torri si alzano nel cielo chiaro. Lo studio data da verso il 1845. È alla Tate di Londra."
-    ],
-    "fact": "verso il 1845. Tate, Londra."
   },
   "turhinefall": {
     "text": [

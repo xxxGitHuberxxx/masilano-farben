@@ -101,14 +101,6 @@
     "source": "Wikimedia Commons: «François Diday - Blick auf den Vierwaldstättersee und den Urirotstock vom Axenberg aus gesehen (1874).jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "fdsallanche",
-    "title": "Wasserfall der Sallanche",
-    "artist": "François Diday",
-    "year": "undatiert",
-    "museum": "Royal Collection",
-    "source": "Wikimedia Commons: «François Diday (1802-77) - Chute de la Sallanche - RCIN 406247 - Royal Collection.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "fdmontblanc",
     "title": "Der Mont-Blanc und die Arve von Sallanches aus",
     "artist": "François Diday",
@@ -123,15 +115,15 @@
   "name": "François Diday",
   "title": "François Didays Lebensweg",
   "life": "1802–1877",
-  "part": "Teil 1 · Genf und die Alpen",
+  "part": "Genf und die Alpen",
   "subtitle": "Seen, Wasserfälle und Gipfel",
   "cover": "fdbrunnen",
-  "intro": "Reise mit François Diday, dem Genfer Maler, der die Alpen zum grossen Thema der Schweizer Malerei machte: von Neapel über den Brienzersee und den Genfersee bis zu Handeck, Mürren und dem Mont-Blanc. Kurze Stationen und Bilder zum Ausmalen. Dieser erste Teil folgt ihm durch die Berge.",
+  "intro": "Reise mit François Diday, dem Genfer Maler, der die Alpen zum grossen Thema der Schweizer Malerei machte: von Neapel über den Brienzersee und den Genfersee bis zu Handeck, Mürren und dem Mont-Blanc. Kurze Stationen und Bilder zum Ausmalen. Dieser Weg folgt ihm durch die Berge.",
   "ending": [
     "François Diday stirbt am 28. November 1877 in Genf. Mit ihm beginnt die Genfer Schule der Alpenmalerei, die Calame und Zünd weitertragen.",
-    "Der Weg kann weiterwachsen. Weitere Seen und Gipfel können in einem späteren Teil folgen."
+    "Der Weg führt von Neapel und dem Brienzersee bis zum Mont-Blanc, den er von Sallanches aus malt."
   ],
-  "epilogue": "Am 28. November 1877 stirbt Diday in Genf. Ein späterer Teil kann weitere Alpenbilder nachtragen.",
+  "epilogue": "François Diday stirbt am 28. November 1877 in Genf. Mit ihm beginnt die Genfer Schule der Alpenmalerei, die Calame und Zünd weitertragen. Der Weg führt von Neapel und dem Brienzersee bis zum Mont-Blanc, den er von Sallanches aus malt.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [
@@ -313,14 +305,6 @@
         "Diday stirbt am 28. November 1877 in Genf."
       ],
       "works": [
-        {
-          "pid": "fdsallanche",
-          "text": [
-            "Der Wildbach der Sallanche stürzt über Felsen ins Tal. Das Bild gehört heute zur britischen Royal Collection.",
-            "Didays Alpenbilder sind auch ausserhalb der Schweiz begehrt."
-          ],
-          "fact": "undatiert. Royal Collection."
-        },
         {
           "pid": "fdmontblanc",
           "text": [

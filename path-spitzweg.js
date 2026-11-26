@@ -131,15 +131,15 @@
   "name": "Carl Spitzweg",
   "title": "Carl Spitzwegs Lebensweg",
   "life": "1808–1885",
-  "part": "Teil 1 · München und die Sonderlinge",
+  "part": "München und die Sonderlinge",
   "subtitle": "Vom Apotheker zum Maler des Biedermeier",
   "cover": "cspoet",
-  "intro": "Reise mit Carl Spitzweg, dem Münchner, der vom Apotheker zum Maler wird: von den Dachstuben des armen Poeten über Bücherwürmer, Kaktusfreunde und Nachtwächter bis zum Sonntagsspaziergang. Kurze Stationen und Bilder zum Ausmalen. Dieser erste Teil folgt den bekannten Genrebildern.",
+  "intro": "Reise mit Carl Spitzweg, dem Münchner, der vom Apotheker zum Maler wird: von den Dachstuben des armen Poeten über Bücherwürmer, Kaktusfreunde und Nachtwächter bis zum Sonntagsspaziergang. Kurze Stationen und Bilder zum Ausmalen. Dieser Weg folgt den bekannten Genrebildern.",
   "ending": [
     "Spitzweg stirbt am 23. September 1885 in München. Er bleibt unverheiratet und seinem leisen, genauen Humor treu.",
-    "Der Weg kann weiterwachsen. Weitere Reisen, Landschaften und späte Genrebilder können in einem späteren Teil folgen."
+    "Der Weg führt vom Apotheker, der Maler wird, über die Dachstuben und Sonderlinge bis zu den Sonntagsspaziergängen in Bayern."
   ],
-  "epilogue": "Am 23. September 1885 stirbt Spitzweg in München. Ein späterer Teil kann weitere Landschaften und Genrebilder nachtragen.",
+  "epilogue": "Spitzweg stirbt am 23. September 1885 in München. Er bleibt unverheiratet und seinem leisen, genauen Humor treu. Der Weg führt vom Apotheker, der Maler wird, über die Dachstuben und Sonderlinge bis zu den Sonntagsspaziergängen in Bayern.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [
@@ -327,7 +327,7 @@
       "mapLabel": "Sonntag",
       "intro": [
         "Der Sonntagsspaziergang und der Gang zur Kirche verbinden Gesellschaft und Landschaft. Spitzweg kennt den bürgerlichen Ritus und die weite bayerische Natur.",
-        "Er stirbt am 23. September 1885 in München. Ein späterer Teil kann Reisen und weitere Landschaften nachtragen."
+        "Er stirbt am 23. September 1885 in München."
       ],
       "works": [
         {

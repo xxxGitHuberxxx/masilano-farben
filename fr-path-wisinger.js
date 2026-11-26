@@ -71,14 +71,14 @@
   P.paths.wisinger = {
   "title": "Le parcours de vie d’Olga Wisinger-Florian",
   "life": "1844–1926",
-  "part": "Partie 1 · Fleurs, allées et jardins",
+  "part": "Fleurs, allées et jardins",
   "subtitle": "De pianiste à peintre",
-  "intro": "Voyage avec Olga Wisinger-Florian, la peintre viennoise des fleurs et des jardins : de ses premiers tableaux dans le Salzkammergut aux champs de coquelicots et aux allées du Prater, jusqu’à Venise, Karlsbad et Euxinograd au bord de la mer Noire. De courtes étapes et des tableaux à colorier. Cette première partie suit ses couleurs.",
+  "intro": "Voyage avec Olga Wisinger-Florian, la peintre viennoise des fleurs et des jardins : de ses premiers tableaux dans le Salzkammergut aux champs de coquelicots et aux allées du Prater, jusqu’à Venise, Karlsbad et Euxinograd au bord de la mer Noire. De courtes étapes et des tableaux à colorier. Ce chemin suit ses couleurs.",
   "ending": [
     "Olga Wisinger-Florian meurt à Grafenegg, en Basse-Autriche, le 27 février 1926. La pianiste est devenue l’une des femmes peintres les plus connues d’Autriche.",
-    "Le chemin peut encore s’allonger. D’autres fleurs et jardins pourront suivre dans une partie ultérieure."
+    "Le chemin mène de la forêt d’automne de ses débuts, par les fermes, les voyages et les allées, jusqu’aux pommiers en fleurs de 1906."
   ],
-  "epilogue": "Le 27 février 1926, Wisinger-Florian meurt à Grafenegg. Une partie ultérieure pourra ajouter d’autres tableaux de fleurs."
+  "epilogue": "Olga Wisinger-Florian meurt à Grafenegg, en Basse-Autriche, le 27 février 1926. La pianiste est devenue l’une des femmes peintres les plus connues d’Autriche. Le chemin mène de la forêt d’automne de ses débuts, par les fermes, les voyages et les allées, jusqu’aux pommiers en fleurs de 1906."
 };
   P.stations = Object.assign(P.stations || {}, {
   "owjung": {

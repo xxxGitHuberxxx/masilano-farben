@@ -33,10 +33,6 @@
     "title": "Le Chevalier d’or",
     "museum": "Musée préfectoral d’Aichi, Nagoya"
   },
-  "goldapple": {
-    "title": "Pommier d’or",
-    "museum": "Photographie historique ; l’original a brûlé en 1945 au château d’Immendorf"
-  },
   "birkforest": {
     "title": "Forêt de bouleaux",
     "museum": "Collection particulière"
@@ -169,17 +165,9 @@
     "title": "Pommier II",
     "museum": "Collection non déterminée"
   },
-  "malcesine": {
-    "title": "Malcesine au lac de Garde",
-    "museum": "Photographie historique ; l’original a brûlé en 1945 au château d’Immendorf"
-  },
   "cassone": {
     "title": "Église de Cassone",
     "museum": "Collection particulière"
-  },
-  "italygarden": {
-    "title": "Paysage de jardin italien",
-    "museum": "Kunsthaus Zug"
   },
   "unterach": {
     "title": "Maisons à Unterach am Attersee",
@@ -229,10 +217,6 @@
     "title": "La Danseuse",
     "museum": "Neue Galerie, New York"
   },
-  "riamunk3": {
-    "title": "Portrait de Ria Munk III",
-    "museum": "Collection particulière"
-  },
   "deathfig": {
     "title": "Mort et Vie (détail : la Mort)",
     "museum": "Leopold Museum, Vienne"
@@ -256,10 +240,6 @@
   "ladyhead": {
     "title": "Tête de femme",
     "museum": "LENTOS Kunstmuseum Linz"
-  },
-  "ladypiacenza": {
-    "title": "Portrait d’une dame",
-    "museum": "Galleria d’Arte Moderna Ricci Oddi, Piacenza"
   },
   "ladywhite": {
     "title": "Dame en blanc",
@@ -314,7 +294,7 @@
     "mapLabel": "Flöge",
     "intro": [
       "Le 1er juillet 1904, Emilie, Helene et Pauline Flöge fondent le salon de mode « Schwestern Flöge » dans la Casa Piccola de la Mariahilfer Strasse. Les espaces sont conçus par Josef Hoffmann et Koloman Moser.",
-      "Les étés, Klimt les passe encore avec la famille Flöge à l’Attersee. En 1909, il voyage en Espagne et écrit de Tolède : « El Greco est splendide ! » En 1915 naît le portrait de Barbara, la mère d’Emilie Flöge."
+      "Les étés, Klimt les passe encore avec la famille Flöge à l’Attersee. En 1909, il voyage en Espagne et écrit de Tolède : « Greco aussi est splendide ! » En 1915 naît le portrait de Barbara, la mère d’Emilie Flöge."
     ]
   },
   "klimtkammer": {
@@ -380,13 +360,6 @@
       "Il est accroché au Musée préfectoral d’Aichi à Nagoya. La surface d’or et l’armure ornementale appartiennent déjà au temps qui suit le voyage à Ravenne."
     ],
     "fact": "Huile, détrempe et feuille d’or sur toile, 1903. Musée préfectoral d’Aichi, Nagoya."
-  },
-  "goldapple": {
-    "text": [
-      "Un pommier se dresse comme un ornement dense traversé d’or sur un fond sombre, les fruits comme des signes en forme de disque. Le tableau naît en 1903.",
-      "L’original brûle en 1945 au château d’Immendorf, en Basse-Autriche, où il avait été mis à l’abri. Il reste, entre autres, cette photographie historique."
-    ],
-    "fact": "Huile et or sur toile, 1903. Photographie historique ; l’original a brûlé en 1945 au château d’Immendorf."
   },
   "birkforest": {
     "text": [
@@ -550,12 +523,12 @@
   "featherboa": {
     "text": [
       "Une femme au grand chapeau et au boa de plumes regarde de côté hors du tableau, le visage proche et clair sur un fond sombre. Le portrait naît en 1909.",
-      "Il se trouve en collection particulière. La même année, Klimt voyage en Espagne et écrit de Tolède à Emilie Flöge : « El Greco est splendide ! »"
+      "Il se trouve en collection particulière. La même année, Klimt voyage en Espagne et écrit de Tolède à Emilie Flöge : « Greco aussi est splendide ! »"
     ],
     "fact": "Huile sur toile, 1909. Collection particulière.",
     "quote": {
-      "text": "El Greco est splendide !",
-      "cite": "Carte postale à Emilie Flöge, Tolède, 1909"
+      "text": "J’ai pensé à toi très vivement – tu serais ravie avec moi. Greco aussi est splendide !",
+      "cite": "Carte à Emilie Flöge, Tolède, automne 1909"
     }
   },
   "barbarafloege": {
@@ -635,26 +608,12 @@
     ],
     "fact": "Huile sur toile, vers 1916. Collection non déterminée."
   },
-  "malcesine": {
-    "text": [
-      "Le bourg de Malcesine se tient sur la rive escarpée du lac de Garde, maisons et cyprès au-dessus de l’eau, les montagnes derrière. Le tableau naît en 1913, lors d’un voyage au lac.",
-      "L’original brûle en 1945 au château d’Immendorf, en Basse-Autriche. Il reste, entre autres, cette photographie historique."
-    ],
-    "fact": "Huile sur toile, 1913. Photographie historique ; l’original a brûlé en 1945 au château d’Immendorf."
-  },
   "cassone": {
     "text": [
       "L’église de Cassone se dresse au-dessus du lac de Garde, les maisons du village serrées autour d’elle, l’eau et les pentes en clairs champs de couleur. Le tableau naît en 1913.",
       "Cassone se trouve sur la rive est du lac, non loin de Malcesine. Le tableau se trouve en collection particulière."
     ],
     "fact": "Huile sur toile, 1913. Collection particulière."
-  },
-  "italygarden": {
-    "text": [
-      "Un jardin italien apparaît en buissons denses, fleurs et chemins, sans vaste vue. Le tableau naît en 1913, l’année du voyage au lac de Garde.",
-      "Il appartient au Kunsthaus Zug. Comme les pièces de jardin de l’Attersee, la végétation devient un tapis ornemental."
-    ],
-    "fact": "Huile sur toile, 1913. Kunsthaus Zug."
   },
   "unterach": {
     "text": [
@@ -740,13 +699,6 @@
     ],
     "fact": "Huile sur toile, vers 1916–1917. Neue Galerie, New York."
   },
-  "riamunk3": {
-    "text": [
-      "Ria Munk apparaît dans une robe fleurie devant un fond dense et coloré ; le portrait de 1917 reste inachevé. Maria (« Ria ») Munk meurt en 1911, encore jeune.",
-      "Après sa mort, Klimt peint plusieurs portraits, dont celui-ci, tardif et inachevé. Il se trouve en collection particulière."
-    ],
-    "fact": "Huile sur toile, 1917, inachevé. Collection particulière."
-  },
   "deathfig": {
     "text": [
       "La Mort se tient, figure mince et sombre, avec une tête de mort et un motif de croix, le regard tourné vers l’autre moitié du tableau. Le détail ne montre que cette figure de « Mort et Vie ».",
@@ -789,13 +741,6 @@
     ],
     "fact": "Huile sur toile, 1917. LENTOS Kunstmuseum Linz."
   },
-  "ladypiacenza": {
-    "text": [
-      "Une dame au chapeau regarde hors du tableau, le visage calme, le fond en tons clairs et rompus. Le portrait naît en 1917.",
-      "Il appartient à la Galleria d’Arte Moderna Ricci Oddi de Plaisance."
-    ],
-    "fact": "Huile sur toile, 1917. Galleria d’Arte Moderna Ricci Oddi, Piacenza."
-  },
   "ladywhite": {
     "text": [
       "Une femme en robe blanche est assise tournée vers le spectateur, de grandes parties de la surface restent ouvertes. Le portrait des années 1917 à 1918 reste inachevé.",
@@ -804,7 +749,7 @@
     "fact": "Huile sur toile, vers 1917–1918, inachevé. Österreichische Galerie Belvedere, Vienne.",
     "quote": {
       "text": "…une salutation sortie du plus intime, et [je] te souhaite une année nouvelle des plus, des plus heureuses. – comme nous en avons tous deux si urgemment besoin.",
-      "cite": "Lettre à Emilie Flöge, Winkelsdorf, 30 décembre 1917"
+      "cite": "Carte-correspondance à Emilie Flöge, Winkelsdorf, 30 décembre 1917"
     }
   }
 };

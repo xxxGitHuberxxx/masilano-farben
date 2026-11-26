@@ -14,14 +14,6 @@
     "source": "Wikimedia Commons: «Klimt - The Golden Knight, 1903.jpg», gemeinfrei (Public Domain)"
   },
   {
-    "id": "goldapple",
-    "title": "Goldener Apfelbaum",
-    "artist": "Gustav Klimt",
-    "year": "1903",
-    "museum": "Historische Fotografie; das Original verbrannte 1945 auf Schloss Immendorf",
-    "source": "Wikimedia Commons: «Klimt - Goldener Apfelbaum, 1903.jpg», gemeinfrei (Public Domain)"
-  },
-  {
     "id": "birkforest",
     "title": "Birkenwald",
     "artist": "Gustav Klimt",
@@ -270,28 +262,12 @@
     "source": "Wikimedia Commons: «Gustav Klimt 013.jpg», gemeinfrei (Public Domain)"
   },
   {
-    "id": "malcesine",
-    "title": "Malcesine am Gardasee",
-    "artist": "Gustav Klimt",
-    "year": "1913",
-    "museum": "Historische Fotografie; das Original verbrannte 1945 auf Schloss Immendorf",
-    "source": "Wikimedia Commons: «Gustav Klimt 042.jpg», gemeinfrei (Public Domain)"
-  },
-  {
     "id": "cassone",
     "title": "Kirche in Cassone",
     "artist": "Gustav Klimt",
     "year": "1913",
     "museum": "Privatbesitz",
     "source": "Wikimedia Commons: «Klimt - Kirche in Cassone - 1913.jpeg», gemeinfrei (Public Domain)"
-  },
-  {
-    "id": "italygarden",
-    "title": "Italienische Gartenlandschaft",
-    "artist": "Gustav Klimt",
-    "year": "1913",
-    "museum": "Kunsthaus Zug",
-    "source": "Wikimedia Commons: «Gustav Klimt, Italienische Gartenlandschaft, 1913.jpeg», gemeinfrei (Public Domain)"
   },
   {
     "id": "unterach",
@@ -390,14 +366,6 @@
     "source": "Wikimedia Commons: «Klimt - Tänzerin.jpg», gemeinfrei (Public Domain)"
   },
   {
-    "id": "riamunk3",
-    "title": "Bildnis Ria Munk III",
-    "artist": "Gustav Klimt",
-    "year": "1917, unvollendet",
-    "museum": "Privatbesitz",
-    "source": "Wikimedia Commons: «Portrait of Ria Munk III, by Gustav Klimt, 1917, unfinished, oil on canvas - California Palace of the Legion of Honor - San Francisco, CA - DSC02785.jpg», gemeinfrei (Public Domain)"
-  },
-  {
     "id": "deathfig",
     "title": "Tod und Leben (Ausschnitt: der Tod)",
     "artist": "Gustav Klimt",
@@ -446,20 +414,12 @@
     "source": "Wikimedia Commons: «Gustav Klimt Frauenkopf 1917.jpg», gemeinfrei (Public Domain)"
   },
   {
-    "id": "ladypiacenza",
-    "title": "Bildnis einer Dame",
-    "artist": "Gustav Klimt",
-    "year": "1917",
-    "museum": "Galleria d’Arte Moderna Ricci Oddi, Piacenza",
-    "source": "Wikimedia Commons: «Gustav-Klimt, Portrait of a Lady, 1917, Galleria d'Arte Moderna Ricci Oddi.jpg», gemeinfrei (Public Domain)"
-  },
-  {
     "id": "ladywhite",
     "title": "Dame in Weiss",
     "artist": "Gustav Klimt",
     "year": "um 1917–1918, unvollendet",
     "museum": "Österreichische Galerie Belvedere, Wien",
-    "source": "Wikimedia Commons: «Gustav Klimt - Dame in Weiss - 4286 - Österreichische Galerie Belvedere.jpg», gemeinfrei (Public Domain)"
+    "source": "Wikimedia Commons: Digitalisat der Österreichischen Galerie Belvedere, Inv. 4286, gemeinfrei (Public Domain)"
   }
 ];
   window.PATH_WORKS = (window.PATH_WORKS || []).concat(works);
@@ -496,14 +456,6 @@
           "Es hängt im Präfekturmuseum Aichi in Nagoya. Die goldene Fläche und die ornamentale Rüstung gehören schon zur Zeit nach der Reise nach Ravenna."
         ],
         "fact": "Öl, Tempera und Blattgold auf Leinwand, 1903. Präfekturmuseum Aichi, Nagoya."
-      },
-      {
-        "pid": "goldapple",
-        "text": [
-          "Ein Apfelbaum steht als dichtes, gold durchwirktes Ornament vor dunklem Grund, die Früchte wie scheibenförmige Zeichen. Das Bild entsteht 1903.",
-          "Das Original verbrennt 1945 auf Schloss Immendorf in Niederösterreich, wo es ausgelagert war. Erhalten bleibt unter anderem diese historische Aufnahme."
-        ],
-        "fact": "Öl und Gold auf Leinwand, 1903. Historische Aufnahme; Original 1945 auf Schloss Immendorf verbrannt."
       },
       {
         "pid": "birkforest",
@@ -569,8 +521,8 @@
         ],
         "fact": "Öl, Silber und Gold auf Leinwand, 1907. Neue Galerie, New York.",
         "quote": {
-          "text": "In Ravenna viel Armseliges – die Mosaiken von unerhörter Pracht.",
-          "cite": "Ansichtskarte an Emilie Flöge, Ravenna, 2. Dezember 1903"
+          "text": "…in Ravenna viel armseliges – die Mosaiken von unerhörter Pracht.",
+          "cite": "Postkarte an Emilie Flöge, Ravenna, 2. Dezember 1903"
         }
       },
       {
@@ -730,19 +682,19 @@
     "mapLabel": "Flöge",
     "intro": [
       "Am 1. Juli 1904 gründen Emilie, Helene und Pauline Flöge den Modesalon «Schwestern Flöge» in der Casa Piccola in der Mariahilfer Strasse. Die Räume gestalten Josef Hoffmann und Koloman Moser.",
-      "Die Sommer verbringt Klimt weiterhin mit der Familie Flöge am Attersee. 1909 reist er nach Spanien und schreibt von Toledo: «El Greco ist prachtvoll!» 1915 entsteht das Bildnis von Emilie Flöges Mutter Barbara."
+      "Die Sommer verbringt Klimt weiterhin mit der Familie Flöge am Attersee. 1909 reist er nach Spanien und schreibt von Toledo: «Auch Greco ist prachtvoll!» 1915 entsteht das Bildnis von Emilie Flöges Mutter Barbara."
     ],
     "works": [
       {
         "pid": "featherboa",
         "text": [
           "Eine Frau mit grossem Hut und Federboa blickt seitlich aus dem Bild, das Gesicht nah und hell vor dunklem Grund. Das Bildnis entsteht 1909.",
-          "Es befindet sich in Privatbesitz. Im selben Jahr reist Klimt nach Spanien und schreibt von Toledo an Emilie Flöge: «El Greco ist prachtvoll!»"
+          "Es befindet sich in Privatbesitz. Im selben Jahr reist Klimt nach Spanien und schreibt von Toledo an Emilie Flöge: «Auch Greco ist prachtvoll!»"
         ],
         "fact": "Öl auf Leinwand, 1909. Privatbesitz.",
         "quote": {
-          "text": "El Greco ist prachtvoll!",
-          "cite": "Ansichtskarte an Emilie Flöge, Toledo, 1909"
+          "text": "Habe lebhaftest an Dich gedacht – Du würdest entzückt sein mit mir. Auch Greco ist prachtvoll!",
+          "cite": "Karte an Emilie Flöge, Toledo, Herbst 1909"
         }
       },
       {
@@ -866,28 +818,12 @@
     ],
     "works": [
       {
-        "pid": "malcesine",
-        "text": [
-          "Der Ort Malcesine liegt am steilen Ufer des Gardasees, Häuser und Zypressen über dem Wasser, die Berge dahinter. Das Bild entsteht 1913, auf einer Reise an den See.",
-          "Das Original verbrennt 1945 auf Schloss Immendorf in Niederösterreich. Erhalten bleibt unter anderem diese historische Aufnahme."
-        ],
-        "fact": "Öl auf Leinwand, 1913. Historische Aufnahme; Original 1945 auf Schloss Immendorf verbrannt."
-      },
-      {
         "pid": "cassone",
         "text": [
           "Die Kirche von Cassone steht über dem Gardasee, die Häuser des Dorfes eng darum, das Wasser und die Hänge in klaren Farbflächen. Das Bild entsteht 1913.",
           "Cassone liegt am Ostufer des Sees, nicht weit von Malcesine. Das Bild befindet sich in Privatbesitz."
         ],
         "fact": "Öl auf Leinwand, 1913. Privatbesitz."
-      },
-      {
-        "pid": "italygarden",
-        "text": [
-          "Ein italienischer Garten erscheint in dichten Büschen, Blüten und Wegen, ohne weiten Ausblick. Das Bild entsteht 1913, im Jahr der Reise an den Gardasee.",
-          "Es gehört dem Kunsthaus Zug. Wie die Gartenstücke am Attersee wird die Vegetation zum ornamentalen Teppich."
-        ],
-        "fact": "Öl auf Leinwand, 1913. Kunsthaus Zug."
       }
     ]
   },
@@ -1016,14 +952,6 @@
           "Es gehört der Neuen Galerie in New York. Auch hier mischen sich figürliches Bildnis und flächiges Muster der späten Jahre."
         ],
         "fact": "Öl auf Leinwand, um 1916–1917. Neue Galerie, New York."
-      },
-      {
-        "pid": "riamunk3",
-        "text": [
-          "Ria Munk erscheint in einem blumigen Kleid vor einem dichten, bunten Grund; das Bildnis von 1917 bleibt unvollendet. Maria («Ria») Munk stirbt 1911, noch jung.",
-          "Klimt malt nach ihrem Tod mehrere Bildnisse, darunter dieses späte, unvollendete. Es befindet sich in Privatbesitz."
-        ],
-        "fact": "Öl auf Leinwand, 1917, unvollendet. Privatbesitz."
       }
     ]
   },
@@ -1106,14 +1034,6 @@
         "fact": "Öl auf Leinwand, 1917. LENTOS Kunstmuseum Linz."
       },
       {
-        "pid": "ladypiacenza",
-        "text": [
-          "Eine Dame mit Hut blickt aus dem Bild, das Gesicht ruhig, der Grund in gebrochenen, hellen Tönen. Das Bildnis entsteht 1917.",
-          "Es gehört der Galleria d’Arte Moderna Ricci Oddi in Piacenza."
-        ],
-        "fact": "Öl auf Leinwand, 1917. Galleria d’Arte Moderna Ricci Oddi, Piacenza."
-      },
-      {
         "pid": "ladywhite",
         "text": [
           "Eine Frau in einem weissen Kleid sitzt dem Betrachter zugewandt, grosse Teile der Fläche bleiben offen. Das Bildnis aus den Jahren 1917 bis 1918 bleibt unvollendet.",
@@ -1122,7 +1042,7 @@
         "fact": "Öl auf Leinwand, um 1917–1918, unvollendet. Österreichische Galerie Belvedere, Wien.",
         "quote": {
           "text": "…ein Gruss aus dem Innersten heraus und [ich] wünsche Dir ein aller allerglücklichstes Neujahr. – wie wir es Beide so dringendst brauchen.",
-          "cite": "Brief an Emilie Flöge, Winkelsdorf, 30. Dezember 1917"
+          "cite": "Korrespondenzkarte an Emilie Flöge, Winkelsdorf, 30. Dezember 1917"
         }
       }
     ]

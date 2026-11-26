@@ -132,14 +132,6 @@
     "source": "Wikimedia Commons: «Alfred Sisley - Le remorqueur, le Loing à Saint-Mammès - PPP739 - Musée des Beaux-Arts de la ville de Paris.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "sybemberg83",
-    "title": "Die Ufer des Loing bei Moret",
-    "artist": "Alfred Sisley",
-    "year": "1883",
-    "museum": "Fondation Bemberg, Toulouse",
-    "source": "Wikimedia Commons: «Bemberg Fondation - Les bords du loing vers Moret - Alfred Sisley 1883.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "sysablonspath",
     "title": "Ein Pfad in Les Sablons",
     "artist": "Alfred Sisley",
@@ -252,14 +244,6 @@
     "source": "Wikimedia Commons: «Le Chemin des Fontaines le matin en juin - Alfred Sisley - MAHG 1990-0052.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "sysepmorning",
-    "title": "Septembermorgen",
-    "artist": "Alfred Sisley",
-    "year": "um 1887",
-    "museum": "Musée des Beaux-Arts, Agen",
-    "source": "Wikimedia Commons: «(Agen) Matinée de septembre, vers 1887 - Alfred Sisley - Musée des Beaux-Arts d'Agen.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "sypontmia",
     "title": "Die Brücke von Moret",
     "artist": "Alfred Sisley",
@@ -274,14 +258,6 @@
     "year": "1888",
     "museum": "Museo Thyssen-Bornemisza, Madrid",
     "source": "Wikimedia Commons: «Un soir à Moret - Fin d'octobre.jpg», Public domain (gemeinfrei)"
-  },
-  {
-    "id": "sysunset88",
-    "title": "Moret bei Sonnenuntergang",
-    "artist": "Alfred Sisley",
-    "year": "1888",
-    "museum": "Cincinnati Art Museum",
-    "source": "Wikimedia Commons: «'Moret at Sunset' by Alfred Sisley, Cincinnati Art Museum.JPG», Public domain (gemeinfrei)"
   },
   {
     "id": "syriverview",
@@ -674,14 +650,6 @@
           "Am Ufer stehen Häuser und Bäume."
         ],
         "fact": "1883. Petit Palais, Paris."
-      },
-      {
-        "pid": "sybemberg83",
-        "text": [
-          "Der Loing glänzt unter einem hellen Himmel, am Ufer wachsen Bäume und Büsche.",
-          "In der Ferne sieht man Häuser."
-        ],
-        "fact": "1883. Fondation Bemberg, Toulouse."
       }
     ]
   },
@@ -844,13 +812,6 @@
         "fact": "1887. Musée d’art et d’histoire, Genf."
       },
       {
-        "pid": "sysepmorning",
-        "text": [
-          "Obstbäume stehen auf einer sonnigen Wiese, rechts ragt ein dunkler Baum ins Bild. 1888 kauft der französische Staat dieses Bild als erstes Werk von Sisley."
-        ],
-        "fact": "um 1887. Musée des Beaux-Arts, Agen."
-      },
-      {
         "pid": "sypontmia",
         "text": [
           "Die alte Steinbrücke spannt sich über den Loing, dahinter stehen Mühlen und die Kirche.",
@@ -865,14 +826,6 @@
           "Die Bäume am Ufer stehen schon dunkel."
         ],
         "fact": "1888. Museo Thyssen-Bornemisza, Madrid."
-      },
-      {
-        "pid": "sysunset88",
-        "text": [
-          "Die Stadt liegt am Fluss im warmen Abendlicht.",
-          "Kirche und Dächer zeichnen sich gegen den Himmel ab."
-        ],
-        "fact": "1888. Cincinnati Art Museum."
       },
       {
         "pid": "syriverview",

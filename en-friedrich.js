@@ -160,10 +160,6 @@
     "title": "Abbey in the Oakwood",
     "museum": "Alte Nationalgalerie, Berlin"
   },
-  "cfrainbow": {
-    "title": "Mountain Landscape with Rainbow",
-    "museum": "Museum Folkwang, Essen"
-  },
   "cfself10": {
     "title": "Self-Portrait",
     "museum": "Kupferstichkabinett, Berlin"
@@ -187,10 +183,6 @@
   "cfwinterlon": {
     "title": "Winter Landscape",
     "museum": "National Gallery, London"
-  },
-  "cfwinterchurch": {
-    "title": "Winter Landscape with Church",
-    "museum": "Museum of Art and Cultural History, Dortmund"
   },
   "cfcrosswood": {
     "title": "Cross in the Forest",
@@ -574,13 +566,6 @@
     ],
     "fact": "1809–1810. Alte Nationalgalerie, Berlin."
   },
-  "cfrainbow": {
-    "text": [
-      "A rainbow arches over a dark mountain.",
-      "In front a traveller sits on a rock."
-    ],
-    "fact": "c. 1810. Museum Folkwang, Essen."
-  },
   "cfself10": {
     "text": [
       "With beard and curls, Friedrich looks at us seriously and intently.",
@@ -622,13 +607,6 @@
       "In the mist behind, a Gothic church appears."
     ],
     "fact": "1811. National Gallery, London."
-  },
-  "cfwinterchurch": {
-    "text": [
-      "Fir trees stand in the snow, and a church rises from the haze behind them.",
-      "The picture is a companion to the winter landscape in London."
-    ],
-    "fact": "1811. Museum of Art and Cultural History, Dortmund."
   },
   "cfcrosswood": {
     "text": [

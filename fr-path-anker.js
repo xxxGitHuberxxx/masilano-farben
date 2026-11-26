@@ -33,10 +33,6 @@
     "title": "La leçon d’écriture III",
     "museum": "Collection privée"
   },
-  "imwald": {
-    "title": "Jeune fille endormie dans la forêt",
-    "museum": "Collection non déterminée"
-  },
   "huehner": {
     "title": "Fillette donnant à manger aux poules",
     "museum": "Musée d’art et d’histoire, Neuchâtel"
@@ -306,7 +302,7 @@
     "mapLabel": "Années 1880",
     "intro": [
       "Dans les années 1880, les enfants, les sœurs, les contes et la pièce à vivre restent les thèmes fixes : les deux sœurs, le Petit Chaperon rouge, une lectrice de Gotthelf, Mariette aux fraises, la fillette tricotant près du berceau, les premiers pas.",
-      "La famille passe encore l’hiver à Paris et l’été à Anet. En 1890, Anker renoncera à son domicile parisien. Les grands tableaux des années 1890 – et ce qui suit – appartiennent à la prochaine partie."
+      "La famille passe encore l’hiver à Paris et l’été à Anet. En 1890, Anker renoncera à son domicile parisien. Viennent ensuite les grands tableaux des années 1890."
     ]
   }
 });
@@ -317,11 +313,7 @@
       "Un jeune homme en redingote sombre, le front dégagé, le regard droit devant lui. Le dessin porte l’inscription « Sept. 1852 » : Albert Anker a vingt et un ans.",
       "Cette année-là, il étudie la théologie, d’abord à Berne, puis à Halle. Le Centre Albert Anker d’Anet conserve le dessin."
     ],
-    "fact": "Dessin, septembre 1852. Centre Albert Anker, Anet.",
-    "quote": {
-      "text": "Qu’est-ce que l’art ? En premier lieu, l’art ne consiste pas dans l’imitation, mais en deux points : premièrement, il faut se former un idéal dans ses représentations ; deuxièmement, il faut présenter cet idéal aux yeux de ses semblables, lui donner une forme qui devienne accessible à notre regard et à notre ouïe.",
-      "cite": "Lettre à Auguste Bachelin, 9 juin 1849. Centre Albert Anker, Anet."
-    }
+    "fact": "Dessin, septembre 1852. Centre Albert Anker, Anet."
   },
   "sonntag": {
     "text": [
@@ -350,13 +342,6 @@
       "Le tableau fait partie des leçons d’écriture de 1865. Pour « La leçon d’écriture » et « Jeune fille endormie dans la forêt », Anker reçoit en 1866 une médaille d’or au Salon de Paris."
     ],
     "fact": "Huile sur toile, 1865. Collection privée."
-  },
-  "imwald": {
-    "text": [
-      "Une jeune fille dort au pied d’un arbre, le bras contre un fagot de bois. Sa robe est simple, ses pieds nus, la forêt autour d’elle sombre et silencieuse.",
-      "Le tableau de 1865 est l’une des deux œuvres pour lesquelles Anker reçoit en 1866 une médaille d’or au Salon de Paris."
-    ],
-    "fact": "Huile sur toile, 1865. Collection non déterminée."
   },
   "huehner": {
     "text": [
@@ -545,11 +530,7 @@
       "Sur une place devant des maisons et des arbres, beaucoup d’enfants et d’adultes se tiennent debout et marchent. Certains sont accueillis, d’autres regardent.",
       "Le tableau de 1876 est accroché au Musée d’art et d’histoire de Neuchâtel. Il porte aussi un titre français qui évoque des orphelins d’Unterwald à Morat ; la scène elle-même est un accueil composé, non un récit de 1798."
     ],
-    "fact": "Huile sur toile, 1876. Musée d’art et d’histoire, Neuchâtel.",
-    "quote": {
-      "text": "Je viens de faire une esquisse dans une pharmacie. Il est possible qu’il n’en sorte rien, mais on fait ce qu’on peut...",
-      "cite": "À Madame Anker, Morat, 11 juillet 1876. Centre Albert Anker, Anet."
-    }
+    "fact": "Huile sur toile, 1876. Musée d’art et d’histoire, Neuchâtel."
   },
   "pelzmuetze": {
     "text": [
@@ -666,7 +647,7 @@
   "ersteschritte": {
     "text": [
       "Un enfant plus âgé tient un plus petit qui tente ses premiers pas. L’un va pieds nus, le petit porte des chaussures ; derrière eux se dresse un poêle de faïence.",
-      "Le tableau de 1888 clôt cette première partie : le quotidien d’une pièce à vivre, saisi peu avant que, dans les années 1890, Anker entreprenne de nouveau de grands tableaux d’école et de village."
+      "Le tableau de 1888 montre le quotidien d’une pièce à vivre, saisi peu avant que, dans les années 1890, Anker entreprenne de nouveau de grands tableaux d’école et de village."
     ],
     "fact": "Huile sur toile, 1888. Collection privée."
   }

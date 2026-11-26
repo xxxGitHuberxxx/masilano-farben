@@ -1,0 +1,6 @@
+// Work titles (fr) of path courbet (v10.43b), part of fr-path-works-late.js.
+(function () {
+  var P = window.FR = window.FR || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gcladies":{"title":"Les Demoiselles de village","museum":"Metropolitan Museum of Art, New York"},"gcbretonnerie":{"title":"La Bretonnerie dans l’Indre","museum":"National Gallery of Art, Washington"},"gccliffs":{"title":"Falaise au bord de la mer, petite plage, soleil levant","museum":"Art Institute of Chicago"},"gcblackrocks":{"title":"Les Roches noires à Trouville","museum":"National Gallery of Art, Washington"},"gccalm66":{"title":"Mer calme","museum":"National Gallery of Art, Washington"},"gccalm69":{"title":"La Mer calme","museum":"Metropolitan Museum of Art, New York"},"gchautepierre":{"title":"La Roche de Hautepierre","museum":"Art Institute of Chicago"},"gcbeach":{"title":"Plage en Normandie","museum":"National Gallery of Art, Washington"},"gcboats":{"title":"Barques sur la plage, Étretat","museum":"National Gallery of Art, Washington"}});
+})();

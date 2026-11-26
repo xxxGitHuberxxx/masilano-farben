@@ -1,0 +1,6 @@
+// Work titles (en) of path heade (v10.43b), part of en-path-works-late.js.
+(function () {
+  var P = window.EN = window.EN || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"mhthunder":{"title":"Approaching Thunder Storm","museum":"Metropolitan Museum of Art, New York"},"mhwineglass":{"title":"Still Life with Wine Glass","museum":"National Gallery of Art, Washington"},"mhroses":{"title":"Roses and Heliotrope in a Vase on a Marble Tabletop","museum":"National Gallery of Art, Washington"},"mhrio":{"title":"Rio de Janeiro Bay","museum":"National Gallery of Art, Washington"},"mhcattleya":{"title":"Cattleya Orchid and Three Hummingbirds","museum":"National Gallery of Art, Washington"},"mhorchid":{"title":"Orchid Blossoms","museum":"Cleveland Museum of Art"},"mhjudith":{"title":"Point Judith, Rhode Island","museum":"Cleveland Museum of Art"},"mhyork":{"title":"York Harbor, Coast of Maine","museum":"Art Institute of Chicago"},"mhapplevase":{"title":"Apple Blossoms in a Vase","museum":"National Gallery of Art, Washington"},"mhapple":{"title":"Apple Blossoms","museum":"Cleveland Museum of Art"},"mhhumapple":{"title":"Hummingbird and Apple Blossoms","museum":"Metropolitan Museum of Art, New York"}});
+})();

@@ -58,10 +58,6 @@
     "title": "Costa marina a la luz de la luna",
     "museum": "Museo del Louvre, París"
   },
-  "cfsunsetwoman": {
-    "title": "Mujer ante el sol poniente",
-    "museum": "Museum Folkwang, Essen"
-  },
   "cfwindow": {
     "title": "Mujer en la ventana",
     "museum": "Alte Nationalgalerie, Berlín"
@@ -78,10 +74,6 @@
     "title": "Paisaje de los Montes de los Gigantes con niebla ascendente",
     "museum": "Colecciones Estatales de Pintura de Baviera, Múnich"
   },
-  "cfdriftingcloud": {
-    "title": "Nubes pasajeras",
-    "museum": "Hamburger Kunsthalle"
-  },
   "cfmistbank": {
     "title": "Jirones de niebla",
     "museum": "Hamburger Kunsthalle"
@@ -93,14 +85,6 @@
   "cfgreifharbour2": {
     "title": "El puerto de Greifswald",
     "museum": "Alte Nationalgalerie, Berlín"
-  },
-  "cfgreifmeadows": {
-    "title": "Prados cerca de Greifswald",
-    "museum": "Hamburger Kunsthalle"
-  },
-  "cfflatland": {
-    "title": "Paisaje llano",
-    "museum": "Fundación de Palacios y Jardines Prusianos, Berlín"
   },
   "cfwindmills": {
     "title": "Paisaje con molinos",
@@ -137,14 +121,6 @@
   "cfice": {
     "title": "El mar de hielo",
     "museum": "Hamburger Kunsthalle"
-  },
-  "cfnorthmoon": {
-    "title": "Mar del norte a la luz de la luna",
-    "museum": "Galería Nacional de Praga"
-  },
-  "cfreef": {
-    "title": "Arrecife rocoso en la orilla del mar",
-    "museum": "Staatliche Kunsthalle Karlsruhe"
   },
   "cfmoonmen": {
     "title": "Dos hombres contemplando la luna",
@@ -433,13 +409,6 @@
     ],
     "fact": "1818. Museo del Louvre, París."
   },
-  "cfsunsetwoman": {
-    "text": [
-      "Una mujer está de pie en un camino y abre levemente los brazos ante el sol bajo.",
-      "Todo el paisaje brilla en amarillo y naranja cálidos."
-    ],
-    "fact": "hacia 1818. Museum Folkwang, Essen."
-  },
   "cfwindow": {
     "text": [
       "Caroline está en el taller vacío junto a la ventana abierta y mira hacia el Elba.",
@@ -468,13 +437,6 @@
     ],
     "fact": "hacia 1819. Colecciones Estatales de Pintura de Baviera, Múnich."
   },
-  "cfdriftingcloud": {
-    "text": [
-      "Nubes densas pasan sobre una meseta verde y casi ocultan las cumbres.",
-      "Un pequeño lago refleja la luz fría."
-    ],
-    "fact": "hacia 1820. Hamburger Kunsthalle."
-  },
   "cfmistbank": {
     "text": [
       "Un paisaje llano se extiende bajo un cielo agitado y la niebla pasa sobre los campos.",
@@ -495,20 +457,6 @@
       "En la orilla hay gente y barriles, y el cielo brilla amarillo y rosa."
     ],
     "fact": "1818–1820. Alte Nationalgalerie, Berlín."
-  },
-  "cfgreifmeadows": {
-    "text": [
-      "Amplios prados verdes llegan hasta el horizonte, donde se alza la silueta de Greifswald con sus torres.",
-      "Unos caballos pastan a plena luz."
-    ],
-    "fact": "1821–1822. Hamburger Kunsthalle."
-  },
-  "cfflatland": {
-    "text": [
-      "Un pueblo de tejados rojos con un molino está en tierra llana bajo un cielo alto y tranquilo.",
-      "Quizá el cuadro muestra Rügen o la zona de Greifswald."
-    ],
-    "fact": "hacia 1822. Fundación de Palacios y Jardines Prusianos, Berlín."
   },
   "cfwindmills": {
     "text": [
@@ -572,20 +520,6 @@
       "Abajo a la derecha se distingue la popa de un barco atrapado por el hielo."
     ],
     "fact": "1823–1824. Hamburger Kunsthalle."
-  },
-  "cfnorthmoon": {
-    "text": [
-      "Nubes oscuras se abren sobre un mar frío y la luz de la luna cae sobre rocas y agua.",
-      "En la orilla hay una barca."
-    ],
-    "fact": "hacia 1823. Galería Nacional de Praga."
-  },
-  "cfreef": {
-    "text": [
-      "De un mar tranquilo e iluminado por la luna surge un arrecife puntiagudo como una montaña dentada.",
-      "Delante, colinas oscuras rodean una bahía."
-    ],
-    "fact": "hacia 1824. Staatliche Kunsthalle Karlsruhe."
   },
   "cfmoonmen": {
     "text": [

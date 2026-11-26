@@ -72,14 +72,14 @@
   P.paths.blau = {
   "title": "Il percorso di vita di Tina Blau",
   "life": "1845–1916",
-  "part": "Parte 1 · Primavera al Prater",
+  "part": "Primavera al Prater",
   "subtitle": "Vienna, Olanda, Italia e la luce all’aperto",
-  "intro": "Viaggia con Tina Blau, la paesaggista viennese che dipingeva all’aperto quando per una donna era appena possibile: dalle prime case contadine, attraverso l’Olanda e Roma, fino alla primavera al Prater e al suo atelier nella Rotonda. Brevi tappe e quadri da colorare. Questa prima parte la segue attraverso la luce.",
+  "intro": "Viaggia con Tina Blau, la paesaggista viennese che dipingeva all’aperto quando per una donna era appena possibile: dalle prime case contadine, attraverso l’Olanda e Roma, fino alla primavera al Prater e al suo atelier nella Rotonda. Brevi tappe e quadri da colorare. Questo percorso la segue attraverso la luce.",
   "ending": [
     "Tina Blau muore a Vienna il 31 ottobre 1916. Ha portato la luce chiara dell’aperto nella pittura di paesaggio viennese.",
-    "Il percorso può ancora crescere. Altri viaggi, giardini e vedute di città potranno seguire in una parte successiva."
+    "Dagli anni di formazione a Vienna, passando per l’Olanda, Roma e Parigi, il percorso torna sempre al Prater, dove ha anche il suo atelier."
   ],
-  "epilogue": "Il 31 ottobre 1916 Tina Blau muore a Vienna. Una parte successiva potrà aggiungere altri viaggi e giardini."
+  "epilogue": "Tina Blau muore a Vienna il 31 ottobre 1916. Ha portato la luce chiara dell’aperto nella pittura di paesaggio viennese. Dagli anni di formazione a Vienna, passando per l’Olanda, Roma e Parigi, il percorso torna sempre al Prater, dove ha anche il suo atelier."
 };
   P.stations = Object.assign(P.stations || {}, {
   "tbwien": {

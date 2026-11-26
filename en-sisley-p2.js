@@ -72,10 +72,6 @@
     "title": "The Tugboat, the Loing at Saint-Mammès",
     "museum": "Petit Palais, Paris"
   },
-  "sybemberg83": {
-    "title": "The Banks of the Loing near Moret",
-    "museum": "Fondation Bemberg, Toulouse"
-  },
   "sysablonspath": {
     "title": "A Path at Les Sablons",
     "museum": "National Gallery of Australia, Canberra"
@@ -132,10 +128,6 @@
     "title": "The Chemin des Fontaines on a June Morning",
     "museum": "Musée d’art et d’histoire, Geneva"
   },
-  "sysepmorning": {
-    "title": "September Morning",
-    "museum": "Musée des Beaux-Arts, Agen"
-  },
   "sypontmia": {
     "title": "The Bridge at Moret",
     "museum": "Minneapolis Institute of Art"
@@ -143,10 +135,6 @@
   "syeveningoct": {
     "title": "An Evening in Moret, End of October",
     "museum": "Museo Thyssen-Bornemisza, Madrid"
-  },
-  "sysunset88": {
-    "title": "Moret at Sunset",
-    "museum": "Cincinnati Art Museum"
   },
   "syriverview": {
     "title": "River View",
@@ -476,13 +464,6 @@
     ],
     "fact": "1883. Petit Palais, Paris."
   },
-  "sybemberg83": {
-    "text": [
-      "The Loing shines under a bright sky, with trees and bushes on the bank.",
-      "Houses can be seen in the distance."
-    ],
-    "fact": "1883. Fondation Bemberg, Toulouse."
-  },
   "sysablonspath": {
     "text": [
       "A path leads between gardens and trees into the village.",
@@ -581,13 +562,6 @@
     ],
     "fact": "1887. Musée d’art et d’histoire, Geneva."
   },
-  "sysepmorning": {
-    "text": [
-      "Fruit trees stand in a sunny meadow, and a dark tree reaches into the picture on the right.",
-      "In 1888 the French State bought this picture, its first work by Sisley."
-    ],
-    "fact": "c. 1887. Musée des Beaux-Arts, Agen."
-  },
   "sypontmia": {
     "text": [
       "The old stone bridge spans the Loing, with mills and the church behind.",
@@ -601,13 +575,6 @@
       "The trees on the bank are already dark."
     ],
     "fact": "1888. Museo Thyssen-Bornemisza, Madrid."
-  },
-  "sysunset88": {
-    "text": [
-      "The town lies by the river in warm evening light.",
-      "The church and roofs stand out against the sky."
-    ],
-    "fact": "1888. Cincinnati Art Museum."
   },
   "syriverview": {
     "text": [

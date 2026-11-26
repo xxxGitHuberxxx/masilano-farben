@@ -24,7 +24,7 @@
   "ending": [
     "Dürer dies in Nuremberg in 1528. The two sheets are among the most precise nature studies of their time."
   ],
-  "epilogue": "A later part can add further prints and portraits."
+  "epilogue": "Dürer dies in Nuremberg in 1528. The two sheets are among the most precise nature studies of their time."
 };
   P.stations = Object.assign(P.stations || {}, {
   "durer1": {
@@ -36,4 +36,21 @@
     ]
   }
 });
+  // v10.42 pathTexts: work texts of the short path (were German fallback before).
+  P.pathTexts = Object.assign(P.pathTexts || {}, {
+    "hare": {
+      "text": [
+        "The hare sits quite still, its ears alert, every single hair of the coat visible.",
+        "Dürer observed it so closely and precisely that one can almost feel the soft fur."
+      ],
+      "fact": "The sheet is only about 25 centimetres high and is nonetheless one of the most famous animal pictures in the world."
+    },
+    "wing": {
+      "text": [
+        "Dürer painted the wing of a colourful bird so precisely that it might still lie before us on the table.",
+        "Each feather is set separately, from the strong flight feathers to the soft, light coverts."
+      ],
+      "fact": "The European roller is a southern bird with turquoise, blue and warm brown in its plumage. Dürer recorded it like a naturalist."
+    }
+  });
 })();

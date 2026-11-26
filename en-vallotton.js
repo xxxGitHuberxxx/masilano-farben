@@ -21,10 +21,6 @@
     "title": "The Lie",
     "museum": "Baltimore Museum of Art"
   },
-  "fvpiano": {
-    "title": "Madame Vallotton at the Piano",
-    "museum": "Musée Toulouse-Lautrec, Albi"
-  },
   "ballon": {
     "title": "The Ball",
     "museum": "Musée d’Orsay, Paris"
@@ -54,14 +50,14 @@
   EN.paths.vallotton = {
   "title": "Félix Vallotton’s Life Journey",
   "life": "1865–1925",
-  "part": "Part 1 · From Lausanne to Honfleur",
+  "part": "From Lausanne to Honfleur",
   "subtitle": "The Nabis, the interiors and the light of Normandy",
-  "intro": "Travel with Félix Vallotton, the painter from Lausanne who joined the Nabis in Paris: from the early portraits, through the clear interiors and “The Ball”, to the landscapes of Honfleur. Short stations and pictures to colour. This first part runs into the late years.",
+  "intro": "Travel with Félix Vallotton, the painter from Lausanne who joined the Nabis in Paris: from the early portraits, through the clear interiors and “The Ball”, to the landscapes of Honfleur. Short stations and pictures to colour. This path runs into the late years.",
   "ending": [
     "Vallotton dies in Neuilly-sur-Seine on 29 December 1925, the day after his sixtieth birthday. He remains attached to the canton of Vaud and to France alike.",
-    "The path can grow further. Woodcuts, further still lifes and the late southern landscapes may follow in a later part."
+    "The path leads from Lausanne through the Nabis in Paris and the quiet interiors to the coast of Normandy."
   ],
-  "epilogue": "On 29 December 1925 Vallotton dies in Neuilly-sur-Seine, aged sixty. A later part can add woodcuts and further still lifes."
+  "epilogue": "Vallotton dies in Neuilly-sur-Seine on 29 December 1925, the day after his sixtieth birthday. He remains attached to the canton of Vaud and to France alike. The path leads from Lausanne through the Nabis in Paris and the quiet interiors to the coast of Normandy."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "fvlausanne": {
@@ -129,13 +125,6 @@
       "The 1898 picture belongs to the interiors in which he shows nearness and distance at once. Nothing is left to chance."
     ],
     "fact": "1898. Baltimore Museum of Art."
-  },
-  "fvpiano": {
-    "text": [
-      "Gabrielle sits at the piano, her back slightly bent, the room in quiet planes of colour. Vallotton marries her in 1899, the same year as the picture.",
-      "Through her he is linked to the gallery Bernheim-Jeune. The interior stays cool and attentive, without private pathos."
-    ],
-    "fact": "1899. Musée Toulouse-Lautrec, Albi."
   },
   "ballon": {
     "text": [

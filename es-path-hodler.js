@@ -68,7 +68,7 @@
   },
   "hjonction": {
     "title": "Paisaje en la Jonction cerca de Ginebra",
-    "museum": "Colección no determinada"
+    "museum": "Von der Heydt-Museum, Wuppertal"
   },
   "harvekinder": {
     "title": "Niños pescando a orillas del Arve",
@@ -124,7 +124,7 @@
   },
   "hweigle": {
     "title": "Retrato de Hélène Weiglé",
-    "museum": "Colección no determinada"
+    "museum": "Städel Museum, Fráncfort"
   },
   "haugustine": {
     "title": "Retrato de Augustine Dupin",
@@ -197,10 +197,6 @@
   "hbluete99": {
     "title": "Árbol en flor",
     "museum": "Musée d’art et d’histoire, Friburgo"
-  },
-  "hself00": {
-    "title": "Autorretrato",
-    "museum": "Colección no determinada"
   },
   "hergriffen": {
     "title": "Emoción profunda",
@@ -303,7 +299,7 @@
     "mapLabel": "1900",
     "intro": [
       "En 1895 Hodler pinta «El alabardero». En 1896 sus figuras decoran el pabellón de arte de la Exposición Nacional Suiza en Ginebra. En 1897 gana el concurso para los murales de Marignano en el Landesmuseum de Zúrich; el proyecto desata una viva polémica. En Friburgo pronuncia una conferencia sobre la tarea del artista.",
-      "En 1900 recibe una medalla de oro en la Exposición Universal de París y se incorpora a las Secesiones de Viena y de Berlín. Árboles en flor, alamedas y figuras calladas en el prado cierran esta primera parte."
+      "En 1900 recibe una medalla de oro en la Exposición Universal de París y se incorpora a las Secesiones de Viena y de Berlín. Árboles en flor, alamedas y figuras calladas en el prado cierran estos años."
     ]
   }
 });
@@ -412,7 +408,7 @@
       "En la Jonction confluyen el Ródano y el Arve. Árboles se alzan en la orilla; el agua se divide en dos colores.",
       "Antes y después de Madrid, Hodler pinta una y otra vez este lugar al borde de Ginebra: de cerca, observando, sin patetismo."
     ],
-    "fact": "1878. Colección no determinada."
+    "fact": "1878. Von der Heydt-Museum, Wuppertal."
   },
   "harvekinder": {
     "text": [
@@ -510,7 +506,7 @@
       "Una joven de vestido oscuro mira con calma fuera del cuadro, las manos en el regazo, una flor entre los dedos.",
       "El retrato data de 1888. Hodler vive en Ginebra y pinta a clientas y conocidas con una forma clara y firme."
     ],
-    "fact": "1888. Colección no determinada."
+    "fact": "1888. Städel Museum, Fráncfort."
   },
   "haugustine": {
     "text": [
@@ -638,13 +634,6 @@
     ],
     "fact": "1899. Musée d’art et d’histoire, Friburgo."
   },
-  "hself00": {
-    "text": [
-      "Hodler con barba corta y mirada firme, la cabeza cerca del borde del cuadro, casi sin entorno.",
-      "En 1900 recibe una medalla de oro en la Exposición Universal de París. El retrato fija al pintor que ahora se da a conocer también en el extranjero."
-    ],
-    "fact": "1900. Colección no determinada."
-  },
   "hergriffen": {
     "text": [
       "Una joven de vestido azul largo está de pie en un prado de flores y lleva las manos al pecho, la mirada baja.",
@@ -655,7 +644,7 @@
   "habendruhe": {
     "text": [
       "Una muchacha de vestido claro está descalza en un prado de flores, las manos alzadas en oración, la mirada vuelta a un lado.",
-      "El cuadro data de hacia 1901 y cuelga en el Kunsthaus Zürich. Cierra esta primera parte: una figura serena en el paisaje, antes de que en la próxima parte sigan los grandes cuadros de lagos y montañas."
+      "El cuadro data de hacia 1901 y cuelga en el Kunsthaus Zürich. Una figura serena en el paisaje, antes de que sigan los grandes cuadros de lagos y montañas."
     ],
     "fact": "Hacia 1901. Kunsthaus Zürich."
   }

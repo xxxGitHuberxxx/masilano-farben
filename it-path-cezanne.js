@@ -175,10 +175,6 @@
     "title": "Veduta di L’Estaque",
     "museum": "Collezione non determinata"
   },
-  "czallee": {
-    "title": "Il viale del Jas de Bouffan",
-    "museum": "Collezione non determinata"
-  },
   "czpool": {
     "title": "La vasca del Jas de Bouffan",
     "museum": "Metropolitan Museum of Art, New York"
@@ -225,7 +221,7 @@
   },
   "czwinterchest": {
     "title": "I castagni del Jas de Bouffan in inverno",
-    "museum": "Collezione non determinata"
+    "museum": "Minneapolis Institute of Art"
   }
 });
   P.paths = P.paths || {};
@@ -318,8 +314,7 @@
     "mapLabel": "Jas",
     "intro": [
       "Il padre acquista il Jas de Bouffan nel 1859. Per decenni Cézanne vi dipinge il viale, i castagni, la fattoria, la veduta dalla casa e la vasca del parco.",
-      "I quadri di questa stazione vengono da anni diversi, dalla fine degli anni Sessanta fino alla soglia degli anni Ottanta. La vasca del parco appartiene alla fine degli anni Ottanta; la datiamo apertamente.",
-      "Il ponte di Maincy, verso il 1882-1883, si trova vicino a Melun, nell’Île-de-France, non al Jas. Figura qui perché nasce negli stessi anni in cui Cézanne lavora anche alla tenuta."
+      "I quadri di questa stazione vengono da anni diversi, dalla fine degli anni Sessanta fino alla soglia degli anni Ottanta. La vasca del parco appartiene alla fine degli anni Ottanta; la datiamo apertamente."
     ]
   },
   "cezanne1886": {
@@ -327,9 +322,9 @@
     "when": "1879–1886",
     "mapLabel": "Gardanne",
     "intro": [
-      "Tra il 1880 e il 1885 Cézanne dipinge le rive della Senna a Médan, dove Zola possiede una casa. Nel 1885-1886 vive con Hortense e il figlio a Gardanne, non lontano da Aix.",
+      "Verso il 1879/1880 Cézanne abita a Melun; tra il 1880 e il 1885 dipinge le rive della Senna a Médan, dove Zola possiede una casa. Nel 1885-1886 vive con Hortense e il figlio a Gardanne, non lontano da Aix.",
       "Il 4 aprile 1886 ringrazia Zola da Gardanne, in modo breve e formale, per l’invio del romanzo «L’Œuvre». I contemporanei hanno letto somiglianze con Cézanne nella figura del pittore Claude Lantier. La lettera è cordiale; una rottura completa non è con ciò dimostrata. In seguito i contatti si fanno più rari.",
-      "Il 28 aprile 1886 sposa Hortense ad Aix; il figlio Paul viene legittimato. Il 23 ottobre 1886 muore Louis-Auguste. Con l’eredità Cézanne diventa più indipendente. Questa prima parte si chiude in quell’anno."
+      "Il 28 aprile 1886 sposa Hortense ad Aix; il figlio Paul viene legittimato. Il 23 ottobre 1886 muore Louis-Auguste. Con l’eredità Cézanne diventa più indipendente. Qui si chiude il periodo fino al 1886."
     ]
   }
 });
@@ -598,17 +593,10 @@
     ],
     "fact": "1882–1883. Collezione non determinata."
   },
-  "czallee": {
-    "text": [
-      "Un viale conduce verso la casa, i tronchi stanno come verticali scure e ripetute a sinistra e a destra del sentiero.",
-      "Il quadro data a circa il 1868, ancora nel tempo precoce della tenuta che il padre acquistò nel 1859. Il Jas resta un luogo di lavoro per decenni."
-    ],
-    "fact": "verso il 1868. Collezione non determinata."
-  },
   "czpool": {
     "text": [
       "La vasca del parco giace calma, circondata da alberi e da un muro; l’acqua accoglie il cielo e il fogliame.",
-      "Il quadro data alla fine degli anni Ottanta, al margine del periodo di questa parte. Appartiene comunque al luogo in cui Cézanne lavora fin dalla giovinezza."
+      "Il quadro è più tardo: risale alla fine degli anni Ottanta. Appartiene comunque al luogo in cui Cézanne lavora fin dalla giovinezza."
     ],
     "fact": "fine degli anni Ottanta. Metropolitan Museum of Art, New York."
   },
@@ -642,10 +630,10 @@
   },
   "czmaincy": {
     "text": [
-      "Un ponte in pietra ad arco su un corso d’acqua in ombra, alberi densi a sinistra e a destra: il motivo è a Maincy, vicino a Melun, non al Jas de Bouffan.",
-      "Verso il 1882-1883 Cézanne dipinge questo ponte nell’Île-de-France, negli stessi anni in cui lavora anche al Jas. Il quadro è oggi al Musée d’Orsay."
+      "Un ponte in pietra ad arco su un corso d’acqua in ombra, alberi densi a sinistra e a destra: il motivo è a Maincy, vicino a Melun.",
+      "Verso il 1879/1880 Cézanne dipinge questo ponte mentre abita a Melun. Il quadro è oggi al Musée d’Orsay."
     ],
-    "fact": "verso il 1882–1883. Musée d’Orsay, Parigi."
+    "fact": "verso il 1879/1880. Musée d’Orsay, Parigi."
   },
   "czmedan": {
     "text": [
@@ -689,9 +677,9 @@
   "czwinterchest": {
     "text": [
       "I castagni del Jas stanno spogli in inverno, i rami come un’ossatura chiara davanti alla casa e al cielo.",
-      "Nel 1885-1886, alla fine di questa prima parte, Cézanne torna, nel parco invernale della casa di famiglia, a un motivo familiare."
+      "Nel 1885-1886 Cézanne torna, nel parco invernale della casa di famiglia, a un motivo familiare."
     ],
-    "fact": "1885–1886. Collezione non determinata."
+    "fact": "1885–1886. Minneapolis Institute of Art, inv. 49.9."
   }
 };
   for (var k in add) if (Object.prototype.hasOwnProperty.call(add, k)) pt[k] = add[k];

@@ -33,10 +33,6 @@
     "title": "La lezione di scrittura III",
     "museum": "Collezione privata"
   },
-  "imwald": {
-    "title": "Fanciulla addormentata nel bosco",
-    "museum": "Collezione non determinata"
-  },
   "huehner": {
     "title": "Bambina che dà da mangiare alle galline",
     "museum": "Musée d’art et d’histoire, Neuchâtel"
@@ -306,7 +302,7 @@
     "mapLabel": "Anni Ottanta",
     "intro": [
       "Negli anni Ottanta i bambini, le sorelle, le fiabe e la stanza di casa restano i temi fissi: le due sorelle, Cappuccetto Rosso, una lettrice di Gotthelf, Mariette con le fragole, la bambina che lavora a maglia accanto alla culla, i primi passi.",
-      "La famiglia passa ancora l’inverno a Parigi e l’estate a Ins. Nel 1890 Anker rinuncerà alla residenza parigina. I grandi dipinti degli anni Novanta – e ciò che segue – appartengono alla prossima parte."
+      "La famiglia passa ancora l’inverno a Parigi e l’estate a Ins. Nel 1890 Anker rinuncerà alla residenza parigina. Seguono poi i grandi dipinti degli anni Novanta."
     ]
   }
 });
@@ -317,11 +313,7 @@
       "Un giovane in redingote scura, la fronte scoperta, lo sguardo dritto davanti a sé. Il disegno porta l’iscrizione «Sept. 1852»: Albert Anker ha ventuno anni.",
       "In quell’anno studia teologia, prima a Berna, poi a Halle. Il Centre Albert Anker di Ins conserva il disegno."
     ],
-    "fact": "Disegno, settembre 1852. Centre Albert Anker, Ins.",
-    "quote": {
-      "text": "Che cos’è l’arte? In primo luogo, l’arte non consiste nell’imitazione, ma in due punti: primo, occorre formarsi un ideale nelle proprie rappresentazioni; secondo, occorre presentare questo ideale agli occhi dei propri simili, dargli una forma che diventi accessibile al nostro sguardo e al nostro udito.",
-      "cite": "Lettera ad Auguste Bachelin, 9 giugno 1849. Centre Albert Anker, Ins."
-    }
+    "fact": "Disegno, settembre 1852. Centre Albert Anker, Ins."
   },
   "sonntag": {
     "text": [
@@ -350,13 +342,6 @@
       "Il dipinto fa parte delle lezioni di scrittura del 1865. Per «La lezione di scrittura» e «Fanciulla addormentata nel bosco» Anker riceve nel 1866 una medaglia d’oro al Salon di Parigi."
     ],
     "fact": "Olio su tela, 1865. Collezione privata."
-  },
-  "imwald": {
-    "text": [
-      "Una fanciulla dorme ai piedi di un albero, il braccio appoggiato a un fascio di legna. L’abito è semplice, i piedi nudi, il bosco intorno a lei buio e silenzioso.",
-      "Il dipinto del 1865 è una delle due opere per le quali Anker riceve nel 1866 una medaglia d’oro al Salon di Parigi."
-    ],
-    "fact": "Olio su tela, 1865. Collezione non determinata."
   },
   "huehner": {
     "text": [
@@ -545,11 +530,7 @@
       "Su una piazza davanti a case e alberi, molti bambini e adulti sono in piedi e camminano. Alcuni vengono accolti, altri guardano.",
       "Il dipinto del 1876 è esposto al Musée d’art et d’histoire di Neuchâtel. Porta anche un titolo francese che evoca orfani di Unterwalden a Murten; la scena stessa è un’accoglienza composta, non un racconto del 1798."
     ],
-    "fact": "Olio su tela, 1876. Musée d’art et d’histoire, Neuchâtel.",
-    "quote": {
-      "text": "In una farmacia ho appena fatto uno schizzo. È possibile che non ne venga fuori nulla, ma si fa quel che si può...",
-      "cite": "Alla signora Anker, Murten, 11 luglio 1876. Centre Albert Anker, Ins."
-    }
+    "fact": "Olio su tela, 1876. Musée d’art et d’histoire, Neuchâtel."
   },
   "pelzmuetze": {
     "text": [
@@ -666,7 +647,7 @@
   "ersteschritte": {
     "text": [
       "Un bambino più grande tiene un più piccolo che tenta i primi passi. Uno va a piedi nudi, il piccolo porta le scarpe; dietro di loro si erge una stufa in faenza.",
-      "Il dipinto del 1888 chiude questa prima parte: il quotidiano di una stanza di casa, colto poco prima che, negli anni Novanta, Anker intrapenda di nuovo grandi dipinti di scuola e di villaggio."
+      "Il dipinto del 1888 mostra il quotidiano di una stanza di casa, colto poco prima che, negli anni Novanta, Anker intrapenda di nuovo grandi dipinti di scuola e di villaggio."
     ],
     "fact": "Olio su tela, 1888. Collezione privata."
   }

@@ -38,7 +38,7 @@
     "title": "Die Füchse",
     "artist": "Franz Marc",
     "year": "1913",
-    "museum": "Privatsammlung",
+    "museum": "Heutiger Standort nicht öffentlich bestätigt",
     "source": "Wikimedia Commons: «Franz Marc - The Foxes - Google Art Project.jpg», gemeinfrei (Public Domain)"
   },
   {
@@ -72,7 +72,7 @@
   "name": "Franz Marc",
   "title": "Franz Marcs Lebensweg",
   "life": "1880–1916",
-  "part": "Teil 1 · München und der Blaue Reiter",
+  "part": "München und der Blaue Reiter",
   "subtitle": "Ein Malerleben in 8 Bildern",
   "cover": "bluehorse",
   "intro": "Male dich durch das Leben von Franz Marc: von den Pferden in natürlichen Farben bis zu den leuchtend blauen Tieren und den fast abstrakten Bildern vor dem Krieg. Vor jedem Bild erfährst du, wo er gerade lebt und wie sich seine Kunst verändert. Jedes fertige Bild schaltet das nächste Kapitel frei.",
@@ -203,7 +203,7 @@
             "Er denkt in diesen Monaten nicht nur an einzelne Tiere, sondern an das grosse Gefüge der Natur. Zugleich hilft er in Berlin mit, den «Ersten Deutschen Herbstsalon» vorzubereiten, eine grosse internationale Ausstellung der modernen Kunst.",
             "Die «Füchse» gehören zu den Bildern, in denen das Tier schon fast zur reinen Form wird."
           ],
-          "fact": "Das Bild hing lange im Museum Kunstpalast in Düsseldorf. Heute befindet es sich in einer Privatsammlung."
+          "fact": "Das Bild gehörte ab 1962 dem Museum Kunstpalast in Düsseldorf. 2022 gab die Stadt es an die Erben des jüdischen Sammlers Kurt Grawi zurück; im März 2022 wurde es bei Christie’s in London versteigert. Der heutige Standort ist nicht öffentlich bestätigt."
         }
       ]
     },

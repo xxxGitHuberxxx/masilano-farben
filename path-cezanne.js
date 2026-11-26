@@ -303,14 +303,6 @@
     "source": "Wikimedia Commons: «Vue sur l'Estaque, par Paul Cézanne, FWN 188.jpg», gemeinfrei (Public Domain)"
   },
   {
-    "id": "czallee",
-    "title": "Die Allee im Jas de Bouffan",
-    "artist": "Paul Cézanne",
-    "year": "um 1868",
-    "museum": "Sammlung nicht ermittelt",
-    "source": "Wikimedia Commons: «Cezanne - Allee im Jas de Bouffan.jpg», gemeinfrei (Public Domain)"
-  },
-  {
     "id": "czpool",
     "title": "Das Wasserbecken im Jas de Bouffan",
     "artist": "Paul Cézanne",
@@ -354,7 +346,7 @@
     "id": "czmaincy",
     "title": "Die Brücke von Maincy",
     "artist": "Paul Cézanne",
-    "year": "um 1882–1883",
+    "year": "um 1879/1880",
     "museum": "Musée d’Orsay, Paris",
     "source": "Wikimedia Commons: «Pont de Maincy, par Paul Cézanne.jpg», gemeinfrei (Public Domain)"
   },
@@ -403,7 +395,7 @@
     "title": "Die Kastanien des Jas de Bouffan im Winter",
     "artist": "Paul Cézanne",
     "year": "1885–1886",
-    "museum": "Sammlung nicht ermittelt",
+    "museum": "Minneapolis Institute of Art",
     "source": "Wikimedia Commons: «Les Marronniers du Jas de Bouffan en hiver, par Paul Cézanne (1885-86).jpg», gemeinfrei (Public Domain)"
   }
 ];
@@ -796,8 +788,8 @@
           ],
           "fact": "1883–1885. Sammlung nicht ermittelt.",
           "quote": {
-            "text": "Ich habe zwei kleine Motive begonnen, in denen das Meer vorkommt, für Monsieur Chocquet, der davon gesprochen hatte. – Es ist wie eine Spielkarte. Rote Dächer auf dem blauen Meer.",
-            "cite": "Brief an Camille Pissarro, 2. Juli 1876, aus L’Estaque."
+            "text": "Ich habe zwei kleine Motive mit dem Meer angefangen, für Monsieur Chocquet, der mich darauf angesprochen hatte. – Das ist wie eine Spielkarte: rote Dächer vor dem blauen Meer.",
+            "cite": "Brief an Camille Pissarro, 2. Juli 1876, aus L’Estaque. Eigene Übersetzung aus dem Französischen."
           }
         },
         {
@@ -861,23 +853,14 @@
       "mapLabel": "Jas",
       "intro": [
         "Den Jas de Bouffan kauft der Vater 1859. Über Jahrzehnte malt Cézanne dort die Allee, die Kastanien, das Gehöft, den Blick vom Haus und das Wasserbecken im Park.",
-        "Die Bilder dieser Station stammen aus verschiedenen Jahren, von der späten 1860er Zeit bis an den Rand der 1880er. Das Becken im Park gehört in die späten 1880er Jahre; wir datieren es offen.",
-        "Die Brücke von Maincy, um 1882–1883, liegt bei Melun in der Île-de-France, nicht auf dem Jas. Sie steht hier, weil sie in denselben Jahren entsteht, in denen Cézanne auch auf dem Landsitz arbeitet."
+        "Die Bilder dieser Station stammen aus verschiedenen Jahren, von der späten 1860er Zeit bis an den Rand der 1880er. Das Becken im Park gehört in die späten 1880er Jahre; wir datieren es offen."
       ],
       "works": [
-        {
-          "pid": "czallee",
-          "text": [
-            "Eine Allee führt auf das Haus zu, die Stämme stehen als dunkle, wiederholte Vertikale links und rechts des Weges.",
-            "Das Bild entsteht um 1868, also noch in der früheren Zeit auf dem Landsitz, den der Vater 1859 gekauft hat. Der Jas bleibt über Jahrzehnte ein Arbeitsort."
-          ],
-          "fact": "um 1868. Sammlung nicht ermittelt."
-        },
         {
           "pid": "czpool",
           "text": [
             "Das Becken im Park liegt still, umgeben von Bäumen und einer Mauer; das Wasser nimmt Himmel und Laub auf.",
-            "Das Bild entsteht in den späten 1880er Jahren, also am Rand des Zeitraums dieses Teils. Es gehört gleichwohl zum Ort, an dem Cézanne seit der Jugend arbeitet."
+            "Das Bild ist später entstanden, in den späten 1880er Jahren. Es gehört gleichwohl zum Ort, an dem Cézanne seit der Jugend arbeitet."
           ],
           "fact": "späte 1880er Jahre. Metropolitan Museum of Art, New York."
         },
@@ -912,14 +895,6 @@
             "Um 1875–1876, nach den Jahren in Auvers, malt Cézanne wieder den Blick von zu Hause. Die hellere Palette der Nordjahre bleibt spürbar."
           ],
           "fact": "um 1875–1876. Sammlung nicht ermittelt."
-        },
-        {
-          "pid": "czmaincy",
-          "text": [
-            "Eine steinerne Bogenbrücke über einem schattigen Wasserlauf, dichte Bäume links und rechts: das Motiv liegt in Maincy bei Melun, nicht auf dem Jas de Bouffan.",
-            "Um 1882–1883 malt Cézanne diese Brücke in der Île-de-France, in denselben Jahren, in denen er auch auf dem Jas arbeitet. Das Bild hängt heute im Musée d’Orsay."
-          ],
-          "fact": "um 1882–1883. Musée d’Orsay, Paris."
         }
       ]
     },
@@ -933,9 +908,9 @@
       },
       "mapLabel": "Gardanne",
       "intro": [
-        "Zwischen 1880 und 1885 malt Cézanne die Ufer der Seine in Médan, wo Zola ein Haus besitzt. 1885–1886 lebt er mit Hortense und dem Sohn in Gardanne, unweit von Aix.",
+        "Um 1879/1880 wohnt Cézanne in Melun; zwischen 1880 und 1885 malt er die Ufer der Seine in Médan, wo Zola ein Haus besitzt. 1885–1886 lebt er mit Hortense und dem Sohn in Gardanne, unweit von Aix.",
         "Am 4. April 1886 dankt er Zola aus Gardanne kurz und förmlich für die Zusendung des Romans «L’Œuvre». In der Figur des Malers Claude Lantier haben Zeitgenossen Ähnlichkeiten mit Cézanne gelesen. Der Brief ist freundlich; ein vollständiger Bruch ist damit nicht bewiesen. Der Kontakt wird in der Folge seltener.",
-        "Am 28. April 1886 heiratet er Hortense in Aix; der Sohn Paul wird legitimiert. Am 23. Oktober 1886 stirbt Louis-Auguste. Mit dem Erbe wird Cézanne unabhängiger. Dieser erste Teil endet in diesem Jahr."
+        "Am 28. April 1886 heiratet er Hortense in Aix; der Sohn Paul wird legitimiert. Am 23. Oktober 1886 stirbt Louis-Auguste. Mit dem Erbe wird Cézanne unabhängiger. Hier endet der Abschnitt bis 1886."
       ],
       "works": [
         {
@@ -947,6 +922,14 @@
           "fact": "1880–1885. National Gallery of Art, Washington."
         },
         {
+          "pid": "czmaincy",
+          "text": [
+            "Eine steinerne Bogenbrücke über einem schattigen Wasserlauf, dichte Bäume links und rechts: das Motiv liegt in Maincy bei Melun.",
+            "Um 1879/1880 malt Cézanne diese Brücke, als er in Melun wohnt. Das Bild hängt heute im Musée d’Orsay."
+          ],
+          "fact": "um 1879/1880. Musée d’Orsay, Paris."
+        },
+        {
           "pid": "czgardanne",
           "text": [
             "Die Häuser von Gardanne steigen den Hügel hinauf, oben der Kirchturm; manche Stellen der Leinwand bleiben hell und unfertig.",
@@ -954,8 +937,8 @@
           ],
           "fact": "1885–1886. Brooklyn Museum, New York.",
           "quote": {
-            "text": "Mein lieber Émile, ich habe soeben «L’Œuvre» erhalten, das du mir zuzuschicken die Güte hattest. Ich danke dem Autor der Rougon-Macquart für dieses freundliche Zeichen der Erinnerung und bitte ihn, mir zu erlauben, ihm die Hand zu drücken, im Gedanken an die früheren Jahre. Ganz der Deine unter dem Eindruck der vergangenen Zeiten.",
-            "cite": "Brief an Émile Zola, 4. April 1886, aus Gardanne."
+            "text": "Mein lieber Émile, eben ist «L’Œuvre» bei mir eingetroffen, das du mir freundlicherweise geschickt hast. Dem Verfasser der Rougon-Macquart danke ich für dieses schöne Zeichen des Gedenkens und bitte ihn, ihm in Erinnerung an die alten Jahre die Hand drücken zu dürfen. Ganz der Deine, im Gefühl der verflossenen Zeiten.",
+            "cite": "Brief an Émile Zola, 4. April 1886, aus Gardanne. Eigene Übersetzung aus dem Französischen."
           }
         },
         {
@@ -986,9 +969,9 @@
           "pid": "czwinterchest",
           "text": [
             "Die Kastanien des Jas stehen kahl im Winter, die Äste als ein klares Gerüst vor Haus und Himmel.",
-            "1885–1886, am Ende dieses ersten Teils, kehrt Cézanne auch im winterlichen Park des Elternhauses zu einem vertrauten Motiv zurück."
+            "1885–1886 kehrt Cézanne auch im winterlichen Park des Elternhauses zu einem vertrauten Motiv zurück."
           ],
-          "fact": "1885–1886. Sammlung nicht ermittelt."
+          "fact": "1885–1886. Minneapolis Institute of Art, Inv. 49.9."
         }
       ]
     }

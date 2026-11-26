@@ -217,10 +217,6 @@
     "title": "Flores",
     "museum": "Dallas Museum of Art"
   },
-  "rnstraw": {
-    "title": "Bodegón con fresas",
-    "museum": "Brooklyn Museum, Nueva York"
-  },
   "rnanemones": {
     "title": "Anémonas",
     "museum": "Barnes Foundation, Philadelphia"
@@ -716,13 +712,6 @@
       "El cuadro está en el Dallas Museum of Art."
     ],
     "fact": "hacia 1915. Dallas Museum of Art."
-  },
-  "rnstraw": {
-    "text": [
-      "Fresas sobre un mantel, pintadas con rapidez y calidez.",
-      "El cuadro está en el Brooklyn Museum."
-    ],
-    "fact": "1914. Brooklyn Museum, Nueva York."
   },
   "rnanemones": {
     "text": [

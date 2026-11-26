@@ -131,15 +131,15 @@
   "name": "Olga Wisinger-Florian",
   "title": "Olga Wisinger-Florians Lebensweg",
   "life": "1844–1926",
-  "part": "Teil 1 · Blumen, Alleen und Gärten",
+  "part": "Blumen, Alleen und Gärten",
   "subtitle": "Von der Pianistin zur Malerin",
   "cover": "owmohn",
-  "intro": "Reise mit Olga Wisinger-Florian, der Wiener Malerin der Blumen und Gärten: von den ersten Bildern im Salzkammergut über Mohnfelder und Prateralleen bis nach Venedig, Karlsbad und Euxinograd am Schwarzen Meer. Kurze Stationen und Bilder zum Ausmalen. Dieser erste Teil folgt ihren Farben.",
+  "intro": "Reise mit Olga Wisinger-Florian, der Wiener Malerin der Blumen und Gärten: von den ersten Bildern im Salzkammergut über Mohnfelder und Prateralleen bis nach Venedig, Karlsbad und Euxinograd am Schwarzen Meer. Kurze Stationen und Bilder zum Ausmalen. Dieser Weg folgt ihren Farben.",
   "ending": [
     "Olga Wisinger-Florian stirbt am 27. Februar 1926 in Grafenegg in Niederösterreich. Aus der Pianistin ist eine der bekanntesten Malerinnen Österreichs geworden.",
-    "Der Weg kann weiterwachsen. Weitere Blumen und Gärten können in einem späteren Teil folgen."
+    "Der Weg führt vom Herbstwald ihrer Anfänge über Höfe, Reisen und Alleen bis zu den blühenden Apfelbäumen von 1906."
   ],
-  "epilogue": "Am 27. Februar 1926 stirbt Wisinger-Florian in Grafenegg. Ein späterer Teil kann weitere Blumenbilder nachtragen.",
+  "epilogue": "Olga Wisinger-Florian stirbt am 27. Februar 1926 in Grafenegg in Niederösterreich. Aus der Pianistin ist eine der bekanntesten Malerinnen Österreichs geworden. Der Weg führt vom Herbstwald ihrer Anfänge über Höfe, Reisen und Alleen bis zu den blühenden Apfelbäumen von 1906.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [

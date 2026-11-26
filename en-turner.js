@@ -26,10 +26,6 @@
     "title": "Llanthony Abbey, Monmouthshire",
     "museum": "Indianapolis Museum of Art"
   },
-  "tuthames": {
-    "title": "Panoramic View of the Thames",
-    "museum": "Blanton Museum of Art, Austin"
-  },
   "tufishermen": {
     "title": "Fishermen at Sea",
     "museum": "Tate, London"
@@ -98,20 +94,8 @@
     "title": "Calais Pier",
     "museum": "National Gallery, London"
   },
-  "tugrenoble": {
-    "title": "Grenoble from the River Isère with the Porte de France",
-    "museum": "Tate, London"
-  },
-  "tuschollen": {
-    "title": "The Devil’s Bridge and Schöllenen Gorge",
-    "museum": "Tate, London"
-  },
   "tumontblanc": {
     "title": "Mont Blanc and the Glacier des Bossons from above Chamonix",
-    "museum": "Tate, London"
-  },
-  "tugothard": {
-    "title": "The St Gotthard",
     "museum": "Tate, London"
   },
   "tuvictory": {
@@ -138,14 +122,6 @@
     "title": "Margate",
     "museum": "Tate, London"
   },
-  "tusunvapour": {
-    "title": "The Sun Setting through Vapour",
-    "museum": "Barber Institute of Fine Arts, Birmingham"
-  },
-  "tuavalanche": {
-    "title": "The Fall of an Avalanche in the Grisons",
-    "museum": "Tate, London"
-  },
   "tusouthall": {
     "title": "Grand Junction Canal at Southall Mill",
     "museum": "Private collection"
@@ -157,10 +133,6 @@
   "tuwhalley": {
     "title": "Whalley Bridge and Abbey, Lancashire: Dyers Washing and Drying Cloth",
     "museum": "Dordrechts Museum"
-  },
-  "tuplym": {
-    "title": "The Plym Estuary from Boringdon Park",
-    "museum": "Tate, London"
   },
   "tufrosty": {
     "title": "Frosty Morning",
@@ -342,14 +314,6 @@
     ],
     "fact": "c. 1792. Indianapolis Museum of Art."
   },
-  "tuthames": {
-    "text": [
-      "A long watercolour shows the Thames stretching away, with banks, boats and a bright sky.",
-      "It dates from about 1796, the year of the first oil.",
-      "The sheet is in the Blanton Museum of Art, Austin."
-    ],
-    "fact": "c. 1796. Blanton Museum of Art, Austin."
-  },
   "tufishermen": {
     "text": [
       "In moonlight fishing boats lie on a rough sea off the Isle of Wight; a lantern glows in one boat.",
@@ -479,22 +443,6 @@
     ],
     "fact": "1803. National Gallery, London."
   },
-  "tugrenoble": {
-    "text": [
-      "From the Isère one sees Grenoble and the Porte de France, against the mountains.",
-      "The sheet dates from 1802, on the journey through Savoy.",
-      "It is at Tate, London."
-    ],
-    "fact": "1802. Tate, London."
-  },
-  "tuschollen": {
-    "text": [
-      "In the Schöllenen Gorge on the St Gotthard the Devil’s Bridge crosses the Reuss.",
-      "Turner recorded the wild pass in 1802.",
-      "The sheet is at Tate, London."
-    ],
-    "fact": "1802. Tate, London."
-  },
   "tumontblanc": {
     "text": [
       "In the morning light Mont Blanc and the Glacier des Bossons lie above Chamonix.",
@@ -502,14 +450,6 @@
       "The watercolour is at Tate, London."
     ],
     "fact": "1802. Tate, London."
-  },
-  "tugothard": {
-    "text": [
-      "A view into the gorge of the St Gotthard, with the road along the precipice and a high sky.",
-      "Turner painted the pass in 1806–07 from the memory of the journey of 1802.",
-      "The picture is at Tate, London."
-    ],
-    "fact": "1806–1807. Tate, London."
   },
   "tuvictory": {
     "text": [
@@ -559,21 +499,6 @@
     ],
     "fact": "c. 1806–1807. Tate, London."
   },
-  "tusunvapour": {
-    "text": [
-      "The sun sinks through vapour; fishermen and boats lie on the shore, a large ship stands in the distance.",
-      "The picture dates from about 1809 and is in the Barber Institute of Fine Arts, Birmingham."
-    ],
-    "fact": "c. 1809. Barber Institute of Fine Arts, Birmingham."
-  },
-  "tuavalanche": {
-    "text": [
-      "An avalanche breaks over rocks and trees in the Grisons.",
-      "Turner painted the force of the Alps in 1810, years after the Swiss tour.",
-      "The picture is at Tate, London."
-    ],
-    "fact": "1810. Tate, London."
-  },
   "tusouthall": {
     "text": [
       "A mill stands on the Grand Junction Canal at Southall; a cart and figures halt on the bank, the sky is wide.",
@@ -596,14 +521,6 @@
       "The picture is in the Dordrechts Museum."
     ],
     "fact": "1811. Dordrechts Museum."
-  },
-  "tuplym": {
-    "text": [
-      "From Boringdon Park one looks over the Plym estuary in Devon, with hills, water and a wide sky.",
-      "In 1813 Turner sketched in oil out of doors in Devon.",
-      "The sheet is at Tate, London."
-    ],
-    "fact": "1813. Tate, London."
   },
   "tufrosty": {
     "text": [

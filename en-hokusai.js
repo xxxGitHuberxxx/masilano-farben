@@ -25,17 +25,9 @@
     "title": "The Sumo Wrestlers Takaneyama Yoichiemon and Sendagawa Kichigorō",
     "museum": "Metropolitan Museum of Art, New York"
   },
-  "sorinets": {
-    "title": "Women Contemplating Fishermen with Nets",
-    "museum": "Musée Guimet, Paris (Camondo Collection)"
-  },
   "dyers": {
     "title": "Dyers at Work",
     "museum": "Cleveland Museum of Art"
-  },
-  "soritable": {
-    "title": "Woman near a Painting Table",
-    "museum": "Musée Guimet, Paris (Camondo Collection)"
   },
   "fujisuri": {
     "title": "View of Mount Fuji",
@@ -229,7 +221,7 @@
   "ending": [
     "In 1839 a fire in Edo destroys his house and many drawings. In the 1840s he stays several times in Obuse, with Takai Kōzan. In 1847 comes the Thunder God; in 1849, the tiger in the snow.",
     "Hokusai dies in Edo on the 18th day of the fourth month of the second year of Kaei – 10 May 1849. By the count of the time he is ninety years old.",
-    "Fifteen years earlier, in 1834, he had written in the postscript to “One Hundred Views of Mount Fuji”: “From my sixth year I have had the habit of copying the shapes of things. From the age of fifty I have often published pictures, yet nothing I drew before the age of seventy is really worth keeping. At seventy-three I began to grasp a little the structure of birds, animals, insects and fish, and the way plants grow. So at eighty-six I mean to go further still; at ninety I will understand it more deeply; at a hundred I should reach something truly wondrous; and at a hundred and ten, every dot and every stroke should be alive. May gentlemen who live long see that these words of mine are not empty boasting.” The wish to reach a hundred and ten remains unfulfilled. The sheets and the late paintings remain."
+    "Fifteen years earlier, in 1834, he had written in the postscript to “One Hundred Views of Mount Fuji”: “… So at eighty-six I mean to go further still; at ninety I will understand it more deeply; at a hundred I should reach something truly wondrous; and at a hundred and ten, every dot and every stroke should be alive.” The wish to reach a hundred and ten remains unfulfilled. The sheets and the late paintings remain."
   ],
   "epilogue": "Katsushika Hokusai dies on 10 May 1849 in Edo, at the age of ninety by the count of the time. The “Thirty-six Views”, the “One Hundred Views of Mount Fuji”, the waterfalls, the bridges and the late paintings from Obuse remain."
 };
@@ -343,26 +335,12 @@
     ],
     "fact": "Colour woodcut, Metropolitan Museum of Art, New York, about 1790–1793."
   },
-  "sorinets": {
-    "text": [
-      "Women sit on red mats in an open room and look out at fishermen with nets in the water.",
-      "The surimono is signed “Sōri ga” – from the years when Hokusai used the name Tawaraya Sōri, about 1794 to 1798."
-    ],
-    "fact": "Isaac de Camondo Collection, bequeathed in 1911, inventory EO 1833. Musée Guimet, Paris."
-  },
   "dyers": {
     "text": [
       "In a long, narrow scene, lengths of cloth hang out to dry. The dyers move among them; the colours are still pale and restrained.",
       "The Cleveland Museum of Art dates the sheet to 1795, in the Sōri years."
     ],
     "fact": "“Dyers at Work”, Cleveland Museum of Art, 1795."
-  },
-  "soritable": {
-    "text": [
-      "A woman stands at a painting table, brush and paper ready. Poems run along the edge of the sheet.",
-      "It is signed “Sōri aratame Hokusai ga” – “Sōri, changed to Hokusai”. The year 1799 records the change of name."
-    ],
-    "fact": "Privately issued surimono with kyōka verses, Camondo Collection, Musée Guimet, Paris, 1799."
   },
   "fujisuri": {
     "text": [

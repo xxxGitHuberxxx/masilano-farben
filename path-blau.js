@@ -131,15 +131,15 @@
   "name": "Tina Blau",
   "title": "Tina Blaus Lebensweg",
   "life": "1845–1916",
-  "part": "Teil 1 · Frühling im Prater",
+  "part": "Frühling im Prater",
   "subtitle": "Wien, Holland, Italien und das Licht im Freien",
   "cover": "tbfruehling",
-  "intro": "Reise mit Tina Blau, der Wiener Landschaftsmalerin, die im Freien malte, als dies für Frauen noch kaum möglich war: von den ersten Bauernhäusern über Holland und Rom bis zum Frühling im Prater und ihrem Atelier in der Rotunde. Kurze Stationen und Bilder zum Ausmalen. Dieser erste Teil folgt ihr durch das Licht.",
+  "intro": "Reise mit Tina Blau, der Wiener Landschaftsmalerin, die im Freien malte, als dies für Frauen noch kaum möglich war: von den ersten Bauernhäusern über Holland und Rom bis zum Frühling im Prater und ihrem Atelier in der Rotunde. Kurze Stationen und Bilder zum Ausmalen. Dieser Weg folgt ihr durch das Licht.",
   "ending": [
     "Tina Blau stirbt am 31. Oktober 1916 in Wien. Sie hat der Wiener Landschaftsmalerei das helle Licht des Freien gebracht.",
-    "Der Weg kann weiterwachsen. Weitere Reisen, Gärten und Stadtansichten können in einem späteren Teil folgen."
+    "Von den Lehrjahren in Wien über Holland, Rom und Paris kehrt der Weg immer wieder in den Prater zurück, wo sie auch ihr Atelier hat."
   ],
-  "epilogue": "Am 31. Oktober 1916 stirbt Tina Blau in Wien. Ein späterer Teil kann weitere Reisen und Gärten nachtragen.",
+  "epilogue": "Tina Blau stirbt am 31. Oktober 1916 in Wien. Sie hat der Wiener Landschaftsmalerei das helle Licht des Freien gebracht. Von den Lehrjahren in Wien über Holland, Rom und Paris kehrt der Weg immer wieder in den Prater zurück, wo sie auch ihr Atelier hat.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [

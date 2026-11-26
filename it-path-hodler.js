@@ -68,7 +68,7 @@
   },
   "hjonction": {
     "title": "Paesaggio alla Jonction vicino a Ginevra",
-    "museum": "Collezione non determinata"
+    "museum": "Von der Heydt-Museum, Wuppertal"
   },
   "harvekinder": {
     "title": "Bambini che pescano sulle rive dell’Arve",
@@ -124,7 +124,7 @@
   },
   "hweigle": {
     "title": "Ritratto di Hélène Weiglé",
-    "museum": "Collezione non determinata"
+    "museum": "Städel Museum, Francoforte"
   },
   "haugustine": {
     "title": "Ritratto di Augustine Dupin",
@@ -197,10 +197,6 @@
   "hbluete99": {
     "title": "Albero in fiore",
     "museum": "Musée d’art et d’histoire, Friburgo"
-  },
-  "hself00": {
-    "title": "Autoritratto",
-    "museum": "Collezione non determinata"
   },
   "hergriffen": {
     "title": "Commozione",
@@ -303,7 +299,7 @@
     "mapLabel": "1900",
     "intro": [
       "Nel 1895 Hodler dipinge «L’alabardiere». Nel 1896 le sue figure ornano il padiglione delle belle arti dell’Esposizione nazionale svizzera a Ginevra. Nel 1897 vince il concorso per gli affreschi di Marignano nel Landesmuseum di Zurigo; il progetto scatena una vivace controversia. A Friburgo tiene una conferenza sul compito dell’artista.",
-      "Nel 1900 riceve una medaglia d’oro all’Esposizione universale di Parigi e entra nelle Secessioni di Vienna e di Berlino. Alberi in fiore, viali e figure silenziose nel prato chiudono questa prima parte."
+      "Nel 1900 riceve una medaglia d’oro all’Esposizione universale di Parigi e entra nelle Secessioni di Vienna e di Berlino. Alberi in fiore, viali e figure silenziose nel prato chiudono questi anni."
     ]
   }
 });
@@ -412,7 +408,7 @@
       "Alla Jonction il Rodano e l’Arve si incontrano. Alberi si alzano sulla riva; l’acqua si divide in due colori.",
       "Prima e dopo Madrid, Hodler dipinge più e più volte questo luogo al margine di Ginevra: da vicino, osservando, senza pathos."
     ],
-    "fact": "1878. Collezione non determinata."
+    "fact": "1878. Von der Heydt-Museum, Wuppertal."
   },
   "harvekinder": {
     "text": [
@@ -510,7 +506,7 @@
       "Una giovane donna in abito scuro guarda con calma fuori dal quadro, le mani in grembo, un fiore tra le dita.",
       "Il ritratto data dal 1888. Hodler vive a Ginevra e dipinge committenti e conoscenti con una forma chiara e ferma."
     ],
-    "fact": "1888. Collezione non determinata."
+    "fact": "1888. Städel Museum, Francoforte."
   },
   "haugustine": {
     "text": [
@@ -638,13 +634,6 @@
     ],
     "fact": "1899. Musée d’art et d’histoire, Friburgo."
   },
-  "hself00": {
-    "text": [
-      "Hodler con barba corta e sguardo fermo, la testa vicina al bordo del quadro, quasi senza intorno.",
-      "Nel 1900 riceve una medaglia d’oro all’Esposizione universale di Parigi. Il ritratto fissa il pittore che ora si fa conoscere anche all’estero."
-    ],
-    "fact": "1900. Collezione non determinata."
-  },
   "hergriffen": {
     "text": [
       "Una giovane donna in un lungo abito azzurro sta in un prato di fiori e porta le mani al petto, lo sguardo basso.",
@@ -655,7 +644,7 @@
   "habendruhe": {
     "text": [
       "Una ragazza in un abito chiaro sta a piedi nudi in un prato di fiori, le mani alzate in preghiera, lo sguardo volto di lato.",
-      "Il quadro data da circa il 1901 ed è conservato al Kunsthaus Zürich. Chiude questa prima parte: una figura serena nel paesaggio, prima che nella prossima parte seguano i grandi quadri di laghi e montagne."
+      "Il quadro data da circa il 1901 ed è conservato al Kunsthaus Zürich. Una figura serena nel paesaggio, prima che seguano i grandi quadri di laghi e montagne."
     ],
     "fact": "Verso il 1901. Kunsthaus Zürich."
   }

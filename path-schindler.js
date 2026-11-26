@@ -131,15 +131,15 @@
   "name": "Emil Jakob Schindler",
   "title": "Emil Jakob Schindlers Lebensweg",
   "life": "1842–1892",
-  "part": "Teil 1 · Stimmungen von Wien bis Sylt",
+  "part": "Stimmungen von Wien bis Sylt",
   "subtitle": "Auen, Mühlen und Meer",
   "cover": "sjsaege",
-  "intro": "Reise mit Emil Jakob Schindler, dem Wiener Landschaftsmaler der leisen Stimmungen: von den Bergbächen der Ramsau über die Donauauen und den Prater bis nach Plankenberg, an die Adria und ans Meer von Sylt. Kurze Stationen und Bilder zum Ausmalen. Dieser erste Teil folgt seinem Licht.",
+  "intro": "Reise mit Emil Jakob Schindler, dem Wiener Landschaftsmaler der leisen Stimmungen: von den Bergbächen der Ramsau über die Donauauen und den Prater bis nach Plankenberg, an die Adria und ans Meer von Sylt. Kurze Stationen und Bilder zum Ausmalen. Dieser Weg folgt seinem Licht.",
   "ending": [
     "Emil Jakob Schindler stirbt am 9. August 1892 in Westerland auf Sylt. Seine Schülerinnen Marie Egner und Olga Wisinger-Florian tragen seine Malerei weiter.",
-    "Der Weg kann weiterwachsen. Weitere Auen und Küsten können in einem späteren Teil folgen."
+    "Der Weg führt von den Gebirgsbächen seiner Lehrjahre über den Prater, die Auen und Plankenberg bis an die Nordseeküste von Sylt."
   ],
-  "epilogue": "Am 9. August 1892 stirbt Schindler auf Sylt. Ein späterer Teil kann weitere Stimmungsbilder nachtragen.",
+  "epilogue": "Emil Jakob Schindler stirbt am 9. August 1892 in Westerland auf Sylt. Seine Schülerinnen Marie Egner und Olga Wisinger-Florian tragen seine Malerei weiter. Der Weg führt von den Gebirgsbächen seiner Lehrjahre über den Prater, die Auen und Plankenberg bis an die Nordseeküste von Sylt.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [

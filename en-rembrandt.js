@@ -84,10 +84,6 @@
     "title": "Marten Looten",
     "museum": "Los Angeles County Museum of Art"
   },
-  "rbshipb": {
-    "title": "The Shipbuilder and his Wife",
-    "museum": "Royal Collection, London"
-  },
   "rbwten": {
     "title": "Johannes Wtenbogaert",
     "museum": "Rijksmuseum, Amsterdam"
@@ -135,10 +131,6 @@
   "rbstandard": {
     "title": "The Standard Bearer",
     "museum": "Rijksmuseum, Amsterdam"
-  },
-  "rbmagdalen": {
-    "title": "Christ and St Mary Magdalen at the Tomb",
-    "museum": "Royal Collection, London"
   },
   "rbpancake": {
     "title": "The Pancake Woman",
@@ -191,10 +183,6 @@
   "rbmartens": {
     "title": "Baertje Martens",
     "museum": "Hermitage, Saint Petersburg"
-  },
-  "rbagatha": {
-    "title": "Agatha Bas",
-    "museum": "Royal Collection, London"
   },
   "rbanslo": {
     "title": "The Mennonite Preacher Anslo and his Wife",
@@ -458,14 +446,6 @@
     ],
     "fact": "1632. Los Angeles County Museum of Art."
   },
-  "rbshipb": {
-    "text": [
-      "The shipbuilder Jan Rijcksen sits at his drawing table as his wife Griet Jans brings him a letter.",
-      "Rembrandt turned the double portrait into a small scene.",
-      "The picture is in the Royal Collection, London."
-    ],
-    "fact": "1633. Royal Collection, London."
-  },
   "rbwten": {
     "text": [
       "The old preacher Johannes Wtenbogaert, a leader of the Remonstrants, stands in a black coat with a white collar.",
@@ -561,14 +541,6 @@
       "Since 2022 it has been in the Rijksmuseum, Amsterdam."
     ],
     "fact": "1636. Rijksmuseum, Amsterdam."
-  },
-  "rbmagdalen": {
-    "text": [
-      "On Easter morning Mary Magdalen recognises Christ, who appears to her as a gardener with a hat.",
-      "Behind them the sun rises over the city.",
-      "The picture is in the Royal Collection, London."
-    ],
-    "fact": "1638. Royal Collection, London."
   },
   "rbpancake": {
     "text": [
@@ -673,14 +645,6 @@
       "The picture is in the Hermitage, Saint Petersburg."
     ],
     "fact": "c. 1640. Hermitage, Saint Petersburg."
-  },
-  "rbagatha": {
-    "text": [
-      "Agatha Bas stands as if in a window frame, one hand resting on the sill, the other holding a fan.",
-      "Rembrandt painted her in 1641.",
-      "The picture is in the Royal Collection, London."
-    ],
-    "fact": "1641. Royal Collection, London."
   },
   "rbanslo": {
     "text": [

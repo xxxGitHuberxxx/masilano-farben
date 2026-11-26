@@ -5,28 +5,12 @@
 (function () {
   var works = [
   {
-    "id": "rnmother",
-    "title": "Bildnis der Mutter",
-    "artist": "Pierre-Auguste Renoir",
-    "year": "um 1860",
-    "museum": "Privatbesitz",
-    "source": "Wikimedia Commons: «Pierre-Auguste Renoir - Portrait de la mère de Renoir.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "rnfather",
     "title": "Léonard Renoir, der Vater des Malers",
     "artist": "Pierre-Auguste Renoir",
     "year": "1869",
     "museum": "Saint Louis Art Museum",
     "source": "Wikimedia Commons: «Pierre-Auguste Renoir - Léonard Renoir, The Artist’s Father - 37-1933 - Saint Louis Art Museum.jpg», Public domain (gemeinfrei)"
-  },
-  {
-    "id": "rnspringbouq",
-    "title": "Frühlingsstrauss",
-    "artist": "Pierre-Auguste Renoir",
-    "year": "1866",
-    "museum": "Harvard Art Museums, Cambridge",
-    "source": "Wikimedia Commons: «Spring Bouquet by Pierre-Auguste Renoir, 1866, oil on canvas - Fogg Art Museum, Harvard University - DSC01224.jpg», Public domain (gemeinfrei)"
   },
   {
     "id": "rnvase66",
@@ -437,14 +421,6 @@
       ],
       "works": [
         {
-          "pid": "rnmother",
-          "text": [
-            "Marguerite Renoir, geborene Merlet, war Näherin.",
-            "Das Bildnis entstand erst um 1860, Jahre nach dem Umzug von Limoges nach Paris, und zeigt sie in dunkler, ruhiger Atelierfarbe."
-          ],
-          "fact": "um 1860. Privatbesitz."
-        },
-        {
           "pid": "rnfather",
           "text": [
             "Léonard Renoir war Schneider.",
@@ -452,14 +428,6 @@
             "Der Vater sitzt im Profil, fest modelliert und ohne das helle Licht der späteren Freilichtbilder."
           ],
           "fact": "1869. Saint Louis Art Museum."
-        },
-        {
-          "pid": "rnspringbouq",
-          "text": [
-            "Das Blumenstück von 1866 zeigt, wie sorgfältig Renoir schon als junger Maler Stoffe und Blüten setzt.",
-            "Solche Stillleben gehörten zur Lehre, die er als Porzellanmaler und im Atelier begonnen hatte."
-          ],
-          "fact": "1866. Harvard Art Museums, Cambridge."
         },
         {
           "pid": "rnvase66",
@@ -944,7 +912,7 @@
           "pid": "rncanotiers",
           "text": [
             "1880–81 versammelt Renoir Freunde auf der Terrasse der Maison Fournaise in Chatou.",
-            "Das «Déjeuner des canotiers» ist das grosse Schlussbild dieses ersten Teils und hängt in der Phillips Collection in Washington."
+            "Das «Déjeuner des canotiers» ist das grosse Bild dieser Jahre und hängt in der Phillips Collection in Washington."
           ],
           "fact": "1880–1881. The Phillips Collection, Washington."
         },

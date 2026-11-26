@@ -108,10 +108,6 @@
     "title": "Le remorqueur, le Loing à Saint-Mammès",
     "museum": "Petit Palais, Paris"
   },
-  "sybemberg83": {
-    "title": "Les bords du Loing vers Moret",
-    "museum": "Fondation Bemberg, Toulouse"
-  },
   "sysablonspath": {
     "title": "Un sentier aux Sablons",
     "museum": "National Gallery of Australia, Canberra"
@@ -168,10 +164,6 @@
     "title": "Le chemin des Fontaines, le matin en juin",
     "museum": "Musée d’art et d’histoire, Genève"
   },
-  "sysepmorning": {
-    "title": "Matinée de septembre",
-    "museum": "Musée des Beaux-Arts, Agen"
-  },
   "sypontmia": {
     "title": "Le pont de Moret",
     "museum": "Minneapolis Institute of Art"
@@ -179,10 +171,6 @@
   "syeveningoct": {
     "title": "Un soir à Moret, fin d’octobre",
     "museum": "Museo Thyssen-Bornemisza, Madrid"
-  },
-  "sysunset88": {
-    "title": "Moret au coucher du soleil",
-    "museum": "Cincinnati Art Museum"
   },
   "syriverview": {
     "title": "Vue de la rivière",
@@ -513,13 +501,6 @@
     ],
     "fact": "1883. Petit Palais, Paris."
   },
-  "sybemberg83": {
-    "text": [
-      "Le Loing brille sous un ciel clair, des arbres et des buissons poussent sur la rive.",
-      "Au loin, on aperçoit des maisons."
-    ],
-    "fact": "1883. Fondation Bemberg, Toulouse."
-  },
   "sysablonspath": {
     "text": [
       "Un sentier mène entre jardins et arbres jusqu’au village.",
@@ -618,13 +599,6 @@
     ],
     "fact": "1887. Musée d’art et d’histoire, Genève."
   },
-  "sysepmorning": {
-    "text": [
-      "Des arbres fruitiers se dressent dans un pré ensoleillé, à droite un arbre sombre entre dans le tableau.",
-      "En 1888, l’État français achète ce tableau, sa première œuvre de Sisley."
-    ],
-    "fact": "vers 1887. Musée des Beaux-Arts, Agen."
-  },
   "sypontmia": {
     "text": [
       "Le vieux pont de pierre enjambe le Loing, avec les moulins et l’église derrière.",
@@ -638,13 +612,6 @@
       "Les arbres de la rive sont déjà sombres."
     ],
     "fact": "1888. Museo Thyssen-Bornemisza, Madrid."
-  },
-  "sysunset88": {
-    "text": [
-      "La ville s’étend au bord de la rivière dans la chaude lumière du soir.",
-      "L’église et les toits se découpent sur le ciel."
-    ],
-    "fact": "1888. Cincinnati Art Museum."
   },
   "syriverview": {
     "text": [

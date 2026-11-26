@@ -1,7 +1,16 @@
 /* Masilano honorary titles and streak ranks (v10.35). Numeric IDs only; labels are rendered in the viewer's language. */
 (function () {
-  var PATH_IDS = ["vangogh","monet","hokusai","klimt","anker","hodler","cezanne","hiroshige","renoir","pissarro","turner","rembrandt","sisley","friedrich","segantini","vallotton","giacometti","spitzweg","moser","zuend","calame","wolf","ancher","blau","koller","diday","schindler","egner","wisinger","marc","durer","macke","morisot","velazquez","degas","manet","munch","delacroix","goya","seurat","canaletto","wood","rousseau","whistler","vaneyck","millet","vermeer","constable","waterhouse","leonardo","cassatt","gauguin","klee","mondrian","bruegel","raffael","botticelli"];
+  var PATH_IDS = ["vangogh","monet","hokusai","klimt","anker","hodler","cezanne","hiroshige","renoir","pissarro","turner","rembrandt","sisley","friedrich","segantini","vallotton","giacometti","spitzweg","moser","zuend","calame","wolf","ancher","blau","koller","diday","schindler","egner","wisinger","marc","durer","macke","morisot","velazquez","degas","manet","munch","delacroix","goya","seurat","canaletto","wood","rousseau","whistler","vaneyck","millet","vermeer","constable","waterhouse","leonardo","cassatt","gauguin","klee","mondrian","bruegel","raffael","botticelli","church","homer","moran","bierstadt","kobke","kroyer","cole","harunobu","eckersberg","lundbye","caillebotte","inness","heade","sargent","corot","boudin","redon","courbet"];
+  // v10.42r: paths removed for legal reasons keep their slot so numeric title IDs stay stable; their titles are no longer valid.
+  var RETIRED = { botticelli: 1, klee: 1, wood: 1, mondrian: 1, munch: 1, giacometti: 1, ancher: 1, egner: 1 };
   var STREAK_MAX = 5, PATH_BASE = 100, ALBUM_BASE = 200, ARTIST_COUNT = PATH_IDS.length;
+  // v10.43: the first 57 slots keep their IDs (100+i / 200+i) for existing players and the leaderboard.
+  // Newer paths (slot 57 = church onwards) get their own wide ranges, so 100+ paths never collide:
+  // workshop titles 1000+k, curator titles 2000+k (k = slot - 57, up to 999 new paths).
+  var LEGACY_COUNT = 57, PATH2_BASE = 1000, ALBUM2_BASE = 2000, RANGE2 = 1000;
+  // The live leaderboard worker (src/titles.js, TITLE_ARTIST_COUNT 57) only accepts the legacy ranges.
+  // Set to true only after the worker has been updated to the same ranges (draft: docs/v1043-titel-ids.md).
+  var SERVER_V2 = false;
   var CANON = {
     rembrandt: "Rembrandt van Rijn",
     friedrich: "Caspar David Friedrich",
@@ -35,14 +44,32 @@
   }
   function pathIndex(id) {
     var i = PATH_IDS.indexOf(id);
-    return i < 0 ? -1 : i;
+    return (i < 0 || RETIRED[id]) ? -1 : i;
+  }
+  // slot index -> {path, album} title IDs; reverse lookup below.
+  function slotOf(id) {
+    if (id >= PATH_BASE && id < PATH_BASE + Math.min(ARTIST_COUNT, LEGACY_COUNT)) return { i: id - PATH_BASE, kind: "path" };
+    if (id >= ALBUM_BASE && id < ALBUM_BASE + Math.min(ARTIST_COUNT, LEGACY_COUNT)) return { i: id - ALBUM_BASE, kind: "album" };
+    if (id >= PATH2_BASE && id < PATH2_BASE + RANGE2 && LEGACY_COUNT + id - PATH2_BASE < ARTIST_COUNT) return { i: LEGACY_COUNT + id - PATH2_BASE, kind: "path" };
+    if (id >= ALBUM2_BASE && id < ALBUM2_BASE + RANGE2 && LEGACY_COUNT + id - ALBUM2_BASE < ARTIST_COUNT) return { i: LEGACY_COUNT + id - ALBUM2_BASE, kind: "album" };
+    return null;
+  }
+  function idFor(i, kind) {
+    if (i < LEGACY_COUNT) return (kind === "path" ? PATH_BASE : ALBUM_BASE) + i;
+    return (kind === "path" ? PATH2_BASE : ALBUM2_BASE) + (i - LEGACY_COUNT);
   }
   function isValidTitleId(id) {
     if (typeof id !== "number" || !isFinite(id) || Math.floor(id) !== id) return false;
     if (id >= 1 && id <= STREAK_MAX) return true;
-    if (id >= PATH_BASE && id < PATH_BASE + ARTIST_COUNT) return true;
-    if (id >= ALBUM_BASE && id < ALBUM_BASE + ARTIST_COUNT) return true;
-    return false;
+    var s = slotOf(id);
+    return !!s && !RETIRED[PATH_IDS[s.i]];
+  }
+  // True if the live leaderboard accepts this ID (streak ranks and the legacy ranges).
+  function isServerTitleId(id) {
+    if (!isValidTitleId(id)) return false;
+    if (SERVER_V2 || id <= STREAK_MAX) return true;
+    var s = slotOf(id);
+    return !!s && s.i < LEGACY_COUNT;
   }
   function parseTitleId(v) {
     if (v == null || v === "") return { id: null };
@@ -93,21 +120,18 @@
       var r = RANKS[id - 1];
       return (r && (r[lang] || r.de)) || "";
     }
-    if (id >= PATH_BASE && id < PATH_BASE + ARTIST_COUNT) {
-      return honorWorkshop(lang, artistName(PATH_IDS[id - PATH_BASE], lang));
-    }
-    if (id >= ALBUM_BASE && id < ALBUM_BASE + ARTIST_COUNT) {
-      return honorCurator(lang, artistName(PATH_IDS[id - ALBUM_BASE], lang));
-    }
+    var s = slotOf(id);
+    if (s && s.kind === "path") return honorWorkshop(lang, artistName(PATH_IDS[s.i], lang));
+    if (s && s.kind === "album") return honorCurator(lang, artistName(PATH_IDS[s.i], lang));
     return "";
   }
   function pathTitleId(pathId) {
     var i = pathIndex(pathId);
-    return i < 0 ? 0 : PATH_BASE + i;
+    return i < 0 ? 0 : idFor(i, "path");
   }
   function albumTitleId(pathId) {
     var i = pathIndex(pathId);
-    return i < 0 ? 0 : ALBUM_BASE + i;
+    return i < 0 ? 0 : idFor(i, "album");
   }
   function loadChosen() {
     try {
@@ -298,6 +322,12 @@
     ALIAS: ALIAS,
     TITLE_KEY: TITLE_KEY,
     isValidTitleId: isValidTitleId,
+    isServerTitleId: isServerTitleId,
+    LEGACY_COUNT: LEGACY_COUNT,
+    PATH2_BASE: PATH2_BASE,
+    ALBUM2_BASE: ALBUM2_BASE,
+    SERVER_V2: SERVER_V2,
+    slotOf: slotOf,
     parseTitleId: parseTitleId,
     pathIndex: pathIndex,
     artistName: artistName,

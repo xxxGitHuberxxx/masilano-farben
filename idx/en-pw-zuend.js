@@ -1,0 +1,6 @@
+// Work titles (en) of path zuend (v10.43b), part of en-path-works-late.js.
+(function () {
+  var P = window.EN = window.EN || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"rzpilatus":{"title":"Mount Pilatus from the West","museum":"Kunsthaus Zürich"},"rzvierwald":{"title":"Evening on Lake Lucerne","museum":"Private collection"},"rzernte":{"title":"The Harvest","museum":"Kunstmuseum Basel"},"rzbaeume":{"title":"Trees","museum":"Private collection"},"rzhirtenhof":{"title":"Swiss Farm (Hirtenhof)","museum":"Metropolitan Museum of Art, New York"},"rzsempach":{"title":"The Battle Chapel at Sempach","museum":"Kunsthaus Zürich"},"rzseesemp":{"title":"Lake Sempach","museum":"Kunsthaus Zürich"},"rzeggen":{"title":"Farmers Harrowing with Oxen","museum":"Private collection"},"rzkorn":{"title":"Cornfield with Oaks","museum":"Private collection"},"rzreuss":{"title":"The Reuss with Rathausen Abbey","museum":"Private collection"},"rzeichen":{"title":"Oak Wood","museum":"Kunsthaus Zürich"},"rzbuchen":{"title":"Beech Wood","museum":"Kunstmuseum Luzern"},"rzschafe":{"title":"Evening Landscape with a Flock of Sheep","museum":"Kunsthaus Zürich"}});
+})();

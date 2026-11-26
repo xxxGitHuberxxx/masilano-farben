@@ -1,0 +1,6 @@
+// Work titles (it) of path heade (v10.43b), part of it-path-works-late.js.
+(function () {
+  var P = window.IT = window.IT || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"mhthunder":{"title":"Temporale in arrivo","museum":"Metropolitan Museum of Art, New York"},"mhwineglass":{"title":"Natura morta con bicchiere da vino","museum":"National Gallery of Art, Washington"},"mhroses":{"title":"Rose ed eliotropio in un vaso su un piano di marmo","museum":"National Gallery of Art, Washington"},"mhrio":{"title":"La baia di Rio de Janeiro","museum":"National Gallery of Art, Washington"},"mhcattleya":{"title":"Orchidea Cattleya e tre colibrì","museum":"National Gallery of Art, Washington"},"mhorchid":{"title":"Fiori di orchidea","museum":"Cleveland Museum of Art"},"mhjudith":{"title":"Point Judith, Rhode Island","museum":"Cleveland Museum of Art"},"mhyork":{"title":"York Harbor, costa del Maine","museum":"Art Institute of Chicago"},"mhapplevase":{"title":"Fiori di melo in un vaso","museum":"National Gallery of Art, Washington"},"mhapple":{"title":"Fiori di melo","museum":"Cleveland Museum of Art"},"mhhumapple":{"title":"Colibrì e fiori di melo","museum":"Metropolitan Museum of Art, New York"}});
+})();

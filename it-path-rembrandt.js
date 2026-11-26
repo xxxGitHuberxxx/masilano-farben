@@ -101,10 +101,6 @@
     "title": "Marten Looten",
     "museum": "Los Angeles County Museum of Art"
   },
-  "rbshipb": {
-    "title": "Il costruttore di navi e sua moglie",
-    "museum": "Royal Collection, Londra"
-  },
   "rbwten": {
     "title": "Johannes Wtenbogaert",
     "museum": "Rijksmuseum, Amsterdam"
@@ -152,10 +148,6 @@
   "rbstandard": {
     "title": "Il portabandiera",
     "museum": "Rijksmuseum, Amsterdam"
-  },
-  "rbmagdalen": {
-    "title": "Cristo e Maria Maddalena al sepolcro",
-    "museum": "Royal Collection, Londra"
   },
   "rbpancake": {
     "title": "La venditrice di frittelle",
@@ -208,10 +200,6 @@
   "rbmartens": {
     "title": "Baertje Martens",
     "museum": "Ermitage, San Pietroburgo"
-  },
-  "rbagatha": {
-    "title": "Agatha Bas",
-    "museum": "Royal Collection, Londra"
   },
   "rbanslo": {
     "title": "Il predicatore Cornelis Anslo e sua moglie",
@@ -438,12 +426,6 @@
     ],
     "fact": "1632. Los Angeles County Museum of Art."
   },
-  "rbshipb": {
-    "text": [
-      "Il costruttore di navi Jan Rijcksen è seduto al tavolo da disegno quando la moglie Griet Jans gli porta una lettera. Rembrandt trasforma il doppio ritratto in una piccola scena. Il quadro è nella Royal Collection di Londra."
-    ],
-    "fact": "1633. Royal Collection, Londra."
-  },
   "rbwten": {
     "text": [
       "L’anziano predicatore Johannes Wtenbogaert, un dirigente dei rimostranti, indossa un mantello nero con colletto bianco. Rembrandt lo dipinge nel 1633. Il quadro è nel Rijksmuseum di Amsterdam."
@@ -515,12 +497,6 @@
       "Un portabandiera sta orgoglioso con una grande bandiera sulla spalla, cappello piumato e fascia. Rembrandt dipinge il quadro nel 1636. Dal 2022 si trova nel Rijksmuseum di Amsterdam."
     ],
     "fact": "1636. Rijksmuseum, Amsterdam."
-  },
-  "rbmagdalen": {
-    "text": [
-      "La mattina di Pasqua Maria Maddalena riconosce Cristo, che le appare come giardiniere con il cappello. Dietro di loro sorge il sole sulla città. Il quadro è nella Royal Collection di Londra."
-    ],
-    "fact": "1638. Royal Collection, Londra."
   },
   "rbpancake": {
     "text": [
@@ -599,12 +575,6 @@
       "Baertje Martens era la moglie di Herman Doomer. Il suo ritratto è il pendant di quello del marito. Il quadro è nell’Ermitage di San Pietroburgo."
     ],
     "fact": "circa 1640. Ermitage, San Pietroburgo."
-  },
-  "rbagatha": {
-    "text": [
-      "Agatha Bas appare come nella cornice di una finestra, una mano sul davanzale e un ventaglio nell’altra. Rembrandt la dipinge nel 1641. Il quadro è nella Royal Collection di Londra."
-    ],
-    "fact": "1641. Royal Collection, Londra."
   },
   "rbanslo": {
     "text": [

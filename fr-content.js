@@ -187,94 +187,84 @@ window.FR = {
         "En 1715 le tableau fut rogné de tous les côtés afin qu’il tienne sur le mur prévu à l’hôtel de ville d’Amsterdam."
       ]
     },
-    "venus": {
-      "title": "La Naissance de Vénus",
-      "museum": "Galerie des Offices, Florence",
-      "technique": "Tempera sur toile. Les couleurs furent délayées avec de l’œuf comme liant.",
-      "story": "Vénus, déesse de l’amour, se tient debout sur une coquille. À gauche, les dieux du vent la poussent vers le rivage ; à droite, une femme attend avec un manteau plein de fleurs.",
-      "facts": [
-        "Au XVIe siècle, le tableau était accroché dans une villa des Médicis, la célèbre famille florentine. Qui l’a commandé, on ne le sait toujours pas avec certitude.",
-        "Botticelli peignit sur toile. À cette époque, à Florence, la plupart des peintures se faisaient encore sur des panneaux de bois."
-      ]
-    },
     "sunrise": {
       "title": "Impression, soleil levant",
       "museum": "Musée Marmottan Monet, Paris",
       "technique": "Huile sur toile, peinte rapidement et à touches libres, presque comme une esquisse.",
-      "story": "Monet peignit le tableau dans le port du Havre, sa ville natale. Le soleil orange se reflète dans l’eau, entre les mâts des bateaux dans la brume du matin.",
+      "story": "Monet peignit le port du Havre, où il avait grandi, dans la brume du matin : des bateaux, des grues, de la fumée et un soleil orange qui se reflète dans l’eau.",
       "facts": [
-        "Le nom « impressionnisme » vient de ce tableau. Un critique l’employa en 1874, sur un ton moqueur, à partir du titre « Impression ».",
-        "Pendant des années, le tableau était presque invisible : il était accroché derrière une porte, dans un musée de Paris, et l’on n’y prêtait guère attention."
+        "Ce tableau a donné son nom à tout un mouvement artistique. En 1874, un critique se moqua, d’après le titre, des « impressionnistes », et le nom resta.",
+        "Le soleil orange est presque aussi clair que le ciel gris qui l’entoure. C’est pourquoi il semble scintiller quand tu le regardes."
       ]
     },
     "sunflowers": {
       "title": "Les Tournesols",
       "museum": "The National Gallery, London",
       "technique": "Huile sur toile, avec une pâte épaisse. Les tournesols sont peints de telle sorte que l’on peut presque palper leur relief.",
-      "story": "Van Gogh peignit plusieurs vases de tournesols à Arles, dans le sud de la France. Il voulait en décorer la chambre de son ami peintre Paul Gauguin, qui devait lui rendre visite.",
+      "story": "Van Gogh peignit les tournesols à Arles, dans le sud de la France. Il voulait en décorer la chambre de son ami peintre Paul Gauguin, qui venait lui rendre visite.",
       "facts": [
-        "Il existe plusieurs tableaux de tournesols de Van Gogh, avec un nombre de fleurs différent. Celui-ci est accroché à la Neue Pinakothek de Munich.",
-        "Le jaune était sa couleur préférée. Il employa alors un pigment nouveau, le jaune de chrome, qui s’assombrit un peu avec le temps."
+        "Des tournesols dans un vase, il existe plusieurs versions. Elles sont aujourd’hui notamment à Londres, Amsterdam, Munich, Philadelphie et Tokyo.",
+        "Van Gogh n’a pas signé le tableau en bas dans le coin, mais au milieu du vase : « Vincent »."
       ]
     },
     "cafe": {
       "title": "Terrasse de café le soir",
       "museum": "Kröller-Müller Museum, Otterlo (les Pays-Bas)",
       "technique": "Huile sur toile. Van Gogh peignit le ciel nocturne sans noir, avec du bleu, du violet et du jaune.",
-      "story": "Une terrasse de café éclairée à Arles, avec le ciel étoilé au-dessus. Van Gogh peignit le tableau en septembre 1888, en plein air et de nuit.",
+      "story": "Le tableau montre un café en terrasse sur la place du Forum à Arles. Van Gogh peignit sur place, sous l’éclairage au gaz de la terrasse.",
       "facts": [
-        "C’est l’un des premiers tableaux où Van Gogh peignit un ciel étoilé. La Nuit étoilée viendrait presque un an plus tard.",
-        "À sa sœur, il écrivit avec fierté qu’il avait peint un tableau de nuit sans aucun noir, rien qu’avec du bleu, du violet et du vert."
+        "C’est le premier tableau dans lequel Van Gogh peignit un ciel étoilé, un an avant La Nuit étoilée.",
+        "À sa sœur, il écrivit avec fierté qu’il avait fait un tableau de nuit sans aucun noir, rien qu’avec du bleu, du violet et du vert."
       ]
     },
     "jatte": {
       "title": "Un dimanche après-midi à l’île de la Grande Jatte",
       "museum": "The Art Institute of Chicago",
       "technique": "Huile sur toile, peinte avec de nombreux petits points de couleur juxtaposés (pointillisme).",
-      "story": "Un après-midi de dimanche sur une île de la Seine, aux portes de Paris. Seurat travailla près de deux ans à ce tableau et le peignit presque entièrement en atelier, à partir de nombreuses études en plein air.",
+      "story": "Des Parisiens se reposent un dimanche sur une île de la Seine. Seurat travailla environ deux ans à ce grand tableau, qui mesure à peu près deux mètres sur trois.",
       "facts": [
-        "Si tu t’éloignes un peu, les points se fondent à l’œil en une couleur unie. Seurat l’avait calculé ainsi à dessein.",
-        "Le tableau est énorme : il mesure plus de deux mètres de haut et plus de trois de large."
+        "Regarde tout à droite : l’élégante dame tient un petit singe en laisse.",
+        "Plus tard, Seurat ajouta au tableau une bordure de points colorés, une sorte de cadre peint."
       ]
     },
     "galette": {
       "title": "Bal du moulin de la Galette",
       "museum": "Musée d’Orsay, Paris",
       "technique": "Huile sur toile, avec des taches de lumière libres et des touches visibles, typiques de l’impressionnisme.",
-      "story": "Un bal populaire en plein air à Montmartre, alors encore un quartier à la lisière de Paris. Renoir peignit des amis et des voisins, un dimanche après-midi à la lumière du soleil entre les arbres.",
+      "story": "Un dimanche après-midi, on danse et on bavarde dans le jardin d’un bal de Montmartre, à Paris.",
       "facts": [
-        "Le Moulin de la Galette était un vrai bal, avec un moulin et un jardin. On y servait des galettes, d’où le nom.",
-        "Beaucoup des personnes du tableau sont des amis de Renoir, par exemple des peintres et des écrivains."
+        "Beaucoup d’invités du tableau sont des amis de Renoir, par exemple des peintres et des écrivains.",
+        "Le lieu doit son nom à la « galette », une pâtisserie plate que l’on y mangeait."
       ]
     },
     "wanderer": {
       "title": "Le Voyageur contemplant une mer de nuages",
       "museum": "Hamburger Kunsthalle",
       "technique": "Huile sur toile. Friedrich peint les rochers avec netteté ; les nuages et les lointains, en revanche, de façon douce et voilée.",
-      "story": "Un homme de dos se tient debout sur un rocher, face à une mer de brouillard. On ne voit pas son visage, tu peux donc t’imaginer à sa place.",
+      "story": "Un homme se tient sur un rocher et regarde au loin une mer de brouillard. Le tableau est l’une des œuvres les plus connues du romantisme allemand.",
       "facts": [
-        "Cette figure de dos s’appelle en allemand une « Rückenfigur ». Friedrich l’employa souvent : le paysage devient ainsi quelque chose que tu contemples toi-même.",
-        "On pense que le paysage s’inspire de l’Elbsandsteingebirge, en Saxe. Le lieu exact n’a pas été identifié avec certitude."
+        "Le voyageur, nous ne le voyons que de dos. Cette « figure de dos » (Rückenfigur) est typique de Friedrich : ainsi, nous regardons le paysage avec lui.",
+        "Friedrich composa les rochers et les montagnes à partir d’esquisses faites dans le massif gréseux de l’Elbe, appelé aussi Suisse saxonne."
       ]
     },
     "babel": {
       "title": "La Tour de Babel",
       "museum": "Kunsthistorisches Museum, Vienne",
       "technique": "Huile sur panneau. Bruegel peignit la tour avec un détail si précis que l’on peut presque compter les briques.",
-      "story": "Le tableau montre la tour de la Bible, que les hommes voulaient bâtir jusqu’au ciel. Bruegel l’imagine comme un énorme chantier, avec des grues, des échafaudages et des centaines d’ouvriers.",
+      "story": "Selon la Bible, les hommes voulaient bâtir une tour qui monte jusqu’au ciel. Bruegel montre l’immense chantier avec des grues, des échafaudages, des ouvriers et toute une ville autour.",
       "facts": [
-        "Bruegel peignit la tour plus d’une fois. Cette version, la plus célèbre, se trouve à Vienne ; une autre, plus petite, est à Rotterdam.",
-        "Pour la forme, le modèle fut le Colisée de Rome, que Bruegel avait vu lors d’un voyage en Italie."
+        "Pour les nombreuses arcades, il prit probablement pour modèle le Colisée, qu’il avait vu lors de son voyage à Rome.",
+        "Bruegel peignit encore une seconde version, plus petite, de la tour. Elle se trouve aujourd’hui à Rotterdam."
       ]
     },
     "redfuji": {
       "title": "Fuji rouge (Vent léger, matin clair)",
       "museum": "Indianapolis Museum of Art at Newfields (cette épreuve)",
       "technique": "Gravure sur bois en couleurs : un bloc de bois distinct fut gravé pour chaque couleur et imprimé sur le papier l’un après l’autre.",
-      "story": "Le mont Fuji brille de rouge au soleil du matin, sous un ciel bleu parsemé de nuages blancs. La feuille appartient, comme La Grande Vague, à la série « 36 vues du mont Fuji ».",
+      "story": "Le Fuji rougeoie dans la lumière du matin, comme on peut le voir certains jours à la fin de l’été et en automne. Au-dessus passent de petits nuages.",
       "facts": [
-        "Le titre japonais « Gaifū kaisei » signifie à peu près « vent du sud, ciel clair ». C’est pourquoi le Fuji est si net et si rouge.",
-        "Au Japon, le Fuji rouge est aussi célèbre que La Grande Vague. On l’appelle souvent simplement « Aka-Fuji », le Fuji rouge."
+        "L’estampe appartient à la même série que « La Grande Vague » : les « Trente-six vues du mont Fuji ».",
+        "La série eut tant de succès que Hokusai y ajouta plus tard dix estampes, soit 46 au lieu de 36."
       ]
     },
     "anker": {
@@ -327,16 +317,6 @@ window.FR = {
         "Sur le billet de 20 livres d’aujourd’hui, tu vois Turner et, à l’arrière-plan, le Téméraire."
       ]
     },
-    "mondrian": {
-      "title": "Composition avec rouge, bleu et jaune",
-      "museum": "Kunsthaus Zürich",
-      "technique": "Huile sur toile. Seulement des lignes horizontales et verticales, plus les couleurs primaires rouge, bleu et jaune, ainsi que le noir et le blanc.",
-      "story": "Mondrian réduisit la peinture à l’essentiel : un grand rectangle rouge, plus un champ bleu et un champ jaune, tenus par une grille noire. Le tableau naquit en 1930 à Paris, à la demande de l’architecte zurichois Alfred Roth.",
-      "facts": [
-        "Mondrian appela ce style « néoplasticisme ». Il voulait montrer par là une harmonie claire et générale, non un paysage ni une personne.",
-        "Aujourd’hui le tableau est accroché au Kunsthaus de Zurich. Roth en fit don au musée en 1987."
-      ]
-    },
     "whistler": {
       "title": "Arrangement en gris et noir n° 1",
       "museum": "Musée d’Orsay, Paris",
@@ -365,16 +345,6 @@ window.FR = {
       "facts": [
         "Rousseau était autodidacte et n’avait jamais fréquenté une académie d’art. Il n’avait pas vu lui-même le désert et le lion : il les avait inventés.",
         "De son vivant, on souriait souvent de lui. Aujourd’hui le tableau est accroché au Museum of Modern Art de New York."
-      ]
-    },
-    "senecio": {
-      "title": "Senecio",
-      "museum": "Kunstmuseum Basel",
-      "technique": "Huile sur gaze, montée sur carton. Le visage est construit de plans géométriques simples.",
-      "story": "Un visage de cercles, de rectangles et de couleurs chaudes, presque comme un masque ou un dessin d’enfant. Klee prit le titre « Senecio » (lat. « vieillard ») d’un genre de plantes, le séneçon.",
-      "facts": [
-        "Klee naquit en 1879 à Münchenbuchsee, près de Berne. Il enseigna au Bauhaus et passe pour l’un des artistes les plus importants de la modernité.",
-        "Le tableau est accroché au Kunstmuseum de Bâle, non loin de la terre suisse de Klee."
       ]
     },
     "milkmaid": {
@@ -415,16 +385,6 @@ window.FR = {
       "facts": [
         "La femme en robe rouge montre quelque chose dans l’abîme, l’homme au milieu se penche tout bas, le troisième regarde au loin.",
         "Le tableau appartient à la collection Oskar Reinhart de Winterthur."
-      ]
-    },
-    "gothic": {
-      "title": "American Gothic",
-      "museum": "The Art Institute of Chicago",
-      "technique": "Huile sur panneau de fibres, avec des formes lisses et claires et de nombreux détails fins.",
-      "story": "Un fermier avec une fourche et une femme se tiennent devant une maison de bois avec une fenêtre pointue « gothique ». Wood peignit le tableau dans l’Iowa, d’après une maison qu’il avait vue dans la petite ville d’Eldon.",
-      "facts": [
-        "Pour modèles servirent la sœur de Wood, Nan, et son dentiste. Ils n’étaient pas censés représenter un couple particulier, mais un type.",
-        "Le titre se réfère à la fenêtre dans le style du « Carpenter Gothic », un gothique américain en bois."
       ]
     },
     "macke": {
@@ -495,16 +455,6 @@ window.FR = {
       "facts": [
         "Le tableau fut vu en 1874 à la première exposition des impressionnistes à Paris.",
         "Plus tard, Monet peignit d’autres champs de coquelicots, notamment à Vétheuil et à Giverny."
-      ]
-    },
-    "scream": {
-      "title": "Le Cri",
-      "museum": "Nasjonalmuseet, Oslo",
-      "technique": "Huile, tempera et pastel sur carton, avec des lignes ondulées dans le ciel, l’eau et la figure.",
-      "story": "Une figure se tient sur un pont, se bouche les oreilles et ouvre la bouche. Le ciel est d’un rouge de sang. Munch écrivit que, lors d’une promenade au coucher du soleil, il avait entendu un cri traverser la nature.",
-      "facts": [
-        "De ce motif il existe plusieurs versions. Voici la célèbre de 1893, aujourd’hui au Musée national d’Oslo.",
-        "À l’arrière-plan, deux silhouettes sombres continuent de marcher tranquillement, comme si elles ne remarquaient rien du bouleversement intérieur."
       ]
     },
     "liberty": {
@@ -598,13 +548,13 @@ window.FR = {
       ]
     },
     "avemaria": {
-      "title": "Ave Maria pendant la traversée",
-      "museum": "Segantini Museum, St. Moritz",
+      "title": "Ave Maria à la traversée",
+      "museum": "Musée Segantini, Saint-Moritz – dépôt permanent de la Fondation Otto Fischbacher Giovanni Segantini",
       "technique": "Huile sur toile. Segantini posa la couleur en traits fins, côte à côte.",
-      "story": "Un berger et une femme glissent dans la barque sur un lac de montagne silencieux, la brebis à la proue, le ciel déjà du soir. En cet instant ils joignent les mains pour l’Ave Maria.",
+      "story": "Un berger et une femme glissent dans la barque sur un lac silencieux, la brebis à la proue, le ciel déjà du soir. En cet instant ils joignent les mains pour l’Ave Maria.",
       "facts": [
-        "Segantini peignit le motif deux fois. La première version, de 1882, obtint une médaille d’or à l’Exposition universelle d’Amsterdam en 1883 ; dans cette seconde version de 1886, il employa pour la première fois la technique divisionniste.",
-        "Il vivait tout en haut en Engadine et peignit la vie paysanne dans les Alpes avec un grand calme et une grande précision."
+        "Segantini peignit le motif deux fois. La première version, de 1882, obtint une médaille d’or à l’Exposition universelle d’Amsterdam en 1883. Selon la spécialiste de Segantini Annie-Paule Quinsac, la seconde version, de 1886–1888, est son premier tableau purement divisionniste.",
+        "Il vécut dans les Grisons, ses dernières années tout en haut en Engadine, et peignit la vie paysanne dans les Alpes avec un grand calme et une grande précision."
       ]
     },
     "naeherin": {
@@ -635,16 +585,6 @@ window.FR = {
       "facts": [
         "Le tableau parut alors politique : certains y virent une accusation, parce que les plus pauvres cherchent si péniblement des restes.",
         "Millet connaissait la vie des champs par sa propre jeunesse en Normandie. Il peignit le travail non comme un folklore, mais avec sérieux."
-      ]
-    },
-    "maloja": {
-      "title": "Maloja en hiver",
-      "museum": "Collection particulière",
-      "technique": "Huile sur toile. Giacometti pose des couleurs lumineuses en taches libres, impressionnistes.",
-      "story": "Au-dessus du village enneigé de Maloja, en Engadine, se dresse un ciel d’hiver clair. Giovanni Giacometti, le père d’Alberto, peignit encore et encore sa terre, le Bergell et la Haute-Engadine.",
-      "facts": [
-        "Giovanni Giacometti mourut en 1933. Ses tableaux sont donc aujourd’hui dans le domaine public — contrairement à ceux de son fils célèbre, Alberto.",
-        "Il était ami de Ferdinand Hodler et apporta la lumière des impressionnistes français dans le paysage des Grisons."
       ]
     },
     "delft": {
@@ -733,7 +673,7 @@ window.FR = {
       "technique": "Pastel sur papier. Degas saisit le mouvement avec des traits libres et lumineux.",
       "story": "Une danseuse se tient sur les pointes, la tête rejetée en arrière, le bras largement ouvert. Autour d’elle la scène et les collègues se brouillent : le regard n’est là que pour cet unique instant lumineux.",
       "facts": [
-        "Le modèle était probablement la danseuse espagnole Rosita Mauri.",
+        "L’identité de la danseuse représentée n’est pas établie avec certitude.",
         "Degas s’asseyait souvent à l’Opéra, non seulement dans la loge, mais sur le côté et dans les coulisses, où le travail reste visible."
       ]
     },
@@ -907,16 +847,6 @@ window.FR = {
         "Le tableau fut longtemps en mains privées et montre « l’autre » Klimt : sans or, mais tout aussi dense et festif."
       ]
     },
-    "primavera": {
-      "title": "Le Printemps (La Primavera)",
-      "museum": "Galleria degli Uffizi, Florence",
-      "technique": "Tempera sur bois. Botticelli dispose les figures dans un bosquet d’orangers et d’innombrables fleurs.",
-      "story": "Dans un bosquet ombragé, neuf figures du printemps dansent et s’avancent : Mercure à gauche, les trois Grâces, Vénus au milieu, le vent de printemps Zéphyr à droite, qui poursuit la nymphe Chloris. Au-dessus de tous plane l’Amour.",
-      "facts": [
-        "Le tableau naquit probablement pour la famille Médicis à Florence et est l’un des plus célèbres du début de la Renaissance.",
-        "Botticelli peignit quelque 500 plantes individuelles, beaucoup avec une telle précision que les botanistes peuvent encore les identifier aujourd’hui."
-      ]
-    },
     "terrace": {
       "title": "Deux sœurs sur la terrasse",
       "museum": "The Art Institute of Chicago",
@@ -965,7 +895,7 @@ window.FR = {
     },
     "foxes": {
       "title": "Les Renards",
-      "museum": "Collection particulière"
+      "museum": "Localisation actuelle non confirmée publiquement"
     },
     "fate": {
       "title": "Destins d’animaux",
@@ -1067,10 +997,6 @@ window.FR = {
       "title": "Le Bureau de la loterie d’État",
       "museum": "Van Gogh Museum, Amsterdam"
     },
-    "laundry": {
-      "title": "Femme étendant le linge",
-      "museum": "Collection particulière"
-    },
     "bulbfields": {
       "title": "Champs de bulbes en Hollande",
       "museum": "National Gallery of Art, Washington"
@@ -1098,10 +1024,6 @@ window.FR = {
     "cottages83": {
       "title": "Chaumières",
       "museum": "Van Gogh Museum, Amsterdam"
-    },
-    "twilightch": {
-      "title": "Paysage avec une église au crépuscule",
-      "museum": "Collection particulière"
     },
     "drawbridge": {
       "title": "Le Pont-levis à Nieuw-Amsterdam",
@@ -1624,8 +1546,8 @@ window.FR = {
       "museum": "Minneapolis Institute of Art"
     },
     "olivepick": {
-      "title": "Cueilleuses d’olives",
-      "museum": "Metropolitan Museum of Art, New York"
+      "title": "L’Oliveraie (Cueilleuses d’olives)",
+      "museum": "National Gallery of Art, Washington"
     },
     "moonrise": {
       "title": "Paysage du soir avec lune montante",
@@ -1823,10 +1745,6 @@ window.FR = {
       "title": "L’Embouchure de la Seine à Honfleur",
       "museum": "Norton Simon Museum, Pasadena"
     },
-    "greendress": {
-      "title": "Camille en robe verte",
-      "museum": "Kunsthalle Bremen"
-    },
     "womengarden": {
       "title": "Femmes au jardin",
       "museum": "Musée d’Orsay, Paris"
@@ -1930,10 +1848,6 @@ window.FR = {
     "artigarden": {
       "title": "Le Jardin de l’artiste à Argenteuil",
       "museum": "National Gallery of Art, Washington"
-    },
-    "hobbyhorse": {
-      "title": "Jean Monet sur son cheval de bois",
-      "museum": "Metropolitan Museum of Art, New York"
     },
     "autumneff": {
       "title": "Effet d’automne à Argenteuil",
@@ -2139,10 +2053,6 @@ window.FR = {
       "title": "La Vallée de la Creuse à Fresselines",
       "museum": "Collection particulière"
     },
-    "ravincreuse": {
-      "title": "Les Ravins de la Creuse",
-      "museum": "Musée des Beaux-Arts, Reims"
-    },
     "creusegrey": {
       "title": "La Vallée de la Creuse, temps gris",
       "museum": "Collection particulière"
@@ -2266,10 +2176,6 @@ window.FR = {
     "irisyale": {
       "title": "Le Jardin de l’artiste à Giverny",
       "museum": "Yale University Art Gallery, New Haven"
-    },
-    "grandeallee": {
-      "title": "La Grande Allée à Giverny",
-      "museum": "Musée des Beaux-Arts de Montréal"
     },
     "lilywl": {
       "title": "Les Nymphéas, 1904",
@@ -2399,10 +2305,6 @@ window.FR = {
       "title": "Nymphéas",
       "museum": "Collection particulière"
     },
-    "lilybs": {
-      "title": "Nymphéas (Bridgestone)",
-      "museum": "Artizon Museum, Tokyo"
-    },
     "shopfront": {
       "title": "Devant une boutique",
       "museum": "Metropolitan Museum of Art, New York"
@@ -2415,17 +2317,9 @@ window.FR = {
       "title": "Les Lutteurs de sumo Takaneyama Yoichiemon et Sendagawa Kichigorō",
       "museum": "Metropolitan Museum of Art, New York"
     },
-    "sorinets": {
-      "title": "Femmes contemplant des pêcheurs aux filets",
-      "museum": "Musée Guimet, Paris (collection Camondo)"
-    },
     "dyers": {
       "title": "Teinturiers au travail",
       "museum": "Cleveland Museum of Art"
-    },
-    "soritable": {
-      "title": "Femme près d’une table de peinture",
-      "museum": "Musée Guimet, Paris (collection Camondo)"
     },
     "fujisuri": {
       "title": "Vue du mont Fuji",
@@ -2727,10 +2621,6 @@ window.FR = {
       "title": "Le Pont suspendu à la frontière des provinces de Hida et d’Etchū",
       "museum": "Metropolitan Museum of Art, New York"
     },
-    "sanobashi": {
-      "title": "Ancienne vue du pont de bateaux de Sano, dans la province de Kōzuke",
-      "museum": "Musée Guimet, Paris"
-    },
     "tenpozan": {
       "title": "Le Tenpōzan à l’embouchure de la rivière Aji, province de Settsu",
       "museum": "Metropolitan Museum of Art, New York"
@@ -2803,14 +2693,6 @@ window.FR = {
       "title": "Le Fuji dans la vapeur profonde des montagnes",
       "museum": "Bibliothèque du Congrès, Washington"
     },
-    "artistsfuji": {
-      "title": "Artistes se préparant à dessiner le mont Fuji",
-      "museum": "Musée Guimet, Paris"
-    },
-    "fujitotomi": {
-      "title": "Le mont Fuji dans les montagnes de Tōtomi",
-      "museum": "Musée Guimet, Paris"
-    },
     "choshisea": {
       "title": "Chōshi dans la province de Shimōsa",
       "museum": "Wikimedia Commons"
@@ -2834,10 +2716,6 @@ window.FR = {
     "libai": {
       "title": "Li Bai contemplant une cascade",
       "museum": "Metropolitan Museum of Art, New York"
-    },
-    "sudongpo": {
-      "title": "Su Dongpo dans la neige",
-      "museum": "Musée Guimet, Paris"
     },
     "ministoru": {
       "title": "Le Ministre Tōru près d’un lac sous un croissant de lune",
@@ -3030,7 +2908,7 @@ window.FR = {
             "Dans ces mois, il ne pense pas seulement à des animaux isolés, mais au grand tissu de la nature. En même temps, il aide à Berlin à préparer le « Premier Salon d’automne allemand », une grande exposition internationale d’art moderne.",
             "« Les Renards » appartiennent aux tableaux dans lesquels l’animal devient déjà presque forme pure."
           ],
-          "fact": "Le tableau fut longtemps accroché au Museum Kunstpalast de Düsseldorf. Il se trouve aujourd’hui dans une collection particulière."
+          "fact": "À partir de 1962, le tableau appartint au Museum Kunstpalast de Düsseldorf. En 2022, la ville le restitua aux héritiers du collectionneur juif Kurt Grawi ; en mars 2022, il fut vendu aux enchères chez Christie’s à Londres. Sa localisation actuelle n’est pas confirmée publiquement."
         },
         "fate": {
           "title": "Un sombre pressentiment",
@@ -3101,7 +2979,7 @@ window.FR = {
       "ending": [
         "En 1839, un incendie à Edo détruit son logement et de nombreux dessins. Dans les années 1840, il séjourne plusieurs fois à Obuse, chez Takai Kōzan. En 1847 naît le dieu du tonnerre ; en 1849, le tigre dans la neige.",
         "Hokusai meurt à Edo le 18e jour du quatrième mois de la deuxième année Kaei – le 10 mai 1849. Selon le comput d’alors, il a quatre-vingt-dix ans.",
-        "Quinze ans plus tôt, en 1834, il avait écrit dans la postface des « Cent vues du mont Fuji » : « Depuis ma sixième année, j’ai l’habitude de reproduire la forme des choses. Depuis ma cinquantième année, j’ai souvent publié des images, mais ce que j’ai dessiné avant ma soixante-dixième année n’est vraiment rien que l’on puisse retenir. À soixante-treize ans, j’ai un peu compris la charpente des oiseaux, des animaux, des insectes et des poissons, et la croissance des plantes. C’est pourquoi, à quatre-vingt-six ans, je veux aller plus loin encore ; à quatre-vingt-dix, saisir la chose plus profondément ; à cent ans, atteindre vraiment le merveilleux ; et à cent dix, chaque point et chaque trait devront être vivants. Que les hommes de longue vie voient que mes paroles ne sont pas une vaine imagination. » Le souhait d’atteindre cent dix ans reste inassouvi. Les feuilles et les peintures tardives demeurent."
+        "Quinze ans plus tôt, en 1834, il avait écrit dans la postface des « Cent vues du mont Fuji » : « … C’est pourquoi, à quatre-vingt-six ans, je veux aller plus loin encore ; à quatre-vingt-dix, saisir la chose plus profondément ; à cent ans, atteindre vraiment le merveilleux ; et à cent dix, chaque point et chaque trait devront être vivants. » Le souhait d’atteindre cent dix ans reste inassouvi. Les feuilles et les peintures tardives demeurent."
       ],
       "epilogue": "Katsushika Hokusai meurt le 10 mai 1849 à Edo, à l’âge de quatre-vingt-dix ans selon le comput d’alors. Demeurent les « Trente-six vues », les « Cent vues du Fuji », les chutes, les ponts et les peintures tardives d’Obuse."
     }
@@ -3678,7 +3556,7 @@ window.FR = {
       "when": "desde 1834",
       "intro": [
         "En 1834 paraît le premier tome des « Cent vues du mont Fuji » (Fugaku Hyakkei), d’abord chez Eirakuya Tōshirō à Nagoya. Trois tomes suivent, en noir, en gris et souvent avec une touche de rose chair.",
-        "Dans la postface du premier tome, Hokusai écrit, sous le nom de Gakyō Rōjin Manji — « le vieil homme fou de peinture, Manji » : « Depuis ma sixième année, j’ai l’habitude de reproduire la forme des choses. Depuis ma cinquantième année, j’ai souvent publié des images, mais ce que j’ai dessiné avant ma soixante-dixième année n’est vraiment rien que l’on puisse retenir. À soixante-treize ans, j’ai commencé à un peu saisir la charpente des oiseaux, des animaux, des insectes et des poissons, et la croissance des plantes. C’est pourquoi, à quatre-vingt-six ans, je veux aller encore plus loin ; à quatre-vingt-dix, comprendre la chose plus profondément ; à cent, atteindre vraiment le merveilleux ; et à cent dix, chaque point et chaque trait devront être vivants. Puissent des messieurs de longue vie voir que ces paroles ne sont pas une vaine vanité. »",
+        "Dans la postface du premier tome, Hokusai écrit, sous le nom de Gakyō Rōjin Manji — « le vieil homme fou de peinture, Manji » : « … C’est pourquoi, à quatre-vingt-six ans, je veux aller encore plus loin ; à quatre-vingt-dix, comprendre la chose plus profondément ; à cent, atteindre vraiment le merveilleux ; et à cent dix, chaque point et chaque trait devront être vivants. »",
         "Les pages du livre montrent la montagne derrière un filet, à travers un anneau sacré, sous la pluie, à un gué — toujours à nouveau."
       ]
     },

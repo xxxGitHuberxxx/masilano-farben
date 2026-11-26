@@ -29,7 +29,7 @@ window.STORY_WORKS = [
    museum:'Städtische Galerie im Lenbachhaus, München',
    source:'Wikimedia Commons: «Marc, Franz - The Tiger - Google Art Project.jpg», gemeinfrei (Public Domain)' },
  { id:'foxes', title:'Die Füchse', artist:'Franz Marc', year:'1913',
-   museum:'Privatsammlung',
+   museum:'Heutiger Standort nicht öffentlich bestätigt',
    source:'Wikimedia Commons: «Franz Marc - The Foxes - Google Art Project.jpg», gemeinfrei (Public Domain)' },
  { id:'fate', title:'Tierschicksale', artist:'Franz Marc', year:'1913',
    museum:'Kunstmuseum Basel',

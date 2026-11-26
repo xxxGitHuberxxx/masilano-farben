@@ -28,14 +28,6 @@
     "source": "Wikimedia Commons: «The Field and the Great Walnut Tree in Winter, Eragny.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "pxdeafhouse",
-    "title": "Das Haus der tauben Frau und der Kirchturm von Éragny",
-    "artist": "Camille Pissarro",
-    "year": "1886",
-    "museum": "Indianapolis Museum of Art",
-    "source": "Wikimedia Commons: «The House of the Deaf Woman and the Belfry at Eragny, Pissarro - Indianapolis Museum of Art - DSC00657.JPG», Public domain (gemeinfrei)"
-  },
-  {
     "id": "pxpick86",
     "title": "Apfelernte",
     "artist": "Camille Pissarro",
@@ -523,14 +515,6 @@
           "Das Bild ist im Philadelphia Museum of Art."
         ],
         "fact": "1885. Philadelphia Museum of Art."
-      },
-      {
-        "pid": "pxdeafhouse",
-        "text": [
-          "Wiese, Bäume, ein Haus und der Kirchturm: der Blick über das Dorf im Jahr 1886.",
-          "Das Bild ist im Indianapolis Museum of Art."
-        ],
-        "fact": "1886. Indianapolis Museum of Art."
       }
     ]
   },

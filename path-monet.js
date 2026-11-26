@@ -9,7 +9,7 @@
     "artist": "Claude Monet",
     "year": "um 1856",
     "museum": "Art Institute of Chicago",
-    "source": "Wikimedia Commons: «Claude Monet - Caricature of Léon Manchon.jpg», gemeinfrei (Public Domain)"
+    "source": "Art Institute of Chicago, Open Access, Inv. 1933.888, gemeinfrei (CC0)"
   },
   {
     "id": "caricassin",
@@ -17,7 +17,7 @@
     "artist": "Claude Monet",
     "year": "um 1858",
     "museum": "Art Institute of Chicago",
-    "source": "Wikimedia Commons: «Claude Monet - Caricature of Henri Cassinelli - Rufus Croutinelli.jpg», gemeinfrei (Public Domain)"
+    "source": "Art Institute of Chicago, Open Access, Inv. 1933.893, gemeinfrei (CC0)"
   },
   {
     "id": "rouelles",
@@ -106,14 +106,6 @@
     "year": "1865",
     "museum": "Norton Simon Museum, Pasadena",
     "source": "Wikimedia Commons: «Claude Monet - Mouth of the Seine - 1865.jpg», gemeinfrei (Public Domain)"
-  },
-  {
-    "id": "greendress",
-    "title": "Camille im grünen Kleid",
-    "artist": "Claude Monet",
-    "year": "1866",
-    "museum": "Kunsthalle Bremen",
-    "source": "Wikimedia Commons: «Claude Monet - Camille.JPG», gemeinfrei (Public Domain)"
   },
   {
     "id": "womengarden",
@@ -324,14 +316,6 @@
     "source": "Wikimedia Commons: «Claude Monet, The Artist's Garden in Argenteuil (A Corner of the Garden with Dahlias), 1873, NGA 72138.jpg», CC0 (gemeinfrei)"
   },
   {
-    "id": "hobbyhorse",
-    "title": "Jean Monet auf dem Steckenpferd",
-    "artist": "Claude Monet",
-    "year": "1872",
-    "museum": "Metropolitan Museum of Art, New York",
-    "source": "Wikimedia Commons: «Claude Monet - Jean Monet on his Hobby Horse.jpg», gemeinfrei (Public Domain)"
-  },
-  {
     "id": "autumneff",
     "title": "Herbsteffekt in Argenteuil",
     "artist": "Claude Monet",
@@ -524,7 +508,7 @@
           ],
           "fact": "Chailly-en-Bière liegt am Rand des Waldes, südlich von Paris. Monet kehrt später oft in die Natur vor den Toren der Stadt zurück.",
           "quote": {
-            "text": "Komm also schnell zu mir, der Wald ist köstlich.",
+            "text": "Kommen Sie doch schnell zu mir, der Wald ist köstlich.",
             "cite": "Brief an Frédéric Bazille, Chailly, 28. April 1865"
           }
         },
@@ -584,14 +568,6 @@
         "Die Armut bleibt. In Ville-d’Avray malt er Frauen im Garten, Camille mehrfach. Den Winter 1868/69 verbringen sie in der Normandie: die Elster im Schnee. Das Mittagessen zeigt Camille und den kleinen Jean am Tisch – ein seltenes Bild des Alltags."
       ],
       "works": [
-        {
-          "pid": "greendress",
-          "text": [
-            "Camille Doncieux trägt ein langes grünes Kleid und blickt über die Schulter. Das Bild hat 1866 Erfolg im Salon – unter dem Titel «Camille».",
-            "Die Familie in Le Havre will von der Beziehung nichts wissen. Camille ist Modell, Partnerin und bald die Mutter seines Kindes."
-          ],
-          "fact": "Monet ist 25, Camille 19. Das grüne Kleid wird zu einem der bekannten Bilder ihrer ersten gemeinsamen Jahre."
-        },
         {
           "pid": "womengarden",
           "text": [
@@ -892,14 +868,6 @@
             "Monet malt das Haus nicht nur von aussen, sondern die Beete, in denen die Familie den Sommer verbringt."
           ],
           "fact": "Das Bild hängt in der National Gallery of Art in Washington. Der Garten wird in diesen Jahren zu einem seiner wichtigsten Motive."
-        },
-        {
-          "pid": "hobbyhorse",
-          "text": [
-            "Der kleine Jean, 1872 etwa fünf Jahre alt, sitzt stolz auf einem Steckenpferd im Garten. Hinter ihm die Beete und die Hecke.",
-            "Monet malt den Sohn ohne Pose, als Teil des Alltags in Argenteuil. Es ist ein helles, fast privates Bild."
-          ],
-          "fact": "Jean Monet wird 1867 geboren. Später, in Giverny, führen er und seine Stiefgeschwister den Haushalt des Vaters mit."
         },
         {
           "pid": "autumneff",

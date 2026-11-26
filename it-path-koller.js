@@ -9,10 +9,6 @@
   "Kunsthaus Zürich": "Kunsthaus di Zurigo"
 });
   P.works = Object.assign(P.works || {}, {
-  "rkselbst": {
-    "title": "Autoritratto a sedici anni al cavalletto",
-    "museum": "Collocazione non indicata"
-  },
   "rkschimmel": {
     "title": "Cavallo bianco nella stalla",
     "museum": "Kunsthaus di Zurigo"
@@ -78,14 +74,14 @@
   P.paths.koller = {
   "title": "Il percorso di vita di Rudolf Koller",
   "life": "1828–1905",
-  "part": "Parte 1 · Zurigo e gli animali",
+  "part": "Zurigo e gli animali",
   "subtitle": "Cavalli, mucche e la diligenza del Gottardo",
-  "intro": "Viaggia con Rudolf Koller, il pittore di animali di Zurigo: dal giovane pittore al cavalletto, attraverso le Alpi e il Klöntal, fino alla casa sullo Zürichhorn e alla celebre diligenza del Gottardo. Brevi tappe e quadri da colorare. Questa prima parte lo segue nella stalla, sul pascolo e in montagna.",
+  "intro": "Viaggia con Rudolf Koller, il pittore di animali di Zurigo: dal giovane pittore al cavalletto, attraverso le Alpi e il Klöntal, fino alla casa sullo Zürichhorn e alla celebre diligenza del Gottardo. Brevi tappe e quadri da colorare. Questo percorso lo segue nella stalla, sul pascolo e in montagna.",
   "ending": [
     "Rudolf Koller muore a Zurigo il 5 gennaio 1905. Per tutta la vita ha dipinto i suoi animali con pazienza e sguardo preciso.",
-    "Il percorso può ancora crescere. Altri studi, quadri alpini e ritratti potranno seguire in una parte successiva."
+    "Il percorso va dai primi quadri di cavalli, attraverso le mucche dello Zürichhorn, fino alla Posta del Gottardo, il suo quadro più noto."
   ],
-  "epilogue": "Il 5 gennaio 1905 Koller muore a Zurigo. Una parte successiva potrà aggiungere altri studi di animali."
+  "epilogue": "Rudolf Koller muore a Zurigo il 5 gennaio 1905. Per tutta la vita ha dipinto i suoi animali con pazienza e sguardo preciso. Il percorso va dai primi quadri di cavalli, attraverso le mucche dello Zürichhorn, fino alla Posta del Gottardo, il suo quadro più noto."
 };
   P.stations = Object.assign(P.stations || {}, {
   "rkjung": {
@@ -136,13 +132,6 @@
 });
   var pt = P.pathTexts = P.pathTexts || {};
   var add = {
-  "rkselbst": {
-    "text": [
-      "Il sedicenne Koller siede al cavalletto e ci guarda serio. È figlio di un macellaio e oste di Zurigo.",
-      "Fin da giovane disegna gli animali nella stalla del padre."
-    ],
-    "fact": "1844. Collocazione non indicata."
-  },
   "rkschimmel": {
     "text": [
       "Un cavallo bianco sta tranquillo nella stalla buia, la luce cade sul mantello e sulla criniera. Koller dipinge il quadro a vent’anni.",

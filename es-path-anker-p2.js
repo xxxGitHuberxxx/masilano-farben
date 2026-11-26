@@ -16,10 +16,6 @@
     "title": "La hermana mayor",
     "museum": "Colección no determinada"
   },
-  "aself91": {
-    "title": "Autorretrato de perfil, hacia la izquierda",
-    "museum": "Colección no determinada"
-  },
   "knab91": {
     "title": "Retrato de un niño",
     "museum": "Colección no determinada"
@@ -34,7 +30,7 @@
   },
   "dorfschneider": {
     "title": "El sastre del pueblo",
-    "museum": "Colección no determinada"
+    "museum": "Kunstmuseum Solothurn"
   },
   "krippe94": {
     "title": "La guardería II",
@@ -92,10 +88,6 @@
     "title": "Niño con su merienda",
     "museum": "Colección no determinada"
   },
-  "strickkorb": {
-    "title": "Niña tejiendo con cesta",
-    "museum": "Colección no determinada"
-  },
   "berthagugger": {
     "title": "Bertha Gugger con su hija",
     "museum": "Colección no determinada"
@@ -110,7 +102,7 @@
   },
   "kirchenfeld": {
     "title": "Escuela de párvulos en el puente de Kirchenfeld",
-    "museum": "Colección no determinada"
+    "museum": "Kunstmuseum Bern"
   },
   "znueni01": {
     "title": "Anciano con su merienda",
@@ -174,10 +166,6 @@
   },
   "flicken05": {
     "title": "Abuela sentada remendando",
-    "museum": "Colección no determinada"
-  },
-  "gvaterzeitung": {
-    "title": "Abuelo con el periódico",
     "museum": "Colección no determinada"
   },
   "drehhaspel": {
@@ -358,13 +346,6 @@
     ],
     "fact": "hacia 1889. Colección no determinada."
   },
-  "aself91": {
-    "text": [
-      "Anker se muestra de lado: barba, frente alta, la mirada dirigida a la izquierda.",
-      "El retrato está fechado en marzo de 1891. El año anterior dejó su residencia de París y ahora vive solo en Ins."
-    ],
-    "fact": "marzo de 1891. Colección no determinada."
-  },
   "knab91": {
     "text": [
       "Un niño rubio mira tranquilo desde el cuadro, sobre un fondo oscuro.",
@@ -380,7 +361,7 @@
     "fact": "1891. Colección no determinada.",
     "quote": {
       "text": "A veces lamento mucho no haber aprendido con un pintor de paisajes.",
-      "cite": "Carta a Auguste Bachelin, 1888. Centre Albert Anker, Ins."
+      "cite": "Carta a Auguste Bachelin, 1888. Traducido de la versión alemana del Centre Albert Anker, Ins."
     }
   },
   "wassereimer": {
@@ -395,10 +376,10 @@
       "Un anciano está inclinado sobre su costura, con las gafas en la nariz y el hilo en la mano.",
       "En 1891 Anker firma con el editor Frédéric Zahn el contrato para la edición de lujo de los relatos de Gotthelf. Entrega más de 220 ilustraciones, pero el trabajo le resulta pesado."
     ],
-    "fact": "1894. Colección no determinada.",
+    "fact": "1894. Kunstmuseum Solothurn.",
     "quote": {
-      "text": "Este terrible Zahn me tiene entre sus dientes. Me exprimirá como a un limón.",
-      "cite": "Carta a Albert de Meuron, 4 de enero de 1897. Centre Albert Anker, Ins."
+      "text": "Este terrible Zahn [el editor; «Zahn» significa «diente» en alemán] me tiene entre sus dientes. Me exprimirá como a un limón.",
+      "cite": "Carta a Albert de Meuron, 4 de enero de 1897. Traducido de la versión alemana del Centre Albert Anker, Ins."
     }
   },
   "krippe94": {
@@ -499,13 +480,6 @@
     ],
     "fact": "hacia 1897. Colección no determinada."
   },
-  "strickkorb": {
-    "text": [
-      "Una niña con delantal teje, con una cesta a su lado.",
-      "En Anker, tejer es cosa de niñas y de abuelas, a menudo unido a cuidar de alguien o a esperar."
-    ],
-    "fact": "hacia 1897. Colección no determinada."
-  },
   "berthagugger": {
     "text": [
       "Una madre tiene a su hijita en el regazo; las dos miran tranquilas.",
@@ -532,7 +506,7 @@
       "Un grupo de niños pequeños cruza un puente de Berna con un carro de mano. Una mujer los acompaña; en la barandilla hay una farola.",
       "En 1900 Anker recibe el doctorado honoris causa de la Universidad de Berna. En el cambio de siglo anota también en su diario preocupaciones políticas."
     ],
-    "fact": "1900. Colección no determinada.",
+    "fact": "1900. Kunstmuseum Bern.",
     "quote": {
       "text": "Albergo tres clases de temores: 1. La inaudita y antidemocrática unión del poder y la influencia en pocas manos, la contaminación total de los principios políticos por las cuestiones del interés material. 2. La deuda de miles de millones y sus peligros para la independencia de la patria. 3. La peligrosa posición del Estado como mayor empleador en una época de impetuosa agitación social.",
       "cite": "Diario del cambio de siglo, 1899/1900. Centre Albert Anker, Ins."
@@ -653,13 +627,6 @@
       "La hoja está fechada en 1905. La forma redonda hace que la escena parezca vista a través de una ventana."
     ],
     "fact": "1905. Colección no determinada."
-  },
-  "gvaterzeitung": {
-    "text": [
-      "Un anciano está sentado a la mesa leyendo un periódico grande.",
-      "En 1906 el escultor Jakob August Heer hace un busto de Anker."
-    ],
-    "fact": "1906. Colección no determinada."
   },
   "drehhaspel": {
     "text": [

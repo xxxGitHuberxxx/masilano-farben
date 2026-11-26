@@ -215,10 +215,6 @@
     "title": "Fiori",
     "museum": "Dallas Museum of Art"
   },
-  "rnstraw": {
-    "title": "Natura morta con fragole",
-    "museum": "Brooklyn Museum, New York"
-  },
   "rnanemones": {
     "title": "Anemoni",
     "museum": "Barnes Foundation, Philadelphia"
@@ -714,13 +710,6 @@
       "Il quadro è al Dallas Museum of Art."
     ],
     "fact": "verso il 1915. Dallas Museum of Art."
-  },
-  "rnstraw": {
-    "text": [
-      "Fragole su una tovaglia, dipinte in fretta e con calore.",
-      "Il quadro è al Brooklyn Museum."
-    ],
-    "fact": "1914. Brooklyn Museum, New York."
   },
   "rnanemones": {
     "text": [

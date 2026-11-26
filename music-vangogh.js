@@ -28,31 +28,6 @@ window.MUSIC_PACKS.vangogh = {
         "it": "Registrazione: Membeth, Wikimedia Commons, dominio pubblico."
       }
     },
-    "traeumerei": {
-      "file": "traeumerei",
-      "kind": "period",
-      "title": {
-        "de": "Schumann: Träumerei, Kinderszenen op. 15",
-        "en": "Schumann: Träumerei, Kinderszenen Op. 15",
-        "es": "Schumann: Träumerei, Kinderszenen op. 15",
-        "fr": "Schumann : Träumerei, Kinderszenen op. 15",
-        "it": "Schumann: Träumerei, Kinderszenen op. 15"
-      },
-      "note": {
-        "de": "Musik seiner Zeit. Für Den Haag und Drenthe (1882–1883) ist kein bestimmtes Stück in den Briefen belegt. Zu hören ist Robert Schumanns «Träumerei» aus den Kinderszenen op. 15 (1838), leise Klaviermusik der Salons seiner Jahre.",
-        "en": "Music of his time. No particular piece is documented in the letters for The Hague and Drenthe (1882–1883). You hear Robert Schumann’s “Träumerei” from Kinderszenen, Op. 15 (1838), quiet piano music of the salons of his years.",
-        "es": "Música de su tiempo. Para La Haya y Drenthe (1882–1883) no hay en las cartas una pieza concreta documentada. Se escucha la «Träumerei» de Robert Schumann, de las Kinderszenen op. 15 (1838), música de piano callada de los salones de aquellos años.",
-        "fr": "Musique de son temps. Pour La Haye et le Drenthe (1882–1883), aucune pièce précise n’est attestée dans les lettres. On entend la « Träumerei » de Robert Schumann, tirée des Kinderszenen op. 15 (1838), une musique de piano douce des salons de ses années.",
-        "it": "Musica del suo tempo. Per L’Aia e il Drenthe (1882–1883) nessuna pagina precisa è documentata nelle lettere. Si ascolta la «Träumerei» di Robert Schumann, dalle Kinderszenen op. 15 (1838), musica per pianoforte quieta dei salotti di quegli anni."
-      },
-      "credit": {
-        "de": "Aufnahme: Musopen / Wikimedia Commons, gemeinfrei.",
-        "en": "Recording: Musopen / Wikimedia Commons, public domain.",
-        "es": "Grabación: Musopen / Wikimedia Commons, dominio público.",
-        "fr": "Enregistrement : Musopen / Wikimedia Commons, domaine public.",
-        "it": "Registrazione: Musopen / Wikimedia Commons, dominio pubblico."
-      }
-    },
     "bach-em": {
       "file": "bach-em",
       "kind": "documented",
@@ -128,56 +103,6 @@ window.MUSIC_PACKS.vangogh = {
         "it": "Registrazione: Teknopazzo, Wikimedia Commons, CC0."
       }
     },
-    "tannhauser": {
-      "file": "tannhauser",
-      "kind": "documented",
-      "title": {
-        "de": "Wagner: Tannhäuser-Ouvertüre (Anfang, Pilgerchor)",
-        "en": "Wagner: Tannhäuser overture (opening, Pilgrims’ Chorus)",
-        "es": "Wagner: obertura de Tannhäuser (inicio, coro de peregrinos)",
-        "fr": "Wagner : ouverture de Tannhäuser (début, chœur des pèlerins)",
-        "it": "Wagner: ouverture del Tannhäuser (inizio, coro dei pellegrini)"
-      },
-      "note": {
-        "de": "Im Juni 1888 las Van Gogh in Arles ein Buch über Wagner (Brief 621). Im September schrieb er, er denke an die Verbindung «unserer Farbe» mit Wagners Musik (Brief 683), und las einen weiteren Aufsatz über Wagner (Brief 686). Zu hören ist der leise Anfang der Tannhäuser-Ouvertüre, der Pilgerchor – ein Werk Wagners, kein in den Briefen namentlich genanntes Stück.",
-        "en": "In June 1888, in Arles, Van Gogh was reading a book about Wagner (letter 621). In September he wrote that he was thinking of the link between “our colour” and Wagner’s music (letter 683), and he read a further essay on Wagner (letter 686). You hear the quiet opening of the Tannhäuser overture, the Pilgrims’ Chorus — a work by Wagner, not a piece named in the letters.",
-        "es": "En junio de 1888, en Arles, Van Gogh leía un libro sobre Wagner (carta 621). En septiembre escribió que pensaba en el vínculo entre «nuestro color» y la música de Wagner (carta 683), y leyó otro ensayo sobre Wagner (carta 686). Se escucha el comienzo callado de la obertura de Tannhäuser, el coro de peregrinos: una obra de Wagner, no una pieza nombrada en las cartas.",
-        "fr": "En juin 1888, à Arles, Van Gogh lisait un livre sur Wagner (lettre 621). En septembre, il écrit qu’il pense au lien entre « notre couleur » et la musique de Wagner (lettre 683), et il lit un autre essai sur Wagner (lettre 686). On entend le début doux de l’ouverture de Tannhäuser, le chœur des pèlerins – une œuvre de Wagner, non une pièce nommée dans les lettres.",
-        "it": "Nel giugno 1888, ad Arles, Van Gogh leggeva un libro su Wagner (lettera 621). A settembre scrive di pensare al legame tra «il nostro colore» e la musica di Wagner (lettera 683), e legge un altro saggio su Wagner (lettera 686). Si ascolta l’inizio quieto dell’ouverture del Tannhäuser, il coro dei pellegrini: un’opera di Wagner, non un brano nominato nelle lettere."
-      },
-      "credit": {
-        "de": "Aufnahme: United States Marine Band, gemeinfrei (Arbeit der US-Regierung).",
-        "en": "Recording: United States Marine Band, public domain (U.S. government work).",
-        "es": "Grabación: United States Marine Band, dominio público (obra del gobierno de EE. UU.).",
-        "fr": "Enregistrement : United States Marine Band, domaine public (œuvre du gouvernement des États-Unis).",
-        "it": "Registrazione: United States Marine Band, dominio pubblico (opera del governo degli Stati Uniti)."
-      }
-    },
-    "berceuse": {
-      "file": "berceuse",
-      "kind": "period",
-      "title": {
-        "de": "Chopin: Berceuse op. 57",
-        "en": "Chopin: Berceuse, Op. 57",
-        "es": "Chopin: Berceuse, op. 57",
-        "fr": "Chopin : Berceuse, op. 57",
-        "it": "Chopin: Berceuse, op. 57"
-      },
-      "note": {
-        "de": "Musik seiner Zeit, mit einem Echo im Titel. Van Gogh nannte sein Bild der Frau Roulin «La Berceuse». Chopins Berceuse op. 57 ist das bekannte Wiegenlied der Klavierliteratur; dass er gerade dieses Stück gehört hat, ist nicht belegt.",
-        "en": "Music of his time, with an echo in the title. Van Gogh called his painting of Madame Roulin “La Berceuse”. Chopin’s Berceuse, Op. 57, is the well-known lullaby of the piano literature; that he actually heard this piece is not documented.",
-        "es": "Música de su tiempo, con un eco en el título. Van Gogh llamó a su retrato de la señora Roulin «La Berceuse». La Berceuse op. 57 de Chopin es la conocida canción de cuna de la literatura para piano; no está documentado que escuchara precisamente esta pieza.",
-        "fr": "Musique de son temps, avec un écho dans le titre. Van Gogh appela son portrait de madame Roulin « La Berceuse ». La Berceuse op. 57 de Chopin est la berceuse célèbre de la littérature pour piano ; qu’il ait entendu précisément cette pièce n’est pas attesté.",
-        "it": "Musica del suo tempo, con un’eco nel titolo. Van Gogh chiamò il ritratto della signora Roulin «La Berceuse». La Berceuse op. 57 di Chopin è la nota ninnananna della letteratura pianistica; non è documentato che egli abbia ascoltato proprio questo brano."
-      },
-      "credit": {
-        "de": "Aufnahme: Veronica van der Knaap, öffentliches Konzert, Wikimedia Commons, gemeinfrei.",
-        "en": "Recording: Veronica van der Knaap, public concert, Wikimedia Commons, public domain.",
-        "es": "Grabación: Veronica van der Knaap, concierto público, Wikimedia Commons, dominio público.",
-        "fr": "Enregistrement : Veronica van der Knaap, concert public, Wikimedia Commons, domaine public.",
-        "it": "Registrazione: Veronica van der Knaap, concerto pubblico, Wikimedia Commons, dominio pubblico."
-      }
-    },
     "nocturne-op15": {
       "file": "nocturne-op15",
       "kind": "period",
@@ -232,23 +157,12 @@ window.MUSIC_PACKS.vangogh = {
   "stations": {
     "borinage": "chorale",
     "etten": "chorale",
-    "haag-meer": "traeumerei",
-    "haag-sien": "traeumerei",
-    "drenthe": "traeumerei",
     "nuenen": "bach-em",
     "antwerp": "nocturne-op9",
     "paris-city": "gymnopedie",
     "paris-friends": "gymnopedie",
     "paris-asnieres": "gymnopedie",
     "paris-self": "gymnopedie",
-    "arles-arrive": "tannhauser",
-    "arles-sea": "tannhauser",
-    "arles-harvest": "tannhauser",
-    "arles-house": "tannhauser",
-    "arles-portraits": "tannhauser",
-    "arles-night": "tannhauser",
-    "arles-gauguin": "berceuse",
-    "arles-recovery": "berceuse",
     "stremy-garden": "nocturne-op15",
     "stremy-cypress": "nocturne-op15",
     "stremy-olives": "nocturne-op15",

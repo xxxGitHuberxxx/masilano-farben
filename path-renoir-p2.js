@@ -420,14 +420,6 @@
     "source": "Wikimedia Commons: «Pierre-Auguste Renoir - Flowers - 1957.64 - Dallas Museum of Art.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "rnstraw",
-    "title": "Stillleben mit Erdbeeren",
-    "artist": "Pierre-Auguste Renoir",
-    "year": "1914",
-    "museum": "Brooklyn Museum, New York",
-    "source": "Wikimedia Commons: «Renoir - Still Life with Strawberries, 1914.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "rnanemones",
     "title": "Anemonen",
     "artist": "Pierre-Auguste Renoir",
@@ -1071,14 +1063,6 @@
           "Das Bild hängt im Dallas Museum of Art."
         ],
         "fact": "um 1915. Dallas Museum of Art."
-      },
-      {
-        "pid": "rnstraw",
-        "text": [
-          "Erdbeeren auf einem Tuch, rasch und warm gemalt.",
-          "Das Bild hängt im Brooklyn Museum."
-        ],
-        "fact": "1914. Brooklyn Museum, New York."
       },
       {
         "pid": "rnanemones",

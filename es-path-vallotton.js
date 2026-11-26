@@ -27,10 +27,6 @@
     "title": "La mentira",
     "museum": "Baltimore Museum of Art"
   },
-  "fvpiano": {
-    "title": "Madame Vallotton al piano",
-    "museum": "Musée Toulouse-Lautrec, Albi"
-  },
   "ballon": {
     "title": "El balón",
     "museum": "Musée d’Orsay, París"
@@ -60,14 +56,14 @@
   P.paths.vallotton = {
   "title": "El camino de vida de Félix Vallotton",
   "life": "1865–1925",
-  "part": "Parte 1 · De Lausana a Honfleur",
+  "part": "De Lausana a Honfleur",
   "subtitle": "Los Nabis, los interiores y la luz de Normandía",
-  "intro": "Viaja con Félix Vallotton, el pintor de Lausana que en París se suma a los Nabis: desde los retratos tempranos, pasando por los interiores nítidos y «El balón», hasta los paisajes de Honfleur. Estaciones breves y cuadros para colorear. Esta primera parte llega hasta los años tardíos.",
+  "intro": "Viaja con Félix Vallotton, el pintor de Lausana que en París se suma a los Nabis: desde los retratos tempranos, pasando por los interiores nítidos y «El balón», hasta los paisajes de Honfleur. Estaciones breves y cuadros para colorear. Este camino llega hasta los años tardíos.",
   "ending": [
     "Vallotton muere en Neuilly-sur-Seine el 29 de diciembre de 1925, un día después de su sesenta cumpleaños. Sigue unido por igual al cantón de Vaud y a Francia.",
-    "El camino puede seguir creciendo. Xilografías, más naturalezas muertas y los paisajes tardíos del sur pueden seguir en una parte posterior."
+    "El camino va de Lausana, pasando por los nabis de París y los interiores silenciosos, hasta la costa de Normandía."
   ],
-  "epilogue": "El 29 de diciembre de 1925 Vallotton muere en Neuilly-sur-Seine, a los sesenta años. Una parte posterior puede añadir xilografías y más naturalezas muertas."
+  "epilogue": "Vallotton muere en Neuilly-sur-Seine el 29 de diciembre de 1925, un día después de su sesenta cumpleaños. Sigue unido por igual al cantón de Vaud y a Francia. El camino va de Lausana, pasando por los nabis de París y los interiores silenciosos, hasta la costa de Normandía."
 };
   P.stations = Object.assign(P.stations || {}, {
   "fvlausanne": {
@@ -136,13 +132,6 @@
       "El cuadro de 1898 pertenece a los interiores en los que muestra a la vez la cercanía y la distancia. Nada queda al azar."
     ],
     "fact": "1898. Baltimore Museum of Art."
-  },
-  "fvpiano": {
-    "text": [
-      "Gabrielle está sentada al piano, la espalda un poco inclinada, la habitación en planos de color serenos. Vallotton se casa con ella en 1899, el mismo año del cuadro.",
-      "A través de ella queda ligado a la galería Bernheim-Jeune. El interior sigue frío y atento, sin patetismo privado."
-    ],
-    "fact": "1899. Musée Toulouse-Lautrec, Albi."
   },
   "ballon": {
     "text": [

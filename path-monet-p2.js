@@ -348,14 +348,6 @@
     "source": "Wikimedia Commons: «La Vallée de la Creuse à Fresselines (1889) Claude Monet (W 1218).jpg», gemeinfrei (Public Domain)"
   },
   {
-    "id": "ravincreuse",
-    "title": "Die Schluchten der Creuse",
-    "artist": "Claude Monet",
-    "year": "1889",
-    "museum": "Musée des Beaux-Arts, Reims",
-    "source": "Wikimedia Commons: «MONET Claude Les Ravins de la Creuse Huile sur toile.jpg», gemeinfrei (Public Domain)"
-  },
-  {
     "id": "creusegrey",
     "title": "Das Tal der Creuse, graues Wetter",
     "artist": "Claude Monet",
@@ -935,14 +927,6 @@
           "Monet sucht hier nicht das Idyll. Die Gegend ist herb, das Licht wechselt schnell."
         ],
         "fact": "Das Bild von 1889 befindet sich in Privatbesitz."
-      },
-      {
-        "pid": "ravincreuse",
-        "text": [
-          "Die Schluchten der Creuse führen den Blick in die Tiefe, der Fluss glänzt wie ein Band. Das Tal wirkt geschlossen, fast streng.",
-          "In Reims hängt eine der klarsten Fassungen dieses Motivs."
-        ],
-        "fact": "Das Bild von 1889 hängt im Musée des Beaux-Arts in Reims."
       },
       {
         "pid": "creusegrey",

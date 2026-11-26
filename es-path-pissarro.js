@@ -53,10 +53,6 @@
     "title": "Autorretrato",
     "museum": "Statens Museum for Kunst, Copenhague"
   },
-  "pxfabrique": {
-    "title": "La pequeña fábrica",
-    "museum": "Musée d’art moderne et contemporain, Estrasburgo"
-  },
   "pxmarne": {
     "title": "El Marne en Chennevières",
     "museum": "National Galleries of Scotland, Edimburgo"
@@ -137,10 +133,6 @@
     "title": "El Crystal Palace",
     "museum": "Art Institute of Chicago"
   },
-  "pxdulwich": {
-    "title": "Dulwich College",
-    "museum": "Fondation Bemberg, Toulouse"
-  },
   "pxsydenham": {
     "title": "Cerca de Sydenham Hill",
     "museum": "Kimbell Art Museum, Fort Worth"
@@ -157,10 +149,6 @@
     "title": "Naturaleza muerta con manzanas y jarra",
     "museum": "Metropolitan Museum of Art, Nueva York"
   },
-  "pxpoulies": {
-    "title": "Ruelle des Poulies, Pontoise",
-    "museum": "Musée d’Orsay, París"
-  },
   "pxboulevard": {
     "title": "El Boulevard des Fossés, Pontoise",
     "museum": "Norton Simon Museum, Pasadena"
@@ -168,10 +156,6 @@
   "pxchestnut72": {
     "title": "Bosque de castaños en Louveciennes",
     "museum": "Nelson-Atkins Museum of Art, Kansas City"
-  },
-  "pxgelee": {
-    "title": "Escarcha, el viejo camino de Ennery, Pontoise",
-    "museum": "Musée d’Orsay, París"
   },
   "pxtroofs": {
     "title": "Los tejados rojos, rincón de pueblo, invierno",
@@ -403,13 +387,6 @@
     ],
     "fact": "1857–1858. Statens Museum for Kunst, Copenhague."
   },
-  "pxfabrique": {
-    "text": [
-      "Hacia 1862–65 Pissarro pinta una pequeña fábrica en el campo cerca de París, con figuras en el camino.",
-      "El cuadro se aleja del paisaje ideal clásico y está hoy en el Musée d’art moderne et contemporain de Estrasburgo."
-    ],
-    "fact": "hacia 1862–1865. Musée d’art moderne et contemporain, Estrasburgo."
-  },
   "pxmarne": {
     "text": [
       "A orillas del Marne, en Chennevières, al sureste de París, Pissarro pinta en 1864–65 una amplia vista del río.",
@@ -554,13 +531,6 @@
     ],
     "fact": "1871. Art Institute of Chicago."
   },
-  "pxdulwich": {
-    "text": [
-      "En 1871 Pissarro pinta también el colegio de Dulwich, cerca de Lordship Lane.",
-      "El cuadro está en la Fondation Bemberg de Toulouse."
-    ],
-    "fact": "1871. Fondation Bemberg, Toulouse."
-  },
   "pxsydenham": {
     "text": [
       "Desde una loma, en 1871, Pissarro contempla campos y árboles cerca de Sydenham Hill.",
@@ -589,13 +559,6 @@
     ],
     "fact": "1872. Metropolitan Museum of Art, Nueva York."
   },
-  "pxpoulies": {
-    "text": [
-      "La Ruelle des Poulies en Pontoise, 1872: una calleja, casas y un cielo claro.",
-      "Pissarro está de nuevo en la ciudad donde pronto trabajará también Cézanne. El cuadro está en el Musée d’Orsay."
-    ],
-    "fact": "1872. Musée d’Orsay, París."
-  },
   "pxboulevard": {
     "text": [
       "El Boulevard des Fossés en Pontoise, 1872, con árboles y figuras que pasan.",
@@ -609,13 +572,6 @@
       "El cuadro está en el Nelson-Atkins Museum of Art de Kansas City."
     ],
     "fact": "1872. Nelson-Atkins Museum of Art, Kansas City."
-  },
-  "pxgelee": {
-    "text": [
-      "La «Escarcha» de 1873 muestra el viejo camino de Ennery, cerca de Pontoise, con escarcha sobre los campos.",
-      "Pissarro presenta el cuadro en la primera exposición impresionista de 1874. Está en el Musée d’Orsay."
-    ],
-    "fact": "1873. Musée d’Orsay, París."
   },
   "pxtroofs": {
     "text": [

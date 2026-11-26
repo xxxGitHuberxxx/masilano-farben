@@ -172,10 +172,6 @@
     "title": "L’abbazia nel querceto",
     "museum": "Alte Nationalgalerie, Berlino"
   },
-  "cfrainbow": {
-    "title": "Paesaggio montano con arcobaleno",
-    "museum": "Museum Folkwang, Essen"
-  },
   "cfself10": {
     "title": "Autoritratto",
     "museum": "Kupferstichkabinett, Berlino"
@@ -199,10 +195,6 @@
   "cfwinterlon": {
     "title": "Paesaggio invernale",
     "museum": "National Gallery, Londra"
-  },
-  "cfwinterchurch": {
-    "title": "Paesaggio invernale con chiesa",
-    "museum": "Museo d’arte e di storia culturale, Dortmund"
   },
   "cfcrosswood": {
     "title": "Croce nel bosco",
@@ -587,13 +579,6 @@
     ],
     "fact": "1809–1810. Alte Nationalgalerie, Berlino."
   },
-  "cfrainbow": {
-    "text": [
-      "Un arcobaleno si stende sopra una montagna scura.",
-      "Davanti, un viandante siede su una roccia."
-    ],
-    "fact": "verso 1810. Museum Folkwang, Essen."
-  },
   "cfself10": {
     "text": [
       "Con barba e riccioli, Friedrich ci guarda serio e intenso.",
@@ -635,13 +620,6 @@
       "Dietro, nella nebbia, appare una chiesa gotica."
     ],
     "fact": "1811. National Gallery, Londra."
-  },
-  "cfwinterchurch": {
-    "text": [
-      "Abeti stanno nella neve, dietro una chiesa emerge dalla foschia.",
-      "Il quadro fa coppia con il paesaggio invernale di Londra."
-    ],
-    "fact": "1811. Museo d’arte e di storia culturale, Dortmund."
   },
   "cfcrosswood": {
     "text": [

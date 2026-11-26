@@ -3,11 +3,11 @@
   const ACH_KEY = 'masilano.achievements.v1';
   const DELIGHT_KEY = 'masilano.delight.v1';
   const SETS = {
-    lilies: ['lilies','lily1908','lilyaic','lilyblue','lilybridge','lilybs','lilyga2','lilyga431','lilyga462','lilymet2','lilypondga','lilypondnl','lilypool','lilyset','lilytoledo','lilywl'],
-    fuji: ['amiura','artistsfuji','ashishiro','chinowa','fujimi','fujimitsui','fujinibon','fujisundai','fujisuri','fujitotomi','fujitsukuda','futomi','gotenyama','kanaya','mikiri','minobu','murasame','oigawafuji','redfuji','sankifuji','thunder','wave'],
+    lilies: ['lilies','lily1908','lilyaic','lilyblue','lilybridge','lilyga2','lilyga431','lilyga462','lilymet2','lilypondga','lilypondnl','lilypool','lilyset','lilytoledo','lilywl'],
+    fuji: ['amiura','ashishiro','chinowa','fujimi','fujimitsui','fujinibon','fujisundai','fujisuri','fujitsukuda','futomi','gotenyama','kanaya','mikiri','minobu','murasame','oigawafuji','redfuji','sankifuji','thunder','wave'],
     sunflowers: ['sunflowers','sunflowermunich']
   };
-  const PATH_IDS = ['vangogh','monet','hokusai','klimt','anker','hodler','cezanne','hiroshige','renoir','pissarro','turner','rembrandt','sisley','friedrich','segantini','vallotton','giacometti','spitzweg','moser','zuend','calame','wolf','ancher','blau','koller','diday','schindler','egner','wisinger'];
+  const PATH_IDS = ['vangogh','monet','hokusai','klimt','anker','hodler','cezanne','hiroshige','renoir','pissarro','turner','rembrandt','sisley','friedrich','segantini','vallotton','spitzweg','moser','zuend','calame','wolf','blau','koller','diday','schindler','wisinger','church','degas','manet','goya','gauguin','velazquez','whistler','delacroix','morisot','seurat','constable','cassatt','millet','canaletto','rousseau','homer','moran','bierstadt','kobke','kroyer','cole','harunobu','eckersberg','lundbye','caillebotte','inness','heade','sargent','corot','boudin','redon','courbet'];
   const CATS = ['flowers','landscapes','water','animals','portraits','city'];
   const TROPHY = {
     first:'cup', n10:'cup', n50:'cup',
@@ -273,8 +273,8 @@
       },
       "vgDelight": {
         "n": "Klang der Briefe",
-        "d": "Nutze auf Van Goghs Lebensweg die Musik seiner Zeit oder das Vorlesen.",
-        "t": "Musik oder Vorlesen auf Van Goghs Weg."
+        "d": "Nutze auf Van Goghs Lebensweg die Musik seiner Zeit.",
+        "t": "Musik auf Van Goghs Weg."
       }
     }
   },
@@ -526,8 +526,8 @@
       },
       "vgDelight": {
         "n": "The sound of letters",
-        "d": "On Van Gogh’s life journey, use the music of his time or the reading aloud.",
-        "t": "Music or reading on Van Gogh’s path."
+        "d": "On Van Gogh’s life journey, use the music of his time.",
+        "t": "Music on Van Gogh’s path."
       }
     }
   },
@@ -779,8 +779,8 @@
       },
       "vgDelight": {
         "n": "El sonido de las cartas",
-        "d": "En el camino de Van Gogh, usa la música de su tiempo o la lectura en voz alta.",
-        "t": "Música o lectura en el camino de Van Gogh."
+        "d": "En el camino de Van Gogh, usa la música de su tiempo.",
+        "t": "Música en el camino de Van Gogh."
       }
     }
   },
@@ -1032,8 +1032,8 @@
       },
       "vgDelight": {
         "n": "Le chant des lettres",
-        "d": "Sur le parcours de Van Gogh, utilise la musique de son temps ou la lecture à voix haute.",
-        "t": "Musique ou lecture sur le parcours de Van Gogh."
+        "d": "Sur le parcours de Van Gogh, utilise la musique de son temps.",
+        "t": "Musique sur le parcours de Van Gogh."
       }
     }
   },
@@ -1285,8 +1285,8 @@
       },
       "vgDelight": {
         "n": "Il suono delle lettere",
-        "d": "Sul percorso di Van Gogh, usa la musica del suo tempo o la lettura ad alta voce.",
-        "t": "Musica o lettura sul percorso di Van Gogh."
+        "d": "Sul percorso di Van Gogh, usa la musica del suo tempo.",
+        "t": "Musica sul percorso di Van Gogh."
       }
     }
   }

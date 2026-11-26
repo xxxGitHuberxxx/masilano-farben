@@ -44,10 +44,6 @@
     "title": "Seashore in Moonlight",
     "museum": "Louvre, Paris"
   },
-  "cfsunsetwoman": {
-    "title": "Woman before the Setting Sun",
-    "museum": "Museum Folkwang, Essen"
-  },
   "cfwindow": {
     "title": "Woman at a Window",
     "museum": "Alte Nationalgalerie, Berlin"
@@ -64,10 +60,6 @@
     "title": "Giant Mountains Landscape with Rising Fog",
     "museum": "Bavarian State Painting Collections, Munich"
   },
-  "cfdriftingcloud": {
-    "title": "Drifting Clouds",
-    "museum": "Hamburger Kunsthalle"
-  },
   "cfmistbank": {
     "title": "Mist",
     "museum": "Hamburger Kunsthalle"
@@ -79,14 +71,6 @@
   "cfgreifharbour2": {
     "title": "Greifswald Harbour",
     "museum": "Alte Nationalgalerie, Berlin"
-  },
-  "cfgreifmeadows": {
-    "title": "Meadows near Greifswald",
-    "museum": "Hamburger Kunsthalle"
-  },
-  "cfflatland": {
-    "title": "Flat Countryside",
-    "museum": "Prussian Palaces and Gardens Foundation, Berlin"
   },
   "cfwindmills": {
     "title": "Landscape with Windmills",
@@ -123,14 +107,6 @@
   "cfice": {
     "title": "The Sea of Ice",
     "museum": "Hamburger Kunsthalle"
-  },
-  "cfnorthmoon": {
-    "title": "Northern Sea in Moonlight",
-    "museum": "National Gallery Prague"
-  },
-  "cfreef": {
-    "title": "Rocky Reef on the Seashore",
-    "museum": "Staatliche Kunsthalle Karlsruhe"
   },
   "cfmoonmen": {
     "title": "Two Men Contemplating the Moon",
@@ -418,13 +394,6 @@
     ],
     "fact": "1818. Louvre, Paris."
   },
-  "cfsunsetwoman": {
-    "text": [
-      "A woman stands on a path and gently spreads her arms before the low sun.",
-      "The whole land glows in warm yellow and orange."
-    ],
-    "fact": "c. 1818. Museum Folkwang, Essen."
-  },
   "cfwindow": {
     "text": [
       "Caroline stands in the bare studio at the open window and looks out onto the Elbe.",
@@ -453,13 +422,6 @@
     ],
     "fact": "c. 1819. Bavarian State Painting Collections, Munich."
   },
-  "cfdriftingcloud": {
-    "text": [
-      "Dense clouds drift over a green upland and almost hide the mountain peaks.",
-      "A small lake reflects the cool light."
-    ],
-    "fact": "c. 1820. Hamburger Kunsthalle."
-  },
   "cfmistbank": {
     "text": [
       "A flat landscape lies beneath a moving sky, and mist drifts over the fields.",
@@ -480,20 +442,6 @@
       "People and barrels stand on the quay, and the sky glows yellow and pink."
     ],
     "fact": "1818–1820. Alte Nationalgalerie, Berlin."
-  },
-  "cfgreifmeadows": {
-    "text": [
-      "Wide green meadows stretch to the horizon, where the silhouette of Greifswald stands with its church towers.",
-      "A few horses graze in the bright light."
-    ],
-    "fact": "1821–1822. Hamburger Kunsthalle."
-  },
-  "cfflatland": {
-    "text": [
-      "A village with red roofs and a windmill lies in flat country beneath a high, calm sky.",
-      "The picture may show Rügen or the area near Greifswald."
-    ],
-    "fact": "c. 1822. Prussian Palaces and Gardens Foundation, Berlin."
   },
   "cfwindmills": {
     "text": [
@@ -557,20 +505,6 @@
       "Below on the right one can make out the stern of a ship that was trapped by the ice."
     ],
     "fact": "1823–1824. Hamburger Kunsthalle."
-  },
-  "cfnorthmoon": {
-    "text": [
-      "Dark clouds open over a cold sea, and moonlight falls on rocks and water.",
-      "A boat lies on the shore."
-    ],
-    "fact": "c. 1823. National Gallery Prague."
-  },
-  "cfreef": {
-    "text": [
-      "A jagged reef rises like a pointed mountain from a calm, moonlit sea.",
-      "In front, dark hills surround a bay."
-    ],
-    "fact": "c. 1824. Staatliche Kunsthalle Karlsruhe."
   },
   "cfmoonmen": {
     "text": [

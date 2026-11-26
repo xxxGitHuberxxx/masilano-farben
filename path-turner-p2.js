@@ -36,14 +36,6 @@
     "source": "Wikimedia Commons: «Newcastle-upon-Tyne by Turner.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "turamsgate",
-    "title": "Ramsgate",
-    "artist": "J. M. W. Turner",
-    "year": "um 1824",
-    "museum": "Tate, London",
-    "source": "Wikimedia Commons: «(Barcelona) Ramsgate - William Turner - c. 1824 - Tate Britain.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "tucologne",
     "title": "Köln, Ankunft eines Paketboots am Abend",
     "artist": "J. M. W. Turner",
@@ -356,14 +348,6 @@
     "source": "Wikimedia Commons: «Joseph Mallord William Turner - Lucerne from the Lake - Google Art Project.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "tuzurich",
-    "title": "Ein Festtag in Zürich, früher Morgen, Musterstudie",
-    "artist": "J. M. W. Turner",
-    "year": "um 1845",
-    "museum": "Tate, London",
-    "source": "Wikimedia Commons: «(Barcelona) A Fête Day in Zurich, Early Morning, Sample Study - C.1845 - William Turner - Tate Britain.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "turhinefall",
     "title": "Der Rheinfall bei Schaffhausen",
     "artist": "J. M. W. Turner",
@@ -502,15 +486,6 @@
           "Es ist in der Tate in London."
         ],
         "fact": "um 1823. Tate, London."
-      },
-      {
-        "pid": "turamsgate",
-        "text": [
-          "Ein Segelschiff kämpft sich bei Sturm in den Hafen von Ramsgate, am Ufer steht der Leuchtturm.",
-          "Das Aquarell entsteht um 1824 für die Folge der englischen Häfen.",
-          "Es ist in der Tate in London."
-        ],
-        "fact": "um 1824. Tate, London."
       }
     ]
   },
@@ -974,15 +949,6 @@
           "Es ist in der Morgan Library & Museum in New York."
         ],
         "fact": "1845. Morgan Library & Museum, New York."
-      },
-      {
-        "pid": "tuzurich",
-        "text": [
-          "Am frühen Morgen drängen sich Menschen am Ufer der Limmat in Zürich, Türme ragen in den hellen Himmel.",
-          "Die Studie entsteht um 1845.",
-          "Sie ist in der Tate in London."
-        ],
-        "fact": "um 1845. Tate, London."
       }
     ]
   },

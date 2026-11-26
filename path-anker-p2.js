@@ -13,14 +13,6 @@
     "source": "Wikimedia Commons: «Albert Anker Die ältere Schwester c1889.jpg», gemeinfrei (Public Domain)"
   },
   {
-    "id": "aself91",
-    "title": "Selbstbildnis im Profil, nach links",
-    "artist": "Albert Anker",
-    "year": "März 1891",
-    "museum": "Sammlung nicht ermittelt",
-    "source": "Wikimedia Commons: «Albert Anker - Selbstbildnis im Profil, nach links.jpg», gemeinfrei (Public Domain)"
-  },
-  {
     "id": "knab91",
     "title": "Bildnis eines Knaben",
     "artist": "Albert Anker",
@@ -49,7 +41,7 @@
     "title": "Der Dorfschneider",
     "artist": "Albert Anker",
     "year": "1894",
-    "museum": "Sammlung nicht ermittelt",
+    "museum": "Kunstmuseum Solothurn",
     "source": "Wikimedia Commons: «Albert Anker - Der Dorfschneider.jpg», gemeinfrei (Public Domain)"
   },
   {
@@ -149,14 +141,6 @@
     "source": "Wikimedia Commons: «Albert Anker - Knabe beim Znüni (ca.1897).jpg», gemeinfrei (Public Domain)"
   },
   {
-    "id": "strickkorb",
-    "title": "Strickendes Mädchen mit Korb",
-    "artist": "Albert Anker",
-    "year": "um 1897",
-    "museum": "Sammlung nicht ermittelt",
-    "source": "Wikimedia Commons: «Albert Anker - Strickendes Mädchen mit Korb.jpg», gemeinfrei (Public Domain)"
-  },
-  {
     "id": "berthagugger",
     "title": "Bertha Gugger mit Tochter",
     "artist": "Albert Anker",
@@ -185,7 +169,7 @@
     "title": "Kleinkinderschule auf der Kirchenfeldbrücke",
     "artist": "Albert Anker",
     "year": "1900",
-    "museum": "Sammlung nicht ermittelt",
+    "museum": "Kunstmuseum Bern",
     "source": "Wikimedia Commons: «Albert Anker - Kleinkinderschule auf der Kirchenfeldbrücke (1900).jpg», gemeinfrei (Public Domain)"
   },
   {
@@ -315,14 +299,6 @@
     "year": "1905",
     "museum": "Sammlung nicht ermittelt",
     "source": "Wikimedia Commons: «Albert Anker Sitzende Grossmutter beim Flicken.jpg», gemeinfrei (Public Domain)"
-  },
-  {
-    "id": "gvaterzeitung",
-    "title": "Grossvater mit Zeitung",
-    "artist": "Albert Anker",
-    "year": "1906",
-    "museum": "Sammlung nicht ermittelt",
-    "source": "Wikimedia Commons: «Albert Anker - Grossvater mit Zeitung.jpg», gemeinfrei (Public Domain)"
   },
   {
     "id": "drehhaspel",
@@ -496,14 +472,6 @@
         "fact": "um 1889. Sammlung nicht ermittelt."
       },
       {
-        "pid": "aself91",
-        "text": [
-          "Anker zeigt sich selbst von der Seite: Bart, hohe Stirn, der Blick nach links gerichtet.",
-          "Das Bildnis ist auf März 1891 datiert. Im Jahr zuvor hat er seinen Wohnsitz in Paris aufgegeben und lebt nun ganz in Ins."
-        ],
-        "fact": "März 1891. Sammlung nicht ermittelt."
-      },
-      {
         "pid": "knab91",
         "text": [
           "Ein blonder Knabe blickt ruhig aus dem Bild, vor einem dunklen Grund.",
@@ -520,7 +488,7 @@
         "fact": "1891. Sammlung nicht ermittelt.",
         "quote": {
           "text": "Es tut mir zuweilen sehr leid, nicht bei einem Landschaftsmaler in die Lehre gegangen zu sein.",
-          "cite": "Brief an Auguste Bachelin, 1888. Centre Albert Anker, Ins."
+          "cite": "Brief an Auguste Bachelin, 1888. Deutsche Fassung nach dem Centre Albert Anker, Ins."
         }
       }
     ]
@@ -553,10 +521,10 @@
           "Ein alter Mann sitzt über seine Näharbeit gebeugt, Brille auf der Nase, den Faden in der Hand.",
           "1891 unterschreibt Anker beim Verleger Frédéric Zahn den Vertrag für die Prachtausgabe von Gotthelfs Erzählungen. Er liefert über 220 Illustrationen, doch die Arbeit empfindet er als mühsam."
         ],
-        "fact": "1894. Sammlung nicht ermittelt.",
+        "fact": "1894. Kunstmuseum Solothurn.",
         "quote": {
           "text": "Dieser schreckliche Zahn hält mich in seinen Zähnen. Er wird mich wie eine Zitrone ausquetschen.",
-          "cite": "Brief an Albert de Meuron, 4. Januar 1897. Centre Albert Anker, Ins."
+          "cite": "Brief an Albert de Meuron, 4. Januar 1897. Deutsche Fassung nach dem Centre Albert Anker, Ins."
         }
       },
       {
@@ -704,14 +672,6 @@
         "fact": "um 1897. Sammlung nicht ermittelt."
       },
       {
-        "pid": "strickkorb",
-        "text": [
-          "Ein Mädchen in Schürze strickt, neben sich einen Korb.",
-          "Stricken ist bei Anker eine Tätigkeit der Mädchen und der Grossmütter, oft verbunden mit Hüten oder Warten."
-        ],
-        "fact": "um 1897. Sammlung nicht ermittelt."
-      },
-      {
         "pid": "berthagugger",
         "text": [
           "Eine Mutter hält ihr kleines Kind auf dem Schoss, beide schauen ruhig.",
@@ -757,7 +717,7 @@
           "Eine Gruppe kleiner Kinder zieht mit einem Leiterwagen über eine Brücke in Bern. Eine Frau begleitet sie, am Geländer steht eine Laterne.",
           "Im Jahr 1900 erhält Anker die Ehrendoktorwürde der Universität Bern. Zur Jahrhundertwende notiert er in seinem Tagebuch auch politische Sorgen."
         ],
-        "fact": "1900. Sammlung nicht ermittelt.",
+        "fact": "1900. Kunstmuseum Bern.",
         "quote": {
           "text": "Ich hege dreierlei Befürchtungen: 1. Die unerhört grosse und undemokratische Vereinigung von Macht und Einfluss in wenigen Händen, die totale Verseuchung der politischen Grundsätze durch die Fragen des materiellen Interessens. 2. Die Milliardenschuld und ihre Gefahren für die Unabhängigkeit des Vaterlandes. 3. Die gefährliche Stellung des Staates als grösster Arbeitgeber in einer Zeit ungestümer gesellschaftlicher Gärung.",
           "cite": "Tagebuch zum Jahrhundertwechsel 1899/1900. Centre Albert Anker, Ins."
@@ -926,14 +886,6 @@
           "Das Blatt ist 1905 datiert. Die runde Form lässt die Szene wie durch ein Fenster gesehen wirken."
         ],
         "fact": "1905. Sammlung nicht ermittelt."
-      },
-      {
-        "pid": "gvaterzeitung",
-        "text": [
-          "Ein alter Mann sitzt am Tisch und liest eine grosse Zeitung.",
-          "1906 schafft der Bildhauer Jakob August Heer eine Büste von Anker."
-        ],
-        "fact": "1906. Sammlung nicht ermittelt."
       },
       {
         "pid": "drehhaspel",

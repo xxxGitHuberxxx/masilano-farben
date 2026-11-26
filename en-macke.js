@@ -18,9 +18,9 @@
   "subtitle": "Woman in a Green Jacket",
   "intro": "A short path to August Macke, friend of Franz Marc and painter of the Rhineland. “Woman in a Green Jacket” was painted in 1913 in Hilterfingen on Lake Thun.",
   "ending": [
-    "In September 1914 Macke is killed in the First World War, aged only 27. A later part can add further pictures from Tunis and the Rhine."
+    "In April 1914 he travels to Tunisia with Paul Klee and Louis Moilliet. In September 1914 Macke is killed in the First World War, aged only 27. The Lady in a Green Jacket, painted in Hilterfingen, belongs today to the Museum Ludwig in Cologne."
   ],
-  "epilogue": "A later part can add further pictures."
+  "epilogue": "In April 1914 he travels to Tunisia with Paul Klee and Louis Moilliet. In September 1914 Macke is killed in the First World War, aged only 27. The Lady in a Green Jacket, painted in Hilterfingen, belongs today to the Museum Ludwig in Cologne."
 };
   P.stations = Object.assign(P.stations || {}, {
   "macke1": {
@@ -32,4 +32,14 @@
     ]
   }
 });
+  // v10.42 pathTexts: work texts of the short path (were German fallback before).
+  P.pathTexts = Object.assign(P.pathTexts || {}, {
+    "macke": {
+      "text": [
+        "Walkers stand in a park, in the background the blue of a lake.",
+        "Macke painted the picture in 1913 in Hilterfingen on Lake Thun, where he spent several months with his wife Elisabeth."
+      ],
+      "fact": "Macke was a close friend of Franz Marc and belonged to the circle of the Blue Rider."
+    }
+  });
 })();

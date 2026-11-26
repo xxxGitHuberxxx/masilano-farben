@@ -121,7 +121,7 @@
   },
   "hholz": {
     "title": "The Woodcutter",
-    "museum": "Collection not established"
+    "museum": "Von der Heydt-Museum, Wuppertal"
   },
   "heinamut": {
     "title": "Unanimity",
@@ -145,14 +145,10 @@
   },
   "hthunstock11": {
     "title": "Lake Thun with the Stockhorn Range",
-    "museum": "Collection not established"
+    "museum": "Von der Heydt-Museum, Wuppertal"
   },
   "hthunabend12": {
     "title": "Lake Thun with the Stockhorn Range in the Evening",
-    "museum": "Collection not established"
-  },
-  "hwinter13": {
-    "title": "The Stockhorn Range and Lake Thun in Winter",
     "museum": "Collection not established"
   },
   "hmorhardt": {
@@ -162,10 +158,6 @@
   "hgertrud12": {
     "title": "Portrait of Gertrud Müller",
     "museum": "Collection not established"
-  },
-  "hhector12": {
-    "title": "Portrait of Hector Hodler",
-    "museum": "Kunsthaus Zürich"
   },
   "hself12": {
     "title": "Self-Portrait",
@@ -457,7 +449,7 @@
       "The lake lies across the width of the picture; opposite, the Savoy Alps in a calm, serrated range.",
       "This view across Lake Geneva dates from around 1906. The French side opposite becomes a clear silhouette."
     ],
-    "fact": "um 1906. Collection not established."
+    "fact": "c. 1906. Collection not established."
   },
   "hrhythm08": {
     "text": [
@@ -559,14 +551,14 @@
       "A woodcutter swings his axe, his legs firmly planted, the stroke as a clear, large movement.",
       "Like the mower, the woodcutter belongs to Hodler’s figures of labour. These austere, poster-like versions date from 1910."
     ],
-    "fact": "1910. Collection not established."
+    "fact": "1910. Von der Heydt-Museum, Wuppertal."
   },
   "heinamut": {
     "text": [
       "A dense group of men raise their arms; in the middle a figure stands on a pedestal with arms outstretched.",
       "In 1911 Hodler receives the commission for the mural “Unanimity” in the New Town Hall in Hanover; it is completed in 1913. The design shows the gathered gesture of assent."
     ],
-    "fact": "um 1913. Collection not established."
+    "fact": "c. 1913. Collection not established."
   },
   "hthunsym09": {
     "text": [
@@ -601,21 +593,14 @@
       "In the November light the Stockhorn range lies above the lake, the forms firm, the colours cooler.",
       "The picture is dated November 1910. In 1910 Hodler sets up a second studio in the Acacias in Geneva and receives an honorary doctorate from the University of Basel."
     ],
-    "fact": "1910. Collection not established."
+    "fact": "1910. Von der Heydt-Museum, Wuppertal."
   },
   "hthunabend12": {
     "text": [
       "In the evening lake and mountains darken; the Stockhorn range remains visible as a calm silhouette.",
       "This evening version dates from around 1912. Hodler records the same motif at a different hour."
     ],
-    "fact": "um 1912. Collection not established."
-  },
-  "hwinter13": {
-    "text": [
-      "In winter, snow lies on the slopes and on the shore; the Stockhorn range stands bare and pale above the lake.",
-      "The picture is dated 1913. The cold season, too, belongs in the long series of pictures of Lake Thun."
-    ],
-    "fact": "1913. Collection not established."
+    "fact": "c. 1912. Collection not established."
   },
   "hmorhardt": {
     "text": [
@@ -629,14 +614,7 @@
       "Gertrud Müller looks at us openly, in a light-coloured dress, the background plain.",
       "The collector from Solothurn is among Hodler’s important patrons. The portrait dates from around 1912."
     ],
-    "fact": "um 1912. Collection not established."
-  },
-  "hhector12": {
-    "text": [
-      "Hector, Hodler’s son, appears as a young man, his gaze firm, the face brought close to us.",
-      "Hector was born in 1887, the son of Hodler and Augustine Dupin. The portrait of around 1912 hangs in the Kunsthaus Zürich."
-    ],
-    "fact": "um 1912. Kunsthaus Zürich."
+    "fact": "c. 1912. Collection not established."
   },
   "hself12": {
     "text": [

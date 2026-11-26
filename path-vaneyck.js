@@ -21,9 +21,9 @@
   "cover": "arnolfini",
   "intro": "Van Eyck malt in Brügge mit einer neuen, leuchtenden Ölfarbe. Das Arnolfini-Porträt von 1434 zeigt ein Paar im Innenraum, den Spiegel an der Wand, jeden Stoff genau.",
   "ending": [
-    "Van Eyck stirbt 1441 in Brügge. Ein späterer Teil kann weitere Tafelbilder nachtragen."
+    "Van Eyck stirbt 1441 in Brügge. Das Arnolfini-Porträt hängt heute in der National Gallery in London."
   ],
-  "epilogue": "Ein späterer Teil kann weitere Tafelbilder nachtragen.",
+  "epilogue": "Van Eyck stirbt 1441 in Brügge. Das Arnolfini-Porträt hängt heute in der National Gallery in London.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [

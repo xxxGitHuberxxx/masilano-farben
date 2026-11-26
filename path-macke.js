@@ -21,9 +21,9 @@
   "cover": "macke",
   "intro": "Ein kurzer Weg zu August Macke, Freund von Franz Marc und Maler des Rheinlands. Das Bild «Dame in grüner Jacke» entstand 1913 in Hilterfingen am Thunersee.",
   "ending": [
-    "Im September 1914 fällt Macke im Ersten Weltkrieg, nur 27 Jahre alt. Ein späterer Teil kann weitere Bilder aus Tunis und vom Rhein nachtragen."
+    "Im April 1914 reist er mit Paul Klee und Louis Moilliet nach Tunesien. Im September 1914 fällt Macke im Ersten Weltkrieg, nur 27 Jahre alt. Die Dame in grüner Jacke aus Hilterfingen gehört heute dem Museum Ludwig in Köln."
   ],
-  "epilogue": "Ein späterer Teil kann weitere Bilder nachtragen.",
+  "epilogue": "Im April 1914 reist er mit Paul Klee und Louis Moilliet nach Tunesien. Im September 1914 fällt Macke im Ersten Weltkrieg, nur 27 Jahre alt. Die Dame in grüner Jacke aus Hilterfingen gehört heute dem Museum Ludwig in Köln.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [

@@ -213,10 +213,6 @@
     "title": "Fleurs",
     "museum": "Dallas Museum of Art"
   },
-  "rnstraw": {
-    "title": "Nature morte aux fraises",
-    "museum": "Brooklyn Museum, New York"
-  },
   "rnanemones": {
     "title": "Anémones",
     "museum": "Barnes Foundation, Philadelphia"
@@ -712,13 +708,6 @@
       "Le tableau est au Dallas Museum of Art."
     ],
     "fact": "vers 1915. Dallas Museum of Art."
-  },
-  "rnstraw": {
-    "text": [
-      "Des fraises sur une nappe, peintes vite et chaudement.",
-      "Le tableau est au Brooklyn Museum."
-    ],
-    "fact": "1914. Brooklyn Museum, New York."
   },
   "rnanemones": {
     "text": [

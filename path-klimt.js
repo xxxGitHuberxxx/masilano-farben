@@ -141,14 +141,6 @@
     "source": "Wikimedia Commons: «Klimt, Emilie Floge.jpg», gemeinfrei (Public Domain)"
   },
   {
-    "id": "oleander",
-    "title": "Zwei Mädchen mit Oleander",
-    "artist": "Gustav Klimt",
-    "year": "um 1890–1892",
-    "museum": "Legion of Honor, Fine Arts Museums of San Francisco",
-    "source": "Wikimedia Commons: «Two Girls with an Oleander Bush, by Gustav Klimt, c. 1890-1892, oil on canvas - California Palace of the Legion of Honor - San Francisco, CA - DSC02760.jpg», gemeinfrei (Public Domain)"
-  },
-  {
     "id": "hanswurst",
     "title": "Hanswurst auf der Stegreifbühne zu Rothenburg",
     "artist": "Gustav Klimt",
@@ -363,14 +355,6 @@
     "year": "1901",
     "museum": "Sammlung nicht ermittelt",
     "source": "Wikimedia Commons: «Klimt - Musik - 1901.jpeg», gemeinfrei (Public Domain)"
-  },
-  {
-    "id": "hygieia",
-    "title": "Hygieia (Detail aus «Medizin»)",
-    "artist": "Gustav Klimt",
-    "year": "1900–1901",
-    "museum": "Historische Fotografie; das Original verbrannte 1945 auf Schloss Immendorf",
-    "source": "Wikimedia Commons: «Hku Klimt Hygieia.jpg», gemeinfrei (Public Domain)"
   },
   {
     "id": "jurysketch",
@@ -659,14 +643,6 @@
           "fact": "Ölbild, 1891. Sammlung nicht ermittelt."
         },
         {
-          "pid": "oleander",
-          "text": [
-            "Zwei junge Frauen stehen vor einem Oleanderstrauch, dicht nebeneinander, in dunklen Kleidern, den Blick auf die Blüten gerichtet.",
-            "Das Bild entsteht um 1890 bis 1892. Es hängt in der Legion of Honor, Fine Arts Museums of San Francisco."
-          ],
-          "fact": "Öl auf Leinwand, um 1890–1892. Legion of Honor, San Francisco."
-        },
-        {
           "pid": "hanswurst",
           "text": [
             "Auf einem offenen Platz spielt die Figur des Hanswurst vor einer dichten Menge: ein Stegreiftheater unter freiem Himmel, mit Kostümen und Fahnen.",
@@ -938,14 +914,6 @@
         "Die Bilder werden von der Universität nicht abgenommen. Klimt kauft sie später zurück. 1945 verbrennen sie auf Schloss Immendorf in Niederösterreich, wo sie ausgelagert waren. Erhalten sind unter anderem historische Fotografien, Skizzen und der bekannte Ausschnitt der Hygieia aus der «Medizin»."
       ],
       "works": [
-        {
-          "pid": "hygieia",
-          "text": [
-            "Hygieia, die Göttin der Gesundheit, steht in einem roten, gold ornamentierten Gewand, die Schlange des Asklepios um den Arm, in der Hand eine Schale. Der Blick geht ruhig aus dem Bild.",
-            "Das Detail stammt aus dem Fakultätsbild «Medizin», das 1901 in der Secession gezeigt wird und scharfen Widerspruch auslöst. Das Original verbrennt 1945 auf Schloss Immendorf in Niederösterreich. Was bleibt, ist unter anderem diese historische Farbaufnahme."
-          ],
-          "fact": "Detail aus «Medizin», 1900–1901. Historische Aufnahme; Original 1945 auf Schloss Immendorf verbrannt."
-        },
         {
           "pid": "jurysketch",
           "text": [

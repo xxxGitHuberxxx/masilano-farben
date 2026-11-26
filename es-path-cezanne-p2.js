@@ -59,7 +59,7 @@
   },
   "czsvviaduct": {
     "title": "Montagne Sainte-Victoire y el viaducto del valle del Arc",
-    "museum": "Colección no determinada"
+    "museum": "The Metropolitan Museum of Art, Nueva York"
   },
   "czsvvalcros": {
     "title": "Montagne Sainte-Victoire y el viaducto desde Valcros",
@@ -183,7 +183,7 @@
   },
   "czbibfolk": {
     "title": "La cantera de Bibémus",
-    "museum": "Colección no determinada"
+    "museum": "Museum Folkwang, Essen"
   },
   "czbibnelson": {
     "title": "La cantera de Bibémus",
@@ -245,10 +245,6 @@
     "title": "La terraza en el jardín de Les Lauves",
     "museum": "Colección no determinada"
   },
-  "czcabanon": {
-    "title": "El Cabanon de Jourdan",
-    "museum": "Galleria Nazionale d’Arte Moderna, Roma"
-  },
   "czvallier": {
     "title": "El jardinero Vallier",
     "museum": "National Gallery of Art, Washington"
@@ -292,10 +288,10 @@
   },
   "cezannesv": {
     "place": "La montaña Sainte-Victoire",
-    "when": "1885–1897",
+    "when": "1882–1897",
     "mapLabel": "Sainte-Victoire",
     "intro": [
-      "Al este de Aix se alza la montaña Sainte-Victoire. Desde mediados de la década de 1880 el monte se convierte para Cézanne en un motivo central: con el gran pino en primer término, con el viaducto del valle del Arc, desde Valcros.",
+      "Al este de Aix se alza la montaña Sainte-Victoire. Desde la década de 1880 el monte se convierte para Cézanne en un motivo central: con el gran pino en primer término, con el viaducto del valle del Arc, desde Valcros.",
       "Se añaden vistas de la casa Bellevue con el palomar, que pertenece a la hermana Rose y a su marido Maxime Conil, y más tarde el gran pino sobre tierra roja.",
       "Cézanne vuelve a este monte a lo largo de dos décadas. Cada versión busca la misma forma en un orden nuevo de color y de plano."
     ]
@@ -428,9 +424,9 @@
   "czsvviaduct": {
     "text": [
       "Por la llanura atraviesa el viaducto del valle del Arc; encima se alza la montaña Sainte-Victoire, firme y clara.",
-      "El cuadro data de 1885–1887. Cézanne ordena llanura, viaducto y monte en un paisaje calmo y construido."
+      "El cuadro data de 1882–1885. Cézanne ordena llanura, viaducto y monte en un paisaje calmo y construido."
     ],
-    "fact": "1885–1887. Colección no determinada."
+    "fact": "1882–1885. The Metropolitan Museum of Art, Nueva York."
   },
   "czsvvalcros": {
     "text": [
@@ -647,7 +643,7 @@
       "Altas paredes de roca amarillenta se abren como un interior; arriba, el verdor de los árboles cierra la vista.",
       "Esta vista de la cantera data de hacia 1895. En estos años Cézanne vuelve una y otra vez a Bibémus."
     ],
-    "fact": "hacia 1895. Colección no determinada."
+    "fact": "hacia 1895. Museum Folkwang, Essen."
   },
   "czbibnelson": {
     "text": [
@@ -761,13 +757,6 @@
       "En 1902–1906 Cézanne pinta la terraza del nuevo estudio que se ha hecho construir al norte de Aix."
     ],
     "fact": "1902–1906. Colección no determinada."
-  },
-  "czcabanon": {
-    "text": [
-      "Una casa pequeña se alza bajo los árboles, los muros claros, el tejado firme, el follaje alrededor en manchas abiertas.",
-      "En 1906, en su último año, Cézanne pinta el Cabanon de Jourdan, en el borde de Aix. El cuadro cuelga en la Galleria Nazionale d’Arte Moderna de Roma."
-    ],
-    "fact": "1906. Galleria Nazionale d’Arte Moderna, Roma."
   },
   "czvallier": {
     "text": [

@@ -5,14 +5,6 @@
 (function () {
   var works = [
   {
-    "id": "rkselbst",
-    "title": "Selbstbildnis mit 16 Jahren an der Staffelei",
-    "artist": "Rudolf Koller",
-    "year": "1844",
-    "museum": "Standort ohne Angabe",
-    "source": "Wikimedia Commons: «Rudolf Koller - Selbstbildnis mit 16 Jahren, an der Staffelei (1844).jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "rkschimmel",
     "title": "Schimmel im Stall",
     "artist": "Rudolf Koller",
@@ -139,15 +131,15 @@
   "name": "Rudolf Koller",
   "title": "Rudolf Kollers Lebensweg",
   "life": "1828–1905",
-  "part": "Teil 1 · Zürich und die Tiere",
+  "part": "Zürich und die Tiere",
   "subtitle": "Pferde, Kühe und die Gotthardpost",
   "cover": "rkgotthard",
-  "intro": "Reise mit Rudolf Koller, dem Zürcher Tiermaler: vom jungen Maler an der Staffelei über die Alpen und das Klöntal bis zum Haus am Zürichhorn und zur berühmten Gotthardpost. Kurze Stationen und Bilder zum Ausmalen. Dieser erste Teil folgt ihm durch Stall, Weide und Gebirge.",
+  "intro": "Reise mit Rudolf Koller, dem Zürcher Tiermaler: vom jungen Maler an der Staffelei über die Alpen und das Klöntal bis zum Haus am Zürichhorn und zur berühmten Gotthardpost. Kurze Stationen und Bilder zum Ausmalen. Dieser Weg folgt ihm durch Stall, Weide und Gebirge.",
   "ending": [
     "Rudolf Koller stirbt am 5. Januar 1905 in Zürich. Seine Tiere hat er ein Leben lang mit Geduld und genauem Blick gemalt.",
-    "Der Weg kann weiterwachsen. Weitere Studien, Alpbilder und Bildnisse können in einem späteren Teil folgen."
+    "Der Weg führt von den ersten Pferdebildern über die Kühe am Zürichhorn bis zur Gotthardpost, seinem bekanntesten Bild."
   ],
-  "epilogue": "Am 5. Januar 1905 stirbt Koller in Zürich. Ein späterer Teil kann weitere Tierstudien nachtragen.",
+  "epilogue": "Rudolf Koller stirbt am 5. Januar 1905 in Zürich. Seine Tiere hat er ein Leben lang mit Geduld und genauem Blick gemalt. Der Weg führt von den ersten Pferdebildern über die Kühe am Zürichhorn bis zur Gotthardpost, seinem bekanntesten Bild.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [
@@ -169,14 +161,6 @@
         "Pferde und Kühe sind von Anfang an seine Modelle."
       ],
       "works": [
-        {
-          "pid": "rkselbst",
-          "text": [
-            "Der sechzehnjährige Koller sitzt an der Staffelei und blickt uns ernst an. Er ist der Sohn eines Zürcher Metzgers und Wirts.",
-            "Schon früh zeichnet er Tiere im Stall seines Vaters."
-          ],
-          "fact": "1844. Standort ohne Angabe."
-        },
         {
           "pid": "rkschimmel",
           "text": [

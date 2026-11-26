@@ -14,17 +14,9 @@
   "Metropolitan Museum of Art, New York": "Metropolitan Museum of Art, New York"
 });
   P.works = Object.assign(P.works || {}, {
-  "rnmother": {
-    "title": "Ritratto della madre dell’artista",
-    "museum": "Collezione privata"
-  },
   "rnfather": {
     "title": "Léonard Renoir, il padre dell’artista",
     "museum": "Saint Louis Art Museum"
-  },
-  "rnspringbouq": {
-    "title": "Mazzo di primavera",
-    "museum": "Harvard Art Museums, Cambridge"
   },
   "rnvase66": {
     "title": "Fiori in un vaso",
@@ -315,26 +307,12 @@
 });
   var pt = P.pathTexts = P.pathTexts || {};
   var add = {
-  "rnmother": {
-    "text": [
-      "Marguerite Renoir, nata Merlet, era sarta.",
-      "Il ritratto viene dipinto solo verso il 1860, anni dopo il trasferimento da Limoges a Parigi, con colori d’atelier scuri e quieti."
-    ],
-    "fact": "verso il 1860. Collezione privata."
-  },
   "rnfather": {
     "text": [
       "Léonard Renoir era sarto.",
       "Questo ritratto del 1869 nasce quando il figlio lavora già da solo. Il padre è di profilo, modellato con fermezza, senza la luce chiara dei futuri quadri all’aperto."
     ],
     "fact": "1869. Saint Louis Art Museum."
-  },
-  "rnspringbouq": {
-    "text": [
-      "Questo quadro di fiori del 1866 mostra con quanta cura il giovane Renoir già disponeva stoffe e fiori.",
-      "Nature morte così facevano parte dell’apprendistato iniziato come pittore di porcellane e in atelier."
-    ],
-    "fact": "1866. Harvard Art Museums, Cambridge."
   },
   "rnvase66": {
     "text": [
@@ -640,7 +618,7 @@
   "rncanotiers": {
     "text": [
       "Nel 1880–81 Renoir riunisce gli amici sulla terrazza della Maison Fournaise a Chatou.",
-      "La «Colazione dei canottieri» è il grande quadro finale di questa prima parte ed è alla Phillips Collection di Washington."
+      "La «Colazione dei canottieri» è il grande quadro di questi anni ed è alla Phillips Collection di Washington."
     ],
     "fact": "1880–1881. The Phillips Collection, Washington."
   },

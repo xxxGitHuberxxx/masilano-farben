@@ -52,14 +52,6 @@
     "source": "Wikimedia Commons: «Caspar David Friedrich - Meeresküste im Mondlicht, 1818.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "cfsunsetwoman",
-    "title": "Frau vor der untergehenden Sonne",
-    "artist": "Caspar David Friedrich",
-    "year": "um 1818",
-    "museum": "Museum Folkwang, Essen",
-    "source": "Wikimedia Commons: «Caspar David Friedrich - Frau vor untergehender Sonne.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "cfwindow",
     "title": "Frau am Fenster",
     "artist": "Caspar David Friedrich",
@@ -92,14 +84,6 @@
     "source": "Wikimedia Commons: «Caspar David Friedrich - Riesengebirge Landscape with Rising Fog - WGA8257.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "cfdriftingcloud",
-    "title": "Ziehende Wolken",
-    "artist": "Caspar David Friedrich",
-    "year": "um 1820",
-    "museum": "Hamburger Kunsthalle",
-    "source": "Wikimedia Commons: «Friedrich, Caspar David - Ziehende Wolken - ca.1820 - Hamburger Kunsthalle.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "cfmistbank",
     "title": "Nebelschwaden",
     "artist": "Caspar David Friedrich",
@@ -122,22 +106,6 @@
     "year": "1818–1820",
     "museum": "Alte Nationalgalerie, Berlin",
     "source": "Wikimedia Commons: «Friedrich, Caspar David - Der Greifswalder Hafen.jpg», Public domain (gemeinfrei)"
-  },
-  {
-    "id": "cfgreifmeadows",
-    "title": "Wiesen bei Greifswald",
-    "artist": "Caspar David Friedrich",
-    "year": "1821–1822",
-    "museum": "Hamburger Kunsthalle",
-    "source": "Wikimedia Commons: «Wiesen bei Greifswald (1821-1822) - Caspar David Friedrich (Hamburger Kunsthalle).jpg», Public domain (gemeinfrei)"
-  },
-  {
-    "id": "cfflatland",
-    "title": "Flachlandschaft",
-    "artist": "Caspar David Friedrich",
-    "year": "um 1822",
-    "museum": "Stiftung Preussische Schlösser und Gärten, Berlin",
-    "source": "Wikimedia Commons: «Friedrich - Flat Countryside (Isle of Ruegen or near Greifswald).jpg», Public domain (gemeinfrei)"
   },
   {
     "id": "cfwindmills",
@@ -210,22 +178,6 @@
     "year": "1823–1824",
     "museum": "Hamburger Kunsthalle",
     "source": "Wikimedia Commons: «Friedrich, Caspar David - Eismeer.jpg», Public domain (gemeinfrei)"
-  },
-  {
-    "id": "cfnorthmoon",
-    "title": "Nordisches Meer im Mondlicht",
-    "artist": "Caspar David Friedrich",
-    "year": "um 1823",
-    "museum": "Nationalgalerie Prag",
-    "source": "Wikimedia Commons: «Caspar David Friedrich - Northern Sea in the Moonlight - Google Art Project.jpg», Public domain (gemeinfrei)"
-  },
-  {
-    "id": "cfreef",
-    "title": "Felsenriff am Meeresstrand",
-    "artist": "Caspar David Friedrich",
-    "year": "um 1824",
-    "museum": "Staatliche Kunsthalle Karlsruhe",
-    "source": "Wikimedia Commons: «Caspar David Friedrich - Felsenriff am Meeresstrand (1824).jpg», Public domain (gemeinfrei)"
   },
   {
     "id": "cfmoonmen",
@@ -581,14 +533,6 @@
     ],
     "works": [
       {
-        "pid": "cfsunsetwoman",
-        "text": [
-          "Eine Frau steht auf einem Weg und breitet leicht die Arme vor der tief stehenden Sonne aus.",
-          "Das ganze Land leuchtet in warmem Gelb und Orange."
-        ],
-        "fact": "um 1818. Museum Folkwang, Essen."
-      },
-      {
         "pid": "cfwindow",
         "text": [
           "Caroline steht im kahlen Atelier am offenen Fenster und schaut hinaus auf die Elbe.",
@@ -637,14 +581,6 @@
         "fact": "um 1819. Bayerische Staatsgemäldesammlungen, München."
       },
       {
-        "pid": "cfdriftingcloud",
-        "text": [
-          "Über eine grüne Hochfläche ziehen dichte Wolken, die die Berggipfel fast verdecken.",
-          "Ein kleiner See spiegelt das kühle Licht."
-        ],
-        "fact": "um 1820. Hamburger Kunsthalle."
-      },
-      {
         "pid": "cfmistbank",
         "text": [
           "Eine flache Landschaft liegt unter einem bewegten Himmel, Nebel zieht über die Felder.",
@@ -683,22 +619,6 @@
           "Am Ufer stehen Menschen und Fässer, der Himmel glüht gelb und rosa."
         ],
         "fact": "1818–1820. Alte Nationalgalerie, Berlin."
-      },
-      {
-        "pid": "cfgreifmeadows",
-        "text": [
-          "Weite grüne Wiesen reichen bis zum Horizont, wo die Silhouette von Greifswald mit ihren Kirchtürmen steht.",
-          "Ein paar Pferde grasen im hellen Licht."
-        ],
-        "fact": "1821–1822. Hamburger Kunsthalle."
-      },
-      {
-        "pid": "cfflatland",
-        "text": [
-          "Ein Dorf mit roten Dächern und einer Windmühle liegt in flachem Land unter einem hohen, ruhigen Himmel.",
-          "Vielleicht zeigt das Bild Rügen oder die Gegend bei Greifswald."
-        ],
-        "fact": "um 1822. Stiftung Preussische Schlösser und Gärten, Berlin."
       },
       {
         "pid": "cfwindmills",
@@ -803,22 +723,6 @@
           "Rechts darunter ist das Heck eines Schiffes zu erkennen, das vom Eis eingeschlossen wurde."
         ],
         "fact": "1823–1824. Hamburger Kunsthalle."
-      },
-      {
-        "pid": "cfnorthmoon",
-        "text": [
-          "Dunkle Wolken öffnen sich über einem kalten Meer, Mondlicht fällt auf Felsen und Wasser.",
-          "Am Ufer liegt ein Boot."
-        ],
-        "fact": "um 1823. Nationalgalerie Prag."
-      },
-      {
-        "pid": "cfreef",
-        "text": [
-          "Aus einem stillen, mondhellen Meer ragt ein spitzes Riff wie ein Zackenberg.",
-          "Vorn liegen dunkle Hügel um eine Bucht."
-        ],
-        "fact": "um 1824. Staatliche Kunsthalle Karlsruhe."
       }
     ]
   },

@@ -16,9 +16,9 @@
   "subtitle": "La Madonna Sixtina",
   "intro": "En Roma, Rafael pinta para la Iglesia y la corte. La Madonna Sixtina avanza sobre nubes; los dos ángeles del borde inferior se harán después muy conocidos.",
   "ending": [
-    "Rafael muere en Roma en 1520, con solo 37 años. Una parte posterior puede añadir más madonnas y las Estancias."
+    "Rafael muere en Roma en 1520, con solo 37 años. La Madonna Sixtina cuelga hoy en la Gemäldegalerie Alte Meister de Dresde."
   ],
-  "epilogue": "Una parte posterior puede añadir más cuadros."
+  "epilogue": "Rafael muere en Roma en 1520, con solo 37 años. La Madonna Sixtina cuelga hoy en la Gemäldegalerie Alte Meister de Dresde."
 };
   P.stations = Object.assign(P.stations || {}, {
   "raffael1": {
@@ -30,4 +30,14 @@
     ]
   }
 });
+  // v10.42 pathTexts: work texts of the short path (were German fallback before).
+  P.pathTexts = Object.assign(P.pathTexts || {}, {
+    "sistine": {
+      "text": [
+        "María avanza con el Niño entre dos cortinas corridas, como si se abriera un escenario.",
+        "A sus pies se sientan los dos angelitos que más tarde acabaron en innumerables postales."
+      ],
+      "fact": "El cuadro nació para el monasterio de San Sisto en Piacenza y llegó a Dresde en 1754."
+    }
+  });
 })();

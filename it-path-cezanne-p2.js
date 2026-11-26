@@ -59,7 +59,7 @@
   },
   "czsvviaduct": {
     "title": "Montagne Sainte-Victoire e il viadotto della valle dell’Arc",
-    "museum": "Collezione non determinata"
+    "museum": "The Metropolitan Museum of Art, New York"
   },
   "czsvvalcros": {
     "title": "Montagne Sainte-Victoire e il viadotto da Valcros",
@@ -183,7 +183,7 @@
   },
   "czbibfolk": {
     "title": "La cava di Bibémus",
-    "museum": "Collezione non determinata"
+    "museum": "Museum Folkwang, Essen"
   },
   "czbibnelson": {
     "title": "La cava di Bibémus",
@@ -245,10 +245,6 @@
     "title": "La terrazza nel giardino di Les Lauves",
     "museum": "Collezione non determinata"
   },
-  "czcabanon": {
-    "title": "Il Cabanon de Jourdan",
-    "museum": "Galleria Nazionale d’Arte Moderna, Roma"
-  },
   "czvallier": {
     "title": "Il giardiniere Vallier",
     "museum": "National Gallery of Art, Washington"
@@ -292,10 +288,10 @@
   },
   "cezannesv": {
     "place": "La montagna Sainte-Victoire",
-    "when": "1885–1897",
+    "when": "1882–1897",
     "mapLabel": "Sainte-Victoire",
     "intro": [
-      "A est di Aix si erge la montagna Sainte-Victoire. Dalla metà degli anni Ottanta il monte diventa per Cézanne un motivo centrale: con il grande pino in primo piano, con il viadotto della valle dell’Arc, da Valcros.",
+      "A est di Aix si erge la montagna Sainte-Victoire. Dagli anni Ottanta il monte diventa per Cézanne un motivo centrale: con il grande pino in primo piano, con il viadotto della valle dell’Arc, da Valcros.",
       "Si aggiungono vedute della casa Bellevue con il colombile, che appartiene alla sorella Rose e a suo marito Maxime Conil, e più tardi il grande pino sulla terra rossa.",
       "Cézanne torna a questo monte per due decenni. Ogni versione cerca la stessa forma in un nuovo ordine di colore e di piano."
     ]
@@ -428,9 +424,9 @@
   "czsvviaduct": {
     "text": [
       "Attraverso la pianura corre il viadotto della valle dell’Arc; sopra si erge la montagna Sainte-Victoire, ferma e chiara.",
-      "Il quadro data al 1885-1887. Cézanne ordina pianura, viadotto e monte in un paesaggio calmo e costruito."
+      "Il quadro data al 1882-1885. Cézanne ordina pianura, viadotto e monte in un paesaggio calmo e costruito."
     ],
-    "fact": "1885–1887. Collezione non determinata."
+    "fact": "1882–1885. The Metropolitan Museum of Art, New York."
   },
   "czsvvalcros": {
     "text": [
@@ -647,7 +643,7 @@
       "Alte pareti di roccia giallastra si aprono come un interno; in alto, il verde degli alberi chiude la veduta.",
       "Questa veduta della cava data a circa il 1895. In questi anni Cézanne torna più volte a Bibémus."
     ],
-    "fact": "verso il 1895. Collezione non determinata."
+    "fact": "verso il 1895. Museum Folkwang, Essen."
   },
   "czbibnelson": {
     "text": [
@@ -761,13 +757,6 @@
       "Nel 1902-1906 Cézanne dipinge la terrazza del nuovo studio che si è fatto costruire a nord di Aix."
     ],
     "fact": "1902–1906. Collezione non determinata."
-  },
-  "czcabanon": {
-    "text": [
-      "Una piccola casa si erge sotto gli alberi, i muri chiari, il tetto fermo, il fogliame intorno in macchie aperte.",
-      "Nel 1906, nel suo ultimo anno, Cézanne dipinge il Cabanon de Jourdan, al margine di Aix. Il quadro è appeso alla Galleria Nazionale d’Arte Moderna di Roma."
-    ],
-    "fact": "1906. Galleria Nazionale d’Arte Moderna, Roma."
   },
   "czvallier": {
     "text": [

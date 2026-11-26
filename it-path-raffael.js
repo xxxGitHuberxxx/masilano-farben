@@ -16,9 +16,9 @@
   "subtitle": "La Madonna Sistina",
   "intro": "A Roma, Raffaello dipinge per la Chiesa e la corte. La Madonna Sistina avanza sulle nubi; i due angeli sul bordo inferiore diventeranno poi molto noti.",
   "ending": [
-    "Raffaello muore a Roma nel 1520, a soli 37 anni. Una parte successiva potrà aggiungere altre madonne e le Stanze."
+    "Raffaello muore a Roma nel 1520, a soli 37 anni. La Madonna Sistina si trova oggi alla Gemäldegalerie Alte Meister di Dresda."
   ],
-  "epilogue": "Una parte successiva potrà aggiungere altri quadri."
+  "epilogue": "Raffaello muore a Roma nel 1520, a soli 37 anni. La Madonna Sistina si trova oggi alla Gemäldegalerie Alte Meister di Dresda."
 };
   P.stations = Object.assign(P.stations || {}, {
   "raffael1": {
@@ -30,4 +30,14 @@
     ]
   }
 });
+  // v10.42 pathTexts: work texts of the short path (were German fallback before).
+  P.pathTexts = Object.assign(P.pathTexts || {}, {
+    "sistine": {
+      "text": [
+        "Maria avanza con il Bambino tra due tendaggi scostati, come se si aprisse un palcoscenico.",
+        "Ai suoi piedi siedono i due angioletti che più tardi finirono su innumerevoli cartoline."
+      ],
+      "fact": "Il quadro nacque per il monastero di San Sisto a Piacenza e arrivò a Dresda nel 1754."
+    }
+  });
 })();

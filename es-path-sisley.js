@@ -126,10 +126,6 @@
     "title": "Place du Chenil en Marly, efecto de nieve",
     "museum": "Musée des Beaux-Arts, Ruan"
   },
-  "syroadlouv": {
-    "title": "El camino de Louveciennes",
-    "museum": "Museos Reales de Bellas Artes, Bruselas"
-  },
   "syaqueduct": {
     "title": "El acueducto de Marly",
     "museum": "Toledo Museum of Art"
@@ -468,12 +464,6 @@
       "La pequeña plaza de Marly queda bajo la nieve; las casas la rodean con firmeza. Sisley pinta el lugar al que se muda la familia en el invierno de 1874. El cuadro está en el Musée des Beaux-Arts de Ruan."
     ],
     "fact": "1874. Musée des Beaux-Arts, Ruan."
-  },
-  "syroadlouv": {
-    "text": [
-      "Un camino de arena pasa junto a muros y árboles hacia lo lejos. Sisley muestra la calle cotidiana, sin suceso. El cuadro está en los Museos Reales de Bellas Artes de Bruselas."
-    ],
-    "fact": "1874. Museos Reales de Bellas Artes, Bruselas."
   },
   "syaqueduct": {
     "text": [

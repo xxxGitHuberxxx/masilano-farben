@@ -16,10 +16,6 @@
     "title": "La sœur aînée",
     "museum": "Collection non déterminée"
   },
-  "aself91": {
-    "title": "Autoportrait de profil, vers la gauche",
-    "museum": "Collection non déterminée"
-  },
   "knab91": {
     "title": "Portrait d’un garçon",
     "museum": "Collection non déterminée"
@@ -34,7 +30,7 @@
   },
   "dorfschneider": {
     "title": "Le tailleur de village",
-    "museum": "Collection non déterminée"
+    "museum": "Kunstmuseum Solothurn"
   },
   "krippe94": {
     "title": "La crèche II",
@@ -92,10 +88,6 @@
     "title": "Enfant avec son goûter",
     "museum": "Collection non déterminée"
   },
-  "strickkorb": {
-    "title": "Fillette tricotant avec un panier",
-    "museum": "Collection non déterminée"
-  },
   "berthagugger": {
     "title": "Bertha Gugger avec sa fille",
     "museum": "Collection non déterminée"
@@ -110,7 +102,7 @@
   },
   "kirchenfeld": {
     "title": "École maternelle sur le pont de Kirchenfeld",
-    "museum": "Collection non déterminée"
+    "museum": "Kunstmuseum Bern"
   },
   "znueni01": {
     "title": "Vieil homme avec son goûter",
@@ -174,10 +166,6 @@
   },
   "flicken05": {
     "title": "Grand-mère assise en train de ravauder",
-    "museum": "Collection non déterminée"
-  },
-  "gvaterzeitung": {
-    "title": "Grand-père avec le journal",
     "museum": "Collection non déterminée"
   },
   "drehhaspel": {
@@ -358,13 +346,6 @@
     ],
     "fact": "vers 1889. Collection non déterminée."
   },
-  "aself91": {
-    "text": [
-      "Anker se montre de côté : barbe, front haut, le regard tourné vers la gauche.",
-      "Le portrait est daté de mars 1891. L’année précédente, il a quitté son logement de Paris et vit désormais uniquement à Ins."
-    ],
-    "fact": "mars 1891. Collection non déterminée."
-  },
   "knab91": {
     "text": [
       "Un garçon blond regarde tranquillement depuis le tableau, sur un fond sombre.",
@@ -380,7 +361,7 @@
     "fact": "1891. Collection non déterminée.",
     "quote": {
       "text": "Il m’arrive parfois de regretter beaucoup de n’avoir pas appris chez un peintre de paysages.",
-      "cite": "Lettre à Auguste Bachelin, 1888. Centre Albert Anker, Ins."
+      "cite": "Lettre à Auguste Bachelin, 1888. Traduit d’après la version allemande du Centre Albert Anker, Anet."
     }
   },
   "wassereimer": {
@@ -395,10 +376,10 @@
       "Un vieil homme est penché sur sa couture, les lunettes sur le nez et le fil à la main.",
       "En 1891, Anker signe avec l’éditeur Frédéric Zahn le contrat de l’édition de luxe des récits de Gotthelf. Il livre plus de 220 illustrations, mais le travail lui pèse."
     ],
-    "fact": "1894. Collection non déterminée.",
+    "fact": "1894. Kunstmuseum Solothurn.",
     "quote": {
-      "text": "Ce terrible Zahn me tient entre ses dents. Il me pressera comme un citron.",
-      "cite": "Lettre à Albert de Meuron, 4 janvier 1897. Centre Albert Anker, Ins."
+      "text": "Ce terrible Zahn [l’éditeur ; « Zahn » signifie « dent » en allemand] me tient entre ses dents. Il me pressera comme un citron.",
+      "cite": "Lettre à Albert de Meuron, 4 janvier 1897. Traduit d’après la version allemande du Centre Albert Anker, Anet."
     }
   },
   "krippe94": {
@@ -499,13 +480,6 @@
     ],
     "fact": "vers 1897. Collection non déterminée."
   },
-  "strickkorb": {
-    "text": [
-      "Une fillette en tablier tricote, un panier à ses côtés.",
-      "Chez Anker, tricoter est l’affaire des fillettes et des grand-mères, souvent lié au soin de quelqu’un ou à l’attente."
-    ],
-    "fact": "vers 1897. Collection non déterminée."
-  },
   "berthagugger": {
     "text": [
       "Une mère tient sa petite fille sur les genoux ; toutes deux regardent tranquillement.",
@@ -532,7 +506,7 @@
       "Un groupe de tout-petits traverse un pont de Berne avec une brouette. Une femme les accompagne ; sur le garde-corps, il y a un réverbère.",
       "En 1900, Anker reçoit le doctorat honoris causa de l’Université de Berne. Au tournant du siècle, il consigne aussi dans son journal des préoccupations politiques."
     ],
-    "fact": "1900. Collection non déterminée.",
+    "fact": "1900. Kunstmuseum Bern.",
     "quote": {
       "text": "J’entretiens trois sortes de craintes : 1. L’union inouïe et antidémocratique du pouvoir et de l’influence entre peu de mains, la contamination totale des principes politiques par les questions d’intérêt matériel. 2. La dette de milliards et ses dangers pour l’indépendance de la patrie. 3. La position dangereuse de l’État comme plus grand employeur à une époque d’agitation sociale impétueuse.",
       "cite": "Journal du tournant du siècle, 1899/1900. Centre Albert Anker, Ins."
@@ -653,13 +627,6 @@
       "La feuille est datée de 1905. La forme ronde fait paraître la scène comme vue à travers une fenêtre."
     ],
     "fact": "1905. Collection non déterminée."
-  },
-  "gvaterzeitung": {
-    "text": [
-      "Un vieil homme est assis à table en train de lire un grand journal.",
-      "En 1906, le sculpteur Jakob August Heer réalise un buste d’Anker."
-    ],
-    "fact": "1906. Collection non déterminée."
   },
   "drehhaspel": {
     "text": [

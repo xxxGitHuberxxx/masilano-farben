@@ -293,14 +293,6 @@
     "source": "Wikimedia Commons: «Caspar David Friedrich - Abtei im Eichwald - Google Art Project.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "cfrainbow",
-    "title": "Gebirgslandschaft mit Regenbogen",
-    "artist": "Caspar David Friedrich",
-    "year": "um 1810",
-    "museum": "Museum Folkwang, Essen",
-    "source": "Wikimedia Commons: «Caspar David Friedrich - Gebirgslandschaft mit Regenbogen.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "cfself10",
     "title": "Selbstbildnis",
     "artist": "Caspar David Friedrich",
@@ -347,14 +339,6 @@
     "year": "1811",
     "museum": "National Gallery, London",
     "source": "Wikimedia Commons: «Caspar David Friedrich - Winterlandschaft (London).jpg», Public domain (gemeinfrei)"
-  },
-  {
-    "id": "cfwinterchurch",
-    "title": "Winterlandschaft mit Kirche",
-    "artist": "Caspar David Friedrich",
-    "year": "1811",
-    "museum": "Museum für Kunst und Kulturgeschichte, Dortmund",
-    "source": "Wikimedia Commons: «Caspar David Friedrich - Winterlandschaft mit Kirche (Dortmund).jpg», Public domain (gemeinfrei)"
   },
   {
     "id": "cfcrosswood",
@@ -430,7 +414,7 @@
   "part": "Teil 1 · 1774–1817",
   "subtitle": "Von Greifswald nach Dresden",
   "cover": "cfmonk",
-  "intro": "Caspar David Friedrich wird am 5. September 1774 in Greifswald geboren. Dieser erste Teil folgt ihm von der Kindheit an der Ostsee und der Akademie in Kopenhagen über Dresden, die Wanderungen auf Rügen und im Harz, die Sepiazeichnungen und den Weimarer Preis 1805, den Tetschener Altar und den Mönch am Meer bis zu den Bildern der Befreiungskriege um 1817.",
+  "intro": "Caspar David Friedrich wird am 5. September 1774 in Greifswald geboren. Dieser Weg folgt ihm von der Kindheit an der Ostsee und der Akademie in Kopenhagen über Dresden, die Wanderungen auf Rügen und im Harz, die Sepiazeichnungen und den Weimarer Preis 1805, den Tetschener Altar und den Mönch am Meer bis zu den Bildern der Befreiungskriege um 1817.",
   "ending": [
     "1817 malt Friedrich Zwei Männer am Meer und sieht Greifswald im Mondschein. Er ist Mitglied der Dresdner Akademie und bleibt in der Stadt, die sein Lebensmittelpunkt geworden ist.",
     "Im nächsten Teil folgen die Heirat mit Caroline 1818, die Kreidefelsen auf Rügen, der Wanderer über dem Nebelmeer, das Eismeer, der Schlaganfall 1835, sein Tod 1840 und die späte Wiederentdeckung."
@@ -843,14 +827,6 @@
           "fact": "1809–1810. Alte Nationalgalerie, Berlin."
         },
         {
-          "pid": "cfrainbow",
-          "text": [
-            "Ein Regenbogen spannt sich über einen dunklen Berg.",
-            "Vorne sitzt ein Wanderer auf einem Felsen."
-          ],
-          "fact": "um 1810. Museum Folkwang, Essen."
-        },
-        {
           "pid": "cfself10",
           "text": [
             "Mit Bart und Locken blickt Friedrich uns ernst und eindringlich an.",
@@ -913,14 +889,6 @@
             "Im Nebel dahinter erscheint eine gotische Kirche."
           ],
           "fact": "1811. National Gallery, London."
-        },
-        {
-          "pid": "cfwinterchurch",
-          "text": [
-            "Tannen stehen im Schnee, dahinter ragt eine Kirche aus dem Dunst.",
-            "Das Bild ist ein Gegenstück zur Londoner Winterlandschaft."
-          ],
-          "fact": "1811. Museum für Kunst und Kulturgeschichte, Dortmund."
         }
       ]
     },

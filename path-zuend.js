@@ -115,15 +115,15 @@
   "name": "Robert Zünd",
   "title": "Robert Zünds Lebensweg",
   "life": "1827–1909",
-  "part": "Teil 1 · Luzern und das Licht der Felder",
+  "part": "Luzern und das Licht der Felder",
   "subtitle": "Seen, Felder und Eichenwälder",
   "cover": "rzernte",
-  "intro": "Reise mit Robert Zünd, dem Luzerner Landschaftsmaler: von den Lehrjahren in Genf über die Felder und Seen der Innerschweiz bis zu den grossen Eichen- und Buchenwäldern. Kurze Stationen und Bilder zum Ausmalen. Dieser erste Teil folgt seinem Weg durch die Landschaft.",
+  "intro": "Reise mit Robert Zünd, dem Luzerner Landschaftsmaler: von den Lehrjahren in Genf über die Felder und Seen der Innerschweiz bis zu den grossen Eichen- und Buchenwäldern. Kurze Stationen und Bilder zum Ausmalen. Dieser Weg führt durch die Landschaft.",
   "ending": [
     "Robert Zünd stirbt am 15. Januar 1909 in Luzern. Er hat die Landschaft seiner Heimat ein Leben lang mit grosser Geduld gemalt.",
-    "Der Weg kann weiterwachsen. Weitere Felder, Wälder und biblische Landschaften können in einem späteren Teil folgen."
+    "Der Weg führt vom Pilatus und vom Vierwaldstättersee über Felder und grosse Wälder bis an die Reuss bei Rathausen."
   ],
-  "epilogue": "Am 15. Januar 1909 stirbt Zünd in Luzern. Ein späterer Teil kann weitere Wälder und Felder nachtragen.",
+  "epilogue": "Robert Zünd stirbt am 15. Januar 1909 in Luzern. Er hat die Landschaft seiner Heimat ein Leben lang mit grosser Geduld gemalt. Der Weg führt vom Pilatus und vom Vierwaldstättersee über Felder und grosse Wälder bis an die Reuss bei Rathausen.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [

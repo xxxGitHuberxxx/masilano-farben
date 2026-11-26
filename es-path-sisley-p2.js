@@ -108,10 +108,6 @@
     "title": "El remolcador, el Loing en Saint-Mammès",
     "museum": "Petit Palais, París"
   },
-  "sybemberg83": {
-    "title": "Las orillas del Loing cerca de Moret",
-    "museum": "Fondation Bemberg, Toulouse"
-  },
   "sysablonspath": {
     "title": "Un sendero en Les Sablons",
     "museum": "National Gallery of Australia, Canberra"
@@ -168,10 +164,6 @@
     "title": "El Chemin des Fontaines una mañana de junio",
     "museum": "Musée d’art et d’histoire, Ginebra"
   },
-  "sysepmorning": {
-    "title": "Mañana de septiembre",
-    "museum": "Musée des Beaux-Arts, Agen"
-  },
   "sypontmia": {
     "title": "El puente de Moret",
     "museum": "Minneapolis Institute of Art"
@@ -179,10 +171,6 @@
   "syeveningoct": {
     "title": "Una tarde en Moret, finales de octubre",
     "museum": "Museo Thyssen-Bornemisza, Madrid"
-  },
-  "sysunset88": {
-    "title": "Moret al atardecer",
-    "museum": "Cincinnati Art Museum"
   },
   "syriverview": {
     "title": "Vista del río",
@@ -513,13 +501,6 @@
     ],
     "fact": "1883. Petit Palais, París."
   },
-  "sybemberg83": {
-    "text": [
-      "El Loing brilla bajo un cielo claro, con árboles y arbustos en la orilla.",
-      "A lo lejos se ven casas."
-    ],
-    "fact": "1883. Fondation Bemberg, Toulouse."
-  },
   "sysablonspath": {
     "text": [
       "Un sendero lleva entre huertos y árboles hasta el pueblo.",
@@ -618,13 +599,6 @@
     ],
     "fact": "1887. Musée d’art et d’histoire, Ginebra."
   },
-  "sysepmorning": {
-    "text": [
-      "Unos árboles frutales se alzan en un prado soleado y a la derecha entra en el cuadro un árbol oscuro.",
-      "En 1888 el Estado francés compra este cuadro, su primera obra de Sisley."
-    ],
-    "fact": "hacia 1887. Musée des Beaux-Arts, Agen."
-  },
   "sypontmia": {
     "text": [
       "El viejo puente de piedra cruza el Loing; detrás están los molinos y la iglesia.",
@@ -638,13 +612,6 @@
       "Los árboles de la orilla ya están oscuros."
     ],
     "fact": "1888. Museo Thyssen-Bornemisza, Madrid."
-  },
-  "sysunset88": {
-    "text": [
-      "La ciudad está junto al río bajo la cálida luz del atardecer.",
-      "La iglesia y los tejados se recortan contra el cielo."
-    ],
-    "fact": "1888. Cincinnati Art Museum."
   },
   "syriverview": {
     "text": [

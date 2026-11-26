@@ -69,14 +69,6 @@
     "source": "Wikimedia Commons: «Alexandre Calame Souvenir de Rosenlaui 1849.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "acwetter",
-    "title": "Das Wetterhorn",
-    "artist": "Alexandre Calame",
-    "year": "1850",
-    "museum": "Standort ohne Angabe",
-    "source": "Wikimedia Commons: «Horror und Delight-Calame-The Wetterhorn DSC2103.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "acleman",
     "title": "Blick auf den Genfersee",
     "artist": "Alexandre Calame",
@@ -123,15 +115,15 @@
   "name": "Alexandre Calame",
   "title": "Alexandre Calames Lebensweg",
   "life": "1810–1864",
-  "part": "Teil 1 · Von Genf in die Hochalpen",
+  "part": "Von Genf in die Hochalpen",
   "subtitle": "Sturm, Fels und stille Seen",
   "cover": "acthun",
-  "intro": "Reise mit Alexandre Calame, dem Genfer Maler der Alpen: von den ersten Berglandschaften über Grimsel, Rosenlaui und das Wetterhorn bis zu den stillen Seen von Thun, Genf und Luzern. Kurze Stationen und Bilder zum Ausmalen. Dieser erste Teil folgt ihm durch die Schweizer Berge.",
+  "intro": "Reise mit Alexandre Calame, dem Genfer Maler der Alpen: von den ersten Berglandschaften über Grimsel, Rosenlaui und das Wetterhorn bis zu den stillen Seen von Thun, Genf und Luzern. Kurze Stationen und Bilder zum Ausmalen. Dieser Weg folgt ihm durch die Schweizer Berge.",
   "ending": [
     "Alexandre Calame stirbt am 19. März 1864 in Menton, dreiundfünfzig Jahre alt. Seine Alpenbilder haben die Sicht auf die Schweizer Berge in ganz Europa geprägt.",
-    "Der Weg kann weiterwachsen. Lithografien, Italienbilder und weitere Gebirge können in einem späteren Teil folgen."
+    "Der Weg führt von den frühen Gebirgslandschaften über Sturm und Gipfel bis zu den Seen und den Hütten auf der Rigi."
   ],
-  "epilogue": "Am 19. März 1864 stirbt Calame in Menton. Ein späterer Teil kann Lithografien und weitere Gebirge nachtragen.",
+  "epilogue": "Alexandre Calame stirbt am 19. März 1864 in Menton, dreiundfünfzig Jahre alt. Seine Alpenbilder haben die Sicht auf die Schweizer Berge in ganz Europa geprägt. Der Weg führt von den frühen Gebirgslandschaften über Sturm und Gipfel bis zu den Seen und den Hütten auf der Rigi.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [
@@ -248,14 +240,6 @@
             "Das Bild entsteht im Atelier aus Skizzen und Erinnerung."
           ],
           "fact": "1849. Privatsammlung."
-        },
-        {
-          "pid": "acwetter",
-          "text": [
-            "Das Wetterhorn steigt steil über dem Tal auf, Wolken ziehen um den Gipfel. Davor stehen dunkle Tannen.",
-            "Der Berg bei Grindelwald gehört zu den grossen Motiven der Schweizer Malerei."
-          ],
-          "fact": "1850. Standort ohne Angabe."
         }
       ]
     },

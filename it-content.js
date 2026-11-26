@@ -187,43 +187,33 @@ window.IT = {
         "Nel 1715 il dipinto fu tagliato da tutti i lati perché entrasse nella parete prevista del municipio di Amsterdam."
       ]
     },
-    "venus": {
-      "title": "La nascita di Venere",
-      "museum": "Galleria degli Uffizi, Firenze",
-      "technique": "Tempera su tela. I colori furono stemperati con uovo come legante.",
-      "story": "Venere, dea dell’amore, sta in piedi su una conchiglia. A sinistra i venti la spingono a riva; a destra attende una donna con un manto pieno di fiori.",
-      "facts": [
-        "Nel XVI secolo il quadro era appeso in una villa dei Medici, la celebre famiglia fiorentina. Chi lo commissionò non si sa con certezza ancora oggi.",
-        "Botticelli dipinse su tela. Allora, a Firenze, la maggior parte dei dipinti si faceva ancora su tavole di legno."
-      ]
-    },
     "sunrise": {
       "title": "Impressione, levar del sole",
       "museum": "Musée Marmottan Monet, Paris",
       "technique": "Olio su tela, dipinto in fretta e con pennellate libere, quasi come uno schizzo.",
-      "story": "Monet dipinse il quadro nel porto di Le Havre, la sua città natale. Il sole arancione si riflette nell’acqua, tra gli alberi delle barche nella nebbia del mattino.",
+      "story": "Monet dipinse il porto di Le Havre, dove era cresciuto, nella foschia del mattino: barche, gru, fumo e un sole arancione che si riflette nell’acqua.",
       "facts": [
-        "Il nome «impressionismo» viene da questo quadro. Un critico lo usò nel 1874, in tono di scherno, a partire dal titolo «Impressione».",
-        "Per anni il quadro era quasi invisibile: stava appeso dietro una porta, in un museo di Parigi, e quasi nessuno lo notava."
+        "Questo quadro diede il nome a un intero movimento artistico. Nel 1874 un critico, partendo dal titolo, prese in giro gli «impressionisti», e il nome rimase.",
+        "Il sole arancione è chiaro quasi quanto il cielo grigio intorno. Per questo sembra tremolare quando lo guardi."
       ]
     },
     "sunflowers": {
       "title": "I girasoli",
       "museum": "The National Gallery, London",
       "technique": "Olio su tela, con un impasto spesso. I girasoli sono dipinti in modo che se ne possa quasi palpare il rilievo.",
-      "story": "Van Gogh dipinse diversi vasi di girasoli ad Arles, nel sud della Francia. Voleva decorarne la stanza del suo amico pittore Paul Gauguin, che doveva fargli visita.",
+      "story": "Van Gogh dipinse i girasoli ad Arles, nel sud della Francia. Voleva decorare con essi la camera del suo amico pittore Paul Gauguin, che veniva a trovarlo.",
       "facts": [
-        "Esistono diversi quadri di girasoli di Van Gogh, con un numero diverso di fiori. Questo è appeso alla Neue Pinakothek di Monaco.",
-        "Il giallo era il suo colore preferito. In quel periodo usò un pigmento nuovo, il giallo di cromo, che col tempo si scurisce un poco."
+        "Dei girasoli in un vaso esistono diverse versioni. Oggi si trovano, tra l’altro, a Londra, Amsterdam, Monaco di Baviera, Filadelfia e Tokyo.",
+        "Van Gogh non firmò il quadro in basso nell’angolo, ma al centro del vaso: «Vincent»."
       ]
     },
     "cafe": {
       "title": "Terrazza del caffè la sera",
       "museum": "Kröller-Müller Museum, Otterlo (i Paesi Bassi)",
       "technique": "Olio su tela. Van Gogh dipinse il cielo notturno senza nero, con blu, viola e giallo.",
-      "story": "Una terrazza di caffè illuminata ad Arles, con il cielo stellato sopra. Van Gogh dipinse il quadro nel settembre 1888, all’aperto e di notte.",
+      "story": "Il quadro mostra un caffè all’aperto in Place du Forum ad Arles. Van Gogh dipinse sul posto, alla luce a gas della terrazza.",
       "facts": [
-        "È uno dei primi quadri in cui Van Gogh dipinse un cielo stellato. Notte stellata sarebbe arrivata quasi un anno dopo.",
+        "È il primo quadro in cui Van Gogh dipinse un cielo stellato, un anno prima della Notte stellata.",
         "Alla sorella scrisse con orgoglio di un quadro notturno senza alcun nero, solo con blu, viola e verde."
       ]
     },
@@ -231,50 +221,50 @@ window.IT = {
       "title": "Una domenica pomeriggio sull’isola della Grande-Jatte",
       "museum": "The Art Institute of Chicago",
       "technique": "Olio su tela, dipinto con tanti piccoli punti di colore giustapposti (puntinismo).",
-      "story": "Un pomeriggio di domenica su un’isola della Senna, alle porte di Parigi. Seurat lavorò al quadro per quasi due anni e lo dipinse quasi interamente in studio, a partire da numerosi studi all’aperto.",
+      "story": "Alcuni parigini si riposano una domenica su un’isola della Senna. Seurat lavorò circa due anni al grande quadro, che misura circa due metri per tre.",
       "facts": [
-        "Se ti allontani un po’, i punti si fondono all’occhio in un colore uniforme. Seurat lo aveva calcolato così di proposito.",
-        "Il quadro è enorme: misura più di due metri di altezza e più di tre di larghezza."
+        "Guarda tutto a destra: l’elegante signora tiene al guinzaglio una piccola scimmia.",
+        "Più tardi Seurat aggiunse al quadro un bordo di punti colorati, per così dire una cornice dipinta."
       ]
     },
     "galette": {
       "title": "Ballo al Moulin de la Galette",
       "museum": "Musée d’Orsay, Paris",
       "technique": "Olio su tela, con macchie di luce libere e pennellate visibili, tipiche dell’impressionismo.",
-      "story": "Un ballo popolare all’aperto a Montmartre, allora ancora un quartiere ai margini di Parigi. Renoir dipinse amici e vicini, in una domenica pomeriggio alla luce del sole tra gli alberi.",
+      "story": "Una domenica pomeriggio la gente balla e chiacchiera nel giardino di un locale da ballo di Montmartre, a Parigi.",
       "facts": [
-        "Il Moulin de la Galette era un vero ballo, con mulino e giardino. Vi si servivano delle galettes, schiacciate, da cui il nome.",
-        "Molti degli ospiti nel quadro sono amici di Renoir, per esempio pittori e scrittori."
+        "Molti degli ospiti del quadro sono amici di Renoir, per esempio pittori e scrittori.",
+        "Il locale prende il nome dalla «galette», una focaccia piatta che vi si mangiava."
       ]
     },
     "wanderer": {
       "title": "Il viandante sul mare di nebbia",
       "museum": "Hamburger Kunsthalle",
       "technique": "Olio su tela. Friedrich dipinge le rocce con nitidezza; le nuvole e le lontananze, invece, in modo morbido e velato.",
-      "story": "Un uomo di spalle sta in piedi su uno sperone, davanti a un mare di nebbia. Non se ne vede il viso, così puoi immaginarti al suo posto.",
+      "story": "Un uomo sta in piedi su una roccia e guarda un mare di nebbia. Il quadro è una delle opere più note del Romanticismo tedesco.",
       "facts": [
-        "Questa figura di spalle si chiama in tedesco «Rückenfigur». Friedrich la usò spesso: il paesaggio diventa così qualcosa che contempli tu stesso.",
-        "Si ritiene che il paesaggio sia ispirato all’Elbsandsteingebirge, in Sassonia. Il luogo esatto non è stato identificato con certezza."
+        "Il viandante lo vediamo solo di spalle. Questa «figura di spalle» (Rückenfigur) è tipica di Friedrich: così guardiamo il paesaggio insieme a lui.",
+        "Friedrich compose le rocce e i monti a partire da schizzi fatti nei monti di arenaria dell’Elba, detti anche Svizzera sassone."
       ]
     },
     "babel": {
       "title": "La torre di Babele",
       "museum": "Kunsthistorisches Museum, Vienna",
       "technique": "Olio su tavola. Bruegel dipinse la torre con un dettaglio così preciso che si possono quasi contare i mattoni.",
-      "story": "Il quadro mostra la torre della Bibbia, che gli uomini volevano costruire fino al cielo. Bruegel la immagina come un enorme cantiere, con gru, ponteggi e centinaia di operai.",
+      "story": "Secondo la Bibbia gli uomini volevano costruire una torre fino al cielo. Bruegel mostra l’enorme cantiere con gru, impalcature, operai e un’intera città tutt’intorno.",
       "facts": [
-        "Bruegel dipinse la torre più di una volta. Questa versione, la più famosa, si trova a Vienna; un’altra, più piccola, è a Rotterdam.",
-        "A modello per la forma servì il Colosseo di Roma, che Bruegel aveva visto in un viaggio in Italia."
+        "Come modello per i numerosi archi gli servì probabilmente il Colosseo, che aveva visto durante il suo viaggio a Roma.",
+        "Bruegel dipinse anche una seconda versione, più piccola, della torre. Oggi si trova a Rotterdam."
       ]
     },
     "redfuji": {
       "title": "Fuji rosso (Vento fine, mattino chiaro)",
       "museum": "Indianapolis Museum of Art at Newfields (questa impressione)",
       "technique": "Xilografia a colori: per ogni colore fu intagliato un proprio blocco di legno e stampato sulla carta uno dopo l’altro.",
-      "story": "Il monte Fuji brilla di rosso al sole del mattino, sotto un cielo azzurro con nuvole bianche. Il foglio appartiene, come La grande onda, alla serie «36 vedute del monte Fuji».",
+      "story": "Il Fuji risplende rosso nella luce del mattino, come si può vedere in certi giorni di fine estate e d’autunno. Sopra passano piccole nuvole.",
       "facts": [
-        "Il titolo giapponese «Gaifū kaisei» significa pressappoco «vento del sud, cielo sereno». Per questo il Fuji è così nitido e così rosso.",
-        "In Giappone il Fuji rosso è famoso quanto La grande onda. Spesso lo si chiama semplicemente «Aka-Fuji», il Fuji rosso."
+        "La stampa appartiene alla stessa serie della «Grande onda»: le «36 vedute del monte Fuji».",
+        "La serie ebbe tanto successo che Hokusai vi aggiunse più tardi altre dieci stampe, cioè 46 invece di 36."
       ]
     },
     "anker": {
@@ -327,16 +317,6 @@ window.IT = {
         "Sulla banconota da 20 sterline di oggi vedi Turner e, sullo sfondo, il Temeraire."
       ]
     },
-    "mondrian": {
-      "title": "Composizione con rosso, blu e giallo",
-      "museum": "Kunsthaus Zürich",
-      "technique": "Olio su tela. Solo linee orizzontali e verticali, più i colori primari rosso, blu e giallo, nonché il nero e il bianco.",
-      "story": "Mondrian ridusse la pittura all’essenziale: un grande rettangolo rosso, più un campo blu e uno giallo, tenuti da una griglia nera. Il quadro nacque nel 1930 a Parigi, su richiesta dell’architetto zurighese Alfred Roth.",
-      "facts": [
-        "Mondrian chiamò questo stile «neoplasticismo». Voleva mostrare con esso un’armonia chiara e generale, non un paesaggio né una persona.",
-        "Oggi il quadro è appeso al Kunsthaus di Zurigo. Roth lo donò al museo nel 1987."
-      ]
-    },
     "whistler": {
       "title": "Arrangiamento in grigio e nero n. 1",
       "museum": "Musée d’Orsay, Paris",
@@ -361,20 +341,10 @@ window.IT = {
       "title": "La zingara addormentata",
       "museum": "The Museum of Modern Art (MoMA), New York",
       "technique": "Olio su tela, nel modo chiaro e piano della pittura naïf.",
-      "story": "Una donna dorme nel deserto, accanto a lei una mandolino e una brocca d’acqua. Un leone le si avvicina e la annusa, sotto una luna piena.",
+      "story": "Una donna dorme nel deserto, accanto a lei un mandolino e una brocca d’acqua. Un leone le si avvicina e la annusa, sotto una luna piena.",
       "facts": [
         "Rousseau era autodidatta e non aveva mai frequentato un’accademia d’arte. Il deserto e il leone non li aveva visti lui stesso, se li era immaginati.",
         "In vita spesso lo si prendeva in giro. Oggi il quadro è appeso al Museum of Modern Art di New York."
-      ]
-    },
-    "senecio": {
-      "title": "Senecio",
-      "museum": "Kunstmuseum Basel",
-      "technique": "Olio su garza, montato su cartone. Il viso è costruito con piani geometrici semplici.",
-      "story": "Un viso di cerchi, rettangoli e colori caldi, quasi come una maschera o un disegno di bambino. Klee prese il titolo «Senecio» (lat. «vecchio») da un genere di piante, la senecio.",
-      "facts": [
-        "Klee nacque nel 1879 a Münchenbuchsee, vicino a Berna. Insegnò al Bauhaus ed è considerato uno degli artisti più importanti della modernità.",
-        "Il quadro è appeso al Kunstmuseum di Basilea, non lontano dalla terra svizzera di Klee."
       ]
     },
     "milkmaid": {
@@ -415,16 +385,6 @@ window.IT = {
       "facts": [
         "La donna in vestito rosso indica qualcosa nell’abisso, l’uomo al centro si china molto in basso, il terzo guarda lontano.",
         "Il dipinto appartiene alla collezione Oskar Reinhart di Winterthur."
-      ]
-    },
-    "gothic": {
-      "title": "American Gothic",
-      "museum": "The Art Institute of Chicago",
-      "technique": "Olio su pannello di fibra, con forme lisce e chiare e molti dettagli fini.",
-      "story": "Un contadino con un forcone e una donna stanno davanti a una casa di legno con una finestra appuntita «gotica». Wood dipinse il quadro in Iowa, da una casa che aveva visto nella piccola città di Eldon.",
-      "facts": [
-        "Come modelli servirono la sorella di Wood, Nan, e il suo dentista. Non dovevano rappresentare una coppia particolare, ma un tipo.",
-        "Il titolo si riferisce alla finestra in stile «Carpenter Gothic», un gotico americano in legno."
       ]
     },
     "macke": {
@@ -497,16 +457,6 @@ window.IT = {
         "Più tardi Monet dipinse altri campi di papaveri, tra cui a Vétheuil e a Giverny."
       ]
     },
-    "scream": {
-      "title": "L’urlo",
-      "museum": "Nasjonalmuseet, Oslo",
-      "technique": "Olio, tempera e pastello su cartone, con linee ondulate nel cielo, nell’acqua e nella figura.",
-      "story": "Una figura sta su un ponte, si tapa le orecchie e apre la bocca. Il cielo è di un rosso sangue. Munch scrisse che, durante una passeggiata al tramonto, aveva udito un urlo attraversare la natura.",
-      "facts": [
-        "Di questo motivo esistono diverse versioni. Questa è la celebre del 1893, oggi al Museo nazionale di Oslo.",
-        "Sullo sfondo due sagome scure continuano a camminare con calma, come se non si accorgessero di nulla dello sconvolgimento interiore."
-      ]
-    },
     "liberty": {
       "title": "La Libertà che guida il popolo",
       "museum": "Musée du Louvre, Paris",
@@ -563,7 +513,7 @@ window.IT = {
       "technique": "Acquerello e tempera su pergamena, con fini linee a penna.",
       "story": "Dürer dipinse l’ala di un uccello colorato con tanta precisione che potrebbe ancora stare davanti a noi sul tavolo. Ogni piuma è posata a parte, dalle forti remiganti alle morbide copritrici chiare.",
       "facts": [
-        "Il ghiandaia marina è un uccello meridionale dal piumaggio turchese, azzurro e bruno caldo. Dürer lo fissò come un naturalista.",
+        "La ghiandaia marina è un uccello meridionale dal piumaggio turchese, azzurro e bruno caldo. Dürer la fissò come un naturalista.",
         "Il foglio appartiene ai suoi celebri studi di natura, insieme alla Lepre giovane e al Grande prato."
       ]
     },
@@ -598,13 +548,13 @@ window.IT = {
       ]
     },
     "avemaria": {
-      "title": "Ave Maria durante la traversata",
-      "museum": "Segantini Museum, St. Moritz",
+      "title": "Ave Maria a trasbordo",
+      "museum": "Museo Segantini, St. Moritz – deposito permanente della Fondazione Otto Fischbacher Giovanni Segantini",
       "technique": "Olio su tela. Segantini pose il colore in tratti fini, uno accanto all’altro.",
-      "story": "Un pastore e una donna scivolano nella barca su un lago di montagna silenzioso, la pecora a prua, il cielo già serale. In quell’istante congiungono le mani per l’Ave Maria.",
+      "story": "Un pastore e una donna scivolano nella barca su un lago silenzioso, la pecora a prua, il cielo già serale. In quell’istante congiungono le mani per l’Ave Maria.",
       "facts": [
-        "Segantini dipinse il motivo due volte. La prima versione, del 1882, ottenne una medaglia d’oro all’Esposizione universale di Amsterdam del 1883; in questa seconda versione del 1886 usò per la prima volta la tecnica divisionista.",
-        "Viveva in alto in Engadina e dipinse la vita contadina nelle Alpi con grande calma e precisione."
+        "Segantini dipinse il motivo due volte. La prima versione, del 1882, ottenne una medaglia d’oro all’Esposizione universale di Amsterdam del 1883. Secondo la studiosa di Segantini Annie-Paule Quinsac, la seconda versione, del 1886–1888, è il suo primo dipinto puramente divisionista.",
+        "Visse nei Grigioni, negli ultimi anni in alto in Engadina, e dipinse la vita contadina nelle Alpi con grande calma e precisione."
       ]
     },
     "naeherin": {
@@ -635,16 +585,6 @@ window.IT = {
       "facts": [
         "Il quadro parve allora politico: alcuni vi videro un’accusa, perché i più poveri cercano avanzi con tanta fatica.",
         "Millet conosceva la vita dei campi dalla propria giovinezza in Normandia. Dipinse il lavoro non come folklore, ma con serietà."
-      ]
-    },
-    "maloja": {
-      "title": "Maloja in inverno",
-      "museum": "Collezione privata",
-      "technique": "Olio su tela. Giacometti pone colori luminosi in macchie libere, impressioniste.",
-      "story": "Sopra il villaggio innevato di Maloja, in Engadina, si stende un cielo d’inverno chiaro. Giovanni Giacometti, il padre di Alberto, dipinse ancora e ancora la sua terra, il Bergell e l’Alta Engadina.",
-      "facts": [
-        "Giovanni Giacometti morì nel 1933. I suoi quadri sono perciò oggi di pubblico dominio — a differenza di quelli del suo famoso figlio Alberto.",
-        "Era amico di Ferdinand Hodler e portò la luce degli impressionisti francesi nel paesaggio dei Grigioni."
       ]
     },
     "delft": {
@@ -733,7 +673,7 @@ window.IT = {
       "technique": "Pastello su carta. Degas coglie il movimento con tratti liberi e luminosi.",
       "story": "Una ballerina si sostiene sulle punte, la testa reclinata all’indietro, il braccio ben aperto. Intorno a lei il palcoscenico e le colleghe si sfocano: lo sguardo è solo per questo unico istante luminoso.",
       "facts": [
-        "Il modello era probabilmente la ballerina spagnola Rosita Mauri.",
+        "L’identità della ballerina raffigurata non è stata chiarita con certezza.",
         "Degas sedeva spesso all’opera, non solo in palco, ma di lato e dietro le quinte, dove il lavoro resta visibile."
       ]
     },
@@ -771,9 +711,9 @@ window.IT = {
       "title": "Las Meninas",
       "museum": "Museo del Prado, Madrid",
       "technique": "Olio su tela. Velázquez costruisce un’intera corte in una stanza di specchi, sguardi e luce.",
-      "story": "Al centro sta la piccola infanta Margherita, circondata da dame di compagnia, nani di corte e un cane. A sinistra Velázquez dipinge se stesso — e nello specchio in fondo appaiono il re e la regina, cioè, in un certo senso, noi.",
+      "story": "Al centro sta la piccola infanta Margherita, circondata da damigelle d’onore, nani di corte e un cane. A sinistra Velázquez dipinge se stesso — e nello specchio in fondo appaiono il re e la regina, cioè, in un certo senso, noi.",
       "facts": [
-        "Il titolo significa «le dame di compagnia». Il quadro è uno dei più discussi al mondo.",
+        "Il titolo significa «le damigelle d’onore». Il quadro è uno dei più discussi al mondo.",
         "Velázquez era pittore di corte di Filippo IV. Qui non mostra soltanto la famiglia reale, ma anche se stesso al lavoro."
       ]
     },
@@ -907,16 +847,6 @@ window.IT = {
         "Il quadro fu a lungo in mani private e mostra «l’altro» Klimt: senza oro, ma altrettanto denso e festoso."
       ]
     },
-    "primavera": {
-      "title": "La Primavera",
-      "museum": "Galleria degli Uffizi, Firenze",
-      "technique": "Tempera su tavola. Botticelli dispone le figure in un boschetto di aranci e di innumerevoli fiori.",
-      "story": "In un boschetto ombroso danzano e avanzano nove figure della primavera: Mercurio a sinistra, le tre Grazie, Venere al centro, il vento primaverile Zefiro a destra, che insegue la ninfa Clori. Sopra tutti aleggia Amore.",
-      "facts": [
-        "Il quadro nacque probabilmente per la famiglia Medici a Firenze ed è uno dei più famosi del primo Rinascimento.",
-        "Botticelli dipinse circa 500 singole piante, molte con tanta precisione che i botanici ancora oggi possono identificarle."
-      ]
-    },
     "terrace": {
       "title": "Due sorelle sulla terrazza",
       "museum": "The Art Institute of Chicago",
@@ -965,7 +895,7 @@ window.IT = {
     },
     "foxes": {
       "title": "Le volpi",
-      "museum": "Collezione privata"
+      "museum": "Collocazione attuale non confermata pubblicamente"
     },
     "fate": {
       "title": "Destini di animali",
@@ -1067,10 +997,6 @@ window.IT = {
       "title": "L’ufficio della lotteria di Stato",
       "museum": "Van Gogh Museum, Amsterdam"
     },
-    "laundry": {
-      "title": "Donna che stende il bucato",
-      "museum": "Collezione privata"
-    },
     "bulbfields": {
       "title": "Campi di bulbi in Olanda",
       "museum": "National Gallery of Art, Washington"
@@ -1098,10 +1024,6 @@ window.IT = {
     "cottages83": {
       "title": "Capanne",
       "museum": "Van Gogh Museum, Amsterdam"
-    },
-    "twilightch": {
-      "title": "Paesaggio con una chiesa al crepuscolo",
-      "museum": "Collezione privata"
     },
     "drawbridge": {
       "title": "Il ponte levatoio a Nieuw-Amsterdam",
@@ -1624,8 +1546,8 @@ window.IT = {
       "museum": "Minneapolis Institute of Art"
     },
     "olivepick": {
-      "title": "Raccoglitrici di olive",
-      "museum": "Metropolitan Museum of Art, New York"
+      "title": "L’uliveto (Raccoglitrici di olive)",
+      "museum": "National Gallery of Art, Washington"
     },
     "moonrise": {
       "title": "Paesaggio serale con luna nascente",
@@ -1823,10 +1745,6 @@ window.IT = {
       "title": "La foce della Senna a Honfleur",
       "museum": "Norton Simon Museum, Pasadena"
     },
-    "greendress": {
-      "title": "Camille in abito verde",
-      "museum": "Kunsthalle Bremen"
-    },
     "womengarden": {
       "title": "Donne in giardino",
       "museum": "Musée d’Orsay, Paris"
@@ -1930,10 +1848,6 @@ window.IT = {
     "artigarden": {
       "title": "Il giardino dell’artista ad Argenteuil",
       "museum": "National Gallery of Art, Washington"
-    },
-    "hobbyhorse": {
-      "title": "Jean Monet sul suo cavallo di legno",
-      "museum": "Metropolitan Museum of Art, New York"
     },
     "autumneff": {
       "title": "Effetto d’autunno ad Argenteuil",
@@ -2139,10 +2053,6 @@ window.IT = {
       "title": "La valle della Creuse a Fresselines",
       "museum": "Collezione privata"
     },
-    "ravincreuse": {
-      "title": "Le gole della Creuse",
-      "museum": "Musée des Beaux-Arts, Reims"
-    },
     "creusegrey": {
       "title": "La valle della Creuse, tempo grigio",
       "museum": "Collezione privata"
@@ -2266,10 +2176,6 @@ window.IT = {
     "irisyale": {
       "title": "Il giardino dell’artista a Giverny",
       "museum": "Yale University Art Gallery, New Haven"
-    },
-    "grandeallee": {
-      "title": "Il grande viale a Giverny",
-      "museum": "Museo di belle arti di Montréal"
     },
     "lilywl": {
       "title": "Le ninfee, 1904",
@@ -2399,10 +2305,6 @@ window.IT = {
       "title": "Ninfee",
       "museum": "Collezione privata"
     },
-    "lilybs": {
-      "title": "Ninfee (Bridgestone)",
-      "museum": "Artizon Museum, Tokyo"
-    },
     "shopfront": {
       "title": "Davanti a un negozio",
       "museum": "Metropolitan Museum of Art, New York"
@@ -2415,17 +2317,9 @@ window.IT = {
       "title": "I lottatori di sumo Takaneyama Yoichiemon e Sendagawa Kichigorō",
       "museum": "Metropolitan Museum of Art, New York"
     },
-    "sorinets": {
-      "title": "Donne che contemplano pescatori con reti",
-      "museum": "Musée Guimet, Paris (collezione Camondo)"
-    },
     "dyers": {
       "title": "Tintori al lavoro",
       "museum": "Cleveland Museum of Art"
-    },
-    "soritable": {
-      "title": "Donna presso un tavolo da pittura",
-      "museum": "Musée Guimet, Paris (collezione Camondo)"
     },
     "fujisuri": {
       "title": "Veduta del monte Fuji",
@@ -2727,10 +2621,6 @@ window.IT = {
       "title": "Il ponte sospeso al confine delle province di Hida e Etchū",
       "museum": "Metropolitan Museum of Art, New York"
     },
-    "sanobashi": {
-      "title": "Antica veduta del ponte di barche di Sano, nella provincia di Kōzuke",
-      "museum": "Musée Guimet, Paris"
-    },
     "tenpozan": {
       "title": "Il Tenpōzan alla foce del fiume Aji, provincia di Settsu",
       "museum": "Metropolitan Museum of Art, New York"
@@ -2803,14 +2693,6 @@ window.IT = {
       "title": "Il Fuji nel vapore profondo della montagna",
       "museum": "Library of Congress, Washington"
     },
-    "artistsfuji": {
-      "title": "Artisti si preparano a disegnare il monte Fuji",
-      "museum": "Musée Guimet, Paris"
-    },
-    "fujitotomi": {
-      "title": "Il monte Fuji nelle montagne di Tōtomi",
-      "museum": "Musée Guimet, Paris"
-    },
     "choshisea": {
       "title": "Chōshi nella provincia di Shimōsa",
       "museum": "Wikimedia Commons"
@@ -2834,10 +2716,6 @@ window.IT = {
     "libai": {
       "title": "Li Bai contempla una cascata",
       "museum": "Metropolitan Museum of Art, New York"
-    },
-    "sudongpo": {
-      "title": "Su Dongpo nella neve",
-      "museum": "Musée Guimet, Paris"
     },
     "ministoru": {
       "title": "Il ministro Tōru presso un lago sotto la luna",
@@ -3030,7 +2908,7 @@ window.IT = {
             "In quei mesi non pensa soltanto a singoli animali, ma al grande tessuto della natura. Allo stesso tempo aiuta a Berlino a preparare il «Primo Salone d’autunno tedesco», una grande esposizione internazionale d’arte moderna.",
             "«Le volpi» appartengono ai quadri in cui l’animale sta già quasi diventando forma pura."
           ],
-          "fact": "Il quadro restò a lungo appeso al Museum Kunstpalast di Düsseldorf. Oggi si trova in una collezione privata."
+          "fact": "Dal 1962 il quadro appartenne al Museum Kunstpalast di Düsseldorf. Nel 2022 la città lo restituì agli eredi del collezionista ebreo Kurt Grawi; nel marzo 2022 fu battuto all’asta da Christie’s a Londra. La sua collocazione attuale non è confermata pubblicamente."
         },
         "fate": {
           "title": "Un oscuro presagio",
@@ -3101,7 +2979,7 @@ window.IT = {
       "ending": [
         "Nel 1839 un incendio a Edo distrugge la sua abitazione e molti disegni. Negli anni Quaranta soggiorna più volte a Obuse, presso Takai Kōzan. Nel 1847 nasce il dio del tuono; nel 1849, la tigre nella neve.",
         "Hokusai muore a Edo il 18° giorno del quarto mese del secondo anno Kaei – il 10 maggio 1849. Secondo il computo di allora ha novant’anni.",
-        "Quindici anni prima, nel 1834, aveva scritto nella postfazione alle «Cento vedute del monte Fuji»: «Dal mio sesto anno ho l’abitudine di riprodurre la forma delle cose. Dal mio cinquantesimo anno ho pubblicato spesso immagini, ma ciò che ho disegnato prima del settantesimo non è, in verità, nulla che si possa ritenere valido. A settantatré anni ho compreso un poco lo scheletro degli uccelli, degli animali, degli insetti e dei pesci, e la crescita delle piante. Perciò a ottantasei voglio andare ancora oltre; a novanta, cogliere la cosa più a fondo; a cento, raggiungere davvero il meraviglioso; e a centodieci ogni punto e ogni tratto dovranno essere vivi. Vedano i signori di lunga vita che le mie parole non sono una vuota immaginazione.» Il desiderio di arrivare a centodieci resta inadempiuto. Restano i fogli e le pitture tarde."
+        "Quindici anni prima, nel 1834, aveva scritto nella postfazione alle «Cento vedute del monte Fuji»: «… Perciò a ottantasei voglio andare ancora oltre; a novanta, cogliere la cosa più a fondo; a cento, raggiungere davvero il meraviglioso; e a centodieci ogni punto e ogni tratto dovranno essere vivi.» Il desiderio di arrivare a centodieci resta inadempiuto. Restano i fogli e le pitture tarde."
       ],
       "epilogue": "Katsushika Hokusai muore il 10 maggio 1849 a Edo, a novant’anni secondo il computo di allora. Restano le «Trentasei vedute», le «Cento vedute del Fuji», le cascate, i ponti e le pitture tarde di Obuse."
     }
@@ -3678,7 +3556,7 @@ window.IT = {
       "when": "desde 1834",
       "intro": [
         "Nel 1834 esce il primo volume delle «Cento vedute del monte Fuji» (Fugaku Hyakkei), prima presso Eirakuya Tōshirō a Nagoya. Seguono tre volumi, in nero, grigio e spesso con un tocco di rosa incarnato.",
-        "Nella postilla al primo volume Hokusai scrive, sotto il nome Gakyō Rōjin Manji — «il vecchio pazzo per la pittura, Manji»: «Dal mio sesto anno ho l’abitudine di riprodurre la forma delle cose. Dal mio cinquantesimo anno ho spesso pubblicato immagini, ma ciò che ho disegnato prima del mio settantesimo anno non è, in verità, nulla che si possa ritenere valido. A settantatré anni ho cominciato a comprendere un poco l’ossatura degli uccelli, degli animali, degli insetti e dei pesci, e la crescita delle piante. Perciò a ottantasei voglio andare ancora più lontano; a novanta cogliere la cosa più a fondo; a cento raggiungere davvero il meraviglioso; e a centodieci ogni punto e ogni tratto dovranno essere vivi. Possano signori di lunga vita vedere che queste mie parole non sono una vana vanità.»",
+        "Nella postilla al primo volume Hokusai scrive, sotto il nome Gakyō Rōjin Manji — «il vecchio pazzo per la pittura, Manji»: «… Perciò a ottantasei voglio andare ancora più lontano; a novanta cogliere la cosa più a fondo; a cento raggiungere davvero il meraviglioso; e a centodieci ogni punto e ogni tratto dovranno essere vivi.»",
         "Le pagine del libro mostrano la montagna dietro una rete, attraverso un anello sacro, sotto la pioggia, a un guado: sempre di nuovo."
       ]
     },

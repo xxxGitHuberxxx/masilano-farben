@@ -71,14 +71,14 @@
   P.paths.wisinger = {
   "title": "El camino de vida de Olga Wisinger-Florian",
   "life": "1844–1926",
-  "part": "Parte 1 · Flores, avenidas y jardines",
+  "part": "Flores, avenidas y jardines",
   "subtitle": "De pianista a pintora",
-  "intro": "Viaja con Olga Wisinger-Florian, la pintora vienesa de flores y jardines: desde sus primeros cuadros en el Salzkammergut, por campos de amapolas y avenidas del Prater, hasta Venecia, Karlsbad y Euxinograd, en el mar Negro. Estaciones breves y cuadros para colorear. Esta primera parte sigue sus colores.",
+  "intro": "Viaja con Olga Wisinger-Florian, la pintora vienesa de flores y jardines: desde sus primeros cuadros en el Salzkammergut, por campos de amapolas y avenidas del Prater, hasta Venecia, Karlsbad y Euxinograd, en el mar Negro. Estaciones breves y cuadros para colorear. Este camino sigue sus colores.",
   "ending": [
     "Olga Wisinger-Florian muere en Grafenegg, en la Baja Austria, el 27 de febrero de 1926. La pianista se ha convertido en una de las pintoras más conocidas de Austria.",
-    "El camino puede seguir creciendo. Más flores y jardines pueden seguir en una parte posterior."
+    "El camino va del bosque otoñal de sus comienzos, pasando por granjas, viajes y avenidas, hasta los manzanos en flor de 1906."
   ],
-  "epilogue": "El 27 de febrero de 1926 Wisinger-Florian muere en Grafenegg. Una parte posterior puede añadir más cuadros de flores."
+  "epilogue": "Olga Wisinger-Florian muere en Grafenegg, en la Baja Austria, el 27 de febrero de 1926. La pianista se ha convertido en una de las pintoras más conocidas de Austria. El camino va del bosque otoñal de sus comienzos, pasando por granjas, viajes y avenidas, hasta los manzanos en flor de 1906."
 };
   P.stations = Object.assign(P.stations || {}, {
   "owjung": {

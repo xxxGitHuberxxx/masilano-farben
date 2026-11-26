@@ -3,9 +3,11 @@
   var API = 'https://masilano-rangliste.masilano.workers.dev';
   var CRED_KEY = 'masilano.lb.cred.v1';
   var START_PFX = 'masilano.lb.start.';
-  // v10.30 auto-enrolment: every player is on the boards from the first
-  // finished picture, under a generated name chosen with Würfeln.
-  var AUTO = true;
+  // v10.42r: opt-in only. Nobody is put on the boards automatically; joining needs
+  // the confirmation «mindestens 16 Jahre» and an explicit consent (see privacy policy).
+  // Accounts that were auto-enrolled before 10.42r are deleted once (migrateAuto).
+  var AUTO = false;
+  var OPTIN_NOTICE_KEY = 'masilano.lb.optinNotice.v1';
   // v10.31: own key. The certificate name (masilano.playerName.v1) is never
   // published; every player without a leaderboard name is asked once.
   var NAME_KEY = 'masilano.lb.name.v1';
@@ -34,6 +36,7 @@
       sugg:['Monet-Fan','Van-Gogh-Fan','Klimt-Fan','Hokusai-Fan','Hodler-Fan','Anker-Fan','Pinselheld','Farbenfee','Seerosenfreund','Sternennacht'],
       room:'Ehrenhalle', title:'Ranglisten', motto:'Welt, Land und Maler',
       lead:'Wer die meisten Meisterwerke vollendet, führt die Tafel. Ab deinem ersten vollendeten Bild bist du mit deinem Spitznamen dabei, ausblenden geht jederzeit.',
+      leadOpt:'Wer die meisten Meisterwerke vollendet, führt die Tafel. Mitmachen ist freiwillig und ab 16 Jahren möglich; du kannst dich jederzeit wieder austragen.', optinNotice:'Die Ranglisten sind jetzt freiwillig. Dein bisheriger automatischer Eintrag wurde gelöscht. Wenn du möchtest, kannst du wieder mitmachen.', consentFine:'Öffentlich sichtbar sind nur der erwürfelte Spitzname, das Land und die Zahl der Bilder.', privacyLink:'Datenschutzerklärung',
       entryK:'Ranglisten', entryM:'Welt, Land und Maler', toHall:'Zu den Ranglisten',
       soon:'Bald', soonLead:'Die Ranglisten öffnen sich, sobald der Saal eingerichtet ist. Dann kannst du unter einem Spitznamen mit den Meistern um die Wette malen.',
       welt:'Welt', land:'Land', maler:'Maler',
@@ -75,6 +78,7 @@
       sugg:['Monet Fan','Van Gogh Fan','Klimt Fan','Hokusai Fan','Hodler Fan','Brush Hero','Colour Muse','Lily Lover','Starry Night','Turner Fan'],
       room:'Hall of Honour', title:'Leaderboards', motto:'World, country and painter',
       lead:'Whoever completes the most masterpieces leads the board. From your first finished picture you take part under your nickname; you can hide yourself at any time.',
+      leadOpt:'Whoever completes the most masterpieces leads the board. Taking part is voluntary and possible from age 16; you can leave at any time.', optinNotice:'The leaderboards are now voluntary. Your earlier automatic entry has been deleted. You can join again if you like.', consentFine:'Only the rolled nickname, the country and the number of pictures are shown publicly.', privacyLink:'Privacy policy',
       entryK:'Leaderboards', entryM:'World, country and painter', toHall:'To the leaderboards',
       soon:'Soon', soonLead:'The leaderboards will open once the hall is ready. Then you can paint under a nickname and take your place among the masters.',
       welt:'World', land:'Country', maler:'Painter',
@@ -116,6 +120,7 @@
       sugg:['Fan de Monet','Fan de Van Gogh','Fan de Klimt','Fan de Hokusai','Fan de Hodler','Pincel de oro','Musa del color','Nenúfar','Noche estrellada','Fan de Turner'],
       room:'Sala de honor', title:'Clasificaciones', motto:'Mundo, país y pintor',
       lead:'Quien completa más obras maestras encabeza la tabla. Desde tu primer cuadro terminado participas con tu apodo; puedes ocultarte cuando quieras.',
+      leadOpt:'Quien completa más obras maestras encabeza la tabla. Participar es voluntario y posible a partir de los 16 años; puedes darte de baja en cualquier momento.', optinNotice:'Las clasificaciones ahora son voluntarias. Tu entrada automática anterior se ha eliminado. Si quieres, puedes volver a participar.', consentFine:'Solo se muestran públicamente el apodo sorteado, el país y el número de cuadros.', privacyLink:'Política de privacidad',
       entryK:'Clasificaciones', entryM:'Mundo, país y pintor', toHall:'A las clasificaciones',
       soon:'Pronto', soonLead:'Las clasificaciones se abrirán cuando la sala esté lista. Entonces podrás pintar con un apodo y ocupar tu lugar entre los maestros.',
       welt:'Mundo', land:'País', maler:'Pintor',
@@ -157,6 +162,7 @@
       sugg:['Fan de Monet','Fan de Van Gogh','Fan de Klimt','Fan de Hokusai','Fan de Hodler','Pinceau d’or','Muse des couleurs','Nymphéa','Nuit étoilée','Fan de Turner'],
       room:'Salle d’honneur', title:'Classements', motto:'Monde, pays et peintre',
       lead:'Celui ou celle qui termine le plus de chefs-d’œuvre mène le tableau. Dès ton premier tableau terminé, tu participes avec ton pseudo ; tu peux te masquer à tout moment.',
+      leadOpt:'Celui ou celle qui termine le plus de chefs-d’œuvre mène le classement. La participation est volontaire et possible dès 16 ans ; tu peux te retirer à tout moment.', optinNotice:'Les classements sont désormais volontaires. Ton ancienne inscription automatique a été supprimée. Si tu le souhaites, tu peux participer à nouveau.', consentFine:'Seuls le pseudonyme tiré au sort, le pays et le nombre de tableaux sont visibles publiquement.', privacyLink:'Politique de confidentialité',
       entryK:'Classements', entryM:'Monde, pays et peintre', toHall:'Vers les classements',
       soon:'Bientôt', soonLead:'Les classements s’ouvriront lorsque la salle sera prête. Tu pourras alors peindre sous un surnom et prendre ta place parmi les maîtres.',
       welt:'Monde', land:'Pays', maler:'Peintre',
@@ -198,6 +204,7 @@
       sugg:['Fan di Monet','Fan di Van Gogh','Fan di Klimt','Fan di Hokusai','Fan di Hodler','Pennello d’oro','Musa dei colori','Ninfea','Notte stellata','Fan di Turner'],
       room:'Sala d’onore', title:'Classifiche', motto:'Mondo, paese e pittore',
       lead:'Chi porta a termine più capolavori guida la tavola. Dal tuo primo quadro completato partecipi con il tuo soprannome; puoi nasconderti quando vuoi.',
+      leadOpt:'Chi porta a termine più capolavori guida la tavola. Partecipare è volontario e possibile dai 16 anni; puoi ritirarti in qualsiasi momento.', optinNotice:'Le classifiche ora sono volontarie. La tua precedente iscrizione automatica è stata cancellata. Se vuoi, puoi partecipare di nuovo.', consentFine:'Pubblicamente si vedono solo il soprannome estratto, il paese e il numero di quadri.', privacyLink:'Informativa sulla privacy',
       entryK:'Classifiche', entryM:'Mondo, paese e pittore', toHall:'Alle classifiche',
       soon:'Presto', soonLead:'Le classifiche si apriranno quando la sala sarà pronta. Potrai allora dipingere con un soprannome e prendere il tuo posto tra i maestri.',
       welt:'Mondo', land:'Paese', maler:'Pittore',
@@ -236,12 +243,13 @@
   function fill(s, v){ return String(s || '').replace(/\{(\w+)\}/g, function (_, k){ return (v && v[k] != null) ? v[k] : ''; }); }
   function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function (c){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]; }); }
   function apiBase(){
-    if (typeof window.MASILANO_LB_API === 'string' && window.MASILANO_LB_API) return String(window.MASILANO_LB_API).replace(/\/$/, '');
+    // v10.42r (S1): no ?lbapi= or localStorage override any more. Only local test pages
+    // (localhost / 127.0.0.1) may point the client at a local Worker via window.MASILANO_LB_API.
     try {
-      var q = new URLSearchParams(location.search);
-      if (q.get('lbapi')) return q.get('lbapi').replace(/\/$/, '');
-      var s = localStorage.getItem('masilano.lb.api');
-      if (s) return s.replace(/\/$/, '');
+      var h = location.hostname;
+      if ((h === 'localhost' || h === '127.0.0.1') && typeof window.MASILANO_LB_API === 'string' && window.MASILANO_LB_API) {
+        return String(window.MASILANO_LB_API).replace(/\/$/, '');
+      }
     } catch (e) {}
     return String(API || '').replace(/\/$/, '');
   }
@@ -299,11 +307,22 @@
     var TT = window.MASILANO_TITLES;
     return (id != null && TT) ? (TT.formatTitle(id, fallbackLang || lang()) || '') : '';
   }
+  // v10.43: titles of newer paths use their own ID ranges; the live leaderboard only accepts the legacy ranges.
+  // Such a title stays local (shown on this device) and is not sent, so register/rename never fails with bad_title.
+  function serverTitleOk(id){
+    var TT = window.MASILANO_TITLES;
+    return !TT || typeof TT.isServerTitleId !== 'function' || TT.isServerTitleId(id);
+  }
+  function localOnlyTitle(){
+    var TT = window.MASILANO_TITLES;
+    var id = TT ? TT.loadChosen() : null;
+    return (id != null && !serverTitleOk(id)) ? id : null;
+  }
   function namePayload(p, extra){
     p = partsOf(p);
     var o = { kind:p.kind, gender:p.gender, a:p.a, b:p.b, suffix:p.suffix || 0 };
     var tid = chosenTitleId();
-    if (tid != null) o.title_id = tid;
+    if (tid != null && serverTitleOk(tid)) o.title_id = tid;
     if (extra) for (var k in extra) if (Object.prototype.hasOwnProperty.call(extra, k)) o[k] = extra[k];
     return o;
   }
@@ -317,11 +336,11 @@
       saveCred(cred);
     }
     if (!cred || !cred.token || mockOn()) { renderHall(); return Promise.resolve(); }
-    var body = { token: cred.token, title_id: id == null ? null : id };
+    var body = { title_id: (id == null || !serverTitleOk(id)) ? null : id };
     return call('/me/rename', { method: 'POST', headers: headers(), body: JSON.stringify(body) })
       .then(function (r){
         if (r && r.body && r.body.ok) {
-          if (r.body.title_id == null) delete cred.title_id;
+          if (r.body.title_id == null) { if (id != null && !serverTitleOk(id)) cred.title_id = id; else delete cred.title_id; }
           else cred.title_id = r.body.title_id;
           saveCred(cred);
         }
@@ -335,9 +354,10 @@
     if (p) { cred.kind = p.kind; cred.gender = p.gender; cred.a = p.a; cred.b = p.b; cred.suffix = p.suffix || 0; }
     if (country) cred.country = country;
     if (src && Object.prototype.hasOwnProperty.call(src, 'title_id')) {
-      cred.title_id = src.title_id == null ? null : src.title_id;
+      var keep = src.title_id == null ? localOnlyTitle() : null;
+      cred.title_id = keep != null ? keep : (src.title_id == null ? null : src.title_id);
       var TT = window.MASILANO_TITLES;
-      if (TT) TT.saveChosen(cred.title_id);
+      if (TT && keep == null) TT.saveChosen(cred.title_id);
     }
     if ('nickname' in cred) delete cred.nickname;
     return cred;
@@ -440,7 +460,7 @@
     if (!cred || !cred.token || ls(BACKFILL_KEY) === '1' || mockOn()) return Promise.resolve();
     var ids = doneIds();
     if (!ids.length) return Promise.resolve();
-    return call('/backfill', { method: 'POST', headers: headers(), body: JSON.stringify({ token: cred.token, painting_ids: ids }) })
+    return call('/backfill', { method: 'POST', headers: headers(), body: JSON.stringify({ painting_ids: ids }) })
       .then(function (r){ if (r.status === 200 || r.status === 409) ls(BACKFILL_KEY, '1'); })
       .catch(function (){});
   }
@@ -724,7 +744,13 @@
   function accountHtml(){
     var P = T(), cred = loadCred(), me = state.me;
     if (!enabled()) return '';
-    if (isHidden()) {
+    if (!AUTO && !cred) {
+      var note = ls(OPTIN_NOTICE_KEY) === '1' ? '<p class="rl-you">' + esc(P.optinNotice) + '</p>' : '';
+      return '<div class="rl-account">' + note +
+        '<button type="button" class="btn goldcta" data-rl="join">' + esc(P.join) + '</button>' +
+        '<button type="button" class="rl-link" data-rl="restore">' + esc(P.haveCode) + '</button></div>';
+    }
+    if (AUTO && isHidden()) {
       return '<div class="rl-account"><p class="rl-you">' + esc(P.hiddenTx) + '</p>' +
         '<button type="button" class="btn goldcta" data-rl="unhide">' + esc(P.unhide) + '</button></div>';
     }
@@ -746,7 +772,8 @@
       '<button type="button" class="btn goldcta" data-rl="name">' + esc(P.rename) + '</button>' +
       '<button type="button" class="btn ghost" data-rl="title">' + esc(pickLabel) + '</button>' +
       '<button type="button" class="btn ghost" data-rl="code">' + esc(P.codeTitle) + '</button>' +
-      '<button type="button" class="btn ghost rl-remove" data-rl="hide">' + esc(P.hide) + '</button></div>';
+      (AUTO ? '<button type="button" class="btn ghost rl-remove" data-rl="hide">' + esc(P.hide) + '</button></div>'
+            : '<button type="button" class="btn ghost rl-remove" data-rl="remove">' + esc(P.remove) + '</button></div>');
   }
 
   function renderHall(){
@@ -762,7 +789,7 @@
       return;
     }
     el.innerHTML = '<header class="zf-head"><p class="roomlab">' + esc(P.room) + '</p><h1 class="zf-title">' + esc(P.title) + '</h1>' +
-      '<div class="orn" aria-hidden="true"></div><p class="zf-motto">' + esc(P.motto) + '</p><p class="zf-lead">' + esc(P.lead) + '</p></header>' +
+      '<div class="orn" aria-hidden="true"></div><p class="zf-motto">' + esc(P.motto) + '</p><p class="zf-lead">' + esc(AUTO ? P.lead : P.leadOpt) + '</p></header>' +
       switcher() + '<div class="rl-tablet">' + listHtml() + '</div>' + accountHtml() + '<p class="zf-fine">' + esc(AUTO ? P.autoFine : P.fine) + '</p>';
     el.querySelectorAll('[data-scope]').forEach(function (b){
       b.onclick = function (){ state.scope = b.getAttribute('data-scope'); loadBoard(); };
@@ -827,6 +854,7 @@
       '<label class="rl-lab">' + esc(P.countryLabel) + '<select class="rl-field" id="lbCountry">' + countryOptions(guessCountry()) + '</select></label>' +
       '<label class="rl-check"><input type="checkbox" id="lbAge"> <span>' + esc(P.age) + '</span></label>' +
       '<label class="rl-check"><input type="checkbox" id="lbConsent"> <span>' + esc(P.consent) + '</span></label>' +
+      '<p class="zf-fine">' + esc(P.consentFine) + ' <a href="privacy.html" target="_blank" rel="noopener">' + esc(P.privacyLink) + '</a></p>' +
       '<p class="rl-form-err" hidden></p>' +
       '<div class="btns"><button type="button" class="btn goldcta" data-act="do-join">' + esc(P.start) + '</button>' +
       '<button type="button" class="btn ghost" data-act="close">' + esc(P.cancel) + '</button></div>' +
@@ -900,17 +928,18 @@
     if (!age) { showErr(P.needAge); return; }
     if (!consent) { showErr(P.needConsent); return; }
     if (mockOn()) {
-      saveCred(credWithParts({ token: 'MASI-MOCK-GOLD-PINSEL-CODE', player_id: 'mock', country: country }, parts, country));
+      saveCred(credWithParts({ token: 'MASI-MOCK-GOLD-PINSEL-CODE', player_id: 'mock', country: country, consent: true }, parts, country));
+      ls(OPTIN_NOTICE_KEY, null);
       saveParts(parts);
       openJoin('code-show');
       loadBoard();
       return;
     }
-    call('/register', { method: 'POST', headers: headers(), body: JSON.stringify(namePayload(parts, { country: country, age_confirm: true })) })
+    call('/register', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(namePayload(parts, { country: country, age_confirm: true, consent: true })) })
       .then(function (r){
         if (!r.body || !r.body.ok) { showErr(P.error); return; }
-        saveCred(credWithParts({ token: r.body.token, player_id: r.body.player_id, country: r.body.country }, r.body, r.body.country));
-        saveParts(r.body);
+        saveCred(credWithParts({ token: r.body.token, player_id: r.body.player_id, country: r.body.country, consent: true }, r.body, r.body.country));
+        saveParts(r.body); ls(OPTIN_NOTICE_KEY, null); ls(BACKFILL_KEY, null); backfill();
         openJoin('code-show');
         loadBoard();
       }).catch(function (){ showErr(P.error); });
@@ -927,7 +956,7 @@
     call('/me/restore', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token: token }) })
       .then(function (r){
         if (!r.body || !r.body.ok) { showErr(P.badCode); return; }
-        var restored = credWithParts({ token: token, player_id: r.body.player_id, country: r.body.country }, r.body, r.body.country);
+        var restored = credWithParts({ token: token, player_id: r.body.player_id, country: r.body.country, consent: true }, r.body, r.body.country);
         saveCred(restored); saveParts(restored);
         closeJoin(); loadBoard();
       }).catch(function (){ showErr(P.error); });
@@ -938,7 +967,7 @@
     var cred = loadCred();
     if (mockOn()) { saveCred(null); closeJoin(); loadBoard(); if (host && host.mtoast) host.mtoast(P.removed); return; }
     if (!cred || !cred.token) { saveCred(null); closeJoin(); loadBoard(); return; }
-    call('/me/delete', { method: 'POST', headers: headers(), body: JSON.stringify({ token: cred.token }) })
+    call('/me/delete', { method: 'POST', headers: headers(), body: JSON.stringify({}) })
       .then(function (){
         saveCred(null); closeJoin(); loadBoard();
         if (host && host.mtoast) host.mtoast(P.removed);
@@ -962,7 +991,7 @@
       if (cred) saveCred(credWithParts(cred, parts, country));
       return done();
     }
-    call('/me/rename', { method: 'POST', headers: headers(), body: JSON.stringify(namePayload(parts, { token: cred.token, country: country })) })
+    call('/me/rename', { method: 'POST', headers: headers(), body: JSON.stringify(namePayload(parts, { country: country })) })
       .then(function (r){
         if (r.status === 429 && r.body && r.body.error === 'rename_limit') { showErr(P.renameLimit); return; }
         if (!r.body || !r.body.ok) { showErr(P.error); return; }
@@ -973,7 +1002,7 @@
     var P = T(), cred = loadCred();
     function fin(){ saveCred(null); ls(HIDE_KEY, '1'); ls(BACKFILL_KEY, null); closeJoin(); renderHall(); loadBoard(); if (host && host.mtoast) host.mtoast(P.hiddenTx); }
     if (!cred || !cred.token || mockOn()) return fin();
-    call('/me/delete', { method: 'POST', headers: headers(), body: JSON.stringify({ token: cred.token }) })
+    call('/me/delete', { method: 'POST', headers: headers(), body: JSON.stringify({}) })
       .then(fin).catch(function (){ showErr(P.error); });
   }
 
@@ -992,7 +1021,7 @@
     return call('/complete', {
       method: 'POST',
       headers: headers(),
-      body: JSON.stringify({ token: cred.token, painting_id: pid, painter_id: painter, started_at: started })
+      body: JSON.stringify({ painting_id: pid, painter_id: painter, started_at: started })
     }).then(function (r){
       if (r && r.body && r.body.ok) {
         try { localStorage.removeItem(START_PFX + pid); } catch (e) {}
@@ -1011,8 +1040,19 @@
     var hall = document.getElementById('rankings');
     if (hall && hall.classList.contains('active')) showPage();
   }
+  // v10.42r: accounts created by the old auto-enrolment have no recorded consent.
+  // Delete them once (server and device) and show a short notice; joining again is opt-in.
+  function migrateAuto(){
+    var cred = loadCred();
+    if (AUTO || !cred || !cred.auto || cred.consent) return Promise.resolve(false);
+    function fin(){ saveCred(null); ls(BACKFILL_KEY, null); ls(HIDE_KEY, null); ls(OPTIN_NOTICE_KEY, '1'); refresh(); return true; }
+    if (mockOn() || !cred.token || !apiBase()) return Promise.resolve(fin());
+    return call('/me/delete', { method: 'POST', headers: headers(), body: JSON.stringify({}) })
+      .then(fin, fin);
+  }
   function init(h){
     host = h || {}; refresh();
+    migrateAuto();
     if (AUTO) {
       maybePrompt();
       setTimeout(function (){ ensureEnrolled(); }, 2500);   // backfill on next start
@@ -1020,7 +1060,7 @@
     return api;
   }
 
-  var api = { init: init, refresh: refresh, showPage: showPage, markStart: markStart, reportComplete: reportComplete, enabled: enabled, openJoin: openJoin, loadBoard: loadBoard, painterOf: painterOf, ensureEnrolled: ensureEnrolled, formatParts: formatParts, rollParts: rollParts, readParts: readParts, pendingParts: function (){ return pendingParts; }, guessCountry: guessCountry, maybePrompt: maybePrompt, needsPrompt: needsPrompt, isCountry: isCountry, countryName: countryName, syncTitle: syncTitle, chosenTitleId: chosenTitleId };
+  var api = { migrateAuto: migrateAuto, init: init, refresh: refresh, showPage: showPage, markStart: markStart, reportComplete: reportComplete, enabled: enabled, openJoin: openJoin, loadBoard: loadBoard, painterOf: painterOf, ensureEnrolled: ensureEnrolled, formatParts: formatParts, rollParts: rollParts, readParts: readParts, pendingParts: function (){ return pendingParts; }, guessCountry: guessCountry, maybePrompt: maybePrompt, needsPrompt: needsPrompt, isCountry: isCountry, countryName: countryName, syncTitle: syncTitle, chosenTitleId: chosenTitleId };
   window.MASILANO_LB = api;
   if (AUTO && document.body) maybePrompt();
   else if (AUTO) document.addEventListener('DOMContentLoaded', function (){ maybePrompt(); });

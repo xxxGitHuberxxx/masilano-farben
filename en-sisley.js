@@ -104,10 +104,6 @@
     "title": "Place du Chenil at Marly, Snow Effect",
     "museum": "Musée des Beaux-Arts, Rouen"
   },
-  "syroadlouv": {
-    "title": "The Road to Louveciennes",
-    "museum": "Royal Museums of Fine Arts of Belgium, Brussels"
-  },
   "syaqueduct": {
     "title": "The Aqueduct at Marly",
     "museum": "Toledo Museum of Art"
@@ -487,14 +483,6 @@
       "The picture is in the Musée des Beaux-Arts, Rouen."
     ],
     "fact": "1874. Musée des Beaux-Arts, Rouen."
-  },
-  "syroadlouv": {
-    "text": [
-      "A sandy path leads past walls and trees into the distance.",
-      "Sisley shows the everyday road with no incident.",
-      "The picture is in the Royal Museums of Fine Arts of Belgium, Brussels."
-    ],
-    "fact": "1874. Royal Museums of Fine Arts of Belgium, Brussels."
   },
   "syaqueduct": {
     "text": [

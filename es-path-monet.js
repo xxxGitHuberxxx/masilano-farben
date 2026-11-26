@@ -199,7 +199,7 @@
     ],
     "fact": "Chailly-en-Bière está al borde del bosque, al sur de París. Monet vuelve más tarde a menudo a la naturaleza ante las puertas de la ciudad.",
     "quote": {
-      "text": "Ven pues de prisa a reunirte conmigo, el bosque es delicioso.",
+      "text": "Venga pronto a reunirse conmigo, el bosque es delicioso.",
       "cite": "Carta a Frédéric Bazille, Chailly, 28 de abril de 1865"
     }
   },
@@ -237,13 +237,6 @@
       "En el Salón de 1865 el cuadro llama la atención. El joven pintor de Le Havre cuenta de pronto como una esperanza."
     ],
     "fact": "Honfleur está frente a la ciudad natal, al otro lado de la desembocadura. Monet vuelve una y otra vez a esta agua."
-  },
-  "greendress": {
-    "text": [
-      "Camille Doncieux lleva un vestido verde largo y mira por encima del hombro. En 1866 el cuadro tiene éxito en el Salón – bajo el título «Camille».",
-      "La familia en Le Havre no quiere saber nada de la relación. Camille es modelo, compañera y pronto la madre de su hijo."
-    ],
-    "fact": "Monet tiene 25 años, Camille 19. El vestido verde se convierte en uno de los cuadros conocidos de sus primeros años juntos."
   },
   "womengarden": {
     "text": [
@@ -453,13 +446,6 @@
       "Monet pinta la casa no solo desde fuera, sino los cuadros de cultivo en los que la familia pasa el verano."
     ],
     "fact": "El cuadro cuelga en la National Gallery of Art de Washington. El jardín se convierte en estos años en uno de sus motivos más importantes."
-  },
-  "hobbyhorse": {
-    "text": [
-      "El pequeño Jean, en 1872 de unos cinco años, está sentado con orgullo sobre un caballito de palo en el jardín. Detrás de él, los cuadros de flores y el seto.",
-      "Monet pinta al hijo sin pose, como parte de la vida cotidiana en Argenteuil. Es un cuadro claro, casi privado."
-    ],
-    "fact": "Jean Monet nace en 1867. Más tarde, en Giverny, él y sus hermanastros llevan con el padre la casa."
   },
   "autumneff": {
     "text": [
@@ -747,13 +733,6 @@
     ],
     "fact": "El cuadro de 1889 se encuentra en una colección privada."
   },
-  "ravincreuse": {
-    "text": [
-      "Las gargantas de la Creuse llevan la mirada hacia la profundidad, el río brilla como una cinta. El valle parece cerrado, casi severo.",
-      "En Reims cuelga una de las versiones más claras de este motivo."
-    ],
-    "fact": "El cuadro de 1889 cuelga en el Musée des Beaux-Arts de Reims."
-  },
   "creusegrey": {
     "text": [
       "Con tiempo gris, las casas junto a la Creuse yacen apagadas en la ladera, el color se retira, la forma permanece.",
@@ -956,7 +935,7 @@
     "fact": "El cuadro de 1899 cuelga en la National Gallery of Art de Washington.",
     "quote": {
       "text": "Es un estanque de agua que yo mismo dispuse hace unos quince años; este estanque de unos 200 metros de perímetro lo alimenta un brazo del río Epte; está orlado de iris y de diversas plantas acuáticas, en un marco de distintos árboles, en el que sin embargo predominan los álamos y los sauces, entre ellos varios sauces llorones. Precisamente en este lugar he pintado ya los nenúfares con un puente de estilo japonés.",
-      "cite": "Carta a Roger Marx, Giverny, 1 de junio de 1909"
+      "cite": "Carta a Roger Marx, Giverny, 1 de junio de 1909 (Wildenstein, carta 1893); Marx utilizó la respuesta para su artículo en la Gazette des Beaux-Arts, junio de 1909"
     }
   },
   "lilybridge": {
@@ -993,13 +972,6 @@
       "En 1900, Monet no pinta solo el jardín de agua, sino también este camino a través de las flores – el jardín que él mismo ha plantado."
     ],
     "fact": "El cuadro de 1900 cuelga en la Yale University Art Gallery de New Haven."
-  },
-  "grandeallee": {
-    "text": [
-      "La gran avenida conduce hacia la casa, el camino de grava yace a la sombra de los árboles, en el borde florecen flores.",
-      "El mismo eje que las y los visitantes recorren todavía hoy lo pinta Monet hacia 1900 como un cuadro de verano silencioso."
-    ],
-    "fact": "El cuadro de 1900 cuelga en el Musée des Beaux-Arts de Montreal."
   },
   "lilywl": {
     "text": [
@@ -1236,17 +1208,6 @@
       "Tales tablas de los años 1910 muestran el estanque sin puente y sin cielo – solo agua y plantas."
     ],
     "fact": "El cuadro pertenece a la serie de nenúfares de los años 1910."
-  },
-  "lilybs": {
-    "text": [
-      "Un reflejo claro cae de sesgo a través del estanque, los nenúfares yacen al borde de la luz, la orilla queda fuera.",
-      "En 1921, Monet escribe a Arsène Alexandre que la galería de la Orangerie albergará para siempre sus ensayos decorativos. En mayo de 1927, tras su muerte, se abren las salas."
-    ],
-    "fact": "El cuadro cuelga en el Artizon Museum de Tokio, la antigua colección Bridgestone.",
-    "quote": {
-      "text": "Será la galería de la Orangerie la que albergará para siempre mis ensayos decorativos.",
-      "cite": "Carta a Arsène Alexandre, Giverny, 13 de noviembre de 1921"
-    }
   }
 };
   for (var k in add) if (Object.prototype.hasOwnProperty.call(add, k)) pt[k] = add[k];

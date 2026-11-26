@@ -66,14 +66,14 @@
   P.paths.zuend = {
   "title": "El camino de vida de Robert Zünd",
   "life": "1827–1909",
-  "part": "Parte 1 · Lucerna y la luz de los campos",
+  "part": "Lucerna y la luz de los campos",
   "subtitle": "Lagos, campos y robledales",
-  "intro": "Viaja con Robert Zünd, el paisajista de Lucerna: desde sus años de aprendizaje en Ginebra, pasando por los campos y lagos de Suiza central, hasta los grandes bosques de robles y hayas. Estaciones breves y cuadros para colorear. Esta primera parte sigue su camino por el paisaje.",
+  "intro": "Viaja con Robert Zünd, el paisajista de Lucerna: desde sus años de aprendizaje en Ginebra, pasando por los campos y lagos de Suiza central, hasta los grandes bosques de robles y hayas. Estaciones breves y cuadros para colorear. Este camino recorre el paisaje.",
   "ending": [
     "Robert Zünd muere en Lucerna el 15 de enero de 1909. Toda su vida pintó el paisaje de su tierra con gran paciencia.",
-    "El camino puede seguir creciendo. Más campos, bosques y paisajes bíblicos pueden seguir en una parte posterior."
+    "El camino va del Pilatus y el lago de los Cuatro Cantones, pasando por campos y grandes bosques, hasta el Reuss junto a Rathausen."
   ],
-  "epilogue": "El 15 de enero de 1909 Zünd muere en Lucerna. Una parte posterior puede añadir más bosques y campos."
+  "epilogue": "Robert Zünd muere en Lucerna el 15 de enero de 1909. Toda su vida pintó el paisaje de su tierra con gran paciencia. El camino va del Pilatus y el lago de los Cuatro Cantones, pasando por campos y grandes bosques, hasta el Reuss junto a Rathausen."
 };
   P.stations = Object.assign(P.stations || {}, {
   "rzjung": {

@@ -24,7 +24,7 @@
   "ending": [
     "Dürer meurt à Nuremberg en 1528. Ces deux feuilles comptent parmi les études d’après nature les plus précises de leur temps."
   ],
-  "epilogue": "Une partie ultérieure pourra ajouter d’autres gravures et portraits."
+  "epilogue": "Dürer meurt à Nuremberg en 1528. Ces deux feuilles comptent parmi les études d’après nature les plus précises de leur temps."
 };
   P.stations = Object.assign(P.stations || {}, {
   "durer1": {
@@ -36,4 +36,21 @@
     ]
   }
 });
+  // v10.42 pathTexts: work texts of the short path (were German fallback before).
+  P.pathTexts = Object.assign(P.pathTexts || {}, {
+    "hare": {
+      "text": [
+        "Le lièvre est assis tout à fait immobile, les oreilles attentives, chaque poil du pelage visible.",
+        "Dürer l’observa de si près et avec une telle précision que l’on peut presque sentir la fourrure douce."
+      ],
+      "fact": "La feuille ne mesure qu’environ 25 centimètres de haut et est pourtant l’une des images d’animaux les plus célèbres du monde."
+    },
+    "wing": {
+      "text": [
+        "Dürer peignit l’aile d’un oiseau coloré avec une telle précision qu’elle pourrait encore être devant nous sur la table.",
+        "Chaque plume est posée à part, des fortes rémiges aux douces couvertures claires."
+      ],
+      "fact": "Le rollier d’Europe est un oiseau méridional au plumage turquoise, bleu et brun chaud. Dürer le consigna comme un naturaliste."
+    }
+  });
 })();

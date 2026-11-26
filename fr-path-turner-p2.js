@@ -43,10 +43,6 @@
     "title": "Newcastle upon Tyne",
     "museum": "Tate, Londres"
   },
-  "turamsgate": {
-    "title": "Ramsgate",
-    "museum": "Tate, Londres"
-  },
   "tucologne": {
     "title": "Cologne, arrivée d’un paquebot le soir",
     "museum": "Frick Collection, New York"
@@ -202,10 +198,6 @@
   "tulucerne": {
     "title": "Lucerne depuis le lac",
     "museum": "Morgan Library & Museum, New York"
-  },
-  "tuzurich": {
-    "title": "Un jour de fête à Zurich, tôt le matin, étude-modèle",
-    "museum": "Tate, Londres"
   },
   "turhinefall": {
     "title": "Les chutes du Rhin à Schaffhouse",
@@ -379,12 +371,6 @@
       "Newcastle s’élève sur la Tyne, avec des clochers, de la fumée et des navires. L’aquarelle date de vers 1823, pour une suite de gravures de ports anglais. Elle est à la Tate de Londres."
     ],
     "fact": "vers 1823. Tate, Londres."
-  },
-  "turamsgate": {
-    "text": [
-      "Un voilier se fraye un chemin dans la tempête vers le port de Ramsgate ; sur le rivage se dresse le phare. L’aquarelle date de vers 1824, pour la suite des ports anglais. Elle est à la Tate de Londres."
-    ],
-    "fact": "vers 1824. Tate, Londres."
   },
   "tucologne": {
     "text": [
@@ -619,12 +605,6 @@
       "Lucerne s’étend à la lumière du soir au bord du lac, avec des tours, des murailles et des bateaux. L’aquarelle date de 1845. Elle est à la Morgan Library & Museum de New York."
     ],
     "fact": "1845. Morgan Library & Museum, New York."
-  },
-  "tuzurich": {
-    "text": [
-      "Tôt le matin la foule se presse sur la rive de la Limmat, à Zurich ; les tours s’élèvent dans le ciel clair. L’étude date de vers 1845. Elle est à la Tate de Londres."
-    ],
-    "fact": "vers 1845. Tate, Londres."
   },
   "turhinefall": {
     "text": [

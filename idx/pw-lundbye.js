@@ -1,0 +1,13 @@
+// Work metadata of path lundbye (v10.43b), part of path-works-late.js, for single works at start.
+(function () {
+  var M = ["Statens Museum for Kunst, Kopenhagen"];
+  var G = [["J.Th. Lundbye",[["lbcowhead","Kopf einer weiss gescheckten Kuh","1834",0],["lbfather","Oberst Joachim Theodor Lundbye, der Vater des Künstlers","1836",0],["lbmother","Cathrine Lundbye, geborene Bonnevie, die Mutter des Künstlers","1836",0],["lbvinderod","Die Kirche von Vinderød bei Frederiksværk","1837",0],["lbsunken","Ein Hohlweg bei Frederiksværk","1837",0],["lblaessoe","Der Maler Thorald Læssøe","1837",0],["lbkalundborg","Die Kirche von Kalundborg","1837",0],["lbulvedal","Ulvedalen im Dyrehaven","1838",0],["lbcloudy","Landschaft bei bewölktem Wetter. Später Nachmittag","1840",0],["lbsorup","Bewaldete Hügel bei Sørupvang","1841",0],["lbfrederiksborg","Blick auf Frederiksborg vom Hestehaven aus","1841",0],["lbzealand","Seeländische Landschaft. Offenes Land in Nordseeland","1842",0],["lbbull","Schwarzbunter Stier","1844",0],["lbcowshed","Ein Kuhstall auf einem Hof in Vejby, Seeland","1844",0],["lbsheep","Abendstimmung mit Schafen auf einem Hügel","1845",0],["lbtwocows","Zwei Kühe auf freiem Feld","1845",0],["lboxen","Ein Ochsenzug in der römischen Campagna","1845",0],["lbtivoli","Landschaft bei Tivoli, Italien","1845",0],["lbfarm","Bauernhaus in der Sonne","1846",0],["lbkolas","Kolås-Wald, Vejrhøj","1846",0],["lbmarling","Mergeln auf dem Pfarrhofacker von Vallekilde, im Hintergrund Hankehøj","1846",0],["lbcroftstudy","Ein Kätnerhof bei Lodskov nahe Gut Vognserup. Studie","1846",0],["lbburdock","Eine Klette und andere Pflanzen auf einer Steinmauer","1847",0],["lbrooster","Ein Hahn","1847",0],["lbstallion","Sechzehnjähriger Hengst der Knabstrup-Rasse","1847",0],["lbbeach","Der Strand von Refsnæs, Seeland","1847",0],["lbcroft","Ein Kätnerhof bei Lodskov nahe Gut Vognserup, Seeland","1847",0],["lbcliffs","Studie der Steilküste an der Südküste von Refsnæs","1847",0],["lbvognserup","Zwei Kühe auf einem Feld bei Gut Vognserup, Seeland","1847",0],["lbwinter","Kühe werden an einem Wintertag getränkt","1848",0]]]];
+  var have = {}; (window.PATH_WORKS || []).forEach(function (w) { have[w.id] = 1; });
+  var W = [];
+  for (var i = 0; i < G.length; i++) for (var j = 0; j < G[i][1].length; j++) {
+    var r = G[i][1][j]; if (have[r[0]]) continue;
+    var o = { id: r[0], title: r[1], artist: G[i][0], year: r[2] }; if (r.length > 3) o.museum = M[r[3]]; W.push(o);
+  }
+  window.PATH_WORKS = (window.PATH_WORKS || []).concat(W);
+  (window.__pwChunks = window.__pwChunks || {})["lundbye"] = true;
+})();

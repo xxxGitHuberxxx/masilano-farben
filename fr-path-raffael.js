@@ -16,9 +16,9 @@
   "subtitle": "La Madone Sixtine",
   "intro": "À Rome, Raphaël peint pour l’Église et la cour. La Madone Sixtine s’avance sur les nuages ; les deux anges du bord inférieur deviendront plus tard très connus.",
   "ending": [
-    "Raphaël meurt à Rome en 1520, à seulement 37 ans. Une partie ultérieure pourra ajouter d’autres madones et les Stanze."
+    "Raphaël meurt à Rome en 1520, à seulement 37 ans. La Madone Sixtine est aujourd’hui à la Gemäldegalerie Alte Meister de Dresde."
   ],
-  "epilogue": "Une partie ultérieure pourra ajouter d’autres tableaux."
+  "epilogue": "Raphaël meurt à Rome en 1520, à seulement 37 ans. La Madone Sixtine est aujourd’hui à la Gemäldegalerie Alte Meister de Dresde."
 };
   P.stations = Object.assign(P.stations || {}, {
   "raffael1": {
@@ -30,4 +30,14 @@
     ]
   }
 });
+  // v10.42 pathTexts: work texts of the short path (were German fallback before).
+  P.pathTexts = Object.assign(P.pathTexts || {}, {
+    "sistine": {
+      "text": [
+        "Marie s’avance avec l’Enfant entre deux rideaux tirés, comme si une scène s’ouvrait.",
+        "À ses pieds sont assis les deux petits anges qui atterrirent plus tard sur d’innombrables cartes postales."
+      ],
+      "fact": "Le tableau naquit pour le monastère de San Sisto à Plaisance et arriva à Dresde en 1754."
+    }
+  });
 })();

@@ -27,10 +27,6 @@
     "title": "El campo y el gran nogal en invierno, Éragny",
     "museum": "Philadelphia Museum of Art"
   },
-  "pxdeafhouse": {
-    "title": "La casa de la mujer sorda y el campanario de Éragny",
-    "museum": "Indianapolis Museum of Art"
-  },
   "pxpick86": {
     "title": "Recogida de manzanas",
     "museum": "Ohara Museum of Art, Kurashiki"
@@ -377,12 +373,6 @@
       "Un nogal sin hojas se alza en el campo invernal frente a Éragny. Pissarro pinta el árbol varias veces en estos años. El cuadro está en el Philadelphia Museum of Art."
     ],
     "fact": "1885. Philadelphia Museum of Art."
-  },
-  "pxdeafhouse": {
-    "text": [
-      "Pradera, árboles, una casa y el campanario: la vista sobre el pueblo en 1886. El cuadro está en el Indianapolis Museum of Art."
-    ],
-    "fact": "1886. Indianapolis Museum of Art."
   },
   "pxpick86": {
     "text": [

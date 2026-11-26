@@ -82,10 +82,6 @@
     "title": "Portrait of Emilie Flöge",
     "museum": "Collection not established"
   },
-  "oleander": {
-    "title": "Two Girls with an Oleander",
-    "museum": "Legion of Honor, Fine Arts Museums of San Francisco"
-  },
   "hanswurst": {
     "title": "Hanswurst on the Improvised Stage at Rothenburg",
     "museum": "Collection not established"
@@ -193,10 +189,6 @@
   "musik1901": {
     "title": "Music",
     "museum": "Collection not established"
-  },
-  "hygieia": {
-    "title": "Hygieia (detail from “Medicine”)",
-    "museum": "Historical photograph; the original burned in 1945 at Immendorf Castle"
   },
   "jurysketch": {
     "title": "Sketch for Jurisprudence",
@@ -445,13 +437,6 @@
     ],
     "fact": "Oil painting, 1891. Collection not established."
   },
-  "oleander": {
-    "text": [
-      "Two young women stand in front of an oleander bush, close together, in dark dresses, their eyes on the blossom.",
-      "The picture dates from about 1890 to 1892. It hangs in the Legion of Honor, Fine Arts Museums of San Francisco."
-    ],
-    "fact": "Oil on canvas, about 1890–1892. Legion of Honor, San Francisco."
-  },
   "hanswurst": {
     "text": [
       "In an open square the comic figure of Hanswurst plays before a dense crowd: an improvised theatre under the open sky, with costumes and flags.",
@@ -648,13 +633,6 @@
       "The work dates from 1901, the year “Medicine” is shown at the Secession. It belongs to Klimt’s repeated engagement with the subject of music."
     ],
     "fact": "1901. Collection not established."
-  },
-  "hygieia": {
-    "text": [
-      "Hygieia, the goddess of health, stands in a red, gold-ornamented gown, the snake of Asclepius around her arm, a cup in her hand. Her gaze meets us quietly.",
-      "The detail comes from the faculty painting “Medicine”, shown at the Secession in 1901 and met with sharp opposition. The original burns in 1945 at Immendorf Castle in Lower Austria. What remains includes this historical colour photograph."
-    ],
-    "fact": "Detail from “Medicine”, 1900–1901. Historical photograph; the original burned at Immendorf Castle in 1945."
   },
   "jurysketch": {
     "text": [

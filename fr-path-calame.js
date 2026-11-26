@@ -42,10 +42,6 @@
     "title": "Souvenir de Rosenlaui",
     "museum": "Collection particulière"
   },
-  "acwetter": {
-    "title": "Le Wetterhorn",
-    "museum": "Lieu non indiqué"
-  },
   "acleman": {
     "title": "Vue du lac Léman",
     "museum": "Villa Vauban, Luxembourg"
@@ -71,14 +67,14 @@
   P.paths.calame = {
   "title": "Le parcours de vie d’Alexandre Calame",
   "life": "1810–1864",
-  "part": "Partie 1 · De Genève aux hautes Alpes",
+  "part": "De Genève aux hautes Alpes",
   "subtitle": "Orage, rocher et lacs paisibles",
-  "intro": "Voyage avec Alexandre Calame, le peintre genevois des Alpes : des premiers paysages de montagne au Grimsel, à Rosenlaui et au Wetterhorn, jusqu’aux lacs paisibles de Thoune, de Genève et de Lucerne. De courtes étapes et des tableaux à colorier. Cette première partie le suit à travers les montagnes suisses.",
+  "intro": "Voyage avec Alexandre Calame, le peintre genevois des Alpes : des premiers paysages de montagne au Grimsel, à Rosenlaui et au Wetterhorn, jusqu’aux lacs paisibles de Thoune, de Genève et de Lucerne. De courtes étapes et des tableaux à colorier. Ce chemin le suit à travers les montagnes suisses.",
   "ending": [
     "Alexandre Calame meurt à Menton le 19 mars 1864, à cinquante-trois ans. Ses tableaux des Alpes ont façonné le regard de toute l’Europe sur les montagnes suisses.",
-    "Le chemin peut encore s’allonger. Des lithographies, des vues d’Italie et d’autres montagnes pourront suivre dans une partie ultérieure."
+    "Le chemin mène des premiers paysages de montagne, à travers l’orage et les sommets, jusqu’aux lacs et aux cabanes du Rigi."
   ],
-  "epilogue": "Le 19 mars 1864, Calame meurt à Menton. Une partie ultérieure pourra ajouter des lithographies et d’autres montagnes."
+  "epilogue": "Alexandre Calame meurt à Menton le 19 mars 1864, à cinquante-trois ans. Ses tableaux des Alpes ont façonné le regard de toute l’Europe sur les montagnes suisses. Le chemin mène des premiers paysages de montagne, à travers l’orage et les sommets, jusqu’aux lacs et aux cabanes du Rigi."
 };
   P.stations = Object.assign(P.stations || {}, {
   "acgenf": {
@@ -184,13 +180,6 @@
       "Le tableau naît à l’atelier, d’après des esquisses et des souvenirs."
     ],
     "fact": "1849. Collection particulière."
-  },
-  "acwetter": {
-    "text": [
-      "Le Wetterhorn s’élève à pic au-dessus de la vallée, des nuages tournent autour du sommet. Devant se dressent des sapins sombres.",
-      "La montagne près de Grindelwald compte parmi les grands motifs de la peinture suisse."
-    ],
-    "fact": "1850. Lieu non indiqué."
   },
   "acleman": {
     "text": [

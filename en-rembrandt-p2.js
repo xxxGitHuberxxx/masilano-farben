@@ -8,10 +8,6 @@
   "Wallraf-Richartz-Museum, Köln": "Wallraf-Richartz-Museum, Cologne"
 });
   EN.works = Object.assign(EN.works || {}, {
-  "rbselfflat": {
-    "title": "Self-Portrait in a Flat Cap",
-    "museum": "Royal Collection, London"
-  },
   "rbadultery": {
     "title": "The Woman taken in Adultery",
     "museum": "National Gallery, London"
@@ -208,10 +204,6 @@
     "title": "Frederick Rihel on Horseback",
     "museum": "National Gallery, London"
   },
-  "rbjewishbr": {
-    "title": "The Jewish Bride",
-    "museum": "Rijksmuseum, Amsterdam"
-  },
   "rbfamily": {
     "title": "Family Portrait",
     "museum": "Herzog Anton Ulrich-Museum, Braunschweig"
@@ -364,14 +356,6 @@
   }
 });
   EN.pathTexts = Object.assign(EN.pathTexts || {}, {
-  "rbselfflat": {
-    "text": [
-      "Rembrandt wears a flat cap and an embroidered garment.",
-      "He painted himself in the year of the Night Watch.",
-      "The picture is in the Royal Collection, London."
-    ],
-    "fact": "1642. Royal Collection, London."
-  },
   "rbadultery": {
     "text": [
       "In a vast golden temple a small group stands in the light before Christ.",
@@ -762,14 +746,6 @@
       "The picture is in the National Gallery, London."
     ],
     "fact": "c. 1663. National Gallery, London."
-  },
-  "rbjewishbr": {
-    "text": [
-      "A couple in glowing red and gold hold each other tenderly.",
-      "The paint is so thick that the sleeves look almost sculpted.",
-      "The picture is in the Rijksmuseum, Amsterdam; the gallery also includes it."
-    ],
-    "fact": "c. 1665–1669. Rijksmuseum, Amsterdam."
   },
   "rbfamily": {
     "text": [

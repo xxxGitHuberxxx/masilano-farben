@@ -87,10 +87,6 @@
     "title": "Retrato de Emilie Flöge",
     "museum": "Colección no determinada"
   },
-  "oleander": {
-    "title": "Dos muchachas con adelfa",
-    "museum": "Legion of Honor, Fine Arts Museums of San Francisco"
-  },
   "hanswurst": {
     "title": "Hanswurst en el escenario improvisado de Rothenburg",
     "museum": "Colección no determinada"
@@ -198,10 +194,6 @@
   "musik1901": {
     "title": "La música",
     "museum": "Colección no determinada"
-  },
-  "hygieia": {
-    "title": "Higía (detalle de la «Medicina»)",
-    "museum": "Fotografía histórica; el original ardió en 1945 en el castillo de Immendorf"
   },
   "jurysketch": {
     "title": "Boceto para la Jurisprudencia",
@@ -450,13 +442,6 @@
     ],
     "fact": "Óleo, 1891. Colección no determinada."
   },
-  "oleander": {
-    "text": [
-      "Dos mujeres jóvenes están ante una adelfa, muy juntas, con vestidos oscuros y la mirada en las flores.",
-      "El cuadro nace hacia 1890–1892. Cuelga en la Legion of Honor, Fine Arts Museums of San Francisco."
-    ],
-    "fact": "Óleo sobre lienzo, hacia 1890–1892. Legion of Honor, San Francisco."
-  },
   "hanswurst": {
     "text": [
       "En una plaza abierta, el personaje de Hanswurst actúa ante una multitud: un teatro improvisado al aire libre, con trajes y banderas.",
@@ -653,13 +638,6 @@
       "La obra nace en 1901, el año en que se muestra la «Medicina» en la Secesión. Forma parte de la ocupación repetida de Klimt con el tema de la música."
     ],
     "fact": "1901. Colección no determinada."
-  },
-  "hygieia": {
-    "text": [
-      "Higía, la diosa de la salud, está de pie con un vestido rojo con ornamentos dorados, la serpiente de Asclepio en el brazo y una copa en la mano. Su mirada sale tranquila del cuadro.",
-      "El detalle procede de la pintura de facultad «Medicina», que se muestra en la Secesión en 1901 y provoca una fuerte oposición. El original arde en 1945 en el castillo de Immendorf, en la Baja Austria. Se conserva, entre otras cosas, esta fotografía histórica en color."
-    ],
-    "fact": "Detalle de la «Medicina», 1900–1901. Fotografía histórica; el original ardió en 1945 en el castillo de Immendorf."
   },
   "jurysketch": {
     "text": [

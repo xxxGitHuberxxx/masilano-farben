@@ -104,10 +104,6 @@
     "title": "The Artist’s Garden in Giverny",
     "museum": "Yale University Art Gallery, New Haven"
   },
-  "grandeallee": {
-    "title": "The Main Path at Giverny",
-    "museum": "Montreal Museum of Fine Arts"
-  },
   "lilywl": {
     "title": "Water Lilies, 1904",
     "museum": "Private collection"
@@ -235,10 +231,6 @@
   "lilyga2": {
     "title": "Water Lilies",
     "museum": "Private collection"
-  },
-  "lilybs": {
-    "title": "Water Lilies (Bridgestone)",
-    "museum": "Artizon Museum, Tokyo"
   }
 });
   EN.paths = EN.paths || {};
@@ -456,7 +448,7 @@
     "fact": "The picture of 1899 hangs in the National Gallery of Art, Washington.",
     "quote": {
       "text": "It is a stretch of water I created some fifteen years ago; this stretch of water, about 200 metres around, is fed by an arm of the river Epte; it is bordered with irises and various aquatic plants, in a setting of different trees, though poplars and willows predominate, including several weeping willows. It is in this same place that I have already painted the water lilies with a Japanese-style bridge.",
-      "cite": "Letter to Roger Marx, Giverny, 1 June 1909"
+      "cite": "Letter to Roger Marx, Giverny, 1 June 1909 (Wildenstein, letter 1893); Marx used the reply for his essay in the Gazette des Beaux-Arts, June 1909"
     }
   },
   "lilybridge": {
@@ -493,13 +485,6 @@
       "In 1900 Monet paints not only the water garden, but also this path through the flowers – the garden he himself has planted."
     ],
     "fact": "The picture of 1900 hangs in the Yale University Art Gallery in New Haven."
-  },
-  "grandeallee": {
-    "text": [
-      "The main path leads toward the house, the gravel walk lies in the shade of the trees, flowers bloom at the edge.",
-      "The same axis that visitors still walk today Monet paints around 1900 as a quiet summer picture."
-    ],
-    "fact": "The picture of 1900 hangs in the Montreal Museum of Fine Arts."
   },
   "lilywl": {
     "text": [
@@ -736,17 +721,6 @@
       "Panels of this kind from the 1910s show the pond without a bridge and without sky – only water and plants."
     ],
     "fact": "The picture belongs to the water-lily series of the 1910s."
-  },
-  "lilybs": {
-    "text": [
-      "A pale reflection falls aslant through the pond, the water lilies lie at the edge of the light, the bank stays outside.",
-      "In 1921 Monet writes to Arsène Alexandre that the Orangerie gallery will shelter, for ever, his decorative essays. In May 1927, after his death, the rooms open."
-    ],
-    "fact": "The picture hangs in the Artizon Museum in Tokyo, the former Bridgestone collection.",
-    "quote": {
-      "text": "It will be the Orangerie gallery that will shelter, for ever, my decorative essays.",
-      "cite": "Letter to Arsène Alexandre, Giverny, 13 November 1921"
-    }
   }
 });
 })();

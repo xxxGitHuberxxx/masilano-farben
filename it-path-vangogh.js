@@ -60,12 +60,12 @@
   "schevwoman": {
     "text": [
       "Già a Etten Vincent disegna una donna nel costume di Scheveningen, il villaggio di pescatori vicino all’Aia. Forse l’ha vista in una gita, forse l’ha disegnata da un modello.",
-      "Nell’autunno del 1881 chiede Kee in moglie. Le dice che la ama come se stesso. La sua risposta la scrive esattamente a Theo – in olandese, in tre parole che non lasciano dubbi."
+      "Nell’estate del 1881 si innamora di Kee e glielo dichiara: è come se Kee fosse il suo prossimo, e lui il prossimo di Kee. A novembre lo racconta a Theo. Riassume il rifiuto di Kee in tre parole olandesi: «nooit neen nimmer» – mai, no, giammai."
     ],
     "fact": "Kee Vos-Stricker era figlia di uno zio di Vincent, pastore ad Amsterdam, e già vedova. Non volle la proposta, e la famiglia si schierò con lei.",
     "quote": {
-      "text": "E allora lei disse: mai, no, giammai.",
-      "cite": "Lettera 180, Etten, 7 novembre 1881, a Theo"
+      "text": "Ma quando glielo dissi, mi rispose che il suo passato e il suo futuro restavano per lei una cosa sola e che quindi non avrebbe mai potuto ricambiare i miei sentimenti.",
+      "cite": "Lettera 179, Etten, 3 novembre 1881, a Theo"
     }
   },
   "beermug": {
@@ -185,17 +185,6 @@
     ],
     "fact": "L’ufficio della lotteria di Stato era un motivo noto della pittura sociale. Vincent mostra chi aspetta come gruppo, non come «tipi» isolati da cui ridere."
   },
-  "laundry": {
-    "text": [
-      "Una donna stende il bucato su un prato. Vita quotidiana, chinarsi, panni bagnati, cielo ampio. Vincent resta presso il lavoro delle donne che ha davanti agli occhi in Sien e nelle sue vicine.",
-      "A luglio scrive a Theo che la formalità di un matrimonio non fa di Sien sua moglie. Il legame esiste già: si amano, si comprendono e si aiutano."
-    ],
-    "fact": "Nel luglio del 1882 Sien diede alla luce il figlio Willem. Vincent sperò per un po’ che i genitori finissero per accettare l’unione. Ciò non avvenne.",
-    "quote": {
-      "text": "Non posso dire altro che: l’ho presa per moglie – perché non è la formalità del matrimonio a farla mia moglie, ma un legame che esiste già: un sentimento che ci amiamo, ci comprendiamo e ci aiutiamo da una parte e dall’altra.",
-      "cite": "Lettera 244, Den Haag, 6 luglio 1882, a Theo"
-    }
-  },
   "bulbfields": {
     "text": [
       "All’improvviso l’Olanda si accende: aiuole di tulipani e giacinti in fasce diritte, rosa, giallo, blu, bianco, davanti a case basse sotto un cielo ampio. Vincent dipinge i campi dei coltivatori di fiori – uno dei quadri più colorati dei suoi anni olandesi.",
@@ -248,17 +237,6 @@
       "La solitudine rode. Si chiede se Sien potrebbe seguirlo, e lascia di nuovo il pensiero. La vita in due, come era all’Aia, non gli pare più possibile qui."
     ],
     "fact": "«Capanni» nacque nel 1883 nel Drenthe e appartiene al Van Gogh Museum. La linea bassa dell’orizzonte lascia che il cielo occupi quasi metà del quadro."
-  },
-  "twilightch": {
-    "text": [
-      "Una chiesa nel crepuscolo, un cielo ampio, poco più che ombra e luce. Uno dei fogli più silenziosi del viaggio.",
-      "Vincent sente che non può continuare a vivere da solo così per molto. A dicembre cammina nella tempesta, nella pioggia e nella neve attraverso la brughiera fino a Hoogeveen – e prosegue il viaggio verso i genitori."
-    ],
-    "fact": "Il quadro coglie l’umore del Drenthe a fine autunno: poco colore, molto cielo, un paesaggio che può riempirti del tutto o lasciarti del tutto vuoto.",
-    "quote": {
-      "text": "Il Drenthe è magnifico, ma resistere qui dipende da molte cose – dal fatto di avere il denaro per farlo, e dal fatto di sopportare la solitudine.",
-      "cite": "Lettera 409, Nuenen, circa il 6 dicembre 1883, a Theo"
-    }
   },
   "drawbridge": {
     "text": [
@@ -366,7 +344,7 @@
     "text": [
       "I mangiatori di patate sono la meta di tutto questo primo tratto del percorso. Cinque persone siedono sotto una lampada intorno a un piatto, i volti sono grezzi, le mani pesanti, il colore è quello della terra e delle bucce di patata.",
       "Vincent ha studiato tutto l’inverno le teste e le mani dei contadini di Nuenen. Non vuole un bel idillio familiare. Vuole che si veda chi sono queste persone – e con che cosa si sono guadagnati il cibo.",
-      "Con questo quadro si chiude la parte 1. Davanti a Vincent restano Anversa, Parigi, Arles, Saint-Rémy e Auvers. Il colore diventerà più chiaro. Ma l’atteggiamento che qui comincia non lo lascia mai del tutto."
+      "Qui finiscono gli anni olandesi. Davanti a Vincent restano Anversa, Parigi, Arles, Saint-Rémy e Auvers. Il colore diventerà più chiaro. Ma l’atteggiamento che qui comincia non lo lascia mai del tutto."
     ],
     "fact": "All’inizio di maggio 1885 Vincent invia il quadro a Theo a Parigi. Resta il suo più importante quadro di figure degli anni olandesi – e l’inizio di tutto ciò che viene dopo.",
     "quote": {
@@ -1398,10 +1376,10 @@
   },
   "olivepick": {
     "text": [
-      "Tre donne raccolgono olive sotto gli alberi, le chiome come nubi gialle e verdi. Vincent riprende la figura che spesso gli manca nell’asilo.",
+      "Tre donne raccolgono olive sotto gli alberi, una in piedi su una scala; le chiome sono verdi e azzurrine, il cielo rosa pallido. Vincent riprende la figura che spesso gli manca nell’asilo.",
       "A Bernard scrive che l’argento su un suolo arancio o violetto sotto il grande cielo blu è ancora appena stato fatto – a differenza dei meli o dei salici."
     ],
-    "fact": "Il quadro appartiene al Metropolitan Museum of Art di New York e nasce nel dicembre 1889.",
+    "fact": "Questa versione del 1889 appartiene alla National Gallery of Art di Washington. Un’altra versione del motivo è conservata al Metropolitan Museum of Art di New York.",
     "quote": {
       "text": "Gli olivi di qui, mio caro, sarebbe una cosa per voi. […] È argento su un suolo arancio o violetto sotto il grande cielo blu.",
       "cite": "Lettera 809, Saint-Rémy, circa il 8 ottobre 1889, a Emile Bernard"

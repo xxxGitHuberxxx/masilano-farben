@@ -29,9 +29,9 @@
   "cover": "monalisa",
   "intro": "Leonardo sucht in Florenz und Mailand das leise Licht auf Gesichtern. Die Dame mit dem Hermelin und die Mona Lisa gehören zu den bekanntesten Bildnissen der Welt.",
   "ending": [
-    "Leonardo stirbt 1519 in Amboise. Ein späterer Teil kann weitere Studien und Bilder nachtragen."
+    "Leonardo stirbt 1519 in Amboise. Die beiden Bildnisse dieses Weges hängen heute in Krakau und in Paris."
   ],
-  "epilogue": "Ein späterer Teil kann weitere Studien nachtragen.",
+  "epilogue": "Leonardo stirbt 1519 in Amboise. Die beiden Bildnisse dieses Weges hängen heute in Krakau und in Paris.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [

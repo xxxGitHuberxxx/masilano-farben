@@ -68,7 +68,7 @@
   },
   "hjonction": {
     "title": "Paysage à la Jonction près de Genève",
-    "museum": "Collection non déterminée"
+    "museum": "Von der Heydt-Museum, Wuppertal"
   },
   "harvekinder": {
     "title": "Enfants pêchant au bord de l’Arve",
@@ -124,7 +124,7 @@
   },
   "hweigle": {
     "title": "Portrait d’Hélène Weiglé",
-    "museum": "Collection non déterminée"
+    "museum": "Städel Museum, Francfort"
   },
   "haugustine": {
     "title": "Portrait d’Augustine Dupin",
@@ -197,10 +197,6 @@
   "hbluete99": {
     "title": "Arbre en fleurs",
     "museum": "Musée d’art et d’histoire, Fribourg"
-  },
-  "hself00": {
-    "title": "Autoportrait",
-    "museum": "Collection non déterminée"
   },
   "hergriffen": {
     "title": "Saisie",
@@ -303,7 +299,7 @@
     "mapLabel": "1900",
     "intro": [
       "En 1895, Hodler peint « Le Hallebardier ». En 1896, ses figures ornent le pavillon des beaux-arts de l’Exposition nationale suisse à Genève. En 1897, il remporte le concours pour les peintures murales de Marignan au Landesmuseum de Zurich ; le projet déclenche une vive contestation. À Fribourg, il prononce une conférence sur la tâche de l’artiste.",
-      "En 1900, il reçoit une médaille d’or à l’Exposition universelle de Paris et rejoint les Sécessions de Vienne et de Berlin. Arbres en fleurs, allées et figures silencieuses dans le pré ferment cette première partie."
+      "En 1900, il reçoit une médaille d’or à l’Exposition universelle de Paris et rejoint les Sécessions de Vienne et de Berlin. Arbres en fleurs, allées et figures silencieuses dans le pré ferment ces années."
     ]
   }
 });
@@ -412,7 +408,7 @@
       "À la Jonction, le Rhône et l’Arve se rejoignent. Des arbres se dressent sur la rive ; l’eau se partage en deux couleurs.",
       "Avant et après Madrid, Hodler peint encore et encore cet endroit au bord de Genève : de près, en observant, sans pathos."
     ],
-    "fact": "1878. Collection non déterminée."
+    "fact": "1878. Von der Heydt-Museum, Wuppertal."
   },
   "harvekinder": {
     "text": [
@@ -510,7 +506,7 @@
       "Une jeune femme en robe sombre regarde calmement hors du tableau, les mains dans le giron, une fleur entre les doigts.",
       "Le portrait date de 1888. Hodler vit à Genève et peint des commanditaires et des connaissances avec une forme claire et ferme."
     ],
-    "fact": "1888. Collection non déterminée."
+    "fact": "1888. Städel Museum, Francfort."
   },
   "haugustine": {
     "text": [
@@ -638,13 +634,6 @@
     ],
     "fact": "1899. Musée d’art et d’histoire, Fribourg."
   },
-  "hself00": {
-    "text": [
-      "Hodler à la barbe courte et au regard ferme, la tête proche du bord du tableau, presque sans entourage.",
-      "En 1900, il reçoit une médaille d’or à l’Exposition universelle de Paris. Le portrait retient le peintre qui se fait désormais connaître aussi à l’étranger."
-    ],
-    "fact": "1900. Collection non déterminée."
-  },
   "hergriffen": {
     "text": [
       "Une jeune femme en longue robe bleue se tient dans un pré fleuri et porte les mains à la poitrine, le regard baissé.",
@@ -655,7 +644,7 @@
   "habendruhe": {
     "text": [
       "Une jeune fille en robe claire se tient pieds nus dans un pré fleuri, les mains levées dans une prière, le regard tourné de côté.",
-      "Le tableau date d’environ 1901 et est conservé au Kunsthaus Zürich. Il clôt cette première partie : une figure calme dans le paysage, avant que, dans la prochaine partie, suivent les grands tableaux de lacs et de montagnes."
+      "Le tableau date d’environ 1901 et est conservé au Kunsthaus Zürich. Une figure calme dans le paysage, avant que suivent les grands tableaux de lacs et de montagnes."
     ],
     "fact": "Vers 1901. Kunsthaus Zürich."
   }

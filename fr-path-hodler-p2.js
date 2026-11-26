@@ -127,7 +127,7 @@
   },
   "hholz": {
     "title": "Le Bûcheron",
-    "museum": "Collection non déterminée"
+    "museum": "Von der Heydt-Museum, Wuppertal"
   },
   "heinamut": {
     "title": "L’Unanimité",
@@ -151,14 +151,10 @@
   },
   "hthunstock11": {
     "title": "Lac de Thoune avec la chaîne du Stockhorn",
-    "museum": "Collection non déterminée"
+    "museum": "Von der Heydt-Museum, Wuppertal"
   },
   "hthunabend12": {
     "title": "Lac de Thoune avec la chaîne du Stockhorn le soir",
-    "museum": "Collection non déterminée"
-  },
-  "hwinter13": {
-    "title": "La chaîne du Stockhorn et le lac de Thoune en hiver",
     "museum": "Collection non déterminée"
   },
   "hmorhardt": {
@@ -168,10 +164,6 @@
   "hgertrud12": {
     "title": "Portrait de Gertrud Müller",
     "museum": "Collection non déterminée"
-  },
-  "hhector12": {
-    "title": "Portrait de Hector Hodler",
-    "museum": "Kunsthaus Zürich"
   },
   "hself12": {
     "title": "Autoportrait",
@@ -566,7 +558,7 @@
       "Un bûcheron lève la hache, les jambes fermement écartées, le coup comme un grand mouvement net.",
       "Comme le faucheur, le bûcheron appartient aux figures du travail chez Hodler. En 1910 naissent ces versions austères, presque d’affiche."
     ],
-    "fact": "1910. Collection non déterminée."
+    "fact": "1910. Von der Heydt-Museum, Wuppertal."
   },
   "heinamut": {
     "text": [
@@ -608,7 +600,7 @@
       "Dans la lumière de novembre, la chaîne du Stockhorn s’étend au-dessus du lac, les formes fermes, les couleurs plus froides.",
       "Le tableau est daté de novembre 1910. En 1910, Hodler installe un second atelier aux Acacias à Genève et reçoit le doctorat honoris causa de l’Université de Bâle."
     ],
-    "fact": "1910. Collection non déterminée."
+    "fact": "1910. Von der Heydt-Museum, Wuppertal."
   },
   "hthunabend12": {
     "text": [
@@ -616,13 +608,6 @@
       "Cette version du soir date d’environ 1912. Hodler retient le même motif à une autre heure."
     ],
     "fact": "Vers 1912. Collection non déterminée."
-  },
-  "hwinter13": {
-    "text": [
-      "En hiver, la neige couvre les versants et la rive ; la chaîne du Stockhorn se dresse, nue et claire, au-dessus du lac.",
-      "Le tableau est daté de 1913. La saison froide aussi appartient à la longue série des tableaux du lac de Thoune."
-    ],
-    "fact": "1913. Collection non déterminée."
   },
   "hmorhardt": {
     "text": [
@@ -637,13 +622,6 @@
       "La collectionneuse de Soleure compte parmi les importantes commanditaires de Hodler. Le portrait date d’environ 1912."
     ],
     "fact": "Vers 1912. Collection non déterminée."
-  },
-  "hhector12": {
-    "text": [
-      "Hector, le fils de Hodler, apparaît en jeune homme, le regard ferme, le visage rapproché de nous.",
-      "Hector est né en 1887, fils de Hodler et d’Augustine Dupin. Le portrait d’environ 1912 est conservé au Kunsthaus Zürich."
-    ],
-    "fact": "Vers 1912. Kunsthaus Zürich."
   },
   "hself12": {
     "text": [

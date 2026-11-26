@@ -37,9 +37,9 @@
   "cover": "pearl",
   "intro": "Vermeer malt in Delft das stille Licht auf Gesichtern, Kannen und Ziegeln. Drei Bilder führen vom Mädchen mit dem Perlenohrring zur Milchmagd und zur Ansicht der Stadt.",
   "ending": [
-    "Vermeer stirbt 1675 in Delft. Ein späterer Teil kann weitere Stubenbilder nachtragen."
+    "Vermeer stirbt 1675 in Delft. Von ihm sind nur wenige Bilder erhalten; zwei der drei Bilder dieses Weges hängen heute im Mauritshuis in Den Haag."
   ],
-  "epilogue": "Ein späterer Teil kann weitere Stubenbilder nachtragen.",
+  "epilogue": "Vermeer stirbt 1675 in Delft. Von ihm sind nur wenige Bilder erhalten; zwei der drei Bilder dieses Weges hängen heute im Mauritshuis in Den Haag.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [

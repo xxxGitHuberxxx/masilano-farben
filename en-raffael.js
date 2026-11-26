@@ -16,9 +16,9 @@
   "subtitle": "The Sistine Madonna",
   "intro": "In Rome, Raphael paints for the church and the court. The Sistine Madonna steps forward on clouds; the two angels at the lower edge later become widely known.",
   "ending": [
-    "Raphael dies in Rome in 1520, aged only 37. A later part can add further Madonnas and the Stanze."
+    "Raphael dies in Rome in 1520, aged only 37. The Sistine Madonna hangs today in the Gemäldegalerie Alte Meister in Dresden."
   ],
-  "epilogue": "A later part can add further pictures."
+  "epilogue": "Raphael dies in Rome in 1520, aged only 37. The Sistine Madonna hangs today in the Gemäldegalerie Alte Meister in Dresden."
 };
   P.stations = Object.assign(P.stations || {}, {
   "raffael1": {
@@ -30,4 +30,14 @@
     ]
   }
 });
+  // v10.42 pathTexts: work texts of the short path (were German fallback before).
+  P.pathTexts = Object.assign(P.pathTexts || {}, {
+    "sistine": {
+      "text": [
+        "Mary steps forward with the Child between two drawn-back curtains, as if a stage were opening.",
+        "At her feet sit the two little angels who later landed on countless postcards."
+      ],
+      "fact": "The picture was made for the monastery of San Sisto in Piacenza and came to Dresden in 1754."
+    }
+  });
 })();

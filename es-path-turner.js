@@ -32,10 +32,6 @@
     "title": "La abadía de Llanthony, Monmouthshire",
     "museum": "Indianapolis Museum of Art"
   },
-  "tuthames": {
-    "title": "Vista panorámica del Támesis",
-    "museum": "Blanton Museum of Art, Austin"
-  },
   "tufishermen": {
     "title": "Pescadores en el mar",
     "museum": "Tate, Londres"
@@ -104,20 +100,8 @@
     "title": "El muelle de Calais",
     "museum": "National Gallery, Londres"
   },
-  "tugrenoble": {
-    "title": "Grenoble desde el Isère, con la Porte de France",
-    "museum": "Tate, Londres"
-  },
-  "tuschollen": {
-    "title": "El Puente del Diablo y la garganta de la Schöllenen",
-    "museum": "Tate, Londres"
-  },
   "tumontblanc": {
     "title": "El Mont Blanc y el Glacier des Bossons desde Chamonix",
-    "museum": "Tate, Londres"
-  },
-  "tugothard": {
-    "title": "El San Gotardo",
     "museum": "Tate, Londres"
   },
   "tuvictory": {
@@ -144,14 +128,6 @@
     "title": "Margate",
     "museum": "Tate, Londres"
   },
-  "tusunvapour": {
-    "title": "El sol que se pone a través de la bruma",
-    "museum": "Barber Institute of Fine Arts, Birmingham"
-  },
-  "tuavalanche": {
-    "title": "La caída de una avalancha en los Grisones",
-    "museum": "Tate, Londres"
-  },
   "tusouthall": {
     "title": "El Grand Junction Canal en el molino de Southall",
     "museum": "Colección particular"
@@ -163,10 +139,6 @@
   "tuwhalley": {
     "title": "El puente y la abadía de Whalley, Lancashire",
     "museum": "Dordrechts Museum"
-  },
-  "tuplym": {
-    "title": "La desembocadura del Plym desde Boringdon Park",
-    "museum": "Tate, Londres"
   },
   "tufrosty": {
     "title": "Mañana de escarcha",
@@ -341,12 +313,6 @@
     ],
     "fact": "hacia 1792. Indianapolis Museum of Art."
   },
-  "tuthames": {
-    "text": [
-      "Una acuarela alargada muestra el Támesis en la distancia, con orillas, barcas y un cielo claro. Data de hacia 1796, el año del primer óleo. La hoja está en el Blanton Museum of Art de Austin."
-    ],
-    "fact": "hacia 1796. Blanton Museum of Art, Austin."
-  },
   "tufishermen": {
     "text": [
       "A la luz de la luna, barcas de pesca se balancean en un mar agitado frente a la isla de Wight; una linterna brilla en una barca. Es el primer óleo que Turner expone, en 1796, en la Royal Academy. Pertenece a la Tate de Londres."
@@ -449,29 +415,11 @@
     ],
     "fact": "1803. National Gallery, Londres."
   },
-  "tugrenoble": {
-    "text": [
-      "Desde el Isère se ven Grenoble y la Porte de France, ante las montañas. La hoja data de 1802, en el viaje por Saboya. Está en la Tate de Londres."
-    ],
-    "fact": "1802. Tate, Londres."
-  },
-  "tuschollen": {
-    "text": [
-      "En la garganta de la Schöllenen, en el San Gotardo, el Puente del Diablo cruza el Reuss. Turner registra el puerto salvaje en 1802. La hoja está en la Tate de Londres."
-    ],
-    "fact": "1802. Tate, Londres."
-  },
   "tumontblanc": {
     "text": [
       "A la luz de la mañana, el Mont Blanc y el Glacier des Bossons se alzan sobre Chamonix. Turner llega al valle en 1802, en el viaje suizo. La acuarela está en la Tate de Londres."
     ],
     "fact": "1802. Tate, Londres."
-  },
-  "tugothard": {
-    "text": [
-      "Una vista hacia la garganta del San Gotardo, con el camino junto al abismo y un cielo alto. Turner pinta el puerto en 1806–1807 a partir del recuerdo del viaje de 1802. El cuadro está en la Tate de Londres."
-    ],
-    "fact": "1806–1807. Tate, Londres."
   },
   "tuvictory": {
     "text": [
@@ -509,18 +457,6 @@
     ],
     "fact": "hacia 1806–1807. Tate, Londres."
   },
-  "tusunvapour": {
-    "text": [
-      "El sol se hunde a través de la bruma; pescadores y barcas están en la orilla, un gran barco se alza a lo lejos. El cuadro data de hacia 1809 y está en el Barber Institute of Fine Arts de Birmingham."
-    ],
-    "fact": "hacia 1809. Barber Institute of Fine Arts, Birmingham."
-  },
-  "tuavalanche": {
-    "text": [
-      "Una avalancha se derrumba sobre rocas y árboles en los Grisones. Turner pinta la fuerza de los Alpes en 1810, años después del viaje suizo. El cuadro está en la Tate de Londres."
-    ],
-    "fact": "1810. Tate, Londres."
-  },
   "tusouthall": {
     "text": [
       "Un molino se alza junto al Grand Junction Canal en Southall; un carro y unas figuras se detienen en la orilla, el cielo es amplio. Turner pinta la vista en 1810, en los años de Twickenham. El cuadro está en una colección particular."
@@ -538,12 +474,6 @@
       "En el puente de Whalley, en Lancashire, los tintoreros lavan y secan paño; detrás de los árboles se alza la abadía. Turner pinta la vista en 1811, en el viaje al oeste. El cuadro está en el Dordrechts Museum."
     ],
     "fact": "1811. Dordrechts Museum."
-  },
-  "tuplym": {
-    "text": [
-      "Desde Boringdon Park se contempla la desembocadura del Plym, en Devon, con colinas, agua y un cielo amplio. En 1813 Turner esboza al óleo al aire libre en Devon. La hoja está en la Tate de Londres."
-    ],
-    "fact": "1813. Tate, Londres."
   },
   "tufrosty": {
     "text": [

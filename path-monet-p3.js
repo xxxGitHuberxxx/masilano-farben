@@ -188,14 +188,6 @@
     "source": "Wikimedia Commons: «Claude Monet - The Artist’s Garden in Giverny - 1983.7.12 - Yale University Art Gallery.jpg», gemeinfrei (Public Domain)"
   },
   {
-    "id": "grandeallee",
-    "title": "Die grosse Allee in Giverny",
-    "artist": "Claude Monet",
-    "year": "1900",
-    "museum": "Musée des Beaux-Arts, Montreal",
-    "source": "Wikimedia Commons: «Claude Monet, La grande allée à Giverny (1900).jpg», gemeinfrei (CC0)"
-  },
-  {
     "id": "lilywl",
     "title": "Die Seerosen, 1904",
     "artist": "Claude Monet",
@@ -450,14 +442,6 @@
     "year": "um 1916",
     "museum": "Privatbesitz",
     "source": "Wikimedia Commons: «Claude Monet - Nymphéas (Waterlilies) - Google Art Project.jpg», gemeinfrei (Public Domain)"
-  },
-  {
-    "id": "lilybs",
-    "title": "Seerosen, Bridgestone",
-    "artist": "Claude Monet",
-    "year": "um 1907",
-    "museum": "Artizon Museum, Tokio",
-    "source": "Wikimedia Commons: «Claude Monet - Water-Lilies (Bridgestone Museum).jpg», gemeinfrei (Public Domain)"
   }
 ];
   window.PATH_WORKS = (window.PATH_WORKS || []).concat(works);
@@ -699,7 +683,7 @@
         "fact": "Das Bild von 1899 hängt in der National Gallery of Art in Washington.",
         "quote": {
           "text": "Es ist ein Wasserbecken, das ich vor etwa fünfzehn Jahren selbst angelegt habe; dieses Becken von ungefähr 200 Metern Umfang wird von einem Arm des Flusses Epte gespeist; es ist mit Iris und verschiedenen Wasserpflanzen gesäumt, in einem Rahmen aus verschiedenen Bäumen, in dem aber Pappeln und Weiden vorherrschen, darunter mehrere Trauerweiden. An eben diesem Ort habe ich schon die Seerosen mit einer Brücke im japanischen Stil gemalt.",
-          "cite": "Brief an Roger Marx, Giverny, 1. Juni 1909"
+          "cite": "Brief an Roger Marx, Giverny, 1. Juni 1909 (Wildenstein, Brief 1893); Marx verwendete die Antwort für seinen Aufsatz in der Gazette des Beaux-Arts, Juni 1909"
         }
       },
       {
@@ -741,14 +725,6 @@
           "1900 malt Monet nicht nur den Wassergarten, sondern auch diesen Weg durch die Blumen – den Garten, den er selbst gepflanzt hat."
         ],
         "fact": "Das Bild von 1900 hängt in der Yale University Art Gallery in New Haven."
-      },
-      {
-        "pid": "grandeallee",
-        "text": [
-          "Die grosse Allee führt auf das Haus zu, der Kiesweg liegt im Schatten der Bäume, am Rand blühen Blumen.",
-          "Dieselbe Achse, die Besucherinnen und Besucher noch heute gehen, malt Monet um 1900 als stilles Sommerbild."
-        ],
-        "fact": "Das Bild von 1900 hängt im Musée des Beaux-Arts in Montreal."
       },
       {
         "pid": "lilywl",
@@ -1083,18 +1059,6 @@
           "Solche Tafeln aus den 1910er Jahren zeigen den Teich ohne Brücke und ohne Himmel – nur Wasser und Pflanzen."
         ],
         "fact": "Das Bild gehört zur Seerosen-Serie der 1910er Jahre."
-      },
-      {
-        "pid": "lilybs",
-        "text": [
-          "Eine helle Spiegelung fällt schräg durch den Teich, die Seerosen liegen am Rand des Lichts, das Ufer bleibt draussen.",
-          "1921 schreibt Monet an Arsène Alexandre, die Galerie der Orangerie werde für immer seine dekorativen Versuche beherbergen. Im Mai 1927, nach seinem Tod, öffnen die Säle."
-        ],
-        "fact": "Das Bild hängt im Artizon Museum in Tokio, der früheren Bridgestone-Sammlung.",
-        "quote": {
-          "text": "Es wird die Galerie der Orangerie sein, die für immer meine dekorativen Versuche beherbergen wird.",
-          "cite": "Brief an Arsène Alexandre, Giverny, 13. November 1921"
-        }
       }
     ]
   }

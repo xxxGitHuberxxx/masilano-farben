@@ -22,10 +22,6 @@
     "title": "Wooden Bridge over the Lütschine",
     "museum": "Kunst Museum Winterthur"
   },
-  "cwstaubbach": {
-    "title": "The Second Staubbach Falls in Winter",
-    "museum": "Location not recorded"
-  },
   "cwlauteraar": {
     "title": "The Lauteraar Glacier",
     "museum": "Kunstmuseum Basel"
@@ -63,14 +59,14 @@
   EN.paths.wolf = {
   "title": "Caspar Wolf’s Life Journey",
   "life": "1735–1783",
-  "part": "Part 1 · The first painter of the high Alps",
+  "part": "The first painter of the high Alps",
   "subtitle": "Glaciers, caves and waterfalls",
-  "intro": "Travel with Caspar Wolf from Muri in Aargau, one of the first to paint the high Alps on the spot: from early landscapes, via the glaciers of Grindelwald and the caves and waterfalls, to the Lauenen valley. Short stations and pictures to colour. This first part follows him into the mountains.",
+  "intro": "Travel with Caspar Wolf from Muri in Aargau, one of the first to paint the high Alps on the spot: from early landscapes, via the glaciers of Grindelwald and the caves and waterfalls, to the Lauenen valley. Short stations and pictures to colour. This path follows him into the mountains.",
   "ending": [
     "Caspar Wolf dies in Heidelberg on 6 October 1783, aged forty-eight. His pictures of the high Alps were far ahead of their time.",
-    "The path can grow further. More glaciers, bridges and views may follow in a later part."
+    "The path leads from Muri via Grindelwald and the glaciers of the high Alps to the Lauenen valley and the Jura."
   ],
-  "epilogue": "On 6 October 1783 Wolf dies in Heidelberg. A later part can add further Alpine pictures."
+  "epilogue": "Caspar Wolf dies in Heidelberg on 6 October 1783, aged forty-eight. His pictures of the high Alps were far ahead of their time. The path leads from Muri via Grindelwald and the glaciers of the high Alps to the Lauenen valley and the Jura."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "cwmuri": {
@@ -147,13 +143,6 @@
       "The journey into the Bernese Oberland gives Wolf many new subjects."
     ],
     "fact": "1774. Kunst Museum Winterthur."
-  },
-  "cwstaubbach": {
-    "text": [
-      "A waterfall plunges over a rock face, surrounded by ice and snow. Wolf paints the Lauterbrunnen valley in winter.",
-      "Hardly any painter before him had shown the Alps in this season."
-    ],
-    "fact": "c. 1775. Location not recorded."
   },
   "cwlauteraar": {
     "text": [

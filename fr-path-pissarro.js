@@ -52,10 +52,6 @@
     "title": "Autoportrait",
     "museum": "Statens Museum for Kunst, Copenhague"
   },
-  "pxfabrique": {
-    "title": "La Petite Fabrique",
-    "museum": "Musée d’art moderne et contemporain, Strasbourg"
-  },
   "pxmarne": {
     "title": "La Marne à Chennevières",
     "museum": "National Galleries of Scotland, Édimbourg"
@@ -136,10 +132,6 @@
     "title": "Le Crystal Palace",
     "museum": "Art Institute of Chicago"
   },
-  "pxdulwich": {
-    "title": "Dulwich College",
-    "museum": "Fondation Bemberg, Toulouse"
-  },
   "pxsydenham": {
     "title": "Près de Sydenham Hill",
     "museum": "Kimbell Art Museum, Fort Worth"
@@ -156,10 +148,6 @@
     "title": "Nature morte aux pommes et au pichet",
     "museum": "Metropolitan Museum of Art, New York"
   },
-  "pxpoulies": {
-    "title": "La Ruelle des Poulies, Pontoise",
-    "museum": "Musée d’Orsay, Paris"
-  },
   "pxboulevard": {
     "title": "Le Boulevard des Fossés, Pontoise",
     "museum": "Norton Simon Museum, Pasadena"
@@ -167,10 +155,6 @@
   "pxchestnut72": {
     "title": "Bois de châtaigniers à Louveciennes",
     "museum": "Nelson-Atkins Museum of Art, Kansas City"
-  },
-  "pxgelee": {
-    "title": "Gelée blanche, ancienne route d’Ennery, Pontoise",
-    "museum": "Musée d’Orsay, Paris"
   },
   "pxtroofs": {
     "title": "Les Toits rouges, coin de village, effet d’hiver",
@@ -402,13 +386,6 @@
     ],
     "fact": "1857–1858. Statens Museum for Kunst, Copenhague."
   },
-  "pxfabrique": {
-    "text": [
-      "Vers 1862–65, Pissarro peint une petite fabrique dans la campagne près de Paris, avec des figures sur le chemin.",
-      "Le tableau s’éloigne du paysage idéal classique ; il est aujourd’hui au Musée d’art moderne et contemporain de Strasbourg."
-    ],
-    "fact": "vers 1862–1865. Musée d’art moderne et contemporain, Strasbourg."
-  },
   "pxmarne": {
     "text": [
       "Au bord de la Marne, à Chennevières, au sud-est de Paris, Pissarro peint en 1864–65 une large vue du fleuve.",
@@ -553,13 +530,6 @@
     ],
     "fact": "1871. Art Institute of Chicago."
   },
-  "pxdulwich": {
-    "text": [
-      "En 1871, Pissarro peint aussi le collège de Dulwich, près de Lordship Lane.",
-      "Le tableau est à la Fondation Bemberg de Toulouse."
-    ],
-    "fact": "1871. Fondation Bemberg, Toulouse."
-  },
   "pxsydenham": {
     "text": [
       "Depuis une hauteur, en 1871, Pissarro regarde les champs et les arbres près de Sydenham Hill.",
@@ -588,13 +558,6 @@
     ],
     "fact": "1872. Metropolitan Museum of Art, New York."
   },
-  "pxpoulies": {
-    "text": [
-      "La ruelle des Poulies à Pontoise, en 1872 : une ruelle, des maisons, un ciel clair.",
-      "Pissarro est de retour dans la ville où Cézanne viendra bientôt travailler. Le tableau est au musée d’Orsay."
-    ],
-    "fact": "1872. Musée d’Orsay, Paris."
-  },
   "pxboulevard": {
     "text": [
       "Le boulevard des Fossés à Pontoise, en 1872, avec des arbres et des passants.",
@@ -608,13 +571,6 @@
       "Le tableau est au Nelson-Atkins Museum of Art de Kansas City."
     ],
     "fact": "1872. Nelson-Atkins Museum of Art, Kansas City."
-  },
-  "pxgelee": {
-    "text": [
-      "« Gelée blanche », de 1873, montre l’ancienne route d’Ennery près de Pontoise, avec du givre sur les champs.",
-      "Pissarro expose le tableau à la première exposition impressionniste en 1874. Il est au musée d’Orsay."
-    ],
-    "fact": "1873. Musée d’Orsay, Paris."
   },
   "pxtroofs": {
     "text": [

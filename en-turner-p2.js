@@ -21,10 +21,6 @@
     "title": "Newcastle-on-Tyne",
     "museum": "Tate, London"
   },
-  "turamsgate": {
-    "title": "Ramsgate",
-    "museum": "Tate, London"
-  },
   "tucologne": {
     "title": "Cologne, the Arrival of a Packet Boat, Evening",
     "museum": "Frick Collection, New York"
@@ -180,10 +176,6 @@
   "tulucerne": {
     "title": "Lucerne from the Lake",
     "museum": "Morgan Library & Museum, New York"
-  },
-  "tuzurich": {
-    "title": "A Fête Day in Zurich, Early Morning; Sample Study",
-    "museum": "Tate, London"
   },
   "turhinefall": {
     "title": "The Rhine Falls at Schaffhausen",
@@ -364,14 +356,6 @@
       "It is at Tate, London."
     ],
     "fact": "c. 1823. Tate, London."
-  },
-  "turamsgate": {
-    "text": [
-      "A sailing ship battles its way into the harbour at Ramsgate in a storm; the lighthouse stands on the shore.",
-      "The watercolour dates from about 1824, for the series of English ports.",
-      "It is at Tate, London."
-    ],
-    "fact": "c. 1824. Tate, London."
   },
   "tucologne": {
     "text": [
@@ -684,14 +668,6 @@
       "It is in the Morgan Library & Museum, New York."
     ],
     "fact": "1845. Morgan Library & Museum, New York."
-  },
-  "tuzurich": {
-    "text": [
-      "Early in the morning people crowd the bank of the Limmat in Zurich; towers rise into the pale sky.",
-      "The study dates from about 1845.",
-      "It is at Tate, London."
-    ],
-    "fact": "c. 1845. Tate, London."
   },
   "turhinefall": {
     "text": [

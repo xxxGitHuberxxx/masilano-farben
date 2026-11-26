@@ -9,7 +9,25 @@ const PATHS = (window.PATHS = window.PATHS || []);
 const knownIds = new Set(P.map(p => p.id).concat((window.STORY_WORKS || []).map(w => w.id)));
 const ALL = P.concat((window.STORY_WORKS || []).filter(w => !P.some(p => p.id === w.id)))
   .concat((window.PATH_WORKS || []).filter(w => !knownIds.has(w.id)));
+const ALL_BASE = ALL.length - (window.PATH_WORKS || []).filter(w => !knownIds.has(w.id)).length;
 const byId = id => ALL.find(p => p.id === id);
+// v10.43b: path works may arrive in chunks before the late file; restore the index order once it is known.
+let workOrderApplied = false;
+function applyWorkOrder(){
+  const ord = window.__pathWorkOrder;
+  if (workOrderApplied || !Array.isArray(ord) || !ord.length) return;
+  workOrderApplied = true;
+  const pos = new Map(ord.map((id, i) => [id, i]));
+  const tail = ALL.slice(ALL_BASE);
+  const sorted = tail.map((w, i) => [w, i]).sort((a, b) => {
+    const pa = pos.has(a[0].id) ? pos.get(a[0].id) : Infinity, pb = pos.has(b[0].id) ? pos.get(b[0].id) : Infinity;
+    return pa === pb ? a[1] - b[1] : pa - pb;
+  }).map(x => x[0]);
+  if (sorted.some((w, i) => w !== tail[i])) { ALL.length = ALL_BASE; sorted.forEach(w => ALL.push(w)); }
+}
+/* v10.42r unlock: null unless MASILANO_UNLOCK_CONFIG.enabled (default off = everything as before). */
+const UL = () => (window.MASILANO_UNLOCK && window.MASILANO_UNLOCK.enabled()) ? window.MASILANO_UNLOCK : null;
+function payLocked(pid){ const u = UL(); return !!(u && pid && u.isLocked(pid)); }
 function ingestPathData(){
   invalidateAlbumIndex();
   const src = window.PATHS || [];
@@ -34,6 +52,7 @@ function ingestPathData(){
     knownIds.add(w.id);
     ALL.push(w);
   });
+  applyWorkOrder();
 }
 function livePath(pathOrId){
   const id = typeof pathOrId === 'string' ? pathOrId : (pathOrId && pathOrId.id);
@@ -65,9 +84,15 @@ function adoptPath(full, prev){
 function withPathPack(path, fn){
   const id = path && path.id;
   if (!id || !I.ensurePathPack) return Promise.resolve(fn(path));
+  hideLoadFailToast();
   return I.ensurePathPack(id).then(function () {
     ingestPathData();
     return fn(adoptPath(livePath(id), path));
+  }, function () {
+    // v10.42: a pack failed to load (offline, blocked) – say so instead of failing silently.
+    ingestPathData();
+    try { toast(t('pathLoadFail'), 8000); loadFailToastOn = true; } catch (e) {}
+    return null;
   });
 }
 const PLAYER_NAME_KEY = 'masilano.playerName.v1';
@@ -85,7 +110,7 @@ function loadTitles(){
     return Promise.resolve(window.MASILANO_TITLES);
   }
   if (titlesLoading) return titlesLoading;
-  const src = 'titles.js?v=1041';
+  const src = 'titles.js?v=1042';
   const boot = (I && I.loadScriptOnce) ? I.loadScriptOnce(src) : new Promise((res, rej) => {
     const s = document.createElement('script');
     s.src = src; s.onload = res; s.onerror = rej; document.head.appendChild(s);
@@ -97,7 +122,7 @@ function loadTitles(){
   return titlesLoading;
 }
 function assetPin(src){
-  return src.indexOf('?') >= 0 ? src : src + '?v=1041';
+  return src.indexOf('?') >= 0 ? src : src + '?v=1042';
 }
 function loadOnce(src){
   const url = assetPin(src);
@@ -172,11 +197,14 @@ function formatStreakRank(id){
 }
 const L = (obj, field) => I.loc(obj, field);
 
-window.__masilanoWorkCount = () => (ALL && ALL.length) || 1953;
+// v10.42r: no hard-coded fallback; the count always comes from the loaded data.
+// v10.43b: while the late index is pending, count by IDs (works so far plus every path step), not by adding a fixed number.
+window.__masilanoWorkCount = () => (I.lateWorksPending && I.lateWorksPending()) ? poolCandidates().length : ((ALL && ALL.length) || 0);
 function syncAppSubtitle(){
   const el = document.querySelector('[data-i18n="appSubtitle"]');
   if (!el) return;
-  const n = (typeof ALL !== 'undefined' && ALL && ALL.length) ? ALL.length : 1953;
+  const n = window.__masilanoWorkCount();
+  if (!n) return; // keep the number-free markup text
   el.textContent = t('appSubtitle', { n: n });
 }
 function paintBtn(done, pct){ return done ? t('paintView') : (pct > 0 ? t('paintContinue') : t('paint')); }
@@ -283,12 +311,12 @@ const CAT_ORDER = ['furdich','alle','flowers','landscapes','water','animals','po
 const CAT_LABEL = { furdich:'catForYou', alle:'catAlle', flowers:'catFlowers', landscapes:'catLandscapes',
   water:'catWater', animals:'catAnimals', portraits:'catPortraits', city:'catCity', paths:'catPaths' };
 const GAL_CATS = {
-  flowers: ['lilies','sunflowers','irises','poppies','kgarden','primavera'],
-  landscapes: ['wanderer','ruegen','hodler','segantini','haywain','maloja','chexbres','eiger','haystacks','niesen','harvesters','hunters','gotthard','sunrise','thunder','redfuji','magpie','poppies','birch','gravelines','angelus','haystacks'],
+  flowers: ['lilies','sunflowers','irises','poppies','kgarden'],
+  landscapes: ['wanderer','ruegen','hodler','segantini','haywain','chexbres','eiger','haystacks','niesen','harvesters','hunters','gotthard','sunrise','thunder','redfuji','magpie','poppies','birch','gravelines','angelus','haystacks'],
   water: ['wave','lilies','hodler','ruegen','turner','ohashi','gravelines','chexbres','canaletto','avemaria','shalott','sunrise','thunder','haywain'],
   animals: ['hare','wing','ermine','magpie','gotthard'],
-  portraits: ['pearl','kiss','monalisa','gothic','macke','remself','ermine','naeherin','cradle','fifre','scream','arnolfini','meninas','sistine','parasol','watering','terrace','jewishbride','milkmaid','gypsy','senecio','whistler','bath','strickend','etoile','bluedance','degas','anker','ballon','quitasol','folies','cards','nightwatch','venus','liberty','primavera'],
-  city: ['cafe','babel','delft','canaletto','ohashi','gothic','folies','galette','jatte','liberty']
+  portraits: ['pearl','kiss','monalisa','macke','remself','ermine','naeherin','cradle','fifre','arnolfini','meninas','sistine','parasol','watering','terrace','jewishbride','milkmaid','gypsy','whistler','bath','strickend','etoile','bluedance','degas','anker','ballon','quitasol','folies','cards','nightwatch','liberty'],
+  city: ['cafe','babel','delft','canaletto','ohashi','folies','galette','jatte','liberty']
 };
 let galCat = 'alle';
 try { const c = localStorage.getItem(CAT_KEY); if (c && CAT_LABEL[c]) galCat = c; } catch (e) {}
@@ -296,6 +324,9 @@ function saveGalCat(){ try { localStorage.setItem(CAT_KEY, galCat); } catch (e) 
 function painterChip(p){
   const a = L(p,'artist') || p.artist || '';
   if (!a) return '';
+  // v10.42: two painters (e.g. «Giovanni Segantini und Giovanni Giacometti») -> «Segantini / Giacometti»
+  const two = a.split(/\s+(?:und|and|y|et|e)\s+/);
+  if (two.length === 2) return two.map(x => esc(x.trim().split(/\s+/).pop())).join(' / ');
   const parts = a.replace(/\s*\([^)]*\)\s*$/, '').trim().split(/\s+/);
   const particles = { van:1, von:1, de:1, da:1, di:1, del:1, della:1, der:1, den:1, le:1, la:1, du:1, dos:1, das:1, el:1 };
   if (parts.length >= 2 && particles[parts[parts.length - 2].toLowerCase()]) {
@@ -304,7 +335,7 @@ function painterChip(p){
   return esc(parts[parts.length - 1] || a);
 }
 const CAT_KW = {
-  flowers: ['lily','lilies','seerose','seerosen','nymphea','nympheas','nenufar','nenufares','ninfea','ninfee','sunflower','sunflowers','sonnenblume','sonnenblumen','girasol','girasole','tournesol','tournesols','iris','irises','rose','rosen','roses','poppy','poppies','mohn','coquelicot','tulip','tulpe','tulpen','bouquet','blumen','flower','flowers','fleur','fleurs','fiori','blossom','bluete','blute','garden','garten','jardin','giardino','peony','pfingstrose','chrysanth','orangerie','almond','mandel','wisteria','glyzinie','daffodil','narzisse','hyacinth','carnation','nelke','orchid','orchidee','water lily','wasserlilie','lilie','lilien','anemone','oleander','hortensia','hydrangea'],
+  flowers: ['lily','lilies','seerose','seerosen','nymphea','nympheas','nenufar','nenufares','ninfea','ninfee','sunflower','sunflowers','sonnenblume','sonnenblumen','girasol','girasole','tournesol','tournesols','iris','irises','rose','rosen','roses','poppy','poppies','mohn','coquelicot','tulip','tulpe','tulpen','bouquet','blumen','flower','flowers','fleur','fleurs','fiori','blossom','bluete','blute','garden','garten','jardin','giardino','peony','pfingstrose','chrysanth','orangerie','almond','mandel','wisteria','glyzinie','daffodil','narzisse','hyacinth','carnation','nelke','orchid','orchidee','water lily','wasserlilie','lilie','lilien','anemone','hortensia','hydrangea'],
   landscapes: ['landscape','landschaft','landschaften','paysage','paesaggio','mountain','mountains','berg','berge','montagne','wheat','weizen','harvest','ernte','haystack','heuschober','wanderer','valley','tal','tree','trees','baum','baeume','baume','forest','wald','field','feld','felder','meadow','wiese','snow','schnee','neige','neve','plain','ebene','cliff','klippe','glacier','gletscher','alps','alpen','dune','dünen','dunen'],
   water: ['sea','mer','meer','oceano','ocean','wave','waves','welle','wellen','vogue','onda','onde','lake','lago','lac','river','fluss','riviere','fiume','canal','kanal','boat','boot','barque','barca','marina','harbor','harbour','hafen','port','rain','regen','pluie','pioggia','water','wasser','eau','acqua','bridge over','pont','seerose','nymph','nenufar','lilypond','lily pond','lily-pond','nacht am','nocturne','seascape','marine'],
   animals: ['horse','horses','pferd','pferde','cheval','cavallo','hare','hasen','lievre','lepre','dog','hund','chien','cane','cow','kuh','vache','mucca','bird','birds','vogel','oiseau','uccello','sheep','schaf','mouton','pecora','lion','lowe','lionne','cat','katze','chat','gatto','fish','fisch','poisson','pesce','stag','hirsch','cerf','cervo','bull','stier','taureau','toro','owl','eule','swan','schwan','cygne','cigno','fox','fuchs','renard','volpe','butterfly','schmetterling','peacock','pfau','paon','pavone','eagle','adler','aigle','aquila','ermine','wiesel','heron','reiher'],
@@ -842,7 +873,11 @@ function galImHtml(p, s, extra){
   const bar = started && !done ? `<div class="imbar"><div style="width:${Math.max(2, pct)}%"></div></div>` : '';
   return `<div class="im ${cls}"><img src="data/${p.id}-thumb.jpg" alt="" loading="lazy" decoding="async" width="240" height="180">${extra || ''}${badge}${bar}</div>`;
 }
+// v10.42r: the print-shop preview (example prices, no live checkout) stays hidden until the shop really starts.
+const SHOP_PREVIEW = false;
+if (!SHOP_PREVIEW) document.documentElement.classList.add('no-shop');
 function wrapGalShop(b, pid){
+  if (!SHOP_PREVIEW) return b;
   const wrap = document.createElement('div');
   wrap.className = 'pcwrap';
   wrap.appendChild(b);
@@ -871,6 +906,7 @@ function paintGalCard(item){
       <div class="tx"><div class="plaque"><div class="t">${L(p,'title')}</div><div class="a">${L(p,'artist')}, ${p.year}</div></div>
       <div class="hint">${t('inPath', { name: item.path.name })}</div></div>`;
     b.onclick = () => openPathHit(item.path, p);
+    if (payLocked(p.id)) { const tg = b.querySelector('.tags'); if (tg) tg.insertAdjacentHTML('beforeend', UL().lockPill()); }
     return wrapGalShop(b, p.id);
   } else {
     const lv = levelOf(p);
@@ -885,6 +921,7 @@ function paintGalCard(item){
       <div class="tx"><div class="plaque"><div class="t">${L(p,'title')}</div><div class="a">${L(p,'artist')}, ${p.year}</div></div>
       ${txBar}</div>`;
     b.onclick = () => openPainting(p);
+    if (payLocked(p.id)) { const tg = b.querySelector('.tags'); if (tg) tg.insertAdjacentHTML('beforeend', UL().lockPill()); }
     return wrapGalShop(b, p.id);
   }
   return b;
@@ -1013,6 +1050,12 @@ function u32(r, g, b){ return (255 << 24 | b << 16 | g << 8 | r) >>> 0; }
 function lum(c){ return 0.299 * c[0] + 0.587 * c[1] + 0.114 * c[2]; }
 
 async function openPainting(p, opts){
+  if (p && payLocked(p.id)) {
+    if (opts && opts.noRoute && !document.querySelector('.screen.active, .tab-screen.active')) goGallery();
+    hideSheets();
+    UL().showFor(p.id);
+    return;
+  }
   const owner = p && pathOwning(p.id);
   if (owner && I.ensurePathPack && !I.pathPackReady(owner.id)) {
     await I.ensurePathPack(owner.id);
@@ -1277,7 +1320,10 @@ $('#hintBtn').onclick = () => {
 };
 
 let toastT = 0;
-function toast(msg){ const t = $('#toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('show'), 1600); }
+function toast(msg, ms){ const t = $('#toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(() => { t.classList.remove('show'); loadFailToastOn = false; }, ms || 1600); }
+// v10.42: the path load-error hint stays 8 s or until the next load attempt starts.
+let loadFailToastOn = false;
+function hideLoadFailToast(){ if (!loadFailToastOn) return; loadFailToastOn = false; clearTimeout(toastT); const t = $('#toast'); if (t) t.classList.remove('show'); }
 
 // ---------- completion ----------
 function finish(){
@@ -1476,6 +1522,10 @@ function applyRoute(route){
     }
     const p = byId(route.id);
     if (p) openPainting(p, { noRoute: true });
+    else if (I.lateWorksPending && I.lateWorksPending()) {
+      // v10.43: the work may belong to a lazily indexed path; load its metadata first.
+      withLateWorks(() => { const q = byId(route.id); if (q) openPainting(q, { noRoute: true }); else showScreen('galerie'); }, true);
+    }
     else showScreen('galerie');
     return;
   }
@@ -1494,6 +1544,7 @@ function applyRoute(route){
     return;
   }
   if (route.kind === 'shop') {
+    if (!SHOP_PREVIEW) return;
     openShop(route.id, { noRoute: true });
     return;
   }
@@ -1542,7 +1593,6 @@ function showScreen(id){
   const tabId = id === 'gallery' ? 'galerie' : id;
   const isTab = TABS.includes(tabId);
   const wasPath = $('#path') && $('#path').classList.contains('active');
-  if (window.MASILANO_MUSIC) window.MASILANO_MUSIC.stopSpeak();
   if (wasPath && id !== 'path' && isTab && window.MASILANO_MUSIC) window.MASILANO_MUSIC.leavePath();
   if (isTab) {
     currentTab = tabId;
@@ -1557,6 +1607,7 @@ function showScreen(id){
     if (tabId === 'galerie') { placeFilterPanel(); requestAnimationFrame(() => renderGallery()); }
     if (tabId === 'album') renderAlbum();
     if (tabId === 'trophies') renderTrophies();
+    if (tabId === 'galerie' || tabId === 'album' || tabId === 'trophies' || tabId === 'rankings') withLateWorks(refreshAfterLate);
     if (tabId === 'faces') {
       const F = window.MASILANO_FACES;
       if (F) F.renderHall($('#facesBody'));
@@ -1601,7 +1652,7 @@ function goGallery(){
   if (storyCtx && storyCtx.story) { backOr({ kind: 'story', id: storyCtx.story.id }); return; }
   backOr({ kind: 'tab', tab: currentTab || 'heute' });
 }
-function hideSheets(){ if (window.MASILANO_MUSIC) window.MASILANO_MUSIC.stopSpeak(); ['#story', '#chapter', '#chDone', '#pathFin', '#installHow', '#settings', '#albumView', '#sources', '#filterSheet', '#catSheet', '#certView', '#faceView', '#achView', '#lbJoin', '#shopSheet', '#titlePick'].forEach(q => $(q) && $(q).classList.add('hidden')); }
+function hideSheets(){ ['#story', '#chapter', '#chDone', '#pathFin', '#installHow', '#settings', '#albumView', '#sources', '#filterSheet', '#catSheet', '#certView', '#faceView', '#achView', '#lbJoin', '#shopSheet', '#titlePick'].forEach(q => $(q) && $(q).classList.add('hidden')); }
 $('#backBtn').onclick = goGallery;
 let galT = 0;
 function onViewport(){ if (S) resize(); else { clearTimeout(galT); galT = setTimeout(() => { placeFilterPanel(); }, 120); } }
@@ -1636,6 +1687,11 @@ function renderStoryEntry(){
       <div class="s">${L(path,'part')} · ${n ? t('paintedOf', { n, N }) : t('startNow')}</div>
       <div class="bar"><div style="width:${pct}%"></div></div></div><div class="go">›</div>`;
     b.onclick = () => { pathCtx = { path }; storyCtx = null; showPath(path); };
+    if (UL() && UL().pathLocked(path.id)) {
+      b.classList.add('paylock');
+      const k = b.querySelector('.k');
+      if (k) k.insertAdjacentHTML('beforeend', UL().lockPill());
+    }
     const row = document.createElement('div');
     row.className = 'wayrow';
     row.appendChild(b);
@@ -1793,7 +1849,7 @@ function showPath(path, opts){
   markPathOpened(path);
   const steps = pathSteps(path), n = pathDoneCount(path), N = steps.length;
   $('#pathHead').innerHTML = `<div class="cv" style="background-image:url(data/${path.cover}-orig.jpg)"></div>
-    <div><h1>${L(path,'title')}</h1><div class="life">${path.name} · ${path.life} · ${L(path,'part')}</div>
+    <div><h1>${L(path,'title')}</h1><div class="life">${path.name} · ${L(path,'life') || path.life} · ${L(path,'part')}</div>
     <p class="intro">${L(path,'intro')}</p>
     <div class="prog">${t('picturesPainted', { n, N })}<div class="bar"><div style="width:${100 * n / Math.max(1,N)}%"></div></div></div></div>`;
   renderPathMap(path);
@@ -1802,6 +1858,7 @@ function showPath(path, opts){
   note.className = 'pnote' + (n === N ? ' done' : '');
   note.textContent = n === N ? t('pathNoteDone') : t('pathNotePlay');
   list.appendChild(note);
+  if (UL() && UL().pathLocked(path.id)) list.appendChild(UL().pathBanner(path));
   path.stations.forEach((st, si) => {
     const box = document.createElement('section');
     box.className = 'pstat'; box.id = 'pstat-' + st.id;
@@ -1809,23 +1866,6 @@ function showPath(path, opts){
     const stL = I.locStation(st);
     const intro = stL.intro.map(tx => `<p>${tx}</p>`).join('');
     box.innerHTML = `<h2>${si + 1}. ${stL.place}</h2><div class="when">${stL.when}</div><div class="intro">${intro}</div><div class="works"></div>`;
-    const M = window.MASILANO_MUSIC;
-    if (M && M.canSpeak()) {
-      const tools = document.createElement('div');
-      tools.className = 'xpstat';
-      const nb = document.createElement('button');
-      nb.type = 'button';
-      nb.className = 'btn ghost narrate-btn';
-      nb.setAttribute('data-speak', 'station:' + st.id);
-      nb.setAttribute('aria-label', t('narrateStationAria'));
-      nb.textContent = t('narrate');
-      nb.addEventListener('click', () => M.speakStation(path, st));
-      tools.appendChild(nb);
-      const whenEl = box.querySelector('.when');
-      const introEl = box.querySelector('.intro');
-      if (whenEl) whenEl.after(tools);
-      else if (introEl) introEl.before(tools);
-    }
     const works = box.querySelector('.works');
     let nextMarked = false;
     st.works.forEach((w, wi) => {
@@ -1848,6 +1888,11 @@ function showPath(path, opts){
         <div class="tx"><div class="no">${free}${stL.place}, ${stL.when}</div><div class="t">${L(p,'title')}</div>
         <div class="w">${L(p,'artist')}, ${p.year}</div></div>${badge}`;
       b.onclick = () => showPathWork(path, step);
+      if (payLocked(w.pid)) {
+        b.classList.add('paylocked');
+        const no = b.querySelector('.no');
+        if (no) no.insertAdjacentHTML('beforeend', UL().lockPill());
+      }
       works.appendChild(b);
     });
     list.appendChild(box);
@@ -1916,7 +1961,7 @@ function renderPathMap(path){
   }).join('');
   const map = path.map || {};
   const vb = map.viewBox || '0 0 200 220';
-  const [,, vw, vh] = vb.split(/\s+/);
+  const   [ vw, vh] = vb.split(/\s+/);
   const lands = map.lands || [
     'M28,58 C38,32 72,22 98,28 C128,16 168,22 182,42 C190,58 176,74 154,82 C128,96 96,98 70,90 C46,96 26,80 28,58 Z',
     'M18,108 C8,118 10,138 22,150 C36,162 62,160 72,148 C78,136 64,122 50,114 C36,106 26,104 18,108 Z',
@@ -2072,11 +2117,20 @@ function fnv1a(s){
   return h >>> 0;
 }
 /* All-over stipple / foliage works that stay unreadable in a phone-sized 4:3 or 16:9 hero crop. */
-const HERO_SKIP = new Set(['thepark','kapple','pfarrgarten','kpoppies','rosetrees','kpeartree','birkforest','kammerave','italygarden','weissenbach','hkirsch05','undergrowth','litzlberg','pinkpeach','malcesine']);
+const HERO_SKIP = new Set(['thepark','kapple','pfarrgarten','kpoppies','rosetrees','kpeartree','birkforest','kammerave','weissenbach','hkirsch05','undergrowth','litzlberg','pinkpeach']);
 function heroReadable(p){ return !!(p && p.id && !HERO_SKIP.has(p.id)); }
+// v10.43b: the pool is built from IDs (all works plus every path step, even when its metadata is
+// still loading), so today's picture is the same before and after the late work index arrives.
+function poolCandidates(){
+  const out = ALL.slice(), seen = new Set(ALL.map(p => p.id));
+  for (const path of PATHS) for (const st of (path.stations || [])) for (const w of (st.works || [])) {
+    if (w && w.pid && !seen.has(w.pid)) { seen.add(w.pid); out.push({ id: w.pid, __stub: true }); }
+  }
+  return out;
+}
 function dailyPool(){
   const maxRank = calmOn() ? 0 : 1;
-  return ALL.filter(p => LEVEL_RANK[levelOf(p)] <= maxRank && heroReadable(p))
+  return poolCandidates().filter(p => LEVEL_RANK[levelOf(p)] <= maxRank && heroReadable(p))
     .slice()
     .sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
 }
@@ -2084,7 +2138,8 @@ function pickDaily(dateStr){
   const key = todayKey(dateStr);
   const pool = dailyPool();
   if (!pool.length) return null;
-  return pool[fnv1a('masilano.daily.v1|' + key) % pool.length];
+  const p = pool[fnv1a('masilano.daily.v1|' + key) % pool.length];
+  return (p && p.__stub && byId(p.id)) || p;
 }
 function daysBetween(a, b){
   const da = new Date(a + 'T12:00:00'), db = new Date(b + 'T12:00:00');
@@ -2238,7 +2293,7 @@ function renderDaily(){
     ${teaser.fallback && teaser.text ? `<p class="langfallback">${esc(t('langFallback'))}</p>` : ''}
     <button type="button" class="cta goldcta" id="dailyCta">${esc(cta)}</button>
     ${streak ? `<div class="st">${esc(streak)}</div>` : ''}${dailyHonorLine()}</div>`;
-  const go = () => { if (isDone(p.id)) bumpStreak(day); openHomeWork(p); };
+  const go = () => { if (isDone(p.id)) bumpStreak(day); openHomeWork(byId(p.id) || p); };
   card.querySelector('#dailyHeroIm').onclick = go;
   card.querySelector('#dailyCta').onclick = go;
   wrap.innerHTML = '';
@@ -2735,7 +2790,7 @@ function albumRewardHtml(album){
   const faces = album.faces.map(f => {
     const F = window.MASILANO_FACES;
     const loc = (f.n && (f.n[I.lang] || f.n.de)) || f.id;
-    return `<button type="button" class="albrface" data-face="${esc(f.id)}"><img src="img/faces/${esc(f.id)}.webp?v=1041" alt="" width="72" height="72" loading="lazy" decoding="async"><span><span class="fn">${esc(loc)}</span><span class="fa">${esc(unlocked ? t(albumFaceState(album) === 'claimed' ? 'albumFaceClaimed' : 'albumFaceReady') : t('albumFaceRemain', { n: remain }))}</span></span></button>`;
+    return `<button type="button" class="albrface" data-face="${esc(f.id)}"><img src="img/faces/${esc(f.id)}.webp?v=1042" alt="" width="72" height="72" loading="lazy" decoding="async"><span><span class="fn">${esc(loc)}</span><span class="fa">${esc(unlocked ? t(albumFaceState(album) === 'claimed' ? 'albumFaceClaimed' : 'albumFaceReady') : t('albumFaceRemain', { n: remain }))}</span></span></button>`;
   }).join('');
   return `<section class="albreward${unlocked ? ' done' : ''}"><div class="rk">${esc(unlocked ? t('albumRewardDoneK') : t('albumRewardK'))}</div><p class="rlead">${esc(unlocked ? t('albumRewardDoneLead') : t('albumRewardLead', { N: album.N }))}</p><div class="albrfaces">${faces}</div></section>`;
 }
@@ -3769,14 +3824,14 @@ function loadShop(){
     if (!document.querySelector('link[data-shop-css]')) {
       const l = document.createElement('link');
       l.rel = 'stylesheet';
-      l.href = 'shop.css?v=1041';
+      l.href = 'shop.css?v=1042';
       l.setAttribute('data-shop-css', '1');
       document.head.appendChild(l);
     }
     const need = [];
-    if (!window.MASILANO_SHOP_CONFIG) need.push('shop-config.js?v=1041');
-    if (!window.MASILANO_SHOP_RES) need.push('shop-res.js?v=1041');
-    need.push('shop.js?v=1041');
+    if (!window.MASILANO_SHOP_CONFIG) need.push('shop-config.js?v=1042');
+    if (!window.MASILANO_SHOP_RES) need.push('shop-res.js?v=1042');
+    need.push('shop.js?v=1042');
     let i = 0;
     const next = () => {
       if (i >= need.length) {
@@ -3817,6 +3872,7 @@ function currentShopPid(){
   return null;
 }
 function openShop(pid, opts){
+  if (!SHOP_PREVIEW) return;
   const id = pid || currentShopPid();
   if (!id) return;
   loadShop().then(mod => {
@@ -3844,7 +3900,7 @@ bindShopEntries();
 let swReload = false;
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
   const hadCtrl = !!navigator.serviceWorker.controller;
-  navigator.serviceWorker.register('./sw.js?v=1041', { scope: './' }).catch(e => console.warn('SW', e));
+  navigator.serviceWorker.register('./sw.js?v=1042', { scope: './' }).catch(e => console.warn('SW', e));
   function requestSwReload(){
     if (!hadCtrl) return;           // first install: nothing to reload
     if (S) swReload = true; else location.reload();
@@ -3856,6 +3912,7 @@ if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.
 }
 function refreshLang(){
   ingestPathData();
+  if (window.__lateWorkCount > 0 && !(I.lateWorksPending && I.lateWorksPending())) withLateWorks(refreshAfterLate);
   const openId = pathCtx && pathCtx.path && pathCtx.path.id;
   if (openId && I.ensurePathPack && !I.pathPackReady(openId)) {
     I.ensurePathPack(openId).then(function () { ingestPathData(); refreshLang(); });
@@ -3920,6 +3977,26 @@ function paintStartShell(){
   } catch (e) {}
 }
 paintStartShell();
+// v10.43: works of lazily indexed paths (not in the eager index) load for gallery, album,
+// trophies, rankings, deep links and once after the first paint; then the view refreshes.
+function withLateWorks(after, always){
+  if (!I.ensureLateWorks) { if (always && after) after(); return; }
+  const pending = I.lateWorksPending && I.lateWorksPending();
+  I.ensureLateWorks().then(loaded => {
+    if (!loaded) { if (always && after) after(); return; }
+    const before = ALL.length;
+    ingestPathData();
+    syncAppSubtitle();
+    if ((ALL.length !== before || pending || always) && after) after();
+  }, err => { console.warn('late works', err); if (always && after) after(); });
+}
+function refreshAfterLate(){
+  if (S || (pathCtx && pathCtx.step)) return;   // never disturb an open painting or path step
+  if (currentTab === 'galerie' && $('#gallery') && $('#gallery').classList.contains('active')) renderGallery();
+  else if (currentTab === 'album' && $('#album') && $('#album').classList.contains('active')) renderAlbum();
+  else if (currentTab === 'trophies' && $('#trophies') && $('#trophies').classList.contains('active')) renderTrophies();
+  else if (currentTab === 'heute' && $('#heute') && $('#heute').classList.contains('active')) renderHeute();
+}
 function startUi(){
   ingestPathData();
   syncAppSubtitle();
@@ -3929,7 +4006,43 @@ function startUi(){
   if ((currentTab || 'heute') === 'heute') renderHeute();
   if ((currentTab || 'heute') === 'wege') renderStoryEntry();
   if (lbWelcomeLikely()) ensureLb();
+  if (window.__lateWorkCount > 0) {
+    // v10.43b: today's picture and the last painted work need their metadata right away: load just their path chunks.
+    if (I.ensureWorksFor) {
+      const need = [];
+      const d = pickDaily(todayKey()); if (d && !byId(d.id)) need.push(d.id);
+      try { const o = JSON.parse(localStorage.getItem(LAST_KEY) || 'null'); if (o && o.id && !byId(o.id)) need.push(o.id); } catch (e) {}
+      try {
+        const pre = KEY('');
+        for (let i = 0; i < localStorage.length; i++) {
+          const k = localStorage.key(i);
+          if (k && k.indexOf(pre) === 0) { const id = k.slice(pre.length); if (id && !byId(id) && pctOf(id) > 0 && !isDone(id)) need.push(id); }
+        }
+      } catch (e) {}
+      if (need.length > 24) withLateWorks(refreshAfterLate);
+      else if (need.length) I.ensureWorksFor(need).then(loaded => {
+        if (!loaded) return;
+        ingestPathData();
+        refreshAfterLate();
+      }, err => console.warn('start works', err));
+    }
+    const idle = window.requestIdleCallback || (fn => setTimeout(fn, 200));
+    setTimeout(() => idle(() => withLateWorks(refreshAfterLate)), 3000);
+  }
 }
+if (UL()) UL().attach({
+  L,
+  toast: msg => toast(msg, 2600),
+  pathOwning: pid => { const o = pathOwning(pid); return o ? o.id : null; },
+  dailyId: () => { const d = pickDaily(todayKey()); return d ? d.id : null; },
+  hasProgress: pid => { const sv = loadSave(pid); return !!(sv && sv.filled && sv.filled.length); },
+  openWork: pid => { const w = byId(pid); if (w) openPainting(w); },
+  onChange: () => {
+    renderStoryEntry();
+    if (currentTab === 'galerie') renderGallery();
+    if ($('#path') && $('#path').classList.contains('active') && pathCtx && pathCtx.path) showPath(pathCtx.path, { noRoute: true });
+  }
+});
 if (I.ensurePathTexts) I.ensurePathTexts().then(startUi, function (err) { console.error(err); startUi(); });
 else startUi();
 })();

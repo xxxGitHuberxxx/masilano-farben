@@ -53,10 +53,6 @@
     "title": "Lake Lucerne and the Uri-Rotstock from the Axenberg",
     "museum": "Private collection"
   },
-  "fdsallanche": {
-    "title": "Falls of the Sallanche",
-    "museum": "Royal Collection"
-  },
   "fdmontblanc": {
     "title": "Mont Blanc and the Arve seen from Sallanches",
     "museum": "Private collection"
@@ -66,14 +62,14 @@
   EN.paths.diday = {
   "title": "François Diday’s Life Journey",
   "life": "1802–1877",
-  "part": "Part 1 · Geneva and the Alps",
+  "part": "Geneva and the Alps",
   "subtitle": "Lakes, waterfalls and peaks",
-  "intro": "Travel with François Diday, the Geneva painter who made the Alps a great subject of Swiss painting: from Naples, by Lake Brienz and Lake Geneva, to the Handeck, Mürren and Mont Blanc. Short stations and pictures to colour. This first part follows him through the mountains.",
+  "intro": "Travel with François Diday, the Geneva painter who made the Alps a great subject of Swiss painting: from Naples, by Lake Brienz and Lake Geneva, to the Handeck, Mürren and Mont Blanc. Short stations and pictures to colour. This path follows him through the mountains.",
   "ending": [
     "François Diday dies in Geneva on 28 November 1877. With him begins the Geneva school of alpine painting, carried on by Calame and Zünd.",
-    "The path can grow further. More lakes and peaks may follow in a later part."
+    "The path leads from Naples and Lake Brienz to Mont Blanc, which he paints from Sallanches."
   ],
-  "epilogue": "On 28 November 1877 Diday dies in Geneva. A later part can add further alpine pictures."
+  "epilogue": "François Diday dies in Geneva on 28 November 1877. With him begins the Geneva school of alpine painting, carried on by Calame and Zünd. The path leads from Naples and Lake Brienz to Mont Blanc, which he paints from Sallanches."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "fdjung": {
@@ -206,13 +202,6 @@
       "Almost twenty years after Brunnen, Diday returns to this lake."
     ],
     "fact": "c. 1874. Private collection."
-  },
-  "fdsallanche": {
-    "text": [
-      "The Sallanche torrent plunges over rocks into the valley. Today the picture belongs to the British Royal Collection.",
-      "Diday’s alpine pictures are sought after outside Switzerland too."
-    ],
-    "fact": "undated. Royal Collection."
   },
   "fdmontblanc": {
     "text": [

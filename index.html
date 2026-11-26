@@ -6,9 +6,11 @@
 <meta name="theme-color" content="#f6f3ee">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>Meisterwerke – Malen nach Zahlen</title>
-<link rel="stylesheet" href="style.css?v=1041">
+<link rel="stylesheet" href="style.css?v=1042">
 <link rel="preload" href="fonts/GreatVibes.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="icons/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="icons/icon-192.png" type="image/png" sizes="192x192">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <meta name="mobile-web-app-capable" content="yes">
@@ -60,7 +62,7 @@
     <footer class="gfoot">
       <button id="srcBtn" class="linkbtn" data-i18n-html="sourcesBtn">Bildquellen &amp; Hinweise</button>
       <a class="linkbtn" href="privacy.html" data-i18n="privacyLink">Datenschutz</a>
-      <div class="credit"><span class="byline" data-i18n="byline">von Masilano</span><span class="ver" data-i18n="version">Testversion 10.41</span></div>
+      <div class="credit"><span class="byline" data-i18n="byline">von Masilano</span><span class="ver" data-i18n="version">Testversion 10.42</span></div>
     </footer>
   </div>
 </section>
@@ -81,7 +83,7 @@
     <p class="roomlab" data-i18n="roomGalerie">Saal der Werke</p>
     <h1 data-i18n="galTitle">Galerie</h1>
     <div class="orn" aria-hidden="true"></div>
-    <p class="lead sub" data-i18n="appSubtitle">1953 Meisterwerke der grossen Maler, Feld für Feld zum Leben erweckt.</p>
+    <p class="lead sub" data-i18n="appSubtitle">Meisterwerke der grossen Maler, Feld für Feld zum Leben erweckt.</p>
     <div id="galBanner" class="banners" hidden></div>
     <div class="catrow">
       <div id="catTabs" class="cattabs" role="tablist" data-i18n-aria="catAria" aria-label="Kategorien"></div>
@@ -403,9 +405,6 @@
     <p id="cLangFallback" class="langfallback hidden" hidden></p>
     <blockquote id="cQuote" class="cquote hidden"><p id="cQuoteT"></p><cite id="cQuoteC"></cite><p id="cQuoteTr" class="quotetr hidden" hidden></p></blockquote>
     <div id="cWork" class="cwork"></div>
-    <div class="btns narrate-row hidden" hidden id="cNarrateRow">
-      <button type="button" id="cNarrate" class="btn ghost narrate-btn" data-speak="chapter" data-i18n="narrate" data-i18n-aria="narrateAria" aria-pressed="false">Vorlesen</button>
-    </div>
     <div class="btns">
       <button type="button" id="cShop" class="btn shop-entry goldish" data-i18n="shopEntry">Dieses Bild an deine Wand</button>
     </div>
@@ -495,7 +494,7 @@
   <div class="card">
     <h2 data-i18n="sourcesTitle">Bildquellen</h2>
     <ul id="srcList" class="srclist"></ul>
-    <p class="small" data-i18n="sourcesBody">Alle Bilder stammen von Wikimedia Commons und sind gemeinfrei. Sie wurden für das Spiel automatisch in Farbfelder umgewandelt. Die Zitate aus Van Goghs Briefen hat Masilano selbst aus dem niederländischen oder französischen Original übersetzt (Nummer und Datum nach der Briefausgabe von 2009). Die Zitate aus Monets Briefen hat Masilano selbst aus dem französischen Original übersetzt (Empfänger und Datum nach Wildenstein). Dein Fortschritt wird nur auf diesem Gerät gespeichert.</p>
+    <p class="small" data-i18n="sourcesBody">Die Bildvorlagen sind Reproduktionen von Gemälden und Drucken, deren Urheberrecht abgelaufen ist. Sie stammen von Wikimedia Commons oder direkt aus den Open-Access-Sammlungen der Museen; Herkunft und Lizenz jeder einzelnen Vorlage stehen in der Liste unten. Für das Spiel wurden sie automatisch in Farbfelder umgewandelt. Die Zitate aus Briefen sind eigene Übersetzungen aus dem Original (Van Gogh: Nummer und Datum nach der Briefausgabe von 2009; Monet: Empfänger und Datum nach Wildenstein). Dein Fortschritt wird auf diesem Gerät gespeichert. Nur wenn du freiwillig bei den Ranglisten mitmachst, werden zusätzlich die in der Datenschutzerklärung genannten Angaben übertragen.</p>
     <div class="btns"><button class="btn" id="srcClose" data-i18n="close">Schliessen</button></div>
   </div>
 </div>
@@ -550,9 +549,9 @@
   </div>
 </div>
 
-<script src="paintings.js?v=1041"></script>
-<script src="story.js?v=1041"></script>
-<script src="path-index.js?v=1041"></script>
+<script src="paintings.js?v=1042"></script>
+<script src="story.js?v=1042"></script>
+<script src="path-index.js?v=1042"></script>
 <script data-src="path-vangogh.js"></script>
 <script data-src="music-vangogh.js"></script>
 <script data-src="path-monet.js"></script>
@@ -584,18 +583,15 @@
 <script data-src="path-friedrich-p2.js"></script>
 <script data-src="path-segantini.js"></script>
 <script data-src="path-vallotton.js"></script>
-<script data-src="path-giacometti.js"></script>
 <script data-src="path-spitzweg.js"></script>
 <script data-src="path-moser.js"></script>
 <script data-src="path-zuend.js"></script>
 <script data-src="path-calame.js"></script>
 <script data-src="path-wolf.js"></script>
-<script data-src="path-ancher.js"></script>
 <script data-src="path-blau.js"></script>
 <script data-src="path-koller.js"></script>
 <script data-src="path-diday.js"></script>
 <script data-src="path-schindler.js"></script>
-<script data-src="path-egner.js"></script>
 <script data-src="path-wisinger.js"></script>
 <script data-src="path-marc.js"></script>
 <script data-src="path-durer.js"></script>
@@ -604,12 +600,10 @@
 <script data-src="path-velazquez.js"></script>
 <script data-src="path-degas.js"></script>
 <script data-src="path-manet.js"></script>
-<script data-src="path-munch.js"></script>
 <script data-src="path-delacroix.js"></script>
 <script data-src="path-goya.js"></script>
 <script data-src="path-seurat.js"></script>
 <script data-src="path-canaletto.js"></script>
-<script data-src="path-wood.js"></script>
 <script data-src="path-rousseau.js"></script>
 <script data-src="path-whistler.js"></script>
 <script data-src="path-vaneyck.js"></script>
@@ -620,11 +614,26 @@
 <script data-src="path-leonardo.js"></script>
 <script data-src="path-cassatt.js"></script>
 <script data-src="path-gauguin.js"></script>
-<script data-src="path-klee.js"></script>
-<script data-src="path-mondrian.js"></script>
 <script data-src="path-bruegel.js"></script>
 <script data-src="path-raffael.js"></script>
-<script data-src="path-botticelli.js"></script>
+<script data-src="path-church.js"></script>
+<script data-src="path-homer.js"></script>
+<script data-src="path-moran.js"></script>
+<script data-src="path-bierstadt.js"></script>
+<script data-src="path-kobke.js"></script>
+<script data-src="path-kroyer.js"></script>
+<script data-src="path-cole.js"></script>
+<script data-src="path-harunobu.js"></script>
+<script data-src="path-eckersberg.js"></script>
+<script data-src="path-lundbye.js"></script>
+<script data-src="path-caillebotte.js"></script>
+<script data-src="path-inness.js"></script>
+<script data-src="path-heade.js"></script>
+<script data-src="path-sargent.js"></script>
+<script data-src="path-corot.js"></script>
+<script data-src="path-boudin.js"></script>
+<script data-src="path-redon.js"></script>
+<script data-src="path-courbet.js"></script>
 <script data-src="en-content.js"></script>
 <script data-src="en-path-index.js"></script>
 <script data-src="en-monet.js"></script>
@@ -656,18 +665,15 @@
 <script data-src="en-friedrich-p2.js"></script>
 <script data-src="en-segantini.js"></script>
 <script data-src="en-vallotton.js"></script>
-<script data-src="en-giacometti.js"></script>
 <script data-src="en-spitzweg.js"></script>
 <script data-src="en-moser.js"></script>
 <script data-src="en-zuend.js"></script>
 <script data-src="en-calame.js"></script>
 <script data-src="en-wolf.js"></script>
-<script data-src="en-ancher.js"></script>
 <script data-src="en-blau.js"></script>
 <script data-src="en-koller.js"></script>
 <script data-src="en-diday.js"></script>
 <script data-src="en-schindler.js"></script>
-<script data-src="en-egner.js"></script>
 <script data-src="en-wisinger.js"></script>
 <script data-src="en-marc.js"></script>
 <script data-src="en-durer.js"></script>
@@ -676,12 +682,10 @@
 <script data-src="en-velazquez.js"></script>
 <script data-src="en-degas.js"></script>
 <script data-src="en-manet.js"></script>
-<script data-src="en-munch.js"></script>
 <script data-src="en-delacroix.js"></script>
 <script data-src="en-goya.js"></script>
 <script data-src="en-seurat.js"></script>
 <script data-src="en-canaletto.js"></script>
-<script data-src="en-wood.js"></script>
 <script data-src="en-rousseau.js"></script>
 <script data-src="en-whistler.js"></script>
 <script data-src="en-vaneyck.js"></script>
@@ -692,17 +696,34 @@
 <script data-src="en-leonardo.js"></script>
 <script data-src="en-cassatt.js"></script>
 <script data-src="en-gauguin.js"></script>
-<script data-src="en-klee.js"></script>
-<script data-src="en-mondrian.js"></script>
 <script data-src="en-bruegel.js"></script>
 <script data-src="en-raffael.js"></script>
-<script data-src="en-botticelli.js"></script>
+<script data-src="en-church.js"></script>
+<script data-src="en-homer.js"></script>
+<script data-src="en-moran.js"></script>
+<script data-src="en-bierstadt.js"></script>
+<script data-src="en-kobke.js"></script>
+<script data-src="en-kroyer.js"></script>
+<script data-src="en-cole.js"></script>
+<script data-src="en-harunobu.js"></script>
+<script data-src="en-eckersberg.js"></script>
+<script data-src="en-lundbye.js"></script>
+<script data-src="en-caillebotte.js"></script>
+<script data-src="en-inness.js"></script>
+<script data-src="en-heade.js"></script>
+<script data-src="en-sargent.js"></script>
+<script data-src="en-corot.js"></script>
+<script data-src="en-boudin.js"></script>
+<script data-src="en-redon.js"></script>
+<script data-src="en-courbet.js"></script>
 <script data-src="es-content.js"></script>
 <script data-src="fr-content.js"></script>
 <script data-src="it-content.js"></script>
-<script src="i18n.js?v=1041"></script>
-<script src="levels.js?v=1041"></script>
-<script src="app.js?v=1041"></script>
+<script src="i18n.js?v=1042"></script>
+<script src="levels.js?v=1042"></script>
+<script src="unlock-config.js?v=1042"></script>
+<script src="unlock.js?v=1042"></script>
+<script src="app.js?v=1042"></script>
 <script>
 /* v10.28: if a mixed cache leaves raw i18n keys in the UI, restore markup fallbacks. */
 (function(){

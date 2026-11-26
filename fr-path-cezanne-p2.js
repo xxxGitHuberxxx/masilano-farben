@@ -59,7 +59,7 @@
   },
   "czsvviaduct": {
     "title": "Montagne Sainte-Victoire et le viaduc de la vallée de l’Arc",
-    "museum": "Collection non établie"
+    "museum": "The Metropolitan Museum of Art, New York"
   },
   "czsvvalcros": {
     "title": "Montagne Sainte-Victoire et le viaduc du côté de Valcros",
@@ -183,7 +183,7 @@
   },
   "czbibfolk": {
     "title": "La carrière de Bibémus",
-    "museum": "Collection non établie"
+    "museum": "Museum Folkwang, Essen"
   },
   "czbibnelson": {
     "title": "La carrière de Bibémus",
@@ -245,10 +245,6 @@
     "title": "La terrasse dans le jardin des Lauves",
     "museum": "Collection non établie"
   },
-  "czcabanon": {
-    "title": "Le Cabanon de Jourdan",
-    "museum": "Galleria Nazionale d’Arte Moderna, Rome"
-  },
   "czvallier": {
     "title": "Le jardinier Vallier",
     "museum": "National Gallery of Art, Washington"
@@ -292,10 +288,10 @@
   },
   "cezannesv": {
     "place": "La montagne Sainte-Victoire",
-    "when": "1885–1897",
+    "when": "1882–1897",
     "mapLabel": "Sainte-Victoire",
     "intro": [
-      "À l’est d’Aix s’élève la montagne Sainte-Victoire. Dès le milieu des années 1880, la montagne devient pour Cézanne un motif central : avec le grand pin au premier plan, avec le viaduc de la vallée de l’Arc, depuis Valcros.",
+      "À l’est d’Aix s’élève la montagne Sainte-Victoire. Dès les années 1880, la montagne devient pour Cézanne un motif central : avec le grand pin au premier plan, avec le viaduc de la vallée de l’Arc, depuis Valcros.",
       "S’y ajoutent des vues de la maison de Bellevue avec le pigeonnier, qui appartient à la sœur Rose et à son mari Maxime Conil, et plus tard le grand pin sur la terre rouge.",
       "Cézanne revient à cette montagne pendant deux décennies. Chaque version cherche la même forme dans un nouvel ordre de couleur et de plan."
     ]
@@ -428,9 +424,9 @@
   "czsvviaduct": {
     "text": [
       "À travers la plaine court le viaduc de la vallée de l’Arc ; au-dessus se dresse la montagne Sainte-Victoire, ferme et claire.",
-      "Le tableau date de 1885-1887. Cézanne ordonne plaine, viaduc et montagne en un paysage calme et construit."
+      "Le tableau date de 1882-1885. Cézanne ordonne plaine, viaduc et montagne en un paysage calme et construit."
     ],
-    "fact": "1885–1887. Collection non établie."
+    "fact": "1882–1885. The Metropolitan Museum of Art, New York."
   },
   "czsvvalcros": {
     "text": [
@@ -647,7 +643,7 @@
       "De hautes parois de roche jaunâtre s’ouvrent comme un intérieur ; en haut, le vert des arbres ferme la vue.",
       "Cette vue de la carrière date d’environ 1895. En ces années, Cézanne revient sans cesse à Bibémus."
     ],
-    "fact": "vers 1895. Collection non établie."
+    "fact": "vers 1895. Museum Folkwang, Essen."
   },
   "czbibnelson": {
     "text": [
@@ -761,13 +757,6 @@
       "En 1902-1906, Cézanne peint la terrasse du nouvel atelier qu’il s’est fait construire au nord d’Aix."
     ],
     "fact": "1902–1906. Collection non établie."
-  },
-  "czcabanon": {
-    "text": [
-      "Une petite maison se tient sous les arbres, les murs clairs, le toit ferme, le feuillage autour en taches ouvertes.",
-      "En 1906, dans sa dernière année, Cézanne peint le Cabanon de Jourdan, à l’orée d’Aix. Le tableau est accroché à la Galleria Nazionale d’Arte Moderna de Rome."
-    ],
-    "fact": "1906. Galleria Nazionale d’Arte Moderna, Rome."
   },
   "czvallier": {
     "text": [

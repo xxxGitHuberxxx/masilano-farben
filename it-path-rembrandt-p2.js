@@ -24,10 +24,6 @@
   "Eremitage, Sankt Petersburg": "Ermitage, San Pietroburgo"
 });
   P.works = Object.assign(P.works || {}, {
-  "rbselfflat": {
-    "title": "Autoritratto con berretto piatto",
-    "museum": "Royal Collection, Londra"
-  },
   "rbadultery": {
     "title": "Cristo e l’adultera",
     "museum": "National Gallery, Londra"
@@ -224,10 +220,6 @@
     "title": "Frederick Rihel a cavallo",
     "museum": "National Gallery, Londra"
   },
-  "rbjewishbr": {
-    "title": "La sposa ebrea",
-    "museum": "Rijksmuseum, Amsterdam"
-  },
   "rbfamily": {
     "title": "Ritratto di famiglia",
     "museum": "Herzog Anton Ulrich-Museum, Braunschweig"
@@ -381,12 +373,6 @@
 });
   var pt = P.pathTexts = P.pathTexts || {};
   var add = {
-  "rbselfflat": {
-    "text": [
-      "Rembrandt indossa un berretto piatto e un abito ricamato. Si ritrae nell’anno della Ronda di notte. Il quadro è nella Royal Collection di Londra."
-    ],
-    "fact": "1642. Royal Collection, Londra."
-  },
   "rbadultery": {
     "text": [
       "In un tempio enorme e dorato, un piccolo gruppo sta nella luce davanti a Cristo. Rembrandt dipinge la scena con grande finezza. Il quadro è nella National Gallery di Londra."
@@ -680,12 +666,6 @@
       "Il mercante Frederick Rihel, in abito sontuoso, monta un cavallo bianco. È l’unico grande ritratto equestre di Rembrandt. Il quadro è nella National Gallery di Londra."
     ],
     "fact": "circa 1663. National Gallery, Londra."
-  },
-  "rbjewishbr": {
-    "text": [
-      "Una coppia vestita di rosso e d’oro luminosi si abbraccia con tenerezza. Il colore è così denso che le maniche sembrano quasi scolpite. Il quadro è nel Rijksmuseum di Amsterdam; la galleria lo contiene anche."
-    ],
-    "fact": "circa 1665–1669. Rijksmuseum, Amsterdam."
   },
   "rbfamily": {
     "text": [

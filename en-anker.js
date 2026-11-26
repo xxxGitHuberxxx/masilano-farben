@@ -28,10 +28,6 @@
     "title": "The Writing Lesson III",
     "museum": "Private collection"
   },
-  "imwald": {
-    "title": "Sleeping Girl in the Wood",
-    "museum": "Collection not established"
-  },
   "huehner": {
     "title": "Girl Feeding Chickens",
     "museum": "Musée d’art et d’histoire, Neuchâtel"
@@ -302,7 +298,7 @@
     "mapLabel": "1880s",
     "intro": [
       "In the 1880s children, sisters, fairy tales and the living room remain the fixed themes: the two sisters, Little Red Riding Hood, a Gotthelf reader, Mariette with strawberries, the knitting girl at the cradle, the first steps.",
-      "The family still spends the winter in Paris and the summer in Ins. In 1890 Anker will give up the Paris residence. The large pictures of the 1890s – and what follows after – belong to the next part."
+      "The family still spends the winter in Paris and the summer in Ins. In 1890 Anker will give up the Paris residence. The large pictures of the 1890s follow after that."
     ]
   }
 });
@@ -312,11 +308,7 @@
       "A young man in a dark coat, his brow clear, his gaze straight ahead. The drawing bears the inscription “Sept. 1852” – Albert Anker is twenty-one.",
       "In this year he is studying theology, first in Bern, then in Halle. The Centre Albert Anker in Ins preserves the drawing."
     ],
-    "fact": "Drawing, September 1852. Centre Albert Anker, Ins.",
-    "quote": {
-      "text": "What is art? In the first place art does not consist in imitation, but in two points: first one must form an ideal in one’s conceptions; second one must present this ideal to the eyes of one’s fellow human beings, give it a shape that becomes accessible to our seeing and hearing.",
-      "cite": "Letter to Auguste Bachelin, 9 June 1849. Centre Albert Anker, Ins."
-    }
+    "fact": "Drawing, September 1852. Centre Albert Anker, Ins."
   },
   "sonntag": {
     "text": [
@@ -345,13 +337,6 @@
       "The picture belongs to the writing-lesson paintings of 1865. For “The Writing Lesson” and “Sleeping Girl in the Wood” Anker receives a gold medal at the Paris Salon in 1866."
     ],
     "fact": "Oil on canvas, 1865. Private collection."
-  },
-  "imwald": {
-    "text": [
-      "A girl sleeps at the foot of a tree, her arm against a bundle of brushwood. Her dress is plain, her feet bare, the wood around her dark and still.",
-      "The picture of 1865 is one of the two works for which Anker receives a gold medal at the Paris Salon in 1866."
-    ],
-    "fact": "Oil on canvas, 1865. Collection not established."
   },
   "huehner": {
     "text": [
@@ -540,11 +525,7 @@
       "In a square before houses and trees many children and adults stand and walk. Some are being received, others look on.",
       "The picture of 1876 hangs in the Musée d’art et d’histoire in Neuchâtel. It also bears a French title that recalls orphans from Unterwalden in Murten; the scene itself is a composed reception, not a record of 1798."
     ],
-    "fact": "Oil on canvas, 1876. Musée d’art et d’histoire, Neuchâtel.",
-    "quote": {
-      "text": "I have just made a sketch in a pharmacy. It may come to nothing, but one does what one can...",
-      "cite": "To Frau Anker, Murten, 11 July 1876. Centre Albert Anker, Ins."
-    }
+    "fact": "Oil on canvas, 1876. Musée d’art et d’histoire, Neuchâtel."
   },
   "pelzmuetze": {
     "text": [
@@ -654,7 +635,7 @@
   "ersteschritte": {
     "text": [
       "An older child holds a smaller one who is attempting the first steps. One goes barefoot, the smaller wears shoes; behind them stands a tiled stove.",
-      "The picture of 1888 closes this first part: everyday life in a living room, recorded shortly before Anker, in the 1890s, takes up large school and village pictures once more."
+      "The picture of 1888 shows everyday life in a living room, recorded shortly before Anker, in the 1890s, takes up large school and village pictures once more."
     ],
     "fact": "Oil on canvas, 1888. Private collection."
   },

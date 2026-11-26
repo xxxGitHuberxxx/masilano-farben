@@ -16,9 +16,9 @@
   "subtitle": "The Lady of Shalott",
   "intro": "À Londres, Waterhouse peint des sujets tirés de la poésie, avec une lumière ferme et claire. En 1888, « The Lady of Shalott » est dans la barque, la tapisserie par-dessus bord, le regard déjà ailleurs.",
   "ending": [
-    "Waterhouse meurt à Londres en 1917. Une partie ultérieure pourra ajouter d’autres tableaux poétiques."
+    "Waterhouse meurt à Londres en 1917. The Lady of Shalott est aujourd’hui à la Tate Britain à Londres."
   ],
-  "epilogue": "Une partie ultérieure pourra ajouter d’autres tableaux."
+  "epilogue": "Waterhouse meurt à Londres en 1917. The Lady of Shalott est aujourd’hui à la Tate Britain à Londres."
 };
   P.stations = Object.assign(P.stations || {}, {
   "waterhouse1": {
@@ -30,4 +30,14 @@
     ]
   }
 });
+  // v10.42 pathTexts: work texts of the short path (were German fallback before).
+  P.pathTexts = Object.assign(P.pathTexts || {}, {
+    "shalott": {
+      "text": [
+        "La Dame de Shalott se libère de sa tour maudite et glisse sur le fleuve vers Camelot.",
+        "Dans la barque se trouvent des chandelles, une tapisserie et un crucifix : elle sait que ce chemin est le dernier."
+      ],
+      "fact": "Le tableau suit un poème d’Alfred Tennyson. Quiconque brise la malédiction et regarde par la fenêtre Sir Lancelot doit mourir."
+    }
+  });
 })();

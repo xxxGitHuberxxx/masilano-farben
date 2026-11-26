@@ -108,10 +108,6 @@
     "title": "Il rimorchiatore, il Loing a Saint-Mammès",
     "museum": "Petit Palais, Parigi"
   },
-  "sybemberg83": {
-    "title": "Le rive del Loing verso Moret",
-    "museum": "Fondation Bemberg, Tolosa"
-  },
   "sysablonspath": {
     "title": "Un sentiero a Les Sablons",
     "museum": "National Gallery of Australia, Canberra"
@@ -168,10 +164,6 @@
     "title": "Il Chemin des Fontaines in un mattino di giugno",
     "museum": "Musée d’art et d’histoire, Ginevra"
   },
-  "sysepmorning": {
-    "title": "Mattino di settembre",
-    "museum": "Musée des Beaux-Arts, Agen"
-  },
   "sypontmia": {
     "title": "Il ponte di Moret",
     "museum": "Minneapolis Institute of Art"
@@ -179,10 +171,6 @@
   "syeveningoct": {
     "title": "Una sera a Moret, fine di ottobre",
     "museum": "Museo Thyssen-Bornemisza, Madrid"
-  },
-  "sysunset88": {
-    "title": "Moret al tramonto",
-    "museum": "Cincinnati Art Museum"
   },
   "syriverview": {
     "title": "Veduta del fiume",
@@ -513,13 +501,6 @@
     ],
     "fact": "1883. Petit Palais, Parigi."
   },
-  "sybemberg83": {
-    "text": [
-      "Il Loing brilla sotto un cielo chiaro, sulla riva crescono alberi e cespugli.",
-      "In lontananza si vedono case."
-    ],
-    "fact": "1883. Fondation Bemberg, Tolosa."
-  },
   "sysablonspath": {
     "text": [
       "Un sentiero porta tra orti e alberi fino al villaggio.",
@@ -618,13 +599,6 @@
     ],
     "fact": "1887. Musée d’art et d’histoire, Ginevra."
   },
-  "sysepmorning": {
-    "text": [
-      "Alcuni alberi da frutto stanno in un prato soleggiato e a destra entra nel quadro un albero scuro.",
-      "Nel 1888 lo Stato francese compra questo quadro, la sua prima opera di Sisley."
-    ],
-    "fact": "verso 1887. Musée des Beaux-Arts, Agen."
-  },
   "sypontmia": {
     "text": [
       "Il vecchio ponte di pietra attraversa il Loing, dietro ci sono i mulini e la chiesa.",
@@ -638,13 +612,6 @@
       "Gli alberi sulla riva sono già scuri."
     ],
     "fact": "1888. Museo Thyssen-Bornemisza, Madrid."
-  },
-  "sysunset88": {
-    "text": [
-      "La città si stende lungo il fiume nella calda luce della sera.",
-      "La chiesa e i tetti si stagliano contro il cielo."
-    ],
-    "fact": "1888. Cincinnati Art Museum."
   },
   "syriverview": {
     "text": [

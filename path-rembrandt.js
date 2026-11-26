@@ -157,14 +157,6 @@
     "source": "Wikimedia Commons: «Maerten Looten, by Rembrandt van Rijn.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "rbshipb",
-    "title": "Der Schiffbauer und seine Frau",
-    "artist": "Rembrandt van Rijn",
-    "year": "1633",
-    "museum": "Royal Collection, London",
-    "source": "Wikimedia Commons: «Rembrandt - The Shipbuilder and his Wife- Jan Rijcksen (1560-2-1637) and his Wife, Griet Jans - Google Art Project.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "rbwten",
     "title": "Johannes Wtenbogaert",
     "artist": "Rembrandt van Rijn",
@@ -259,14 +251,6 @@
     "year": "1636",
     "museum": "Rijksmuseum, Amsterdam",
     "source": "Wikimedia Commons: «The Standard Bearer (Rembrandt).jpg», Public domain (gemeinfrei)"
-  },
-  {
-    "id": "rbmagdalen",
-    "title": "Christus und Maria Magdalena am Grab",
-    "artist": "Rembrandt van Rijn",
-    "year": "1638",
-    "museum": "Royal Collection, London",
-    "source": "Wikimedia Commons: «Rembrandt van Rijn - Christ and St Mary Magdalen at the Tomb - Google Art Project.jpg», Public domain (gemeinfrei)"
   },
   {
     "id": "rbpancake",
@@ -373,14 +357,6 @@
     "source": "Wikimedia Commons: «Baertje Martens, by Rembrandt van Rijn.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "rbagatha",
-    "title": "Agatha Bas",
-    "artist": "Rembrandt van Rijn",
-    "year": "1641",
-    "museum": "Royal Collection, London",
-    "source": "Wikimedia Commons: «Rembrandt van Rijn - Agatha Bas (1611-58) - Google Art Project.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "rbanslo",
     "title": "Der Prediger Cornelis Anslo und seine Frau",
     "artist": "Rembrandt van Rijn",
@@ -414,7 +390,7 @@
   "part": "Teil 1 · 1606–1642",
   "subtitle": "Von der Mühle in Leiden bis zur Nachtwache",
   "cover": "rbself29",
-  "intro": "Rembrandt Harmenszoon van Rijn wird am 15. Juli 1606 in Leiden geboren, als Sohn eines Müllers. Dieser erste Teil folgt ihm von der Lateinschule und der Lehre bei Swanenburgh und Lastman über die Werkstatt mit Jan Lievens und die frühen Selbstbildnisse, den Umzug nach Amsterdam und die Heirat mit Saskia bis zum Haus in der Breestraat und zur Nachtwache 1642.",
+  "intro": "Rembrandt Harmenszoon van Rijn wird am 15. Juli 1606 in Leiden geboren, als Sohn eines Müllers. Dieser Weg folgt ihm von der Lateinschule und der Lehre bei Swanenburgh und Lastman über die Werkstatt mit Jan Lievens und die frühen Selbstbildnisse, den Umzug nach Amsterdam und die Heirat mit Saskia bis zum Haus in der Breestraat und zur Nachtwache 1642.",
   "ending": [
     "1642 vollendet Rembrandt die Nachtwache. Im Juni desselben Jahres stirbt Saskia, erst 29 Jahre alt; Rembrandt bleibt mit dem kleinen Titus zurück.",
     "Im nächsten Teil folgen Hendrickje Stoffels, die schweren Jahre der Schulden und des Konkurses, die späten Selbstbildnisse und sein Tod am 4. Oktober 1669 in Amsterdam."
@@ -677,15 +653,6 @@
           "fact": "1632. Los Angeles County Museum of Art."
         },
         {
-          "pid": "rbshipb",
-          "text": [
-            "Der Schiffbauer Jan Rijcksen sitzt am Zeichentisch, als seine Frau Griet Jans ihm einen Brief bringt.",
-            "Rembrandt macht aus dem Doppelbildnis eine kleine Szene.",
-            "Das Bild ist in der Royal Collection in London."
-          ],
-          "fact": "1633. Royal Collection, London."
-        },
-        {
           "pid": "rbwten",
           "text": [
             "Der alte Prediger Johannes Wtenbogaert, ein Führer der Remonstranten, steht im schwarzen Mantel mit weissem Kragen.",
@@ -824,15 +791,6 @@
             "Seit 2022 ist es im Rijksmuseum in Amsterdam."
           ],
           "fact": "1636. Rijksmuseum, Amsterdam."
-        },
-        {
-          "pid": "rbmagdalen",
-          "text": [
-            "Am Ostermorgen erkennt Maria Magdalena Christus, der ihr als Gärtner mit Hut erscheint.",
-            "Hinter ihnen geht über der Stadt die Sonne auf.",
-            "Das Bild ist in der Royal Collection in London."
-          ],
-          "fact": "1638. Royal Collection, London."
         },
         {
           "pid": "rbpancake",
@@ -982,15 +940,6 @@
             "Das Bild ist in der Eremitage in Sankt Petersburg."
           ],
           "fact": "um 1640. Eremitage, Sankt Petersburg."
-        },
-        {
-          "pid": "rbagatha",
-          "text": [
-            "Agatha Bas steht wie in einem Fensterrahmen, ihre Hand liegt auf der Brüstung, in der anderen hält sie einen Fächer.",
-            "Rembrandt malt sie 1641.",
-            "Das Bild ist in der Royal Collection in London."
-          ],
-          "fact": "1641. Royal Collection, London."
         },
         {
           "pid": "rbanslo",

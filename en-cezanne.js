@@ -156,10 +156,6 @@
     "title": "View of L’Estaque",
     "museum": "Collection not established"
   },
-  "czallee": {
-    "title": "The Avenue at the Jas de Bouffan",
-    "museum": "Collection not established"
-  },
   "czpool": {
     "title": "The Pool at the Jas de Bouffan",
     "museum": "Metropolitan Museum of Art, New York"
@@ -206,7 +202,7 @@
   },
   "czwinterchest": {
     "title": "The Chestnut Trees of the Jas de Bouffan in Winter",
-    "museum": "Collection not established"
+    "museum": "Minneapolis Institute of Art"
   }
 });
   EN.paths = EN.paths || {};
@@ -299,8 +295,7 @@
     "mapLabel": "Jas",
     "intro": [
       "The father buys the Jas de Bouffan in 1859. For decades Cézanne paints there the avenue, the chestnuts, the farm, the view from the house and the pool in the park.",
-      "The pictures in this station come from various years, from the late 1860s to the edge of the 1880s. The pool in the park belongs to the late 1880s; we date it openly.",
-      "The bridge at Maincy, around 1882–1883, is near Melun in the Île-de-France, not at the Jas. It stands here because it is made in the same years in which Cézanne also works at the country house."
+      "The pictures in this station come from various years, from the late 1860s to the edge of the 1880s. The pool in the park belongs to the late 1880s; we date it openly."
     ]
   },
   "cezanne1886": {
@@ -308,9 +303,9 @@
     "when": "1879–1886",
     "mapLabel": "Gardanne",
     "intro": [
-      "Between 1880 and 1885 Cézanne paints the banks of the Seine at Médan, where Zola owns a house. In 1885–1886 he lives with Hortense and their son in Gardanne, not far from Aix.",
+      "Around 1879/1880 Cézanne lives in Melun; between 1880 and 1885 he paints the banks of the Seine at Médan, where Zola owns a house. In 1885–1886 he lives with Hortense and their son in Gardanne, not far from Aix.",
       "On 4 April 1886, from Gardanne, he thanks Zola briefly and formally for sending the novel L’Œuvre. Contemporaries have read resemblances to Cézanne in the figure of the painter Claude Lantier. The letter is cordial; a complete break is not thereby proved. Contact becomes rarer afterwards.",
-      "On 28 April 1886 he marries Hortense in Aix; their son Paul is legitimized. On 23 October 1886 Louis-Auguste dies. With the inheritance Cézanne becomes more independent. This first part ends in this year."
+      "On 28 April 1886 he marries Hortense in Aix; their son Paul is legitimized. On 23 October 1886 Louis-Auguste dies. With the inheritance Cézanne becomes more independent. Here the section up to 1886 ends."
     ]
   }
 });
@@ -327,7 +322,7 @@
       "Louis-Auguste sits with his cap on, his legs crossed, as if resting in the salon. The picture is first a mural in the salon of the Jas de Bouffan and is later transferred to canvas.",
       "The father, first a hatter, then a banker in Aix, wants his son to be a lawyer. Around 1865 Cézanne paints him anyway – and in the family house itself."
     ],
-    "fact": "um 1865. National Gallery, London."
+    "fact": "c. 1865. National Gallery, London."
   },
   "czvalab66": {
     "text": [
@@ -341,7 +336,7 @@
       "The country house stands light among trees, the sky wide. In 1859 Louis-Auguste buys the Jas de Bouffan on the edge of Aix; the family lives and receives guests there.",
       "The picture itself is painted only around 1874. It shows the place of childhood and of later work – not in the year of the purchase, but in the lighter manner of the 1870s."
     ],
-    "fact": "um 1874. Collection not established."
+    "fact": "c. 1874. Collection not established."
   },
   "czbread": {
     "text": [
@@ -355,7 +350,7 @@
       "A sugar bowl, pears and a blue cup form a small, closed group. Already here he seeks volume and the side-by-side of clear forms.",
       "The picture dates from around 1865. Beside the portraits, still life is from the beginning a field of its own for Cézanne."
     ],
-    "fact": "um 1865. Musée d’Orsay, Paris."
+    "fact": "c. 1865. Musée d’Orsay, Paris."
   },
   "czgigot": {
     "text": [
@@ -390,7 +385,7 @@
       "Another portrait of the uncle: head and shoulders fill the surface, the paint sitting in thick, side-by-side bands.",
       "Around 1866 a whole series of such portraits is made in a short time. They show how Cézanne understands the face as a construction of colour planes."
     ],
-    "fact": "um 1866. Norton Simon Museum, Pasadena."
+    "fact": "c. 1866. Norton Simon Museum, Pasadena."
   },
   "czclock": {
     "text": [
@@ -411,7 +406,7 @@
       "Red roofs stand above a still wintry slope, the snow is melting, the sea and the distance are cool. L’Estaque lies on the coast west of Marseille.",
       "Around 1870, during the Franco-Prussian War, Cézanne stays with Hortense Fiquet at L’Estaque. The motif of red roofs above the water occupies him later as well."
     ],
-    "fact": "um 1870. Collection not established."
+    "fact": "c. 1870. Collection not established."
   },
   "cztrench": {
     "text": [
@@ -439,7 +434,7 @@
       "Cézanne wears a cap, his gaze going sideways out of the picture. The face is built in cooler, lighter tones than in the dark portraits of the 1860s.",
       "Around 1872, at the start of the years in Pontoise and Auvers, he records himself. The palette begins to open under the influence of work in the open air."
     ],
-    "fact": "um 1872. The Hermitage, St Petersburg."
+    "fact": "c. 1872. The Hermitage, St Petersburg."
   },
   "czlouvec": {
     "text": [
@@ -467,7 +462,7 @@
       "In the Quartier Four, gardens, walls and roofs step up the slope. The light is softer than in the early pictures from Aix.",
       "Around 1873 this view belongs to the Auvers years, in which Cézanne observes the landscape of the Île-de-France in front of the motif."
     ],
-    "fact": "um 1873. Philadelphia Museum of Art."
+    "fact": "c. 1873. Philadelphia Museum of Art."
   },
   "czsmallpontoise": {
     "text": [
@@ -488,7 +483,7 @@
       "Hortense sits in a red armchair, her dress in blue and green stripes, her hands in her lap. The colours are clearly set off from one another, the chair a luminous body of its own.",
       "Around 1877, the year of the third Impressionist exhibition, this portrait is a calm counterpart to the landscapes from Pontoise."
     ],
-    "fact": "um 1877. Museum of Fine Arts, Boston."
+    "fact": "c. 1877. Museum of Fine Arts, Boston."
   },
   "czchocquet": {
     "text": [
@@ -532,7 +527,7 @@
     ],
     "fact": "1883–1885. Collection not established.",
     "quote": {
-      "text": "I have begun two small motifs in which there is the sea, for Monsieur Chocquet, who had spoken to me of them. – It is like a playing card. Red roofs on the blue sea.",
+      "text": "I have started two small subjects with the sea in them, for Monsieur Chocquet, who had mentioned it to me. – It’s like a playing card: red roofs against the blue sea.",
       "cite": "Letter to Camille Pissarro, 2 July 1876, from L’Estaque."
     }
   },
@@ -541,14 +536,14 @@
       "From L’Estaque the Bay of Marseilles lies wide and clear: in front the houses and the green, then the deep blue of the water, on the horizon the opposite shore.",
       "Around 1885 Cézanne brings the southern coast into a calm, firmly built order. The picture is among his best-known views of L’Estaque."
     ],
-    "fact": "um 1885. Art Institute of Chicago."
+    "fact": "c. 1885. Art Institute of Chicago."
   },
   "czriaux": {
     "text": [
       "In the Riaux valley, cubes of houses stand in a bare, sunny terrain. The walls are ochre and pink, the shadows short and blue.",
       "Around 1883 Cézanne paints this inland motif near L’Estaque. The construction in planes is especially clear here."
     ],
-    "fact": "um 1883. National Gallery of Art, Washington."
+    "fact": "c. 1883. National Gallery of Art, Washington."
   },
   "czchateauif": {
     "text": [
@@ -578,17 +573,10 @@
     ],
     "fact": "1882–1883. Collection not established."
   },
-  "czallee": {
-    "text": [
-      "An avenue leads towards the house, the trunks standing as dark, repeated verticals to the left and right of the path.",
-      "The picture dates from around 1868, still in the earlier time at the country house the father bought in 1859. The Jas remains a place of work for decades."
-    ],
-    "fact": "um 1868. Collection not established."
-  },
   "czpool": {
     "text": [
       "The pool in the park lies still, surrounded by trees and a wall; the water takes in sky and foliage.",
-      "The picture dates from the late 1880s, at the edge of the period of this part. It belongs all the same to the place where Cézanne has been working since his youth."
+      "The picture is later, from the late 1880s. It belongs all the same to the place where Cézanne has been working since his youth."
     ],
     "fact": "späte 1880er Jahre. Metropolitan Museum of Art, New York."
   },
@@ -611,21 +599,21 @@
       "Chestnut trees stand in front of a farm building on the grounds of the Jas; buildings, trees and the ground are joined in calm, earthy tones.",
       "Around 1878 Cézanne works not only at the manor house but also on the working buildings and trees of the estate."
     ],
-    "fact": "um 1878. Norton Simon Museum, Pasadena."
+    "fact": "c. 1878. Norton Simon Museum, Pasadena."
   },
   "czvuejas": {
     "text": [
       "From the country house the landscape of Aix opens: trees in the foreground, then the open country under a light sky.",
       "Around 1875–1876, after the years in Auvers, Cézanne paints once more the view from home. The lighter palette of the northern years remains palpable."
     ],
-    "fact": "um 1875–1876. Collection not established."
+    "fact": "c. 1875–1876. Collection not established."
   },
   "czmaincy": {
     "text": [
-      "A stone arched bridge over a shaded watercourse, dense trees to the left and right: the motif is in Maincy near Melun, not at the Jas de Bouffan.",
-      "Around 1882–1883 Cézanne paints this bridge in the Île-de-France, in the same years in which he also works at the Jas. The picture now hangs in the Musée d’Orsay."
+      "A stone arched bridge over a shaded watercourse, dense trees to the left and right: the motif is in Maincy near Melun.",
+      "Around 1879/1880 Cézanne paints this bridge while he is living in Melun. The picture now hangs in the Musée d’Orsay."
     ],
-    "fact": "um 1882–1883. Musée d’Orsay, Paris."
+    "fact": "c. 1879/1880. Musée d’Orsay, Paris."
   },
   "czmedan": {
     "text": [
@@ -641,7 +629,7 @@
     ],
     "fact": "1885–1886. Brooklyn Museum, New York.",
     "quote": {
-      "text": "My dear Émile, I have just received L’Œuvre, which you were good enough to send me. I thank the author of the Rougon-Macquart for this kind token of remembrance, and I ask him to allow me to shake his hand, thinking of the years gone by. Ever yours, under the impression of times past.",
+      "text": "My dear Émile, L’Œuvre, which you so kindly sent me, has just arrived. I thank the author of the Rougon-Macquart for this fine sign that he remembers me, and I beg him to let me press his hand in memory of our early years. Wholly yours, still moved by the days that are gone.",
       "cite": "Letter to Émile Zola, 4 April 1886, from Gardanne."
     }
   },
@@ -664,14 +652,14 @@
       "Cézanne shows himself against an olive, patterned ground, his head bald, his gaze firm. The picture dates from around 1880.",
       "It records the painter in the years when he is moving between Provence, Paris and the Île-de-France – before the turning points of 1886."
     ],
-    "fact": "um 1880. Collection not established."
+    "fact": "c. 1880. Collection not established."
   },
   "czwinterchest": {
     "text": [
       "The chestnut trees of the Jas stand bare in winter, the branches a clear framework against house and sky.",
-      "In 1885–1886, at the end of this first part, Cézanne returns, in the winter park of the family house, to a familiar motif."
+      "In 1885–1886 Cézanne returns, in the winter park of the family house, to a familiar motif."
     ],
-    "fact": "1885–1886. Collection not established."
+    "fact": "1885–1886. Minneapolis Institute of Art, inv. 49.9."
   }
 });
 })();

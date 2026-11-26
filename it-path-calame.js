@@ -42,10 +42,6 @@
     "title": "Ricordo di Rosenlaui",
     "museum": "Collezione privata"
   },
-  "acwetter": {
-    "title": "Il Wetterhorn",
-    "museum": "Collocazione non indicata"
-  },
   "acleman": {
     "title": "Veduta del lago Lemano",
     "museum": "Villa Vauban, Lussemburgo"
@@ -71,14 +67,14 @@
   P.paths.calame = {
   "title": "Il percorso di vita di Alexandre Calame",
   "life": "1810–1864",
-  "part": "Parte 1 · Da Ginevra alle Alpi",
+  "part": "Da Ginevra alle Alpi",
   "subtitle": "Tempesta, roccia e laghi quieti",
-  "intro": "Viaggia con Alexandre Calame, il pittore ginevrino delle Alpi: dai primi paesaggi di montagna, attraverso il Grimsel, Rosenlaui e il Wetterhorn, fino ai laghi quieti di Thun, Ginevra e Lucerna. Brevi tappe e quadri da colorare. Questa prima parte lo segue tra le montagne svizzere.",
+  "intro": "Viaggia con Alexandre Calame, il pittore ginevrino delle Alpi: dai primi paesaggi di montagna, attraverso il Grimsel, Rosenlaui e il Wetterhorn, fino ai laghi quieti di Thun, Ginevra e Lucerna. Brevi tappe e quadri da colorare. Questo percorso lo segue tra le montagne svizzere.",
   "ending": [
     "Alexandre Calame muore a Mentone il 19 marzo 1864, a cinquantatré anni. I suoi quadri alpini hanno segnato lo sguardo di tutta l’Europa sulle montagne svizzere.",
-    "Il percorso può ancora crescere. Litografie, quadri italiani e altre montagne potranno seguire in una parte successiva."
+    "Il percorso va dai primi paesaggi di montagna, attraverso tempeste e vette, fino ai laghi e alle baite del Rigi."
   ],
-  "epilogue": "Il 19 marzo 1864 Calame muore a Mentone. Una parte successiva potrà aggiungere litografie e altre montagne."
+  "epilogue": "Alexandre Calame muore a Mentone il 19 marzo 1864, a cinquantatré anni. I suoi quadri alpini hanno segnato lo sguardo di tutta l’Europa sulle montagne svizzere. Il percorso va dai primi paesaggi di montagna, attraverso tempeste e vette, fino ai laghi e alle baite del Rigi."
 };
   P.stations = Object.assign(P.stations || {}, {
   "acgenf": {
@@ -184,13 +180,6 @@
       "Il quadro nasce in atelier da schizzi e ricordi."
     ],
     "fact": "1849. Collezione privata."
-  },
-  "acwetter": {
-    "text": [
-      "Il Wetterhorn si alza ripido sopra la valle, le nuvole girano intorno alla vetta. Davanti stanno abeti scuri.",
-      "La montagna vicino a Grindelwald è tra i grandi soggetti della pittura svizzera."
-    ],
-    "fact": "1850. Collocazione non indicata."
   },
   "acleman": {
     "text": [

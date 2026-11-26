@@ -87,10 +87,6 @@
     "title": "Portrait d’Emilie Flöge",
     "museum": "Collection non déterminée"
   },
-  "oleander": {
-    "title": "Deux jeunes filles au laurier-rose",
-    "museum": "Legion of Honor, Fine Arts Museums of San Francisco"
-  },
   "hanswurst": {
     "title": "Hanswurst sur la scène improvisée de Rothenburg",
     "museum": "Collection non déterminée"
@@ -198,10 +194,6 @@
   "musik1901": {
     "title": "La Musique",
     "museum": "Collection non déterminée"
-  },
-  "hygieia": {
-    "title": "Hygie (détail de la « Médecine »)",
-    "museum": "Photographie historique ; l’original a brûlé en 1945 au château d’Immendorf"
   },
   "jurysketch": {
     "title": "Esquisse pour la Jurisprudence",
@@ -450,13 +442,6 @@
     ],
     "fact": "Huile, 1891. Collection non déterminée."
   },
-  "oleander": {
-    "text": [
-      "Deux jeunes femmes se tiennent devant un laurier-rose, tout près l’une de l’autre, en robes sombres, le regard sur les fleurs.",
-      "Le tableau date d’environ 1890–1892. Il est accroché à la Legion of Honor, Fine Arts Museums of San Francisco."
-    ],
-    "fact": "Huile sur toile, vers 1890–1892. Legion of Honor, San Francisco."
-  },
   "hanswurst": {
     "text": [
       "Sur une place ouverte, le personnage de Hanswurst joue devant une foule dense : un théâtre improvisé en plein air, avec costumes et drapeaux.",
@@ -653,13 +638,6 @@
       "L’œuvre date de 1901, l’année où la « Médecine » est montrée à la Sécession. Elle fait partie du travail répété de Klimt sur le thème de la musique."
     ],
     "fact": "1901. Collection non déterminée."
-  },
-  "hygieia": {
-    "text": [
-      "Hygie, déesse de la santé, se tient dans une robe rouge ornée d’or, le serpent d’Asclépios autour du bras, une coupe à la main. Son regard sort calmement du tableau.",
-      "Le détail provient du tableau de faculté « La Médecine », montré à la Sécession en 1901 et accueilli par une vive opposition. L’original brûle en 1945 au château d’Immendorf, en Basse-Autriche. Il en reste entre autres cette photographie historique en couleurs."
-    ],
-    "fact": "Détail de « La Médecine », 1900–1901. Photographie historique ; l’original a brûlé en 1945 au château d’Immendorf."
   },
   "jurysketch": {
     "text": [

@@ -379,126 +379,126 @@
       "The station of Shinmachi lies on the Kisokaidō in the province of Kōzuke. The sheet shows the post station with travellers and the wide landscape of the inland road.",
       "Keisai Eisen begins the series of the 69 Stations of the Kisokaidō for the publisher Takenouchi Magohachi (Hōeidō). The later stations, including Shinmachi, are designed by Hiroshige; they appear from about 1835, in the years that follow. This sheet is held by the National Diet Library in Tokyo."
     ],
-    "fact": "um 1835–1838. National Diet Library, Tokyo."
+    "fact": "c. 1835–1838. National Diet Library, Tokyo."
   },
   "hgks14": {
     "text": [
       "Takasaki is an important castle town on the Kisokaidō in Kōzuke. The sheet shows the station in open country, with travellers on the road.",
       "Hiroshige designs Takasaki as one of the stations that follow Eisen’s opening of the series. This sheet of the series of about 1835–1838 is held by the National Diet Library in Tokyo."
     ],
-    "fact": "um 1835–1838. National Diet Library, Tokyo."
+    "fact": "c. 1835–1838. National Diet Library, Tokyo."
   },
   "hgks16": {
     "text": [
       "Annaka lies in Kōzuke, already on the rise towards the Usui pass. The sheet shows the station and the road that leads into the mountains.",
       "In the Kisokaidō series Annaka is one of Hiroshige’s stations. The sheet is held by the National Diet Library in Tokyo."
     ],
-    "fact": "um 1835–1838. National Diet Library, Tokyo."
+    "fact": "c. 1835–1838. National Diet Library, Tokyo."
   },
   "hgks17": {
     "text": [
       "Matsuida lies at the foot of the Usui pass, which separates Kōzuke from Shinano. Travellers and pack animals move through the hilly station.",
       "The sheet belongs to Hiroshige’s share of the Kisokaidō series and is held by the National Diet Library in Tokyo."
     ],
-    "fact": "um 1835–1838. National Diet Library, Tokyo."
+    "fact": "c. 1835–1838. National Diet Library, Tokyo."
   },
   "hgks19": {
     "text": [
       "Karuizawa lies high above the Usui pass, on the Shinano side. The sheet shows the bare, open height with travellers in the wind and among the rocks.",
       "The station is one of the best-known high points of the Kisokaidō. Hiroshige’s sheet of the series of about 1835–1838 is held by the National Diet Library in Tokyo."
     ],
-    "fact": "um 1835–1838. National Diet Library, Tokyo."
+    "fact": "c. 1835–1838. National Diet Library, Tokyo."
   },
   "hgks22": {
     "text": [
       "Otai (also Odai) already lies in Shinano, after the descent from the Usui pass. The sheet shows travellers in the open landscape of the inland road.",
       "Hiroshige designs the station for the Kisokaidō series. The sheet is held by the National Diet Library in Tokyo."
     ],
-    "fact": "um 1835–1838. National Diet Library, Tokyo."
+    "fact": "c. 1835–1838. National Diet Library, Tokyo."
   },
   "hgks24": {
     "text": [
       "Shionada lies on the Chikuma River in Shinano. The sheet shows the river station and the road by the water.",
       "Hiroshige designs Shionada for the series of the 69 Stations of the Kisokaidō. This sheet hangs in the Cleveland Museum of Art."
     ],
-    "fact": "um 1835–1838. Cleveland Museum of Art."
+    "fact": "c. 1835–1838. Cleveland Museum of Art."
   },
   "hgks26": {
     "text": [
       "At Mochizuki tall pines stand under a bright moon; the name of the station means “full moon.” Travellers and horses move on the road in the moonlight.",
       "The sheet is one of the best-known moon views of the Kisokaidō. It is held by the National Diet Library in Tokyo."
     ],
-    "fact": "um 1835–1838. National Diet Library, Tokyo."
+    "fact": "c. 1835–1838. National Diet Library, Tokyo."
   },
   "hgks28": {
     "text": [
       "A full moon stands over a long wooden bridge; travellers cross the river, and on the near bank people and a horse pass houses. A large pine divides the scene.",
       "Nagakubo is regarded as one of the principal sheets of the Kisokaidō series. This impression, of about 1835–1836, hangs in the Cleveland Museum of Art."
     ],
-    "fact": "um 1835–1838. Cleveland Museum of Art."
+    "fact": "c. 1835–1838. Cleveland Museum of Art."
   },
   "hgks29": {
     "text": [
       "Deep snow lies on the Wada pass; the road climbs steeply between white slopes and dark trees, and travellers struggle up the pass.",
       "The snow scene at the Wada pass is one of the best-known sheets of the Kisokaidō. It is held by the National Diet Library in Tokyo."
     ],
-    "fact": "um 1835–1838. National Diet Library, Tokyo."
+    "fact": "c. 1835–1838. National Diet Library, Tokyo."
   },
   "hgks30": {
     "text": [
       "Shimosuwa lies on Lake Suwa, one of the lower stations after the high passes. The sheet shows the station by the lake in Shinano.",
       "Hiroshige designs Shimosuwa for the Kisokaidō series; a version of 1835 hangs in the Cleveland Museum of Art."
     ],
-    "fact": "um 1835–1838. Cleveland Museum of Art."
+    "fact": "c. 1835–1838. Cleveland Museum of Art."
   },
   "hgks32": {
     "text": [
       "By the river at Seba, weeping willows stand in the evening light; two men pole a loaded skiff, and the sun sits red over the flat bank.",
       "Seba is regarded as one of the finest sheets in the whole Kisokaidō series. This impression is held by the Library of Congress in Washington."
     ],
-    "fact": "um 1835–1838. Library of Congress, Washington."
+    "fact": "c. 1835–1838. Library of Congress, Washington."
   },
   "hgks37": {
     "text": [
       "At Miyanokoshi the moon hangs over the river and the trees of the station in the Kiso mountains. Travellers move along the bank in the moonlight.",
       "The sheet belongs to Hiroshige’s stations of the Kisokaidō and is held by the National Diet Library in Tokyo."
     ],
-    "fact": "um 1835–1838. National Diet Library, Tokyo."
+    "fact": "c. 1835–1838. National Diet Library, Tokyo."
   },
   "hgks38": {
     "text": [
       "Kiso-Fukushima is one of the principal checkpoint stations of the inland road, in the narrow valley of the Kiso River. The sheet shows the post station under trees, with travellers on the road.",
       "Hiroshige designs Fukushima for the Kisokaidō series. The sheet is held by the National Diet Library in Tokyo."
     ],
-    "fact": "um 1835–1838. National Diet Library, Tokyo."
+    "fact": "c. 1835–1838. National Diet Library, Tokyo."
   },
   "hgks40": {
     "text": [
       "At Suhara a sudden rain surprises the travellers; umbrellas and hats tip, and the trees stand wet over the road.",
       "The rain sheet of Suhara is one of the best-known weather views of the Kisokaidō. This version hangs in the Cleveland Museum of Art."
     ],
-    "fact": "um 1835–1838. Cleveland Museum of Art."
+    "fact": "c. 1835–1838. Cleveland Museum of Art."
   },
   "hgks43": {
     "text": [
       "Tsumago lies in the narrow Kiso valley, one of the best-known post stations of the inland road. The sheet shows the station in the mountain landscape, with travellers on the way.",
       "Hiroshige designs Tsumago for the series of the 69 Stations. The sheet is held by the National Diet Library in Tokyo."
     ],
-    "fact": "um 1835–1838. National Diet Library, Tokyo."
+    "fact": "c. 1835–1838. National Diet Library, Tokyo."
   },
   "hgks47": {
     "text": [
       "Heavy snow lies over the station of Ōi; travellers struggle through the white landscape, and houses and trees sink in the storm.",
       "The snow sheet of Ōi is one of the principal works of the Kisokaidō series. It is held by the National Diet Library in Tokyo."
     ],
-    "fact": "um 1835–1838. National Diet Library, Tokyo."
+    "fact": "c. 1835–1838. National Diet Library, Tokyo."
   },
   "hgks68": {
     "text": [
       "Moriyama already lies near Lake Biwa, towards the end of the Kisokaidō and the approach to Ōtsu and Kyōto. The sheet shows the station in the open, lower landscape.",
       "With stations such as Moriyama, Hiroshige brings the inland road back towards the region of Lake Biwa. The sheet is held by the National Diet Library in Tokyo."
     ],
-    "fact": "um 1835–1838. National Diet Library, Tokyo."
+    "fact": "c. 1835–1838. National Diet Library, Tokyo."
   },
   "hgrk_hida": {
     "text": [

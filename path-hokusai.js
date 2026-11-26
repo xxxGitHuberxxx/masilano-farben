@@ -30,28 +30,12 @@
     "source": "Wikimedia Commons: «高根山与一右ェ門 千田川吉五郎-The Sumo Wrestlers Takaneyama Yoichiemon and Sendagawa Kichigorō MET DP148842.jpg», CC0 (gemeinfrei)"
   },
   {
-    "id": "sorinets",
-    "title": "Frauen betrachten Fischer mit Netzen",
-    "artist": "Katsushika Hokusai",
-    "year": "um 1794–1798",
-    "museum": "Musée Guimet, Paris (Sammlung Camondo)",
-    "source": "Wikimedia Commons: «Women contemplating fishermen with nets-IMG 9297.jpg», gemeinfrei (Public Domain)"
-  },
-  {
     "id": "dyers",
     "title": "Färber bei der Arbeit",
     "artist": "Katsushika Hokusai",
     "year": "1795",
     "museum": "Cleveland Museum of Art",
     "source": "Wikimedia Commons: «Katsushika Hokusai - Dyers at Work - 1920.525 - Cleveland Museum of Art.jpg», CC0 (gemeinfrei)"
-  },
-  {
-    "id": "soritable",
-    "title": "Frau am Maltisch",
-    "artist": "Katsushika Hokusai",
-    "year": "1799",
-    "museum": "Musée Guimet, Paris (Sammlung Camondo)",
-    "source": "Wikimedia Commons: «Woman near a painting table-IMG 9346.JPG», gemeinfrei (Public Domain)"
   },
   {
     "id": "fujisuri",
@@ -426,7 +410,7 @@
   "intro": "Reise mit Katsushika Hokusai durch die erste Hälfte seines Weges: von der Kindheit in Edo und der Lehre bei Katsukawa Shunshō über neue Namen, Surimono und frühe Ansichten der Stadt bis zu den «Sechsunddreissig Ansichten des Berges Fuji» – zur Grossen Welle und zum Roten Fuji. Kurze Stationen, Bilder zum Ausmalen und eine Stimme aus seiner eigenen Nachschrift. Dieser erste Teil reicht bis um 1832.",
   "ending": [
     "Die «Sechsunddreissig Ansichten des Berges Fuji» erscheinen um 1830 bis 1832 beim Verleger Nishimuraya Yohachi. Aus sechsunddreissig Blättern werden mit zehn weiteren sechsundvierzig. Das Preussischblau und der immer wieder neu gesehene Berg prägen die Folge.",
-    "Zwei Jahre später, 1834, schreibt Hokusai in der Nachschrift zum ersten Band der «Hundert Ansichten des Berges Fuji» (Fugaku Hyakkei): «Seit meinem sechsten Jahr habe ich die Gewohnheit, die Gestalt der Dinge nachzubilden. Seit meinem fünfzigsten Jahr habe ich oft Bilder herausgegeben, aber was ich vor meinem siebzigsten Jahr gezeichnet habe, ist wahrhaftig nichts, das man gelten lassen könnte. Mit dreiundsiebzig habe ich ein wenig das Gerippe der Vögel, Tiere, Insekten und Fische und das Wachsen der Pflanzen begriffen. Darum will ich mit sechsundachtzig noch weiter kommen, mit neunzig die Sache noch tiefer erfassen, mit hundert wirklich das Wunderbare erreichen – und mit hundertzehn soll jeder Punkt und jeder Strich lebendig sein. Mögen Herren von langem Leben sehen, dass meine Worte nicht leere Einbildung sind.»",
+    "Zwei Jahre später, 1834, schreibt Hokusai in der Nachschrift zum ersten Band der «Hundert Ansichten des Berges Fuji» (Fugaku Hyakkei): «… Darum will ich mit sechsundachtzig noch weiter kommen, mit neunzig die Sache noch tiefer erfassen, mit hundert wirklich das Wunderbare erreichen – und mit hundertzehn soll jeder Punkt und jeder Strich lebendig sein.»",
     "Der Weg geht weiter. Es folgen die Wasserfälle der Provinzen, die Brücken, die hundert Ansichten des Fuji und die späten Jahre in Edo. Hokusai stirbt 1849 – davon erzählt der nächste Teil."
   ],
   "epilogue": "Um 1830 bis 1832 erscheinen die «Sechsunddreissig Ansichten des Berges Fuji» bei Nishimuraya Yohachi; mit zehn weiteren Blättern werden es sechsundvierzig. 1834 schreibt Hokusai in der Nachschrift zu den «Hundert Ansichten des Berges Fuji» von einem Leben, das erst mit siebzig zu beginnen scheint. Wasserfälle, Brücken und die späten Jahre folgen im nächsten Teil.",
@@ -494,28 +478,12 @@
       ],
       "works": [
         {
-          "pid": "sorinets",
-          "text": [
-            "Frauen sitzen auf roten Matten an einem offenen Raum und blicken auf Fischer mit Netzen im Wasser.",
-            "Das Surimono ist mit «Sōri ga» signiert – also in den Jahren, in denen Hokusai den Namen Tawaraya Sōri trägt, um 1794 bis 1798."
-          ],
-          "fact": "Sammlung Isaac de Camondo, 1911 dem Museum vermacht, Inventar EO 1833. Musée Guimet, Paris."
-        },
-        {
           "pid": "dyers",
           "text": [
             "In einer langen, schmalen Szene hängen Bahnen Stoff zum Trocknen. Die Färber bewegen sich dazwischen, die Farben sind noch hell und zurückhaltend.",
             "Das Cleveland Museum of Art datiert das Blatt auf 1795, in die Sōri-Jahre."
           ],
           "fact": "«Dyers at Work», Cleveland Museum of Art, 1795."
-        },
-        {
-          "pid": "soritable",
-          "text": [
-            "Eine Frau steht an einem Maltisch, Pinsel und Papier liegen bereit. Gedichte stehen am Rand des Blattes.",
-            "Signiert ist es «Sōri aratame Hokusai ga» – «Sōri, geändert zu Hokusai». Das Jahr 1799 hält den Namenswechsel fest."
-          ],
-          "fact": "Privates Surimono mit Kyōka-Versen, Sammlung Camondo, Musée Guimet, Paris, 1799."
         },
         {
           "pid": "fujisuri",

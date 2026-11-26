@@ -21,10 +21,6 @@
     "title": "The Golden Knight",
     "museum": "Aichi Prefectural Museum of Art, Nagoya"
   },
-  "goldapple": {
-    "title": "Golden Apple Tree",
-    "museum": "Historical photograph; the original burned in 1945 at Immendorf Castle"
-  },
   "birkforest": {
     "title": "Birch Forest",
     "museum": "Private collection"
@@ -149,17 +145,9 @@
     "title": "Apple Tree II",
     "museum": "Collection not established"
   },
-  "malcesine": {
-    "title": "Malcesine on Lake Garda",
-    "museum": "Historical photograph; the original burned in 1945 at Immendorf Castle"
-  },
   "cassone": {
     "title": "Church in Cassone",
     "museum": "Private collection"
-  },
-  "italygarden": {
-    "title": "Italian Garden Landscape",
-    "museum": "Kunsthaus Zug"
   },
   "unterach": {
     "title": "Houses in Unterach am Attersee",
@@ -209,10 +197,6 @@
     "title": "The Dancer",
     "museum": "Neue Galerie, New York"
   },
-  "riamunk3": {
-    "title": "Portrait of Ria Munk III",
-    "museum": "Private collection"
-  },
   "deathfig": {
     "title": "Death and Life (detail: Death)",
     "museum": "Leopold Museum, Vienna"
@@ -236,10 +220,6 @@
   "ladyhead": {
     "title": "Head of a Woman",
     "museum": "LENTOS Kunstmuseum Linz"
-  },
-  "ladypiacenza": {
-    "title": "Portrait of a Lady",
-    "museum": "Galleria d’Arte Moderna Ricci Oddi, Piacenza"
   },
   "ladywhite": {
     "title": "Lady in White",
@@ -303,7 +283,7 @@
     "mapLabel": "Flöge",
     "intro": [
       "On 1 July 1904 Emilie, Helene and Pauline Flöge found the fashion salon “Schwestern Flöge” in the Casa Piccola on the Mariahilfer Strasse. The rooms are designed by Josef Hoffmann and Koloman Moser.",
-      "Klimt still spends the summers with the Flöge family at the Attersee. In 1909 he travels to Spain and writes from Toledo: “El Greco is magnificent!” In 1915 the portrait of Emilie Flöge’s mother Barbara appears."
+      "Klimt still spends the summers with the Flöge family at the Attersee. In 1909 he travels to Spain and writes from Toledo: “Greco too is magnificent!” In 1915 the portrait of Emilie Flöge’s mother Barbara appears."
     ]
   },
   "klimtkammer": {
@@ -368,13 +348,6 @@
       "It hangs in the Aichi Prefectural Museum of Art in Nagoya. The golden ground and the ornamental armour already belong to the years after the journey to Ravenna."
     ],
     "fact": "Oil, tempera and gold leaf on canvas, 1903. Aichi Prefectural Museum of Art, Nagoya."
-  },
-  "goldapple": {
-    "text": [
-      "An apple tree stands as a dense, gold-threaded ornament against a dark ground, the fruit like disc-shaped signs. The picture dates from 1903.",
-      "The original burns in 1945 at Immendorf Castle in Lower Austria, where it had been stored. What survives includes this historical photograph."
-    ],
-    "fact": "Oil and gold on canvas, 1903. Historical photograph; the original burned at Immendorf Castle in 1945."
   },
   "birkforest": {
     "text": [
@@ -520,12 +493,12 @@
   "featherboa": {
     "text": [
       "A woman with a large hat and a feather boa looks sideways out of the picture, the face close and bright against a dark ground. The portrait dates from 1909.",
-      "It is in a private collection. In the same year Klimt travels to Spain and writes to Emilie Flöge from Toledo: “El Greco is magnificent!”"
+      "It is in a private collection. In the same year Klimt travels to Spain and writes to Emilie Flöge from Toledo: “Greco too is magnificent!”"
     ],
     "fact": "Oil on canvas, 1909. Private collection.",
     "quote": {
-      "text": "El Greco is magnificent!",
-      "cite": "Postcard to Emilie Flöge, Toledo, 1909"
+      "text": "Have thought of you most vividly – you would be delighted with me. Greco too is magnificent!",
+      "cite": "Card to Emilie Flöge, Toledo, autumn 1909"
     }
   },
   "barbarafloege": {
@@ -605,26 +578,12 @@
     ],
     "fact": "Oil on canvas, about 1916. Collection not established."
   },
-  "malcesine": {
-    "text": [
-      "The town of Malcesine lies on the steep shore of Lake Garda, houses and cypresses above the water, the mountains behind. The picture dates from 1913, from a journey to the lake.",
-      "The original burns in 1945 at Immendorf Castle in Lower Austria. What survives includes this historical photograph."
-    ],
-    "fact": "Oil on canvas, 1913. Historical photograph; the original burned at Immendorf Castle in 1945."
-  },
   "cassone": {
     "text": [
       "The church of Cassone stands above Lake Garda, the houses of the village tight around it, the water and the slopes in clear fields of colour. The picture dates from 1913.",
       "Cassone lies on the eastern shore of the lake, not far from Malcesine. The picture is in a private collection."
     ],
     "fact": "Oil on canvas, 1913. Private collection."
-  },
-  "italygarden": {
-    "text": [
-      "An Italian garden appears in dense bushes, blossoms and paths, without a wide view. The picture dates from 1913, the year of the journey to Lake Garda.",
-      "It belongs to the Kunsthaus Zug. As in the garden pictures at the Attersee, the vegetation becomes an ornamental carpet."
-    ],
-    "fact": "Oil on canvas, 1913. Kunsthaus Zug."
   },
   "unterach": {
     "text": [
@@ -710,13 +669,6 @@
     ],
     "fact": "Oil on canvas, about 1916–1917. Neue Galerie, New York."
   },
-  "riamunk3": {
-    "text": [
-      "Ria Munk appears in a floral dress against a dense, colourful ground; the portrait of 1917 remains unfinished. Maria (“Ria”) Munk dies in 1911, still young.",
-      "After her death Klimt paints several portraits, including this late, unfinished one. It is in a private collection."
-    ],
-    "fact": "Oil on canvas, 1917, unfinished. Private collection."
-  },
   "deathfig": {
     "text": [
       "Death stands as a slim, dark figure with a skull and a pattern of crosses, the gaze turned toward the other half of the picture. The detail shows only this figure from “Death and Life”.",
@@ -759,13 +711,6 @@
     ],
     "fact": "Oil on canvas, 1917. LENTOS Kunstmuseum Linz."
   },
-  "ladypiacenza": {
-    "text": [
-      "A lady in a hat looks out of the picture, the face quiet, the ground in broken, light tones. The portrait dates from 1917.",
-      "It belongs to the Galleria d’Arte Moderna Ricci Oddi in Piacenza."
-    ],
-    "fact": "Oil on canvas, 1917. Galleria d’Arte Moderna Ricci Oddi, Piacenza."
-  },
   "ladywhite": {
     "text": [
       "A woman in a white dress sits turned toward the viewer, large parts of the surface remaining open. The portrait from the years 1917 to 1918 remains unfinished.",
@@ -774,7 +719,7 @@
     "fact": "Oil on canvas, about 1917–1918, unfinished. Österreichische Galerie Belvedere, Vienna.",
     "quote": {
       "text": "…a greeting from the innermost heart, and [I] wish you a most, most happy New Year – as we both so urgently need it.",
-      "cite": "Letter to Emilie Flöge, Winkelsdorf, 30 December 1917"
+      "cite": "Correspondence card to Emilie Flöge, Winkelsdorf, 30 December 1917"
     }
   },
   "kiss": {

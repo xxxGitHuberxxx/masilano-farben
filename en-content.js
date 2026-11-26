@@ -158,16 +158,6 @@ window.EN = {
         "In 1715 the painting was trimmed on all sides so that it would fit the intended wall in the Amsterdam town hall."
       ]
     },
-    "venus": {
-      "title": "The Birth of Venus",
-      "museum": "Uffizi Gallery, Florence",
-      "technique": "Tempera on canvas. The colours were mixed with egg as a binder.",
-      "story": "Venus, the goddess of love, stands on a shell. On the left the wind gods blow her to the shore; on the right a woman waits with a cloak full of flowers.",
-      "facts": [
-        "In the sixteenth century the picture hung in a villa of the Medici, the famous Florentine family. Who commissioned it is still not known for certain.",
-        "Botticelli painted on canvas. At that time most paintings in Florence were still made on wooden panels."
-      ]
-    },
     "sunrise": {
       "title": "Impression, Sunrise",
       "museum": "Musée Marmottan Monet, Paris",
@@ -298,16 +288,6 @@ window.EN = {
         "On today’s 20-pound note you see Turner and, in the background, the Temeraire."
       ]
     },
-    "mondrian": {
-      "title": "Composition with Red, Blue and Yellow",
-      "museum": "Kunsthaus Zürich",
-      "technique": "Oil on canvas. Only horizontal and vertical lines, plus the primary colours red, blue and yellow as well as black and white.",
-      "story": "Mondrian reduced painting to the essentials: a large red rectangle, plus a blue and a yellow field, held by a black grid. The picture was made in 1930 in Paris, at the request of the Zürich architect Alfred Roth.",
-      "facts": [
-        "Mondrian called this style “Neoplasticism”. With it he wanted to show a clear, general harmony, not a landscape or a person.",
-        "Today the picture hangs in the Kunsthaus Zürich. Roth gave it to the museum in 1987."
-      ]
-    },
     "whistler": {
       "title": "Arrangement in Grey and Black No. 1",
       "museum": "Musée d’Orsay, Paris",
@@ -336,16 +316,6 @@ window.EN = {
       "facts": [
         "Rousseau was self-taught and had never attended an art academy. He had not seen the desert and the lion himself, but invented them.",
         "In his lifetime he was often smiled at. Today the picture hangs in the Museum of Modern Art in New York."
-      ]
-    },
-    "senecio": {
-      "title": "Senecio",
-      "museum": "Kunstmuseum Basel",
-      "technique": "Oil on gauze, mounted on cardboard. The face is built from simple geometric planes.",
-      "story": "A face of circles, rectangles and warm colours, almost like a mask or a child’s drawing. Klee took the title “Senecio” (Latin for “old man”) from a plant genus, the ragwort.",
-      "facts": [
-        "Klee was born in 1879 in Münchenbuchsee near Bern. He taught at the Bauhaus and is regarded as one of the most important artists of modernism.",
-        "The picture hangs in the Kunstmuseum Basel, not far from Klee’s Swiss home."
       ]
     },
     "milkmaid": {
@@ -386,16 +356,6 @@ window.EN = {
       "facts": [
         "The woman in the red dress points at something in the abyss, the man in the middle bends far down, the third looks into the distance.",
         "The painting belongs to the Oskar Reinhart Collection in Winterthur."
-      ]
-    },
-    "gothic": {
-      "title": "American Gothic",
-      "museum": "The Art Institute of Chicago",
-      "technique": "Oil on fibreboard, with smooth, clear forms and many fine details.",
-      "story": "A farmer with a pitchfork and a woman stand in front of a wooden house with a pointed “Gothic” window. Wood painted the picture in Iowa, after a house he had seen in the small town of Eldon.",
-      "facts": [
-        "Wood’s sister Nan and his dentist served as models. They were not meant to represent a particular married couple, but a type.",
-        "The title refers to the window in the style of “Carpenter Gothic”, an American wooden Gothic."
       ]
     },
     "macke": {
@@ -466,16 +426,6 @@ window.EN = {
       "facts": [
         "The picture was seen in 1874 at the first Impressionist exhibition in Paris.",
         "Monet later painted further poppy fields, among them at Vétheuil and at Giverny."
-      ]
-    },
-    "scream": {
-      "title": "The Scream",
-      "museum": "Nasjonalmuseet, Oslo",
-      "technique": "Oil, tempera and pastel on cardboard, with wave-like lines in sky, water and figure.",
-      "story": "A figure stands on a bridge, holds its ears and opens its mouth. The sky is blood-red. Munch wrote that on a walk at sunset he had heard a scream pass through nature.",
-      "facts": [
-        "Of this motif there are several versions. This is the famous one of 1893, today in the National Museum in Oslo.",
-        "In the background two dark figures walk calmly on, as if they noticed nothing of the inner shock."
       ]
     },
     "liberty": {
@@ -569,13 +519,13 @@ window.EN = {
       ]
     },
     "avemaria": {
-      "title": "Ave Maria during the Crossing",
-      "museum": "Segantini Museum, St. Moritz",
+      "title": "Ave Maria Crossing the Lake",
+      "museum": "Segantini Museum, St. Moritz – on permanent loan from the Otto Fischbacher Giovanni Segantini Foundation",
       "technique": "Oil on canvas. Segantini set the colour in fine strokes lying side by side.",
-      "story": "A shepherd and a woman glide in a boat across a still mountain lake, the sheep in the bow, the sky already evening. In this moment they fold their hands for the Ave Maria.",
+      "story": "A shepherd and a woman glide in a boat across a still lake, the sheep in the bow, the sky already evening. In this moment they fold their hands for the Ave Maria.",
       "facts": [
-        "Segantini painted the motif twice. The first version of 1882 won a gold medal at the 1883 world’s fair in Amsterdam; in this second version of 1886 he used the Divisionist technique for the first time.",
-        "He lived high up in the Engadine and painted peasant life in the Alps with great calm and precision."
+        "Segantini painted the motif twice. The first version of 1882 won a gold medal at the 1883 world’s fair in Amsterdam. According to the Segantini scholar Annie-Paule Quinsac, the second version of 1886–1888 is his first purely Divisionist painting.",
+        "He lived in Graubünden, in his last years high up in the Engadine, and painted peasant life in the Alps with great calm and precision."
       ]
     },
     "naeherin": {
@@ -606,16 +556,6 @@ window.EN = {
       "facts": [
         "The picture seemed political at the time: some saw in it an accusation, because the poorest are searching so laboriously for remnants.",
         "Millet knew country life from his own youth in Normandy. He painted work not as folklore, but seriously."
-      ]
-    },
-    "maloja": {
-      "title": "Maloja in Winter",
-      "museum": "Private collection",
-      "technique": "Oil on canvas. Giacometti sets glowing colours in loose, Impressionist patches.",
-      "story": "Over the snow-covered village of Maloja in the Engadine stands a bright winter sky. Giovanni Giacometti, the father of Alberto, painted his home again and again, the Bergell and the Upper Engadine.",
-      "facts": [
-        "Giovanni Giacometti died in 1933. His pictures are therefore now in the public domain – unlike those of his famous son Alberto.",
-        "He was friends with Ferdinand Hodler and brought the light of the French Impressionists into the Graubünden landscape."
       ]
     },
     "delft": {
@@ -704,7 +644,7 @@ window.EN = {
       "technique": "Pastel on paper. Degas captures movement with loose, glowing strokes.",
       "story": "A dancer hovers on point, her head thrown back, her arm opened wide. Around her the stage and her colleagues blur – the gaze is only for this one, bright moment.",
       "facts": [
-        "The model was probably the Spanish dancer Rosita Mauri.",
+        "The identity of the dancer depicted has not been established beyond doubt.",
         "Degas often sat in the opera, not only in the box, but at the side and behind the scenes, where the work remains visible."
       ]
     },
@@ -878,16 +818,6 @@ window.EN = {
         "The picture was long in private hands and shows the “other” Klimt: without gold, but just as dense and festive."
       ]
     },
-    "primavera": {
-      "title": "Spring (La Primavera)",
-      "museum": "Galleria degli Uffizi, Florence",
-      "technique": "Tempera on wood. Botticelli sets the figures in a grove of orange trees and countless blossoms.",
-      "story": "In a shady grove nine figures of spring dance and walk: Mercury on the left, the three Graces, Venus in the middle, the spring wind Zephyr on the right, pursuing the nymph Chloris. Above them all hovers Cupid.",
-      "facts": [
-        "The picture was probably made for the Medici family in Florence and is one of the most famous of the Early Renaissance.",
-        "Botticelli painted around 500 individual plants, many so precisely that botanists can still identify them today."
-      ]
-    },
     "terrace": {
       "title": "Two Sisters on the Terrace",
       "museum": "The Art Institute of Chicago",
@@ -936,7 +866,7 @@ window.EN = {
     },
     "foxes": {
       "title": "The Foxes",
-      "museum": "Private collection"
+      "museum": "Current location not publicly confirmed"
     },
     "fate": {
       "title": "Fate of the Animals",
@@ -1038,10 +968,6 @@ window.EN = {
       "title": "The State Lottery Office",
       "museum": "Van Gogh Museum, Amsterdam"
     },
-    "laundry": {
-      "title": "Woman Spreading Out Laundry",
-      "museum": "Private collection"
-    },
     "bulbfields": {
       "title": "Bulb Fields in Holland",
       "museum": "National Gallery of Art, Washington"
@@ -1069,10 +995,6 @@ window.EN = {
     "cottages83": {
       "title": "Cottages",
       "museum": "Van Gogh Museum, Amsterdam"
-    },
-    "twilightch": {
-      "title": "Landscape with a Church at Dusk",
-      "museum": "Private collection"
     },
     "drawbridge": {
       "title": "The Drawbridge at Nieuw-Amsterdam",
@@ -1595,8 +1517,8 @@ window.EN = {
       "museum": "Minneapolis Institute of Art"
     },
     "olivepick": {
-      "title": "Women Picking Olives",
-      "museum": "Metropolitan Museum of Art, New York"
+      "title": "The Olive Orchard (Women Picking Olives)",
+      "museum": "National Gallery of Art, Washington"
     },
     "moonrise": {
       "title": "Evening Landscape with Rising Moon",
@@ -1897,7 +1819,7 @@ window.EN = {
             "In these months he is thinking not only of single animals, but of the great fabric of nature. At the same time he helps in Berlin to prepare the “First German Autumn Salon”, a large international exhibition of modern art.",
             "The “Foxes” belong to the pictures in which the animal is already almost becoming pure form."
           ],
-          "fact": "The picture hung for a long time in the Museum Kunstpalast in Düsseldorf. Today it is in a private collection."
+          "fact": "From 1962 the picture belonged to the Museum Kunstpalast in Düsseldorf. In 2022 the city returned it to the heirs of the Jewish collector Kurt Grawi; in March 2022 it was auctioned at Christie’s in London. Its current location has not been publicly confirmed."
         },
         "fate": {
           "title": "A dark foreboding",
@@ -2234,7 +2156,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum. The Boulevard de Clichy lay below the apartment in the Rue Lepic and was one of the busy axes of the quarter.",
       "quote": {
-        "text": "In Antwerp I did not even know what the impressionists were, now I have seen them and though not being one of the club, yet I have much admired certain impressionist pictures – de Gas, nude figure – Claude Monet, landscape."
+        "text": "In Antwerp I did not even know what the impressionists were, now I have seen them and though not being one of the club, yet I have much admired certain impressionist pictures – de Gas, nude figure – Claude Monet, landscape.",
+        "cite": "Letter 569, Paris, September or October 1886, to Horace Mann Livens"
       }
     },
     "theoview": {
@@ -2300,7 +2223,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum. The identification as Theo rests on comparison with known portraits of the brother; earlier it ran as a self-portrait.",
       "quote": {
-        "text": "For my part I find that Theo's appearance in the past year has, on the contrary, gained a great deal in distinction. One has to be strong to endure life in Paris for so many years as he has."
+        "text": "As for me, I find that over the last year Theo’s bearing has, on the contrary, become far more distinguished. It takes strength to hold out in Paris for as many years as he has.",
+        "cite": "Letter 574, Paris, late October 1887, to Willemien (Wil), own translation from the Dutch"
       }
     },
     "walkseine": {
@@ -2310,7 +2234,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum. Asnières lay on the Seine, reachable by train and on foot; many painters of the time worked there in the open air.",
       "quote": {
-        "text": "Last year I painted almost nothing but flowers, to get used to colours other than grey, namely pink, soft or strong green, light blue, violet, yellow, orange, a beautiful red. And when I painted landscape at Asnières this summer I saw more colour in it than before."
+        "text": "Last year I painted hardly anything except flowers, so as to accustom myself to colours other than grey: pink, green both soft and bright, pale blue, violet, yellow, orange, a fine red. And when I was painting landscapes at Asnières over the summer, I found far more colour in them than before.",
+        "cite": "Letter 574, Paris, late October 1887, to Willemien (Wil), own translation from the Dutch"
       }
     },
     "fishing": {
@@ -2418,7 +2343,8 @@ window.EN = {
       ],
       "fact": "The picture hangs in the Musée d’Orsay in Paris. The crown imperial (Fritillaria imperialis) was a striking studio motif; the copper kettle throws their orange back.",
       "quote": {
-        "text": "I have made a series of colour studies in painting simply flowers, red poppies, blue corn flowers and myosotys, white and rose roses, yellow chrysantemums – seeking oppositions of blue with orange, red & green, yellow and violet, seeking LES TONS ROMPUS ET NEUTRES to harmonise brutal extremes."
+        "text": "I have made a series of colour studies in painting simply flowers, red poppies, blue corn flowers and myosotys, white and rose roses, yellow chrysantemums – seeking oppositions of blue with orange, red & green, yellow and violet, seeking LES TONS ROMPUS ET NEUTRES to harmonise brutal extremes.",
+        "cite": "Letter 569, Paris, September or October 1886, to Horace Mann Livens"
       }
     },
     "cornflowers": {
@@ -2435,7 +2361,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Museum of Modern Art in New York and is made in June 1889.",
       "quote": {
-        "text": "Now I have a landscape with olive trees and also a new study of a starry sky."
+        "text": "Lastly, there is a landscape of olive trees, and a fresh study of a starry sky as well.",
+        "cite": "Letter 782, Saint-Rémy-de-Provence, on or about 18 June 1889, to Theo, own translation from the French"
       }
     },
     "olivekm": {
@@ -2452,7 +2379,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Nelson-Atkins Museum of Art in Kansas City and is made in June 1889.",
       "quote": {
-        "text": "I have just finished a landscape that represents an olive grove, with a grey green more or less like that of the willows, their violet cast shadows on the sunny sand."
+        "text": "I have just completed a landscape of an olive orchard: grey foliage, much like that of willows, and the trees throw violet shadows onto the sunlit sand.",
+        "cite": "Letter 780, Saint-Rémy-de-Provence, 16 June 1889, to Willemien (Wil), own translation from the French"
       }
     },
     "olivesun": {
@@ -2462,17 +2390,19 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Minneapolis Institute of Art and is made in November 1889.",
       "quote": {
-        "text": "The olive trees, on the other hand, are very distinctive, and I am struggling to catch that. It is silver, now more bluish, now more greenish, bronzed, whitish, on yellow, pink, violet or orange ground, down to dull red ochre. But very difficult, very difficult."
+        "text": "The olive trees, by contrast, have a strong character of their own, and I am wrestling to capture it. They are silver, sometimes bluer, sometimes tinged with green, bronze, turning white, against soil that is yellow, pink, purplish or orangey, down to a muted red ochre. But it is hard, very hard.",
+        "cite": "Letter 806, Saint-Rémy-de-Provence, 28 September 1889, to Theo, own translation from the French"
       }
     },
     "olivepick": {
       "text": [
-        "Three women pick olives under the trees, the crowns like yellow and green clouds. Vincent takes up again the figure that he often lacks in the asylum.",
+        "Three women pick olives under the trees, one standing on a ladder; the crowns are green and bluish, the sky pale pink. Vincent takes up again the figure that he often lacks in the asylum.",
         "He writes to Bernard that the silver on an orange or violet ground under the great blue sky has hardly been done yet – unlike apple trees or willows."
       ],
-      "fact": "The picture belongs to the Metropolitan Museum of Art in New York and is made in December 1889.",
+      "fact": "This version of 1889 belongs to the National Gallery of Art in Washington. Another version of the motif is owned by the Metropolitan Museum of Art in New York.",
       "quote": {
-        "text": "The olive trees here, my dear fellow, that would be the thing for you. [...] It is silver on an orange or violet ground under the great blue sky."
+        "text": "The olive trees here, my dear fellow, that would be the thing for you. [...] It is silver on an orange or violet ground under the great blue sky.",
+        "cite": "Letter 809, Saint-Rémy, on or about 8 October 1889, to Emile Bernard"
       }
     },
     "moonrise": {
@@ -2517,7 +2447,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum in Amsterdam and is made in September 1889.",
       "quote": {
-        "text": "The Delacroix is a Pietà, that is a dead Christ with the Mater dolorosa. At the entrance of a grotto the exhausted body lies tilted, the hands forward on the left side, and the woman stands behind. It is an evening after the thunderstorm."
+        "text": "The Delacroix is a Pietà, meaning a dead Christ with the Mater Dolorosa. At the mouth of a cave the worn-out body lies slanting, hands reaching forward on the left, and the woman stands behind him. It is evening, after a storm.",
+        "cite": "Letter 804, Saint-Rémy-de-Provence, 19 September 1889, to Willemien (Wil), own translation from the French"
       }
     },
     "samaritan": {
@@ -2527,7 +2458,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Kröller-Müller Museum in Otterlo and is made in May 1890.",
       "quote": {
-        "text": "I am also going to copy the Good Samaritan by Delacroix."
+        "text": "I mean to copy Delacroix’s Good Samaritan too.",
+        "cite": "Letter 805, Saint-Rémy-de-Provence, on or about 20 September 1889, to Theo, own translation from the French"
       }
     },
     "noonrest": {
@@ -2537,7 +2469,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Musée d'Orsay in Paris and is made in January 1890.",
       "quote": {
-        "text": "I can assure you that it interests me enormously to make copies, and that, having no models at the moment, I shall still not lose sight of the figure."
+        "text": "Believe me, making copies interests me immensely, and since I have no models for the time being, it means I will not lose touch with the human figure all the same.",
+        "cite": "Letter 805, Saint-Rémy-de-Provence, on or about 20 September 1889, to Theo, own translation from the French"
       }
     },
     "firststeps": {
@@ -2554,7 +2487,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Kröller-Müller Museum in Otterlo and is made in October or November 1889.",
       "quote": {
-        "text": "I put the black and white of Delacroix or of Millet or after them before me as a motif. And then I improvise colour on it, not entirely as myself, of course, but by seeking memories of their pictures."
+        "text": "I set a black-and-white print of Delacroix or Millet, or one made after them, in front of me as my subject. Then I improvise colour over it – not entirely in my own manner, of course, but searching for memories of their paintings.",
+        "cite": "Letter 805, Saint-Rémy-de-Provence, on or about 20 September 1889, to Theo, own translation from the French"
       }
     },
     "lazarus": {
@@ -2599,7 +2533,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum in Amsterdam. Vincent Willem, the son of Theo and Jo, is born on 31 January 1890.",
       "quote": {
-        "text": "But after all the child is here – and as I write to his grandmother, I have these last few days begun to paint for him: a large sky-blue canvas on which flowering branches stand out."
+        "text": "Still, the outcome is that the child has arrived – and, as I am telling his grandmother, in the last few days I have started painting something for him: a big sky-blue canvas with blossoming branches set against it.",
+        "cite": "Letter 856, Saint-Rémy-de-Provence, 19 February 1890, to Willemien (Wil), own translation from the French"
       }
     },
     "irises90": {
@@ -2644,7 +2579,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Musée d'Orsay in Paris and is made in June 1890. It is the version that Gachet kept – not the later stolen second portrait.",
       "quote": {
-        "text": "Then I have found in Dr Gachet a ready-made friend, and something like a new brother – so much do we resemble each other physically and also mentally."
+        "text": "And in Dr Gachet I have found a friend straight away, something like a new brother would be – we are so alike in body, and in mind as well.",
+        "cite": "Letter 879, Auvers-sur-Oise, 5 June 1890, to Willemien (Wil), own translation from the French"
       }
     },
     "churchauvers": {
@@ -2654,7 +2590,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Musée d'Orsay in Paris and is made in June 1890.",
       "quote": {
-        "text": "With that I have a larger picture of the village church – an effect in which the building appears violet against a deep, simple sky of pure cobalt, the stained-glass windows appear like ultramarine-blue patches, the roof is violet and in part orange. In the foreground a little flowering greenery and sunny pink sand."
+        "text": "Besides that I have a larger painting of the village church: the building looks purplish against a sky of plain, deep, pure cobalt blue; the stained-glass windows read as patches of ultramarine; the roof is violet and partly orange. In front, a little flowering green and pink sand in the sun.",
+        "cite": "Letter 879, Auvers-sur-Oise, 5 June 1890, to Willemien (Wil), own translation from the French"
       }
     },
     "marguerite": {
@@ -2664,7 +2601,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Kunstmuseum Basel and is made in June 1890. Marguerite Gachet is then nineteen years old.",
       "quote": {
-        "text": "Yesterday and the day before I painted the portrait of Miss Gachet, which I hope you will see soon. The dress is pink, the wall in the background green with an orange point, the carpet red with a green point, the piano dark violet."
+        "text": "Yesterday and the day before, I painted Mademoiselle Gachet’s portrait, which I hope you will see before long. Her dress is pink; the wall behind is green dotted with orange, the carpet red dotted with green, the piano a deep violet.",
+        "cite": "Letter 893, Auvers-sur-Oise, 28 June 1890, to Theo, own translation from the French"
       }
     },
     "chaponval": {
@@ -2674,7 +2612,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Kunsthaus Zürich and is made in July 1890.",
       "quote": {
-        "text": "Auvers is very beautiful – among other things many old thatched roofs, which are becoming rare."
+        "text": "Auvers is very lovely – among other things there is plenty of old thatch, which is getting scarce.",
+        "cite": "Letter 873, Auvers-sur-Oise, 20 May 1890, to Theo and Jo, own translation from the French"
       }
     },
     "chestnut90": {
@@ -2691,7 +2630,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Musée d'Orsay in Paris and is made in June 1890.",
       "quote": {
-        "text": "Now I have a study of old thatched roofs, in the foreground a field of peas in flower and wheat, a hill as background."
+        "text": "At present I am working on a study of old thatched cottage roofs: in front, peas in flower and wheat; behind, a hillside.",
+        "cite": "Letter 874, Auvers-sur-Oise, on or about 21 May 1890, to Theo and Jo, own translation from the French"
       }
     },
     "daubigny": {
@@ -2701,7 +2641,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum in Amsterdam and is made in June and July 1890.",
       "quote": {
-        "text": "Now the third canvas is Daubigny's garden, a picture I have had in mind ever since I have been here."
+        "text": "The third canvas, then, is Daubigny’s garden, a subject I have been turning over in my mind since I came here.",
+        "cite": "Letter 898, Auvers-sur-Oise, on or about 10 July 1890, to Theo and Jo, own translation from the French"
       }
     },
     "wheatcloud": {
@@ -2711,7 +2652,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum in Amsterdam and is made in July 1890.",
       "quote": {
-        "text": "They are immense stretches of wheat under troubled skies, and I have not held back from trying to express sadness, extreme solitude."
+        "text": "They are vast expanses of wheat beneath turbulent skies, and I did not hesitate to try to convey sadness, utter loneliness.",
+        "cite": "Letter 898, Auvers-sur-Oise, on or about 10 July 1890, to Theo and Jo, own translation from the French"
       }
     },
     "rainauvers": {
@@ -2749,7 +2691,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum in Amsterdam and is made in July 1890.",
       "quote": {
-        "text": "They are immense stretches of wheat under troubled skies, and I have not held back from trying to express sadness, extreme solitude."
+        "text": "They are vast expanses of wheat beneath turbulent skies, and I did not hesitate to try to convey sadness, utter loneliness.",
+        "cite": "Letter 898, Auvers-sur-Oise, on or about 10 July 1890, to Theo and Jo, own translation from the French"
       }
     },
     "treeroots": {
@@ -2787,7 +2730,8 @@ window.EN = {
       ],
       "fact": "The picture hangs in the National Gallery in London. It is the same work as in the gallery and in the short Van Gogh story; progress in colouring counts in all places.",
       "quote": {
-        "text": "I am painting with the enthusiasm of a Marseillais eating bouillabaisse, which will not surprise you when it is a matter of painting large sunflowers. In the hope of living with Gauguin in a studio of our own, I want to make a decoration for the studio. Nothing but large sunflowers. The whole will thus be a symphony in blue and yellow."
+        "text": "I am painting with all the gusto of a man from Marseille tucking into bouillabaisse – no surprise to you, since the subject is big sunflowers. Hoping to share a studio of our own with Gauguin, I would like to decorate it. Nothing but big sunflowers.",
+        "cite": "Letter 666, Arles, 21 or 22 August 1888, to Theo, own translation from the French"
       }
     },
     "sunflowermunich": {
@@ -2825,7 +2769,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum and is made in November 1888.",
       "quote": {
-        "text": "Yesterday and today I have worked on the sower, which has been completely reworked. The sky is yellow and green, the ground violet and orange."
+        "text": "Yesterday and again today I was busy with the sower, which I have entirely redone. Sky yellow and green, earth violet and orange.",
+        "cite": "Letter 634, Arles, on or about 28 June 1888, to Theo, own translation from the French"
       }
     },
     "zouave": {
@@ -2835,7 +2780,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum. It is the half-length figure of the Zouave, painted in June 1888; a seated version is made at the same time.",
       "quote": {
-        "text": "At last I have a model – a Zouave – he is a fellow with a small face, a bull neck, a tiger's eye, and I began with a portrait and began another one again."
+        "text": "At last I have a model – a Zouave – he is a fellow with a small face, a bull neck, a tiger's eye, and I began with a portrait and began another one again.",
+        "cite": "Letter 629, Arles, 21 June 1888, to Theo"
       }
     },
     "mousme": {
@@ -2845,7 +2791,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the National Gallery of Art in Washington and is made in July 1888.",
       "quote": {
-        "text": "Now if you know what a “mousmé” is (you will know when you have read Madame Chrysanthème by Loti), I have just painted one."
+        "text": "Now, if you know what a ‘mousmé’ is – you will once you have read Loti’s Madame Chrysanthème – I have just painted one.",
+        "cite": "Letter 650, Arles, 29 July 1888, to Theo, own translation from the French"
       }
     },
     "roulin": {
@@ -2855,7 +2802,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Detroit Institute of Arts and is made in August 1888.",
       "quote": {
-        "text": "Now I am at work with another model, a postman in a blue uniform trimmed with gold, a large bearded, very Socratic face. A fierce republican like Père Tanguy. A man more interesting than many people."
+        "text": "I am now at work with a new model, a postman in blue uniform braided with gold, with a broad, bearded, thoroughly Socratic face. A passionate republican, like old Tanguy. A man more interesting than a good many people.",
+        "cite": "Letter 652, Arles, 31 July 1888, to Theo, own translation from the French"
       }
     },
     "escalier": {
@@ -2872,7 +2820,8 @@ window.EN = {
       ],
       "fact": "The picture hangs in the Musée d’Orsay in Paris and is made in September 1888.",
       "quote": {
-        "text": "I have one to begin with, the portrait of a young Belgian impressionist; I have painted him a little as a poet, the fine, nervous head standing out against a night sky of deep ultramarine with the sparkling of the stars."
+        "text": "To start with I have one: the portrait of a young Belgian Impressionist, whom I painted somewhat as a poet, his delicate, highly strung head set off against a deep ultramarine night sky glittering with stars.",
+        "cite": "Letter 678, Arles, 9 and on or about 14 September 1888, to Willemien (Wil), own translation from the French"
       }
     },
     "milliet": {
@@ -2882,7 +2831,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Kröller-Müller Museum and is made in September 1888.",
       "quote": {
-        "text": "I know a second lieutenant of the Zouaves here, named Milliet. I give him drawing lessons – with my perspective frame."
+        "text": "There is a Zouave sub-lieutenant here called Milliet whom I know. I am teaching him to draw – using my perspective frame.",
+        "cite": "Letter 628, Arles, on or about 19 June 1888, to Emile Bernard, own translation from the French"
       }
     },
     "armand": {
@@ -2906,7 +2856,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Kröller-Müller Museum. It is the same work as in the gallery and in the short Van Gogh story; progress in colouring counts in all places.",
       "quote": {
-        "text": "These last few days I have made a new picture, representing the outside of a café in the evening. On the terrace there are little figures of drinkers. A huge yellow lantern lights the terrace, the front, the pavement, and even casts a light on the paving stones of the street, which takes on a violet-pink tint. This is a night picture without black, nothing but beautiful blue and violet and green, and in this setting the illuminated square is coloured with pale sulphur, with lemon green."
+        "text": "In recent days I have painted a new picture showing a café from outside in the evening. Small figures sit drinking on the terrace. A huge yellow lantern lights up the terrace, the shopfront and the pavement, and even throws its light onto the cobbles of the street, which take on a pinkish violet. There you have a night painting without any black, done with nothing but fine blue, violet and green, and amid all this the lit square is tinted pale sulphur and lime green.",
+        "cite": "Letter 678, Arles, 9 and on or about 14 September 1888, to Willemien (Wil), own translation from the French"
       }
     },
     "nightcafe": {
@@ -2916,7 +2867,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Yale University Art Gallery in New Haven and is made in September 1888.",
       "quote": {
-        "text": "Often it seems to me that the night is much more alive and richly coloured than the day. I have tried to express the terrible human passions with the red and the green. The room is blood red and dull yellow, a green billiard table in the middle, four lemon-yellow lamps with an orange and green radiance."
+        "text": "It often strikes me that night is far more alive and more richly coloured than day. With the red and the green I sought to express the dreadful passions of humanity. The room is blood-red and dull yellow, with a green billiard table in the middle and four lemon-yellow lamps giving off an orange and green radiance.",
+        "cite": "Letter 676, Arles, 8 September 1888, to Theo, own translation from the French"
       }
     },
     "rhone": {
@@ -2926,7 +2878,8 @@ window.EN = {
       ],
       "fact": "The picture hangs in the Musée d’Orsay in Paris and is made in September 1888. It is a different work from The Starry Night of 1889.",
       "quote": {
-        "text": "Enclosed a little sketch of a square size 30 canvas – at last the starry sky, painted at night itself, under a gas lamp. The sky is blue-green, the water is royal blue, the ground is mauve. The town is blue and violet. The gas is yellow, and its reflections are russet gold and go down as far as bronze-green. On the blue-green field of the sky the Great Bear has a green and pink sparkling, whose discreet paleness contrasts with the brutal gold of the gas. In the foreground two coloured figures of lovers."
+        "text": "I enclose a small sketch of a square size-30 canvas – the starry sky at last, painted by night on the spot, beneath a gas lamp. Blue-green sky, royal-blue water, mauve ground. Blue and violet for the town. The gaslight is yellow and is mirrored in russet gold that sinks towards greenish bronze. High in the blue-green sky the Great Bear twinkles green and pink, its quiet pallor set against the brutal gold of the gas. In front, two small coloured figures of lovers.",
+        "cite": "Letter 691, Arles, on or about 29 September 1888, to Theo, own translation from the French"
       }
     },
     "greenvine": {
@@ -2936,7 +2889,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Kröller-Müller Museum and is made in September 1888.",
       "quote": {
-        "text": "The vineyards I have just painted are green, purple, yellow – with violet bunches, with black and orange vine-shoots."
+        "text": "The vines I have just painted are green, purple and yellow, with violet clusters and black and orange shoots.",
+        "cite": "Letter 694, Arles, 3 October 1888, to Theo, own translation from the French"
       }
     },
     "selfgauguin": {
@@ -2974,7 +2928,8 @@ window.EN = {
       ],
       "fact": "The picture hangs in the Musée d’Orsay in Paris and is made in December 1888.",
       "quote": {
-        "text": "As you learned from my telegram, Gauguin has arrived in good health. He even gives the impression of being better than I am. He is a very, very interesting man, and I have every confidence that with him we shall do a great many things."
+        "text": "As you learned from my telegram, Gauguin has arrived in good health. He even gives the impression of being better than I am. He is a very, very interesting man, and I have every confidence that with him we shall do a great many things.",
+        "cite": "Letter 712, Arles, on or about 25 October 1888, to Theo"
       }
     },
     "bandaged": {
@@ -3047,7 +3002,8 @@ window.EN = {
       ],
       "fact": "The picture belongs today to the J. Paul Getty Museum in Los Angeles and is made in May 1889.",
       "quote": {
-        "text": "Now here are the subjects of these seven studies. The irises – View of the asylum at Saint-Rémy, size 30 canvases."
+        "text": "Here, then, are the subjects of these seven studies: the irises, and a view of the asylum at Saint-Rémy, both size-30 canvases.",
+        "cite": "Letter 789, Saint-Rémy-de-Provence, 14 or 15 July 1889, to Theo, own translation from the French"
       }
     },
     "lilacs": {
@@ -3064,7 +3020,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Kröller-Müller Museum in Otterlo and is made in May 1889.",
       "quote": {
-        "text": "Since I have been here, the desolate garden planted with tall pines, under which a grass grows high and badly kept, mixed with all sorts of weeds, has been enough for me to work, and I have not yet gone outside."
+        "text": "Ever since I arrived, this forlorn garden with its tall pines, beneath which long, untended grass grows tangled with all kinds of weeds, has given me enough to work on, and I have not gone out yet.",
+        "cite": "Letter 776, Saint-Rémy-de-Provence, on or about 23 May 1889, to Theo, own translation from the French"
       }
     },
     "ivyunder": {
@@ -3074,7 +3031,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum in Amsterdam and is made in July 1889.",
       "quote": {
-        "text": "Thick trunks of trees covered with ivy, the ground likewise covered with ivy and periwinkle, a stone bench and a bush of faded roses in the cool shade. It is green, violet and pink."
+        "text": "Heavy tree trunks overgrown with ivy, the ground carpeted with ivy and periwinkle too, a stone bench and a bush of pale roses in the chilly shade. The colours are green, violet and pink.",
+        "cite": "Letter 776, Saint-Rémy-de-Provence, on or about 23 May 1889, to Theo, own translation from the French"
       }
     },
     "moth": {
@@ -3091,7 +3049,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Museum of Modern Art in New York and is made in June 1889.",
       "quote": {
-        "text": "Now I have a landscape with olive trees and also a new study of a starry sky."
+        "text": "Lastly, there is a landscape of olive trees, and a fresh study of a starry sky as well.",
+        "cite": "Letter 782, Saint-Rémy-de-Provence, on or about 18 June 1889, to Theo, own translation from the French"
       }
     },
     "cypresses": {
@@ -3101,7 +3060,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Metropolitan Museum of Art in New York and is made in June 1889.",
       "quote": {
-        "text": "The cypresses still occupy me, I would like to do something with them like the sunflower canvases, because it surprises me that they have not yet been done as I see them. In the lines and the proportions they are beautiful like an Egyptian obelisk."
+        "text": "I keep thinking about the cypresses; I would like to make something of them like the sunflower canvases, because I am amazed that nobody has yet painted them the way I see them. Their lines and proportions are as beautiful as an Egyptian obelisk.",
+        "cite": "Letter 783, Saint-Rémy-de-Provence, 25 June 1889, to Theo, own translation from the French"
       }
     },
     "greenwheat": {
@@ -3125,7 +3085,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Metropolitan Museum of Art in New York and is made in June 1889.",
       "quote": {
-        "text": "I have a canvas of cypresses with a few ears of wheat, poppies, a blue sky, which is like a brightly checked Scottish cloth."
+        "text": "There is also a canvas of cypresses with some ears of wheat, poppies and a blue sky, like a multicoloured Scottish plaid.",
+        "cite": "Letter 784, Saint-Rémy-de-Provence, 2 July 1889, to Theo, own translation from the French"
       }
     },
     "wheatreaper": {
@@ -3135,7 +3096,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Kröller-Müller Museum in Otterlo and is made in June 1889.",
       "quote": {
-        "text": "I have a very yellow and very bright wheat field, perhaps the brightest canvas I have made."
+        "text": "I have a wheatfield, intensely yellow and light – possibly the lightest canvas I have ever done.",
+        "cite": "Letter 783, Saint-Rémy-de-Provence, 25 June 1889, to Theo, own translation from the French"
       }
     },
     "mountains": {
@@ -3152,7 +3114,8 @@ window.EN = {
       ],
       "fact": "The sheet is made at a time when Vincent hardly yet counts as a painter. Many early works from the Borinage are drawings, often in dark pencils on simple paper.",
       "quote": {
-        "text": "What moulting is for the birds, the time when they change their plumage, that is adversity or misfortune, the hard times, for us human beings. One can remain in that moulting time, one can also come out of it as if renewed."
+        "text": "Moulting, the season when birds change their feathers, is for them what adversity or misfortune – hard times – is for us humans. One can stay stuck in that moulting season, or one can emerge from it as if made new.",
+        "cite": "Letter 155, Cuesmes, on or about 22–24 June 1880, to Theo, own translation from the French"
       }
     },
     "burden": {
@@ -3162,7 +3125,8 @@ window.EN = {
       ],
       "fact": "The motif of the bent women bearing burdens stays with Vincent for a long time. Years later he takes it up again in France, then in colour.",
       "quote": {
-        "text": "Be that as it may, I shall rise again, I shall take up my pencil which I left there in my great discouragement, and I shall get back to drawing, and from then on, it seems to me, everything has changed for me, and now I am on my way."
+        "text": "Whatever happens, I will climb back up again; I will pick up the pencil I had put down in my deep discouragement and return to drawing. And since then, as far as I can tell, everything has been different for me, and now I am on my way.",
+        "cite": "Letter 158, Cuesmes, 24 September 1880, to Theo, own translation from the French"
       }
     },
     "marsh": {
@@ -3196,11 +3160,12 @@ window.EN = {
     "schevwoman": {
       "text": [
         "Already in Etten Vincent draws a woman in the costume of Scheveningen, the fishing village near The Hague. Perhaps he has seen her on an outing, perhaps drawn her after a model.",
-        "In the autumn of 1881 he proposes to Kee. He tells her that he loves her as himself. He writes her answer down exactly for Theo – in Dutch, in three words that leave no doubt."
+        "In the summer of 1881 he falls in love with Kee and tells her so: it is as if she were his neighbour and he hers. In November he tells Theo about it. He sums up Kee’s refusal in three Dutch words: “nooit neen nimmer” – never, no, nevermore."
       ],
       "fact": "Kee Vos-Stricker was the daughter of Vincent’s uncle, a pastor in Amsterdam, and already a widow. She did not want the proposal, and the family stood behind her.",
       "quote": {
-        "text": "And then she said: never, no, nevermore."
+        "text": "But when I said this to her, she replied that for her the past and the future remained one and the same, and that she could therefore never return my feelings.",
+        "cite": "Letter 179, Etten, 3 November 1881, to Theo, own translation from the Dutch"
       }
     },
     "beermug": {
@@ -3210,7 +3175,8 @@ window.EN = {
       ],
       "fact": "Anton Mauve was married to Jet Carbentus, a cousin of Vincent’s mother. Through this kinship Vincent finds his way into the Hague art scene.",
       "quote": {
-        "text": "I do love Pa and Ma, but it is quite another kind of affection than that for you or for Mauve. Pa cannot live and feel with me, and I cannot work my way into Pa and Ma's system."
+        "text": "I do love Pa and Ma, but it is quite another kind of affection than that for you or for Mauve. Pa cannot live and feel with me, and I cannot work my way into Pa and Ma's system.",
+        "cite": "Letter 193, Etten, on or about 23 December 1881, to Theo"
       }
     },
     "carpyard": {
@@ -3220,7 +3186,8 @@ window.EN = {
       ],
       "fact": "The studio was on the Schenkweg, then at the edge of The Hague. Today the area is built over; the view from the window can be seen only in Vincent’s sheets.",
       "quote": {
-        "text": "At the end of January, I think about a fortnight after my arrival here, Mauve was suddenly quite changed in his mood toward me – just as unfriendly as he had been friendly before."
+        "text": "Towards the end of January, about two weeks after I got here, I think, Mauve’s attitude to me suddenly changed completely – as unkind as he had been kind before.",
+        "cite": "Letter 219, The Hague, on or about 21 April 1882, to Theo, own translation from the Dutch"
       }
     },
     "nursery": {
@@ -3300,7 +3267,8 @@ window.EN = {
       ],
       "fact": "Vincent drew “Sorrow” and multiplied it as a lithograph. The word in the title is English – he wrote it so himself under the figure.",
       "quote": {
-        "text": "This winter I met a pregnant woman, abandoned by the man whose child she was carrying. A pregnant woman who wandered the streets in winter – and had to earn her bread, you well know how. I took this woman as a model and worked with her the whole winter."
+        "text": "This winter I came across a pregnant woman who had been deserted by the man whose child she was expecting. A pregnant woman roaming about in the winter cold, forced to earn her bread – you can guess how. I took her on as a model and worked with her all winter long.",
+        "cite": "Letter 224, The Hague, on or about 7 May 1882, to Theo, own translation from the Dutch"
       }
     },
     "churchpew": {
@@ -3316,16 +3284,6 @@ window.EN = {
         "He himself lives on Theo’s remittances. The knowledge of being dependent accompanies him through all these years – and makes him alert to people who are waiting for a stroke of luck."
       ],
       "fact": "The state lottery office was a well-known motif of social painting. Vincent shows the people waiting as a group, not as single “types” to be laughed at."
-    },
-    "laundry": {
-      "text": [
-        "A woman is spreading laundry out on a meadow. Everyday life, bending, wet cloths, a wide sky. Vincent stays with the work of the women he has before his eyes in Sien and her neighbours.",
-        "In July he writes to Theo that the formality of a marriage does not make Sien his wife. The bond already exists: they love, understand and help one another."
-      ],
-      "fact": "In July 1882 Sien gave birth to her son Willem. Vincent hoped for a time that his parents would still accept the relationship. That did not happen.",
-      "quote": {
-        "text": "I can say nothing else than: I have taken her as my wife – for it is not the formality of marrying that makes her my wife, but a bond that already exists: a feeling that we love, understand and help one another from both sides."
-      }
     },
     "bulbfields": {
       "text": [
@@ -3362,7 +3320,8 @@ window.EN = {
       ],
       "fact": "The painting belongs to the Van Gogh Museum. The peat stacks in front of the farms were an everyday, characteristic sight in Drenthe.",
       "quote": {
-        "text": "It is here wholly and entirely what I find beautiful. That is to say: there is peace here."
+        "text": "It is here wholly and entirely what I find beautiful. That is to say: there is peace here.",
+        "cite": "Letter 393, Nieuw-Amsterdam, on or about 7 October 1883, to Theo"
       }
     },
     "moorwomen": {
@@ -3378,16 +3337,6 @@ window.EN = {
         "The solitude gnaws. He wonders whether Sien might follow, and lets the thought go again. Life as a couple, as it was in The Hague, no longer seems possible to him here."
       ],
       "fact": "“Cottages” was made in 1883 in Drenthe and belongs to the Van Gogh Museum. The low horizon line lets the sky take up almost half the picture."
-    },
-    "twilightch": {
-      "text": [
-        "A church at dusk, a wide sky, little more than shadow and light. One of the stillest sheets of the journey.",
-        "Vincent feels that he cannot go on living alone like this for long. In December he walks over the heath to Hoogeveen in storm, rain and snow – and travels on to his parents."
-      ],
-      "fact": "The picture captures the mood of Drenthe in late autumn: little colour, much sky, a landscape that can fill one completely or leave one quite empty.",
-      "quote": {
-        "text": "Drenthe is magnificent, but holding out here depends on many things – on whether one has the money for it, and on whether one can stand the solitude."
-      }
     },
     "drawbridge": {
       "text": [
@@ -3487,18 +3436,20 @@ window.EN = {
       ],
       "fact": "The finished picture belongs to the Van Gogh Museum. After his father’s death Vincent reworked figures and mood. It is not a portrait of his father, but a picture of his village and his office.",
       "quote": {
-        "text": "I am still very much under the impression of what has just happened."
+        "text": "What has just happened still affects me deeply.",
+        "cite": "Letter 490, Nuenen, 6 April 1885, to Theo, own translation from the Dutch"
       }
     },
     "potato": {
       "text": [
         "The Potato Eaters are the goal of this whole first stretch of the path. Five people sit under a lamp around a dish, the faces are coarse, the hands heavy, the colour is that of earth and potato skins.",
         "All winter Vincent has studied the heads and hands of the peasants of Nuenen. He does not want a pretty family idyll. He wants one to see who these people are – and with what they have earned their food.",
-        "With this picture Part 1 closes. Ahead of Vincent lie Antwerp, Paris, Arles, Saint-Rémy and Auvers. The colour will grow brighter. But the attitude that begins here he never quite lets go."
+        "Here the Dutch years come to an end. Ahead of Vincent lie Antwerp, Paris, Arles, Saint-Rémy and Auvers. The colour will grow brighter. But the attitude that begins here he never quite lets go."
       ],
       "fact": "At the beginning of May 1885 Vincent sends the picture to Theo in Paris. It remains his most important figure picture of the Dutch years – and the beginning of everything that comes after.",
       "quote": {
-        "text": "I have quite deliberately wanted to work toward this: that one should get the idea that these people who eat their potatoes by their little lamp have themselves dug the earth with the very hands they put into the dish – and so it speaks of manual labour, and of their having earned their food so honestly."
+        "text": "What I have worked hard to achieve, you see, is to make people feel that these folk at their meal of potatoes under the little lamp have dug the soil themselves with the same hands they now reach into the dish; so the picture speaks of manual work and of a meal honestly earned.",
+        "cite": "Letter 497, Nuenen, 30 April 1885, to Theo, own translation from the Dutch"
       }
     },
     "snowyards": {
@@ -3508,7 +3459,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum. Vincent mentions the study from the window expressly in a letter to Theo – one of the few Antwerp motifs that can be assigned so clearly.",
       "quote": {
-        "text": "Last week I painted three more studies, one with the backs of old houses – seen from my window – and two in the park."
+        "text": "Last week I painted another three studies: one of the backs of old houses, as seen from my window, and two in the park.",
+        "cite": "Letter 546, Antwerp, on or about 6 December 1885, to Theo, own translation from the Dutch"
       }
     },
     "antoldman": {
@@ -3525,7 +3477,8 @@ window.EN = {
       ],
       "fact": "The small picture belongs to the Van Gogh Museum. Vincent buys the colour woodcuts in the harbour quarter – cheaply, and in Paris they remain a guiding star for him.",
       "quote": {
-        "text": "My studio is quite tolerable, especially because I have pinned a lot of Japanese prints to the walls, which amuse me greatly. You know the ones: little figures of women in gardens or on the beach, horsemen, flowers, gnarled thorn branches."
+        "text": "My workroom is bearable enough, mainly because I have pinned a batch of Japanese prints to the walls, and they give me a lot of pleasure. You know the kind – little women in gardens or on the shore, riders, flowers, knotty thorny branches.",
+        "cite": "Letter 545, Antwerp, 28 November 1885, to Theo, own translation from the Dutch"
       }
     },
     "midwife": {
@@ -3549,7 +3502,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum. A few weeks later Vincent is sitting, barely announced, in the Louvre and waiting for Theo.",
       "quote": {
-        "text": "It gives me a tremendous amount of pleasure that you now propose the plan of going to Cormon's yourself as well."
+        "text": "It gives me a tremendous amount of pleasure that you now propose the plan of going to Cormon's yourself as well.",
+        "cite": "Letter 557, Antwerp, on or about 2 February 1886, to Theo"
       }
     },
     "skullcig": {
@@ -3566,7 +3520,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum. The high view over the roofs belongs to the first attempts to grasp Paris as a city, still in rather muted colour.",
       "quote": {
-        "text": "Do not be angry with me for having come all at once. I have thought about it so much, and I believe that this way we gain time. I shall be at the Louvre from midday, or earlier if you like."
+        "text": "Don’t hold it against me that I have turned up without warning. I have thought it over so often, and I believe we save time this way. I will be at the Louvre from noon, or earlier if you prefer.",
+        "cite": "Letter 567, Paris, on or about 28 February 1886, to Theo, own translation from the French"
       }
     },
     "pontlouvre": {
@@ -3660,7 +3615,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum and was made in the winter of 1887/88, still before the departure for Arles. It is Vincent’s self-portrait as a craftsman: palette, brush, work.",
       "quote": {
-        "text": "If I did not have Theo, it would not be possible for me to come into my own with my work; but since I have him as a friend, I believe I shall still get on and be able to see it through. It is my plan, as soon as I can, to go for a time to the south, where there is still more colour and still more sun. But what I hope to achieve is to paint a good portrait."
+        "text": "Without Theo I could never do justice to myself in my work, but with him as my friend I think I will keep making progress and manage to see it through. As soon as I can, I plan to spend some time in the south, where colour and sunshine are richer still. Yet my real aim is to paint one good portrait.",
+        "cite": "Letter 574, Paris, late October 1887, to Willemien (Wil), own translation from the Dutch"
       }
     },
     "snowland": {
@@ -3670,7 +3626,8 @@ window.EN = {
       ],
       "fact": "The picture is in a private collection. It belongs to the very first studies from Arles, painted in February 1888, still under the snow.",
       "quote": {
-        "text": "To begin with I must tell you that everywhere at least 60 centimetres of snow have fallen, and it is still snowing. Arles does not seem to me larger than Breda or Mons. And the landscapes under the snow, with the white peaks against a sky as luminous as the snow, were just like the winter landscapes the Japanese have made."
+        "text": "And the snowy landscapes, their white peaks set against a sky just as luminous as the snow, looked exactly like the winter scenes of the Japanese.",
+        "cite": "Letter 577, Arles, 21 February 1888, to Theo, own translation from the French"
       }
     },
     "almondsprig": {
@@ -3680,7 +3637,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum. In March Vincent mentions two little studies of a sprig of almond already in blossom.",
       "quote": {
-        "text": "Here it is freezing hard, and in the country there is still snow – I have a study of a whitened landscape with the town in the background. Then two little studies of a sprig of almond already in blossom, though."
+        "text": "Here it is freezing hard and there is still snow out in the countryside. I have a study of the white fields with the town behind them – and then, all the same, two small studies of an almond branch already in flower.",
+        "cite": "Letter 582, Arles, on or about 2 March 1888, to Theo, own translation from the French"
       }
     },
     "pinkpeach": {
@@ -3690,7 +3648,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Kröller-Müller Museum. Vincent and Theo sign the remembrance together; it goes to Jet Mauve in The Hague.",
       "quote": {
-        "text": "You may perhaps see it, for I have decided to set this aside for Jet Mauve. I have written on it: Souvenir de Mauve, Vincent & Theo."
+        "text": "You may well get to see it, because I have decided to intend it for Jet Mauve. On it I wrote: Souvenir de Mauve, Vincent & Theo.",
+        "cite": "Letter 590, Arles, on or about 30 March 1888, to Willemien (Wil), own translation from the Dutch"
       }
     },
     "pinkorchard": {
@@ -3700,7 +3659,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum. It shows apricot trees in blossom and is made in March 1888.",
       "quote": {
-        "text": "I have just made a bouquet of apricot trees in blossom in a little orchard of fresh green."
+        "text": "I have just made a bouquet of apricot trees in blossom in a little orchard of fresh green.",
+        "cite": "Letter 589, Arles, on or about 25 March 1888, to Theo"
       }
     },
     "whiteorchard": {
@@ -3745,7 +3705,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum. The Langlois Bridge lay south of Arles; Vincent paints it in March 1888 in several versions.",
       "quote": {
-        "text": "As for the work, I have brought back a size 15 canvas today: a drawbridge, over which a little cart is passing, standing out against a blue sky – the river blue as well, orange banks with greenery, a group of washerwomen with many-coloured jackets and caps."
+        "text": "On the work front, today I brought home a size-15 canvas: a drawbridge with a little carriage crossing it, its outline sharp against the blue of the sky; the river is blue too, the banks orange with some green, and there is a group of washerwomen in colourful blouses and bonnets.",
+        "cite": "Letter 585, Arles, on or about 16 March 1888, to Theo, own translation from the French"
       }
     },
     "farmwheat": {
@@ -3769,7 +3730,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum and is made in June 1888 at Saintes-Maries-de-la-Mer.",
       "quote": {
-        "text": "I am writing to you from Saintes-Maries, at last at the Mediterranean – the Mediterranean has a colour like mackerel, that is to say changeable: one does not always know whether it is green or violet, one does not always know whether it is blue, because a second later the changing reflection has taken on a pink or grey tint."
+        "text": "I am writing to you from Saintes-Maries, on the shore of the Mediterranean at last. The Mediterranean has the colouring of mackerel – shifting, that is: you can never quite tell whether it is green or violet, never quite tell whether it is blue, because a moment later the shimmer has turned pink or grey.",
+        "cite": "Letter 619, Saintes-Maries-de-la-Mer, on or about 3 or 4 June 1888, to Theo, own translation from the French"
       }
     },
     "viewsaintes": {
@@ -3786,7 +3748,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Kunsthaus Zürich. It is made in June 1888, after the return or still in Saintes-Maries.",
       "quote": {
-        "text": "I had thought myself that you would have taken the white cottages under the blue sky in the greenery, which I made at Saintes-Maries by the Mediterranean."
+        "text": "I had imagined you would choose the white cottages among the greenery under the blue sky that I painted at Saintes-Maries on the Mediterranean.",
+        "cite": "Letter 678, Arles, 9 and on or about 14 September 1888, to Willemien (Wil), own translation from the French"
       }
     },
     "harvest88": {
@@ -3796,7 +3759,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum. It is made in June 1888 and shows the harvest in the Crau with Montmajour in the background.",
       "quote": {
-        "text": "The harvest is a little more serious. That is the motif I have been working on this week, on a size 30 canvas."
+        "text": "The harvest, now, is somewhat more substantial. That is the subject I have spent this week on, on a size-30 canvas.",
+        "cite": "Letter 625, Arles, on or about 15 and 16 June 1888, to Theo, own translation from the French"
       }
     },
     "hayprovence": {
@@ -3834,7 +3798,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Kunstmuseum Den Haag and is made in July 1888.",
       "quote": {
-        "text": "I have seven studies of wheat, unfortunately all, quite against my wish, nothing but landscapes. Old-gold yellow landscapes – done quickly, quickly, quickly and in a hurry, like the reaper who is silent under the blazing sun, concentrating on getting it in."
+        "text": "I have seven studies of the wheatfields – all of them, much against my will, landscapes only. Old-gold landscapes, dashed off fast, fast, fast and in a rush, like the harvester who works in silence under the burning sun, intent on cutting as much as he can.",
+        "cite": "Letter 633, Arles, 27 June 1888, to Emile Bernard, own translation from the French"
       }
     },
     "yellowhouse": {
@@ -3844,7 +3809,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum. The Yellow House stood on the Place Lamartine; it was damaged in the Second World War and later taken down.",
       "quote": {
-        "text": "My house here is painted on the outside in fresh butter yellow, with harsh green shutters, and it stands in full sun on the square, where there is a green garden of plane trees, oleanders and acacias. Inside it is all whitewashed, and the floor is of red bricks. And the intense blue sky above. In there I can live and breathe and think and paint."
+        "text": "My house here is painted fresh-butter yellow outside, with raw green shutters; it gets the full sun and looks onto the square, which has a green garden of plane trees, oleanders and acacias. Inside, the walls are all whitewashed and the floor is laid with red bricks. Above it, the intense blue sky. In there I can live and breathe, think and paint.",
+        "cite": "Letter 678, Arles, 9 and on or about 14 September 1888, to Willemien (Wil), own translation from the French"
       }
     },
     "bedroom": {
@@ -3854,7 +3820,8 @@ window.EN = {
       ],
       "fact": "The picture belongs to the Van Gogh Museum. It is the same work as in the short Van Gogh story; progress in colouring counts in both places.",
       "quote": {
-        "text": "This time it is quite simply my bedroom; only here the colour is to do the thing, and by its simplification give a greater style to the things, and be suggestive here of rest or of sleep in general. In short, the sight of the picture should rest the head, or rather the imagination. The walls are a pale violet. The floor is of red tiles. The wood of the bed and the chairs are the colour of fresh butter."
+        "text": "This time it is simply my bedroom, except that here everything depends on the colour, which, by simplifying, should give the objects a grander style and suggest rest or sleep in general. In a word, looking at the picture ought to calm the head, or the imagination rather. Pale violet walls. A floor of red tiles. The wooden bed and the chairs are fresh-butter yellow.",
+        "cite": "Letter 705, Arles, 16 October 1888, to Theo, own translation from the French"
       }
     }
   }

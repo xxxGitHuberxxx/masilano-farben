@@ -72,14 +72,14 @@
   P.paths.spitzweg = {
   "title": "El camino de vida de Carl Spitzweg",
   "life": "1808–1885",
-  "part": "Parte 1 · Múnich y los originales",
+  "part": "Múnich y los originales",
   "subtitle": "Del farmacéutico al pintor del Biedermeier",
-  "intro": "Viaja con Carl Spitzweg, el pintor de Múnich que empezó como farmacéutico: desde las buhardillas del poeta pobre, pasando por ratones de biblioteca, amigos de los cactus y serenos, hasta el paseo dominical. Estaciones breves y cuadros para colorear. Esta primera parte sigue los célebres cuadros de género.",
+  "intro": "Viaja con Carl Spitzweg, el pintor de Múnich que empezó como farmacéutico: desde las buhardillas del poeta pobre, pasando por ratones de biblioteca, amigos de los cactus y serenos, hasta el paseo dominical. Estaciones breves y cuadros para colorear. Este camino sigue los célebres cuadros de género.",
   "ending": [
     "Spitzweg muere en Múnich el 23 de septiembre de 1885. Permanece soltero y fiel a su humor callado y preciso.",
-    "El camino puede seguir creciendo. Más viajes, paisajes y cuadros de género tardíos pueden seguir en una parte posterior."
+    "El camino va del boticario que se hace pintor, pasando por las buhardillas y los excéntricos, hasta los paseos dominicales en Baviera."
   ],
-  "epilogue": "El 23 de septiembre de 1885 Spitzweg muere en Múnich. Una parte posterior puede añadir más paisajes y cuadros de género."
+  "epilogue": "Spitzweg muere en Múnich el 23 de septiembre de 1885. Permanece soltero y fiel a su humor callado y preciso. El camino va del boticario que se hace pintor, pasando por las buhardillas y los excéntricos, hasta los paseos dominicales en Baviera."
 };
   P.stations = Object.assign(P.stations || {}, {
   "csmuc": {
@@ -124,7 +124,7 @@
     "mapLabel": "Domingo",
     "intro": [
       "El paseo dominical y el camino a la iglesia unen sociedad y paisaje. Spitzweg conoce el rito burgués y la ancha naturaleza bávara.",
-      "Muere en Múnich el 23 de septiembre de 1885. Una parte posterior puede añadir viajes y más paisajes."
+      "Muere en Múnich el 23 de septiembre de 1885."
     ]
   }
 });

@@ -181,14 +181,6 @@
     "source": "Wikimedia Commons: «Place du Chenil à Marly, effet de neige.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "syroadlouv",
-    "title": "Die Strasse nach Louveciennes",
-    "artist": "Alfred Sisley",
-    "year": "1874",
-    "museum": "Königliche Museen der Schönen Künste, Brüssel",
-    "source": "Wikimedia Commons: «Sisley-Route de Louveciennes.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "syaqueduct",
     "title": "Der Aquädukt von Marly",
     "artist": "Alfred Sisley",
@@ -414,7 +406,7 @@
   "part": "Teil 1 · 1839–1880",
   "subtitle": "Von Paris nach Veneux-Nadon",
   "cover": "syterrace",
-  "intro": "Alfred Sisley wird am 30. Oktober 1839 in Paris geboren, als Sohn britischer Eltern. Dieser erste Teil folgt ihm von der Handelslehre in London und dem Atelier Gleyre mit Monet, Renoir und Bazille über die frühen Bilder in Fontainebleau und Marlotte, die Familie mit Eugénie, den Krieg von 1870/71 und die Jahre in Louveciennes und Marly bis zur Flut von 1876 und zum Umzug an den Loing 1880.",
+  "intro": "Alfred Sisley wird am 30. Oktober 1839 in Paris geboren, als Sohn britischer Eltern. Dieser Weg folgt ihm von der Handelslehre in London und dem Atelier Gleyre mit Monet, Renoir und Bazille über die frühen Bilder in Fontainebleau und Marlotte, die Familie mit Eugénie, den Krieg von 1870/71 und die Jahre in Louveciennes und Marly bis zur Flut von 1876 und zum Umzug an den Loing 1880.",
   "ending": [
     "Anfang 1880 lässt sich Sisley mit Eugénie und den Kindern in Veneux-Nadon nieder, nahe Moret-sur-Loing. Dort findet er die Landschaft, bei der er bleiben wird.",
     "Im nächsten Teil folgen die Jahre in Moret-sur-Loing, die Armut, Eugénie, der späte Versuch der Einbürgerung und Sisleys Tod 1899."
@@ -701,15 +693,6 @@
             "Das Bild ist im Musée des Beaux-Arts in Rouen."
           ],
           "fact": "1874. Musée des Beaux-Arts, Rouen."
-        },
-        {
-          "pid": "syroadlouv",
-          "text": [
-            "Ein sandiger Weg führt an Mauern und Bäumen vorbei in die Ferne.",
-            "Sisley zeigt die alltägliche Strasse ohne Ereignis.",
-            "Das Bild ist in den Königlichen Museen der Schönen Künste in Brüssel."
-          ],
-          "fact": "1874. Königliche Museen der Schönen Künste, Brüssel."
         },
         {
           "pid": "syaqueduct",

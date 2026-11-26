@@ -245,14 +245,6 @@
     "source": "Wikimedia Commons: «The Suspension Bridge on the Border of Hida and Etchū Provinces (Hietsu no sakai tsuribashi), from the series Remarkable Views of Bridges in Various Provinces (Shokoku meikyō kiran) MET DP141245.jpg», CC0 (gemeinfrei)"
   },
   {
-    "id": "sanobashi",
-    "title": "Alte Ansicht der Bootsbrücke von Sano in der Provinz Kōzuke",
-    "artist": "Katsushika Hokusai",
-    "year": "um 1834",
-    "museum": "Musée Guimet, Paris",
-    "source": "Wikimedia Commons: «Bridge of boats at Sano Guimet EO993.jpg», gemeinfrei (Public Domain)"
-  },
-  {
     "id": "tenpozan",
     "title": "Der Tenpōzan an der Mündung des Aji-Flusses in der Provinz Settsu",
     "artist": "Katsushika Hokusai",
@@ -397,22 +389,6 @@
     "source": "Wikimedia Commons: «Sanki fukaku katachi o kuzusu no fuji LCCN2009615135.jpg», gemeinfrei (Public Domain)"
   },
   {
-    "id": "artistsfuji",
-    "title": "Künstler zeichnen den Berg Fuji",
-    "artist": "Katsushika Hokusai",
-    "year": "ab 1834",
-    "museum": "Musée Guimet, Paris",
-    "source": "Wikimedia Commons: «Artists preparing to draw Mount Fuji Guimet EO1455b.jpg», gemeinfrei (Public Domain)"
-  },
-  {
-    "id": "fujitotomi",
-    "title": "Der Fuji in den Bergen von Tōtomi",
-    "artist": "Katsushika Hokusai",
-    "year": "ab 1834",
-    "museum": "Musée Guimet, Paris",
-    "source": "Wikimedia Commons: «Mount Fuji from the Mountains of Totomi Hokusai Guimet MA7065b.jpg», gemeinfrei (Public Domain)"
-  },
-  {
     "id": "choshisea",
     "title": "Chōshi in der Provinz Shimōsa",
     "artist": "Katsushika Hokusai",
@@ -459,14 +435,6 @@
     "year": "um 1833–1834",
     "museum": "Metropolitan Museum of Art, New York",
     "source": "Wikimedia Commons: «詩歌写真鏡 李白-Ri Haku from the series Mirrors of Japanese and Chinese Poems (Shiika shashin kyō) MET DP146848.jpg», CC0 (gemeinfrei)"
-  },
-  {
-    "id": "sudongpo",
-    "title": "Su Dongpo im Schnee",
-    "artist": "Katsushika Hokusai",
-    "year": "um 1833–1834",
-    "museum": "Musée Guimet, Paris",
-    "source": "Wikimedia Commons: «Su Dongpo Hokusai Guimet EO1704.jpg», gemeinfrei (Public Domain)"
   },
   {
     "id": "ministoru",
@@ -552,7 +520,7 @@
   path.ending = [
   "1839 zerstört ein Brand in Edo seine Wohnung und viele Zeichnungen. In den 1840er Jahren hält er sich mehrmals in Obuse auf, bei Takai Kōzan. 1847 entsteht der Donnergott, 1849 der Tiger im Schnee.",
   "Hokusai stirbt in Edo am 18. Tag des vierten Monats im zweiten Jahr Kaei – dem 10. Mai 1849. Nach der damaligen Zählung ist er neunzig Jahre alt.",
-  "Fünfzehn Jahre zuvor, 1834, hatte er in der Nachschrift zu den «Hundert Ansichten des Berges Fuji» geschrieben: «Seit meinem sechsten Jahr habe ich die Gewohnheit, die Gestalt der Dinge nachzubilden. Seit meinem fünfzigsten Jahr habe ich oft Bilder herausgegeben, aber was ich vor meinem siebzigsten Jahr gezeichnet habe, ist wahrhaftig nichts, das man gelten lassen könnte. Mit dreiundsiebzig habe ich ein wenig das Gerippe der Vögel, Tiere, Insekten und Fische und das Wachsen der Pflanzen begriffen. Darum will ich mit sechsundachtzig noch weiter kommen, mit neunzig die Sache noch tiefer erfassen, mit hundert wirklich das Wunderbare erreichen – und mit hundertzehn soll jeder Punkt und jeder Strich lebendig sein. Mögen Herren von langem Leben sehen, dass meine Worte nicht leere Einbildung sind.» Der Wunsch, hundertzehn zu werden, bleibt unerfüllt. Die Blätter und die späten Malereien bleiben."
+  "Fünfzehn Jahre zuvor, 1834, hatte er in der Nachschrift zu den «Hundert Ansichten des Berges Fuji» geschrieben: «… Darum will ich mit sechsundachtzig noch weiter kommen, mit neunzig die Sache noch tiefer erfassen, mit hundert wirklich das Wunderbare erreichen – und mit hundertzehn soll jeder Punkt und jeder Strich lebendig sein.» Der Wunsch, hundertzehn zu werden, bleibt unerfüllt. Die Blätter und die späten Malereien bleiben."
 ];
   path.epilogue = "Katsushika Hokusai stirbt am 10. Mai 1849 in Edo, im Alter von neunzig Jahren nach der damaligen Zählung. Die «Sechsunddreissig Ansichten», die «Hundert Ansichten des Fuji», die Wasserfälle, die Brücken und die späten Malereien von Obuse bleiben.";
   if (path.map) {
@@ -855,14 +823,6 @@
         "fact": "«Die Hängebrücke an der Grenze der Provinzen Hida und Etchū», Metropolitan Museum of Art, New York."
       },
       {
-        "pid": "sanobashi",
-        "text": [
-          "Boote, aneinandergebunden, bilden eine Brücke über den Fluss; am Ufer stehen Häuser und Bäume.",
-          "Die «alte Ansicht» der Bootsbrücke von Sano in der Provinz Kōzuke gehört zur Brücken-Serie um 1834. Dieser Abzug liegt im Musée Guimet in Paris (Inventar EO 993)."
-        ],
-        "fact": "«Alte Ansicht der Bootsbrücke von Sano», Musée Guimet, Paris."
-      },
-      {
         "pid": "tenpozan",
         "text": [
           "Ein kleiner künstlicher Hügel und eine Landungsbrücke liegen an der Mündung des Aji-Flusses; Schiffe füllen das Wasser.",
@@ -1027,7 +987,7 @@
     "mapLabel": "Hyakkei",
     "intro": [
       "1834 erscheint der erste Band der «Hundert Ansichten des Berges Fuji» (Fugaku Hyakkei), zunächst bei Eirakuya Tōshirō in Nagoya. Es folgen drei Bände, in Schwarz, Grau und oft einem Hauch Fleischrosa.",
-      "In der Nachschrift zum ersten Band schreibt Hokusai, unter dem Namen Gakyō Rōjin Manji – «der bildverrückte alte Mann Manji»: «Seit meinem sechsten Jahr habe ich die Gewohnheit, die Gestalt der Dinge nachzubilden. Seit meinem fünfzigsten Jahr habe ich oft Bilder herausgegeben, aber was ich vor meinem siebzigsten Jahr gezeichnet habe, ist wahrhaftig nichts, das man gelten lassen könnte. Mit dreiundsiebzig habe ich ein wenig das Gerippe der Vögel, Tiere, Insekten und Fische und das Wachsen der Pflanzen begriffen. Darum will ich mit sechsundachtzig noch weiter kommen, mit neunzig die Sache noch tiefer erfassen, mit hundert wirklich das Wunderbare erreichen – und mit hundertzehn soll jeder Punkt und jeder Strich lebendig sein. Mögen Herren von langem Leben sehen, dass meine Worte nicht leere Einbildung sind.»",
+      "In der Nachschrift zum ersten Band schreibt Hokusai, unter dem Namen Gakyō Rōjin Manji – «der bildverrückte alte Mann Manji»: «… Darum will ich mit sechsundachtzig noch weiter kommen, mit neunzig die Sache noch tiefer erfassen, mit hundert wirklich das Wunderbare erreichen – und mit hundertzehn soll jeder Punkt und jeder Strich lebendig sein.»",
       "Die Buchseiten zeigen den Berg hinter einem Netz, durch einen heiligen Ring, im Regen, an einer Furt – immer wieder neu."
     ],
     "works": [
@@ -1094,22 +1054,6 @@
           "Der überlieferte Titel spricht davon, dass sich die Form des Berges im Bergdunst auflöst. Das Blatt gehört zu den «Hundert Ansichten». Abzug in der Library of Congress."
         ],
         "fact": "«Der Fuji im tiefen Bergdunst», Library of Congress, Washington."
-      },
-      {
-        "pid": "artistsfuji",
-        "text": [
-          "Auf einer Wiese richten Männer Pulte und Pinsel; der Fuji steht hinter einer Kiefer und einem Feld.",
-          "Das Blatt stammt aus den «Hundert Ansichten des Berges Fuji». Dieser Abzug wird im Musée Guimet in Paris bewahrt (EO 1455)."
-        ],
-        "fact": "«Künstler zeichnen den Berg Fuji», Musée Guimet, Paris."
-      },
-      {
-        "pid": "fujitotomi",
-        "text": [
-          "Durch das Geäst eines Baumes und über ein Dach sieht man den Fuji; die Berge von Tōtomi liegen davor.",
-          "Auch dieses Blatt der «Hundert Ansichten» liegt im Musée Guimet in Paris (MA 7065)."
-        ],
-        "fact": "«Der Fuji in den Bergen von Tōtomi», Musée Guimet, Paris."
       }
     ]
   },
@@ -1135,14 +1079,6 @@
           "Das Blatt gehört zur Folge «Spiegel japanischer und chinesischer Gedichte» (Shiika shashin kyō), erschienen um 1833 bis 1834. Abzug im Metropolitan Museum of Art."
         ],
         "fact": "«Li Bai betrachtet einen Wasserfall», Metropolitan Museum of Art, New York."
-      },
-      {
-        "pid": "sudongpo",
-        "text": [
-          "Ein Reiter mit einem grossen runden Hut zieht durch den Schnee; ein Diener geht neben dem Pferd, der Himmel ist voller Flocken.",
-          "Das Musée Guimet in Paris identifiziert die Gestalt als den chinesischen Dichter Su Dongpo. Das Blatt gehört zur Folge der Dichterbilder um 1833 bis 1834 (Inventar EO 1704)."
-        ],
-        "fact": "«Su Dongpo im Schnee», Musée Guimet, Paris."
       },
       {
         "pid": "ministoru",

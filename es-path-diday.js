@@ -56,10 +56,6 @@
     "title": "El lago de los Cuatro Cantones y el Uri-Rotstock desde el Axenberg",
     "museum": "Colección particular"
   },
-  "fdsallanche": {
-    "title": "Cascada de la Sallanche",
-    "museum": "Royal Collection"
-  },
   "fdmontblanc": {
     "title": "El Mont Blanc y el Arve vistos desde Sallanches",
     "museum": "Colección particular"
@@ -69,14 +65,14 @@
   P.paths.diday = {
   "title": "El camino de vida de François Diday",
   "life": "1802–1877",
-  "part": "Parte 1 · Ginebra y los Alpes",
+  "part": "Ginebra y los Alpes",
   "subtitle": "Lagos, cascadas y cumbres",
-  "intro": "Viaja con François Diday, el pintor ginebrino que convirtió los Alpes en un gran tema de la pintura suiza: desde Nápoles, por el lago de Brienz y el lago Lemán, hasta la Handeck, Mürren y el Mont Blanc. Estaciones breves y cuadros para colorear. Esta primera parte lo sigue por las montañas.",
+  "intro": "Viaja con François Diday, el pintor ginebrino que convirtió los Alpes en un gran tema de la pintura suiza: desde Nápoles, por el lago de Brienz y el lago Lemán, hasta la Handeck, Mürren y el Mont Blanc. Estaciones breves y cuadros para colorear. Este camino lo sigue por las montañas.",
   "ending": [
     "François Diday muere en Ginebra el 28 de noviembre de 1877. Con él empieza la escuela ginebrina de pintura alpina, que continúan Calame y Zünd.",
-    "El camino puede seguir creciendo. Más lagos y cumbres pueden seguir en una parte posterior."
+    "El camino va de Nápoles y el lago de Brienz hasta el Mont Blanc, que pinta desde Sallanches."
   ],
-  "epilogue": "El 28 de noviembre de 1877 Diday muere en Ginebra. Una parte posterior puede añadir más cuadros alpinos."
+  "epilogue": "François Diday muere en Ginebra el 28 de noviembre de 1877. Con él empieza la escuela ginebrina de pintura alpina, que continúan Calame y Zünd. El camino va de Nápoles y el lago de Brienz hasta el Mont Blanc, que pinta desde Sallanches."
 };
   P.stations = Object.assign(P.stations || {}, {
   "fdjung": {
@@ -210,13 +206,6 @@
       "Casi veinte años después de Brunnen, Diday vuelve a este lago."
     ],
     "fact": "hacia 1874. Colección particular."
-  },
-  "fdsallanche": {
-    "text": [
-      "El torrente de la Sallanche se precipita sobre las rocas hacia el valle. Hoy el cuadro pertenece a la Royal Collection británica.",
-      "Los cuadros alpinos de Diday se buscan también fuera de Suiza."
-    ],
-    "fact": "sin fecha. Royal Collection."
   },
   "fdmontblanc": {
     "text": [

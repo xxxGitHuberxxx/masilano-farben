@@ -121,7 +121,7 @@
     "title": "Landschaft an der Jonction bei Genf",
     "artist": "Ferdinand Hodler",
     "year": "1878",
-    "museum": "Sammlung nicht ermittelt",
+    "museum": "Von der Heydt-Museum, Wuppertal",
     "source": "Wikimedia Commons: «Hodler - Landschaft an der Jonction bei Genf - 1878.jpeg», gemeinfrei (Public Domain)"
   },
   {
@@ -233,7 +233,7 @@
     "title": "Bildnis Hélène Weiglé",
     "artist": "Ferdinand Hodler",
     "year": "1888",
-    "museum": "Sammlung nicht ermittelt",
+    "museum": "Städel Museum, Frankfurt",
     "source": "Wikimedia Commons: «1888 Hodler Bildnis Hélène Weiglé anagoria.JPG», gemeinfrei (Public Domain)"
   },
   {
@@ -379,14 +379,6 @@
     "year": "1899",
     "museum": "Musée d’art et d’histoire, Freiburg",
     "source": "Wikimedia Commons: «Blühender Baum (1899) - Ferdinand Hodler (MAHF).jpg», gemeinfrei (Public Domain)"
-  },
-  {
-    "id": "hself00",
-    "title": "Selbstbildnis",
-    "artist": "Ferdinand Hodler",
-    "year": "1900",
-    "museum": "Sammlung nicht ermittelt",
-    "source": "Wikimedia Commons: «Ferdinand Hodler Selbstbildnis 1900.jpg», gemeinfrei (Public Domain)"
   },
   {
     "id": "hergriffen",
@@ -608,7 +600,7 @@
             "Bei der Jonction fliessen Rhone und Arve zusammen. Bäume stehen am Ufer, das Wasser teilt sich in zwei Farben.",
             "Vor und nach Madrid malt Hodler immer wieder diese Stelle am Rand von Genf: nah, beobachtend, ohne Pathos."
           ],
-          "fact": "1878. Sammlung nicht ermittelt."
+          "fact": "1878. Von der Heydt-Museum, Wuppertal."
         },
         {
           "pid": "harvekinder",
@@ -752,7 +744,7 @@
             "Eine junge Frau in dunklem Kleid blickt ruhig aus dem Bild, die Hände im Schoss, eine Blume in den Fingern.",
             "Das Bildnis stammt von 1888. Hodler lebt in Genf und malt Auftraggeberinnen und Bekannte mit klarer, festgehaltener Form."
           ],
-          "fact": "1888. Sammlung nicht ermittelt."
+          "fact": "1888. Städel Museum, Frankfurt."
         },
         {
           "pid": "haugustine",
@@ -919,7 +911,7 @@
       "mapLabel": "1900",
       "intro": [
         "1895 malt Hodler den «Hellebardier». 1896 schmücken seine Figuren den Kunstpavillon der Schweizerischen Landesausstellung in Genf. 1897 gewinnt er den Wettbewerb für die Marignano-Wandbilder im Landesmuseum Zürich; das Projekt löst einen heftigen Streit aus. In Freiburg hält er einen Vortrag zur Aufgabe des Künstlers.",
-        "1900 erhält er auf der Weltausstellung in Paris eine Goldmedaille und schliesst sich den Sezessionen in Wien und Berlin an. Blühende Bäume, Alleen und stille Figuren in der Wiese schliessen diesen ersten Teil."
+        "1900 erhält er auf der Weltausstellung in Paris eine Goldmedaille und schliesst sich den Sezessionen in Wien und Berlin an. Blühende Bäume, Alleen und stille Figuren in der Wiese stehen am Ende dieser Jahre."
       ],
       "works": [
         {
@@ -947,14 +939,6 @@
           "fact": "1899. Musée d’art et d’histoire, Freiburg."
         },
         {
-          "pid": "hself00",
-          "text": [
-            "Hodler mit kurzem Bart und festem Blick, der Kopf nah am Bildrand, fast ohne Umfeld.",
-            "1900 erhält er auf der Weltausstellung in Paris eine Goldmedaille. Das Bildnis hält den Maler fest, der nun auch international bekannt wird."
-          ],
-          "fact": "1900. Sammlung nicht ermittelt."
-        },
-        {
           "pid": "hergriffen",
           "text": [
             "Eine junge Frau in einem langen blauen Kleid steht in einer Blumenwiese und hält die Hände vor die Brust, den Blick gesenkt.",
@@ -966,7 +950,7 @@
           "pid": "habendruhe",
           "text": [
             "Ein Mädchen in einem hellen Kleid steht barfuss in einer Blumenwiese, die Hände zum Gebet erhoben, der Blick zur Seite.",
-            "Das Bild entsteht um 1901 und hängt im Kunsthaus Zürich. Es schliesst diesen ersten Teil: eine ruhige Figur in der Landschaft, bevor im nächsten Teil die grossen See- und Bergbilder folgen."
+            "Das Bild entsteht um 1901 und hängt im Kunsthaus Zürich. Eine ruhige Figur in der Landschaft, bevor die grossen See- und Bergbilder folgen."
           ],
           "fact": "um 1901. Kunsthaus Zürich."
         }

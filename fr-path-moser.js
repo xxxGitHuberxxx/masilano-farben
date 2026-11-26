@@ -46,14 +46,14 @@
   P.paths.moser = {
   "title": "Le parcours de vie de Koloman Moser",
   "life": "1868–1918",
-  "part": "Partie 1 · De la Sécession à la peinture",
+  "part": "De la Sécession à la peinture",
   "subtitle": "Vienne, portraits, fleurs et le voyageur",
-  "intro": "Voyage avec Koloman Moser, le Viennois de la Sécession et de la Wiener Werkstätte, qui plus tard se tourne fermement vers la peinture : des autoportraits de jeunesse et des portraits d’amis aux pièces de fleurs, jusqu’aux paysages et à « Le Voyageur ». De courtes étapes et des tableaux à colorier. Cette première partie suit Moser le peintre.",
+  "intro": "Voyage avec Koloman Moser, le Viennois de la Sécession et de la Wiener Werkstätte, qui plus tard se tourne fermement vers la peinture : des autoportraits de jeunesse et des portraits d’amis aux pièces de fleurs, jusqu’aux paysages et à « Le Voyageur ». De courtes étapes et des tableaux à colorier. Ce chemin suit Moser le peintre.",
   "ending": [
     "Koloman Moser meurt à Vienne le 18 octobre 1918, à cinquante ans. Derrière lui restent la Sécession, la Wiener Werkstätte et une œuvre peinte tardive qui lui est propre.",
-    "Le chemin peut encore s’allonger. D’autres projets, des arts appliqués et des paysages pourront suivre dans une partie ultérieure."
+    "Ce chemin montre avant tout le peintre : portraits, fleurs, paysages et le promeneur de ses dernières années."
   ],
-  "epilogue": "Le 18 octobre 1918, Moser meurt à Vienne, à cinquante ans. Une partie ultérieure pourra ajouter des projets et d’autres paysages."
+  "epilogue": "Koloman Moser meurt à Vienne le 18 octobre 1918, à cinquante ans. Derrière lui restent la Sécession, la Wiener Werkstätte et une œuvre peinte tardive qui lui est propre. Ce chemin montre avant tout le peintre : portraits, fleurs, paysages et le promeneur de ses dernières années."
 };
   P.stations = Object.assign(P.stations || {}, {
   "kmwien": {
@@ -89,7 +89,7 @@
     "mapLabel": "Alpes",
     "intro": [
       "Dans les années 1910, Moser séjourne à plusieurs reprises en Suisse romande et peint des montagnes telles que les Dents du Midi. « Le Voyageur » donne à la figure le sérieux d’une icône moderne.",
-      "Le 18 octobre 1918, il meurt à Vienne, à cinquante ans. Une partie ultérieure pourra ajouter des projets et d’autres paysages."
+      "Le 18 octobre 1918, il meurt à Vienne, à cinquante ans."
     ]
   }
 });

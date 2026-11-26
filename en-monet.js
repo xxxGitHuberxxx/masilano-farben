@@ -72,10 +72,6 @@
     "title": "The Mouth of the Seine at Honfleur",
     "museum": "Norton Simon Museum, Pasadena"
   },
-  "greendress": {
-    "title": "Camille in a Green Dress",
-    "museum": "Kunsthalle Bremen"
-  },
   "womengarden": {
     "title": "Women in the Garden",
     "museum": "Musée d’Orsay, Paris"
@@ -179,10 +175,6 @@
   "artigarden": {
     "title": "The Artist’s Garden at Argenteuil",
     "museum": "National Gallery of Art, Washington"
-  },
-  "hobbyhorse": {
-    "title": "Jean Monet on His Hobby Horse",
-    "museum": "Metropolitan Museum of Art, New York"
   },
   "autumneff": {
     "title": "Autumn Effect at Argenteuil",
@@ -404,13 +396,6 @@
     ],
     "fact": "Honfleur lies opposite his home town, on the other side of the estuary. Monet returns to this water again and again."
   },
-  "greendress": {
-    "text": [
-      "Camille Doncieux wears a long green dress and looks back over her shoulder. In 1866 the picture is a success at the Salon – under the title “Camille”.",
-      "The family in Le Havre will have nothing to do with the relationship. Camille is model, partner and soon the mother of his child."
-    ],
-    "fact": "Monet is 25, Camille 19. The green dress becomes one of the best-known pictures of their first years together."
-  },
   "womengarden": {
     "text": [
       "In the garden at Ville-d’Avray four women in light dresses stand among flowers and shade. Camille posed for more than one of the figures.",
@@ -619,13 +604,6 @@
       "Monet paints the house not only from the outside, but the beds in which the family spends the summer."
     ],
     "fact": "The picture hangs in the National Gallery of Art in Washington. In these years the garden becomes one of his most important motifs."
-  },
-  "hobbyhorse": {
-    "text": [
-      "Little Jean, about five years old in 1872, sits proudly on a hobby horse in the garden. Behind him are the flower beds and the hedge.",
-      "Monet paints his son without a pose, as part of everyday life at Argenteuil. It is a bright, almost private picture."
-    ],
-    "fact": "Jean Monet is born in 1867. Later, at Giverny, he and his stepbrothers and sisters help to run their father’s household."
   },
   "autumneff": {
     "text": [

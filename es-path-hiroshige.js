@@ -311,7 +311,7 @@
     "mapLabel": "Ōmi",
     "intro": [
       "Hacia 1834–1835 sigue la serie «Ōmi hakkei no uchi», las ocho vistas de la provincia de Ōmi en el lago Biwa, no lejos de Kioto. El esquema de las ocho vistas es más antiguo y procede de China; Hiroshige lo transpone a la campana, la lluvia, los gansos, la luna y el resplandor del atardecer en el lago.",
-      "Con la serie del Tōkaidō y las vistas de Ōmi, a mediados de la década de 1830 Hiroshige queda firmemente establecido como maestro del paisaje. Esta primera parte termina aquí, en el extremo occidental del camino y en el lago.",
+      "Con la serie del Tōkaidō y las vistas de Ōmi, a mediados de la década de 1830 Hiroshige queda firmemente establecido como maestro del paisaje. Este camino termina aquí, en el extremo occidental del camino y en el lago.",
       "El camino sigue. Vienen la Kisokaidō, las Cien vistas famosas de Edo y la muerte de Hiroshige en 1858. De eso habla la parte siguiente."
     ]
   }

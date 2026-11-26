@@ -172,10 +172,6 @@
     "title": "L’Abbaye dans une forêt de chênes",
     "museum": "Alte Nationalgalerie, Berlin"
   },
-  "cfrainbow": {
-    "title": "Paysage de montagne avec arc-en-ciel",
-    "museum": "Museum Folkwang, Essen"
-  },
   "cfself10": {
     "title": "Autoportrait",
     "museum": "Kupferstichkabinett, Berlin"
@@ -199,10 +195,6 @@
   "cfwinterlon": {
     "title": "Paysage d’hiver",
     "museum": "National Gallery, Londres"
-  },
-  "cfwinterchurch": {
-    "title": "Paysage d’hiver avec église",
-    "museum": "Musée d’art et d’histoire culturelle, Dortmund"
   },
   "cfcrosswood": {
     "title": "Croix dans la forêt",
@@ -587,13 +579,6 @@
     ],
     "fact": "1809–1810. Alte Nationalgalerie, Berlin."
   },
-  "cfrainbow": {
-    "text": [
-      "Un arc-en-ciel s’étend au-dessus d’une montagne sombre.",
-      "Devant, un voyageur est assis sur un rocher."
-    ],
-    "fact": "vers 1810. Museum Folkwang, Essen."
-  },
   "cfself10": {
     "text": [
       "Avec sa barbe et ses boucles, Friedrich nous regarde gravement et intensément.",
@@ -635,13 +620,6 @@
       "Derrière, dans la brume, apparaît une église gothique."
     ],
     "fact": "1811. National Gallery, Londres."
-  },
-  "cfwinterchurch": {
-    "text": [
-      "Des sapins se dressent dans la neige, et derrière eux une église sort de la brume.",
-      "Le tableau fait pendant au paysage d’hiver de Londres."
-    ],
-    "fact": "1811. Musée d’art et d’histoire culturelle, Dortmund."
   },
   "cfcrosswood": {
     "text": [

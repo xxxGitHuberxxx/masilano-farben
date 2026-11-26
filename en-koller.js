@@ -7,10 +7,6 @@
   "Standort ohne Angabe": "Location not recorded"
 });
   EN.works = Object.assign(EN.works || {}, {
-  "rkselbst": {
-    "title": "Self-Portrait at Sixteen at the Easel",
-    "museum": "Location not recorded"
-  },
   "rkschimmel": {
     "title": "White Horse in the Stable",
     "museum": "Kunsthaus Zürich"
@@ -76,14 +72,14 @@
   EN.paths.koller = {
   "title": "Rudolf Koller’s Life Journey",
   "life": "1828–1905",
-  "part": "Part 1 · Zurich and the animals",
+  "part": "Zurich and the animals",
   "subtitle": "Horses, cows and the Gotthard Post",
-  "intro": "Travel with Rudolf Koller, the animal painter of Zurich: from the young painter at his easel, through the Alps and the Klöntal, to the house on the Zürichhorn and the famous Gotthard Post. Short stations and pictures to colour. This first part follows him through stable, pasture and mountains.",
+  "intro": "Travel with Rudolf Koller, the animal painter of Zurich: from the young painter at his easel, through the Alps and the Klöntal, to the house on the Zürichhorn and the famous Gotthard Post. Short stations and pictures to colour. This path follows him through stable, pasture and mountains.",
   "ending": [
     "Rudolf Koller dies in Zurich on 5 January 1905. All his life he painted his animals with patience and a precise eye.",
-    "The path can grow further. More studies, alpine pictures and portraits may follow in a later part."
+    "The path leads from the first horse pictures through the cows at the Zürichhorn to the Gotthard Post, his best-known picture."
   ],
-  "epilogue": "On 5 January 1905 Koller dies in Zurich. A later part can add further animal studies."
+  "epilogue": "Rudolf Koller dies in Zurich on 5 January 1905. All his life he painted his animals with patience and a precise eye. The path leads from the first horse pictures through the cows at the Zürichhorn to the Gotthard Post, his best-known picture."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "rkjung": {
@@ -133,13 +129,6 @@
   }
 });
   EN.pathTexts = Object.assign(EN.pathTexts || {}, {
-  "rkselbst": {
-    "text": [
-      "Sixteen-year-old Koller sits at the easel and looks at us seriously. He is the son of a Zurich butcher and innkeeper.",
-      "Early on he draws animals in his father’s stable."
-    ],
-    "fact": "1844. Location not recorded."
-  },
   "rkschimmel": {
     "text": [
       "A white horse stands quietly in the dark stable, the light falling on coat and mane. Koller paints the picture at the age of twenty.",

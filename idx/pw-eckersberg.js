@@ -1,0 +1,13 @@
+// Work metadata of path eckersberg (v10.43b), part of path-works-late.js, for single works at start.
+(function () {
+  var M = ["Statens Museum for Kunst, Kopenhagen"];
+  var G = [["C.W. Eckersberg",[["ewself","Selbstbildnis","1807–1810",0],["ewjens","Jens, Sohn des Malers Jens Juel","1807",0],["ewchristine","Christine Rebekka Eckersberg, geborene Hyssing","1809",0],["ewcleft","Die Teufelsschlucht in Liselund auf Møn","1809",0],["ewstile","Landschaft mit einem Zauntritt auf Møn","1810",0],["ewlyngby","Blick gegen Lyngby","1803–1810",0],["ewjean","Aus Holbergs «Jean de France», erster Akt, sechste Szene","1812",0],["ewpontroyal","Der Pont Royal vom Quai Voltaire aus","1812",0],["ewmeudon","Blick vom Schloss Meudon","1813",0],["ewangelica","Porta Angelica und ein Teil des Vatikans","1813",0],["ewdancer","Ein tanzendes italienisches Mädchen","1813–1816",0],["ewcloister","Der Kreuzgang von Santa Maria in Aracoeli in Rom","1813–1816",0],["ewpergola","Eine Pergola in Italien","1814–1816",0],["ewsteps","Die Marmortreppe zur Kirche Santa Maria in Aracoeli","1814–1816",0],["ewtiber","Blick über den Tiber zur Engelsburg","um 1815",0],["ewcolosseum","Das Innere des Kolosseums","1816",0],["ewjulie","Julie Eckersberg, geborene Juel","1817",0],["ewlovenskiold","Sophie Hedvig Løvenskiold mit ihrer dreijährigen Tochter","1817",0],["ewnathanson","Die Familie Nathanson","1818",0],["ewmassmann","Emilie Henriette Massmann","1820",0],["ewdaughters","Bella und Hanna, die älteren Töchter Nathansons","1820",0],["ewsuzanne","Suzanne Juel","1823",0],["ewemilie","Emilie, die Tochter des Künstlers","1827",0],["ewclouds","Wolkenstudie über dem Meer","1826",0],["ewkronborg","Blick von den Wällen von Kronborg zur schwedischen Küste","1829",0],["ewkullen","Der Kullen vom Meer vor Mølleleje aus","1829",0],["ewrenbjaerg","Die Ziegelei Renbjærg an der Flensburger Förde","1830",0],["ewbrig","Eine amerikanische Brigg trocknet vor Anker ihre Segel","1831–1832",0],["ewdoor","Blick durch eine Tür auf laufende Menschen","1845",0],["ewstreet","Strassenszene bei Wind und Regen","1846",0],["ewsound","Schiffe im Sund nördlich von Kronborg","1847",0]]]];
+  var have = {}; (window.PATH_WORKS || []).forEach(function (w) { have[w.id] = 1; });
+  var W = [];
+  for (var i = 0; i < G.length; i++) for (var j = 0; j < G[i][1].length; j++) {
+    var r = G[i][1][j]; if (have[r[0]]) continue;
+    var o = { id: r[0], title: r[1], artist: G[i][0], year: r[2] }; if (r.length > 3) o.museum = M[r[3]]; W.push(o);
+  }
+  window.PATH_WORKS = (window.PATH_WORKS || []).concat(W);
+  (window.__pwChunks = window.__pwChunks || {})["eckersberg"] = true;
+})();

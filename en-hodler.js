@@ -67,7 +67,7 @@
   },
   "hjonction": {
     "title": "Landscape at the Jonction near Geneva",
-    "museum": "Collection not established"
+    "museum": "Von der Heydt-Museum, Wuppertal"
   },
   "harvekinder": {
     "title": "Children Fishing on the Banks of the Arve",
@@ -123,7 +123,7 @@
   },
   "hweigle": {
     "title": "Portrait of Hélène Weiglé",
-    "museum": "Collection not established"
+    "museum": "Städel Museum, Frankfurt"
   },
   "haugustine": {
     "title": "Portrait of Augustine Dupin",
@@ -196,10 +196,6 @@
   "hbluete99": {
     "title": "Blossoming Tree",
     "museum": "Musée d’art et d’histoire, Fribourg"
-  },
-  "hself00": {
-    "title": "Self-Portrait",
-    "museum": "Collection not established"
   },
   "hergriffen": {
     "title": "Profound Emotion",
@@ -303,7 +299,7 @@
     "mapLabel": "1900",
     "intro": [
       "In 1895 Hodler paints “The Halberdier”. In 1896 his figures decorate the art pavilion of the Swiss National Exhibition in Geneva. In 1897 he wins the competition for the Marignano murals in the Landesmuseum Zürich; the project sets off a fierce dispute. In Fribourg he gives a lecture on the artist’s task.",
-      "In 1900 he receives a gold medal at the World’s Fair in Paris and joins the Secessions in Vienna and Berlin. Blossoming trees, avenues and still figures in the meadow close this first part."
+      "In 1900 he receives a gold medal at the World’s Fair in Paris and joins the Secessions in Vienna and Berlin. Blossoming trees, avenues and still figures in the meadow close these years."
     ]
   }
 });
@@ -334,7 +330,7 @@
       "Light falls between the trunks onto the forest floor; a stream, the Nant de Frontenex near Geneva, runs through the picture.",
       "With this woodland interior Hodler wins first prize in the Concours Calame in 1874. It is his first publicly recognised success in Geneva."
     ],
-    "fact": "um 1874. Collection not established."
+    "fact": "c. 1874. Collection not established."
   },
   "hstudent": {
     "text": [
@@ -362,14 +358,14 @@
       "A young woman in a dark dress with a white collar stands calmly, her hands lowered.",
       "The portrait dates from around 1877, towards the end of the training with Menn. It hangs in the Kunsthaus Zürich."
     ],
-    "fact": "um 1877. Kunsthaus Zürich."
+    "fact": "c. 1877. Kunsthaus Zürich."
   },
   "hself78": {
     "text": [
       "Hodler shows himself: dark hair, a serious gaze, the coat firmly buttoned.",
       "Around 1878 he travels to Madrid. The portrait belongs to these years, in which he settles on being a painter."
     ],
-    "fact": "um 1878. Collection not established."
+    "fact": "c. 1878. Collection not established."
   },
   "hmanzanares": {
     "text": [
@@ -411,14 +407,14 @@
       "At the Jonction the Rhône and the Arve meet. Trees stand on the bank; the water divides into two colours.",
       "Before and after Madrid, Hodler paints this spot at the edge of Geneva again and again: close, observant, without pathos."
     ],
-    "fact": "1878. Collection not established."
+    "fact": "1878. Von der Heydt-Museum, Wuppertal."
   },
   "harvekinder": {
     "text": [
       "Children sit and stand on the riverbank and fish; behind them lie a meadow and trees.",
       "The Arve flows through Geneva. Hodler paints everyday life by the water, in the same years as the Spanish landscapes."
     ],
-    "fact": "um 1878. Collection not established."
+    "fact": "c. 1878. Collection not established."
   },
   "hpfarrer": {
     "text": [
@@ -467,7 +463,7 @@
       "A man sits outdoors and mends a net, his back slightly bent, wholly at his work.",
       "This picture of a simple, concentrated task dates from around 1883. Hodler remains true to the realism of the Menn years."
     ],
-    "fact": "um 1883. Collection not established."
+    "fact": "c. 1883. Collection not established."
   },
   "hstock83": {
     "text": [
@@ -495,7 +491,7 @@
       "A woman sits by the fireplace and sews. The room is plain; the light comes from the side.",
       "The picture dates from around 1885 and hangs in the Kunsthaus Zürich. Everyday life and craft remain Hodler’s ground, even as the style grows clearer."
     ],
-    "fact": "um 1885. Kunsthaus Zürich."
+    "fact": "c. 1885. Kunsthaus Zürich."
   },
   "hschuster87": {
     "text": [
@@ -509,14 +505,14 @@
       "A young woman in a dark dress looks calmly out of the picture, her hands in her lap, a flower in her fingers.",
       "The portrait dates from 1888. Hodler lives in Geneva and paints clients and acquaintances with a clear, firmly held form."
     ],
-    "fact": "1888. Collection not established."
+    "fact": "1888. Städel Museum, Frankfurt."
   },
   "haugustine": {
     "text": [
       "Augustine Dupin looks at us firmly, in a dark dress, her hair drawn tightly back.",
       "Hodler meets her in 1884. In October 1887 their son Hector is born. Augustine remains his model and companion for a long time."
     ],
-    "fact": "um 1888. Collection not established."
+    "fact": "c. 1888. Collection not established."
   },
   "hkastanien": {
     "text": [
@@ -537,21 +533,21 @@
       "A young woman in a dark dress sits in three-quarter profile, her gaze calm, the background plain.",
       "The portrait dates from around 1889, the year of Hodler’s marriage to Bertha Stucki in La Chaux-de-Fonds. The marriage is dissolved in 1891."
     ],
-    "fact": "um 1889. Collection not established."
+    "fact": "c. 1889. Collection not established."
   },
   "honex": {
     "text": [
       "A straight road leads away between trees, the sky is light, the path empty and still.",
       "Onex lies west of Geneva. Around 1890 Hodler clarifies such roads: few forms, a clear direction, a great calm."
     ],
-    "fact": "um 1890. Collection not established."
+    "fact": "c. 1890. Collection not established."
   },
   "hevordes": {
     "text": [
       "A sand-coloured path runs straight ahead between meadow and trees, the sky high and light.",
       "The road to Evordes is among Hodler’s best-known early landscapes. The repetition of the trees along the path already recalls parallelism."
     ],
-    "fact": "um 1890. Collection not established."
+    "fact": "c. 1890. Collection not established."
   },
   "haue": {
     "text": [
@@ -586,7 +582,7 @@
       "The Salève lies in autumnal colours, the slope in yellow and violet, the sky clear.",
       "Around 1891 the palette grows stronger. Foreground and background appear equal; aerial perspective recedes."
     ],
-    "fact": "um 1891. Collection not established."
+    "fact": "c. 1891. Collection not established."
   },
   "harbeitslos": {
     "text": [
@@ -637,13 +633,6 @@
     ],
     "fact": "1899. Musée d’art et d’histoire, Fribourg."
   },
-  "hself00": {
-    "text": [
-      "Hodler with a short beard and a firm gaze, the head close to the edge of the picture, almost without a setting.",
-      "In 1900 he receives a gold medal at the World’s Fair in Paris. The portrait records the painter who is now becoming known internationally as well."
-    ],
-    "fact": "1900. Collection not established."
-  },
   "hergriffen": {
     "text": [
       "A young woman in a long blue dress stands in a flower meadow and holds her hands to her breast, her gaze lowered.",
@@ -654,9 +643,9 @@
   "habendruhe": {
     "text": [
       "A girl in a light dress stands barefoot in a flower meadow, her hands raised in prayer, her gaze turned aside.",
-      "The picture dates from around 1901 and hangs in the Kunsthaus Zürich. It closes this first part: a calm figure in the landscape, before the large pictures of lakes and mountains follow in the next part."
+      "The picture dates from around 1901 and hangs in the Kunsthaus Zürich. A calm figure in the landscape, before the large pictures of lakes and mountains follow."
     ],
-    "fact": "um 1901. Kunsthaus Zürich."
+    "fact": "c. 1901. Kunsthaus Zürich."
   }
 });
 })();

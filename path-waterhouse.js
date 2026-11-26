@@ -21,9 +21,9 @@
   "cover": "shalott",
   "intro": "Waterhouse malt in London Stoffe der Dichtung mit festem, klarem Licht. «The Lady of Shalott» sitzt 1888 im Boot, der Teppich über den Rand, der Blick schon fort.",
   "ending": [
-    "Waterhouse stirbt 1917 in London. Ein späterer Teil kann weitere Dichtungsbilder nachtragen."
+    "Waterhouse stirbt 1917 in London. The Lady of Shalott hängt heute in der Tate Britain in London."
   ],
-  "epilogue": "Ein späterer Teil kann weitere Bilder nachtragen.",
+  "epilogue": "Waterhouse stirbt 1917 in London. The Lady of Shalott hängt heute in der Tate Britain in London.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [

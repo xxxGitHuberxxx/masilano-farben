@@ -39,10 +39,6 @@
     "title": "Souvenir of Rosenlaui",
     "museum": "Private collection"
   },
-  "acwetter": {
-    "title": "The Wetterhorn",
-    "museum": "Location not recorded"
-  },
   "acleman": {
     "title": "View of Lake Geneva",
     "museum": "Villa Vauban, Luxembourg"
@@ -68,14 +64,14 @@
   EN.paths.calame = {
   "title": "Alexandre Calame’s Life Journey",
   "life": "1810–1864",
-  "part": "Part 1 · From Geneva to the high Alps",
+  "part": "From Geneva to the high Alps",
   "subtitle": "Storm, rock and quiet lakes",
-  "intro": "Travel with Alexandre Calame, the Geneva painter of the Alps: from the first mountain landscapes, via the Grimsel, Rosenlaui and the Wetterhorn, to the quiet lakes of Thun, Geneva and Lucerne. Short stations and pictures to colour. This first part follows him through the Swiss mountains.",
+  "intro": "Travel with Alexandre Calame, the Geneva painter of the Alps: from the first mountain landscapes, via the Grimsel, Rosenlaui and the Wetterhorn, to the quiet lakes of Thun, Geneva and Lucerne. Short stations and pictures to colour. This path follows him through the Swiss mountains.",
   "ending": [
     "Alexandre Calame dies in Menton on 19 March 1864, aged fifty-three. His Alpine pictures shaped how all of Europe saw the Swiss mountains.",
-    "The path can grow further. Lithographs, Italian pictures and further mountains may follow in a later part."
+    "The path leads from the early mountain landscapes through storm and summit to the lakes and the huts on the Rigi."
   ],
-  "epilogue": "On 19 March 1864 Calame dies in Menton. A later part can add lithographs and further mountains."
+  "epilogue": "Alexandre Calame dies in Menton on 19 March 1864, aged fifty-three. His Alpine pictures shaped how all of Europe saw the Swiss mountains. The path leads from the early mountain landscapes through storm and summit to the lakes and the huts on the Rigi."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "acgenf": {
@@ -180,13 +176,6 @@
       "The picture is made in the studio from sketches and memory."
     ],
     "fact": "1849. Private collection."
-  },
-  "acwetter": {
-    "text": [
-      "The Wetterhorn rises steeply above the valley, clouds drift round the summit. Dark firs stand in front.",
-      "The mountain near Grindelwald is among the great subjects of Swiss painting."
-    ],
-    "fact": "1850. Location not recorded."
   },
   "acleman": {
     "text": [

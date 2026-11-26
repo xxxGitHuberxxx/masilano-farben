@@ -33,10 +33,6 @@
     "title": "Il cavaliere d’oro",
     "museum": "Museo prefettizio di Aichi, Nagoya"
   },
-  "goldapple": {
-    "title": "Melo d’oro",
-    "museum": "Fotografia storica; l’originale bruciò nel 1945 al palazzo di Immendorf"
-  },
   "birkforest": {
     "title": "Bosco di betulle",
     "museum": "Collezione privata"
@@ -169,17 +165,9 @@
     "title": "Melo II",
     "museum": "Collezione non determinata"
   },
-  "malcesine": {
-    "title": "Malcesine sul lago di Garda",
-    "museum": "Fotografia storica; l’originale bruciò nel 1945 al palazzo di Immendorf"
-  },
   "cassone": {
     "title": "Chiesa di Cassone",
     "museum": "Collezione privata"
-  },
-  "italygarden": {
-    "title": "Paesaggio di giardino italiano",
-    "museum": "Kunsthaus Zug"
   },
   "unterach": {
     "title": "Case a Unterach am Attersee",
@@ -229,10 +217,6 @@
     "title": "La ballerina",
     "museum": "Neue Galerie, New York"
   },
-  "riamunk3": {
-    "title": "Ritratto di Ria Munk III",
-    "museum": "Collezione privata"
-  },
   "deathfig": {
     "title": "Morte e vita (particolare: la Morte)",
     "museum": "Leopold Museum, Vienna"
@@ -256,10 +240,6 @@
   "ladyhead": {
     "title": "Testa di donna",
     "museum": "LENTOS Kunstmuseum Linz"
-  },
-  "ladypiacenza": {
-    "title": "Ritratto di una dama",
-    "museum": "Galleria d’Arte Moderna Ricci Oddi, Piacenza"
   },
   "ladywhite": {
     "title": "Dama in bianco",
@@ -314,7 +294,7 @@
     "mapLabel": "Flöge",
     "intro": [
       "Il 1° luglio 1904 Emilie, Helene e Pauline Flöge fondano il salone di moda «Schwestern Flöge» nella Casa Piccola della Mariahilfer Strasse. Gli ambienti li progettano Josef Hoffmann e Koloman Moser.",
-      "Le estati Klimt le trascorre ancora con la famiglia Flöge all’Attersee. Nel 1909 viaggia in Spagna e scrive da Toledo: «El Greco è magnifico!» Nel 1915 nasce il ritratto di Barbara, la madre di Emilie Flöge."
+      "Le estati Klimt le trascorre ancora con la famiglia Flöge all’Attersee. Nel 1909 viaggia in Spagna e scrive da Toledo: «Anche il Greco è magnifico!» Nel 1915 nasce il ritratto di Barbara, la madre di Emilie Flöge."
     ]
   },
   "klimtkammer": {
@@ -380,13 +360,6 @@
       "È appeso al Museo prefettizio di Aichi a Nagoya. La superficie d’oro e l’armatura ornamentale appartengono già al tempo successivo al viaggio a Ravenna."
     ],
     "fact": "Olio, tempera e foglia d’oro su tela, 1903. Museo prefettizio di Aichi, Nagoya."
-  },
-  "goldapple": {
-    "text": [
-      "Un melo si erge come un denso ornamento percorso d’oro su un fondo scuro, i frutti come segni a forma di disco. Il quadro nasce nel 1903.",
-      "L’originale brucia nel 1945 al palazzo di Immendorf, in Bassa Austria, dove era stato evacuato. Resta, fra l’altro, questa fotografia storica."
-    ],
-    "fact": "Olio e oro su tela, 1903. Fotografia storica; l’originale bruciò nel 1945 al palazzo di Immendorf."
   },
   "birkforest": {
     "text": [
@@ -550,12 +523,12 @@
   "featherboa": {
     "text": [
       "Una donna con un grande cappello e un boa di piume guarda di lato fuori dal quadro, il volto vicino e chiaro su un fondo scuro. Il ritratto nasce nel 1909.",
-      "Si trova in collezione privata. Nello stesso anno Klimt viaggia in Spagna e scrive da Toledo ad Emilie Flöge: «El Greco è magnifico!»"
+      "Si trova in collezione privata. Nello stesso anno Klimt viaggia in Spagna e scrive da Toledo ad Emilie Flöge: «Anche il Greco è magnifico!»"
     ],
     "fact": "Olio su tela, 1909. Collezione privata.",
     "quote": {
-      "text": "El Greco è magnifico!",
-      "cite": "Cartolina ad Emilie Flöge, Toledo, 1909"
+      "text": "Ti ho pensata vivissimamente – saresti incantata con me. Anche il Greco è magnifico!",
+      "cite": "Cartolina a Emilie Flöge, Toledo, autunno 1909"
     }
   },
   "barbarafloege": {
@@ -635,26 +608,12 @@
     ],
     "fact": "Olio su tela, intorno al 1916. Collezione non determinata."
   },
-  "malcesine": {
-    "text": [
-      "Il paese di Malcesine sta sulla riva scoscesa del lago di Garda, case e cipressi sopra l’acqua, le montagne dietro. Il quadro nasce nel 1913, in un viaggio al lago.",
-      "L’originale brucia nel 1945 al palazzo di Immendorf, in Bassa Austria. Resta, fra l’altro, questa fotografia storica."
-    ],
-    "fact": "Olio su tela, 1913. Fotografia storica; l’originale bruciò nel 1945 al palazzo di Immendorf."
-  },
   "cassone": {
     "text": [
       "La chiesa di Cassone si erge sul lago di Garda, le case del paese strette intorno a essa, l’acqua e i pendii in chiari campi di colore. Il quadro nasce nel 1913.",
       "Cassone si trova sulla riva orientale del lago, non lontano da Malcesine. Il quadro si trova in collezione privata."
     ],
     "fact": "Olio su tela, 1913. Collezione privata."
-  },
-  "italygarden": {
-    "text": [
-      "Un giardino italiano appare in densi cespugli, fiori e sentieri, senza una vasta veduta. Il quadro nasce nel 1913, l’anno del viaggio al lago di Garda.",
-      "Appartiene al Kunsthaus Zug. Come i pezzi di giardino dell’Attersee, la vegetazione diventa un tappeto ornamentale."
-    ],
-    "fact": "Olio su tela, 1913. Kunsthaus Zug."
   },
   "unterach": {
     "text": [
@@ -740,13 +699,6 @@
     ],
     "fact": "Olio su tela, intorno al 1916–1917. Neue Galerie, New York."
   },
-  "riamunk3": {
-    "text": [
-      "Ria Munk appare in un abito fiorito davanti a un fondo denso e colorato; il ritratto del 1917 resta incompiuto. Maria («Ria») Munk muore nel 1911, ancora giovane.",
-      "Dopo la sua morte Klimt dipinge più ritratti, fra cui questo tardo e incompiuto. Si trova in collezione privata."
-    ],
-    "fact": "Olio su tela, 1917, incompiuto. Collezione privata."
-  },
   "deathfig": {
     "text": [
       "La Morte sta come una figura sottile e oscura, con teschio e un motivo di croci, lo sguardo rivolto all’altra metà del quadro. Il particolare mostra solo questa figura de «Morte e vita».",
@@ -789,13 +741,6 @@
     ],
     "fact": "Olio su tela, 1917. LENTOS Kunstmuseum Linz."
   },
-  "ladypiacenza": {
-    "text": [
-      "Una dama con cappello guarda dal quadro, il volto calmo, il fondo in toni chiari e spezzati. Il ritratto nasce nel 1917.",
-      "Appartiene alla Galleria d’Arte Moderna Ricci Oddi di Piacenza."
-    ],
-    "fact": "Olio su tela, 1917. Galleria d’Arte Moderna Ricci Oddi, Piacenza."
-  },
   "ladywhite": {
     "text": [
       "Una donna in un abito bianco siede volta verso lo spettatore, gran parte della superficie resta aperta. Il ritratto degli anni 1917-1918 resta incompiuto.",
@@ -804,7 +749,7 @@
     "fact": "Olio su tela, intorno al 1917–1918, incompiuto. Österreichische Galerie Belvedere, Vienna.",
     "quote": {
       "text": "…un saluto uscito dal più intimo e [ti] auguro un anno nuovo il più, il più felice. – come ne abbiamo entrambi così urgentemente bisogno.",
-      "cite": "Lettera ad Emilie Flöge, Winkelsdorf, 30 dicembre 1917"
+      "cite": "Cartolina postale a Emilie Flöge, Winkelsdorf, 30 dicembre 1917"
     }
   }
 };

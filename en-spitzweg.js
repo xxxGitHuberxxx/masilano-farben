@@ -71,14 +71,14 @@
   EN.paths.spitzweg = {
   "title": "Carl Spitzweg’s Life Journey",
   "life": "1808–1885",
-  "part": "Part 1 · Munich and the eccentrics",
+  "part": "Munich and the eccentrics",
   "subtitle": "From pharmacist to painter of the Biedermeier",
-  "intro": "Travel with Carl Spitzweg, the Munich painter who began as a pharmacist: from the garrets of the poor poet, through bookworms, cactus lovers and night watchmen, to the Sunday stroll. Short stations and pictures to colour. This first part follows the well-known genre pictures.",
+  "intro": "Travel with Carl Spitzweg, the Munich painter who began as a pharmacist: from the garrets of the poor poet, through bookworms, cactus lovers and night watchmen, to the Sunday stroll. Short stations and pictures to colour. This path follows the well-known genre pictures.",
   "ending": [
     "Spitzweg dies in Munich on 23 September 1885. He remains unmarried and true to his quiet, exact humour.",
-    "The path can grow further. Further journeys, landscapes and late genre pictures may follow in a later part."
+    "The path leads from the apothecary who becomes a painter, through the garrets and eccentrics, to the Sunday walks in Bavaria."
   ],
-  "epilogue": "On 23 September 1885 Spitzweg dies in Munich. A later part can add further landscapes and genre pictures."
+  "epilogue": "Spitzweg dies in Munich on 23 September 1885. He remains unmarried and true to his quiet, exact humour. The path leads from the apothecary who becomes a painter, through the garrets and eccentrics, to the Sunday walks in Bavaria."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "csmuc": {
@@ -123,7 +123,7 @@
     "mapLabel": "Sunday",
     "intro": [
       "The Sunday stroll and the walk to church join society and landscape. Spitzweg knows the bourgeois rite and the wide Bavarian country.",
-      "He dies in Munich on 23 September 1885. A later part can add journeys and further landscapes."
+      "He dies in Munich on 23 September 1885."
     ]
   }
 });

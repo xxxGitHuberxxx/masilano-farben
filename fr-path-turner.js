@@ -31,10 +31,6 @@
     "title": "L’abbaye de Llanthony, Monmouthshire",
     "museum": "Indianapolis Museum of Art"
   },
-  "tuthames": {
-    "title": "Vue panoramique de la Tamise",
-    "museum": "Blanton Museum of Art, Austin"
-  },
   "tufishermen": {
     "title": "Pêcheurs en mer",
     "museum": "Tate, Londres"
@@ -103,20 +99,8 @@
     "title": "La jetée de Calais",
     "museum": "National Gallery, Londres"
   },
-  "tugrenoble": {
-    "title": "Grenoble depuis l’Isère, avec la porte de France",
-    "museum": "Tate, Londres"
-  },
-  "tuschollen": {
-    "title": "Le pont du Diable et les gorges des Schöllenen",
-    "museum": "Tate, Londres"
-  },
   "tumontblanc": {
     "title": "Le mont Blanc et le glacier des Bossons depuis Chamonix",
-    "museum": "Tate, Londres"
-  },
-  "tugothard": {
-    "title": "Le Saint-Gothard",
     "museum": "Tate, Londres"
   },
   "tuvictory": {
@@ -143,14 +127,6 @@
     "title": "Margate",
     "museum": "Tate, Londres"
   },
-  "tusunvapour": {
-    "title": "Le soleil se couchant dans la brume",
-    "museum": "Barber Institute of Fine Arts, Birmingham"
-  },
-  "tuavalanche": {
-    "title": "La chute d’une avalanche dans les Grisons",
-    "museum": "Tate, Londres"
-  },
   "tusouthall": {
     "title": "Le Grand Junction Canal au moulin de Southall",
     "museum": "Collection particulière"
@@ -162,10 +138,6 @@
   "tuwhalley": {
     "title": "Le pont et l’abbaye de Whalley, Lancashire",
     "museum": "Dordrechts Museum"
-  },
-  "tuplym": {
-    "title": "L’estuaire de la Plym depuis Boringdon Park",
-    "museum": "Tate, Londres"
   },
   "tufrosty": {
     "title": "Matin de gel",
@@ -340,12 +312,6 @@
     ],
     "fact": "vers 1792. Indianapolis Museum of Art."
   },
-  "tuthames": {
-    "text": [
-      "Une longue aquarelle montre la Tamise au loin, avec des rives, des barques et un ciel clair. Elle date des environs de 1796, l’année de la première huile. La feuille est au Blanton Museum of Art d’Austin."
-    ],
-    "fact": "vers 1796. Blanton Museum of Art, Austin."
-  },
   "tufishermen": {
     "text": [
       "Au clair de lune, des barques de pêche dansent sur une mer agitée au large de l’île de Wight ; une lanterne brille dans une barque. C’est la première huile exposée de Turner, en 1796 à la Royal Academy. Elle appartient à la Tate de Londres."
@@ -448,29 +414,11 @@
     ],
     "fact": "1803. National Gallery, Londres."
   },
-  "tugrenoble": {
-    "text": [
-      "Depuis l’Isère on voit Grenoble et la porte de France, devant les montagnes. La feuille date de 1802, lors du voyage en Savoie. Elle est à la Tate de Londres."
-    ],
-    "fact": "1802. Tate, Londres."
-  },
-  "tuschollen": {
-    "text": [
-      "Dans les gorges des Schöllenen, au Saint-Gothard, le pont du Diable franchit la Reuss. Turner saisit le col sauvage en 1802. La feuille est à la Tate de Londres."
-    ],
-    "fact": "1802. Tate, Londres."
-  },
   "tumontblanc": {
     "text": [
       "Dans la lumière du matin, le mont Blanc et le glacier des Bossons dominent Chamonix. Turner atteint la vallée en 1802, lors du voyage en Suisse. L’aquarelle est à la Tate de Londres."
     ],
     "fact": "1802. Tate, Londres."
-  },
-  "tugothard": {
-    "text": [
-      "Une vue dans les gorges du Saint-Gothard, avec la route au bord du précipice et un ciel haut. Turner peint le col en 1806–1807 d’après le souvenir du voyage de 1802. Le tableau est à la Tate de Londres."
-    ],
-    "fact": "1806–1807. Tate, Londres."
   },
   "tuvictory": {
     "text": [
@@ -508,18 +456,6 @@
     ],
     "fact": "vers 1806–1807. Tate, Londres."
   },
-  "tusunvapour": {
-    "text": [
-      "Le soleil descend dans la brume ; pêcheurs et barques sont sur la rive, un grand navire se dresse au loin. Le tableau date des environs de 1809 et se trouve au Barber Institute of Fine Arts de Birmingham."
-    ],
-    "fact": "vers 1809. Barber Institute of Fine Arts, Birmingham."
-  },
-  "tuavalanche": {
-    "text": [
-      "Une avalanche s’abat sur les rochers et les arbres dans les Grisons. Turner peint la force des Alpes en 1810, des années après le voyage en Suisse. Le tableau est à la Tate de Londres."
-    ],
-    "fact": "1810. Tate, Londres."
-  },
   "tusouthall": {
     "text": [
       "Un moulin se dresse au bord du Grand Junction Canal à Southall ; une charrette et des figures s’arrêtent sur la rive, le ciel est vaste. Turner peint la vue en 1810, dans les années de Twickenham. Le tableau est dans une collection particulière."
@@ -537,12 +473,6 @@
       "Au pont de Whalley, dans le Lancashire, des teinturiers lavent et sèchent du drap ; derrière les arbres se trouve l’abbaye. Turner peint la vue en 1811, lors du voyage dans l’ouest. Le tableau est au Dordrechts Museum."
     ],
     "fact": "1811. Dordrechts Museum."
-  },
-  "tuplym": {
-    "text": [
-      "Depuis Boringdon Park on regarde l’estuaire de la Plym, dans le Devon, avec des collines, de l’eau et un vaste ciel. En 1813 Turner esquisse à l’huile en plein air dans le Devon. La feuille est à la Tate de Londres."
-    ],
-    "fact": "1813. Tate, Londres."
   },
   "tufrosty": {
     "text": [

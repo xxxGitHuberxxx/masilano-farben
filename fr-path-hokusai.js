@@ -28,26 +28,12 @@
     ],
     "fact": "Gravure sur bois en couleurs, Metropolitan Museum of Art, New York, vers 1790–1793."
   },
-  "sorinets": {
-    "text": [
-      "Des femmes sont assises sur des nattes rouges dans un espace ouvert et regardent des pêcheurs aux filets dans l’eau.",
-      "Le surimono est signé « Sōri ga » – donc dans les années où Hokusai porte le nom de Tawaraya Sōri, vers 1794 à 1798."
-    ],
-    "fact": "Collection Isaac de Camondo, léguée au musée en 1911, inventaire EO 1833. Musée Guimet, Paris."
-  },
   "dyers": {
     "text": [
       "Dans une scène longue et étroite, des lés de tissu pendent à sécher. Les teinturiers se meuvent entre eux ; les couleurs sont encore claires et retenues.",
       "Le Cleveland Museum of Art date la feuille de 1795, dans les années Sōri."
     ],
     "fact": "« Teinturiers au travail », Cleveland Museum of Art, 1795."
-  },
-  "soritable": {
-    "text": [
-      "Une femme se tient à une table de peinture, le pinceau et le papier sont prêts. Des poèmes courent au bord de la feuille.",
-      "Il est signé « Sōri aratame Hokusai ga » – « Sōri, changé en Hokusai ». L’année 1799 enregistre le changement de nom."
-    ],
-    "fact": "Surimono privé avec des vers kyōka, collection Camondo, Musée Guimet, Paris, 1799."
   },
   "fujisuri": {
     "text": [
@@ -595,13 +581,6 @@
     ],
     "fact": "« Le Pont suspendu à la frontière des provinces de Hida et d’Etchū », Metropolitan Museum of Art, New York."
   },
-  "sanobashi": {
-    "text": [
-      "Des bateaux liés les uns aux autres forment un pont sur le fleuve ; au bord se tiennent des maisons et des arbres.",
-      "L’« ancienne vue » du pont de bateaux de Sano, dans la province de Kōzuke, appartient à la série des ponts vers 1834. Cette épreuve se trouve au Musée Guimet à Paris (inventaire EO 993)."
-    ],
-    "fact": "« Ancienne vue du pont de bateaux de Sano, dans la province de Kōzuke », Musée Guimet, Paris."
-  },
   "tenpozan": {
     "text": [
       "Une petite colline artificielle et un débarcadère gisent à l’embouchure de la rivière Aji ; des navires remplissent l’eau.",
@@ -763,33 +742,12 @@
     ],
     "fact": "« Le Fuji dans la vapeur profonde des montagnes », Library of Congress, Washington."
   },
-  "artistsfuji": {
-    "text": [
-      "Dans une prairie, des hommes disposent des pupitres et des pinceaux ; le Fuji se tient derrière un pin et un champ.",
-      "La feuille vient des « Cent vues du mont Fuji ». Cette épreuve est conservée au Musée Guimet à Paris (EO 1455)."
-    ],
-    "fact": "« Artistes se préparant à dessiner le mont Fuji », Musée Guimet, Paris."
-  },
-  "fujitotomi": {
-    "text": [
-      "À travers les branches d’un arbre et par-dessus un toit, on voit le Fuji ; les montagnes de Tōtomi gisent devant.",
-      "Cette feuille des « Cent vues » aussi se trouve au Musée Guimet à Paris (MA 7065)."
-    ],
-    "fact": "« Le mont Fuji dans les montagnes de Tōtomi », Musée Guimet, Paris."
-  },
   "libai": {
     "text": [
       "Le poète chinois Li Bai se tient avec un compagnon sur un rebord de roche et lève les yeux vers une haute cascade.",
       "La feuille appartient à la suite « Miroir fidèle des poèmes chinois et japonais » (Shiika shashin kyō), parue vers 1833 à 1834. Épreuve au Metropolitan Museum of Art."
     ],
     "fact": "« Li Bai contemplant une cascade », Metropolitan Museum of Art, New York."
-  },
-  "sudongpo": {
-    "text": [
-      "Un cavalier au grand chapeau rond avance dans la neige ; un serviteur marche à côté du cheval, le ciel est plein de flocons.",
-      "Le Musée Guimet à Paris identifie la figure comme le poète chinois Su Dongpo. La feuille appartient à la suite des poètes vers 1833 à 1834 (inventaire EO 1704)."
-    ],
-    "fact": "« Su Dongpo dans la neige », Musée Guimet, Paris."
   },
   "ministoru": {
     "text": [

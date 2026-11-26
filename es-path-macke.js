@@ -18,9 +18,9 @@
   "subtitle": "Dama con chaqueta verde",
   "intro": "Un camino breve hacia August Macke, amigo de Franz Marc y pintor de Renania. «Dama con chaqueta verde» se pintó en 1913 en Hilterfingen, junto al lago de Thun.",
   "ending": [
-    "En septiembre de 1914 Macke muere en la Primera Guerra Mundial, con solo 27 años. Una parte posterior puede añadir más cuadros de Túnez y del Rin."
+    "En abril de 1914 viaja a Túnez con Paul Klee y Louis Moilliet. En septiembre de 1914 Macke muere en la Primera Guerra Mundial, con solo 27 años. La Dama de la chaqueta verde, pintada en Hilterfingen, pertenece hoy al Museum Ludwig de Colonia."
   ],
-  "epilogue": "Una parte posterior puede añadir más cuadros."
+  "epilogue": "En abril de 1914 viaja a Túnez con Paul Klee y Louis Moilliet. En septiembre de 1914 Macke muere en la Primera Guerra Mundial, con solo 27 años. La Dama de la chaqueta verde, pintada en Hilterfingen, pertenece hoy al Museum Ludwig de Colonia."
 };
   P.stations = Object.assign(P.stations || {}, {
   "macke1": {
@@ -32,4 +32,14 @@
     ]
   }
 });
+  // v10.42 pathTexts: work texts of the short path (were German fallback before).
+  P.pathTexts = Object.assign(P.pathTexts || {}, {
+    "macke": {
+      "text": [
+        "Paseantes están en un parque; al fondo, el azul de un lago.",
+        "Macke pintó el cuadro en 1913 en Hilterfingen, junto al lago de Thun, donde pasó varios meses con su mujer Elisabeth."
+      ],
+      "fact": "Macke era un amigo cercano de Franz Marc y pertenecía al círculo del Jinete Azul."
+    }
+  });
 })();

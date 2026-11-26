@@ -127,7 +127,7 @@
   },
   "hholz": {
     "title": "El leñador",
-    "museum": "Colección no determinada"
+    "museum": "Von der Heydt-Museum, Wuppertal"
   },
   "heinamut": {
     "title": "La unanimidad",
@@ -151,14 +151,10 @@
   },
   "hthunstock11": {
     "title": "Lago de Thun con la cadena del Stockhorn",
-    "museum": "Colección no determinada"
+    "museum": "Von der Heydt-Museum, Wuppertal"
   },
   "hthunabend12": {
     "title": "Lago de Thun con la cadena del Stockhorn al atardecer",
-    "museum": "Colección no determinada"
-  },
-  "hwinter13": {
-    "title": "La cadena del Stockhorn y el lago de Thun en invierno",
     "museum": "Colección no determinada"
   },
   "hmorhardt": {
@@ -168,10 +164,6 @@
   "hgertrud12": {
     "title": "Retrato de Gertrud Müller",
     "museum": "Colección no determinada"
-  },
-  "hhector12": {
-    "title": "Retrato de Hector Hodler",
-    "museum": "Kunsthaus Zürich"
   },
   "hself12": {
     "title": "Autorretrato",
@@ -566,7 +558,7 @@
       "Un leñador alza el hacha, las piernas firmemente abiertas, el golpe como un gran movimiento nítido.",
       "Como el segador, el leñador pertenece a las figuras del trabajo en Hodler. En 1910 nacen estas versiones austeras, casi de cartel."
     ],
-    "fact": "1910. Colección no determinada."
+    "fact": "1910. Von der Heydt-Museum, Wuppertal."
   },
   "heinamut": {
     "text": [
@@ -608,7 +600,7 @@
       "En la luz de noviembre, la cadena del Stockhorn se extiende sobre el lago, las formas firmes, los colores más fríos.",
       "El cuadro está fechado en noviembre de 1910. En 1910 Hodler instala un segundo estudio en los Acacias, en Ginebra, y recibe el doctorado honoris causa de la Universidad de Basilea."
     ],
-    "fact": "1910. Colección no determinada."
+    "fact": "1910. Von der Heydt-Museum, Wuppertal."
   },
   "hthunabend12": {
     "text": [
@@ -616,13 +608,6 @@
       "Esta versión vespertina data de hacia 1912. Hodler retiene el mismo motivo a otra hora."
     ],
     "fact": "Hacia 1912. Colección no determinada."
-  },
-  "hwinter13": {
-    "text": [
-      "En invierno, la nieve cubre las laderas y la orilla; la cadena del Stockhorn se alza, desnuda y clara, sobre el lago.",
-      "El cuadro está fechado en 1913. También la estación fría pertenece a la larga serie de cuadros del lago de Thun."
-    ],
-    "fact": "1913. Colección no determinada."
   },
   "hmorhardt": {
     "text": [
@@ -637,13 +622,6 @@
       "La coleccionista de Soleura cuenta entre las importantes comitentes de Hodler. El retrato data de hacia 1912."
     ],
     "fact": "Hacia 1912. Colección no determinada."
-  },
-  "hhector12": {
-    "text": [
-      "Hector, el hijo de Hodler, aparece como un joven, la mirada firme, el rostro acercado a nosotros.",
-      "Hector nació en 1887, hijo de Hodler y de Augustine Dupin. El retrato de hacia 1912 se conserva en el Kunsthaus Zürich."
-    ],
-    "fact": "Hacia 1912. Kunsthaus Zürich."
   },
   "hself12": {
     "text": [

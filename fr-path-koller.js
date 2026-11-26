@@ -9,10 +9,6 @@
   "Kunsthaus Zürich": "Kunsthaus de Zurich"
 });
   P.works = Object.assign(P.works || {}, {
-  "rkselbst": {
-    "title": "Autoportrait à seize ans devant le chevalet",
-    "museum": "Lieu non indiqué"
-  },
   "rkschimmel": {
     "title": "Cheval blanc à l’écurie",
     "museum": "Kunsthaus de Zurich"
@@ -78,14 +74,14 @@
   P.paths.koller = {
   "title": "Le parcours de vie de Rudolf Koller",
   "life": "1828–1905",
-  "part": "Partie 1 · Zurich et les animaux",
+  "part": "Zurich et les animaux",
   "subtitle": "Chevaux, vaches et la diligence du Gothard",
-  "intro": "Voyage avec Rudolf Koller, le peintre animalier de Zurich : du jeune peintre devant son chevalet aux Alpes et au Klöntal, jusqu’à la maison du Zürichhorn et à la célèbre diligence du Gothard. De courtes étapes et des tableaux à colorier. Cette première partie le suit à l’étable, au pâturage et en montagne.",
+  "intro": "Voyage avec Rudolf Koller, le peintre animalier de Zurich : du jeune peintre devant son chevalet aux Alpes et au Klöntal, jusqu’à la maison du Zürichhorn et à la célèbre diligence du Gothard. De courtes étapes et des tableaux à colorier. Ce chemin le suit à l’étable, au pâturage et en montagne.",
   "ending": [
     "Rudolf Koller meurt à Zurich le 5 janvier 1905. Toute sa vie, il a peint ses animaux avec patience et un regard précis.",
-    "Le chemin peut encore s’allonger. D’autres études, scènes alpestres et portraits pourront suivre dans une partie ultérieure."
+    "Le chemin mène des premiers tableaux de chevaux, en passant par les vaches du Zürichhorn, jusqu’à la Poste du Gothard, son tableau le plus connu."
   ],
-  "epilogue": "Le 5 janvier 1905, Koller meurt à Zurich. Une partie ultérieure pourra ajouter d’autres études d’animaux."
+  "epilogue": "Rudolf Koller meurt à Zurich le 5 janvier 1905. Toute sa vie, il a peint ses animaux avec patience et un regard précis. Le chemin mène des premiers tableaux de chevaux, en passant par les vaches du Zürichhorn, jusqu’à la Poste du Gothard, son tableau le plus connu."
 };
   P.stations = Object.assign(P.stations || {}, {
   "rkjung": {
@@ -136,13 +132,6 @@
 });
   var pt = P.pathTexts = P.pathTexts || {};
   var add = {
-  "rkselbst": {
-    "text": [
-      "À seize ans, Koller est assis devant le chevalet et nous regarde gravement. Il est le fils d’un boucher et aubergiste de Zurich.",
-      "Très tôt, il dessine les animaux dans l’étable de son père."
-    ],
-    "fact": "1844. Lieu non indiqué."
-  },
   "rkschimmel": {
     "text": [
       "Un cheval blanc se tient calme dans l’écurie sombre, la lumière tombe sur la robe et la crinière. Koller peint ce tableau à vingt ans.",

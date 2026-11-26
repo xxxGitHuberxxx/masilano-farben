@@ -72,14 +72,14 @@
   P.paths.spitzweg = {
   "title": "Le parcours de vie de Carl Spitzweg",
   "life": "1808–1885",
-  "part": "Partie 1 · Munich et les originaux",
+  "part": "Munich et les originaux",
   "subtitle": "De pharmacien à peintre du Biedermeier",
-  "intro": "Voyage avec Carl Spitzweg, le Munichois qui fut d’abord pharmacien : des mansardes du pauvre poète aux rats de bibliothèque, aux amateurs de cactus et aux veilleurs de nuit, jusqu’à la promenade du dimanche. De courtes étapes et des tableaux à colorier. Cette première partie suit les tableaux de genre bien connus.",
+  "intro": "Voyage avec Carl Spitzweg, le Munichois qui fut d’abord pharmacien : des mansardes du pauvre poète aux rats de bibliothèque, aux amateurs de cactus et aux veilleurs de nuit, jusqu’à la promenade du dimanche. De courtes étapes et des tableaux à colorier. Ce chemin suit les tableaux de genre bien connus.",
   "ending": [
     "Spitzweg meurt à Munich le 23 septembre 1885. Il reste célibataire et fidèle à son humour discret et exact.",
-    "Le chemin peut encore s’allonger. D’autres voyages, paysages et tableaux de genre tardifs pourront suivre dans une partie ultérieure."
+    "Le chemin mène du pharmacien devenu peintre, par les mansardes et les originaux, jusqu’aux promenades du dimanche en Bavière."
   ],
-  "epilogue": "Le 23 septembre 1885, Spitzweg meurt à Munich. Une partie ultérieure pourra ajouter d’autres paysages et tableaux de genre."
+  "epilogue": "Spitzweg meurt à Munich le 23 septembre 1885. Il reste célibataire et fidèle à son humour discret et exact. Le chemin mène du pharmacien devenu peintre, par les mansardes et les originaux, jusqu’aux promenades du dimanche en Bavière."
 };
   P.stations = Object.assign(P.stations || {}, {
   "csmuc": {
@@ -124,7 +124,7 @@
     "mapLabel": "Dimanche",
     "intro": [
       "La promenade du dimanche et le chemin de l’église relient la société et le paysage. Spitzweg connaît le rite bourgeois et la large nature bavaroise.",
-      "Il meurt à Munich le 23 septembre 1885. Une partie ultérieure pourra ajouter des voyages et d’autres paysages."
+      "Il meurt à Munich le 23 septembre 1885."
     ]
   }
 });

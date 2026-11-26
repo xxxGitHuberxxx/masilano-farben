@@ -172,10 +172,6 @@
     "title": "La abadía en el robledal",
     "museum": "Alte Nationalgalerie, Berlín"
   },
-  "cfrainbow": {
-    "title": "Paisaje de montaña con arco iris",
-    "museum": "Museum Folkwang, Essen"
-  },
   "cfself10": {
     "title": "Autorretrato",
     "museum": "Kupferstichkabinett, Berlín"
@@ -199,10 +195,6 @@
   "cfwinterlon": {
     "title": "Paisaje invernal",
     "museum": "National Gallery, Londres"
-  },
-  "cfwinterchurch": {
-    "title": "Paisaje invernal con iglesia",
-    "museum": "Museo de Arte e Historia Cultural, Dortmund"
   },
   "cfcrosswood": {
     "title": "Cruz en el bosque",
@@ -587,13 +579,6 @@
     ],
     "fact": "1809–1810. Alte Nationalgalerie, Berlín."
   },
-  "cfrainbow": {
-    "text": [
-      "Un arco iris se tiende sobre una montaña oscura.",
-      "Delante, un caminante está sentado en una roca."
-    ],
-    "fact": "hacia 1810. Museum Folkwang, Essen."
-  },
   "cfself10": {
     "text": [
       "Con barba y rizos, Friedrich nos mira serio e intenso.",
@@ -635,13 +620,6 @@
       "Detrás, en la niebla, aparece una iglesia gótica."
     ],
     "fact": "1811. National Gallery, Londres."
-  },
-  "cfwinterchurch": {
-    "text": [
-      "Hay abetos en la nieve y detrás una iglesia surge de la bruma.",
-      "El cuadro hace pareja con el paisaje invernal de Londres."
-    ],
-    "fact": "1811. Museo de Arte e Historia Cultural, Dortmund."
   },
   "cfcrosswood": {
     "text": [

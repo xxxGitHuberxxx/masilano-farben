@@ -18,10 +18,6 @@
     "title": "The Field and the Great Walnut Tree in Winter, Éragny",
     "museum": "Philadelphia Museum of Art"
   },
-  "pxdeafhouse": {
-    "title": "The House of the Deaf Woman and the Belfry at Éragny",
-    "museum": "Indianapolis Museum of Art"
-  },
   "pxpick86": {
     "title": "Apple Picking",
     "museum": "Ohara Museum of Art, Kurashiki"
@@ -372,13 +368,6 @@
       "The picture is in the Philadelphia Museum of Art."
     ],
     "fact": "1885. Philadelphia Museum of Art."
-  },
-  "pxdeafhouse": {
-    "text": [
-      "Meadow, trees, a house and the church tower: the view over the village in 1886.",
-      "The picture is in the Indianapolis Museum of Art."
-    ],
-    "fact": "1886. Indianapolis Museum of Art."
   },
   "pxpick86": {
     "text": [

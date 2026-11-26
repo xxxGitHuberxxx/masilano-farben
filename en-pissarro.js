@@ -45,10 +45,6 @@
     "title": "Self-Portrait",
     "museum": "Statens Museum for Kunst, Copenhagen"
   },
-  "pxfabrique": {
-    "title": "The Little Factory",
-    "museum": "Musée d’art moderne et contemporain, Strasbourg"
-  },
   "pxmarne": {
     "title": "The Marne at Chennevières",
     "museum": "National Galleries of Scotland, Edinburgh"
@@ -129,10 +125,6 @@
     "title": "The Crystal Palace",
     "museum": "Art Institute of Chicago"
   },
-  "pxdulwich": {
-    "title": "Dulwich College",
-    "museum": "Fondation Bemberg, Toulouse"
-  },
   "pxsydenham": {
     "title": "Near Sydenham Hill",
     "museum": "Kimbell Art Museum, Fort Worth"
@@ -149,10 +141,6 @@
     "title": "Still Life with Apples and Pitcher",
     "museum": "Metropolitan Museum of Art, New York"
   },
-  "pxpoulies": {
-    "title": "Ruelle des Poulies, Pontoise",
-    "museum": "Musée d’Orsay, Paris"
-  },
   "pxboulevard": {
     "title": "The Boulevard des Fossés, Pontoise",
     "museum": "Norton Simon Museum, Pasadena"
@@ -160,10 +148,6 @@
   "pxchestnut72": {
     "title": "Chestnut Grove at Louveciennes",
     "museum": "Nelson-Atkins Museum of Art, Kansas City"
-  },
-  "pxgelee": {
-    "title": "Hoarfrost, the Old Road to Ennery, Pontoise",
-    "museum": "Musée d’Orsay, Paris"
   },
   "pxtroofs": {
     "title": "The Red Roofs, a Corner of the Village, Winter",
@@ -395,13 +379,6 @@
     ],
     "fact": "1857–1858. Statens Museum for Kunst, Copenhagen."
   },
-  "pxfabrique": {
-    "text": [
-      "Around 1862–65 Pissarro painted a little factory in the countryside near Paris, with figures on the path.",
-      "The picture moves away from the ideal classical landscape and is now in the Musée d’art moderne et contemporain in Strasbourg."
-    ],
-    "fact": "c. 1862–1865. Musée d’art moderne et contemporain, Strasbourg."
-  },
   "pxmarne": {
     "text": [
       "On the Marne at Chennevières, south-east of Paris, Pissarro painted a broad river view in 1864–65. The dense, quiet paint still shows Corot’s influence.",
@@ -546,13 +523,6 @@
     ],
     "fact": "1871. Art Institute of Chicago."
   },
-  "pxdulwich": {
-    "text": [
-      "Pissarro also recorded Dulwich College in 1871, near Lordship Lane.",
-      "The picture is in the Fondation Bemberg, Toulouse."
-    ],
-    "fact": "1871. Fondation Bemberg, Toulouse."
-  },
   "pxsydenham": {
     "text": [
       "From a rise, in 1871, Pissarro looked out over fields and trees near Sydenham Hill.",
@@ -581,14 +551,6 @@
     ],
     "fact": "1872. Metropolitan Museum of Art, New York."
   },
-  "pxpoulies": {
-    "text": [
-      "The Ruelle des Poulies in Pontoise, 1872: a lane, houses, a bright sky.",
-      "Pissarro is back in the town where Cézanne would soon be working too.",
-      "The picture is in the Musée d’Orsay."
-    ],
-    "fact": "1872. Musée d’Orsay, Paris."
-  },
   "pxboulevard": {
     "text": [
       "The Boulevard des Fossés in Pontoise, 1872, with trees and passing figures.",
@@ -602,13 +564,6 @@
       "The picture is in the Nelson-Atkins Museum of Art, Kansas City."
     ],
     "fact": "1872. Nelson-Atkins Museum of Art, Kansas City."
-  },
-  "pxgelee": {
-    "text": [
-      "Hoarfrost, of 1873, shows the old road to Ennery near Pontoise, with frost on the fields.",
-      "Pissarro showed the picture at the first Impressionist exhibition in 1874. It is in the Musée d’Orsay."
-    ],
-    "fact": "1873. Musée d’Orsay, Paris."
   },
   "pxtroofs": {
     "text": [

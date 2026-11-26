@@ -58,10 +58,6 @@
     "title": "Rivage marin au clair de lune",
     "museum": "Musée du Louvre, Paris"
   },
-  "cfsunsetwoman": {
-    "title": "Femme devant le soleil couchant",
-    "museum": "Museum Folkwang, Essen"
-  },
   "cfwindow": {
     "title": "Femme à la fenêtre",
     "museum": "Alte Nationalgalerie, Berlin"
@@ -78,10 +74,6 @@
     "title": "Paysage des monts des Géants avec brouillard montant",
     "museum": "Collections de peinture de l’État de Bavière, Munich"
   },
-  "cfdriftingcloud": {
-    "title": "Nuages qui passent",
-    "museum": "Hamburger Kunsthalle"
-  },
   "cfmistbank": {
     "title": "Nappes de brume",
     "museum": "Hamburger Kunsthalle"
@@ -93,14 +85,6 @@
   "cfgreifharbour2": {
     "title": "Le Port de Greifswald",
     "museum": "Alte Nationalgalerie, Berlin"
-  },
-  "cfgreifmeadows": {
-    "title": "Prairies près de Greifswald",
-    "museum": "Hamburger Kunsthalle"
-  },
-  "cfflatland": {
-    "title": "Paysage plat",
-    "museum": "Fondation des châteaux et jardins prussiens, Berlin"
   },
   "cfwindmills": {
     "title": "Paysage avec moulins à vent",
@@ -137,14 +121,6 @@
   "cfice": {
     "title": "La Mer de glace",
     "museum": "Hamburger Kunsthalle"
-  },
-  "cfnorthmoon": {
-    "title": "Mer du Nord au clair de lune",
-    "museum": "Galerie nationale de Prague"
-  },
-  "cfreef": {
-    "title": "Récif rocheux au bord de la mer",
-    "museum": "Staatliche Kunsthalle Karlsruhe"
   },
   "cfmoonmen": {
     "title": "Deux hommes contemplant la lune",
@@ -433,13 +409,6 @@
     ],
     "fact": "1818. Musée du Louvre, Paris."
   },
-  "cfsunsetwoman": {
-    "text": [
-      "Une femme se tient sur un chemin et ouvre légèrement les bras devant le soleil bas.",
-      "Tout le paysage brille de jaune et d’orange chauds."
-    ],
-    "fact": "vers 1818. Museum Folkwang, Essen."
-  },
   "cfwindow": {
     "text": [
       "Caroline se tient dans l’atelier dépouillé devant la fenêtre ouverte et regarde l’Elbe.",
@@ -468,13 +437,6 @@
     ],
     "fact": "vers 1819. Collections de peinture de l’État de Bavière, Munich."
   },
-  "cfdriftingcloud": {
-    "text": [
-      "Des nuages épais passent sur un plateau vert et cachent presque les sommets.",
-      "Un petit lac reflète la lumière froide."
-    ],
-    "fact": "vers 1820. Hamburger Kunsthalle."
-  },
   "cfmistbank": {
     "text": [
       "Un paysage plat s’étend sous un ciel agité, et la brume passe sur les champs.",
@@ -495,20 +457,6 @@
       "Sur le quai se tiennent des gens et des tonneaux, et le ciel rougeoie de jaune et de rose."
     ],
     "fact": "1818–1820. Alte Nationalgalerie, Berlin."
-  },
-  "cfgreifmeadows": {
-    "text": [
-      "De vastes prés verts s’étendent jusqu’à l’horizon, où se dresse la silhouette de Greifswald avec ses clochers.",
-      "Quelques chevaux paissent dans la lumière claire."
-    ],
-    "fact": "1821–1822. Hamburger Kunsthalle."
-  },
-  "cfflatland": {
-    "text": [
-      "Un village aux toits rouges et un moulin à vent se trouvent dans un pays plat sous un ciel haut et calme.",
-      "Le tableau montre peut-être Rügen ou la région de Greifswald."
-    ],
-    "fact": "vers 1822. Fondation des châteaux et jardins prussiens, Berlin."
   },
   "cfwindmills": {
     "text": [
@@ -572,20 +520,6 @@
       "En bas à droite, on reconnaît la poupe d’un navire pris dans la glace."
     ],
     "fact": "1823–1824. Hamburger Kunsthalle."
-  },
-  "cfnorthmoon": {
-    "text": [
-      "Des nuages sombres s’ouvrent au-dessus d’une mer froide, et la lune éclaire les rochers et l’eau.",
-      "Sur la rive repose une barque."
-    ],
-    "fact": "vers 1823. Galerie nationale de Prague."
-  },
-  "cfreef": {
-    "text": [
-      "D’une mer calme éclairée par la lune surgit un récif pointu comme une montagne dentelée.",
-      "Devant, des collines sombres entourent une baie."
-    ],
-    "fact": "vers 1824. Staatliche Kunsthalle Karlsruhe."
   },
   "cfmoonmen": {
     "text": [

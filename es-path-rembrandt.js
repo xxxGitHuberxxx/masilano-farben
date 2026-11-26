@@ -101,10 +101,6 @@
     "title": "Marten Looten",
     "museum": "Los Angeles County Museum of Art"
   },
-  "rbshipb": {
-    "title": "El constructor de barcos y su esposa",
-    "museum": "Royal Collection, Londres"
-  },
   "rbwten": {
     "title": "Johannes Wtenbogaert",
     "museum": "Rijksmuseum, Ámsterdam"
@@ -152,10 +148,6 @@
   "rbstandard": {
     "title": "El abanderado",
     "museum": "Rijksmuseum, Ámsterdam"
-  },
-  "rbmagdalen": {
-    "title": "Cristo y María Magdalena en el sepulcro",
-    "museum": "Royal Collection, Londres"
   },
   "rbpancake": {
     "title": "La vendedora de tortitas",
@@ -208,10 +200,6 @@
   "rbmartens": {
     "title": "Baertje Martens",
     "museum": "Ermitage, San Petersburgo"
-  },
-  "rbagatha": {
-    "title": "Agatha Bas",
-    "museum": "Royal Collection, Londres"
   },
   "rbanslo": {
     "title": "El predicador Cornelis Anslo y su esposa",
@@ -438,12 +426,6 @@
     ],
     "fact": "1632. Los Angeles County Museum of Art."
   },
-  "rbshipb": {
-    "text": [
-      "El constructor de barcos Jan Rijcksen está sentado ante su mesa de dibujo cuando su esposa Griet Jans le trae una carta. Rembrandt convierte el doble retrato en una pequeña escena. El cuadro está en la Royal Collection de Londres."
-    ],
-    "fact": "1633. Royal Collection, Londres."
-  },
   "rbwten": {
     "text": [
       "El anciano predicador Johannes Wtenbogaert, un dirigente de los remonstrantes, viste un manto negro con cuello blanco. Rembrandt lo pinta en 1633. El cuadro está en el Rijksmuseum de Ámsterdam."
@@ -515,12 +497,6 @@
       "Un abanderado está orgulloso con una gran bandera al hombro, sombrero de plumas y banda. Rembrandt pinta el cuadro en 1636. Desde 2022 está en el Rijksmuseum de Ámsterdam."
     ],
     "fact": "1636. Rijksmuseum, Ámsterdam."
-  },
-  "rbmagdalen": {
-    "text": [
-      "En la mañana de Pascua María Magdalena reconoce a Cristo, que se le aparece como jardinero con sombrero. Detrás de ellos sale el sol sobre la ciudad. El cuadro está en la Royal Collection de Londres."
-    ],
-    "fact": "1638. Royal Collection, Londres."
   },
   "rbpancake": {
     "text": [
@@ -599,12 +575,6 @@
       "Baertje Martens era la esposa de Herman Doomer. Su retrato es la pareja del de él. El cuadro está en el Ermitage de San Petersburgo."
     ],
     "fact": "hacia 1640. Ermitage, San Petersburgo."
-  },
-  "rbagatha": {
-    "text": [
-      "Agatha Bas aparece como en el marco de una ventana, con una mano en el antepecho y un abanico en la otra. Rembrandt la pinta en 1641. El cuadro está en la Royal Collection de Londres."
-    ],
-    "fact": "1641. Royal Collection, Londres."
   },
   "rbanslo": {
     "text": [

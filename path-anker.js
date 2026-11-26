@@ -45,14 +45,6 @@
     "source": "Wikimedia Commons: «Albert Anker Schreibunterricht 1865.jpg», gemeinfrei (Public Domain)"
   },
   {
-    "id": "imwald",
-    "title": "Schlafendes Mädchen im Walde",
-    "artist": "Albert Anker",
-    "year": "1865",
-    "museum": "Sammlung nicht ermittelt",
-    "source": "Wikimedia Commons: «Albert Anker, ragazzina addormentata nel bosco, 1865.jpg», gemeinfrei (Public Domain)"
-  },
-  {
     "id": "huehner",
     "title": "Mädchen, Hühner fütternd",
     "artist": "Albert Anker",
@@ -440,11 +432,7 @@
             "Ein junger Mann im dunklen Rock, die Stirn frei, der Blick geradeaus. Die Zeichnung trägt die Aufschrift «Sept. 1852» – Albert Anker ist einundzwanzig.",
             "In diesem Jahr studiert er Theologie, zuerst in Bern, dann in Halle. Die Zeichnung bewahrt das Centre Albert Anker in Ins."
           ],
-          "fact": "Zeichnung, September 1852. Centre Albert Anker, Ins.",
-          "quote": {
-            "text": "Was ist Kunst? in erster Linie besteht die Kunst nicht in der Nachahmung, sondern in zwei Punkten: zum ersten muss man sich in seinen Vorstellungen ein Ideal bilden, zum zweiten muss man dies Ideal den Augen der Mitmenschen darstellen, ihm eine Gestalt schaffen, welche unserem Schauen und Hören zugänglich wird.",
-            "cite": "Brief an Auguste Bachelin, 9. Juni 1849. Centre Albert Anker, Ins."
-          }
+          "fact": "Zeichnung, September 1852. Centre Albert Anker, Ins."
         }
       ]
     },
@@ -509,14 +497,6 @@
             "Das Bild gehört zu den Schreibunterricht-Bildern von 1865. Für «Schreibunterricht» und «Schlafendes Mädchen im Walde» erhält Anker 1866 eine Goldmedaille am Pariser Salon."
           ],
           "fact": "Öl auf Leinwand, 1865. Privatbesitz."
-        },
-        {
-          "pid": "imwald",
-          "text": [
-            "Ein Mädchen schläft am Fuss eines Baumes, den Arm an einem Bündel Reisig. Das Kleid ist einfach, die Füsse bar, der Wald um sie dunkel und still.",
-            "Das Bild von 1865 gehört zu den beiden Werken, für die Anker 1866 am Pariser Salon eine Goldmedaille erhält."
-          ],
-          "fact": "Öl auf Leinwand, 1865. Sammlung nicht ermittelt."
         },
         {
           "pid": "huehner",
@@ -812,11 +792,7 @@
             "Auf einem Platz vor Häusern und Bäumen stehen und gehen viele Kinder und Erwachsene. Einige werden empfangen, andere schauen zu.",
             "Das Bild von 1876 hängt im Musée d’art et d’histoire in Neuchâtel. Es trägt auch einen französischen Titel, der an Waisen aus Unterwalden in Murten erinnert; die Szene selbst ist eine komponierte Aufnahme, kein Bericht von 1798."
           ],
-          "fact": "Öl auf Leinwand, 1876. Musée d’art et d’histoire, Neuchâtel.",
-          "quote": {
-            "text": "In einer Apotheke machte ich eben eine Skizze. Möglich dass daraus nichts wird, aber man tut, was man kann...",
-            "cite": "An Frau Anker, Murten, 11. Juli 1876. Centre Albert Anker, Ins."
-          }
+          "fact": "Öl auf Leinwand, 1876. Musée d’art et d’histoire, Neuchâtel."
         },
         {
           "pid": "pelzmuetze",
@@ -887,7 +863,7 @@
       "mapLabel": "1880er",
       "intro": [
         "In den 1880er Jahren bleiben Kinder, Schwestern, Märchen und die Stube die festen Themen: die beiden Schwestern, Rotkäppchen, eine Gotthelf-Leserin, Mariette mit Erdbeeren, das strickende Mädchen an der Wiege, die ersten Schritte.",
-        "Den Winter verbringt die Familie noch in Paris, den Sommer in Ins. 1890 wird Anker den Pariser Wohnsitz aufgeben. Die grossen Bilder der 1890er Jahre – und was danach folgt – gehören zum nächsten Teil."
+        "Den Winter verbringt die Familie noch in Paris, den Sommer in Ins. 1890 wird Anker den Pariser Wohnsitz aufgeben. Danach folgen die grossen Bilder der 1890er Jahre."
       ],
       "works": [
         {
@@ -966,7 +942,7 @@
           "pid": "ersteschritte",
           "text": [
             "Ein älteres Kind hält ein kleineres, das die ersten Schritte wagt. Der eine geht barfuss, das kleinere trägt Schuhe, hinter ihnen steht ein Kachelofen.",
-            "Das Bild von 1888 schliesst diesen ersten Teil: ein Alltag in der Stube, festgehalten kurz bevor Anker in den 1890er Jahren noch einmal zu grossen Schul- und Dorfbildern ansetzt."
+            "Das Bild von 1888 zeigt einen Alltag in der Stube, festgehalten kurz bevor Anker in den 1890er Jahren noch einmal zu grossen Schul- und Dorfbildern ansetzt."
           ],
           "fact": "Öl auf Leinwand, 1888. Privatbesitz."
         }

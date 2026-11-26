@@ -45,14 +45,6 @@
     "source": "Wikimedia Commons: «Joseph Mallord William Turner - Llanthony Abbey, Monmouthshire - Google Art Project.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "tuthames",
-    "title": "Weiter Blick über die Themse",
-    "artist": "J. M. W. Turner",
-    "year": "um 1796",
-    "museum": "Blanton Museum of Art, Austin",
-    "source": "Wikimedia Commons: «Panoramic View of the Thames, by J. M. W. Turner, c. 1796, watercolor on paper - Blanton Museum of Art - Austin, Texas - DSC08435.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "tufishermen",
     "title": "Fischer auf See",
     "artist": "J. M. W. Turner",
@@ -189,36 +181,12 @@
     "source": "Wikimedia Commons: «Joseph Mallord William Turner 024.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "tugrenoble",
-    "title": "Grenoble von der Isère, mit der Porte de France",
-    "artist": "J. M. W. Turner",
-    "year": "1802",
-    "museum": "Tate, London",
-    "source": "Wikimedia Commons: «(Barcelona) Grenoble from the River Isère with the Porte de France 1802 - William Turner - Tate Britain.jpg», Public domain (gemeinfrei)"
-  },
-  {
-    "id": "tuschollen",
-    "title": "Die Teufelsbrücke und die Schöllenenschlucht",
-    "artist": "J. M. W. Turner",
-    "year": "1802",
-    "museum": "Tate, London",
-    "source": "Wikimedia Commons: «(Barcelona) The devil's Bridge and Schöllen Gorge 1802 - William Turner - Tate Britain.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "tumontblanc",
     "title": "Der Mont Blanc und der Glacier des Bossons von Chamonix",
     "artist": "J. M. W. Turner",
     "year": "1802",
     "museum": "Tate, London",
     "source": "Wikimedia Commons: «(Barcelona) Mont Blanc and the Glacier des Bossons from above Chamonix, dawn - William Turner - Tate Britain.jpg», Public domain (gemeinfrei)"
-  },
-  {
-    "id": "tugothard",
-    "title": "Der St. Gotthard",
-    "artist": "J. M. W. Turner",
-    "year": "1806–1807",
-    "museum": "Tate, London",
-    "source": "Wikimedia Commons: «(Barcelona) Mt St Gothard, 1806-7 - William Turner - Tate Britain.jpg», Public domain (gemeinfrei)"
   },
   {
     "id": "tuvictory",
@@ -269,22 +237,6 @@
     "source": "Wikimedia Commons: «(Barcelona) Margate - c.1806-7 - William Turner - Tate Britain.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "tusunvapour",
-    "title": "Die Sonne, die durch Dunst untergeht",
-    "artist": "J. M. W. Turner",
-    "year": "um 1809",
-    "museum": "Barber Institute of Fine Arts, Birmingham",
-    "source": "Wikimedia Commons: «The Barber Institute of Fine Arts - Joseph Mallord William Turner - Sun Setting through Vapour.jpg», Public domain (gemeinfrei)"
-  },
-  {
-    "id": "tuavalanche",
-    "title": "Der Sturz einer Lawine in Graubünden",
-    "artist": "J. M. W. Turner",
-    "year": "1810",
-    "museum": "Tate, London",
-    "source": "Wikimedia Commons: «(Barcelona) The Fall of an Avalanche in the Grisons - William Turner - Tate Britain.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "tusouthall",
     "title": "Der Grand-Junction-Kanal bei der Mühle von Southall",
     "artist": "J. M. W. Turner",
@@ -307,14 +259,6 @@
     "year": "1811",
     "museum": "Dordrechts Museum",
     "source": "Wikimedia Commons: «Joseph Mallord William Turner - Whalley Bridge and Abbey, Lancashire, Dyers washing and drying cloth - DM-020-1449 - Dordrechts Museum.jpg», Public domain (gemeinfrei)"
-  },
-  {
-    "id": "tuplym",
-    "title": "Die Mündung des Plym vom Boringdon Park",
-    "artist": "J. M. W. Turner",
-    "year": "1813",
-    "museum": "Tate, London",
-    "source": "Wikimedia Commons: «(Barcelona) The Plym Estuary from Boringdon Park - 1813 - William Turner - Tate Britain.jpg», Public domain (gemeinfrei)"
   },
   {
     "id": "tufrosty",
@@ -414,7 +358,7 @@
   "part": "Teil 1 · 1775–1819",
   "subtitle": "Von Covent Garden über die Alpen an den Rhein",
   "cover": "tufishermen",
-  "intro": "Joseph Mallord William Turner wird am 23. April 1775 in der Maiden Lane 21 in Covent Garden geboren, als Sohn eines Barbiers, und am 14. Mai in der Kirche St. Paul in Covent Garden getauft. Dieser erste Teil folgt ihm von den Royal Academy Schools und den frühen Aquarellen über das erste Ölbild 1796, die Aufnahme in die Royal Academy 1802 und die erste Reise auf den Kontinent bis an die Schwelle der Italienreise 1819.",
+  "intro": "Joseph Mallord William Turner wird am 23. April 1775 in der Maiden Lane 21 in Covent Garden geboren, als Sohn eines Barbiers, und am 14. Mai in der Kirche St. Paul in Covent Garden getauft. Dieser Weg folgt ihm von den Royal Academy Schools und den frühen Aquarellen über das erste Ölbild 1796, die Aufnahme in die Royal Academy 1802 und die erste Reise auf den Kontinent bis an die Schwelle der Italienreise 1819.",
   "ending": [
     "Im August 1819 bricht Turner zu seiner ersten Reise nach Italien auf.",
     "Im nächsten Teil folgen Venedig, Regen, Dampf und Geschwindigkeit, die Fighting Temeraire und sein Tod am 19. Dezember 1851 in Chelsea."
@@ -501,15 +445,6 @@
         "1797 reist er in den Norden Englands und in den Lake District. Am See Buttermere zeigt er einen Schauer über dem Wasser, eines der ersten ausgestellten Bilder dieser Reise."
       ],
       "works": [
-        {
-          "pid": "tuthames",
-          "text": [
-            "Ein langes Aquarell zeigt die Themse in der Weite, mit Ufern, Booten und einem hellen Himmel.",
-            "Es entsteht um 1796, im Jahr des ersten Ölbilds.",
-            "Das Blatt ist im Blanton Museum of Art in Austin."
-          ],
-          "fact": "um 1796. Blanton Museum of Art, Austin."
-        },
         {
           "pid": "tufishermen",
           "text": [
@@ -705,24 +640,6 @@
           "fact": "1803. National Gallery, London."
         },
         {
-          "pid": "tugrenoble",
-          "text": [
-            "Von der Isère aus sieht man Grenoble und die Porte de France, vor den Bergen.",
-            "Das Blatt entsteht 1802, auf der Reise durch Savoyen.",
-            "Es ist in der Tate in London."
-          ],
-          "fact": "1802. Tate, London."
-        },
-        {
-          "pid": "tuschollen",
-          "text": [
-            "In der Schöllenenschlucht am St. Gotthard führt die Teufelsbrücke über die Reuss.",
-            "Turner hält den wilden Pass 1802 fest.",
-            "Das Blatt ist in der Tate in London."
-          ],
-          "fact": "1802. Tate, London."
-        },
-        {
           "pid": "tumontblanc",
           "text": [
             "Im Morgenlicht liegen der Mont Blanc und der Glacier des Bossons über Chamonix.",
@@ -730,15 +647,6 @@
             "Das Aquarell ist in der Tate in London."
           ],
           "fact": "1802. Tate, London."
-        },
-        {
-          "pid": "tugothard",
-          "text": [
-            "Ein Blick in die Schlucht des St. Gotthard, mit der Strasse am Abgrund und hohem Himmel.",
-            "Turner malt den Pass 1806 bis 1807 aus der Erinnerung an die Reise von 1802.",
-            "Das Bild ist in der Tate in London."
-          ],
-          "fact": "1806–1807. Tate, London."
         }
       ]
     },
@@ -827,23 +735,6 @@
           "fact": "um 1806–1807. Tate, London."
         },
         {
-          "pid": "tusunvapour",
-          "text": [
-            "Die Sonne sinkt durch den Dunst; Fischer und Boote liegen am Ufer, ein grosses Schiff steht in der Ferne.",
-            "Das Bild entsteht um 1809 und ist im Barber Institute of Fine Arts in Birmingham."
-          ],
-          "fact": "um 1809. Barber Institute of Fine Arts, Birmingham."
-        },
-        {
-          "pid": "tuavalanche",
-          "text": [
-            "Eine Lawine bricht in Graubünden über Felsen und Bäume.",
-            "Turner malt die Gewalt der Alpen 1810, Jahre nach der Schweizer Reise.",
-            "Das Bild ist in der Tate in London."
-          ],
-          "fact": "1810. Tate, London."
-        },
-        {
           "pid": "tusouthall",
           "text": [
             "Eine Mühle steht am Grand-Junction-Kanal bei Southall; ein Wagen und Figuren halten am Ufer, der Himmel ist weit.",
@@ -884,15 +775,6 @@
             "Das Bild ist im Dordrechts Museum."
           ],
           "fact": "1811. Dordrechts Museum."
-        },
-        {
-          "pid": "tuplym",
-          "text": [
-            "Von Boringdon Park blickt man auf die Mündung des Plym in Devon, mit Hügeln, Wasser und einem weiten Himmel.",
-            "Turner skizziert 1813 in Devon in Öl im Freien.",
-            "Das Blatt ist in der Tate in London."
-          ],
-          "fact": "1813. Tate, London."
         },
         {
           "pid": "tufrosty",

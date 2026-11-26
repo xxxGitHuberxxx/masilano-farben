@@ -72,14 +72,14 @@
   P.paths.spitzweg = {
   "title": "Il percorso di vita di Carl Spitzweg",
   "life": "1808–1885",
-  "part": "Parte 1 · Monaco e gli originali",
+  "part": "Monaco e gli originali",
   "subtitle": "Da farmacista a pittore del Biedermeier",
-  "intro": "Viaggia con Carl Spitzweg, il pittore di Monaco che cominciò come farmacista: dalle soffitte del povero poeta, attraverso i topi di biblioteca, gli amici dei cactus e i guardiani notturni, fino alla passeggiata della domenica. Brevi tappe e quadri da colorare. Questa prima parte segue i noti dipinti di genere.",
+  "intro": "Viaggia con Carl Spitzweg, il pittore di Monaco che cominciò come farmacista: dalle soffitte del povero poeta, attraverso i topi di biblioteca, gli amici dei cactus e i guardiani notturni, fino alla passeggiata della domenica. Brevi tappe e quadri da colorare. Questo percorso segue i noti dipinti di genere.",
   "ending": [
     "Spitzweg muore a Monaco il 23 settembre 1885. Resta celibe e fedele al suo umorismo quieto e preciso.",
-    "Il percorso può ancora crescere. Altri viaggi, paesaggi e dipinti di genere tardi potranno seguire in una parte successiva."
+    "Il percorso va dal farmacista che diventa pittore, attraverso le soffitte e gli eccentrici, fino alle passeggiate domenicali in Baviera."
   ],
-  "epilogue": "Il 23 settembre 1885 Spitzweg muore a Monaco. Una parte successiva potrà aggiungere altri paesaggi e dipinti di genere."
+  "epilogue": "Spitzweg muore a Monaco il 23 settembre 1885. Resta celibe e fedele al suo umorismo quieto e preciso. Il percorso va dal farmacista che diventa pittore, attraverso le soffitte e gli eccentrici, fino alle passeggiate domenicali in Baviera."
 };
   P.stations = Object.assign(P.stations || {}, {
   "csmuc": {
@@ -124,7 +124,7 @@
     "mapLabel": "Domenica",
     "intro": [
       "La passeggiata della domenica e il cammino verso la chiesa uniscono società e paesaggio. Spitzweg conosce il rito borghese e l’ampia natura bavarese.",
-      "Muore a Monaco il 23 settembre 1885. Una parte successiva potrà aggiungere viaggi e altri paesaggi."
+      "Muore a Monaco il 23 settembre 1885."
     ]
   }
 });

@@ -71,14 +71,14 @@
   EN.paths.wisinger = {
   "title": "Olga Wisinger-Florian’s Life Journey",
   "life": "1844–1926",
-  "part": "Part 1 · Flowers, avenues and gardens",
+  "part": "Flowers, avenues and gardens",
   "subtitle": "From pianist to painter",
-  "intro": "Travel with Olga Wisinger-Florian, the Viennese painter of flowers and gardens: from her first pictures in the Salzkammergut, through poppy fields and Prater avenues, to Venice, Karlsbad and Euxinograd on the Black Sea. Short stations and pictures to colour. This first part follows her colours.",
+  "intro": "Travel with Olga Wisinger-Florian, the Viennese painter of flowers and gardens: from her first pictures in the Salzkammergut, through poppy fields and Prater avenues, to Venice, Karlsbad and Euxinograd on the Black Sea. Short stations and pictures to colour. This path follows her colours.",
   "ending": [
     "Olga Wisinger-Florian dies at Grafenegg in Lower Austria on 27 February 1926. The pianist has become one of Austria’s best-known women painters.",
-    "The path can grow further. More flowers and gardens may follow in a later part."
+    "The path leads from the autumn forest of her beginnings through farmyards, journeys and avenues to the blossoming apple trees of 1906."
   ],
-  "epilogue": "On 27 February 1926 Wisinger-Florian dies at Grafenegg. A later part can add further flower pictures."
+  "epilogue": "Olga Wisinger-Florian dies at Grafenegg in Lower Austria on 27 February 1926. The pianist has become one of Austria’s best-known women painters. The path leads from the autumn forest of her beginnings through farmyards, journeys and avenues to the blossoming apple trees of 1906."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "owjung": {

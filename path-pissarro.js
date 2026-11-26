@@ -77,14 +77,6 @@
     "source": "Wikimedia Commons: «Selvportræt Camille Pissarro 1852-1854.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "pxfabrique",
-    "title": "Die kleine Fabrik",
-    "artist": "Camille Pissarro",
-    "year": "um 1862–1865",
-    "museum": "Musée d’art moderne et contemporain, Strassburg",
-    "source": "Wikimedia Commons: «Camille Pissarro - La Petite Fabrique - 1862-65.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "pxmarne",
     "title": "Die Marne bei Chennevières",
     "artist": "Camille Pissarro",
@@ -114,7 +106,7 @@
     "artist": "Camille Pissarro",
     "year": "1866",
     "museum": "Art Institute of Chicago",
-    "source": "Wikimedia Commons: «Camille Pissarro, The Banks of the Marne in Winter, 1866 1 27 18 -artinstitutechi (40428548941).jpg», Public domain (gemeinfrei)"
+    "source": "Art Institute of Chicago, Open Access, Inv. 1957.306, gemeinfrei (CC0)"
   },
   {
     "id": "pxrueherm",
@@ -245,14 +237,6 @@
     "source": "Wikimedia Commons: «Camille Pissarro - Le Crystal Palace, Londres.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "pxdulwich",
-    "title": "Dulwich College",
-    "artist": "Camille Pissarro",
-    "year": "1871",
-    "museum": "Fondation Bemberg, Toulouse",
-    "source": "Wikimedia Commons: «Bemberg Fondation Toulouse - Dulwich College, Londres (1871) - Camille Pissarro Inv.2149.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "pxsydenham",
     "title": "Bei Sydenham Hill",
     "artist": "Camille Pissarro",
@@ -285,14 +269,6 @@
     "source": "Wikimedia Commons: «Camille Pissarro Still Life with Apples and Pitcher The Metropolitan Museum of Art.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "pxpoulies",
-    "title": "Ruelle des Poulies in Pontoise",
-    "artist": "Camille Pissarro",
-    "year": "1872",
-    "museum": "Musée d’Orsay, Paris",
-    "source": "Wikimedia Commons: «Ruelle des Poulies, Pontoise (1872) - Camille Pissarro (Musée d'Orsay).jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "pxboulevard",
     "title": "Der Boulevard des Fossés, Pontoise",
     "artist": "Camille Pissarro",
@@ -307,14 +283,6 @@
     "year": "1872",
     "museum": "Nelson-Atkins Museum of Art, Kansas City",
     "source": "Wikimedia Commons: «Camille Pissarro - Bois de châtaigniers à Louveciennes (1872).jpg», Public domain (gemeinfrei)"
-  },
-  {
-    "id": "pxgelee",
-    "title": "Reif, alte Strasse nach Ennery, Pontoise",
-    "artist": "Camille Pissarro",
-    "year": "1873",
-    "museum": "Musée d’Orsay, Paris",
-    "source": "Wikimedia Commons: «Camille Pissarro - Gelée blanche, ancienne route d´Ennery, Pontoise - 1873.jpg», Public domain (gemeinfrei)"
   },
   {
     "id": "pxtroofs",
@@ -414,7 +382,7 @@
   "part": "Teil 1 · 1830–1884",
   "subtitle": "Von St. Thomas zu den Impressionisten-Ausstellungen",
   "cover": "pxjallais",
-  "intro": "Camille Pissarro wird am 10. Juli 1830 in Charlotte Amalie auf St. Thomas geboren, damals Dänisch-Westindien. Mit Fritz Melbye geht er nach Venezuela, 1855 nach Paris. Dieser erste Teil folgt ihm über Louveciennes, die Londoner Jahre und Pontoise bis zur Schwelle von Éragny um 1884.",
+  "intro": "Camille Pissarro wird am 10. Juli 1830 in Charlotte Amalie auf St. Thomas geboren, damals Dänisch-Westindien. Mit Fritz Melbye geht er nach Venezuela, 1855 nach Paris. Dieser Weg folgt ihm über Louveciennes, die Londoner Jahre und Pontoise bis zur Schwelle von Éragny um 1884.",
   "ending": [
     "Der erste Teil von Pissarros Weg endet, als er 1884 nach Éragny-sur-Epte zieht.",
     "Im nächsten Teil folgen die Jahre in Éragny, die Begegnung mit dem Neoimpressionismus, die Stadtbilder von Paris, Rouen und Le Havre und sein Tod 1903."
@@ -555,14 +523,6 @@
             "Auch dieses Bild bewahrt das Statens Museum for Kunst."
           ],
           "fact": "1857–1858. Statens Museum for Kunst, Kopenhagen."
-        },
-        {
-          "pid": "pxfabrique",
-          "text": [
-            "Um 1862–65 malt Pissarro eine kleine Fabrik in der Landschaft bei Paris, mit Figuren auf dem Weg.",
-            "Das Bild entfernt sich von der klassischen Ideallandschaft und hängt heute im Musée d’art moderne et contemporain in Strassburg."
-          ],
-          "fact": "um 1862–1865. Musée d’art moderne et contemporain, Strassburg."
         },
         {
           "pid": "pxmarne",
@@ -780,14 +740,6 @@
           "fact": "1871. Art Institute of Chicago."
         },
         {
-          "pid": "pxdulwich",
-          "text": [
-            "Auch das College in Dulwich hält Pissarro 1871 fest, in der Nähe von Lordship Lane.",
-            "Das Bild hängt in der Fondation Bemberg in Toulouse."
-          ],
-          "fact": "1871. Fondation Bemberg, Toulouse."
-        },
-        {
           "pid": "pxsydenham",
           "text": [
             "Von einer Anhöhe aus blickt Pissarro 1871 über Felder und Bäume bei Sydenham Hill.",
@@ -837,15 +789,6 @@
           "fact": "1872. Metropolitan Museum of Art, New York."
         },
         {
-          "pid": "pxpoulies",
-          "text": [
-            "Die Ruelle des Poulies in Pontoise, 1872: eine Gasse, Häuser, ein heller Himmel.",
-            "Pissarro ist wieder in der Stadt, in der bald darauf auch Cézanne arbeitet.",
-            "Das Bild hängt im Musée d’Orsay."
-          ],
-          "fact": "1872. Musée d’Orsay, Paris."
-        },
-        {
           "pid": "pxboulevard",
           "text": [
             "Der Boulevard des Fossés in Pontoise, 1872, mit Bäumen und passierenden Figuren.",
@@ -878,15 +821,6 @@
         "In diesen Jahren besucht er auch den Freund Ludovic Piette in Montfoucault."
       ],
       "works": [
-        {
-          "pid": "pxgelee",
-          "text": [
-            "Die «Gelée blanche» von 1873 zeigt die alte Strasse nach Ennery bei Pontoise, mit Reif auf dem Acker.",
-            "Pissarro stellt das Bild 1874 auf der ersten Impressionisten-Ausstellung aus.",
-            "Es hängt im Musée d’Orsay."
-          ],
-          "fact": "1873. Musée d’Orsay, Paris."
-        },
         {
           "pid": "pxtroofs",
           "text": [

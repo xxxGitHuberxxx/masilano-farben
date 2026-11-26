@@ -1,0 +1,13 @@
+// Work metadata of path homer (v10.43b), part of path-works-late.js, for single works at start.
+(function () {
+  var M = ["Art Institute of Chicago","Metropolitan Museum of Art, New York","Cleveland Museum of Art","National Gallery of Art, Washington"];
+  var G = [["Winslow Homer",[["hocroquet","Krocket","1866",0],["hostudio","Das Atelier","1867",1],["horye","Coming through the Rye","1867",1],["hofield","Frauen bei der Feldarbeit","1867",2],["howashington","Mount Washington","1869",0],["hodinnerhorn","Das Horn zum Essen","1870",3],["hosnapwhip","Snap the Whip","1872",1],["horedschool","Das rote Schulhaus","1873",3],["hodory","Jungen in einem Ruderboot","1873",1],["hoberry","Beerensammler","1873",3],["hoeasthampton","Strand von East Hampton, Long Island","1874",3],["hobreezing","Frische Brise (Guter Wind)","1873–1876",3],["hoautumn","Herbst","1877",3],["hocarnival","Ankleiden für den Karneval","1877",1],["homilkmaid","Die Milchmagd","1878",3],["hopeach","Pfirsichblüten","1878",0],["hotwoladies","Zwei Damen","1880",1],["hoboyboat","Junge im Boot, Gloucester","1880–1881",0],["hofishergirls","Drei Fischermädchen, Tynemouth","1881",3],["hofishwives","Vier Fischersfrauen am Strand","1881",3],["horeturn","Die Rückkehr, Tynemouth","1881",0],["howatcher","Die Wartende, Tynemouth","1882",0],["homending","Netze flicken","1882",3],["hosparrow","Sparrow Hall","um 1881–1882",3],["hoinsidebar","Vor der Sandbank","1883",1],["hobreakers","Brandung bei Prouts Neck","1883",0],["hoherring","Das Heringsnetz","1885",0],["hocampfire","Lagerfeuer, Adirondacks","um 1892",0],["honorthwoods","North Woods Club, Adirondacks","1892",0],["homoonlight","Mondlicht, Leuchtturm von Wood Island","1894",1],["hocannon","Kanonenfelsen","1895",1],["honortheaster","Nordoststurm","1895",1],["hohut","Hütte in Nassau","1885",3],["hopalmtree","Palme, Nassau","1898",1],["hoflowergarden","Blumengarten und Bungalow, Bermuda","1899",1],["hosaltkettle","Salt Kettle, Bermuda","1899",3],["hohauling","Key West, Anker lichten","1903",3],["horedshirt","Rotes Hemd, Homosassa, Florida","1904",3],["horapids","In den Stromschnellen des Saguenay","1905–1910",1]]]];
+  var have = {}; (window.PATH_WORKS || []).forEach(function (w) { have[w.id] = 1; });
+  var W = [];
+  for (var i = 0; i < G.length; i++) for (var j = 0; j < G[i][1].length; j++) {
+    var r = G[i][1][j]; if (have[r[0]]) continue;
+    var o = { id: r[0], title: r[1], artist: G[i][0], year: r[2] }; if (r.length > 3) o.museum = M[r[3]]; W.push(o);
+  }
+  window.PATH_WORKS = (window.PATH_WORKS || []).concat(W);
+  (window.__pwChunks = window.__pwChunks || {})["homer"] = true;
+})();

@@ -46,14 +46,14 @@
   EN.paths.moser = {
   "title": "Koloman Moser’s Life Journey",
   "life": "1868–1918",
-  "part": "Part 1 · From the Secession to painting",
+  "part": "From the Secession to painting",
   "subtitle": "Vienna, portraits, flowers and the wayfarer",
-  "intro": "Travel with Koloman Moser, the Viennese of the Secession and the Wiener Werkstätte, who later turns firmly to painting: from early self-portraits and friends’ likenesses, through flower pieces, to the landscapes and “The Wayfarer”. Short stations and pictures to colour. This first part follows Moser the painter.",
+  "intro": "Travel with Koloman Moser, the Viennese of the Secession and the Wiener Werkstätte, who later turns firmly to painting: from early self-portraits and friends’ likenesses, through flower pieces, to the landscapes and “The Wayfarer”. Short stations and pictures to colour. This path follows Moser the painter.",
   "ending": [
     "Koloman Moser dies in Vienna on 18 October 1918, aged fifty. Behind him lie the Secession, the Wiener Werkstätte and a late body of painting of his own.",
-    "The path can grow further. Further designs, applied art and landscapes may follow in a later part."
+    "This path shows above all the painter: portraits, flowers, landscapes and the wanderer of his last years."
   ],
-  "epilogue": "On 18 October 1918 Moser dies in Vienna, aged fifty. A later part can add designs and further landscapes."
+  "epilogue": "Koloman Moser dies in Vienna on 18 October 1918, aged fifty. Behind him lie the Secession, the Wiener Werkstätte and a late body of painting of his own. This path shows above all the painter: portraits, flowers, landscapes and the wanderer of his last years."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "kmwien": {
@@ -89,7 +89,7 @@
     "mapLabel": "Alps",
     "intro": [
       "In the 1910s Moser stays repeatedly in western Switzerland and paints mountains such as the Dents du Midi. “The Wayfarer” gives the figure the seriousness of a modern icon.",
-      "On 18 October 1918 he dies in Vienna, aged fifty. A later part can add designs and further landscapes."
+      "On 18 October 1918 he dies in Vienna, aged fifty."
     ]
   }
 });

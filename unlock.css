@@ -1,0 +1,34 @@
+/* Masilano v10.42r – Malerwege freischalten. Nur geladen, wenn das Feature an ist. */
+.unlock-sheet{z-index:30}
+.unlock-card{text-align:left}
+.unlock-card .ul-cover{height:120px;margin:-22px -20px 14px;border-radius:22px 22px 0 0;background-size:cover;background-position:center;box-shadow:inset 0 -40px 40px -20px rgba(255,253,249,.9)}
+.ul-kicker{margin:0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#7a5a22}
+.unlock-card h2{margin:4px 0 6px}
+.ul-lead{color:#4a423a;margin:0 0 14px}
+.ul-opts{display:flex;flex-direction:column;gap:10px;margin:4px 0 12px}
+.ul-opt{display:grid;grid-template-columns:1fr auto;grid-template-areas:"t p" "t b";gap:4px 12px;align-items:center;padding:14px;border-radius:16px;background:#f7f0e4;box-shadow:inset 0 0 0 1px rgba(199,154,78,.45)}
+.ul-ot{grid-area:t}
+.ul-on{font-family:Georgia,serif;font-size:18px;color:#2b2722}
+.ul-os{font-size:13px;color:#6b6157;margin-top:2px}
+.ul-price{grid-area:p;justify-self:end;font-weight:600;font-size:16px;color:#2b2722;font-variant-numeric:tabular-nums}
+.ul-opt .ul-buy{grid-area:b;flex:none;padding:10px 18px;min-height:44px;background:#2b2722}
+.ul-opt .ul-buy[disabled]{background:#cfc6b8;color:#5d554c}
+.ul-owned{grid-area:b;justify-self:end;font-weight:600;color:#3d6b3a;font-size:14px}
+.ul-once,.ul-free,.ul-note,.ul-priv{margin:6px 0;font-size:14px;color:#4a423a}
+.ul-note{font-style:italic}
+.ul-note[data-adapter="test"]{font-style:normal;padding:8px 10px;border-radius:10px;background:#fff3cd;color:#5a4300}
+.ul-priv{font-size:12.5px;color:#6b6157}
+.ul-btns{display:flex;gap:10px;margin-top:12px}
+.ul-testreset{display:block;margin:10px auto 0;background:none;border:0;color:#7a5a22;text-decoration:underline;font-size:13px;min-height:40px}
+.ul-pill{display:inline-flex;align-items:center;gap:4px;margin-left:6px;padding:1px 8px;border-radius:999px;font-size:11px;letter-spacing:.04em;background:rgba(232,197,107,.18);color:var(--gold-hi,#f6e4a8);box-shadow:inset 0 0 0 1px rgba(232,197,107,.5);vertical-align:middle}
+.chi .ul-pill,.pc .ul-pill{background:#2b2722;color:#f6e4a8;box-shadow:none}
+.ul-banner{display:flex;gap:12px;align-items:center;margin:8px 0 16px;padding:14px;border-radius:16px;background:#fffaf0;box-shadow:inset 0 0 0 1px rgba(199,154,78,.6)}
+.ul-bt{flex:1}
+.ul-bh{font-family:Georgia,serif;font-size:17px;color:#2b2722}
+.ul-bs{font-size:13.5px;color:#5d554c;margin-top:3px;line-height:1.45}
+.ul-banner .ul-bbtn{flex:none;padding:10px 16px;min-height:44px}
+.chi.paylocked .th{filter:saturate(.55) brightness(.96)}
+.ul-setbtns{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.ul-setbtns .btn{flex:1 1 140px}
+.unlock-toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom) + 90px);transform:translateX(-50%);background:#2b2722;color:#fff;padding:10px 16px;border-radius:12px;z-index:40;font-size:14px}
+@media (prefers-reduced-motion: reduce){.unlock-sheet .card{transition:none}}

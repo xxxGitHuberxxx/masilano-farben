@@ -183,10 +183,6 @@
     "title": "The Valley of the Creuse at Fresselines",
     "museum": "Privatbesitz"
   },
-  "ravincreuse": {
-    "title": "The Ravines of the Creuse",
-    "museum": "Musée des Beaux-Arts, Reims"
-  },
   "creusegrey": {
     "title": "Valley of the Creuse, Grey Weather",
     "museum": "Privatbesitz"
@@ -637,13 +633,6 @@
       "Monet is not after an idyll here. The country is harsh, the light changes quickly."
     ],
     "fact": "The 1889 picture is in a private collection."
-  },
-  "ravincreuse": {
-    "text": [
-      "The ravines of the Creuse lead the eye down into the depth, the river gleaming like a ribbon. The valley seems closed, almost severe.",
-      "In Reims hangs one of the clearest versions of this motif."
-    ],
-    "fact": "The 1889 picture hangs in the Musée des Beaux-Arts in Reims."
   },
   "creusegrey": {
     "text": [

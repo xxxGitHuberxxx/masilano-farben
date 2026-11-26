@@ -16,9 +16,9 @@
   "subtitle": "The Lady of Shalott",
   "intro": "In London, Waterhouse paints subjects from poetry with firm, clear light. In 1888 “The Lady of Shalott” sits in the boat, the tapestry over the edge, her gaze already elsewhere.",
   "ending": [
-    "Waterhouse dies in London in 1917. A later part can add further pictures from poetry."
+    "Waterhouse dies in London in 1917. The Lady of Shalott hangs today in Tate Britain in London."
   ],
-  "epilogue": "A later part can add further pictures."
+  "epilogue": "Waterhouse dies in London in 1917. The Lady of Shalott hangs today in Tate Britain in London."
 };
   P.stations = Object.assign(P.stations || {}, {
   "waterhouse1": {
@@ -30,4 +30,14 @@
     ]
   }
 });
+  // v10.42 pathTexts: work texts of the short path (were German fallback before).
+  P.pathTexts = Object.assign(P.pathTexts || {}, {
+    "shalott": {
+      "text": [
+        "The Lady of Shalott frees herself from her cursed tower and glides down the river to Camelot.",
+        "Candles, a tapestry and a crucifix lie in the boat – she knows that this way is her last."
+      ],
+      "fact": "The picture follows a poem by Alfred Tennyson. Whoever breaks the curse and looks out of the window at Sir Lancelot must die."
+    }
+  });
 })();

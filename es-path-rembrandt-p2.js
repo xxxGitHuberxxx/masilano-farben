@@ -24,10 +24,6 @@
   "Eremitage, Sankt Petersburg": "Ermitage, San Petersburgo"
 });
   P.works = Object.assign(P.works || {}, {
-  "rbselfflat": {
-    "title": "Autorretrato con gorra plana",
-    "museum": "Royal Collection, Londres"
-  },
   "rbadultery": {
     "title": "Cristo y la mujer adúltera",
     "museum": "National Gallery, Londres"
@@ -224,10 +220,6 @@
     "title": "Frederick Rihel a caballo",
     "museum": "National Gallery, Londres"
   },
-  "rbjewishbr": {
-    "title": "La novia judía",
-    "museum": "Rijksmuseum, Ámsterdam"
-  },
   "rbfamily": {
     "title": "Retrato de familia",
     "museum": "Herzog Anton Ulrich-Museum, Brunswick"
@@ -381,12 +373,6 @@
 });
   var pt = P.pathTexts = P.pathTexts || {};
   var add = {
-  "rbselfflat": {
-    "text": [
-      "Rembrandt lleva una gorra plana y una prenda bordada. Se pinta en el año de la Ronda de noche. El cuadro está en la Royal Collection de Londres."
-    ],
-    "fact": "1642. Royal Collection, Londres."
-  },
   "rbadultery": {
     "text": [
       "En un templo enorme y dorado, un pequeño grupo está en la luz ante Cristo. Rembrandt pinta la escena con gran finura. El cuadro está en la National Gallery de Londres."
@@ -680,12 +666,6 @@
       "El comerciante Frederick Rihel, con ropa espléndida, monta un caballo blanco. Es el único gran retrato ecuestre de Rembrandt. El cuadro está en la National Gallery de Londres."
     ],
     "fact": "hacia 1663. National Gallery, Londres."
-  },
-  "rbjewishbr": {
-    "text": [
-      "Una pareja vestida de rojo y oro luminosos se abraza con ternura. La pintura es tan espesa que las mangas parecen casi esculpidas. El cuadro está en el Rijksmuseum de Ámsterdam; la galería también lo incluye."
-    ],
-    "fact": "hacia 1665–1669. Rijksmuseum, Ámsterdam."
   },
   "rbfamily": {
     "text": [

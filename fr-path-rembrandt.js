@@ -101,10 +101,6 @@
     "title": "Marten Looten",
     "museum": "Los Angeles County Museum of Art"
   },
-  "rbshipb": {
-    "title": "Le constructeur de navires et son épouse",
-    "museum": "Royal Collection, Londres"
-  },
   "rbwten": {
     "title": "Johannes Wtenbogaert",
     "museum": "Rijksmuseum, Amsterdam"
@@ -152,10 +148,6 @@
   "rbstandard": {
     "title": "Le porte-étendard",
     "museum": "Rijksmuseum, Amsterdam"
-  },
-  "rbmagdalen": {
-    "title": "Le Christ et Marie-Madeleine au tombeau",
-    "museum": "Royal Collection, Londres"
   },
   "rbpancake": {
     "title": "La marchande de crêpes",
@@ -208,10 +200,6 @@
   "rbmartens": {
     "title": "Baertje Martens",
     "museum": "Ermitage, Saint-Pétersbourg"
-  },
-  "rbagatha": {
-    "title": "Agatha Bas",
-    "museum": "Royal Collection, Londres"
   },
   "rbanslo": {
     "title": "Le prédicateur Cornelis Anslo et son épouse",
@@ -438,12 +426,6 @@
     ],
     "fact": "1632. Los Angeles County Museum of Art."
   },
-  "rbshipb": {
-    "text": [
-      "Le constructeur de navires Jan Rijcksen est assis à sa table à dessin lorsque son épouse Griet Jans lui apporte une lettre. Rembrandt transforme le double portrait en une petite scène. Le tableau est à la Royal Collection de Londres."
-    ],
-    "fact": "1633. Royal Collection, Londres."
-  },
   "rbwten": {
     "text": [
       "Le vieux prédicateur Johannes Wtenbogaert, un dirigeant des remontrants, porte un manteau noir à col blanc. Rembrandt le peint en 1633. Le tableau est au Rijksmuseum d’Amsterdam."
@@ -515,12 +497,6 @@
       "Un porte-étendard se tient fièrement, un grand drapeau sur l’épaule, avec un chapeau à plumes et une écharpe. Rembrandt peint le tableau en 1636. Depuis 2022, il est au Rijksmuseum d’Amsterdam."
     ],
     "fact": "1636. Rijksmuseum, Amsterdam."
-  },
-  "rbmagdalen": {
-    "text": [
-      "Le matin de Pâques, Marie-Madeleine reconnaît le Christ, qui lui apparaît en jardinier avec un chapeau. Derrière eux, le soleil se lève sur la ville. Le tableau est à la Royal Collection de Londres."
-    ],
-    "fact": "1638. Royal Collection, Londres."
   },
   "rbpancake": {
     "text": [
@@ -599,12 +575,6 @@
       "Baertje Martens était l’épouse de Herman Doomer. Son portrait est le pendant de celui de son mari. Le tableau est à l’Ermitage de Saint-Pétersbourg."
     ],
     "fact": "vers 1640. Ermitage, Saint-Pétersbourg."
-  },
-  "rbagatha": {
-    "text": [
-      "Agatha Bas apparaît comme dans l’encadrement d’une fenêtre, une main sur le rebord et un éventail dans l’autre. Rembrandt la peint en 1641. Le tableau est à la Royal Collection de Londres."
-    ],
-    "fact": "1641. Royal Collection, Londres."
   },
   "rbanslo": {
     "text": [

@@ -58,8 +58,8 @@
     "id": "czsvviaduct",
     "title": "Montagne Sainte-Victoire und das Viadukt im Arc-Tal",
     "artist": "Paul Cézanne",
-    "year": "1885–1887",
-    "museum": "Sammlung nicht ermittelt",
+    "year": "1882–1885",
+    "museum": "The Metropolitan Museum of Art, New York",
     "source": "Wikimedia Commons: «Mont Sainte-Victoire and the Viaduct of the Arc River Valley, by Paul Cézanne.jpg», gemeinfrei (Public Domain)"
   },
   {
@@ -291,7 +291,7 @@
     "title": "Der Steinbruch Bibémus",
     "artist": "Paul Cézanne",
     "year": "um 1895",
-    "museum": "Sammlung nicht ermittelt",
+    "museum": "Museum Folkwang, Essen",
     "source": "Wikimedia Commons: «La Carrière de Bibémus, par Paul Cézanne, Yorck.jpg», gemeinfrei (Public Domain)"
   },
   {
@@ -415,14 +415,6 @@
     "source": "Wikimedia Commons: «Paul Cézanne - The Terrace at the Garden at Les Lauves - Google Art Project.jpg», gemeinfrei (Public Domain)"
   },
   {
-    "id": "czcabanon",
-    "title": "Das Cabanon de Jourdan",
-    "artist": "Paul Cézanne",
-    "year": "1906",
-    "museum": "Galleria Nazionale d’Arte Moderna, Rom",
-    "source": "Wikimedia Commons: «Le Cabanon de Jourdan, par Paul Cézanne, Yorck.jpg», gemeinfrei (Public Domain)"
-  },
-  {
     "id": "czvallier",
     "title": "Der Gärtner Vallier",
     "artist": "Paul Cézanne",
@@ -527,14 +519,14 @@
   {
     "id": "cezannesv",
     "place": "Die Montagne Sainte-Victoire",
-    "when": "1885–1897",
+    "when": "1882–1897",
     "map": {
       "x": 152,
       "y": 150
     },
     "mapLabel": "Sainte-Victoire",
     "intro": [
-      "Östlich von Aix erhebt sich die Montagne Sainte-Victoire. Ab der Mitte der 1880er Jahre wird der Berg für Cézanne ein zentrales Motiv: mit der grossen Kiefer im Vordergrund, mit dem Viadukt im Arc-Tal, von Valcros aus.",
+      "Östlich von Aix erhebt sich die Montagne Sainte-Victoire. Ab den 1880er Jahren wird der Berg für Cézanne ein zentrales Motiv: mit der grossen Kiefer im Vordergrund, mit dem Viadukt im Arc-Tal, von Valcros aus.",
       "Dazu kommen Blicke auf das Haus Bellevue mit dem Taubenschlag, das der Schwester Rose und ihrem Mann Maxime Conil gehört, und später die grosse Kiefer über roter Erde.",
       "Cézanne kehrt zu diesem Berg über zwei Jahrzehnte zurück. Jede Fassung sucht dieselbe Form in einer neuen Ordnung aus Farbe und Fläche."
     ],
@@ -551,9 +543,9 @@
         "pid": "czsvviaduct",
         "text": [
           "Über die Ebene zieht sich das Viadukt des Arc-Tals; darüber steht die Montagne Sainte-Victoire fest und hell.",
-          "Das Bild entsteht 1885–1887. Cézanne ordnet Ebene, Viadukt und Berg zu einer ruhigen, gebauten Landschaft."
+          "Das Bild entsteht 1882–1885. Cézanne ordnet Ebene, Viadukt und Berg zu einer ruhigen, gebauten Landschaft."
         ],
-        "fact": "1885–1887. Sammlung nicht ermittelt."
+        "fact": "1882–1885. The Metropolitan Museum of Art, New York."
       },
       {
         "pid": "czsvvalcros",
@@ -886,7 +878,7 @@
           "Hohe, gelbliche Felswände öffnen sich wie ein Innenraum; oben schliesst das Grün der Bäume den Blick.",
           "Um 1895 entsteht diese Ansicht des Bruchs. Cézanne kehrt in diesen Jahren immer wieder nach Bibémus zurück."
         ],
-        "fact": "um 1895. Sammlung nicht ermittelt."
+        "fact": "um 1895. Museum Folkwang, Essen."
       },
       {
         "pid": "czbibnelson",
@@ -1049,14 +1041,6 @@
           "1902–1906 malt Cézanne die Terrasse am neuen Atelier, das er sich nördlich von Aix hat bauen lassen."
         ],
         "fact": "1902–1906. Sammlung nicht ermittelt."
-      },
-      {
-        "pid": "czcabanon",
-        "text": [
-          "Ein kleines Haus steht unter Bäumen, die Wände hell, das Dach fest, das Laub darum in offenen Flecken.",
-          "1906, im letzten Lebensjahr, malt Cézanne das Cabanon de Jourdan am Rand von Aix. Das Bild hängt in der Galleria Nazionale d’Arte Moderna in Rom."
-        ],
-        "fact": "1906. Galleria Nazionale d’Arte Moderna, Rom."
       }
     ]
   },

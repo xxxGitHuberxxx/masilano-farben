@@ -26,10 +26,6 @@
     "title": "Le Champ et le grand noyer en hiver, Éragny",
     "museum": "Philadelphia Museum of Art"
   },
-  "pxdeafhouse": {
-    "title": "La Maison de la sourde et le clocher d’Éragny",
-    "museum": "Indianapolis Museum of Art"
-  },
   "pxpick86": {
     "title": "La Cueillette des pommes",
     "museum": "Ohara Museum of Art, Kurashiki"
@@ -376,12 +372,6 @@
       "Un noyer sans feuilles se dresse dans le champ d’hiver devant Éragny. Pissarro peint l’arbre plusieurs fois en ces années. Le tableau est au Philadelphia Museum of Art."
     ],
     "fact": "1885. Philadelphia Museum of Art."
-  },
-  "pxdeafhouse": {
-    "text": [
-      "Prairie, arbres, une maison et le clocher : la vue sur le village en 1886. Le tableau est à l’Indianapolis Museum of Art."
-    ],
-    "fact": "1886. Indianapolis Museum of Art."
   },
   "pxpick86": {
     "text": [

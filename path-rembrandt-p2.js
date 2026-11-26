@@ -4,14 +4,6 @@
 (function () {
   var works = [
   {
-    "id": "rbselfflat",
-    "title": "Selbstbildnis mit flacher Kappe",
-    "artist": "Rembrandt",
-    "year": "1642",
-    "museum": "Royal Collection, London",
-    "source": "Wikimedia Commons: «Rembrandt van Rijn (Leiden 1606-Amsterdam 1669) - Self-Portrait in a Flat Cap - RCIN 404120 - Royal Collection.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "rbadultery",
     "title": "Christus und die Ehebrecherin",
     "artist": "Rembrandt",
@@ -404,14 +396,6 @@
     "source": "Wikimedia Commons: «Rembrandt - Frederick Rihel on Horseback - WGA19157.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "rbjewishbr",
-    "title": "Das Judenbräutchen",
-    "artist": "Rembrandt",
-    "year": "um 1665–1669",
-    "museum": "Rijksmuseum, Amsterdam",
-    "source": "Wikimedia Commons: «Rembrandt Harmensz. van Rijn - Portret van een paar als oudtestamentische figuren, genaamd 'Het Joodse bruidje' - Google Art Project.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "rbfamily",
     "title": "Familienbildnis",
     "artist": "Rembrandt",
@@ -523,15 +507,6 @@
       "In den folgenden Jahren malt Rembrandt weniger Aufträge. Er wendet sich stillen biblischen Szenen zu und radiert Landschaften wie die Drei Bäume."
     ],
     "works": [
-      {
-        "pid": "rbselfflat",
-        "text": [
-          "Rembrandt trägt eine flache Kappe und ein besticktes Gewand.",
-          "Er malt sich im Jahr der Nachtwache.",
-          "Das Bild ist in der Royal Collection in London."
-        ],
-        "fact": "1642. Royal Collection, London."
-      },
       {
         "pid": "rbadultery",
         "text": [
@@ -1100,15 +1075,6 @@
       "Im Februar 1668 heiratet Titus Magdalena van Loo. Im September desselben Jahres stirbt Titus, erst 26 Jahre alt."
     ],
     "works": [
-      {
-        "pid": "rbjewishbr",
-        "text": [
-          "Ein Paar in leuchtendem Rot und Gold hält sich zärtlich.",
-          "Die Farbe ist so dick aufgetragen, dass die Ärmel fast plastisch wirken.",
-          "Das Bild ist im Rijksmuseum in Amsterdam; die Galerie enthält es ebenfalls."
-        ],
-        "fact": "um 1665–1669. Rijksmuseum, Amsterdam."
-      },
       {
         "pid": "rbfamily",
         "text": [

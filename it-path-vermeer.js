@@ -26,9 +26,9 @@
   "subtitle": "Luce nelle stanze",
   "intro": "A Delft, Vermeer dipinge la luce quieta su volti, brocche e mattoni. Tre quadri vanno dalla ragazza con l’orecchino di perla alla lattaia e alla veduta della città.",
   "ending": [
-    "Vermeer muore a Delft nel 1675. Una parte successiva potrà aggiungere altri interni."
+    "Vermeer muore a Delft nel 1675. Di lui si sono conservati pochi quadri; due dei tre di questo percorso si trovano oggi al Mauritshuis dell’Aia."
   ],
-  "epilogue": "Una parte successiva potrà aggiungere altri interni."
+  "epilogue": "Vermeer muore a Delft nel 1675. Di lui si sono conservati pochi quadri; due dei tre di questo percorso si trovano oggi al Mauritshuis dell’Aia."
 };
   P.stations = Object.assign(P.stations || {}, {
   "vermeer1": {
@@ -40,4 +40,28 @@
     ]
   }
 });
+  // v10.42 pathTexts: work texts of the short path (were German fallback before).
+  P.pathTexts = Object.assign(P.pathTexts || {}, {
+    "pearl": {
+      "text": [
+        "Il quadro non è un ritratto classico, ma una «tronie»: lo studio di un volto in un costume di fantasia, qui un turbante.",
+        "Chi fosse la ragazza, nessuno lo sa ancora oggi."
+      ],
+      "fact": "La perla è un’illusione: consiste solo in poche pennellate di colore chiaro. Gli studi hanno mostrato che manca persino il gancio da cui dovrebbe pendere all’orecchio."
+    },
+    "milkmaid": {
+      "text": [
+        "Una serva di cucina versa il latte da una brocca.",
+        "Accanto a lei ci sono pane e un cesto."
+      ],
+      "fact": "In basso, sulla parete, vedi piastrelle di Delft con figurine, tipiche delle cucine olandesi dell’epoca."
+    },
+    "delft": {
+      "text": [
+        "Da una riva vediamo Delft dall’altra parte del canale: l’acqua, i muri di mattone, le torri, e uno squarcio tra le nuvole che fa risplendere la città.",
+        "È una delle vedute urbane più quiete della storia dell’arte."
+      ],
+      "fact": "Vermeer stesso era di Delft e restò fedele alla città per tutta la vita."
+    }
+  });
 })();

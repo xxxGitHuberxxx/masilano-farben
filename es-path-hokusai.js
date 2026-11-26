@@ -28,26 +28,12 @@
     ],
     "fact": "Xilografía en color, Metropolitan Museum of Art, Nueva York, hacia 1790–1793."
   },
-  "sorinets": {
-    "text": [
-      "Mujeres están sentadas sobre esteras rojas en un espacio abierto y miran a pescadores con redes en el agua.",
-      "El surimono está firmado «Sōri ga» – o sea, en los años en que Hokusai lleva el nombre Tawaraya Sōri, hacia 1794 a 1798."
-    ],
-    "fact": "Colección Isaac de Camondo, legada al museo en 1911, inventario EO 1833. Musée Guimet, París."
-  },
   "dyers": {
     "text": [
       "En una escena larga y estrecha cuelgan paños de tela a secar. Los tintoreros se mueven entre ellos; los colores son todavía claros y contenidos.",
       "El Cleveland Museum of Art fecha la hoja en 1795, en los años de Sōri."
     ],
     "fact": "«Tintoreros en el trabajo», Cleveland Museum of Art, 1795."
-  },
-  "soritable": {
-    "text": [
-      "Una mujer está de pie ante una mesa de pintar, el pincel y el papel están listos. Poemas corren por el borde de la hoja.",
-      "Está firmado «Sōri aratame Hokusai ga» – «Sōri, cambiado a Hokusai». El año 1799 deja constancia del cambio de nombre."
-    ],
-    "fact": "Surimono privado con versos kyōka, colección Camondo, Musée Guimet, París, 1799."
   },
   "fujisuri": {
     "text": [
@@ -595,13 +581,6 @@
     ],
     "fact": "«El puente colgante en la frontera de las provincias de Hida y Etchū», Metropolitan Museum of Art, Nueva York."
   },
-  "sanobashi": {
-    "text": [
-      "Barcas atadas unas a otras forman un puente sobre el río; en la orilla se alzan casas y árboles.",
-      "La «antigua vista» del puente de barcas de Sano, en la provincia de Kōzuke, pertenece a la serie de los puentes hacia 1834. Esta estampa está en el Musée Guimet de París (inventario EO 993)."
-    ],
-    "fact": "«Antigua vista del puente de barcas de Sano, en la provincia de Kōzuke», Musée Guimet, París."
-  },
   "tenpozan": {
     "text": [
       "Una colina pequeña artificial y un embarcadero yacen en la desembocadura del río Aji; los barcos llenan el agua.",
@@ -763,33 +742,12 @@
     ],
     "fact": "«El Fuji en el vaho profundo de la montaña», Library of Congress, Washington."
   },
-  "artistsfuji": {
-    "text": [
-      "En un prado, hombres disponen atriles y pinceles; el Fuji se alza detrás de un pino y de un campo.",
-      "La hoja procede de las «Cien vistas del monte Fuji». Esta estampa se conserva en el Musée Guimet de París (EO 1455)."
-    ],
-    "fact": "«Artistas se preparan a dibujar el monte Fuji», Musée Guimet, París."
-  },
-  "fujitotomi": {
-    "text": [
-      "A través de las ramas de un árbol y por encima de un tejado se ve el Fuji; las montañas de Tōtomi yacen delante.",
-      "También esta hoja de las «Cien vistas» está en el Musée Guimet de París (MA 7065)."
-    ],
-    "fact": "«El monte Fuji en las montañas de Tōtomi», Musée Guimet, París."
-  },
   "libai": {
     "text": [
       "El poeta chino Li Bai se alza con un acompañante en un saliente de roca y mira hacia una cascada alta.",
       "La hoja pertenece a la serie «Espejo fiel de poemas chinos y japoneses» (Shiika shashin kyō), aparecida hacia 1833 a 1834. Estampa en el Metropolitan Museum of Art."
     ],
     "fact": "«Li Bai contempla una cascada», Metropolitan Museum of Art, Nueva York."
-  },
-  "sudongpo": {
-    "text": [
-      "Un jinete con un sombrero redondo grande avanza por la nieve; un sirviente camina junto al caballo, el cielo está lleno de copos.",
-      "El Musée Guimet de París identifica la figura como el poeta chino Su Dongpo. La hoja pertenece a la serie de los poetas hacia 1833 a 1834 (inventario EO 1704)."
-    ],
-    "fact": "«Su Dongpo en la nieve», Musée Guimet, París."
   },
   "ministoru": {
     "text": [

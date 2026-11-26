@@ -37,14 +37,6 @@
     "source": "Wikimedia Commons: «Caspar Wolf - Holzsteg über die Lütschine bei Gsteig.jpg», Public domain (gemeinfrei)"
   },
   {
-    "id": "cwstaubbach",
-    "title": "Der zweite Staubbachfall im Winter",
-    "artist": "Caspar Wolf",
-    "year": "um 1775",
-    "museum": "Standort ohne Angabe",
-    "source": "Wikimedia Commons: «Horror und Delight-Wolf-Second Staubbach Falls during the Winter DSC2119.jpg», Public domain (gemeinfrei)"
-  },
-  {
     "id": "cwlauteraar",
     "title": "Der Lauteraargletscher",
     "artist": "Caspar Wolf",
@@ -115,15 +107,15 @@
   "name": "Caspar Wolf",
   "title": "Caspar Wolfs Lebensweg",
   "life": "1735–1783",
-  "part": "Teil 1 · Der erste Maler der Hochalpen",
+  "part": "Der erste Maler der Hochalpen",
   "subtitle": "Gletscher, Höhlen und Wasserfälle",
   "cover": "cwgletscher",
-  "intro": "Reise mit Caspar Wolf aus Muri im Aargau, der als einer der Ersten die Hochalpen vor Ort malte: von frühen Landschaften über die Gletscher von Grindelwald und die Höhlen und Wasserfälle bis zum Lauenental. Kurze Stationen und Bilder zum Ausmalen. Dieser erste Teil folgt ihm ins Gebirge.",
+  "intro": "Reise mit Caspar Wolf aus Muri im Aargau, der als einer der Ersten die Hochalpen vor Ort malte: von frühen Landschaften über die Gletscher von Grindelwald und die Höhlen und Wasserfälle bis zum Lauenental. Kurze Stationen und Bilder zum Ausmalen. Dieser Weg folgt ihm ins Gebirge.",
   "ending": [
     "Caspar Wolf stirbt am 6. Oktober 1783 in Heidelberg, achtundvierzig Jahre alt. Seine Bilder der Hochalpen waren ihrer Zeit weit voraus.",
-    "Der Weg kann weiterwachsen. Weitere Gletscher, Brücken und Ansichten können in einem späteren Teil folgen."
+    "Der Weg führt von Muri über Grindelwald und die Gletscher der Hochalpen bis ins Lauenental und in den Jura."
   ],
-  "epilogue": "Am 6. Oktober 1783 stirbt Wolf in Heidelberg. Ein späterer Teil kann weitere Alpenbilder nachtragen.",
+  "epilogue": "Caspar Wolf stirbt am 6. Oktober 1783 in Heidelberg, achtundvierzig Jahre alt. Seine Bilder der Hochalpen waren ihrer Zeit weit voraus. Der Weg führt von Muri über Grindelwald und die Gletscher der Hochalpen bis ins Lauenental und in den Jura.",
   "map": {
     "viewBox": "0 0 240 160",
     "lands": [
@@ -192,14 +184,6 @@
             "Die Reise ins Berner Oberland bringt Wolf viele neue Motive."
           ],
           "fact": "1774. Kunst Museum Winterthur."
-        },
-        {
-          "pid": "cwstaubbach",
-          "text": [
-            "Ein Wasserfall stürzt über eine Felswand, Eis und Schnee umgeben ihn. Wolf malt das Lauterbrunnental im Winter.",
-            "Kaum ein Maler vor ihm hat die Alpen in dieser Jahreszeit gezeigt."
-          ],
-          "fact": "um 1775. Standort ohne Angabe."
         }
       ]
     },

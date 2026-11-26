@@ -46,14 +46,14 @@
   P.paths.moser = {
   "title": "El camino de vida de Koloman Moser",
   "life": "1868–1918",
-  "part": "Parte 1 · De la Secesión a la pintura",
+  "part": "De la Secesión a la pintura",
   "subtitle": "Viena, retratos, flores y el caminante",
-  "intro": "Viaja con Koloman Moser, el vienés de la Secesión y de la Wiener Werkstätte, que más tarde se entrega de lleno a la pintura: desde autorretratos tempranos y retratos de amigos, pasando por las flores, hasta los paisajes y «El caminante». Estaciones breves y cuadros para colorear. Esta primera parte sigue al Moser pintor.",
+  "intro": "Viaja con Koloman Moser, el vienés de la Secesión y de la Wiener Werkstätte, que más tarde se entrega de lleno a la pintura: desde autorretratos tempranos y retratos de amigos, pasando por las flores, hasta los paisajes y «El caminante». Estaciones breves y cuadros para colorear. Este camino sigue al Moser pintor.",
   "ending": [
     "Koloman Moser muere en Viena el 18 de octubre de 1918, a los cincuenta años. Detrás quedan la Secesión, la Wiener Werkstätte y una obra pictórica tardía propia.",
-    "El camino puede seguir creciendo. Más diseños, artes aplicadas y paisajes pueden seguir en una parte posterior."
+    "Este camino muestra sobre todo al pintor: retratos, flores, paisajes y el caminante de sus últimos años."
   ],
-  "epilogue": "El 18 de octubre de 1918 Moser muere en Viena, a los cincuenta años. Una parte posterior puede añadir diseños y más paisajes."
+  "epilogue": "Koloman Moser muere en Viena el 18 de octubre de 1918, a los cincuenta años. Detrás quedan la Secesión, la Wiener Werkstätte y una obra pictórica tardía propia. Este camino muestra sobre todo al pintor: retratos, flores, paisajes y el caminante de sus últimos años."
 };
   P.stations = Object.assign(P.stations || {}, {
   "kmwien": {
@@ -89,7 +89,7 @@
     "mapLabel": "Alpes",
     "intro": [
       "En los años 1910 Moser pasa temporadas repetidas en la Suiza occidental y pinta montañas como las Dents du Midi. «El caminante» da a la figura la seriedad de un icono moderno.",
-      "El 18 de octubre de 1918 muere en Viena, a los cincuenta años. Una parte posterior puede añadir diseños y más paisajes."
+      "El 18 de octubre de 1918 muere en Viena, a los cincuenta años."
     ]
   }
 });

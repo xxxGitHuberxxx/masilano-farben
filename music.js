@@ -1,10 +1,9 @@
-/* Generic path music + narration. Packs load on demand (music-<id>.js).
+/* Generic path music. Packs load on demand (music-<id>.js).
    Audio never starts with sound before a user gesture. */
 (function () {
   const ON_KEY = 'masilano.musicOn.v1';
   const VOL_KEY = 'masilano.musicVol.v1';
   const DEFAULT_VOL = 0.4;
-  const DUCK = 0.28;
   const FADE_MS = 1000;
   const FADE_FAST = 280;
 
@@ -18,7 +17,6 @@
   let currentPath = null;
   let currentStation = null;
   let fadeId = 0;
-  let ducked = false;
   let enabled = loadOn();
   let volume = loadVol();
   let gesture = false;
@@ -26,9 +24,6 @@
   let pathActive = false;
   let io = null;
   let ioLockUntil = 0;
-  let speakToken = 0;
-  let speaking = false;
-  let speakTarget = null;
   let bound = false;
 
   function loadOn() {
@@ -63,7 +58,7 @@
     return FADE_MS;
   }
   function targetGain() {
-    return Math.max(0, Math.min(1, volume * (ducked ? DUCK : 1)));
+    return Math.max(0, Math.min(1, volume));
   }
 
   function markGesture() {
@@ -161,6 +156,9 @@
     return audio;
   }
 
+  // v10.42: HTMLMediaElement.volume throws outside 0..1; keep every computed value in range.
+  function clampVol(v) { v = +v; return isFinite(v) ? Math.max(0, Math.min(1, v)) : 0; }
+
   function fadeTo(target, ms, then) {
     const a = audio;
     const id = ++fadeId;
@@ -168,16 +166,17 @@
     const start = a.volume;
     const t0 = (typeof performance !== 'undefined') ? performance.now() : Date.now();
     if (!ms || Math.abs(start - target) < 0.01) {
-      a.volume = Math.max(0, Math.min(1, target));
+      a.volume = clampVol(target);
       if (then) then();
       return;
     }
     function step(now) {
       if (id !== fadeId) return;
-      const k = Math.min(1, (now - t0) / ms);
-      a.volume = start + (target - start) * k;
+      // rAF timestamps can be slightly earlier than t0, so k is clamped to 0..1.
+      const k = Math.max(0, Math.min(1, (now - t0) / ms));
+      a.volume = clampVol(start + (target - start) * k);
       if (k < 1) requestAnimationFrame(step);
-      else { a.volume = target; if (then) then(); }
+      else { a.volume = clampVol(target); if (then) then(); }
     }
     requestAnimationFrame(step);
   }
@@ -270,11 +269,6 @@
     syncUi();
   }
 
-  function duck(on) {
-    ducked = !!on;
-    if (audio && !audio.paused) fadeTo(targetGain(), 220);
-  }
-
   function setStation(path, stationId, opts) {
     if (!(opts && opts.fromObserver)) ioLockUntil = Date.now() + 1600;
     if (path) currentPath = path;
@@ -283,7 +277,6 @@
     renderBar(tr);
     if (tr && pathActive) switchFile(tr.file);
     else if (!tr && audio) stopAudio();
-    if (!opts || !opts.silentButtons) refreshButtons();
   }
 
   function firstStationId(path) {
@@ -316,7 +309,6 @@
     pathActive = false;
     disconnectIo();
     hideBar();
-    stopSpeak();
     stopAudio();
   }
 
@@ -398,157 +390,16 @@
     const pct = Math.round(volume * 100);
     if (v1 && document.activeElement !== v1) v1.value = String(pct);
     if (v2 && document.activeElement !== v2) v2.value = String(pct);
-    refreshButtons();
-  }
-
-  function canSpeak() {
-    try { return !!(window.speechSynthesis && window.SpeechSynthesisUtterance); }
-    catch (e) { return false; }
-  }
-
-  function pickVoice(lang) {
-    let voices = [];
-    try { voices = window.speechSynthesis.getVoices() || []; } catch (e) { return null; }
-    const tags = ({
-      de: ['de-CH', 'de-DE', 'de-AT', 'de'],
-      en: ['en-GB', 'en-US', 'en-AU', 'en'],
-      es: ['es-ES', 'es-MX', 'es-AR', 'es'],
-      fr: ['fr-FR', 'fr-CH', 'fr-BE', 'fr'],
-      it: ['it-IT', 'it-CH', 'it']
-    })[lang] || [lang];
-    let best = null, bestS = -1;
-    voices.forEach(function (v) {
-      const vl = String(v.lang || '').toLowerCase();
-      let s = 0;
-      tags.forEach(function (tag, i) {
-        const t0 = tag.toLowerCase();
-        if (vl === t0 || vl.indexOf(t0 + '-') === 0 || vl.indexOf(t0) === 0) s = Math.max(s, 80 - i * 8);
-      });
-      if (!s) return;
-      if (v.localService) s += 25;
-      if (v.default) s += 4;
-      const n = String(v.name || '').toLowerCase();
-      if (/compact|novelty|whisper|zarvox|bad news|good news|bells|boing|cellos|organ|trinoids|princess|albert|reed/.test(n)) s -= 60;
-      if (s > bestS) { bestS = s; best = v; }
-    });
-    return best;
-  }
-
-  function stopSpeak() {
-    speakToken++;
-    speaking = false;
-    speakTarget = null;
-    ducked = false;
-    try { window.speechSynthesis && window.speechSynthesis.cancel(); } catch (e) {}
-    if (audio && !audio.paused) fadeTo(targetGain(), 220);
-    refreshButtons();
-  }
-
-  function speakTexts(texts, target) {
-    if (!canSpeak()) return;
-    if (speaking && speakTarget === target) { stopSpeak(); return; }
-    stopSpeak();
-    const parts = (texts || []).map(function (s) { return String(s || '').replace(/\s+/g, ' ').trim(); }).filter(Boolean);
-    if (!parts.length) return;
-    noteVgDelight();
-    const lang = (window.I18N && window.I18N.lang) || 'de';
-    const tag = ({ de: 'de-DE', en: 'en-GB', es: 'es-ES', fr: 'fr-FR', it: 'it-IT' })[lang] || lang;
-    const token = ++speakToken;
-    speaking = true;
-    speakTarget = target;
-    duck(true);
-    refreshButtons();
-    try { window.speechSynthesis.getVoices(); } catch (e) {}
-    let i = 0;
-    function next() {
-      if (token !== speakToken) return;
-      if (i >= parts.length) {
-        speaking = false;
-        speakTarget = null;
-        duck(false);
-        refreshButtons();
-        return;
-      }
-      const u = new SpeechSynthesisUtterance(parts[i++]);
-      u.lang = tag;
-      u.rate = 0.9;
-      u.pitch = 1;
-      u.volume = 1;
-      const voice = pickVoice(lang);
-      if (voice) u.voice = voice;
-      u.onend = next;
-      u.onerror = function () { next(); };
-      try { window.speechSynthesis.speak(u); }
-      catch (e) { speaking = false; speakTarget = null; duck(false); refreshButtons(); }
-    }
-    next();
-  }
-
-  function stationTexts(path, st) {
-    const I = window.I18N;
-    const loc = I && I.locStation ? I.locStation(st) : { place: st.place, when: st.when, intro: st.intro || [] };
-    const parts = [];
-    const head = [loc.place, loc.when].filter(Boolean).join(', ');
-    if (head) parts.push(head);
-    (loc.intro || []).forEach(function (p) { if (p) parts.push(p); });
-    return parts;
-  }
-
-  function speakStation(path, st) {
-    if (!st) return;
-    speakTexts(stationTexts(path, st), 'station:' + st.id);
-  }
-
-  function chapterTexts() {
-    const parts = [];
-    document.querySelectorAll('#cText p').forEach(function (p) {
-      const tx = p.textContent.trim();
-      if (tx) parts.push(tx);
-    });
-    const q = document.getElementById('cQuote');
-    if (q && !q.classList.contains('hidden')) {
-      const qt = ((document.getElementById('cQuoteT') || {}).textContent || '').trim();
-      const qc = ((document.getElementById('cQuoteC') || {}).textContent || '').trim();
-      if (qt) parts.push(qc ? qt + ' ' + qc : qt);
-    }
-    return parts;
-  }
-
-  function speakChapter() {
-    speakTexts(chapterTexts(), 'chapter');
-  }
-
-  function refreshButtons() {
-    const on = canSpeak();
-    document.querySelectorAll('.narrate-btn, #cNarrate').forEach(function (btn) {
-      if (!on) {
-        btn.classList.add('hidden');
-        btn.hidden = true;
-        return;
-      }
-      btn.classList.remove('hidden');
-      btn.hidden = false;
-      const key = btn.getAttribute('data-speak') || (btn.id === 'cNarrate' ? 'chapter' : '');
-      const active = speaking && key && key === speakTarget;
-      btn.textContent = active ? t('narrateStop') : t('narrate');
-      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
-    });
-    const row = document.getElementById('cNarrateRow');
-    if (row) {
-      if (on) { row.classList.remove('hidden'); row.hidden = false; }
-      else { row.classList.add('hidden'); row.hidden = true; }
-    }
   }
 
   function bind() {
-    if (bound) { syncUi(); refreshButtons(); return; }
+    if (bound) { syncUi(); return; }
     bound = true;
     ['pointerdown', 'keydown', 'touchstart'].forEach(function (ev) {
       document.addEventListener(ev, markGesture, { capture: true, passive: true });
     });
     document.addEventListener('visibilitychange', function () {
       if (document.hidden) {
-        stopSpeak();
         if (audio && !audio.paused) {
           hiddenPaused = true;
           stopAudio(400);
@@ -574,20 +425,12 @@
       v2.addEventListener('input', volInput);
       v2.addEventListener('change', volInput);
     }
-    const cn = document.getElementById('cNarrate');
-    if (cn) cn.addEventListener('click', speakChapter);
-    if (window.speechSynthesis) {
-      try { window.speechSynthesis.getVoices(); } catch (e) {}
-      window.speechSynthesis.addEventListener('voiceschanged', refreshButtons);
-    }
-    refreshButtons();
     syncUi();
   }
 
   function refresh() {
     if (pathActive && currentPath) renderBar(trackFor(currentPath, currentStation));
     syncUi();
-    refreshButtons();
   }
 
   window.MASILANO_MUSIC = {
@@ -602,12 +445,6 @@
     currentFile: function () { return currentFile; },
     currentStation: function () { return currentStation; },
     currentPathId: function () { return currentPath && currentPath.id; },
-    speaking: function () { return speaking; },
-    speakTarget: function () { return speakTarget; },
-    canSpeak: canSpeak,
-    speakStation: speakStation,
-    speakChapter: speakChapter,
-    stopSpeak: stopSpeak,
     bind: bind,
     refresh: refresh,
     syncUi: syncUi,

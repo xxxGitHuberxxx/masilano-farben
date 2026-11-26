@@ -46,14 +46,14 @@
   P.paths.moser = {
   "title": "Il percorso di vita di Koloman Moser",
   "life": "1868–1918",
-  "part": "Parte 1 · Dalla Secessione alla pittura",
+  "part": "Dalla Secessione alla pittura",
   "subtitle": "Vienna, ritratti, fiori e il viandante",
-  "intro": "Viaggia con Koloman Moser, il viennese della Secessione e della Wiener Werkstätte, che più tardi si volge con fermezza alla pittura: dagli autoritratti giovanili e dai ritratti di amici, attraverso i fiori, fino ai paesaggi e a «Il viandante». Brevi tappe e quadri da colorare. Questa prima parte segue Moser pittore.",
+  "intro": "Viaggia con Koloman Moser, il viennese della Secessione e della Wiener Werkstätte, che più tardi si volge con fermezza alla pittura: dagli autoritratti giovanili e dai ritratti di amici, attraverso i fiori, fino ai paesaggi e a «Il viandante». Brevi tappe e quadri da colorare. Questo percorso segue Moser pittore.",
   "ending": [
     "Koloman Moser muore a Vienna il 18 ottobre 1918, a cinquant’anni. Alle spalle restano la Secessione, la Wiener Werkstätte e un’opera pittorica tarda tutta sua.",
-    "Il percorso può ancora crescere. Altri progetti, arti applicate e paesaggi potranno seguire in una parte successiva."
+    "Questo percorso mostra soprattutto il pittore: ritratti, fiori, paesaggi e il viandante dei suoi ultimi anni."
   ],
-  "epilogue": "Il 18 ottobre 1918 Moser muore a Vienna, a cinquant’anni. Una parte successiva potrà aggiungere progetti e altri paesaggi."
+  "epilogue": "Koloman Moser muore a Vienna il 18 ottobre 1918, a cinquant’anni. Alle spalle restano la Secessione, la Wiener Werkstätte e un’opera pittorica tarda tutta sua. Questo percorso mostra soprattutto il pittore: ritratti, fiori, paesaggi e il viandante dei suoi ultimi anni."
 };
   P.stations = Object.assign(P.stations || {}, {
   "kmwien": {
@@ -89,7 +89,7 @@
     "mapLabel": "Alpi",
     "intro": [
       "Negli anni 1910 Moser soggiorna più volte nella Svizzera occidentale e dipinge montagne come le Dents du Midi. «Il viandante» dà alla figura la serietà di un’icona moderna.",
-      "Il 18 ottobre 1918 muore a Vienna, a cinquant’anni. Una parte successiva potrà aggiungere progetti e altri paesaggi."
+      "Il 18 ottobre 1918 muore a Vienna, a cinquant’anni."
     ]
   }
 });

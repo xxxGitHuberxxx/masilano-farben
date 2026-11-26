@@ -68,9 +68,6 @@ window.PATH_WORKS = (window.PATH_WORKS || []).concat([
  { id:'lottery', title:'Das Staatslotterie-Büro', artist:'Vincent van Gogh', year:'1882',
    museum:'Van Gogh Museum, Amsterdam',
    source:'Wikimedia Commons: «Vincent van Gogh - The State Lottery Office (F970).jpg», gemeinfrei (Public Domain)' },
- { id:'laundry', title:'Frau beim Wäscheauslegen', artist:'Vincent van Gogh', year:'1882',
-   museum:'Privatbesitz',
-   source:'Wikimedia Commons: «Woman spreading out laundry on a field, by Vincent van Gogh.jpg», gemeinfrei (Public Domain)' },
  { id:'bulbfields', title:'Blumenbeete in Holland', artist:'Vincent van Gogh', year:'1883',
    museum:'National Gallery of Art, Washington',
    source:'Wikimedia Commons: «Vincent van Gogh, Flower Beds in Holland, c. 1883, NGA 61371.jpg», CC0 (Public Domain)' },
@@ -92,9 +89,6 @@ window.PATH_WORKS = (window.PATH_WORKS || []).concat([
  { id:'cottages83', title:'Hütten', artist:'Vincent van Gogh', year:'1883',
    museum:'Van Gogh Museum, Amsterdam',
    source:'Wikimedia Commons: «Hutten - s0053V1962 - Van Gogh Museum.jpg», gemeinfrei (Public Domain)' },
- { id:'twilightch', title:'Landschaft mit Kirche in der Dämmerung', artist:'Vincent van Gogh', year:'1883',
-   museum:'Privatbesitz',
-   source:'Wikimedia Commons: «Van Gogh - Landschaft in der Dämmerung.jpeg», gemeinfrei (Public Domain)' },
  { id:'drawbridge', title:'Die Zugbrücke in Nieuw-Amsterdam', artist:'Vincent van Gogh', year:'1883',
    museum:'Groninger Museum, Groningen',
    source:'Wikimedia Commons: «Gogh - De ophaalbrug in Nieuw-Amsterdam, 1883-11-01 - 1883-11-30, 1961.0188.jpg», gemeinfrei (Public Domain)' },
@@ -396,7 +390,7 @@ window.PATH_WORKS = (window.PATH_WORKS || []).concat([
    source:'Wikimedia Commons: «Vincent van Gogh - The Arlesienne - Google Art Project.jpg», gemeinfrei (Public Domain)' },
  { id:'nightcafe', title:'Das Nachtcafé', artist:'Vincent van Gogh', year:'1888',
    museum:'Yale University Art Gallery, New Haven',
-   source:'Wikimedia Commons: «Van Gogh - The Night Café (1888).jpg», gemeinfrei (Public Domain)' },
+   source:'Yale University Art Gallery, Open Access, Inv. 1961.18.34, gemeinfrei (CC0)' },
  { id:'rhone', title:'Sternennacht über der Rhône', artist:'Vincent van Gogh', year:'1888',
    museum:'Musée d’Orsay, Paris',
    source:'Wikimedia Commons: «Starry Night Over the Rhone.jpg», gemeinfrei (Public Domain)' },
@@ -488,8 +482,8 @@ window.PATH_WORKS = (window.PATH_WORKS || []).concat([
  { id:'olivesun', title:'Olivenbäume mit gelbem Himmel und Sonne', artist:'Vincent van Gogh', year:'1889',
    museum:'Minneapolis Institute of Art',
    source:'Wikimedia Commons: «Vincent van Gogh Olive Trees MIA 517.jpg», gemeinfrei (Public Domain)' },
- { id:'olivepick', title:'Olivenpflückerinnen', artist:'Vincent van Gogh', year:'1889',
-   museum:'Metropolitan Museum of Art, New York',
+ { id:'olivepick', title:'Der Olivenhain (Olivenpflückerinnen)', artist:'Vincent van Gogh', year:'1889',
+   museum:'National Gallery of Art, Washington',
    source:'Wikimedia Commons: «The Olive Orchard.JPG», gemeinfrei (Public Domain)' },
  { id:'moonrise', title:'Abendlandschaft bei Mondaufgang', artist:'Vincent van Gogh', year:'1889',
    museum:'Kröller-Müller Museum, Otterlo',
@@ -680,9 +674,9 @@ window.PATHS = (window.PATHS || []).concat([
      { pid:'schevwoman',
        text: [
          'Schon in Etten zeichnet Vincent eine Frau in der Tracht von Scheveningen, dem Fischerdorf bei Den Haag. Vielleicht hat er sie auf einem Ausflug gesehen, vielleicht nach einem Vorbild gezeichnet.',
-         'Im Herbst 1881 macht er Kee einen Antrag. Er sagt ihr, er habe sie lieb wie sich selbst. Ihre Antwort schreibt er Theo genau auf – auf Niederländisch, in drei Wörtern, die keinen Zweifel lassen.',
+         'Im Sommer 1881 verliebt er sich in Kee und gesteht es ihr: Es sei, als sei sie seine Nächste und er ihr Nächster. Im November berichtet er Theo davon. Kees Absage fasst er in drei niederländischen Wörtern zusammen: «nooit neen nimmer» – nie, nein, nimmermehr.',
        ],
-       quote: { text:'Und dann sagte sie: nie, nein, nimmermehr.', cite:'Brief 180, Etten, 7. November 1881, an Theo' },
+       quote: { text:'Doch als ich ihr das sagte, antwortete sie mir, dass ihre Vergangenheit und ihre Zukunft für sie eins blieben und sie meine Gefühle also nie erwidern könne.', cite:'Brief 179, Etten, 3. November 1881, an Theo' },
        fact: 'Kee Vos-Stricker war die Tochter von Vincents Onkel, einem Pfarrer in Amsterdam, und bereits Witwe. Sie wollte die Werbung nicht, und die Familie stellte sich hinter sie.' },
      { pid:'beermug',
        text: [
@@ -799,13 +793,6 @@ window.PATHS = (window.PATHS || []).concat([
          'Er selbst lebt von Theos Überweisungen. Das Wissen, abhängig zu sein, begleitet ihn durch alle diese Jahre – und macht ihn hellhörig für Leute, die auf einen Glücksfall warten.',
        ],
        fact: 'Das Staatslotterie-Büro war ein bekanntes Motiv sozialer Malerei. Vincent stellt die Wartenden als Gruppe dar, nicht als einzelne «Typen» zum Belächeln.' },
-     { pid:'laundry',
-       text: [
-         'Eine Frau legt Wäsche auf einer Wiese aus. Alltag, Bücken, nasse Tücher, weiter Himmel. Vincent bleibt bei der Arbeit der Frauen, die er in Sien und ihren Nachbarinnen vor Augen hat.',
-         'Im Juli schreibt er Theo, die Formalität einer Heirat mache Sien nicht zu seiner Frau. Der Bund bestehe bereits: Sie liebten, verständen und hülfen einander.',
-       ],
-       quote: { text:'Ich kann nicht anders sagen als: ich habe sie zu meiner Frau genommen – denn nicht die Formalität des Heiratens macht sie zu meiner Frau, sondern es ist ein Band, das bereits besteht: ein Gefühl, dass wir einander von beiden Seiten lieben, verstehen und helfen.', cite:'Brief 244, Den Haag, 6. Juli 1882, an Theo' },
-       fact: 'Sien brachte im Juli 1882 den Sohn Willem zur Welt. Vincent hoffte zeitweise, die Eltern würden die Verbindung noch annehmen. Das geschah nicht.' },
      { pid:'bulbfields',
        text: [
          'Plötzlich leuchtet Holland: Tulpen- und Hyazinthenbeete in geraden Bahnen, rosa, gelb, blau, weiss, vor niedrigen Häusern unter einem weiten Himmel. Vincent malt die Felder der Blumenzüchter – eines der farbigsten Bilder seiner niederländischen Jahre.',
@@ -860,13 +847,6 @@ window.PATHS = (window.PATHS || []).concat([
          'Die Einsamkeit nagt. Er überlegt, ob Sien nachkommen könnte, und lässt den Gedanken wieder los. Das Leben zu zweit, so wie es in Den Haag war, scheint ihm hier nicht mehr möglich.',
        ],
        fact: '«Hutten» entstand 1883 in Drenthe und gehört dem Van Gogh Museum. Die niedrige Horizontlinie lässt den Himmel fast die Hälfte des Bildes einnehmen.' },
-     { pid:'twilightch',
-       text: [
-         'Eine Kirche in der Dämmerung, ein weiter Himmel, kaum mehr als Schatten und Licht. Eines der stillsten Blätter der Reise.',
-         'Vincent spürt, dass er so nicht lange allein weiterleben kann. Im Dezember wandert er bei Sturm, Regen und Schnee über die Heide nach Hoogeveen – und fährt weiter zu den Eltern.',
-       ],
-       quote: { text:'Drenthe ist grossartig, aber hier auszuhalten hängt von vielen Dingen ab – davon, ob man das Geld dazu hat, und davon, ob man der Einsamkeit standhält.', cite:'Brief 409, Nuenen, um den 6. Dezember 1883, an Theo' },
-       fact: 'Das Bild fängt die Stimmung von Drenthe im Spätherbst: wenig Farbe, viel Himmel, eine Landschaft, die einen ganz ausfüllen oder ganz leer lassen kann.' },
      { pid:'drawbridge',
        text: [
          'Die Zugbrücke von Nieuw-Amsterdam, im November, mit Schnee und kahlen Bäumen. Ein Mann geht über den Weg, der Himmel ist hell, die Welt ist still.',
@@ -965,9 +945,9 @@ window.PATHS = (window.PATHS || []).concat([
        fact: 'Das fertige Bild gehört dem Van Gogh Museum. Vincent hat nach dem Tod des Vaters Figuren und Stimmung überarbeitet. Es ist kein Porträt des Vaters, aber ein Bild seines Dorfes und seines Amtes.' },
      { pid:'potato',
        text: [
-         'Die Kartoffelesser sind das Ziel dieses ganzen ersten Weges. Fünf Menschen sitzen unter einer Lampe um eine Schüssel, die Gesichter sind grob, die Hände schwer, die Farbe ist die von Erde und Kartoffelschalen.',
+         'Die Kartoffelesser sind das Ziel dieses ganzen ersten Wegabschnitts. Fünf Menschen sitzen unter einer Lampe um eine Schüssel, die Gesichter sind grob, die Hände schwer, die Farbe ist die von Erde und Kartoffelschalen.',
          'Vincent hat den ganzen Winter Köpfe und Hände der Bauern von Nuenen studiert. Er will kein schönes Familienidyll. Er will, dass man sieht, wer diese Menschen sind – und womit sie ihr Essen verdient haben.',
-         'Mit diesem Bild schliesst Teil 1. Vor Vincent liegen Antwerpen, Paris, Arles, Saint-Rémy und Auvers. Die Farbe wird heller werden. Aber die Haltung, die hier beginnt, lässt er nie ganz los.',
+         'Hier enden die niederländischen Jahre. Vor Vincent liegen Antwerpen, Paris, Arles, Saint-Rémy und Auvers. Die Farbe wird heller werden. Aber die Haltung, die hier beginnt, lässt er nie ganz los.',
        ],
        quote: { text:'Ich habe nämlich sehr bewusst darauf hingearbeitet, dass man den Gedanken bekommt, diese Leute, die bei ihrem Lämpchen ihre Kartoffeln essen, hätten mit eben den Händen, die sie in die Schüssel stecken, selbst die Erde umgegraben – und dass also von Handarbeit die Rede ist und davon, dass sie ihr Essen so ehrlich verdient haben.', cite:'Brief 497, Nuenen, 30. April 1885, an Theo' },
        fact: 'Vincent schickt das Bild Anfang Mai 1885 an Theo nach Paris. Es bleibt sein wichtigstes Figurenbild der niederländischen Jahre – und der Anfang von allem, was danach kommt.' }
@@ -1917,11 +1897,11 @@ window.PATHS = (window.PATHS || []).concat([
         fact: 'Das Bild gehört dem Minneapolis Institute of Art und entsteht im November 1889.' },
       { pid:'olivepick',
         text: [
-          'Drei Frauen pflücken Oliven unter den Bäumen, die Kronen wie gelbe und grüne Wolken. Vincent nimmt die Figur wieder auf, die ihm in der Anstalt oft fehlt.',
+          'Drei Frauen pflücken Oliven unter den Bäumen, eine steht auf einer Leiter; die Kronen sind grün und bläulich, der Himmel blassrosa. Vincent nimmt die Figur wieder auf, die ihm in der Anstalt oft fehlt.',
           'An Bernard schreibt er, das Silber auf orangefarbenem oder violettem Boden unter dem grossen blauen Himmel sei noch kaum gemacht worden – im Gegensatz zu Apfelbäumen oder Weiden.'
         ],
         quote: { text:'Die Olivenbäume hier, mein Lieber, das wäre etwas für euch. [...] Es ist Silber auf orangefarbenem oder violettem Boden unter dem grossen blauen Himmel.', cite:'Brief 809, Saint-Rémy, um den 8. Oktober 1889, an Emile Bernard' },
-        fact: 'Das Bild gehört dem Metropolitan Museum of Art in New York und entsteht im Dezember 1889.' }
+        fact: 'Diese Fassung von 1889 gehört der National Gallery of Art in Washington. Eine weitere Fassung des Motivs besitzt das Metropolitan Museum of Art in New York.' }
     ]
    },
    {

@@ -11,21 +11,13 @@
     "title": "Self-Portrait at the Age of Twenty",
     "museum": "Private collection"
   },
-  "sgbrianza": {
-    "title": "Landscape in the Brianza",
-    "museum": "Galleria Civica G. Segantini, Arco"
-  },
   "avemaria": {
     "title": "Ave Maria Crossing the Lake",
-    "museum": "Segantini Museum, St. Moritz"
+    "museum": "Segantini Museum, St. Moritz – on permanent loan from the Otto Fischbacher Giovanni Segantini Foundation"
   },
   "sgstanga": {
     "title": "Alla stanga · Evening on the Pasture",
     "museum": "National Gallery, Prague"
-  },
-  "sgmadri": {
-    "title": "The Two Mothers",
-    "museum": "Bündner Kunstmuseum, Chur"
   },
   "sgcalza": {
     "title": "Girl Knitting",
@@ -35,10 +27,6 @@
     "title": "Ploughing",
     "museum": "Neue Pinakothek, Munich"
   },
-  "sgsavognin": {
-    "title": "Savognin in Winter",
-    "museum": "Museo del Paesaggio, Novara"
-  },
   "segantini": {
     "title": "Midday in the Alps",
     "museum": "Segantini Museum, St. Moritz"
@@ -46,10 +34,6 @@
   "sgpasture": {
     "title": "Alpine Pastures",
     "museum": "Kunsthaus Zürich"
-  },
-  "sgmessa": {
-    "title": "To the Last Mass",
-    "museum": "Galleria Civica G. Segantini, Arco"
   },
   "sgcavalli": {
     "title": "Horses at the Ford",
@@ -64,14 +48,14 @@
   EN.paths.segantini = {
   "title": "Giovanni Segantini’s Life Journey",
   "life": "1858–1899",
-  "part": "Part 1 · From Arco to Maloja",
+  "part": "From Arco to Maloja",
   "subtitle": "Youth, the Brianza, Savognin and the high Alps",
-  "intro": "Travel with Giovanni Segantini, the painter of Alpine light: from a difficult youth in Arco and Milan, through the years in the Brianza and the discovery of Graubünden, to the great Divisionist pictures of Savognin and Maloja. Short stations and pictures to colour. This first part follows the path as far as the unfinished Alpine triptych.",
+  "intro": "Travel with Giovanni Segantini, the painter of Alpine light: from a difficult youth in Arco and Milan, through the years in the Brianza and the discovery of Graubünden, to the great Divisionist pictures of Savognin and Maloja. Short stations and pictures to colour. This path leads as far as the unfinished Alpine triptych.",
   "ending": [
     "In September 1899 Segantini succumbs to an illness on the Schafberg above Pontresina. He is forty-one years old and is buried in Maloja.",
-    "The path can grow further. Drawings, further Alpine pictures and the story of his studio at the Maloja Pass may follow in a later part."
+    "The path leads from Arco through the Brianza and Savognin ever higher up, as far as Maloja in the Engadine."
   ],
-  "epilogue": "In September 1899 Segantini dies on the Schafberg, aged forty-one. A later part can add drawings and further Alpine pictures."
+  "epilogue": "In September 1899 Segantini succumbs to an illness on the Schafberg above Pontresina. He is forty-one years old and is buried in Maloja. The path leads from Arco through the Brianza and Savognin ever higher up, as far as Maloja in the Engadine."
 };
   EN.stations = Object.assign(EN.stations || {}, {
   "sgarco": {
@@ -81,24 +65,6 @@
     "intro": [
       "Giovanni Segantini is born on 15 January 1858 in Arco, then part of the Austrian monarchy, today in Trentino. His mother dies early; his father takes the boy to Milan and disappears from his life.",
       "Without a settled family, Segantini is placed in the Marchiondi reformatory. Later he draws and paints at the Accademia di Brera. Early on he looks for a footing in work."
-    ]
-  },
-  "sgbrianza": {
-    "place": "In the Brianza",
-    "when": "1881–1886",
-    "mapLabel": "Brianza",
-    "intro": [
-      "With Luigia Bugatti, known as Bice, Segantini lives in villages of the Brianza north of Milan. The hills, lakes and farmsteads become his first landscapes of his own.",
-      "They cannot marry at the registry office, because Segantini lacks the papers. Bice remains his companion and the centre of the family all the same."
-    ]
-  },
-  "sgsavognin": {
-    "place": "Savognin · Evening and labour",
-    "when": "1886–1890",
-    "mapLabel": "Savognin",
-    "intro": [
-      "In 1886 the family moves to Savognin in Graubünden. The altitude, the light and peasant labour change Segantini’s painting.",
-      "He develops Divisionism: pure colours in fine, side-by-side strokes that begin to glow from a distance."
     ]
   },
   "sgmittag": {
@@ -128,19 +94,12 @@
     ],
     "fact": "1879–1880. Private collection."
   },
-  "sgbrianza": {
-    "text": [
-      "Hills, paths and farmsteads of the Brianza in quiet light. It is one of the early landscapes in which Segantini looks closely at the Lombard countryside.",
-      "The stroke is still softer, less broken than later in the mountains. The Brianza remains his school before the Alps."
-    ],
-    "fact": "1884–1885. Galleria Civica G. Segantini, Arco."
-  },
   "avemaria": {
     "text": [
       "A shepherd and a woman glide across a still lake in a boat, the sheep in the bow. In this moment they fold their hands for the Ave Maria.",
-      "Segantini painted the subject twice. This 1886 version was already made in the mountains; the gold medal in Amsterdam in 1883 had gone to the first version of 1882."
+      "Segantini painted the subject twice. The Segantini Museum dates the second version to 1886–1888, the years of his move to Savognin; the gold medal in Amsterdam in 1883 had gone to the first version of 1882."
     ],
-    "fact": "1886. Segantini Museum, St. Moritz."
+    "fact": "1886–1888. Segantini Museum, St. Moritz – on permanent loan from the Otto Fischbacher Giovanni Segantini Foundation."
   },
   "sgstanga": {
     "text": [
@@ -148,13 +107,6 @@
       "The animals are heavy and close, the sky already cool. Here Segantini finds the quiet grandeur that marks his Alpine paintings."
     ],
     "fact": "1886–1888. National Gallery, Prague."
-  },
-  "sgmadri": {
-    "text": [
-      "A mother carries her child on a mountain path; a sheep and a lamb follow her. Behind them the peaks lie in the light.",
-      "Segantini begins the picture in 1899 in Maloja; after his death Giovanni Giacometti completes it. It hangs in the Bündner Kunstmuseum in Chur."
-    ],
-    "fact": "1899–1900. Bündner Kunstmuseum, Chur."
   },
   "sgcalza": {
     "text": [
@@ -170,13 +122,6 @@
     ],
     "fact": "1890. Neue Pinakothek, Munich."
   },
-  "sgsavognin": {
-    "text": [
-      "Savognin in winter: the village lies under snow, the air is clear and cold. Segantini records the quiet of the season, not a picturesque motif.",
-      "In pictures like this, altitude itself becomes the subject. The light comes from above and lingers long in the white."
-    ],
-    "fact": "c. 1890. Museo del Paesaggio, Novara."
-  },
   "segantini": {
     "text": [
       "A shepherdess shields her eyes from the midday sun, with sheep and mountain meadows around her. The light falls straight down, the shadows are short.",
@@ -190,13 +135,6 @@
       "It hangs in the Kunsthaus Zürich and stands at the passage from the Savognin years to Maloja."
     ],
     "fact": "c. 1893. Kunsthaus Zürich."
-  },
-  "sgmessa": {
-    "text": [
-      "People walk to mass, in a quiet, almost solemn movement. The subject still belongs to the Lombard and early Graubünden years.",
-      "Segantini joins the everyday life of the village to a silent devotion, without turning the picture into a scene."
-    ],
-    "fact": "1886–1887. Galleria Civica G. Segantini, Arco."
   },
   "sgcavalli": {
     "text": [
