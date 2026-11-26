@@ -1,0 +1,6 @@
+// Work titles (en) of path galerie2-6 (v10.43b), part of en-path-works-late.js.
+(function () {
+  var P = window.EN = window.EN || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqalpiazzasan":{"title":"The Piazza San Marco","museum":"National Gallery of Art, Washington"},"gqalswissvill":{"title":"View of a Swiss Villa","museum":"Metropolitan Museum of Art, New York"},"gqwmpraterlan":{"title":"Prater Landscape","museum":"Cleveland Museum of Art"},"gqaaefterarsm":{"title":"Autumn Morning in Jægersborg Deer Park","museum":"SMK – National Gallery of Denmark, Copenhagen"},"gqbybayeux":{"title":"View of Bayeux","museum":"Metropolitan Museum of Art, New York"},"gqbyrivercott":{"title":"A River and Cottage with White Paling","museum":"National Gallery of Art, Washington"},"gqbystreetcha":{"title":"A Street in Chartres","museum":"National Gallery of Art, Washington"},"gqcwcorsosant":{"title":"Corso Sant’Anastasia with the Palazzo Maffei in Verona","museum":"National Gallery of Art, Washington"},"gqcwgondolagr":{"title":"A Gondola on the Grand Canal, Venice","museum":"National Gallery of Art, Washington"},"gqduestuaryfa":{"title":"The Estuary Farm","museum":"Art Institute of Chicago"}});
+})();

@@ -1,0 +1,6 @@
+// Work titles (en) of path galerie2-7 (v10.43b), part of en-path-works-late.js.
+(function () {
+  var P = window.EN = window.EN || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqgrcliffsisl":{"title":"The Cliffs of the Island of Møn","museum":"SMK – National Gallery of Denmark, Copenhagen"},"gqhuvillarome":{"title":"A Villa near Rome","museum":"Metropolitan Museum of Art, New York"},"gqhumountaino":{"title":"Mountain View at Oisans (Isère)","museum":"Metropolitan Museum of Art, New York"},"gqhurockcliff":{"title":"Rock Cliffs along the Romanche","museum":"National Gallery of Art, Washington"},"gqhucliffsdie":{"title":"The Cliffs at Dieppe","museum":"Art Institute of Chicago"},"gqhumeadowsun":{"title":"A Meadow at Sunset","museum":"National Gallery of Art, Washington"},"gqhuchateaufo":{"title":"View of the Château at Folembray","museum":"Metropolitan Museum of Art, New York"},"gqkdlandscape":{"title":"Landscape with Two Poplars","museum":"Art Institute of Chicago"},"gqkdpaintingg":{"title":"Painting with Green Center","museum":"Art Institute of Chicago"},"gqmfdouarnene":{"title":"Douarnenez in Sunshine","museum":"Art Institute of Chicago"}});
+})();

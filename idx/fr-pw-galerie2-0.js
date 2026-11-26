@@ -1,0 +1,6 @@
+// Work titles (fr) of path galerie2-0 (v10.43b), part of fr-path-works-late.js.
+(function () {
+  var P = window.FR = window.FR || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqblcampodi":{"title":"Le Campo Santi Giovanni e Paolo à Venise","museum":"National Gallery of Art, Washington"},"gqblfortressk":{"title":"La forteresse de Königstein","museum":"National Gallery of Art, Washington"},"gqblpirnafort":{"title":"Vue de Pirna avec la forteresse de Sonnenstein","museum":"Art Institute of Chicago"},"gqbnrouenbon":{"title":"Rouen, vue depuis Bon-Secours","museum":"Metropolitan Museum of Art, New York"},"gqbngrandcana":{"title":"Le Grand Canal","museum":"National Gallery of Art, Washington"},"gqbrriverland":{"title":"Paysage fluvial","museum":"National Gallery of Art, Washington"},"gqcxheatheror":{"title":"Les Ramasseurs de bruyère ou de genêt","museum":"National Gallery of Art, Washington"},"gqcxthames":{"title":"Sur la Tamise","museum":"Musée d’art de Cleveland"},"gqcsmediterra":{"title":"Paysage méditerranéen avec une maison blanche","museum":"Metropolitan Museum of Art, New York"},"gqcsvenicegiu":{"title":"Venise – La Giudecca","museum":"Metropolitan Museum of Art, New York"}});
+})();

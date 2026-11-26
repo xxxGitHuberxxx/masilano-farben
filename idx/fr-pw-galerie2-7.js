@@ -1,0 +1,6 @@
+// Work titles (fr) of path galerie2-7 (v10.43b), part of fr-path-works-late.js.
+(function () {
+  var P = window.FR = window.FR || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqgrcliffsisl":{"title":"Les Falaises de l’île de Møn","museum":"Statens Museum for Kunst, Copenhague"},"gqhuvillarome":{"title":"Une villa près de Rome","museum":"Metropolitan Museum of Art, New York"},"gqhumountaino":{"title":"Vue de montagne dans l’Oisans (Isère)","museum":"Metropolitan Museum of Art, New York"},"gqhurockcliff":{"title":"Falaises rocheuses le long de la Romanche","museum":"National Gallery of Art, Washington"},"gqhucliffsdie":{"title":"Les Falaises de Dieppe","museum":"Art Institute of Chicago"},"gqhumeadowsun":{"title":"Prairie au coucher du soleil","museum":"National Gallery of Art, Washington"},"gqhuchateaufo":{"title":"Vue du château de Folembray","museum":"Metropolitan Museum of Art, New York"},"gqkdlandscape":{"title":"Paysage avec deux peupliers","museum":"Art Institute of Chicago"},"gqkdpaintingg":{"title":"Tableau au centre vert","museum":"Art Institute of Chicago"},"gqmfdouarnene":{"title":"Douarnenez au soleil","museum":"Art Institute of Chicago"}});
+})();

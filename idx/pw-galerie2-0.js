@@ -1,0 +1,13 @@
+// Work metadata of path galerie2-0 (v10.43b), part of path-works-late.js, for single works at start.
+(function () {
+  var M = ["National Gallery of Art, Washington","Art Institute of Chicago","Metropolitan Museum of Art, New York","Cleveland Museum of Art"];
+  var G = [["Bernardo Bellotto",[["gqblcampodi","Der Campo Santi Giovanni e Paolo in Venedig","1743–1747",0,"National Gallery of Art, Washington, 1942.9.7: https://www.nga.gov/collection/art-object-page.1144.html, CC0 (gemeinfrei)"],["gqblfortressk","Die Festung Königstein","1756–1758",0,"National Gallery of Art, Washington, 1993.8.1: https://www.nga.gov/collection/art-object-page.80924.html, CC0 (gemeinfrei)"],["gqblpirnafort","Ansicht von Pirna mit der Festung Sonnenstein","um 1760",1,"Art Institute of Chicago, 1961.44: https://www.artic.edu/artworks/12895, CC0 (gemeinfrei)"]]],["Richard Parkes Bonington",[["gqbnrouenbon","Rouen, Blick von Bon-Secours","1821–1822",2,"Metropolitan Museum of Art, New York, 1996.277: https://www.metmuseum.org/art/collection/search/340849, CC0 (gemeinfrei)"],["gqbngrandcana","Der Canal Grande","1826–1827",0,"National Gallery of Art, Washington, 2001.87.1: https://www.nga.gov/collection/art-object-page.119184.html, CC0 (gemeinfrei)"]]],["Jan Brueghel der Ältere",[["gqbrriverland","Flusslandschaft","1607",0,"National Gallery of Art, Washington, 2000.4.1: https://www.nga.gov/collection/art-object-page.111124.html, CC0 (gemeinfrei)"]]],["David Cox",[["gqcxheatheror","Heide- oder Ginstersammler","1851",0,"National Gallery of Art, Washington, 2020.88.1: https://www.nga.gov/collection/art-object-page.221604.html, CC0 (gemeinfrei)"],["gqcxthames","An der Themse","um 1827–1829",3,"Cleveland Museum of Art, 2005.201: https://clevelandart.org/art/2005.201, CC0 (gemeinfrei)"]]],["Henri-Edmond Cross",[["gqcsmediterra","Mittelmeerlandschaft mit weissem Haus","1900–1905",2,"Metropolitan Museum of Art, New York, 1975.1.591: https://www.metmuseum.org/art/collection/search/459729, CC0 (gemeinfrei)"],["gqcsvenicegiu","Venedig – Die Giudecca","1903",2,"Metropolitan Museum of Art, New York, 1975.1.594: https://www.metmuseum.org/art/collection/search/459731, CC0 (gemeinfrei)"]]]];
+  var have = {}; (window.PATH_WORKS || []).forEach(function (w) { have[w.id] = 1; });
+  var W = [];
+  for (var i = 0; i < G.length; i++) for (var j = 0; j < G[i][1].length; j++) {
+    var r = G[i][1][j]; if (have[r[0]]) continue;
+    var o = { id: r[0], title: r[1], artist: G[i][0], year: r[2] }; if (r.length > 3 && r[3] != null) o.museum = M[r[3]]; if (r.length > 4) o.source = r[4]; W.push(o);
+  }
+  window.PATH_WORKS = (window.PATH_WORKS || []).concat(W);
+  (window.__pwChunks = window.__pwChunks || {})["galerie2-0"] = true;
+})();

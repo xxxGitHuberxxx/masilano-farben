@@ -1,0 +1,6 @@
+// Work titles (en) of path galerie2-0 (v10.43b), part of en-path-works-late.js.
+(function () {
+  var P = window.EN = window.EN || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqblcampodi":{"title":"The Campo di SS. Giovanni e Paolo, Venice","museum":"National Gallery of Art, Washington"},"gqblfortressk":{"title":"The Fortress of Königstein","museum":"National Gallery of Art, Washington"},"gqblpirnafort":{"title":"View of Pirna with the Fortress of Sonnenstein","museum":"Art Institute of Chicago"},"gqbnrouenbon":{"title":"Rouen, View from Bon-Secours","museum":"Metropolitan Museum of Art, New York"},"gqbngrandcana":{"title":"The Grand Canal","museum":"National Gallery of Art, Washington"},"gqbrriverland":{"title":"River Landscape","museum":"National Gallery of Art, Washington"},"gqcxheatheror":{"title":"The Heather or Broom Gatherers","museum":"National Gallery of Art, Washington"},"gqcxthames":{"title":"On the Thames","museum":"Cleveland Museum of Art"},"gqcsmediterra":{"title":"Mediterranean Landscape with a White House","museum":"Metropolitan Museum of Art, New York"},"gqcsvenicegiu":{"title":"Venice – The Giudecca","museum":"Metropolitan Museum of Art, New York"}});
+})();

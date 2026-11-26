@@ -1,0 +1,6 @@
+// Work titles (en) of path galerie2-8 (v10.43b), part of en-path-works-late.js.
+(function () {
+  var P = window.EN = window.EN || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqmfriver":{"title":"The River","museum":"Cleveland Museum of Art"},"gqmrwaterfall":{"title":"Waterfall","museum":"Art Institute of Chicago"},"gqmtislandrag":{"title":"The Island of Raguenez, Brittany","museum":"National Gallery of Art, Washington"},"gqpagoldenhou":{"title":"The Golden Hour","museum":"Cleveland Museum of Art"},"gqpanorthcoas":{"title":"On the North Coast of Devon, Lundy Island in the Distance","museum":"Metropolitan Museum of Art, New York"},"gqptsangiorgi":{"title":"San Giorgio dei Greci, Seen from an Arcade","museum":"National Gallery of Art, Washington"},"gqrhsummers":{"title":"A Summer’s Day by the River Karup, Jutland","museum":"SMK – National Gallery of Denmark, Copenhagen"},"gqrhrandersha":{"title":"Randers Harbour","museum":"SMK – National Gallery of Denmark, Copenhagen"},"gqsyforarstid":{"title":"In Springtime","museum":"SMK – National Gallery of Denmark, Copenhagen"},"gqsymarinefyn":{"title":"Seascape. Fyns Hoved","museum":"SMK – National Gallery of Denmark, Copenhagen"}});
+})();

@@ -1,0 +1,13 @@
+// Work metadata of path galerie2-7 (v10.43b), part of path-works-late.js, for single works at start.
+(function () {
+  var M = ["Statens Museum for Kunst, Kopenhagen","Metropolitan Museum of Art, New York","National Gallery of Art, Washington","Art Institute of Chicago"];
+  var G = [["Louis Gurlitt",[["gqgrcliffsisl","Die Klippen der Insel Møn","1842",0,"Statens Museum for Kunst, Kopenhagen, KMS525: https://open.smk.dk/artwork/image/KMS525, Public Domain (SMK Open, Public Domain Mark 1.0) (gemeinfrei)"]]],["Paul Huet",[["gqhuvillarome","Eine Villa bei Rom","1841–1842",1,"Metropolitan Museum of Art, New York, 2023.599.3: https://www.metmuseum.org/art/collection/search/906103, CC0 (gemeinfrei)"],["gqhumountaino","Bergansicht im Oisans (Isère)","1858",1,"Metropolitan Museum of Art, New York, 67.64: https://www.metmuseum.org/art/collection/search/337323, CC0 (gemeinfrei)"],["gqhurockcliff","Felswände an der Romanche","1858",2,"National Gallery of Art, Washington, 2001.80.1: https://www.nga.gov/collection/art-object-page.119808.html, CC0 (gemeinfrei)"],["gqhucliffsdie","Die Klippen bei Dieppe","um 1825",3,"Art Institute of Chicago, 1969.253: https://www.artic.edu/artworks/31615, CC0 (gemeinfrei)"],["gqhumeadowsun","Wiese bei Sonnenuntergang","um 1845",2,"National Gallery of Art, Washington, 2013.196.3: https://www.nga.gov/collection/art-object-page.152342.html, CC0 (gemeinfrei)"],["gqhuchateaufo","Ansicht des Schlosses Folembray","um 1831",1,"Metropolitan Museum of Art, New York, 2013.1121.5: https://www.metmuseum.org/art/collection/search/635817, CC0 (gemeinfrei)"]]],["Wassily Kandinsky",[["gqkdlandscape","Landschaft mit zwei Pappeln","1912",3,"Art Institute of Chicago, 1931.508: https://www.artic.edu/artworks/8980, CC0 (gemeinfrei)"],["gqkdpaintingg","Bild mit grünem Zentrum","1913",3,"Art Institute of Chicago, 1931.510: https://www.artic.edu/artworks/8987, CC0 (gemeinfrei)"]]],["Maxime Maufra",[["gqmfdouarnene","Douarnenez im Sonnenschein","1897",3,"Art Institute of Chicago, 1905.335: https://www.artic.edu/artworks/111632, CC0 (gemeinfrei)"]]]];
+  var have = {}; (window.PATH_WORKS || []).forEach(function (w) { have[w.id] = 1; });
+  var W = [];
+  for (var i = 0; i < G.length; i++) for (var j = 0; j < G[i][1].length; j++) {
+    var r = G[i][1][j]; if (have[r[0]]) continue;
+    var o = { id: r[0], title: r[1], artist: G[i][0], year: r[2] }; if (r.length > 3 && r[3] != null) o.museum = M[r[3]]; if (r.length > 4) o.source = r[4]; W.push(o);
+  }
+  window.PATH_WORKS = (window.PATH_WORKS || []).concat(W);
+  (window.__pwChunks = window.__pwChunks || {})["galerie2-7"] = true;
+})();

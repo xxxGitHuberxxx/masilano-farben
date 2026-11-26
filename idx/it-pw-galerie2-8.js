@@ -1,0 +1,6 @@
+// Work titles (it) of path galerie2-8 (v10.43b), part of it-path-works-late.js.
+(function () {
+  var P = window.IT = window.IT || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqmfriver":{"title":"Il fiume","museum":"Cleveland Museum of Art"},"gqmrwaterfall":{"title":"Cascata","museum":"Art Institute of Chicago"},"gqmtislandrag":{"title":"L’isola di Raguenez, Bretagna","museum":"National Gallery of Art, Washington"},"gqpagoldenhou":{"title":"L’ora dorata","museum":"Cleveland Museum of Art"},"gqpanorthcoas":{"title":"Sulla costa settentrionale del Devon, in lontananza l’isola di Lundy","museum":"Metropolitan Museum of Art, New York"},"gqptsangiorgi":{"title":"San Giorgio dei Greci, visto da un porticato","museum":"National Gallery of Art, Washington"},"gqrhsummers":{"title":"Un giorno d’estate lungo il fiume Karup, Jutland","museum":"Statens Museum for Kunst, Copenaghen"},"gqrhrandersha":{"title":"Il porto di Randers","museum":"Statens Museum for Kunst, Copenaghen"},"gqsyforarstid":{"title":"In primavera","museum":"Statens Museum for Kunst, Copenaghen"},"gqsymarinefyn":{"title":"Marina. Fyns Hoved","museum":"Statens Museum for Kunst, Copenaghen"}});
+})();

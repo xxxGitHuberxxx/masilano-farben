@@ -1,0 +1,6 @@
+// Work titles (fr) of path galerie2-4 (v10.43b), part of fr-path-works-late.js.
+(function () {
+  var P = window.FR = window.FR || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqhbvillagepo":{"title":"Village près d’un étang","museum":"National Gallery of Art, Washington"},"gqlpoutskirts":{"title":"Vue des environs de Caen","museum":"National Gallery of Art, Washington"},"gqlplouvre":{"title":"Vue du Louvre","museum":"National Gallery of Art, Washington"},"gqphisoladel":{"title":"Isola del Liri, Italie. Jour couvert","museum":"Statens Museum for Kunst, Copenhague"},"gqriharvest":{"title":"Moisson","museum":"Statens Museum for Kunst, Copenhague"},"gqrilandscape":{"title":"Paysage près de Bryrup, Jutland","museum":"Statens Museum for Kunst, Copenhague"},"gqriroadmogen":{"title":"La Route de Mogenstrup, Seeland. Automne","museum":"Statens Museum for Kunst, Copenhague"},"gqrispringtim":{"title":"Printemps à Hals, Jutland","museum":"Statens Museum for Kunst, Copenhague"},"gqrifjordkarr":{"title":"Le Fjord près de Karrebæksminde, Seeland","museum":"Statens Museum for Kunst, Copenhague"},"gqriroskildef":{"title":"Vue de Roskilde vers le fjord","museum":"Statens Museum for Kunst, Copenhague"}});
+})();

@@ -1,0 +1,6 @@
+// Work titles (fr) of path galerie2-6 (v10.43b), part of fr-path-works-late.js.
+(function () {
+  var P = window.FR = window.FR || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqalpiazzasan":{"title":"La Place Saint-Marc","museum":"National Gallery of Art, Washington"},"gqalswissvill":{"title":"Vue d’une villa suisse","museum":"Metropolitan Museum of Art, New York"},"gqwmpraterlan":{"title":"Paysage du Prater","museum":"Musée d’art de Cleveland"},"gqaaefterarsm":{"title":"Matin d’automne dans le parc de Jægersborg","museum":"Statens Museum for Kunst, Copenhague"},"gqbybayeux":{"title":"Vue de Bayeux","museum":"Metropolitan Museum of Art, New York"},"gqbyrivercott":{"title":"Rivière et chaumière à la palissade blanche","museum":"National Gallery of Art, Washington"},"gqbystreetcha":{"title":"Une rue à Chartres","museum":"National Gallery of Art, Washington"},"gqcwcorsosant":{"title":"Le Corso Sant’Anastasia et le palais Maffei à Vérone","museum":"National Gallery of Art, Washington"},"gqcwgondolagr":{"title":"Une gondole sur le Grand Canal à Venise","museum":"National Gallery of Art, Washington"},"gqduestuaryfa":{"title":"La Ferme de l’estuaire","museum":"Art Institute of Chicago"}});
+})();

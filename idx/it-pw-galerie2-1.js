@@ -1,0 +1,6 @@
+// Work titles (it) of path galerie2-1 (v10.43b), part of it-path-works-late.js.
+(function () {
+  var P = window.IT = window.IT || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqcsvalleyfir":{"title":"Valle con abete (Ombra sulla montagna)","museum":"Metropolitan Museum of Art, New York"},"gqcscapnegre":{"title":"Cap Nègre","museum":"Metropolitan Museum of Art, New York"},"gqcspinkcloud":{"title":"La nuvola rosa","museum":"Cleveland Museum of Art"},"gqcslandscape":{"title":"Paesaggio","museum":"Metropolitan Museum of Art, New York"},"gqcymaasdordr":{"title":"La Mosa a Dordrecht","museum":"National Gallery of Art, Washington"},"gqdhbridgeacr":{"title":"Il ponte sul fiume Tryggevælde con veduta di Køge, Selandia","museum":"Statens Museum for Kunst, Copenaghen"},"gqdhlandscape":{"title":"Paesaggio con un grande albero","museum":"Statens Museum for Kunst, Copenaghen"},"gqdhengelholm":{"title":"Veduta di Engelholm presso Præstø, Selandia","museum":"Statens Museum for Kunst, Copenaghen"},"gqdhfrederiks":{"title":"Il castello di Frederiksborg","museum":"Statens Museum for Kunst, Copenaghen"},"gqdbfarm":{"title":"La fattoria","museum":"National Gallery of Art, Washington"}});
+})();
