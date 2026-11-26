@@ -1,0 +1,13 @@
+// Work metadata of path galerie1-7 (v10.43b), part of path-works-late.js, for single works at start.
+(function () {
+  var M = ["National Gallery of Art, Washington","Art Institute of Chicago","Metropolitan Museum of Art, New York"];
+  var G = [["William Trost Richards",[["gqwrseascaper","Meerbild mit Felsen","um 1890–1899",0,"National Gallery of Art, Washington, 2015.19.797: https://www.nga.gov/collection/art-object-page.182271.html, CC0 (gemeinfrei)"]]],["Keisai Eisen",[["gqeinewyears","Blumengesteck zum Neujahr","um 1820–1829",1,"Art Institute of Chicago, 1925.2890: https://www.artic.edu/artworks/23426, CC0 (gemeinfrei)"]]],["Utagawa Hiroshige II",[["gqh2katabay","Ansicht der Bucht von Kata, Provinz Kishu","1859",1,"Art Institute of Chicago, 1990.607.147: https://www.artic.edu/artworks/196826, CC0 (gemeinfrei)"],["gqh2hiroseuns","Ansicht von Hirose, Provinz Unshu","1859",1,"Art Institute of Chicago, 1990.607.149: https://www.artic.edu/artworks/196828, CC0 (gemeinfrei)"],["gqh2muroharbo","Ansicht des Hafens von Muro, Provinz Banshu","1859",1,"Art Institute of Chicago, 1990.607.161: https://www.artic.edu/artworks/196840, CC0 (gemeinfrei)"],["gqh2harborshi","Hafen der chinesischen Schiffe, Nagasaki, Provinz Hizen","1859",1,"Art Institute of Chicago, 1990.607.166: https://www.artic.edu/artworks/196845, CC0 (gemeinfrei)"],["gqh2nunobikiw","Der Nunobiki-Wasserfall, Provinz Sesshu","1859",1,"Art Institute of Chicago, 1990.607.67: https://www.artic.edu/artworks/196746, CC0 (gemeinfrei)"],["gqh2kitesfuku","Drachen von Fukuroi mit Fernsicht auf Akiba, Provinz Totomi","1859",1,"Art Institute of Chicago, 1990.607.99: https://www.artic.edu/artworks/196778, CC0 (gemeinfrei)"],["gqh2maikobeac","Der Strand von Maiko, Provinz Banshu","1859",1,"Art Institute of Chicago, 1990.607.74: https://www.artic.edu/artworks/196753, CC0 (gemeinfrei)"]]],["Totoya Hokkei",[["gqhkwinegoble","Weinschale und Lackdose mit Neujahrsmahl","1811",2,"Metropolitan Museum of Art, New York, JP2011: https://www.metmuseum.org/art/collection/search/54731, CC0 (gemeinfrei)"]]]];
+  var have = {}; (window.PATH_WORKS || []).forEach(function (w) { have[w.id] = 1; });
+  var W = [];
+  for (var i = 0; i < G.length; i++) for (var j = 0; j < G[i][1].length; j++) {
+    var r = G[i][1][j]; if (have[r[0]]) continue;
+    var o = { id: r[0], title: r[1], artist: G[i][0], year: r[2] }; if (r.length > 3 && r[3] != null) o.museum = M[r[3]]; if (r.length > 4) o.source = r[4]; W.push(o);
+  }
+  window.PATH_WORKS = (window.PATH_WORKS || []).concat(W);
+  (window.__pwChunks = window.__pwChunks || {})["galerie1-7"] = true;
+})();

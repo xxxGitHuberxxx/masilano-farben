@@ -1,0 +1,6 @@
+// Work titles (fr) of path galerie1-5 (v10.43b), part of fr-path-works-late.js.
+(function () {
+  var P = window.FR = window.FR || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqprcaffeflor":{"title":"Le Caffè Florian à Venise","museum":"National Gallery of Art, Washington"},"gqprmallcentr":{"title":"Le Mall, Central Park","museum":"National Gallery of Art, Washington"},"gqprmayday":{"title":"Premier mai, Central Park","museum":"Musée d’art de Cleveland"},"gqprterrace":{"title":"Depuis la terrasse","museum":"Musée d’art de Cleveland"},"gqprbeachst":{"title":"Plage, Saint-Malo","museum":"Musée d’art de Cleveland"},"gqprrockyseas":{"title":"Le rivage rocheux","museum":"Musée d’art de Cleveland"},"gqprbyshore":{"title":"Au bord du rivage","museum":"Musée d’art de Cleveland"},"gqrdcabbagero":{"title":"Rose à cent feuilles (Rosa centifolia simplex)","museum":"Musée d’art de Cleveland"},"gqsabridgecam":{"title":"Un pont et un campanile à Venise","museum":"National Gallery of Art, Washington"},"gqsagondolamo":{"title":"Gondoles amarrées sur le Grand Canal","museum":"National Gallery of Art, Washington"}});
+})();

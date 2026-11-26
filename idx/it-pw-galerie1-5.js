@@ -1,0 +1,6 @@
+// Work titles (it) of path galerie1-5 (v10.43b), part of it-path-works-late.js.
+(function () {
+  var P = window.IT = window.IT || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqprcaffeflor":{"title":"Il Caffè Florian a Venezia","museum":"National Gallery of Art, Washington"},"gqprmallcentr":{"title":"Il Mall, Central Park","museum":"National Gallery of Art, Washington"},"gqprmayday":{"title":"Primo maggio, Central Park","museum":"Cleveland Museum of Art"},"gqprterrace":{"title":"Dalla terrazza","museum":"Cleveland Museum of Art"},"gqprbeachst":{"title":"Spiaggia, Saint-Malo","museum":"Cleveland Museum of Art"},"gqprrockyseas":{"title":"La costa rocciosa","museum":"Cleveland Museum of Art"},"gqprbyshore":{"title":"In riva al mare","museum":"Cleveland Museum of Art"},"gqrdcabbagero":{"title":"Rosa centifoglia (Rosa centifolia simplex)","museum":"Cleveland Museum of Art"},"gqsabridgecam":{"title":"Un ponte e un campanile a Venezia","museum":"National Gallery of Art, Washington"},"gqsagondolamo":{"title":"Ormeggi di gondole sul Canal Grande","museum":"National Gallery of Art, Washington"}});
+})();

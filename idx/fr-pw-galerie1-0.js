@@ -1,0 +1,6 @@
+// Work titles (fr) of path galerie1-0 (v10.43b), part of fr-path-works-late.js.
+(function () {
+  var P = window.FR = window.FR || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqbotouquesde":{"title":"La Touques près de Deauville","museum":"Art Institute of Chicago"},"gqbofiguresbe":{"title":"Personnages sur la plage","museum":"National Gallery of Art, Washington"},"gqboshiptouqu":{"title":"Navire sur la Touques","museum":"National Gallery of Art, Washington"},"gqclgrandcana":{"title":"Le Grand Canal à Venise, vers le sud-est, avec le Campo della Carità à droite","museum":"Metropolitan Museum of Art, New York"},"gqchgathering":{"title":"Cueillette de fleurs d’automne","museum":"National Gallery of Art, Washington"},"gqchfriendlyc":{"title":"Une visite amicale","museum":"National Gallery of Art, Washington"},"gqchcitypark":{"title":"Un parc en ville","museum":"Art Institute of Chicago"},"gqcrautumnhud":{"title":"L’automne sur l’Hudson","museum":"National Gallery of Art, Washington"},"gqcrmountwash":{"title":"Le mont Washington, New Hampshire","museum":"Musée d’art de Cleveland"},"gqcrlandscape":{"title":"Paysage (Hastings-on-Hudson)","museum":"Musée d’art de Cleveland"}});
+})();

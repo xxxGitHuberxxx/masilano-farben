@@ -1,0 +1,6 @@
+// Work titles (es) of path galerie1-2 (v10.43b), part of es-path-works-late.js.
+(function () {
+  var P = window.ES = window.ES || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqhplandscape2":{"title":"Paisaje con granja","museum":"Museo de Arte de Cleveland"},"gqhodads":{"title":"¡Ya viene papá!","museum":"National Gallery of Art, Washington"},"gqhogarden":{"title":"En el jardín (Cortejo rústico)","museum":"National Gallery of Art, Washington"},"gqhofence":{"title":"En la valla","museum":"National Gallery of Art, Washington"},"gqhostile":{"title":"En la escalerilla de la cerca","museum":"National Gallery of Art, Washington"},"gqhogreenhill":{"title":"La colina verde","museum":"National Gallery of Art, Washington"},"gqhotynemouth":{"title":"Priorato de Tynemouth, Inglaterra","museum":"Art Institute of Chicago"},"gqhoincomingt":{"title":"Marea entrante, Scarboro, Maine","museum":"National Gallery of Art, Washington"},"gqhohudsonriv":{"title":"Río Hudson, transporte de troncos","museum":"National Gallery of Art, Washington"},"gqhoadirondac":{"title":"Guía de los Adirondacks","museum":"Art Institute of Chicago"}});
+})();

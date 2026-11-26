@@ -1,0 +1,6 @@
+// Work titles (fr) of path galerie1-3 (v10.43b), part of fr-path-works-late.js.
+(function () {
+  var P = window.FR = window.FR || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqhowaterfan":{"title":"L’éventail d’eau","museum":"Art Institute of Chicago"},"gqintiberperu":{"title":"Vue du Tibre près de Pérouse","museum":"National Gallery of Art, Washington"},"gqinlackawann":{"title":"La vallée de la Lackawanna","museum":"National Gallery of Art, Washington"},"gqinlakealban":{"title":"Le lac d’Albano au coucher du soleil","museum":"National Gallery of Art, Washington"},"gqjkquaid":{"title":"Vue du quai d’Orsay","museum":"Metropolitan Museum of Art, New York"},"gqjkentrancet":{"title":"L’entrée du port de Honfleur","museum":"Art Institute of Chicago"},"gqjkchurchove":{"title":"L’église d’Overschie","museum":"Art Institute of Chicago"},"gqjkroadcote":{"title":"Route près de La Côte-Saint-André","museum":"Metropolitan Museum of Art, New York"},"gqksbeaconroc":{"title":"Beacon Rock, port de Newport","museum":"National Gallery of Art, Washington"},"gqksgeneseemo":{"title":"Vue sur la Genesee près de Mount Morris","museum":"National Gallery of Art, Washington"}});
+})();

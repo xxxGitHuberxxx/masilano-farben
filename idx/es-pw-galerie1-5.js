@@ -1,0 +1,6 @@
+// Work titles (es) of path galerie1-5 (v10.43b), part of es-path-works-late.js.
+(function () {
+  var P = window.ES = window.ES || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqprcaffeflor":{"title":"El Caffè Florian en Venecia","museum":"National Gallery of Art, Washington"},"gqprmallcentr":{"title":"The Mall, Central Park","museum":"National Gallery of Art, Washington"},"gqprmayday":{"title":"Primero de mayo, Central Park","museum":"Museo de Arte de Cleveland"},"gqprterrace":{"title":"Desde la terraza","museum":"Museo de Arte de Cleveland"},"gqprbeachst":{"title":"Playa, Saint-Malo","museum":"Museo de Arte de Cleveland"},"gqprrockyseas":{"title":"La costa rocosa","museum":"Museo de Arte de Cleveland"},"gqprbyshore":{"title":"Junto a la orilla","museum":"Museo de Arte de Cleveland"},"gqrdcabbagero":{"title":"Rosa de cien hojas (Rosa centifolia simplex)","museum":"Museo de Arte de Cleveland"},"gqsabridgecam":{"title":"Un puente y un campanario, Venecia","museum":"National Gallery of Art, Washington"},"gqsagondolamo":{"title":"Amarres de góndolas en el Gran Canal","museum":"National Gallery of Art, Washington"}});
+})();

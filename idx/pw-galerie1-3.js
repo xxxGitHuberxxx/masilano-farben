@@ -1,0 +1,13 @@
+// Work metadata of path galerie1-3 (v10.43b), part of path-works-late.js, for single works at start.
+(function () {
+  var M = ["Art Institute of Chicago","National Gallery of Art, Washington","Metropolitan Museum of Art, New York"];
+  var G = [["Winslow Homer",[["gqhowaterfan","Der Wasserfächer","1898–1899",0,"Art Institute of Chicago, 1972.190: https://www.artic.edu/artworks/38666, CC0 (gemeinfrei)"]]],["George Inness",[["gqintiberperu","Blick auf den Tiber bei Perugia","1872–1874",1,"National Gallery of Art, Washington, 1973.16.1: https://www.nga.gov/collection/art-object-page.53813.html, CC0 (gemeinfrei)"],["gqinlackawann","Das Lackawanna-Tal","um 1856",1,"National Gallery of Art, Washington, 1945.4.1: https://www.nga.gov/collection/art-object-page.30776.html, CC0 (gemeinfrei)"],["gqinlakealban","Albaner See bei Sonnenuntergang","um 1874",1,"National Gallery of Art, Washington, 1962.2.1: https://www.nga.gov/collection/art-object-page.46426.html, CC0 (gemeinfrei)"]]],["Johan Barthold Jongkind",[["gqjkquaid","Blick vom Quai d’Orsay","1854",2,"Metropolitan Museum of Art, New York, 2001.652: https://www.metmuseum.org/art/collection/search/438381, CC0 (gemeinfrei)"],["gqjkentrancet","Einfahrt in den Hafen von Honfleur","1863–1864",0,"Art Institute of Chicago, 1968.614: https://www.artic.edu/artworks/30361, CC0 (gemeinfrei)"],["gqjkchurchove","Die Kirche von Overschie","1866",0,"Art Institute of Chicago, 1933.1129: https://www.artic.edu/artworks/111630, CC0 (gemeinfrei)"],["gqjkroadcote","Weg bei La Côte-Saint-André","1885",2,"Metropolitan Museum of Art, New York, 17.120.239: https://www.metmuseum.org/art/collection/search/335614, CC0 (gemeinfrei)"]]],["John Frederick Kensett",[["gqksbeaconroc","Beacon Rock, Hafen von Newport","1857",1,"National Gallery of Art, Washington, 1953.1.1: https://www.nga.gov/collection/art-object-page.42389.html, CC0 (gemeinfrei)"],["gqksgeneseemo","Am Genesee bei Mount Morris","1857",1,"National Gallery of Art, Washington, 2014.136.118: https://www.nga.gov/collection/art-object-page.178026.html, CC0 (gemeinfrei)"]]]];
+  var have = {}; (window.PATH_WORKS || []).forEach(function (w) { have[w.id] = 1; });
+  var W = [];
+  for (var i = 0; i < G.length; i++) for (var j = 0; j < G[i][1].length; j++) {
+    var r = G[i][1][j]; if (have[r[0]]) continue;
+    var o = { id: r[0], title: r[1], artist: G[i][0], year: r[2] }; if (r.length > 3 && r[3] != null) o.museum = M[r[3]]; if (r.length > 4) o.source = r[4]; W.push(o);
+  }
+  window.PATH_WORKS = (window.PATH_WORKS || []).concat(W);
+  (window.__pwChunks = window.__pwChunks || {})["galerie1-3"] = true;
+})();

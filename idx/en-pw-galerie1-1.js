@@ -1,0 +1,6 @@
+// Work titles (en) of path galerie1-1 (v10.43b), part of en-path-works-late.js.
+(function () {
+  var P = window.EN = window.EN || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqflstilllife":{"title":"Still Life","museum":"National Gallery of Art, Washington"},"gqflstilllife2":{"title":"Still Life with Flowers","museum":"Art Institute of Chicago"},"gqflroseslili":{"title":"Roses and Lilies","museum":"Metropolitan Museum of Art, New York"},"gqgdislandsan":{"title":"The Island of San Michele, Venice","museum":"Metropolitan Museum of Art, New York"},"gqgdgardenpal":{"title":"The Garden of Palazzo Contarini dal Zaffo","museum":"Art Institute of Chicago"},"gqgdgrandcana":{"title":"The Grand Canal, Venice","museum":"Art Institute of Chicago"},"gqgdcannaregi":{"title":"View on the Cannaregio Canal, Venice","museum":"National Gallery of Art, Washington"},"gqgdvillalore":{"title":"The Villa Loredan, Paese","museum":"Metropolitan Museum of Art, New York"},"gqhplandscape":{"title":"Landscape at Famars","museum":"Metropolitan Museum of Art, New York"},"gqhpinstitutf":{"title":"View of the Institut de France from the Foot of the Pont Royal","museum":"Cleveland Museum of Art"}});
+})();

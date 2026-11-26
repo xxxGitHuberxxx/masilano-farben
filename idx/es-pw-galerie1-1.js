@@ -1,0 +1,6 @@
+// Work titles (es) of path galerie1-1 (v10.43b), part of es-path-works-late.js.
+(function () {
+  var P = window.ES = window.ES || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqflstilllife":{"title":"Naturaleza muerta","museum":"National Gallery of Art, Washington"},"gqflstilllife2":{"title":"Naturaleza muerta con flores","museum":"Art Institute of Chicago"},"gqflroseslili":{"title":"Rosas y lirios","museum":"Metropolitan Museum of Art, Nueva York"},"gqgdislandsan":{"title":"La isla de San Michele, Venecia","museum":"Metropolitan Museum of Art, Nueva York"},"gqgdgardenpal":{"title":"El jardín del Palazzo Contarini dal Zaffo","museum":"Art Institute of Chicago"},"gqgdgrandcana":{"title":"El Gran Canal, Venecia","museum":"Art Institute of Chicago"},"gqgdcannaregi":{"title":"Vista del canal de Cannaregio, Venecia","museum":"National Gallery of Art, Washington"},"gqgdvillalore":{"title":"La Villa Loredan, Paese","museum":"Metropolitan Museum of Art, Nueva York"},"gqhplandscape":{"title":"Paisaje en Famars","museum":"Metropolitan Museum of Art, Nueva York"},"gqhpinstitutf":{"title":"Vista del Institut de France desde el pie del Pont Royal","museum":"Museo de Arte de Cleveland"}});
+})();

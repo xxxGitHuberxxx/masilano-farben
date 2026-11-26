@@ -1,0 +1,13 @@
+// Work metadata of path galerie1-1 (v10.43b), part of path-works-late.js, for single works at start.
+(function () {
+  var M = ["National Gallery of Art, Washington","Art Institute of Chicago","Metropolitan Museum of Art, New York","Cleveland Museum of Art"];
+  var G = [["Henri Fantin-Latour",[["gqflstilllife","Stillleben","1866",0,"National Gallery of Art, Washington, 1963.10.146: https://www.nga.gov/collection/art-object-page.46621.html, CC0 (gemeinfrei)"],["gqflstilllife2","Stillleben mit Blumen","1881",1,"Art Institute of Chicago, 1988.260: https://www.artic.edu/artworks/72180, CC0 (gemeinfrei)"],["gqflroseslili","Rosen und Lilien","1888",2,"Metropolitan Museum of Art, New York, 2001.202.4: https://www.metmuseum.org/art/collection/search/437996, CC0 (gemeinfrei)"]]],["Francesco Guardi",[["gqgdislandsan","Die Insel San Michele in Venedig","um 1770–1779",2,"Metropolitan Museum of Art, New York, 2019.141.13: https://www.metmuseum.org/art/collection/search/438117, CC0 (gemeinfrei)"],["gqgdgardenpal","Der Garten des Palazzo Contarini dal Zaffo","Ende der 1770er Jahre",1,"Art Institute of Chicago, 1991.112: https://www.artic.edu/artworks/111610, CC0 (gemeinfrei)"],["gqgdgrandcana","Der Canal Grande in Venedig","um 1760",1,"Art Institute of Chicago, 1951.21: https://www.artic.edu/artworks/111074, CC0 (gemeinfrei)"],["gqgdcannaregi","Ansicht am Canale di Cannaregio in Venedig","um 1775–1780",0,"National Gallery of Art, Washington, 1939.1.113: https://www.nga.gov/collection/art-object-page.254.html, CC0 (gemeinfrei)"],["gqgdvillalore","Die Villa Loredan in Paese","Anfang der 1780er Jahre",2,"Metropolitan Museum of Art, New York, 2019.141.14: https://www.metmuseum.org/art/collection/search/438116, CC0 (gemeinfrei)"]]],["Henri Harpignies",[["gqhplandscape","Landschaft bei Famars","1863",2,"Metropolitan Museum of Art, New York, 1975.1.641: https://www.metmuseum.org/art/collection/search/460046, CC0 (gemeinfrei)"],["gqhpinstitutf","Blick auf das Institut de France vom Fuss des Pont Royal","1870",3,"Cleveland Museum of Art, 1946.287: https://clevelandart.org/art/1946.287, CC0 (gemeinfrei)"]]]];
+  var have = {}; (window.PATH_WORKS || []).forEach(function (w) { have[w.id] = 1; });
+  var W = [];
+  for (var i = 0; i < G.length; i++) for (var j = 0; j < G[i][1].length; j++) {
+    var r = G[i][1][j]; if (have[r[0]]) continue;
+    var o = { id: r[0], title: r[1], artist: G[i][0], year: r[2] }; if (r.length > 3 && r[3] != null) o.museum = M[r[3]]; if (r.length > 4) o.source = r[4]; W.push(o);
+  }
+  window.PATH_WORKS = (window.PATH_WORKS || []).concat(W);
+  (window.__pwChunks = window.__pwChunks || {})["galerie1-1"] = true;
+})();

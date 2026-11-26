@@ -345,8 +345,12 @@
   }
   function pathLocked(id){ return pathPaid(id) && !pathOwned(id) && !pathGrandfathered(id); }
   function galleryIds(){
-    if (!hooks._gal) {
+    const gpN = (window.GALLERY_PACKS || []).length;
+    if (!hooks._gal || hooks._galN !== gpN) {
+      hooks._galN = gpN;
       hooks._gal = new Set((window.PAINTINGS || []).map(p => p.id).concat((window.STORY_WORKS || []).map(w => w.id)));
+      // v10.43h: works of the lazily loaded gallery packs are gallery pictures (free like the others).
+      (window.GALLERY_PACKS || []).forEach(g => { if (g && g[1]) String(g[1]).split(' ').forEach(id => { if (id) hooks._gal.add(id); }); });
     }
     return hooks._gal;
   }
@@ -426,7 +430,7 @@
   function injectCss(){
     if (document.getElementById('unlockCss')) return;
     const l = document.createElement('link');
-    l.id = 'unlockCss'; l.rel = 'stylesheet'; l.href = 'unlock.css?v=1042';
+    l.id = 'unlockCss'; l.rel = 'stylesheet'; l.href = 'unlock.css?v=1043';
     document.head.appendChild(l);
   }
   function ensureSheet(){

@@ -1454,6 +1454,13 @@
         });
       });
     });
+    // v10.43h: gallery packs own their works too (chunk idx/pw-<pack>.js).
+    (window.GALLERY_PACKS || []).forEach(function (g) {
+      if (!g || !g[0] || !g[1]) return;
+      String(g[1]).split(' ').forEach(function (pid) {
+        if (want[pid]) { delete want[pid]; if (owners.indexOf(g[0]) < 0) owners.push(g[0]); }
+      });
+    });
     const langLate = code !== 'de' && LANG_GLOBS[code] && _lateProm[['path-works-late.js', code + '-path-works-late.js'].join('|')];
     const files = [];
     owners.forEach(function (pid) {

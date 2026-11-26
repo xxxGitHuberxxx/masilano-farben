@@ -1,0 +1,6 @@
+// Work titles (en) of path galerie1-2 (v10.43b), part of en-path-works-late.js.
+(function () {
+  var P = window.EN = window.EN || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqhplandscape2":{"title":"Landscape with Farmhouse","museum":"Cleveland Museum of Art"},"gqhodads":{"title":"Dad’s Coming!","museum":"National Gallery of Art, Washington"},"gqhogarden":{"title":"In the Garden (Rustic Courtship)","museum":"National Gallery of Art, Washington"},"gqhofence":{"title":"On the Fence","museum":"National Gallery of Art, Washington"},"gqhostile":{"title":"On the Stile","museum":"National Gallery of Art, Washington"},"gqhogreenhill":{"title":"The Green Hill","museum":"National Gallery of Art, Washington"},"gqhotynemouth":{"title":"Tynemouth Priory, England","museum":"Art Institute of Chicago"},"gqhoincomingt":{"title":"Incoming Tide, Scarboro, Maine","museum":"National Gallery of Art, Washington"},"gqhohudsonriv":{"title":"Hudson River, Logging","museum":"National Gallery of Art, Washington"},"gqhoadirondac":{"title":"Adirondacks Guide","museum":"Art Institute of Chicago"}});
+})();

@@ -1,0 +1,6 @@
+// Work titles (en) of path galerie1-5 (v10.43b), part of en-path-works-late.js.
+(function () {
+  var P = window.EN = window.EN || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqprcaffeflor":{"title":"Caffè Florian in Venice","museum":"National Gallery of Art, Washington"},"gqprmallcentr":{"title":"The Mall, Central Park","museum":"National Gallery of Art, Washington"},"gqprmayday":{"title":"May Day, Central Park","museum":"Cleveland Museum of Art"},"gqprterrace":{"title":"From the Terrace","museum":"Cleveland Museum of Art"},"gqprbeachst":{"title":"Beach, St. Malo","museum":"Cleveland Museum of Art"},"gqprrockyseas":{"title":"The Rocky Seashore","museum":"Cleveland Museum of Art"},"gqprbyshore":{"title":"By the Shore","museum":"Cleveland Museum of Art"},"gqrdcabbagero":{"title":"Cabbage Rose (Rosa centifolia simplex)","museum":"Cleveland Museum of Art"},"gqsabridgecam":{"title":"A Bridge and Campanile, Venice","museum":"National Gallery of Art, Washington"},"gqsagondolamo":{"title":"Gondola Moorings on the Grand Canal","museum":"National Gallery of Art, Washington"}});
+})();

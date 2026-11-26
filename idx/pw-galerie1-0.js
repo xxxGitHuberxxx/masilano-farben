@@ -1,0 +1,13 @@
+// Work metadata of path galerie1-0 (v10.43b), part of path-works-late.js, for single works at start.
+(function () {
+  var M = ["Art Institute of Chicago","National Gallery of Art, Washington","Metropolitan Museum of Art, New York","Cleveland Museum of Art"];
+  var G = [["Eugène Boudin",[["gqbotouquesde","Die Touques bei Deauville","1883",0,"Art Institute of Chicago, 1980.79: https://www.artic.edu/artworks/59823, CC0 (gemeinfrei)"],["gqbofiguresbe","Figuren am Strand","um 1867–1870",1,"National Gallery of Art, Washington, 1983.1.12: https://www.nga.gov/collection/art-object-page.61362.html, CC0 (gemeinfrei)"],["gqboshiptouqu","Schiff auf der Touques","um 1888–1895",1,"National Gallery of Art, Washington, 1986.36.1: https://www.nga.gov/collection/art-object-page.67349.html, CC0 (gemeinfrei)"]]],["Giovanni Antonio Canal (Canaletto)",[["gqclgrandcana","Der Canal Grande in Venedig mit Blick nach Südosten, rechts der Campo della Carità","um 1730–1739",2,"Metropolitan Museum of Art, New York, 2019.141.4: https://www.metmuseum.org/art/collection/search/438102, CC0 (gemeinfrei)"]]],["William Merritt Chase",[["gqchgathering","Herbstblumen pflücken","1894–1895",1,"National Gallery of Art, Washington, 2012.89.1: https://www.nga.gov/collection/art-object-page.157922.html, CC0 (gemeinfrei)"],["gqchfriendlyc","Ein freundschaftlicher Besuch","1895",1,"National Gallery of Art, Washington, 1943.1.2: https://www.nga.gov/collection/art-object-page.3205.html, CC0 (gemeinfrei)"],["gqchcitypark","Ein Stadtpark","um 1887",0,"Art Institute of Chicago, 1968.88: https://www.artic.edu/artworks/28849, CC0 (gemeinfrei)"]]],["Jasper Francis Cropsey",[["gqcrautumnhud","Herbst am Hudson River","1860",1,"National Gallery of Art, Washington, 1963.9.1: https://www.nga.gov/collection/art-object-page.46474.html, CC0 (gemeinfrei)"],["gqcrmountwash","Mount Washington, New Hampshire","1870",3,"Cleveland Museum of Art, 1968.209: https://clevelandart.org/art/1968.209, CC0 (gemeinfrei)"],["gqcrlandscape","Landschaft (Hastings-on-Hudson)","1888",3,"Cleveland Museum of Art, 2005.342: https://clevelandart.org/art/2005.342, CC0 (gemeinfrei)"]]]];
+  var have = {}; (window.PATH_WORKS || []).forEach(function (w) { have[w.id] = 1; });
+  var W = [];
+  for (var i = 0; i < G.length; i++) for (var j = 0; j < G[i][1].length; j++) {
+    var r = G[i][1][j]; if (have[r[0]]) continue;
+    var o = { id: r[0], title: r[1], artist: G[i][0], year: r[2] }; if (r.length > 3 && r[3] != null) o.museum = M[r[3]]; if (r.length > 4) o.source = r[4]; W.push(o);
+  }
+  window.PATH_WORKS = (window.PATH_WORKS || []).concat(W);
+  (window.__pwChunks = window.__pwChunks || {})["galerie1-0"] = true;
+})();

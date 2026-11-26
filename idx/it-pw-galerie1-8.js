@@ -1,0 +1,6 @@
+// Work titles (it) of path galerie1-8 (v10.43b), part of it-path-works-late.js.
+(function () {
+  var P = window.IT = window.IT || {};
+  var M = function (a, b) { for (var k in b) a[k] = (a[k] && typeof a[k] === 'object' && !Array.isArray(a[k])) ? Object.assign({}, b[k], a[k]) : (a[k] || b[k]); return a; };
+  P.works = M(P.works || {}, {"gqhkmountaino":{"title":"Paesaggio montano con un ruscello","museum":"Art Institute of Chicago"},"gqhkmountsatt":{"title":"Il monte Satta nella provincia di Suruga","museum":"Art Institute of Chicago"},"gqhkillustrat":{"title":"Illustrazione di una poesia cinese","museum":"Art Institute of Chicago"},"gqhkclearautu":{"title":"Limpido cielo d’autunno su un tempio di montagna","museum":"Art Institute of Chicago"},"gqhkwarblerca":{"title":"Silvia e camelia","museum":"Metropolitan Museum of Art, New York"},"gqzsmorninggl":{"title":"Campanule","museum":"Metropolitan Museum of Art, New York"},"gqgdfancifulc":{"title":"Veduta di fantasia di Castel Sant’Angelo a Roma","museum":"National Gallery of Art, Washington"},"gqh2mounttate":{"title":"Veduta del monte Tate, provincia di Etchu","museum":"Art Institute of Chicago"},"gqh2gionfesti":{"title":"La festa di Gion a Kyoto","museum":"Art Institute of Chicago"},"gqh2nogeyokoh":{"title":"Noge a Yokohama, provincia di Bushu","museum":"Art Institute of Chicago"}});
+})();

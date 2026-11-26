@@ -110,7 +110,7 @@ function loadTitles(){
     return Promise.resolve(window.MASILANO_TITLES);
   }
   if (titlesLoading) return titlesLoading;
-  const src = 'titles.js?v=1042';
+  const src = 'titles.js?v=1043';
   const boot = (I && I.loadScriptOnce) ? I.loadScriptOnce(src) : new Promise((res, rej) => {
     const s = document.createElement('script');
     s.src = src; s.onload = res; s.onerror = rej; document.head.appendChild(s);
@@ -122,7 +122,7 @@ function loadTitles(){
   return titlesLoading;
 }
 function assetPin(src){
-  return src.indexOf('?') >= 0 ? src : src + '?v=1042';
+  return src.indexOf('?') >= 0 ? src : src + '?v=1043';
 }
 function loadOnce(src){
   const url = assetPin(src);
@@ -1002,9 +1002,14 @@ function renderGallery(){
   if (sc) sc.scrollTop = keepTop;
 }
 function markDots(){ /* pager dots retired in v10.17; infinite scroll */ }
-$('#srcBtn').onclick = () => {
+function renderSources(){
   $('#srcList').innerHTML = ALL.map(p => `<li><b>${L(p,'title')}</b> (${L(p,'artist')}): ${I.sourceLine(p.source) || ''}. ${t('museumWord')}: ${L(p,'museum')}.</li>`).join('');
+}
+$('#srcBtn').onclick = () => {
+  renderSources();
   revealSheet('#sources');
+  // v10.43h: gallery-pack works (and their source lines) live in the late index: list them once it is in.
+  withLateWorks(() => { if ($('#sources') && !$('#sources').classList.contains('hidden')) renderSources(); });
 };
 $('#srcClose').onclick = () => closeTopSheet();
 
@@ -2121,11 +2126,19 @@ const HERO_SKIP = new Set(['thepark','kapple','pfarrgarten','kpoppies','rosetree
 function heroReadable(p){ return !!(p && p.id && !HERO_SKIP.has(p.id)); }
 // v10.43b: the pool is built from IDs (all works plus every path step, even when its metadata is
 // still loading), so today's picture is the same before and after the late work index arrives.
+// v10.43h: ids of the lazily loaded gallery packs (window.GALLERY_PACKS = [[pack, "id id ..."]], eager in path-index.js).
+function galleryPackIds(){
+  const out = [];
+  (window.GALLERY_PACKS || []).forEach(g => { if (g && g[1]) String(g[1]).split(' ').forEach(id => { if (id) out.push(id); }); });
+  return out;
+}
 function poolCandidates(){
   const out = ALL.slice(), seen = new Set(ALL.map(p => p.id));
   for (const path of PATHS) for (const st of (path.stations || [])) for (const w of (st.works || [])) {
     if (w && w.pid && !seen.has(w.pid)) { seen.add(w.pid); out.push({ id: w.pid, __stub: true }); }
   }
+  // v10.43h: gallery packs (single works without a path) join the pool by id as well.
+  for (const id of galleryPackIds()) if (!seen.has(id)) { seen.add(id); out.push({ id, __stub: true }); }
   return out;
 }
 function dailyPool(){
@@ -2790,7 +2803,7 @@ function albumRewardHtml(album){
   const faces = album.faces.map(f => {
     const F = window.MASILANO_FACES;
     const loc = (f.n && (f.n[I.lang] || f.n.de)) || f.id;
-    return `<button type="button" class="albrface" data-face="${esc(f.id)}"><img src="img/faces/${esc(f.id)}.webp?v=1042" alt="" width="72" height="72" loading="lazy" decoding="async"><span><span class="fn">${esc(loc)}</span><span class="fa">${esc(unlocked ? t(albumFaceState(album) === 'claimed' ? 'albumFaceClaimed' : 'albumFaceReady') : t('albumFaceRemain', { n: remain }))}</span></span></button>`;
+    return `<button type="button" class="albrface" data-face="${esc(f.id)}"><img src="img/faces/${esc(f.id)}.webp?v=1043" alt="" width="72" height="72" loading="lazy" decoding="async"><span><span class="fn">${esc(loc)}</span><span class="fa">${esc(unlocked ? t(albumFaceState(album) === 'claimed' ? 'albumFaceClaimed' : 'albumFaceReady') : t('albumFaceRemain', { n: remain }))}</span></span></button>`;
   }).join('');
   return `<section class="albreward${unlocked ? ' done' : ''}"><div class="rk">${esc(unlocked ? t('albumRewardDoneK') : t('albumRewardK'))}</div><p class="rlead">${esc(unlocked ? t('albumRewardDoneLead') : t('albumRewardLead', { N: album.N }))}</p><div class="albrfaces">${faces}</div></section>`;
 }
@@ -3824,14 +3837,14 @@ function loadShop(){
     if (!document.querySelector('link[data-shop-css]')) {
       const l = document.createElement('link');
       l.rel = 'stylesheet';
-      l.href = 'shop.css?v=1042';
+      l.href = 'shop.css?v=1043';
       l.setAttribute('data-shop-css', '1');
       document.head.appendChild(l);
     }
     const need = [];
-    if (!window.MASILANO_SHOP_CONFIG) need.push('shop-config.js?v=1042');
-    if (!window.MASILANO_SHOP_RES) need.push('shop-res.js?v=1042');
-    need.push('shop.js?v=1042');
+    if (!window.MASILANO_SHOP_CONFIG) need.push('shop-config.js?v=1043');
+    if (!window.MASILANO_SHOP_RES) need.push('shop-res.js?v=1043');
+    need.push('shop.js?v=1043');
     let i = 0;
     const next = () => {
       if (i >= need.length) {
@@ -3900,7 +3913,7 @@ bindShopEntries();
 let swReload = false;
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
   const hadCtrl = !!navigator.serviceWorker.controller;
-  navigator.serviceWorker.register('./sw.js?v=1042', { scope: './' }).catch(e => console.warn('SW', e));
+  navigator.serviceWorker.register('./sw.js?v=1043', { scope: './' }).catch(e => console.warn('SW', e));
   function requestSwReload(){
     if (!hadCtrl) return;           // first install: nothing to reload
     if (S) swReload = true; else location.reload();
